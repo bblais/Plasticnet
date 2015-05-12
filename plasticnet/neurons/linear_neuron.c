@@ -242,8 +242,8 @@ class __Pyx_FakeReference {
 #define _USE_MATH_DEFINES
 #endif
 #include <math.h>
-#define __PYX_HAVE__splikes__neurons__IntegrateAndFire
-#define __PYX_HAVE_API__splikes__neurons__IntegrateAndFire
+#define __PYX_HAVE__plasticnet__neurons__linear_neuron
+#define __PYX_HAVE_API__plasticnet__neurons__linear_neuron
 #include "string.h"
 #include "stdio.h"
 #include "stdlib.h"
@@ -454,10 +454,10 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "splikes\\neurons\\IntegrateAndFire.pyx",
+  "plasticnet\\neurons\\linear_neuron.pyx",
   "__init__.pxd",
   "type.pxd",
-  "splikes\\splikes.pxd",
+  "plasticnet\\plasticnet.pxd",
 };
 
 /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":726
@@ -670,11 +670,16 @@ typedef npy_longdouble __pyx_t_5numpy_longdouble_t;
 
 
 /*--- Type declarations ---*/
-struct __pyx_obj_7splikes_7splikes_monitor;
-struct __pyx_obj_7splikes_7splikes_simulation;
-struct __pyx_obj_7splikes_7splikes_neuron;
-struct __pyx_obj_7splikes_7splikes_connection;
-struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire;
+struct __pyx_obj_10plasticnet_10plasticnet_group;
+struct __pyx_obj_10plasticnet_10plasticnet_monitor;
+struct __pyx_obj_10plasticnet_10plasticnet_simulation;
+struct __pyx_obj_10plasticnet_10plasticnet_neuron;
+struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron;
+struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel;
+struct __pyx_obj_10plasticnet_10plasticnet_channel;
+struct __pyx_obj_10plasticnet_10plasticnet_connection;
+struct __pyx_obj_10plasticnet_10plasticnet_post_process_connection;
+struct __pyx_obj_10plasticnet_7neurons_13linear_neuron_linear_neuron;
 
 /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":765
  * ctypedef npy_longdouble longdouble_t
@@ -712,34 +717,49 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
 
-/* "splikes\splikes.pxd":29
+/* "plasticnet\plasticnet.pxd":38
+ * cdef double rande()
+ * 
+ * cdef class group:             # <<<<<<<<<<<<<<
+ *     cdef public object save_attrs,save_data
+ * 
+ */
+struct __pyx_obj_10plasticnet_10plasticnet_group {
+  PyObject_HEAD
+  PyObject *save_attrs;
+  PyObject *save_data;
+};
+
+
+/* "plasticnet\plasticnet.pxd":42
  * 
  * 
- * cdef class monitor:             # <<<<<<<<<<<<<<
+ * cdef class monitor(group):             # <<<<<<<<<<<<<<
  *     cdef public double time_to_next_save
  *     cdef public double save_interval
  */
-struct __pyx_obj_7splikes_7splikes_monitor {
-  PyObject_HEAD
-  struct __pyx_vtabstruct_7splikes_7splikes_monitor *__pyx_vtab;
+struct __pyx_obj_10plasticnet_10plasticnet_monitor {
+  struct __pyx_obj_10plasticnet_10plasticnet_group __pyx_base;
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor *__pyx_vtab;
   double time_to_next_save;
   double save_interval;
   PyObject *container;
   PyObject *name;
-  PyObject *saved_results;
+  PyObject *t;
+  PyObject *values;
 };
 
 
-/* "splikes\splikes.pxd":36
+/* "plasticnet\plasticnet.pxd":49
  *     cpdef update(self,double t)
  * 
- * cdef class simulation:             # <<<<<<<<<<<<<<
+ * cdef class simulation(group):             # <<<<<<<<<<<<<<
  *     cdef public double dt
  *     cdef public double total_time
  */
-struct __pyx_obj_7splikes_7splikes_simulation {
-  PyObject_HEAD
-  struct __pyx_vtabstruct_7splikes_7splikes_simulation *__pyx_vtab;
+struct __pyx_obj_10plasticnet_10plasticnet_simulation {
+  struct __pyx_obj_10plasticnet_10plasticnet_group __pyx_base;
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation *__pyx_vtab;
   double dt;
   double total_time;
   double start_time;
@@ -748,160 +768,256 @@ struct __pyx_obj_7splikes_7splikes_simulation {
   PyObject *monitors;
   PyObject *filters;
   int seed;
+  int verbose;
 };
 
 
-/* "splikes\splikes.pxd":45
+/* "plasticnet\plasticnet.pxd":60
  *     cpdef _reset(self)
  * 
- * cdef class neuron:             # <<<<<<<<<<<<<<
+ * cdef class neuron(group):             # <<<<<<<<<<<<<<
  *     cdef public int verbose
- *     cdef public int is_spike
+ *     cdef public object name
  */
-struct __pyx_obj_7splikes_7splikes_neuron {
-  PyObject_HEAD
-  struct __pyx_vtabstruct_7splikes_7splikes_neuron *__pyx_vtab;
+struct __pyx_obj_10plasticnet_10plasticnet_neuron {
+  struct __pyx_obj_10plasticnet_10plasticnet_group __pyx_base;
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron *__pyx_vtab;
   int verbose;
-  int is_spike;
-  int post_count;
-  PyObject *saved_spikes;
-  double save_spikes_begin;
-  double save_spikes_end;
-  PyArrayObject *spiking;
-  PyArrayObject *rate;
+  PyObject *name;
   int N;
-  PyArrayObject *last_spike_time;
+  PyArrayObject *output;
+  PyArrayObject *linear_output;
   PyObject *connections_pre;
   PyObject *connections_post;
+  PyObject *post_process;
   int num_pre;
   int num_post;
-  PyObject *state_variable;
-  PyObject *name;
 };
 
 
-/* "splikes\splikes.pxd":62
+/* "plasticnet\plasticnet.pxd":71
+ *     cpdef update(self,double t,simulation sim)
  * 
+ * cdef class post_process_neuron(group):             # <<<<<<<<<<<<<<
+ *     cpdef _reset(self)
+ *     cpdef update(self,double t,simulation sim)
+ */
+struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron {
+  struct __pyx_obj_10plasticnet_10plasticnet_group __pyx_base;
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron *__pyx_vtab;
+  struct __pyx_obj_10plasticnet_10plasticnet_neuron *n;
+};
+
+
+/* "plasticnet\plasticnet.pxd":76
+ *     cdef public neuron n
  * 
- * cdef class connection:             # <<<<<<<<<<<<<<
+ * cdef class post_process_channel(group):             # <<<<<<<<<<<<<<
+ *     cdef public channel ch
+ *     cpdef _reset(self)
+ */
+struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel {
+  struct __pyx_obj_10plasticnet_10plasticnet_group __pyx_base;
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel *__pyx_vtab;
+  struct __pyx_obj_10plasticnet_10plasticnet_channel *ch;
+};
+
+
+/* "plasticnet\plasticnet.pxd":81
+ *     cpdef update(self,double t,simulation sim)
+ * 
+ * cdef class channel(neuron):             # <<<<<<<<<<<<<<
+ *     cdef public object neuron_list
+ *     cdef public int number_of_neurons
+ */
+struct __pyx_obj_10plasticnet_10plasticnet_channel {
+  struct __pyx_obj_10plasticnet_10plasticnet_neuron __pyx_base;
+  PyObject *neuron_list;
+  int number_of_neurons;
+  double time_between_patterns;
+  double time_to_next_pattern;
+};
+
+
+/* "plasticnet\plasticnet.pxd":86
+ *     cdef public double time_between_patterns,time_to_next_pattern
+ * 
+ * cdef class connection(group):             # <<<<<<<<<<<<<<
  *     cdef public np.ndarray weights
  *     cdef public np.ndarray initial_weights
  */
-struct __pyx_obj_7splikes_7splikes_connection {
-  PyObject_HEAD
-  struct __pyx_vtabstruct_7splikes_7splikes_connection *__pyx_vtab;
+struct __pyx_obj_10plasticnet_10plasticnet_connection {
+  struct __pyx_obj_10plasticnet_10plasticnet_group __pyx_base;
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection *__pyx_vtab;
   PyArrayObject *weights;
   PyArrayObject *initial_weights;
-  int reset_to_initial;
   PyObject *initial_weight_range;
-  double w_max;
-  double w_min;
-  struct __pyx_obj_7splikes_7splikes_neuron *pre;
-  struct __pyx_obj_7splikes_7splikes_neuron *post;
-  double *W;
+  struct __pyx_obj_10plasticnet_10plasticnet_neuron *pre;
+  struct __pyx_obj_10plasticnet_10plasticnet_neuron *post;
+  double *w;
+  int reset_to_initial;
+  PyObject *post_process;
   PyObject *name;
-  PyArrayObject *state;
-  int use_state;
-  PyObject *state_variable;
-  double spike_scale;
+  int verbose;
 };
 
 
-/* "splikes\neurons\IntegrateAndFire.pyx":9
+/* "plasticnet\plasticnet.pxd":101
+ *     cpdef update(self,double t,simulation sim)
  * 
- * 
- * cdef class IntegrateAndFire(neuron):             # <<<<<<<<<<<<<<
- *     cdef public double reset,tau_m,tau_in,V_rev_inh,V_rev_exc,tau_ex,V_rest,threshold
- *     cdef public np.ndarray g_e,g_i,V
+ * cdef class post_process_connection(group):             # <<<<<<<<<<<<<<
+ *     cpdef _reset(self)
+ *     cpdef update(self,double t,simulation sim)
  */
-struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire {
-  struct __pyx_obj_7splikes_7splikes_neuron __pyx_base;
-  double reset;
-  double tau_m;
-  double tau_in;
-  double V_rev_inh;
-  double V_rev_exc;
-  double tau_ex;
-  double V_rest;
-  double threshold;
-  PyArrayObject *g_e;
-  PyArrayObject *g_i;
-  PyArrayObject *V;
+struct __pyx_obj_10plasticnet_10plasticnet_post_process_connection {
+  struct __pyx_obj_10plasticnet_10plasticnet_group __pyx_base;
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_connection *__pyx_vtab;
+  struct __pyx_obj_10plasticnet_10plasticnet_connection *c;
+};
+
+
+/* "plasticnet\neurons\linear_neuron.pyx":5
+ * 
+ * 
+ * cdef class linear_neuron(neuron):             # <<<<<<<<<<<<<<
+ *     @cython.cdivision(True)
+ *     @cython.boundscheck(False) # turn of bounds-checking for entire function
+ */
+struct __pyx_obj_10plasticnet_7neurons_13linear_neuron_linear_neuron {
+  struct __pyx_obj_10plasticnet_10plasticnet_neuron __pyx_base;
 };
 
 
 
-/* "splikes\splikes.pxd":29
+/* "plasticnet\plasticnet.pxd":42
  * 
  * 
- * cdef class monitor:             # <<<<<<<<<<<<<<
+ * cdef class monitor(group):             # <<<<<<<<<<<<<<
  *     cdef public double time_to_next_save
  *     cdef public double save_interval
  */
 
-struct __pyx_vtabstruct_7splikes_7splikes_monitor {
-  PyObject *(*update)(struct __pyx_obj_7splikes_7splikes_monitor *, double, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor {
+  PyObject *(*update)(struct __pyx_obj_10plasticnet_10plasticnet_monitor *, double, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_7splikes_7splikes_monitor *__pyx_vtabptr_7splikes_7splikes_monitor;
+static struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor *__pyx_vtabptr_10plasticnet_10plasticnet_monitor;
 
 
-/* "splikes\splikes.pxd":36
+/* "plasticnet\plasticnet.pxd":49
  *     cpdef update(self,double t)
  * 
- * cdef class simulation:             # <<<<<<<<<<<<<<
+ * cdef class simulation(group):             # <<<<<<<<<<<<<<
  *     cdef public double dt
  *     cdef public double total_time
  */
 
-struct __pyx_vtabstruct_7splikes_7splikes_simulation {
-  PyObject *(*_reset)(struct __pyx_obj_7splikes_7splikes_simulation *, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation {
+  PyObject *(*_reset)(struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_7splikes_7splikes_simulation *__pyx_vtabptr_7splikes_7splikes_simulation;
+static struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation *__pyx_vtabptr_10plasticnet_10plasticnet_simulation;
 
 
-/* "splikes\splikes.pxd":45
+/* "plasticnet\plasticnet.pxd":60
  *     cpdef _reset(self)
  * 
- * cdef class neuron:             # <<<<<<<<<<<<<<
+ * cdef class neuron(group):             # <<<<<<<<<<<<<<
  *     cdef public int verbose
- *     cdef public int is_spike
+ *     cdef public object name
  */
 
-struct __pyx_vtabstruct_7splikes_7splikes_neuron {
-  PyObject *(*_reset)(struct __pyx_obj_7splikes_7splikes_neuron *, int __pyx_skip_dispatch);
-  PyObject *(*update)(struct __pyx_obj_7splikes_7splikes_neuron *, double, struct __pyx_obj_7splikes_7splikes_simulation *, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron {
+  PyObject *(*_reset)(struct __pyx_obj_10plasticnet_10plasticnet_neuron *, int __pyx_skip_dispatch);
+  PyObject *(*update)(struct __pyx_obj_10plasticnet_10plasticnet_neuron *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_7splikes_7splikes_neuron *__pyx_vtabptr_7splikes_7splikes_neuron;
+static struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron *__pyx_vtabptr_10plasticnet_10plasticnet_neuron;
 
 
-/* "splikes\splikes.pxd":62
+/* "plasticnet\plasticnet.pxd":71
+ *     cpdef update(self,double t,simulation sim)
  * 
+ * cdef class post_process_neuron(group):             # <<<<<<<<<<<<<<
+ *     cpdef _reset(self)
+ *     cpdef update(self,double t,simulation sim)
+ */
+
+struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron {
+  PyObject *(*_reset)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *, int __pyx_skip_dispatch);
+  PyObject *(*update)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch);
+};
+static struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron;
+
+
+/* "plasticnet\plasticnet.pxd":76
+ *     cdef public neuron n
  * 
- * cdef class connection:             # <<<<<<<<<<<<<<
+ * cdef class post_process_channel(group):             # <<<<<<<<<<<<<<
+ *     cdef public channel ch
+ *     cpdef _reset(self)
+ */
+
+struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel {
+  PyObject *(*_reset)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel *, int __pyx_skip_dispatch);
+  PyObject *(*update)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch);
+};
+static struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel;
+
+
+/* "plasticnet\plasticnet.pxd":81
+ *     cpdef update(self,double t,simulation sim)
+ * 
+ * cdef class channel(neuron):             # <<<<<<<<<<<<<<
+ *     cdef public object neuron_list
+ *     cdef public int number_of_neurons
+ */
+
+struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel {
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron __pyx_base;
+};
+static struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel *__pyx_vtabptr_10plasticnet_10plasticnet_channel;
+
+
+/* "plasticnet\plasticnet.pxd":86
+ *     cdef public double time_between_patterns,time_to_next_pattern
+ * 
+ * cdef class connection(group):             # <<<<<<<<<<<<<<
  *     cdef public np.ndarray weights
  *     cdef public np.ndarray initial_weights
  */
 
-struct __pyx_vtabstruct_7splikes_7splikes_connection {
-  PyObject *(*_reset)(struct __pyx_obj_7splikes_7splikes_connection *, int __pyx_skip_dispatch);
-  PyObject *(*update)(struct __pyx_obj_7splikes_7splikes_connection *, double, struct __pyx_obj_7splikes_7splikes_simulation *, int __pyx_skip_dispatch);
-  PyObject *(*apply_weight_limits)(struct __pyx_obj_7splikes_7splikes_connection *, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection {
+  PyObject *(*_reset)(struct __pyx_obj_10plasticnet_10plasticnet_connection *, int __pyx_skip_dispatch);
+  PyObject *(*update)(struct __pyx_obj_10plasticnet_10plasticnet_connection *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_7splikes_7splikes_connection *__pyx_vtabptr_7splikes_7splikes_connection;
+static struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection *__pyx_vtabptr_10plasticnet_10plasticnet_connection;
 
 
-/* "splikes\neurons\IntegrateAndFire.pyx":9
+/* "plasticnet\plasticnet.pxd":101
+ *     cpdef update(self,double t,simulation sim)
  * 
- * 
- * cdef class IntegrateAndFire(neuron):             # <<<<<<<<<<<<<<
- *     cdef public double reset,tau_m,tau_in,V_rev_inh,V_rev_exc,tau_ex,V_rest,threshold
- *     cdef public np.ndarray g_e,g_i,V
+ * cdef class post_process_connection(group):             # <<<<<<<<<<<<<<
+ *     cpdef _reset(self)
+ *     cpdef update(self,double t,simulation sim)
  */
 
-struct __pyx_vtabstruct_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire {
-  struct __pyx_vtabstruct_7splikes_7splikes_neuron __pyx_base;
+struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_connection {
+  PyObject *(*_reset)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_connection *, int __pyx_skip_dispatch);
+  PyObject *(*update)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_connection *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_vtabptr_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire;
+static struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_connection *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_connection;
+
+
+/* "plasticnet\neurons\linear_neuron.pyx":5
+ * 
+ * 
+ * cdef class linear_neuron(neuron):             # <<<<<<<<<<<<<<
+ *     @cython.cdivision(True)
+ *     @cython.boundscheck(False) # turn of bounds-checking for entire function
+ */
+
+struct __pyx_vtabstruct_10plasticnet_7neurons_13linear_neuron_linear_neuron {
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron __pyx_base;
+};
+static struct __pyx_vtabstruct_10plasticnet_7neurons_13linear_neuron_linear_neuron *__pyx_vtabptr_10plasticnet_7neurons_13linear_neuron_linear_neuron;
 
 /* --- Runtime support code (head) --- */
 #ifndef CYTHON_REFNANNY
@@ -989,21 +1105,10 @@ static CYTHON_INLINE PyObject* __Pyx_PyObject_Call(PyObject *func, PyObject *arg
 #define __Pyx_PyObject_Call(func, arg, kw) PyObject_Call(func, arg, kw)
 #endif
 
-#if CYTHON_COMPILING_IN_CPYTHON
-static CYTHON_INLINE PyObject* __Pyx_PyObject_CallMethO(PyObject *func, PyObject *arg);
-#endif
-
-static CYTHON_INLINE PyObject* __Pyx_PyObject_CallOneArg(PyObject *func, PyObject *arg);
-
-#if CYTHON_COMPILING_IN_CPYTHON
-static CYTHON_INLINE PyObject* __Pyx_PyObject_CallNoArg(PyObject *func);
-#else
-#define __Pyx_PyObject_CallNoArg(func) __Pyx_PyObject_Call(func, __pyx_empty_tuple, NULL)
-#endif
-
-static CYTHON_INLINE PyObject *__Pyx_GetModuleGlobalName(PyObject *name);
-
 static CYTHON_INLINE int __Pyx_TypeTest(PyObject *obj, PyTypeObject *type);
+
+static void __Pyx_RaiseArgtupleInvalid(const char* func_name, int exact,
+    Py_ssize_t num_min, Py_ssize_t num_max, Py_ssize_t num_found);
 
 static void __Pyx_RaiseDoubleKeywordsError(const char* func_name, PyObject* kw_name);
 
@@ -1011,31 +1116,10 @@ static int __Pyx_ParseOptionalKeywords(PyObject *kwds, PyObject **argnames[], \
     PyObject *kwds2, PyObject *values[], Py_ssize_t num_pos_args, \
     const char* function_name);
 
-static void __Pyx_RaiseArgtupleInvalid(const char* func_name, int exact,
-    Py_ssize_t num_min, Py_ssize_t num_max, Py_ssize_t num_found);
-
-#if CYTHON_COMPILING_IN_CPYTHON
-static CYTHON_INLINE int __Pyx_PyList_Append(PyObject* list, PyObject* x) {
-    PyListObject* L = (PyListObject*) list;
-    Py_ssize_t len = Py_SIZE(list);
-    if (likely(L->allocated > len) & likely(len > (L->allocated >> 1))) {
-        Py_INCREF(x);
-        PyList_SET_ITEM(list, len, x);
-        Py_SIZE(list) = len+1;
-        return 0;
-    }
-    return PyList_Append(list, x);
-}
-#else
-#define __Pyx_PyList_Append(L,x) PyList_Append(L,x)
-#endif
-
-static PyObject* __Pyx_PyObject_CallMethod1(PyObject* obj, PyObject* method_name, PyObject* arg);
-
-static CYTHON_INLINE int __Pyx_PyObject_Append(PyObject* L, PyObject* x);
-
 static CYTHON_INLINE int __Pyx_ArgTypeTest(PyObject *obj, PyTypeObject *type, int none_allowed,
     const char *name, int exact);
+
+static CYTHON_INLINE int __Pyx_CheckKeywordStrings(PyObject *kwdict, const char* function_name, int kw_allowed);
 
 static CYTHON_INLINE void __Pyx_ErrRestore(PyObject *type, PyObject *value, PyObject *tb);
 static CYTHON_INLINE void __Pyx_ErrFetch(PyObject **type, PyObject **value, PyObject **tb);
@@ -1095,11 +1179,11 @@ static void __pyx_insert_code_object(int code_line, PyCodeObject* code_object);
 static void __Pyx_AddTraceback(const char *funcname, int c_line,
                                int py_line, const char *filename);
 
-static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level);
-
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value);
 
 static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *);
+
+static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level);
 
 #if CYTHON_CCOMPLEX
   #ifdef __cplusplus
@@ -1219,8 +1303,9 @@ static PyTypeObject *__Pyx_ImportType(const char *module_name, const char *class
 
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
-static PyObject *__pyx_f_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire__reset(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
-static PyObject *__pyx_f_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_update(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_10plasticnet_7neurons_13linear_neuron_13linear_neuron_update(struct __pyx_obj_10plasticnet_7neurons_13linear_neuron_linear_neuron *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, CYTHON_UNUSED struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim, int __pyx_skip_dispatch); /* proto*/
+
+/* Module declarations from 'cython' */
 
 /* Module declarations from 'cpython.buffer' */
 
@@ -1249,59 +1334,35 @@ static PyTypeObject *__pyx_ptype_5numpy_ndarray = 0;
 static PyTypeObject *__pyx_ptype_5numpy_ufunc = 0;
 static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, char *, char *, int *); /*proto*/
 
-/* Module declarations from 'splikes.splikes' */
-static PyTypeObject *__pyx_ptype_7splikes_7splikes_monitor = 0;
-static PyTypeObject *__pyx_ptype_7splikes_7splikes_simulation = 0;
-static PyTypeObject *__pyx_ptype_7splikes_7splikes_neuron = 0;
-static PyTypeObject *__pyx_ptype_7splikes_7splikes_connection = 0;
+/* Module declarations from 'plasticnet.plasticnet' */
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_group = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_monitor = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_simulation = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_neuron = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_post_process_channel = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_channel = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_connection = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_post_process_connection = 0;
 
-/* Module declarations from 'cython' */
+/* Module declarations from 'plasticnet.neurons.linear_neuron' */
+static PyTypeObject *__pyx_ptype_10plasticnet_7neurons_13linear_neuron_linear_neuron = 0;
+#define __Pyx_MODULE_NAME "plasticnet.neurons.linear_neuron"
+int __pyx_module_is_main_plasticnet__neurons__linear_neuron = 0;
 
-/* Module declarations from 'splikes.neurons.IntegrateAndFire' */
-static PyTypeObject *__pyx_ptype_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire = 0;
-#define __Pyx_MODULE_NAME "splikes.neurons.IntegrateAndFire"
-int __pyx_module_is_main_splikes__neurons__IntegrateAndFire = 0;
-
-/* Implementation of 'splikes.neurons.IntegrateAndFire' */
+/* Implementation of 'plasticnet.neurons.linear_neuron' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_RuntimeError;
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire__reset(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_2__init__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_N); /* proto */
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_4update(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim); /* proto */
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5reset___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5reset_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5tau_m___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5tau_m_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_in___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_in_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_inh___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_inh_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_exc___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_exc_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_ex___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_ex_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6V_rest___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6V_rest_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9threshold___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9threshold_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e_4__del__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i_4__del__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V_4__del__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10plasticnet_7neurons_13linear_neuron_13linear_neuron_update(struct __pyx_obj_10plasticnet_7neurons_13linear_neuron_linear_neuron *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim); /* proto */
+static int __pyx_pf_10plasticnet_7neurons_13linear_neuron_13linear_neuron_2__init__(struct __pyx_obj_10plasticnet_7neurons_13linear_neuron_linear_neuron *__pyx_v_self, PyObject *__pyx_v_args); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
-static PyObject *__pyx_tp_new_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_10plasticnet_7neurons_13linear_neuron_linear_neuron(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static char __pyx_k_B[] = "B";
 static char __pyx_k_H[] = "H";
 static char __pyx_k_I[] = "I";
 static char __pyx_k_L[] = "L";
-static char __pyx_k_N[] = "N";
 static char __pyx_k_O[] = "O";
 static char __pyx_k_Q[] = "Q";
 static char __pyx_k_b[] = "b";
@@ -1316,25 +1377,17 @@ static char __pyx_k_t[] = "t";
 static char __pyx_k_Zd[] = "Zd";
 static char __pyx_k_Zf[] = "Zf";
 static char __pyx_k_Zg[] = "Zg";
-static char __pyx_k_np[] = "np";
 static char __pyx_k_sim[] = "sim";
 static char __pyx_k_init[] = "__init__";
 static char __pyx_k_main[] = "__main__";
 static char __pyx_k_test[] = "__test__";
-static char __pyx_k_dtype[] = "dtype";
-static char __pyx_k_float[] = "float";
-static char __pyx_k_numpy[] = "numpy";
-static char __pyx_k_pylab[] = "pylab";
 static char __pyx_k_range[] = "range";
-static char __pyx_k_reset[] = "_reset";
-static char __pyx_k_zeros[] = "zeros";
-static char __pyx_k_append[] = "append";
 static char __pyx_k_import[] = "__import__";
 static char __pyx_k_update[] = "update";
 static char __pyx_k_ValueError[] = "ValueError";
 static char __pyx_k_pyx_vtable[] = "__pyx_vtable__";
 static char __pyx_k_RuntimeError[] = "RuntimeError";
-static char __pyx_k_Integrate_and_Fire[] = "Integrate and Fire";
+static char __pyx_k_Linear_Neuron[] = "Linear Neuron";
 static char __pyx_k_ndarray_is_not_C_contiguous[] = "ndarray is not C contiguous";
 static char __pyx_k_unknown_dtype_code_in_numpy_pxd[] = "unknown dtype code in numpy.pxd (%d)";
 static char __pyx_k_Format_string_allocated_too_shor[] = "Format string allocated too short, see comment in numpy.pxd";
@@ -1343,31 +1396,22 @@ static char __pyx_k_ndarray_is_not_Fortran_contiguou[] = "ndarray is not Fortran
 static char __pyx_k_Format_string_allocated_too_shor_2[] = "Format string allocated too short.";
 static PyObject *__pyx_kp_u_Format_string_allocated_too_shor;
 static PyObject *__pyx_kp_u_Format_string_allocated_too_shor_2;
-static PyObject *__pyx_kp_s_Integrate_and_Fire;
-static PyObject *__pyx_n_s_N;
+static PyObject *__pyx_kp_s_Linear_Neuron;
 static PyObject *__pyx_kp_u_Non_native_byte_order_not_suppor;
 static PyObject *__pyx_n_s_RuntimeError;
 static PyObject *__pyx_n_s_ValueError;
-static PyObject *__pyx_n_s_append;
-static PyObject *__pyx_n_s_dtype;
-static PyObject *__pyx_n_s_float;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_init;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_kp_u_ndarray_is_not_C_contiguous;
 static PyObject *__pyx_kp_u_ndarray_is_not_Fortran_contiguou;
-static PyObject *__pyx_n_s_np;
-static PyObject *__pyx_n_s_numpy;
-static PyObject *__pyx_n_s_pylab;
 static PyObject *__pyx_n_s_pyx_vtable;
 static PyObject *__pyx_n_s_range;
-static PyObject *__pyx_n_s_reset;
 static PyObject *__pyx_n_s_sim;
 static PyObject *__pyx_n_s_t;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_kp_u_unknown_dtype_code_in_numpy_pxd;
 static PyObject *__pyx_n_s_update;
-static PyObject *__pyx_n_s_zeros;
 static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__2;
 static PyObject *__pyx_tuple__3;
@@ -1375,516 +1419,24 @@ static PyObject *__pyx_tuple__4;
 static PyObject *__pyx_tuple__5;
 static PyObject *__pyx_tuple__6;
 
-/* "splikes\neurons\IntegrateAndFire.pyx":12
- *     cdef public double reset,tau_m,tau_in,V_rev_inh,V_rev_exc,tau_ex,V_rest,threshold
- *     cdef public np.ndarray g_e,g_i,V
- *     cpdef _reset(self):             # <<<<<<<<<<<<<<
- *         self.g_e=np.zeros(self.N,dtype=np.float)
- *         self.g_i=np.zeros(self.N,dtype=np.float)
- */
-
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1_reset(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_f_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire__reset(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, int __pyx_skip_dispatch) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
-  PyObject *__pyx_t_3 = NULL;
-  PyObject *__pyx_t_4 = NULL;
-  PyObject *__pyx_t_5 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("_reset", 0);
-  /* Check if called by wrapper */
-  if (unlikely(__pyx_skip_dispatch)) ;
-  /* Check if overridden in Python */
-  else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1_reset)) {
-      __Pyx_XDECREF(__pyx_r);
-      __Pyx_INCREF(__pyx_t_1);
-      __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
-      if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
-        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
-        if (likely(__pyx_t_4)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-          __Pyx_INCREF(__pyx_t_4);
-          __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_3, function);
-        }
-      }
-      if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      }
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_r = __pyx_t_2;
-      __pyx_t_2 = 0;
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      goto __pyx_L0;
-    }
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  }
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":13
- *     cdef public np.ndarray g_e,g_i,V
- *     cpdef _reset(self):
- *         self.g_e=np.zeros(self.N,dtype=np.float)             # <<<<<<<<<<<<<<
- *         self.g_i=np.zeros(self.N,dtype=np.float)
- *         self.V=np.zeros(self.N,dtype=np.float)
- */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_1);
-  __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GIVEREF(__pyx_t_5);
-  __Pyx_GOTREF(__pyx_v_self->g_e);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->g_e));
-  __pyx_v_self->g_e = ((PyArrayObject *)__pyx_t_5);
-  __pyx_t_5 = 0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":14
- *     cpdef _reset(self):
- *         self.g_e=np.zeros(self.N,dtype=np.float)
- *         self.g_i=np.zeros(self.N,dtype=np.float)             # <<<<<<<<<<<<<<
- *         self.V=np.zeros(self.N,dtype=np.float)
- *         neuron._reset(self)
- */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.N); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_5);
-  __pyx_t_5 = 0;
-  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GIVEREF(__pyx_t_4);
-  __Pyx_GOTREF(__pyx_v_self->g_i);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->g_i));
-  __pyx_v_self->g_i = ((PyArrayObject *)__pyx_t_4);
-  __pyx_t_4 = 0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":15
- *         self.g_e=np.zeros(self.N,dtype=np.float)
- *         self.g_i=np.zeros(self.N,dtype=np.float)
- *         self.V=np.zeros(self.N,dtype=np.float)             # <<<<<<<<<<<<<<
- *         neuron._reset(self)
- * 
- */
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.N); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
-  __Pyx_GIVEREF(__pyx_t_4);
-  __pyx_t_4 = 0;
-  __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GIVEREF(__pyx_t_2);
-  __Pyx_GOTREF(__pyx_v_self->V);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->V));
-  __pyx_v_self->V = ((PyArrayObject *)__pyx_t_2);
-  __pyx_t_2 = 0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":16
- *         self.g_i=np.zeros(self.N,dtype=np.float)
- *         self.V=np.zeros(self.N,dtype=np.float)
- *         neuron._reset(self)             # <<<<<<<<<<<<<<
- * 
- *     def __init__(self,N):
- */
-  __pyx_t_2 = __pyx_vtabptr_7splikes_7splikes_neuron->_reset(((struct __pyx_obj_7splikes_7splikes_neuron *)__pyx_v_self), 1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":12
- *     cdef public double reset,tau_m,tau_in,V_rev_inh,V_rev_exc,tau_ex,V_rest,threshold
- *     cdef public np.ndarray g_e,g_i,V
- *     cpdef _reset(self):             # <<<<<<<<<<<<<<
- *         self.g_e=np.zeros(self.N,dtype=np.float)
- *         self.g_i=np.zeros(self.N,dtype=np.float)
- */
-
-  /* function exit code */
-  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire._reset", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = 0;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1_reset(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1_reset(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("_reset (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire__reset(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire__reset(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("_reset", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire._reset", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "splikes\neurons\IntegrateAndFire.pyx":18
- *         neuron._reset(self)
- * 
- *     def __init__(self,N):             # <<<<<<<<<<<<<<
- *         neuron.__init__(self,N)
- * 
- */
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  PyObject *__pyx_v_N = 0;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__init__ (wrapper)", 0);
-  {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_N,0};
-    PyObject* values[1] = {0};
-    if (unlikely(__pyx_kwds)) {
-      Py_ssize_t kw_args;
-      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
-      switch (pos_args) {
-        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
-        case  0: break;
-        default: goto __pyx_L5_argtuple_error;
-      }
-      kw_args = PyDict_Size(__pyx_kwds);
-      switch (pos_args) {
-        case  0:
-        if (likely((values[0] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_N)) != 0)) kw_args--;
-        else goto __pyx_L5_argtuple_error;
-      }
-      if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 18; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-      }
-    } else if (PyTuple_GET_SIZE(__pyx_args) != 1) {
-      goto __pyx_L5_argtuple_error;
-    } else {
-      values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
-    }
-    __pyx_v_N = values[0];
-  }
-  goto __pyx_L4_argument_unpacking_done;
-  __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 18; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-  __pyx_L3_error:;
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __Pyx_RefNannyFinishContext();
-  return -1;
-  __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_2__init__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self), __pyx_v_N);
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_2__init__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_N) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
-  PyObject *__pyx_t_3 = NULL;
-  Py_ssize_t __pyx_t_4;
-  PyObject *__pyx_t_5 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__init__", 0);
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":19
- * 
- *     def __init__(self,N):
- *         neuron.__init__(self,N)             # <<<<<<<<<<<<<<
- * 
- *         self.reset=-65.0
- */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)((PyObject*)__pyx_ptype_7splikes_7splikes_neuron)), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 19; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = NULL;
-  __pyx_t_4 = 0;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_3)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_3);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_2, function);
-      __pyx_t_4 = 1;
-    }
-  }
-  __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 19; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  if (__pyx_t_3) {
-    PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
-  }
-  __Pyx_INCREF(((PyObject *)__pyx_v_self));
-  PyTuple_SET_ITEM(__pyx_t_5, 0+__pyx_t_4, ((PyObject *)__pyx_v_self));
-  __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
-  __Pyx_INCREF(__pyx_v_N);
-  PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, __pyx_v_N);
-  __Pyx_GIVEREF(__pyx_v_N);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 19; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":21
- *         neuron.__init__(self,N)
- * 
- *         self.reset=-65.0             # <<<<<<<<<<<<<<
- *         self.tau_m=20.0
- *         self.tau_in=5.0
- */
-  __pyx_v_self->reset = -65.0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":22
- * 
- *         self.reset=-65.0
- *         self.tau_m=20.0             # <<<<<<<<<<<<<<
- *         self.tau_in=5.0
- *         self.V_rev_inh=-65.0
- */
-  __pyx_v_self->tau_m = 20.0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":23
- *         self.reset=-65.0
- *         self.tau_m=20.0
- *         self.tau_in=5.0             # <<<<<<<<<<<<<<
- *         self.V_rev_inh=-65.0
- *         self.V_rev_exc=0.0
- */
-  __pyx_v_self->tau_in = 5.0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":24
- *         self.tau_m=20.0
- *         self.tau_in=5.0
- *         self.V_rev_inh=-65.0             # <<<<<<<<<<<<<<
- *         self.V_rev_exc=0.0
- *         self.tau_ex=5.0
- */
-  __pyx_v_self->V_rev_inh = -65.0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":25
- *         self.tau_in=5.0
- *         self.V_rev_inh=-65.0
- *         self.V_rev_exc=0.0             # <<<<<<<<<<<<<<
- *         self.tau_ex=5.0
- *         self.V_rest=-65.0
- */
-  __pyx_v_self->V_rev_exc = 0.0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":26
- *         self.V_rev_inh=-65.0
- *         self.V_rev_exc=0.0
- *         self.tau_ex=5.0             # <<<<<<<<<<<<<<
- *         self.V_rest=-65.0
- *         self.threshold=-55.0
- */
-  __pyx_v_self->tau_ex = 5.0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":27
- *         self.V_rev_exc=0.0
- *         self.tau_ex=5.0
- *         self.V_rest=-65.0             # <<<<<<<<<<<<<<
- *         self.threshold=-55.0
- *         self.name='Integrate and Fire'
- */
-  __pyx_v_self->V_rest = -65.0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":28
- *         self.tau_ex=5.0
- *         self.V_rest=-65.0
- *         self.threshold=-55.0             # <<<<<<<<<<<<<<
- *         self.name='Integrate and Fire'
- * 
- */
-  __pyx_v_self->threshold = -55.0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":29
- *         self.V_rest=-65.0
- *         self.threshold=-55.0
- *         self.name='Integrate and Fire'             # <<<<<<<<<<<<<<
- * 
- *         self._reset()
- */
-  __Pyx_INCREF(__pyx_kp_s_Integrate_and_Fire);
-  __Pyx_GIVEREF(__pyx_kp_s_Integrate_and_Fire);
-  __Pyx_GOTREF(__pyx_v_self->__pyx_base.name);
-  __Pyx_DECREF(__pyx_v_self->__pyx_base.name);
-  __pyx_v_self->__pyx_base.name = __pyx_kp_s_Integrate_and_Fire;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":31
- *         self.name='Integrate and Fire'
- * 
- *         self._reset()             # <<<<<<<<<<<<<<
- * 
- *     @cython.cdivision(True)
- */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_7splikes_7splikes_neuron *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":18
- *         neuron._reset(self)
- * 
- *     def __init__(self,N):             # <<<<<<<<<<<<<<
- *         neuron.__init__(self,N)
- * 
- */
-
-  /* function exit code */
-  __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "splikes\neurons\IntegrateAndFire.pyx":35
+/* "plasticnet\neurons\linear_neuron.pyx":8
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
- *         cdef int __i,__j
+ *         cdef neuron pre
  *         cdef connection c
  */
 
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_update(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim, int __pyx_skip_dispatch) {
-  int __pyx_v___i;
-  int __pyx_v___j;
-  struct __pyx_obj_7splikes_7splikes_connection *__pyx_v_c = 0;
-  struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_pre = 0;
-  double *__pyx_v_g_e;
-  double *__pyx_v_g_i;
-  double *__pyx_v_V;
-  CYTHON_UNUSED double __pyx_v_reset;
-  double __pyx_v_tau_m;
-  double __pyx_v_tau_in;
-  double __pyx_v_V_rev_inh;
-  double __pyx_v_V_rev_exc;
-  double __pyx_v_tau_ex;
-  double __pyx_v_V_rest;
-  CYTHON_UNUSED double __pyx_v_threshold;
-  double *__pyx_v_W;
-  double *__pyx_v_state;
-  double __pyx_v_spike_scale;
-  int *__pyx_v_spiking;
+static PyObject *__pyx_pw_10plasticnet_7neurons_13linear_neuron_13linear_neuron_1update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_10plasticnet_7neurons_13linear_neuron_13linear_neuron_update(struct __pyx_obj_10plasticnet_7neurons_13linear_neuron_linear_neuron *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, CYTHON_UNUSED struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim, int __pyx_skip_dispatch) {
+  struct __pyx_obj_10plasticnet_10plasticnet_neuron *__pyx_v_pre = 0;
+  struct __pyx_obj_10plasticnet_10plasticnet_connection *__pyx_v_c = 0;
+  double *__pyx_v_x;
+  double *__pyx_v_y;
+  double *__pyx_v_z;
+  double *__pyx_v_w;
+  int __pyx_v_i;
+  int __pyx_v_j;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1894,17 +1446,13 @@ static PyObject *__pyx_f_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire
   PyObject *__pyx_t_5 = NULL;
   Py_ssize_t __pyx_t_6;
   PyObject *__pyx_t_7 = NULL;
-  double __pyx_t_8;
-  PyObject *(*__pyx_t_9)(PyObject *);
-  double *__pyx_t_10;
-  int __pyx_t_11;
+  int __pyx_t_8;
+  int __pyx_t_9;
+  PyObject *(*__pyx_t_10)(PyObject *);
+  double *__pyx_t_11;
   int __pyx_t_12;
   int __pyx_t_13;
   int __pyx_t_14;
-  int __pyx_t_15;
-  int __pyx_t_16;
-  int __pyx_t_17;
-  int __pyx_t_18;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -1913,11 +1461,11 @@ static PyObject *__pyx_f_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 8; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5update)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_7neurons_13linear_neuron_13linear_neuron_1update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 8; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -1932,7 +1480,7 @@ static PyObject *__pyx_f_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire
           __pyx_t_6 = 1;
         }
       }
-      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 8; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_7);
       if (__pyx_t_5) {
         PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
@@ -1943,7 +1491,7 @@ static PyObject *__pyx_f_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire
       PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
       __pyx_t_3 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 8; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -1955,465 +1503,194 @@ static PyObject *__pyx_f_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes\neurons\IntegrateAndFire.pyx":40
- *         cdef neuron pre
+  /* "plasticnet\neurons\linear_neuron.pyx":13
  * 
- *         cdef double *g_e=<double *>self.g_e.data             # <<<<<<<<<<<<<<
- *         cdef double *g_i=<double *>self.g_i.data
- *         cdef double *V=<double *>self.V.data
+ *         cdef double *x
+ *         cdef double *y=<double *>self.linear_output.data             # <<<<<<<<<<<<<<
+ *         cdef double *z=<double *>self.output.data
+ *         cdef double *w    #=<double *>c.w.data
  */
-  __pyx_v_g_e = ((double *)__pyx_v_self->g_e->data);
+  __pyx_v_y = ((double *)__pyx_v_self->__pyx_base.linear_output->data);
 
-  /* "splikes\neurons\IntegrateAndFire.pyx":41
+  /* "plasticnet\neurons\linear_neuron.pyx":14
+ *         cdef double *x
+ *         cdef double *y=<double *>self.linear_output.data
+ *         cdef double *z=<double *>self.output.data             # <<<<<<<<<<<<<<
+ *         cdef double *w    #=<double *>c.w.data
+ *         cdef int i,j
+ */
+  __pyx_v_z = ((double *)__pyx_v_self->__pyx_base.output->data);
+
+  /* "plasticnet\neurons\linear_neuron.pyx":18
+ *         cdef int i,j
  * 
- *         cdef double *g_e=<double *>self.g_e.data
- *         cdef double *g_i=<double *>self.g_i.data             # <<<<<<<<<<<<<<
- *         cdef double *V=<double *>self.V.data
- *         cdef double reset=self.reset
- */
-  __pyx_v_g_i = ((double *)__pyx_v_self->g_i->data);
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":42
- *         cdef double *g_e=<double *>self.g_e.data
- *         cdef double *g_i=<double *>self.g_i.data
- *         cdef double *V=<double *>self.V.data             # <<<<<<<<<<<<<<
- *         cdef double reset=self.reset
- *         cdef double tau_m=self.tau_m
- */
-  __pyx_v_V = ((double *)__pyx_v_self->V->data);
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":43
- *         cdef double *g_i=<double *>self.g_i.data
- *         cdef double *V=<double *>self.V.data
- *         cdef double reset=self.reset             # <<<<<<<<<<<<<<
- *         cdef double tau_m=self.tau_m
- *         cdef double tau_in=self.tau_in
- */
-  __pyx_t_8 = __pyx_v_self->reset;
-  __pyx_v_reset = __pyx_t_8;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":44
- *         cdef double *V=<double *>self.V.data
- *         cdef double reset=self.reset
- *         cdef double tau_m=self.tau_m             # <<<<<<<<<<<<<<
- *         cdef double tau_in=self.tau_in
- *         cdef double V_rev_inh=self.V_rev_inh
- */
-  __pyx_t_8 = __pyx_v_self->tau_m;
-  __pyx_v_tau_m = __pyx_t_8;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":45
- *         cdef double reset=self.reset
- *         cdef double tau_m=self.tau_m
- *         cdef double tau_in=self.tau_in             # <<<<<<<<<<<<<<
- *         cdef double V_rev_inh=self.V_rev_inh
- *         cdef double V_rev_exc=self.V_rev_exc
- */
-  __pyx_t_8 = __pyx_v_self->tau_in;
-  __pyx_v_tau_in = __pyx_t_8;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":46
- *         cdef double tau_m=self.tau_m
- *         cdef double tau_in=self.tau_in
- *         cdef double V_rev_inh=self.V_rev_inh             # <<<<<<<<<<<<<<
- *         cdef double V_rev_exc=self.V_rev_exc
- *         cdef double tau_ex=self.tau_ex
- */
-  __pyx_t_8 = __pyx_v_self->V_rev_inh;
-  __pyx_v_V_rev_inh = __pyx_t_8;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":47
- *         cdef double tau_in=self.tau_in
- *         cdef double V_rev_inh=self.V_rev_inh
- *         cdef double V_rev_exc=self.V_rev_exc             # <<<<<<<<<<<<<<
- *         cdef double tau_ex=self.tau_ex
- *         cdef double V_rest=self.V_rest
- */
-  __pyx_t_8 = __pyx_v_self->V_rev_exc;
-  __pyx_v_V_rev_exc = __pyx_t_8;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":48
- *         cdef double V_rev_inh=self.V_rev_inh
- *         cdef double V_rev_exc=self.V_rev_exc
- *         cdef double tau_ex=self.tau_ex             # <<<<<<<<<<<<<<
- *         cdef double V_rest=self.V_rest
- *         cdef double threshold=self.threshold
- */
-  __pyx_t_8 = __pyx_v_self->tau_ex;
-  __pyx_v_tau_ex = __pyx_t_8;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":49
- *         cdef double V_rev_exc=self.V_rev_exc
- *         cdef double tau_ex=self.tau_ex
- *         cdef double V_rest=self.V_rest             # <<<<<<<<<<<<<<
- *         cdef double threshold=self.threshold
+ *         for i in range(self.N):             # <<<<<<<<<<<<<<
+ *             y[i]=0.0
  * 
  */
-  __pyx_t_8 = __pyx_v_self->V_rest;
-  __pyx_v_V_rest = __pyx_t_8;
+  __pyx_t_8 = __pyx_v_self->__pyx_base.N;
+  for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
+    __pyx_v_i = __pyx_t_9;
 
-  /* "splikes\neurons\IntegrateAndFire.pyx":50
- *         cdef double tau_ex=self.tau_ex
- *         cdef double V_rest=self.V_rest
- *         cdef double threshold=self.threshold             # <<<<<<<<<<<<<<
+    /* "plasticnet\neurons\linear_neuron.pyx":19
  * 
- *         cdef double *W,*state
+ *         for i in range(self.N):
+ *             y[i]=0.0             # <<<<<<<<<<<<<<
+ * 
+ *         for c in self.connections_pre:
  */
-  __pyx_t_8 = __pyx_v_self->threshold;
-  __pyx_v_threshold = __pyx_t_8;
+    (__pyx_v_y[__pyx_v_i]) = 0.0;
+  }
 
-  /* "splikes\neurons\IntegrateAndFire.pyx":56
- *         cdef int *spiking
+  /* "plasticnet\neurons\linear_neuron.pyx":21
+ *             y[i]=0.0
  * 
  *         for c in self.connections_pre:             # <<<<<<<<<<<<<<
  *             pre=c.pre
- *             W=c.W
+ *             w=c.w
  */
   if (likely(PyList_CheckExact(__pyx_v_self->__pyx_base.connections_pre)) || PyTuple_CheckExact(__pyx_v_self->__pyx_base.connections_pre)) {
     __pyx_t_1 = __pyx_v_self->__pyx_base.connections_pre; __Pyx_INCREF(__pyx_t_1); __pyx_t_6 = 0;
-    __pyx_t_9 = NULL;
+    __pyx_t_10 = NULL;
   } else {
-    __pyx_t_6 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_self->__pyx_base.connections_pre); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_self->__pyx_base.connections_pre); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_9 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_10 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   for (;;) {
-    if (likely(!__pyx_t_9)) {
+    if (likely(!__pyx_t_10)) {
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_6 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_6); __Pyx_INCREF(__pyx_t_2); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_6); __Pyx_INCREF(__pyx_t_2); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         #endif
       } else {
         if (__pyx_t_6 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_6); __Pyx_INCREF(__pyx_t_2); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_6); __Pyx_INCREF(__pyx_t_2); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         #endif
       }
     } else {
-      __pyx_t_2 = __pyx_t_9(__pyx_t_1);
+      __pyx_t_2 = __pyx_t_10(__pyx_t_1);
       if (unlikely(!__pyx_t_2)) {
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         }
         break;
       }
       __Pyx_GOTREF(__pyx_t_2);
     }
-    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_7splikes_7splikes_connection))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_XDECREF_SET(__pyx_v_c, ((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_t_2));
+    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_10plasticnet_10plasticnet_connection))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_XDECREF_SET(__pyx_v_c, ((struct __pyx_obj_10plasticnet_10plasticnet_connection *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "splikes\neurons\IntegrateAndFire.pyx":57
+    /* "plasticnet\neurons\linear_neuron.pyx":22
  * 
  *         for c in self.connections_pre:
  *             pre=c.pre             # <<<<<<<<<<<<<<
- *             W=c.W
- *             spiking=<int *>pre.spiking.data
+ *             w=c.w
+ *             x=<double *>pre.output.data
  */
     __pyx_t_2 = ((PyObject *)__pyx_v_c->pre);
     __Pyx_INCREF(__pyx_t_2);
-    __Pyx_XDECREF_SET(__pyx_v_pre, ((struct __pyx_obj_7splikes_7splikes_neuron *)__pyx_t_2));
+    __Pyx_XDECREF_SET(__pyx_v_pre, ((struct __pyx_obj_10plasticnet_10plasticnet_neuron *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "splikes\neurons\IntegrateAndFire.pyx":58
+    /* "plasticnet\neurons\linear_neuron.pyx":23
  *         for c in self.connections_pre:
  *             pre=c.pre
- *             W=c.W             # <<<<<<<<<<<<<<
- *             spiking=<int *>pre.spiking.data
- *             spike_scale=c.spike_scale
+ *             w=c.w             # <<<<<<<<<<<<<<
+ *             x=<double *>pre.output.data
+ *             for j in range(pre.N):
  */
-    __pyx_t_10 = __pyx_v_c->W;
-    __pyx_v_W = __pyx_t_10;
+    __pyx_t_11 = __pyx_v_c->w;
+    __pyx_v_w = __pyx_t_11;
 
-    /* "splikes\neurons\IntegrateAndFire.pyx":59
+    /* "plasticnet\neurons\linear_neuron.pyx":24
  *             pre=c.pre
- *             W=c.W
- *             spiking=<int *>pre.spiking.data             # <<<<<<<<<<<<<<
- *             spike_scale=c.spike_scale
+ *             w=c.w
+ *             x=<double *>pre.output.data             # <<<<<<<<<<<<<<
+ *             for j in range(pre.N):
+ *                 for i in range(self.N):
+ */
+    __pyx_v_x = ((double *)__pyx_v_pre->output->data);
+
+    /* "plasticnet\neurons\linear_neuron.pyx":25
+ *             w=c.w
+ *             x=<double *>pre.output.data
+ *             for j in range(pre.N):             # <<<<<<<<<<<<<<
+ *                 for i in range(self.N):
+ *                     y[i]+=x[j]*w[i*pre.N+j]
+ */
+    __pyx_t_8 = __pyx_v_pre->N;
+    for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
+      __pyx_v_j = __pyx_t_9;
+
+      /* "plasticnet\neurons\linear_neuron.pyx":26
+ *             x=<double *>pre.output.data
+ *             for j in range(pre.N):
+ *                 for i in range(self.N):             # <<<<<<<<<<<<<<
+ *                     y[i]+=x[j]*w[i*pre.N+j]
  * 
  */
-    __pyx_v_spiking = ((int *)__pyx_v_pre->spiking->data);
+      __pyx_t_12 = __pyx_v_self->__pyx_base.N;
+      for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
+        __pyx_v_i = __pyx_t_13;
 
-    /* "splikes\neurons\IntegrateAndFire.pyx":60
- *             W=c.W
- *             spiking=<int *>pre.spiking.data
- *             spike_scale=c.spike_scale             # <<<<<<<<<<<<<<
+        /* "plasticnet\neurons\linear_neuron.pyx":27
+ *             for j in range(pre.N):
+ *                 for i in range(self.N):
+ *                     y[i]+=x[j]*w[i*pre.N+j]             # <<<<<<<<<<<<<<
  * 
- *             if pre.is_spike and c.use_state:
+ *         for i in range(self.N):
  */
-    __pyx_t_8 = __pyx_v_c->spike_scale;
-    __pyx_v_spike_scale = __pyx_t_8;
-
-    /* "splikes\neurons\IntegrateAndFire.pyx":62
- *             spike_scale=c.spike_scale
- * 
- *             if pre.is_spike and c.use_state:             # <<<<<<<<<<<<<<
- *                 state=<double *>c.state.data
- *                 for __j in range(pre.N):
- */
-    __pyx_t_12 = (__pyx_v_pre->is_spike != 0);
-    if (__pyx_t_12) {
-    } else {
-      __pyx_t_11 = __pyx_t_12;
-      goto __pyx_L6_bool_binop_done;
-    }
-    __pyx_t_12 = (__pyx_v_c->use_state != 0);
-    __pyx_t_11 = __pyx_t_12;
-    __pyx_L6_bool_binop_done:;
-    if (__pyx_t_11) {
-
-      /* "splikes\neurons\IntegrateAndFire.pyx":63
- * 
- *             if pre.is_spike and c.use_state:
- *                 state=<double *>c.state.data             # <<<<<<<<<<<<<<
- *                 for __j in range(pre.N):
- *                     if spiking[__j]:
- */
-      __pyx_v_state = ((double *)__pyx_v_c->state->data);
-
-      /* "splikes\neurons\IntegrateAndFire.pyx":64
- *             if pre.is_spike and c.use_state:
- *                 state=<double *>c.state.data
- *                 for __j in range(pre.N):             # <<<<<<<<<<<<<<
- *                     if spiking[__j]:
- *                         for __i in range(self.N):
- */
-      __pyx_t_13 = __pyx_v_pre->N;
-      for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_13; __pyx_t_14+=1) {
-        __pyx_v___j = __pyx_t_14;
-
-        /* "splikes\neurons\IntegrateAndFire.pyx":65
- *                 state=<double *>c.state.data
- *                 for __j in range(pre.N):
- *                     if spiking[__j]:             # <<<<<<<<<<<<<<
- *                         for __i in range(self.N):
- *                             state[__i]+=spike_scale*W[__i*pre.N+__j]
- */
-        __pyx_t_11 = ((__pyx_v_spiking[__pyx_v___j]) != 0);
-        if (__pyx_t_11) {
-
-          /* "splikes\neurons\IntegrateAndFire.pyx":66
- *                 for __j in range(pre.N):
- *                     if spiking[__j]:
- *                         for __i in range(self.N):             # <<<<<<<<<<<<<<
- *                             state[__i]+=spike_scale*W[__i*pre.N+__j]
- * 
- */
-          __pyx_t_15 = __pyx_v_self->__pyx_base.N;
-          for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
-            __pyx_v___i = __pyx_t_16;
-
-            /* "splikes\neurons\IntegrateAndFire.pyx":67
- *                     if spiking[__j]:
- *                         for __i in range(self.N):
- *                             state[__i]+=spike_scale*W[__i*pre.N+__j]             # <<<<<<<<<<<<<<
- * 
- *         for __i in range(self.N):
- */
-            __pyx_t_17 = __pyx_v___i;
-            (__pyx_v_state[__pyx_t_17]) = ((__pyx_v_state[__pyx_t_17]) + (__pyx_v_spike_scale * (__pyx_v_W[((__pyx_v___i * __pyx_v_pre->N) + __pyx_v___j)])));
-          }
-          goto __pyx_L10;
-        }
-        __pyx_L10:;
+        __pyx_t_14 = __pyx_v_i;
+        (__pyx_v_y[__pyx_t_14]) = ((__pyx_v_y[__pyx_t_14]) + ((__pyx_v_x[__pyx_v_j]) * (__pyx_v_w[((__pyx_v_i * __pyx_v_pre->N) + __pyx_v_j)])));
       }
-      goto __pyx_L5;
     }
-    __pyx_L5:;
 
-    /* "splikes\neurons\IntegrateAndFire.pyx":56
- *         cdef int *spiking
+    /* "plasticnet\neurons\linear_neuron.pyx":21
+ *             y[i]=0.0
  * 
  *         for c in self.connections_pre:             # <<<<<<<<<<<<<<
  *             pre=c.pre
- *             W=c.W
+ *             w=c.w
  */
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes\neurons\IntegrateAndFire.pyx":69
- *                             state[__i]+=spike_scale*W[__i*pre.N+__j]
+  /* "plasticnet\neurons\linear_neuron.pyx":29
+ *                     y[i]+=x[j]*w[i*pre.N+j]
  * 
- *         for __i in range(self.N):             # <<<<<<<<<<<<<<
- *             V[__i]+=sim.dt*(-(V[__i]-V_rest)/tau_m+g_e[__i]*(V_rev_exc-V[__i])/tau_m+g_i[__i]*(V_rev_inh-V[__i])/tau_m)
- *             g_e[__i]+=sim.dt*(-g_e[__i]/tau_ex)
+ *         for i in range(self.N):             # <<<<<<<<<<<<<<
+ *             z[i]=y[i]
+ * 
  */
-  __pyx_t_13 = __pyx_v_self->__pyx_base.N;
-  for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_13; __pyx_t_14+=1) {
-    __pyx_v___i = __pyx_t_14;
+  __pyx_t_8 = __pyx_v_self->__pyx_base.N;
+  for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
+    __pyx_v_i = __pyx_t_9;
 
-    /* "splikes\neurons\IntegrateAndFire.pyx":70
+    /* "plasticnet\neurons\linear_neuron.pyx":30
  * 
- *         for __i in range(self.N):
- *             V[__i]+=sim.dt*(-(V[__i]-V_rest)/tau_m+g_e[__i]*(V_rev_exc-V[__i])/tau_m+g_i[__i]*(V_rev_inh-V[__i])/tau_m)             # <<<<<<<<<<<<<<
- *             g_e[__i]+=sim.dt*(-g_e[__i]/tau_ex)
- *             g_i[__i]+=sim.dt*(-g_i[__i]/tau_in)
- */
-    __pyx_t_15 = __pyx_v___i;
-    (__pyx_v_V[__pyx_t_15]) = ((__pyx_v_V[__pyx_t_15]) + (__pyx_v_sim->dt * ((((-((__pyx_v_V[__pyx_v___i]) - __pyx_v_V_rest)) / __pyx_v_tau_m) + (((__pyx_v_g_e[__pyx_v___i]) * (__pyx_v_V_rev_exc - (__pyx_v_V[__pyx_v___i]))) / __pyx_v_tau_m)) + (((__pyx_v_g_i[__pyx_v___i]) * (__pyx_v_V_rev_inh - (__pyx_v_V[__pyx_v___i]))) / __pyx_v_tau_m))));
-
-    /* "splikes\neurons\IntegrateAndFire.pyx":71
- *         for __i in range(self.N):
- *             V[__i]+=sim.dt*(-(V[__i]-V_rest)/tau_m+g_e[__i]*(V_rev_exc-V[__i])/tau_m+g_i[__i]*(V_rev_inh-V[__i])/tau_m)
- *             g_e[__i]+=sim.dt*(-g_e[__i]/tau_ex)             # <<<<<<<<<<<<<<
- *             g_i[__i]+=sim.dt*(-g_i[__i]/tau_in)
+ *         for i in range(self.N):
+ *             z[i]=y[i]             # <<<<<<<<<<<<<<
+ * 
  * 
  */
-    __pyx_t_15 = __pyx_v___i;
-    (__pyx_v_g_e[__pyx_t_15]) = ((__pyx_v_g_e[__pyx_t_15]) + (__pyx_v_sim->dt * ((-(__pyx_v_g_e[__pyx_v___i])) / __pyx_v_tau_ex)));
-
-    /* "splikes\neurons\IntegrateAndFire.pyx":72
- *             V[__i]+=sim.dt*(-(V[__i]-V_rest)/tau_m+g_e[__i]*(V_rev_exc-V[__i])/tau_m+g_i[__i]*(V_rev_inh-V[__i])/tau_m)
- *             g_e[__i]+=sim.dt*(-g_e[__i]/tau_ex)
- *             g_i[__i]+=sim.dt*(-g_i[__i]/tau_in)             # <<<<<<<<<<<<<<
- * 
- *         spiking=<int *>self.spiking.data
- */
-    __pyx_t_15 = __pyx_v___i;
-    (__pyx_v_g_i[__pyx_t_15]) = ((__pyx_v_g_i[__pyx_t_15]) + (__pyx_v_sim->dt * ((-(__pyx_v_g_i[__pyx_v___i])) / __pyx_v_tau_in)));
+    (__pyx_v_z[__pyx_v_i]) = (__pyx_v_y[__pyx_v_i]);
   }
 
-  /* "splikes\neurons\IntegrateAndFire.pyx":74
- *             g_i[__i]+=sim.dt*(-g_i[__i]/tau_in)
- * 
- *         spiking=<int *>self.spiking.data             # <<<<<<<<<<<<<<
- *         self.is_spike=0
- *         for __i in range(self.N):
- */
-  __pyx_v_spiking = ((int *)__pyx_v_self->__pyx_base.spiking->data);
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":75
- * 
- *         spiking=<int *>self.spiking.data
- *         self.is_spike=0             # <<<<<<<<<<<<<<
- *         for __i in range(self.N):
- *             if V[__i]>self.threshold:
- */
-  __pyx_v_self->__pyx_base.is_spike = 0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":76
- *         spiking=<int *>self.spiking.data
- *         self.is_spike=0
- *         for __i in range(self.N):             # <<<<<<<<<<<<<<
- *             if V[__i]>self.threshold:
- *                 spiking[__i]=1
- */
-  __pyx_t_13 = __pyx_v_self->__pyx_base.N;
-  for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_13; __pyx_t_14+=1) {
-    __pyx_v___i = __pyx_t_14;
-
-    /* "splikes\neurons\IntegrateAndFire.pyx":77
- *         self.is_spike=0
- *         for __i in range(self.N):
- *             if V[__i]>self.threshold:             # <<<<<<<<<<<<<<
- *                 spiking[__i]=1
- *                 self.is_spike=1
- */
-    __pyx_t_11 = (((__pyx_v_V[__pyx_v___i]) > __pyx_v_self->threshold) != 0);
-    if (__pyx_t_11) {
-
-      /* "splikes\neurons\IntegrateAndFire.pyx":78
- *         for __i in range(self.N):
- *             if V[__i]>self.threshold:
- *                 spiking[__i]=1             # <<<<<<<<<<<<<<
- *                 self.is_spike=1
- *                 self.post_count+=1
- */
-      (__pyx_v_spiking[__pyx_v___i]) = 1;
-
-      /* "splikes\neurons\IntegrateAndFire.pyx":79
- *             if V[__i]>self.threshold:
- *                 spiking[__i]=1
- *                 self.is_spike=1             # <<<<<<<<<<<<<<
- *                 self.post_count+=1
- *                 if self.save_spikes_begin<=t<=self.save_spikes_end:
- */
-      __pyx_v_self->__pyx_base.is_spike = 1;
-
-      /* "splikes\neurons\IntegrateAndFire.pyx":80
- *                 spiking[__i]=1
- *                 self.is_spike=1
- *                 self.post_count+=1             # <<<<<<<<<<<<<<
- *                 if self.save_spikes_begin<=t<=self.save_spikes_end:
- *                     self.saved_spikes.append( (t,__i) )
- */
-      __pyx_v_self->__pyx_base.post_count = (__pyx_v_self->__pyx_base.post_count + 1);
-
-      /* "splikes\neurons\IntegrateAndFire.pyx":81
- *                 self.is_spike=1
- *                 self.post_count+=1
- *                 if self.save_spikes_begin<=t<=self.save_spikes_end:             # <<<<<<<<<<<<<<
- *                     self.saved_spikes.append( (t,__i) )
- *                 V[__i]=self.reset
- */
-      __pyx_t_11 = (__pyx_v_self->__pyx_base.save_spikes_begin <= __pyx_v_t);
-      if (__pyx_t_11) {
-        __pyx_t_11 = (__pyx_v_t <= __pyx_v_self->__pyx_base.save_spikes_end);
-      }
-      __pyx_t_12 = (__pyx_t_11 != 0);
-      if (__pyx_t_12) {
-
-        /* "splikes\neurons\IntegrateAndFire.pyx":82
- *                 self.post_count+=1
- *                 if self.save_spikes_begin<=t<=self.save_spikes_end:
- *                     self.saved_spikes.append( (t,__i) )             # <<<<<<<<<<<<<<
- *                 V[__i]=self.reset
- *             else:
- */
-        __pyx_t_1 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v___i); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        __Pyx_GOTREF(__pyx_t_4);
-        PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
-        __Pyx_GIVEREF(__pyx_t_1);
-        PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_2);
-        __Pyx_GIVEREF(__pyx_t_2);
-        __pyx_t_1 = 0;
-        __pyx_t_2 = 0;
-        __pyx_t_18 = __Pyx_PyObject_Append(__pyx_v_self->__pyx_base.saved_spikes, __pyx_t_4); if (unlikely(__pyx_t_18 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        goto __pyx_L18;
-      }
-      __pyx_L18:;
-
-      /* "splikes\neurons\IntegrateAndFire.pyx":83
- *                 if self.save_spikes_begin<=t<=self.save_spikes_end:
- *                     self.saved_spikes.append( (t,__i) )
- *                 V[__i]=self.reset             # <<<<<<<<<<<<<<
- *             else:
- *                 spiking[__i]=0
- */
-      __pyx_t_8 = __pyx_v_self->reset;
-      (__pyx_v_V[__pyx_v___i]) = __pyx_t_8;
-      goto __pyx_L17;
-    }
-    /*else*/ {
-
-      /* "splikes\neurons\IntegrateAndFire.pyx":85
- *                 V[__i]=self.reset
- *             else:
- *                 spiking[__i]=0             # <<<<<<<<<<<<<<
- * 
- */
-      (__pyx_v_spiking[__pyx_v___i]) = 0;
-    }
-    __pyx_L17:;
-  }
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":35
+  /* "plasticnet\neurons\linear_neuron.pyx":8
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
- *         cdef int __i,__j
+ *         cdef neuron pre
  *         cdef connection c
  */
 
@@ -2427,21 +1704,21 @@ static PyObject *__pyx_f_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.neurons.linear_neuron.linear_neuron.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
-  __Pyx_XDECREF((PyObject *)__pyx_v_c);
   __Pyx_XDECREF((PyObject *)__pyx_v_pre);
+  __Pyx_XDECREF((PyObject *)__pyx_v_c);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_10plasticnet_7neurons_13linear_neuron_13linear_neuron_1update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_7neurons_13linear_neuron_13linear_neuron_1update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_t;
-  struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim = 0;
+  struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -2468,11 +1745,11 @@ static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFir
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 8; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 8; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -2480,19 +1757,19 @@ static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFir
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_sim = ((struct __pyx_obj_7splikes_7splikes_simulation *)values[1]);
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 8; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_sim = ((struct __pyx_obj_10plasticnet_10plasticnet_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 8; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.neurons.linear_neuron.linear_neuron.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_4update(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 8; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_r = __pyx_pf_10plasticnet_7neurons_13linear_neuron_13linear_neuron_update(((struct __pyx_obj_10plasticnet_7neurons_13linear_neuron_linear_neuron *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
   goto __pyx_L0;
@@ -2503,7 +1780,7 @@ static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFir
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_4update(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim) {
+static PyObject *__pyx_pf_10plasticnet_7neurons_13linear_neuron_13linear_neuron_update(struct __pyx_obj_10plasticnet_7neurons_13linear_neuron_linear_neuron *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2512,7 +1789,7 @@ static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFir
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_13linear_neuron_13linear_neuron_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 8; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2521,7 +1798,7 @@ static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFir
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.neurons.linear_neuron.linear_neuron.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2529,910 +1806,99 @@ static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFir
   return __pyx_r;
 }
 
-/* "splikes\neurons\IntegrateAndFire.pyx":10
+/* "plasticnet\neurons\linear_neuron.pyx":33
  * 
- * cdef class IntegrateAndFire(neuron):
- *     cdef public double reset,tau_m,tau_in,V_rev_inh,V_rev_exc,tau_ex,V_rest,threshold             # <<<<<<<<<<<<<<
- *     cdef public np.ndarray g_e,g_i,V
- *     cpdef _reset(self):
+ * 
+ *     def __init__(self,*args):             # <<<<<<<<<<<<<<
+ *         neuron.__init__(self,*args) # number of neurons
+ *         self.name='Linear Neuron'
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5reset_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5reset_1__get__(PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = 0;
+static int __pyx_pw_10plasticnet_7neurons_13linear_neuron_13linear_neuron_3__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_10plasticnet_7neurons_13linear_neuron_13linear_neuron_3__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  PyObject *__pyx_v_args = 0;
+  int __pyx_r;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5reset___get__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self));
+  __Pyx_RefNannySetupContext("__init__ (wrapper)", 0);
+  if (unlikely(__pyx_kwds) && unlikely(PyDict_Size(__pyx_kwds) > 0) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__init__", 0))) return -1;
+  __Pyx_INCREF(__pyx_args);
+  __pyx_v_args = __pyx_args;
+  __pyx_r = __pyx_pf_10plasticnet_7neurons_13linear_neuron_13linear_neuron_2__init__(((struct __pyx_obj_10plasticnet_7neurons_13linear_neuron_linear_neuron *)__pyx_v_self), __pyx_v_args);
 
   /* function exit code */
+  __Pyx_XDECREF(__pyx_v_args);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5reset___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
+static int __pyx_pf_10plasticnet_7neurons_13linear_neuron_13linear_neuron_2__init__(struct __pyx_obj_10plasticnet_7neurons_13linear_neuron_linear_neuron *__pyx_v_self, PyObject *__pyx_v_args) {
+  int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__get__", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->reset); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_RefNannySetupContext("__init__", 0);
+
+  /* "plasticnet\neurons\linear_neuron.pyx":34
+ * 
+ *     def __init__(self,*args):
+ *         neuron.__init__(self,*args) # number of neurons             # <<<<<<<<<<<<<<
+ *         self.name='Linear Neuron'
+ */
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)((PyObject*)__pyx_ptype_10plasticnet_10plasticnet_neuron)), __pyx_n_s_init); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_INCREF(((PyObject *)__pyx_v_self));
+  PyTuple_SET_ITEM(__pyx_t_2, 0, ((PyObject *)__pyx_v_self));
+  __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
+  __pyx_t_3 = PySequence_Tuple(__pyx_v_args); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_4 = PyNumber_Add(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.reset.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
+  /* "plasticnet\neurons\linear_neuron.pyx":35
+ *     def __init__(self,*args):
+ *         neuron.__init__(self,*args) # number of neurons
+ *         self.name='Linear Neuron'             # <<<<<<<<<<<<<<
+ */
+  __Pyx_INCREF(__pyx_kp_s_Linear_Neuron);
+  __Pyx_GIVEREF(__pyx_kp_s_Linear_Neuron);
+  __Pyx_GOTREF(__pyx_v_self->__pyx_base.name);
+  __Pyx_DECREF(__pyx_v_self->__pyx_base.name);
+  __pyx_v_self->__pyx_base.name = __pyx_kp_s_Linear_Neuron;
 
-/* Python wrapper */
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5reset_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5reset_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5reset_2__set__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self), ((PyObject *)__pyx_v_value));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5reset_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  double __pyx_t_1;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->reset = __pyx_t_1;
-
-  /* function exit code */
-  __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.reset.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5tau_m_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5tau_m_1__get__(PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5tau_m___get__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5tau_m___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__get__", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_m); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.tau_m.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5tau_m_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5tau_m_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5tau_m_2__set__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self), ((PyObject *)__pyx_v_value));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5tau_m_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  double __pyx_t_1;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->tau_m = __pyx_t_1;
-
-  /* function exit code */
-  __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.tau_m.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_in_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_in_1__get__(PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_in___get__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_in___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__get__", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_in); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.tau_in.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_in_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_in_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_in_2__set__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self), ((PyObject *)__pyx_v_value));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_in_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  double __pyx_t_1;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->tau_in = __pyx_t_1;
-
-  /* function exit code */
-  __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.tau_in.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_inh_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_inh_1__get__(PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_inh___get__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_inh___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__get__", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->V_rev_inh); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.V_rev_inh.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_inh_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_inh_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_inh_2__set__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self), ((PyObject *)__pyx_v_value));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_inh_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  double __pyx_t_1;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->V_rev_inh = __pyx_t_1;
-
-  /* function exit code */
-  __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.V_rev_inh.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_exc_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_exc_1__get__(PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_exc___get__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_exc___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__get__", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->V_rev_exc); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.V_rev_exc.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_exc_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_exc_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_exc_2__set__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self), ((PyObject *)__pyx_v_value));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_exc_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  double __pyx_t_1;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->V_rev_exc = __pyx_t_1;
-
-  /* function exit code */
-  __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.V_rev_exc.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_ex_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_ex_1__get__(PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_ex___get__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_ex___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__get__", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_ex); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.tau_ex.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_ex_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_ex_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_ex_2__set__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self), ((PyObject *)__pyx_v_value));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_ex_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  double __pyx_t_1;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->tau_ex = __pyx_t_1;
-
-  /* function exit code */
-  __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.tau_ex.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6V_rest_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6V_rest_1__get__(PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6V_rest___get__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6V_rest___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__get__", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->V_rest); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.V_rest.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6V_rest_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6V_rest_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6V_rest_2__set__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self), ((PyObject *)__pyx_v_value));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6V_rest_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  double __pyx_t_1;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->V_rest = __pyx_t_1;
-
-  /* function exit code */
-  __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.V_rest.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9threshold_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9threshold_1__get__(PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9threshold___get__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9threshold___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__get__", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->threshold); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.threshold.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9threshold_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9threshold_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9threshold_2__set__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self), ((PyObject *)__pyx_v_value));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9threshold_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  double __pyx_t_1;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->threshold = __pyx_t_1;
-
-  /* function exit code */
-  __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.threshold.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "splikes\neurons\IntegrateAndFire.pyx":11
- * cdef class IntegrateAndFire(neuron):
- *     cdef public double reset,tau_m,tau_in,V_rev_inh,V_rev_exc,tau_ex,V_rest,threshold
- *     cdef public np.ndarray g_e,g_i,V             # <<<<<<<<<<<<<<
- *     cpdef _reset(self):
- *         self.g_e=np.zeros(self.N,dtype=np.float)
+  /* "plasticnet\neurons\linear_neuron.pyx":33
+ * 
+ * 
+ *     def __init__(self,*args):             # <<<<<<<<<<<<<<
+ *         neuron.__init__(self,*args) # number of neurons
+ *         self.name='Linear Neuron'
  */
 
-/* Python wrapper */
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e_1__get__(PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e___get__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_INCREF(((PyObject *)__pyx_v_self->g_e));
-  __pyx_r = ((PyObject *)__pyx_v_self->g_e);
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e_2__set__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self), ((PyObject *)__pyx_v_value));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_1 = __pyx_v_value;
-  __Pyx_INCREF(__pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_1);
-  __Pyx_GOTREF(__pyx_v_self->g_e);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->g_e));
-  __pyx_v_self->g_e = ((PyArrayObject *)__pyx_t_1);
-  __pyx_t_1 = 0;
-
   /* function exit code */
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.g_e.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_AddTraceback("plasticnet.neurons.linear_neuron.linear_neuron.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e_5__del__(PyObject *__pyx_v_self); /*proto*/
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e_5__del__(PyObject *__pyx_v_self) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e_4__del__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e_4__del__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__del__", 0);
-  __Pyx_INCREF(Py_None);
-  __Pyx_GIVEREF(Py_None);
-  __Pyx_GOTREF(__pyx_v_self->g_e);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->g_e));
-  __pyx_v_self->g_e = ((PyArrayObject *)Py_None);
-
-  /* function exit code */
-  __pyx_r = 0;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i_1__get__(PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i___get__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_INCREF(((PyObject *)__pyx_v_self->g_i));
-  __pyx_r = ((PyObject *)__pyx_v_self->g_i);
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i_2__set__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self), ((PyObject *)__pyx_v_value));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_1 = __pyx_v_value;
-  __Pyx_INCREF(__pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_1);
-  __Pyx_GOTREF(__pyx_v_self->g_i);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->g_i));
-  __pyx_v_self->g_i = ((PyArrayObject *)__pyx_t_1);
-  __pyx_t_1 = 0;
-
-  /* function exit code */
-  __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.g_i.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i_5__del__(PyObject *__pyx_v_self); /*proto*/
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i_5__del__(PyObject *__pyx_v_self) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i_4__del__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i_4__del__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__del__", 0);
-  __Pyx_INCREF(Py_None);
-  __Pyx_GIVEREF(Py_None);
-  __Pyx_GOTREF(__pyx_v_self->g_i);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->g_i));
-  __pyx_v_self->g_i = ((PyArrayObject *)Py_None);
-
-  /* function exit code */
-  __pyx_r = 0;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V_1__get__(PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V___get__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V___get__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_INCREF(((PyObject *)__pyx_v_self->V));
-  __pyx_r = ((PyObject *)__pyx_v_self->V);
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V_2__set__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self), ((PyObject *)__pyx_v_value));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V_2__set__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_1 = __pyx_v_value;
-  __Pyx_INCREF(__pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_1);
-  __Pyx_GOTREF(__pyx_v_self->V);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->V));
-  __pyx_v_self->V = ((PyArrayObject *)__pyx_t_1);
-  __pyx_t_1 = 0;
-
-  /* function exit code */
-  __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.neurons.IntegrateAndFire.IntegrateAndFire.V.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V_5__del__(PyObject *__pyx_v_self); /*proto*/
-static int __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V_5__del__(PyObject *__pyx_v_self) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V_4__del__(((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V_4__del__(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *__pyx_v_self) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__del__", 0);
-  __Pyx_INCREF(Py_None);
-  __Pyx_GIVEREF(Py_None);
-  __Pyx_GOTREF(__pyx_v_self->V);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->V));
-  __pyx_v_self->V = ((PyArrayObject *)Py_None);
-
-  /* function exit code */
-  __pyx_r = 0;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
@@ -5438,245 +3904,50 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
-static struct __pyx_vtabstruct_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire __pyx_vtable_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire;
+static struct __pyx_vtabstruct_10plasticnet_7neurons_13linear_neuron_linear_neuron __pyx_vtable_10plasticnet_7neurons_13linear_neuron_linear_neuron;
 
-static PyObject *__pyx_tp_new_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire(PyTypeObject *t, PyObject *a, PyObject *k) {
-  struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *p;
-  PyObject *o = __pyx_ptype_7splikes_7splikes_neuron->tp_new(t, a, k);
+static PyObject *__pyx_tp_new_10plasticnet_7neurons_13linear_neuron_linear_neuron(PyTypeObject *t, PyObject *a, PyObject *k) {
+  struct __pyx_obj_10plasticnet_7neurons_13linear_neuron_linear_neuron *p;
+  PyObject *o = __pyx_ptype_10plasticnet_10plasticnet_neuron->tp_new(t, a, k);
   if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)o);
-  p->__pyx_base.__pyx_vtab = (struct __pyx_vtabstruct_7splikes_7splikes_neuron*)__pyx_vtabptr_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire;
-  p->g_e = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
-  p->g_i = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
-  p->V = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  p = ((struct __pyx_obj_10plasticnet_7neurons_13linear_neuron_linear_neuron *)o);
+  p->__pyx_base.__pyx_vtab = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron*)__pyx_vtabptr_10plasticnet_7neurons_13linear_neuron_linear_neuron;
   return o;
 }
 
-static void __pyx_tp_dealloc_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire(PyObject *o) {
-  struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *p = (struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)o;
+static void __pyx_tp_dealloc_10plasticnet_7neurons_13linear_neuron_linear_neuron(PyObject *o) {
   #if PY_VERSION_HEX >= 0x030400a1
   if (unlikely(Py_TYPE(o)->tp_finalize) && !_PyGC_FINALIZED(o)) {
     if (PyObject_CallFinalizerFromDealloc(o)) return;
   }
   #endif
   PyObject_GC_UnTrack(o);
-  Py_CLEAR(p->g_e);
-  Py_CLEAR(p->g_i);
-  Py_CLEAR(p->V);
   PyObject_GC_Track(o);
-  if (likely(__pyx_ptype_7splikes_7splikes_neuron)) __pyx_ptype_7splikes_7splikes_neuron->tp_dealloc(o); else __Pyx_call_next_tp_dealloc(o, __pyx_tp_dealloc_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire);
+  if (likely(__pyx_ptype_10plasticnet_10plasticnet_neuron)) __pyx_ptype_10plasticnet_10plasticnet_neuron->tp_dealloc(o); else __Pyx_call_next_tp_dealloc(o, __pyx_tp_dealloc_10plasticnet_7neurons_13linear_neuron_linear_neuron);
 }
 
-static int __pyx_tp_traverse_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_10plasticnet_7neurons_13linear_neuron_linear_neuron(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *p = (struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)o;
-  e = ((likely(__pyx_ptype_7splikes_7splikes_neuron)) ? ((__pyx_ptype_7splikes_7splikes_neuron->tp_traverse) ? __pyx_ptype_7splikes_7splikes_neuron->tp_traverse(o, v, a) : 0) : __Pyx_call_next_tp_traverse(o, v, a, __pyx_tp_traverse_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire)); if (e) return e;
-  if (p->g_e) {
-    e = (*v)(((PyObject*)p->g_e), a); if (e) return e;
-  }
-  if (p->g_i) {
-    e = (*v)(((PyObject*)p->g_i), a); if (e) return e;
-  }
-  if (p->V) {
-    e = (*v)(((PyObject*)p->V), a); if (e) return e;
-  }
+  e = ((likely(__pyx_ptype_10plasticnet_10plasticnet_neuron)) ? ((__pyx_ptype_10plasticnet_10plasticnet_neuron->tp_traverse) ? __pyx_ptype_10plasticnet_10plasticnet_neuron->tp_traverse(o, v, a) : 0) : __Pyx_call_next_tp_traverse(o, v, a, __pyx_tp_traverse_10plasticnet_7neurons_13linear_neuron_linear_neuron)); if (e) return e;
   return 0;
 }
 
-static int __pyx_tp_clear_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire(PyObject *o) {
-  PyObject* tmp;
-  struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *p = (struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire *)o;
-  if (likely(__pyx_ptype_7splikes_7splikes_neuron)) { if (__pyx_ptype_7splikes_7splikes_neuron->tp_clear) __pyx_ptype_7splikes_7splikes_neuron->tp_clear(o); } else __Pyx_call_next_tp_clear(o, __pyx_tp_clear_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire);
-  tmp = ((PyObject*)p->g_e);
-  p->g_e = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
-  Py_XDECREF(tmp);
-  tmp = ((PyObject*)p->g_i);
-  p->g_i = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
-  Py_XDECREF(tmp);
-  tmp = ((PyObject*)p->V);
-  p->V = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
-  Py_XDECREF(tmp);
+static int __pyx_tp_clear_10plasticnet_7neurons_13linear_neuron_linear_neuron(PyObject *o) {
+  if (likely(__pyx_ptype_10plasticnet_10plasticnet_neuron)) { if (__pyx_ptype_10plasticnet_10plasticnet_neuron->tp_clear) __pyx_ptype_10plasticnet_10plasticnet_neuron->tp_clear(o); } else __Pyx_call_next_tp_clear(o, __pyx_tp_clear_10plasticnet_7neurons_13linear_neuron_linear_neuron);
   return 0;
 }
 
-static PyObject *__pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_reset(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5reset_1__get__(o);
-}
-
-static int __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_reset(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
-  if (v) {
-    return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5reset_3__set__(o, v);
-  }
-  else {
-    PyErr_SetString(PyExc_NotImplementedError, "__del__");
-    return -1;
-  }
-}
-
-static PyObject *__pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_tau_m(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5tau_m_1__get__(o);
-}
-
-static int __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_tau_m(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
-  if (v) {
-    return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5tau_m_3__set__(o, v);
-  }
-  else {
-    PyErr_SetString(PyExc_NotImplementedError, "__del__");
-    return -1;
-  }
-}
-
-static PyObject *__pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_tau_in(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_in_1__get__(o);
-}
-
-static int __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_tau_in(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
-  if (v) {
-    return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_in_3__set__(o, v);
-  }
-  else {
-    PyErr_SetString(PyExc_NotImplementedError, "__del__");
-    return -1;
-  }
-}
-
-static PyObject *__pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_V_rev_inh(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_inh_1__get__(o);
-}
-
-static int __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_V_rev_inh(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
-  if (v) {
-    return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_inh_3__set__(o, v);
-  }
-  else {
-    PyErr_SetString(PyExc_NotImplementedError, "__del__");
-    return -1;
-  }
-}
-
-static PyObject *__pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_V_rev_exc(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_exc_1__get__(o);
-}
-
-static int __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_V_rev_exc(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
-  if (v) {
-    return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9V_rev_exc_3__set__(o, v);
-  }
-  else {
-    PyErr_SetString(PyExc_NotImplementedError, "__del__");
-    return -1;
-  }
-}
-
-static PyObject *__pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_tau_ex(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_ex_1__get__(o);
-}
-
-static int __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_tau_ex(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
-  if (v) {
-    return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6tau_ex_3__set__(o, v);
-  }
-  else {
-    PyErr_SetString(PyExc_NotImplementedError, "__del__");
-    return -1;
-  }
-}
-
-static PyObject *__pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_V_rest(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6V_rest_1__get__(o);
-}
-
-static int __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_V_rest(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
-  if (v) {
-    return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_6V_rest_3__set__(o, v);
-  }
-  else {
-    PyErr_SetString(PyExc_NotImplementedError, "__del__");
-    return -1;
-  }
-}
-
-static PyObject *__pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_threshold(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9threshold_1__get__(o);
-}
-
-static int __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_threshold(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
-  if (v) {
-    return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_9threshold_3__set__(o, v);
-  }
-  else {
-    PyErr_SetString(PyExc_NotImplementedError, "__del__");
-    return -1;
-  }
-}
-
-static PyObject *__pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_g_e(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e_1__get__(o);
-}
-
-static int __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_g_e(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
-  if (v) {
-    return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e_3__set__(o, v);
-  }
-  else {
-    return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_e_5__del__(o);
-  }
-}
-
-static PyObject *__pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_g_i(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i_1__get__(o);
-}
-
-static int __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_g_i(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
-  if (v) {
-    return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i_3__set__(o, v);
-  }
-  else {
-    return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3g_i_5__del__(o);
-  }
-}
-
-static PyObject *__pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_V(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V_1__get__(o);
-}
-
-static int __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_V(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
-  if (v) {
-    return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V_3__set__(o, v);
-  }
-  else {
-    return __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1V_5__del__(o);
-  }
-}
-
-static PyMethodDef __pyx_methods_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire[] = {
-  {"_reset", (PyCFunction)__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_1_reset, METH_NOARGS, 0},
-  {"update", (PyCFunction)__pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_5update, METH_VARARGS|METH_KEYWORDS, 0},
+static PyMethodDef __pyx_methods_10plasticnet_7neurons_13linear_neuron_linear_neuron[] = {
+  {"update", (PyCFunction)__pyx_pw_10plasticnet_7neurons_13linear_neuron_13linear_neuron_1update, METH_VARARGS|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 
-static struct PyGetSetDef __pyx_getsets_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire[] = {
-  {(char *)"reset", __pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_reset, __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_reset, 0, 0},
-  {(char *)"tau_m", __pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_tau_m, __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_tau_m, 0, 0},
-  {(char *)"tau_in", __pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_tau_in, __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_tau_in, 0, 0},
-  {(char *)"V_rev_inh", __pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_V_rev_inh, __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_V_rev_inh, 0, 0},
-  {(char *)"V_rev_exc", __pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_V_rev_exc, __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_V_rev_exc, 0, 0},
-  {(char *)"tau_ex", __pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_tau_ex, __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_tau_ex, 0, 0},
-  {(char *)"V_rest", __pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_V_rest, __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_V_rest, 0, 0},
-  {(char *)"threshold", __pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_threshold, __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_threshold, 0, 0},
-  {(char *)"g_e", __pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_g_e, __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_g_e, 0, 0},
-  {(char *)"g_i", __pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_g_i, __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_g_i, 0, 0},
-  {(char *)"V", __pyx_getprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_V, __pyx_setprop_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_V, 0, 0},
-  {0, 0, 0, 0, 0}
-};
-
-static PyTypeObject __pyx_type_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire = {
+static PyTypeObject __pyx_type_10plasticnet_7neurons_13linear_neuron_linear_neuron = {
   PyVarObject_HEAD_INIT(0, 0)
-  "splikes.neurons.IntegrateAndFire.IntegrateAndFire", /*tp_name*/
-  sizeof(struct __pyx_obj_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire), /*tp_basicsize*/
+  "plasticnet.neurons.linear_neuron.linear_neuron", /*tp_name*/
+  sizeof(struct __pyx_obj_10plasticnet_7neurons_13linear_neuron_linear_neuron), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire, /*tp_dealloc*/
+  __pyx_tp_dealloc_10plasticnet_7neurons_13linear_neuron_linear_neuron, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -5697,23 +3968,23 @@ static PyTypeObject __pyx_type_7splikes_7neurons_16IntegrateAndFire_IntegrateAnd
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire, /*tp_traverse*/
-  __pyx_tp_clear_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire, /*tp_clear*/
+  __pyx_tp_traverse_10plasticnet_7neurons_13linear_neuron_linear_neuron, /*tp_traverse*/
+  __pyx_tp_clear_10plasticnet_7neurons_13linear_neuron_linear_neuron, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire, /*tp_methods*/
+  __pyx_methods_10plasticnet_7neurons_13linear_neuron_linear_neuron, /*tp_methods*/
   0, /*tp_members*/
-  __pyx_getsets_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire, /*tp_getset*/
+  0, /*tp_getset*/
   0, /*tp_base*/
   0, /*tp_dict*/
   0, /*tp_descr_get*/
   0, /*tp_descr_set*/
   0, /*tp_dictoffset*/
-  __pyx_pw_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_3__init__, /*tp_init*/
+  __pyx_pw_10plasticnet_7neurons_13linear_neuron_13linear_neuron_3__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire, /*tp_new*/
+  __pyx_tp_new_10plasticnet_7neurons_13linear_neuron_linear_neuron, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -5739,7 +4010,7 @@ static struct PyModuleDef __pyx_moduledef = {
   #else
     PyModuleDef_HEAD_INIT,
   #endif
-    "IntegrateAndFire",
+    "linear_neuron",
     0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -5753,35 +4024,26 @@ static struct PyModuleDef __pyx_moduledef = {
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_Format_string_allocated_too_shor, __pyx_k_Format_string_allocated_too_shor, sizeof(__pyx_k_Format_string_allocated_too_shor), 0, 1, 0, 0},
   {&__pyx_kp_u_Format_string_allocated_too_shor_2, __pyx_k_Format_string_allocated_too_shor_2, sizeof(__pyx_k_Format_string_allocated_too_shor_2), 0, 1, 0, 0},
-  {&__pyx_kp_s_Integrate_and_Fire, __pyx_k_Integrate_and_Fire, sizeof(__pyx_k_Integrate_and_Fire), 0, 0, 1, 0},
-  {&__pyx_n_s_N, __pyx_k_N, sizeof(__pyx_k_N), 0, 0, 1, 1},
+  {&__pyx_kp_s_Linear_Neuron, __pyx_k_Linear_Neuron, sizeof(__pyx_k_Linear_Neuron), 0, 0, 1, 0},
   {&__pyx_kp_u_Non_native_byte_order_not_suppor, __pyx_k_Non_native_byte_order_not_suppor, sizeof(__pyx_k_Non_native_byte_order_not_suppor), 0, 1, 0, 0},
   {&__pyx_n_s_RuntimeError, __pyx_k_RuntimeError, sizeof(__pyx_k_RuntimeError), 0, 0, 1, 1},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
-  {&__pyx_n_s_append, __pyx_k_append, sizeof(__pyx_k_append), 0, 0, 1, 1},
-  {&__pyx_n_s_dtype, __pyx_k_dtype, sizeof(__pyx_k_dtype), 0, 0, 1, 1},
-  {&__pyx_n_s_float, __pyx_k_float, sizeof(__pyx_k_float), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_init, __pyx_k_init, sizeof(__pyx_k_init), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_kp_u_ndarray_is_not_C_contiguous, __pyx_k_ndarray_is_not_C_contiguous, sizeof(__pyx_k_ndarray_is_not_C_contiguous), 0, 1, 0, 0},
   {&__pyx_kp_u_ndarray_is_not_Fortran_contiguou, __pyx_k_ndarray_is_not_Fortran_contiguou, sizeof(__pyx_k_ndarray_is_not_Fortran_contiguou), 0, 1, 0, 0},
-  {&__pyx_n_s_np, __pyx_k_np, sizeof(__pyx_k_np), 0, 0, 1, 1},
-  {&__pyx_n_s_numpy, __pyx_k_numpy, sizeof(__pyx_k_numpy), 0, 0, 1, 1},
-  {&__pyx_n_s_pylab, __pyx_k_pylab, sizeof(__pyx_k_pylab), 0, 0, 1, 1},
   {&__pyx_n_s_pyx_vtable, __pyx_k_pyx_vtable, sizeof(__pyx_k_pyx_vtable), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
-  {&__pyx_n_s_reset, __pyx_k_reset, sizeof(__pyx_k_reset), 0, 0, 1, 1},
   {&__pyx_n_s_sim, __pyx_k_sim, sizeof(__pyx_k_sim), 0, 0, 1, 1},
   {&__pyx_n_s_t, __pyx_k_t, sizeof(__pyx_k_t), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
   {&__pyx_kp_u_unknown_dtype_code_in_numpy_pxd, __pyx_k_unknown_dtype_code_in_numpy_pxd, sizeof(__pyx_k_unknown_dtype_code_in_numpy_pxd), 0, 1, 0, 0},
   {&__pyx_n_s_update, __pyx_k_update, sizeof(__pyx_k_update), 0, 0, 1, 1},
-  {&__pyx_n_s_zeros, __pyx_k_zeros, sizeof(__pyx_k_zeros), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 18; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 218; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 802; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   return 0;
@@ -5873,11 +4135,11 @@ static int __Pyx_InitGlobals(void) {
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC initIntegrateAndFire(void); /*proto*/
-PyMODINIT_FUNC initIntegrateAndFire(void)
+PyMODINIT_FUNC initlinear_neuron(void); /*proto*/
+PyMODINIT_FUNC initlinear_neuron(void)
 #else
-PyMODINIT_FUNC PyInit_IntegrateAndFire(void); /*proto*/
-PyMODINIT_FUNC PyInit_IntegrateAndFire(void)
+PyMODINIT_FUNC PyInit_linear_neuron(void); /*proto*/
+PyMODINIT_FUNC PyInit_linear_neuron(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -5894,7 +4156,7 @@ PyMODINIT_FUNC PyInit_IntegrateAndFire(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_IntegrateAndFire(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_linear_neuron(void)", 0);
   if ( __Pyx_check_binary_version() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -5916,7 +4178,7 @@ PyMODINIT_FUNC PyInit_IntegrateAndFire(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("IntegrateAndFire", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("linear_neuron", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -5933,14 +4195,14 @@ PyMODINIT_FUNC PyInit_IntegrateAndFire(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
-  if (__pyx_module_is_main_splikes__neurons__IntegrateAndFire) {
+  if (__pyx_module_is_main_plasticnet__neurons__linear_neuron) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "splikes.neurons.IntegrateAndFire")) {
-      if (unlikely(PyDict_SetItemString(modules, "splikes.neurons.IntegrateAndFire", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "plasticnet.neurons.linear_neuron")) {
+      if (unlikely(PyDict_SetItemString(modules, "plasticnet.neurons.linear_neuron", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
@@ -5952,18 +4214,17 @@ PyMODINIT_FUNC PyInit_IntegrateAndFire(void)
   /*--- Variable export code ---*/
   /*--- Function export code ---*/
   /*--- Type init code ---*/
-  __pyx_ptype_7splikes_7splikes_neuron = __Pyx_ImportType("splikes.splikes", "neuron", sizeof(struct __pyx_obj_7splikes_7splikes_neuron), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_neuron)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_neuron = (struct __pyx_vtabstruct_7splikes_7splikes_neuron*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_neuron)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire = &__pyx_vtable_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire;
-  __pyx_vtable_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire.__pyx_base = *__pyx_vtabptr_7splikes_7splikes_neuron;
-  __pyx_vtable_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire.__pyx_base._reset = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_neuron *, int __pyx_skip_dispatch))__pyx_f_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire__reset;
-  __pyx_vtable_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_neuron *, double, struct __pyx_obj_7splikes_7splikes_simulation *, int __pyx_skip_dispatch))__pyx_f_7splikes_7neurons_16IntegrateAndFire_16IntegrateAndFire_update;
-  __pyx_type_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire.tp_base = __pyx_ptype_7splikes_7splikes_neuron;
-  if (PyType_Ready(&__pyx_type_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 9; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_type_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire.tp_dict, __pyx_vtabptr_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 9; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "IntegrateAndFire", (PyObject *)&__pyx_type_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 9; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire = &__pyx_type_7splikes_7neurons_16IntegrateAndFire_IntegrateAndFire;
+  __pyx_ptype_10plasticnet_10plasticnet_neuron = __Pyx_ImportType("plasticnet.plasticnet", "neuron", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_neuron), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_neuron)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_neuron = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_neuron)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_7neurons_13linear_neuron_linear_neuron = &__pyx_vtable_10plasticnet_7neurons_13linear_neuron_linear_neuron;
+  __pyx_vtable_10plasticnet_7neurons_13linear_neuron_linear_neuron.__pyx_base = *__pyx_vtabptr_10plasticnet_10plasticnet_neuron;
+  __pyx_vtable_10plasticnet_7neurons_13linear_neuron_linear_neuron.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_neuron *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_7neurons_13linear_neuron_13linear_neuron_update;
+  __pyx_type_10plasticnet_7neurons_13linear_neuron_linear_neuron.tp_base = __pyx_ptype_10plasticnet_10plasticnet_neuron;
+  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_13linear_neuron_linear_neuron) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 5; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_type_10plasticnet_7neurons_13linear_neuron_linear_neuron.tp_print = 0;
+  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_13linear_neuron_linear_neuron.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_13linear_neuron_linear_neuron) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 5; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "linear_neuron", (PyObject *)&__pyx_type_10plasticnet_7neurons_13linear_neuron_linear_neuron) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 5; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_7neurons_13linear_neuron_linear_neuron = &__pyx_type_10plasticnet_7neurons_13linear_neuron_linear_neuron;
   /*--- Type import code ---*/
   __pyx_ptype_7cpython_4type_type = __Pyx_ImportType(__Pyx_BUILTIN_MODULE_NAME, "type", 
   #if CYTHON_COMPILING_IN_PYPY
@@ -5977,44 +4238,29 @@ PyMODINIT_FUNC PyInit_IntegrateAndFire(void)
   __pyx_ptype_5numpy_broadcast = __Pyx_ImportType("numpy", "broadcast", sizeof(PyArrayMultiIterObject), 0); if (unlikely(!__pyx_ptype_5numpy_broadcast)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5numpy_ndarray = __Pyx_ImportType("numpy", "ndarray", sizeof(PyArrayObject), 0); if (unlikely(!__pyx_ptype_5numpy_ndarray)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 181; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5numpy_ufunc = __Pyx_ImportType("numpy", "ufunc", sizeof(PyUFuncObject), 0); if (unlikely(!__pyx_ptype_5numpy_ufunc)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 864; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7splikes_monitor = __Pyx_ImportType("splikes.splikes", "monitor", sizeof(struct __pyx_obj_7splikes_7splikes_monitor), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_monitor = (struct __pyx_vtabstruct_7splikes_7splikes_monitor*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_monitor->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7splikes_simulation = __Pyx_ImportType("splikes.splikes", "simulation", sizeof(struct __pyx_obj_7splikes_7splikes_simulation), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_simulation = (struct __pyx_vtabstruct_7splikes_7splikes_simulation*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7splikes_connection = __Pyx_ImportType("splikes.splikes", "connection", sizeof(struct __pyx_obj_7splikes_7splikes_connection), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_connection)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_connection = (struct __pyx_vtabstruct_7splikes_7splikes_connection*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_connection->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_connection)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_group = __Pyx_ImportType("plasticnet.plasticnet", "group", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_group), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_group)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_monitor = __Pyx_ImportType("plasticnet.plasticnet", "monitor", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_monitor), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_monitor = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_monitor->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_simulation = __Pyx_ImportType("plasticnet.plasticnet", "simulation", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_simulation), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_simulation = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron = __Pyx_ImportType("plasticnet.plasticnet", "post_process_neuron", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_post_process_channel = __Pyx_ImportType("plasticnet.plasticnet", "post_process_channel", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_channel->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_channel = __Pyx_ImportType("plasticnet.plasticnet", "channel", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_channel), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_channel = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_channel->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_connection = __Pyx_ImportType("plasticnet.plasticnet", "connection", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_connection), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_connection)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 86; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_connection = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_connection->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_connection)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 86; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_post_process_connection = __Pyx_ImportType("plasticnet.plasticnet", "post_process_connection", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_connection), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_connection)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_connection = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_connection*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_connection->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_connection)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   /*--- Variable import code ---*/
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "splikes\neurons\IntegrateAndFire.pyx":3
- * from splikes.splikes cimport *
+  /* "plasticnet\neurons\linear_neuron.pyx":1
+ * from plasticnet.plasticnet cimport *             # <<<<<<<<<<<<<<
  * cimport cython
- * import pylab             # <<<<<<<<<<<<<<
  * 
- * import numpy as np
- */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_pylab, 0, -1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 3; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_pylab, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 3; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":5
- * import pylab
- * 
- * import numpy as np             # <<<<<<<<<<<<<<
- * cimport numpy as np
- * 
- */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_numpy, 0, -1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 5; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 5; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "splikes\neurons\IntegrateAndFire.pyx":1
- * from splikes.splikes cimport *             # <<<<<<<<<<<<<<
- * cimport cython
- * import pylab
  */
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
@@ -6036,11 +4282,11 @@ PyMODINIT_FUNC PyInit_IntegrateAndFire(void)
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init splikes.neurons.IntegrateAndFire", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init plasticnet.neurons.linear_neuron", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init splikes.neurons.IntegrateAndFire");
+    PyErr_SetString(PyExc_ImportError, "init plasticnet.neurons.linear_neuron");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -6100,87 +4346,6 @@ static CYTHON_INLINE PyObject* __Pyx_PyObject_Call(PyObject *func, PyObject *arg
 }
 #endif
 
-#if CYTHON_COMPILING_IN_CPYTHON
-static CYTHON_INLINE PyObject* __Pyx_PyObject_CallMethO(PyObject *func, PyObject *arg) {
-    PyObject *self, *result;
-    PyCFunction cfunc;
-    cfunc = PyCFunction_GET_FUNCTION(func);
-    self = PyCFunction_GET_SELF(func);
-    if (unlikely(Py_EnterRecursiveCall((char*)" while calling a Python object")))
-        return NULL;
-    result = cfunc(self, arg);
-    Py_LeaveRecursiveCall();
-    if (unlikely(!result) && unlikely(!PyErr_Occurred())) {
-        PyErr_SetString(
-            PyExc_SystemError,
-            "NULL result without error in PyObject_Call");
-    }
-    return result;
-}
-#endif
-
-#if CYTHON_COMPILING_IN_CPYTHON
-static PyObject* __Pyx__PyObject_CallOneArg(PyObject *func, PyObject *arg) {
-    PyObject *result;
-    PyObject *args = PyTuple_New(1);
-    if (unlikely(!args)) return NULL;
-    Py_INCREF(arg);
-    PyTuple_SET_ITEM(args, 0, arg);
-    result = __Pyx_PyObject_Call(func, args, NULL);
-    Py_DECREF(args);
-    return result;
-}
-static CYTHON_INLINE PyObject* __Pyx_PyObject_CallOneArg(PyObject *func, PyObject *arg) {
-#ifdef __Pyx_CyFunction_USED
-    if (likely(PyCFunction_Check(func) || PyObject_TypeCheck(func, __pyx_CyFunctionType))) {
-#else
-    if (likely(PyCFunction_Check(func))) {
-#endif
-        if (likely(PyCFunction_GET_FLAGS(func) & METH_O)) {
-            return __Pyx_PyObject_CallMethO(func, arg);
-        }
-    }
-    return __Pyx__PyObject_CallOneArg(func, arg);
-}
-#else
-static CYTHON_INLINE PyObject* __Pyx_PyObject_CallOneArg(PyObject *func, PyObject *arg) {
-    PyObject* args = PyTuple_Pack(1, arg);
-    return (likely(args)) ? __Pyx_PyObject_Call(func, args, NULL) : NULL;
-}
-#endif
-
-#if CYTHON_COMPILING_IN_CPYTHON
-static CYTHON_INLINE PyObject* __Pyx_PyObject_CallNoArg(PyObject *func) {
-#ifdef __Pyx_CyFunction_USED
-    if (likely(PyCFunction_Check(func) || PyObject_TypeCheck(func, __pyx_CyFunctionType))) {
-#else
-    if (likely(PyCFunction_Check(func))) {
-#endif
-        if (likely(PyCFunction_GET_FLAGS(func) & METH_NOARGS)) {
-            return __Pyx_PyObject_CallMethO(func, NULL);
-        }
-    }
-    return __Pyx_PyObject_Call(func, __pyx_empty_tuple, NULL);
-}
-#endif
-
-static CYTHON_INLINE PyObject *__Pyx_GetModuleGlobalName(PyObject *name) {
-    PyObject *result;
-#if CYTHON_COMPILING_IN_CPYTHON
-    result = PyDict_GetItem(__pyx_d, name);
-    if (likely(result)) {
-        Py_INCREF(result);
-    } else {
-#else
-    result = PyObject_GetItem(__pyx_d, name);
-    if (!result) {
-        PyErr_Clear();
-#endif
-        result = __Pyx_GetBuiltinName(name);
-    }
-    return result;
-}
-
 static CYTHON_INLINE int __Pyx_TypeTest(PyObject *obj, PyTypeObject *type) {
     if (unlikely(!type)) {
         PyErr_SetString(PyExc_SystemError, "Missing type object");
@@ -6191,6 +4356,31 @@ static CYTHON_INLINE int __Pyx_TypeTest(PyObject *obj, PyTypeObject *type) {
     PyErr_Format(PyExc_TypeError, "Cannot convert %.200s to %.200s",
                  Py_TYPE(obj)->tp_name, type->tp_name);
     return 0;
+}
+
+static void __Pyx_RaiseArgtupleInvalid(
+    const char* func_name,
+    int exact,
+    Py_ssize_t num_min,
+    Py_ssize_t num_max,
+    Py_ssize_t num_found)
+{
+    Py_ssize_t num_expected;
+    const char *more_or_less;
+    if (num_found < num_min) {
+        num_expected = num_min;
+        more_or_less = "at least";
+    } else {
+        num_expected = num_max;
+        more_or_less = "at most";
+    }
+    if (exact) {
+        more_or_less = "exactly";
+    }
+    PyErr_Format(PyExc_TypeError,
+                 "%.200s() takes %.8s %" CYTHON_FORMAT_SSIZE_T "d positional argument%.1s (%" CYTHON_FORMAT_SSIZE_T "d given)",
+                 func_name, more_or_less, num_expected,
+                 (num_expected == 1) ? "" : "s", num_found);
 }
 
 static void __Pyx_RaiseDoubleKeywordsError(
@@ -6307,74 +4497,6 @@ bad:
     return -1;
 }
 
-static void __Pyx_RaiseArgtupleInvalid(
-    const char* func_name,
-    int exact,
-    Py_ssize_t num_min,
-    Py_ssize_t num_max,
-    Py_ssize_t num_found)
-{
-    Py_ssize_t num_expected;
-    const char *more_or_less;
-    if (num_found < num_min) {
-        num_expected = num_min;
-        more_or_less = "at least";
-    } else {
-        num_expected = num_max;
-        more_or_less = "at most";
-    }
-    if (exact) {
-        more_or_less = "exactly";
-    }
-    PyErr_Format(PyExc_TypeError,
-                 "%.200s() takes %.8s %" CYTHON_FORMAT_SSIZE_T "d positional argument%.1s (%" CYTHON_FORMAT_SSIZE_T "d given)",
-                 func_name, more_or_less, num_expected,
-                 (num_expected == 1) ? "" : "s", num_found);
-}
-
-static PyObject* __Pyx_PyObject_CallMethod1(PyObject* obj, PyObject* method_name, PyObject* arg) {
-    PyObject *method, *result = NULL;
-    method = __Pyx_PyObject_GetAttrStr(obj, method_name);
-    if (unlikely(!method)) goto bad;
-#if CYTHON_COMPILING_IN_CPYTHON
-    if (likely(PyMethod_Check(method))) {
-        PyObject *self = PyMethod_GET_SELF(method);
-        if (likely(self)) {
-            PyObject *args;
-            PyObject *function = PyMethod_GET_FUNCTION(method);
-            args = PyTuple_New(2);
-            if (unlikely(!args)) goto bad;
-            Py_INCREF(self);
-            PyTuple_SET_ITEM(args, 0, self);
-            Py_INCREF(arg);
-            PyTuple_SET_ITEM(args, 1, arg);
-            Py_INCREF(function);
-            Py_DECREF(method); method = NULL;
-            result = __Pyx_PyObject_Call(function, args, NULL);
-            Py_DECREF(args);
-            Py_DECREF(function);
-            return result;
-        }
-    }
-#endif
-    result = __Pyx_PyObject_CallOneArg(method, arg);
-bad:
-    Py_XDECREF(method);
-    return result;
-}
-
-static CYTHON_INLINE int __Pyx_PyObject_Append(PyObject* L, PyObject* x) {
-    if (likely(PyList_CheckExact(L))) {
-        if (unlikely(__Pyx_PyList_Append(L, x) < 0)) return -1;
-    } else {
-        PyObject* retval = __Pyx_PyObject_CallMethod1(L, __pyx_n_s_append, x);
-        if (unlikely(!retval))
-            return -1;
-        Py_DECREF(retval);
-    }
-    return 0;
-}
-
 static void __Pyx_RaiseArgumentTypeInvalid(const char* name, PyObject *obj, PyTypeObject *type) {
     PyErr_Format(PyExc_TypeError,
         "Argument '%.200s' has incorrect type (expected %.200s, got %.200s)",
@@ -6398,6 +4520,45 @@ static CYTHON_INLINE int __Pyx_ArgTypeTest(PyObject *obj, PyTypeObject *type, in
         if (likely(PyObject_TypeCheck(obj, type))) return 1;
     }
     __Pyx_RaiseArgumentTypeInvalid(name, obj, type);
+    return 0;
+}
+
+static CYTHON_INLINE int __Pyx_CheckKeywordStrings(
+    PyObject *kwdict,
+    const char* function_name,
+    int kw_allowed)
+{
+    PyObject* key = 0;
+    Py_ssize_t pos = 0;
+#if CYTHON_COMPILING_IN_PYPY
+    if (!kw_allowed && PyDict_Next(kwdict, &pos, &key, 0))
+        goto invalid_keyword;
+    return 1;
+#else
+    while (PyDict_Next(kwdict, &pos, &key, 0)) {
+        #if PY_MAJOR_VERSION < 3
+        if (unlikely(!PyString_CheckExact(key)) && unlikely(!PyString_Check(key)))
+        #endif
+            if (unlikely(!PyUnicode_Check(key)))
+                goto invalid_keyword_type;
+    }
+    if ((!kw_allowed) && unlikely(key))
+        goto invalid_keyword;
+    return 1;
+invalid_keyword_type:
+    PyErr_Format(PyExc_TypeError,
+        "%.200s() keywords must be strings", function_name);
+    return 0;
+#endif
+invalid_keyword:
+    PyErr_Format(PyExc_TypeError,
+    #if PY_MAJOR_VERSION < 3
+        "%.200s() got an unexpected keyword argument '%.200s'",
+        function_name, PyString_AsString(key));
+    #else
+        "%s() got an unexpected keyword argument '%U'",
+        function_name, key);
+    #endif
     return 0;
 }
 
@@ -6830,79 +4991,6 @@ bad:
     Py_XDECREF(py_frame);
 }
 
-static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level) {
-    PyObject *empty_list = 0;
-    PyObject *module = 0;
-    PyObject *global_dict = 0;
-    PyObject *empty_dict = 0;
-    PyObject *list;
-    #if PY_VERSION_HEX < 0x03030000
-    PyObject *py_import;
-    py_import = __Pyx_PyObject_GetAttrStr(__pyx_b, __pyx_n_s_import);
-    if (!py_import)
-        goto bad;
-    #endif
-    if (from_list)
-        list = from_list;
-    else {
-        empty_list = PyList_New(0);
-        if (!empty_list)
-            goto bad;
-        list = empty_list;
-    }
-    global_dict = PyModule_GetDict(__pyx_m);
-    if (!global_dict)
-        goto bad;
-    empty_dict = PyDict_New();
-    if (!empty_dict)
-        goto bad;
-    {
-        #if PY_MAJOR_VERSION >= 3
-        if (level == -1) {
-            if (strchr(__Pyx_MODULE_NAME, '.')) {
-                #if PY_VERSION_HEX < 0x03030000
-                PyObject *py_level = PyInt_FromLong(1);
-                if (!py_level)
-                    goto bad;
-                module = PyObject_CallFunctionObjArgs(py_import,
-                    name, global_dict, empty_dict, list, py_level, NULL);
-                Py_DECREF(py_level);
-                #else
-                module = PyImport_ImportModuleLevelObject(
-                    name, global_dict, empty_dict, list, 1);
-                #endif
-                if (!module) {
-                    if (!PyErr_ExceptionMatches(PyExc_ImportError))
-                        goto bad;
-                    PyErr_Clear();
-                }
-            }
-            level = 0;
-        }
-        #endif
-        if (!module) {
-            #if PY_VERSION_HEX < 0x03030000
-            PyObject *py_level = PyInt_FromLong(level);
-            if (!py_level)
-                goto bad;
-            module = PyObject_CallFunctionObjArgs(py_import,
-                name, global_dict, empty_dict, list, py_level, NULL);
-            Py_DECREF(py_level);
-            #else
-            module = PyImport_ImportModuleLevelObject(
-                name, global_dict, empty_dict, list, level);
-            #endif
-        }
-    }
-bad:
-    #if PY_VERSION_HEX < 0x03030000
-    Py_XDECREF(py_import);
-    #endif
-    Py_XDECREF(empty_list);
-    Py_XDECREF(empty_dict);
-    return module;
-}
-
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value) {
     const int neg_one = (int) -1, const_zero = 0;
     const int is_unsigned = neg_one > const_zero;
@@ -7043,6 +5131,79 @@ raise_neg_overflow:
     PyErr_SetString(PyExc_OverflowError,
         "can't convert negative value to int");
     return (int) -1;
+}
+
+static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level) {
+    PyObject *empty_list = 0;
+    PyObject *module = 0;
+    PyObject *global_dict = 0;
+    PyObject *empty_dict = 0;
+    PyObject *list;
+    #if PY_VERSION_HEX < 0x03030000
+    PyObject *py_import;
+    py_import = __Pyx_PyObject_GetAttrStr(__pyx_b, __pyx_n_s_import);
+    if (!py_import)
+        goto bad;
+    #endif
+    if (from_list)
+        list = from_list;
+    else {
+        empty_list = PyList_New(0);
+        if (!empty_list)
+            goto bad;
+        list = empty_list;
+    }
+    global_dict = PyModule_GetDict(__pyx_m);
+    if (!global_dict)
+        goto bad;
+    empty_dict = PyDict_New();
+    if (!empty_dict)
+        goto bad;
+    {
+        #if PY_MAJOR_VERSION >= 3
+        if (level == -1) {
+            if (strchr(__Pyx_MODULE_NAME, '.')) {
+                #if PY_VERSION_HEX < 0x03030000
+                PyObject *py_level = PyInt_FromLong(1);
+                if (!py_level)
+                    goto bad;
+                module = PyObject_CallFunctionObjArgs(py_import,
+                    name, global_dict, empty_dict, list, py_level, NULL);
+                Py_DECREF(py_level);
+                #else
+                module = PyImport_ImportModuleLevelObject(
+                    name, global_dict, empty_dict, list, 1);
+                #endif
+                if (!module) {
+                    if (!PyErr_ExceptionMatches(PyExc_ImportError))
+                        goto bad;
+                    PyErr_Clear();
+                }
+            }
+            level = 0;
+        }
+        #endif
+        if (!module) {
+            #if PY_VERSION_HEX < 0x03030000
+            PyObject *py_level = PyInt_FromLong(level);
+            if (!py_level)
+                goto bad;
+            module = PyObject_CallFunctionObjArgs(py_import,
+                name, global_dict, empty_dict, list, py_level, NULL);
+            Py_DECREF(py_level);
+            #else
+            module = PyImport_ImportModuleLevelObject(
+                name, global_dict, empty_dict, list, level);
+            #endif
+        }
+    }
+bad:
+    #if PY_VERSION_HEX < 0x03030000
+    Py_XDECREF(py_import);
+    #endif
+    Py_XDECREF(empty_list);
+    Py_XDECREF(empty_dict);
+    return module;
 }
 
 #if CYTHON_CCOMPLEX

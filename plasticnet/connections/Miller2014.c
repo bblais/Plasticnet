@@ -242,8 +242,8 @@ class __Pyx_FakeReference {
 #define _USE_MATH_DEFINES
 #endif
 #include <math.h>
-#define __PYX_HAVE__splikes__connections__Triplet
-#define __PYX_HAVE_API__splikes__connections__Triplet
+#define __PYX_HAVE__plasticnet__connections__Miller2014
+#define __PYX_HAVE_API__plasticnet__connections__Miller2014
 #include "string.h"
 #include "stdio.h"
 #include "stdlib.h"
@@ -454,10 +454,10 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "splikes\\connections\\Triplet.pyx",
+  "plasticnet\\connections\\Miller2014.pyx",
   "__init__.pxd",
   "type.pxd",
-  "splikes\\splikes.pxd",
+  "plasticnet\\plasticnet.pxd",
 };
 
 /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":726
@@ -670,13 +670,17 @@ typedef npy_longdouble __pyx_t_5numpy_longdouble_t;
 
 
 /*--- Type declarations ---*/
-struct __pyx_obj_7splikes_7splikes_monitor;
-struct __pyx_obj_7splikes_7splikes_simulation;
-struct __pyx_obj_7splikes_7splikes_neuron;
-struct __pyx_obj_7splikes_7splikes_connection;
-struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006;
-struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM;
-struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper;
+struct __pyx_obj_10plasticnet_10plasticnet_group;
+struct __pyx_obj_10plasticnet_10plasticnet_monitor;
+struct __pyx_obj_10plasticnet_10plasticnet_simulation;
+struct __pyx_obj_10plasticnet_10plasticnet_neuron;
+struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron;
+struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel;
+struct __pyx_obj_10plasticnet_10plasticnet_channel;
+struct __pyx_obj_10plasticnet_10plasticnet_connection;
+struct __pyx_obj_10plasticnet_10plasticnet_post_process_connection;
+struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3;
+struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5;
 
 /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":765
  * ctypedef npy_longdouble longdouble_t
@@ -714,34 +718,49 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
 
-/* "splikes\splikes.pxd":29
+/* "plasticnet\plasticnet.pxd":38
+ * cdef double rande()
+ * 
+ * cdef class group:             # <<<<<<<<<<<<<<
+ *     cdef public object save_attrs,save_data
+ * 
+ */
+struct __pyx_obj_10plasticnet_10plasticnet_group {
+  PyObject_HEAD
+  PyObject *save_attrs;
+  PyObject *save_data;
+};
+
+
+/* "plasticnet\plasticnet.pxd":42
  * 
  * 
- * cdef class monitor:             # <<<<<<<<<<<<<<
+ * cdef class monitor(group):             # <<<<<<<<<<<<<<
  *     cdef public double time_to_next_save
  *     cdef public double save_interval
  */
-struct __pyx_obj_7splikes_7splikes_monitor {
-  PyObject_HEAD
-  struct __pyx_vtabstruct_7splikes_7splikes_monitor *__pyx_vtab;
+struct __pyx_obj_10plasticnet_10plasticnet_monitor {
+  struct __pyx_obj_10plasticnet_10plasticnet_group __pyx_base;
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor *__pyx_vtab;
   double time_to_next_save;
   double save_interval;
   PyObject *container;
   PyObject *name;
-  PyObject *saved_results;
+  PyObject *t;
+  PyObject *values;
 };
 
 
-/* "splikes\splikes.pxd":36
+/* "plasticnet\plasticnet.pxd":49
  *     cpdef update(self,double t)
  * 
- * cdef class simulation:             # <<<<<<<<<<<<<<
+ * cdef class simulation(group):             # <<<<<<<<<<<<<<
  *     cdef public double dt
  *     cdef public double total_time
  */
-struct __pyx_obj_7splikes_7splikes_simulation {
-  PyObject_HEAD
-  struct __pyx_vtabstruct_7splikes_7splikes_simulation *__pyx_vtab;
+struct __pyx_obj_10plasticnet_10plasticnet_simulation {
+  struct __pyx_obj_10plasticnet_10plasticnet_group __pyx_base;
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation *__pyx_vtab;
   double dt;
   double total_time;
   double start_time;
@@ -750,218 +769,304 @@ struct __pyx_obj_7splikes_7splikes_simulation {
   PyObject *monitors;
   PyObject *filters;
   int seed;
+  int verbose;
 };
 
 
-/* "splikes\splikes.pxd":45
+/* "plasticnet\plasticnet.pxd":60
  *     cpdef _reset(self)
  * 
- * cdef class neuron:             # <<<<<<<<<<<<<<
+ * cdef class neuron(group):             # <<<<<<<<<<<<<<
  *     cdef public int verbose
- *     cdef public int is_spike
+ *     cdef public object name
  */
-struct __pyx_obj_7splikes_7splikes_neuron {
-  PyObject_HEAD
-  struct __pyx_vtabstruct_7splikes_7splikes_neuron *__pyx_vtab;
+struct __pyx_obj_10plasticnet_10plasticnet_neuron {
+  struct __pyx_obj_10plasticnet_10plasticnet_group __pyx_base;
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron *__pyx_vtab;
   int verbose;
-  int is_spike;
-  int post_count;
-  PyObject *saved_spikes;
-  double save_spikes_begin;
-  double save_spikes_end;
-  PyArrayObject *spiking;
-  PyArrayObject *rate;
+  PyObject *name;
   int N;
-  PyArrayObject *last_spike_time;
+  PyArrayObject *output;
+  PyArrayObject *linear_output;
   PyObject *connections_pre;
   PyObject *connections_post;
+  PyObject *post_process;
   int num_pre;
   int num_post;
-  PyObject *state_variable;
-  PyObject *name;
 };
 
 
-/* "splikes\splikes.pxd":62
+/* "plasticnet\plasticnet.pxd":71
+ *     cpdef update(self,double t,simulation sim)
  * 
+ * cdef class post_process_neuron(group):             # <<<<<<<<<<<<<<
+ *     cpdef _reset(self)
+ *     cpdef update(self,double t,simulation sim)
+ */
+struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron {
+  struct __pyx_obj_10plasticnet_10plasticnet_group __pyx_base;
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron *__pyx_vtab;
+  struct __pyx_obj_10plasticnet_10plasticnet_neuron *n;
+};
+
+
+/* "plasticnet\plasticnet.pxd":76
+ *     cdef public neuron n
  * 
- * cdef class connection:             # <<<<<<<<<<<<<<
+ * cdef class post_process_channel(group):             # <<<<<<<<<<<<<<
+ *     cdef public channel ch
+ *     cpdef _reset(self)
+ */
+struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel {
+  struct __pyx_obj_10plasticnet_10plasticnet_group __pyx_base;
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel *__pyx_vtab;
+  struct __pyx_obj_10plasticnet_10plasticnet_channel *ch;
+};
+
+
+/* "plasticnet\plasticnet.pxd":81
+ *     cpdef update(self,double t,simulation sim)
+ * 
+ * cdef class channel(neuron):             # <<<<<<<<<<<<<<
+ *     cdef public object neuron_list
+ *     cdef public int number_of_neurons
+ */
+struct __pyx_obj_10plasticnet_10plasticnet_channel {
+  struct __pyx_obj_10plasticnet_10plasticnet_neuron __pyx_base;
+  PyObject *neuron_list;
+  int number_of_neurons;
+  double time_between_patterns;
+  double time_to_next_pattern;
+};
+
+
+/* "plasticnet\plasticnet.pxd":86
+ *     cdef public double time_between_patterns,time_to_next_pattern
+ * 
+ * cdef class connection(group):             # <<<<<<<<<<<<<<
  *     cdef public np.ndarray weights
  *     cdef public np.ndarray initial_weights
  */
-struct __pyx_obj_7splikes_7splikes_connection {
-  PyObject_HEAD
-  struct __pyx_vtabstruct_7splikes_7splikes_connection *__pyx_vtab;
+struct __pyx_obj_10plasticnet_10plasticnet_connection {
+  struct __pyx_obj_10plasticnet_10plasticnet_group __pyx_base;
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection *__pyx_vtab;
   PyArrayObject *weights;
   PyArrayObject *initial_weights;
-  int reset_to_initial;
   PyObject *initial_weight_range;
+  struct __pyx_obj_10plasticnet_10plasticnet_neuron *pre;
+  struct __pyx_obj_10plasticnet_10plasticnet_neuron *post;
+  double *w;
+  int reset_to_initial;
+  PyObject *post_process;
+  PyObject *name;
+  int verbose;
+};
+
+
+/* "plasticnet\plasticnet.pxd":101
+ *     cpdef update(self,double t,simulation sim)
+ * 
+ * cdef class post_process_connection(group):             # <<<<<<<<<<<<<<
+ *     cpdef _reset(self)
+ *     cpdef update(self,double t,simulation sim)
+ */
+struct __pyx_obj_10plasticnet_10plasticnet_post_process_connection {
+  struct __pyx_obj_10plasticnet_10plasticnet_group __pyx_base;
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_connection *__pyx_vtab;
+  struct __pyx_obj_10plasticnet_10plasticnet_connection *c;
+};
+
+
+/* "plasticnet\connections\Miller2014.pyx":14
+ *         return 0
+ * 
+ * cdef class Miller2014_Eq3(connection):             # <<<<<<<<<<<<<<
+ * 
+ *     cdef public double tau_w,gamma,tau_y,theta
+ */
+struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 {
+  struct __pyx_obj_10plasticnet_10plasticnet_connection __pyx_base;
+  double tau_w;
+  double gamma;
+  double tau_y;
+  double theta;
   double w_max;
   double w_min;
-  struct __pyx_obj_7splikes_7splikes_neuron *pre;
-  struct __pyx_obj_7splikes_7splikes_neuron *post;
-  double *W;
-  PyObject *name;
-  PyArrayObject *state;
-  int use_state;
-  PyObject *state_variable;
-  double spike_scale;
+  double yo;
+  PyArrayObject *y_bar;
+  PyArrayObject *initial_y_bar;
+  PyObject *initial_y_bar_range;
 };
 
 
-/* "splikes\connections\Triplet.pyx":28
- * #     - tau_x_slow=946.0
- * #
- * cdef class Gerstner2006(connection):             # <<<<<<<<<<<<<<
- *     cdef public double tau_x_slow,tau_y_slow,A3_minus,A2_minus,tau_y_fast,tau_x_fast,A3_plus,A2_plus
- *     cdef public double eta
+/* "plasticnet\connections\Miller2014.pyx":78
+ * 
+ * 
+ * cdef class Miller2014_Eq5(connection):             # <<<<<<<<<<<<<<
+ * 
+ *     cdef public double tau_rho,tau_H,theta
  */
-struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 {
-  struct __pyx_obj_7splikes_7splikes_connection __pyx_base;
-  double tau_x_slow;
-  double tau_y_slow;
-  double A3_minus;
-  double A2_minus;
-  double tau_y_fast;
-  double tau_x_fast;
-  double A3_plus;
-  double A2_plus;
-  double eta;
-  PyArrayObject *y_fast;
-  PyArrayObject *x_fast;
-  PyArrayObject *y_slow;
-  PyArrayObject *x_slow;
-};
-
-
-/* "splikes\connections\Triplet.pyx":99
- * 
- * 
- * cdef class Triplet_BCM(Gerstner2006):             # <<<<<<<<<<<<<<
- *     cdef public np.ndarray y2,theta
- *     cdef public double tau_y2,y2_o
- */
-struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM {
-  struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 __pyx_base;
-  PyArrayObject *y2;
-  PyArrayObject *theta;
-  double tau_y2;
-  double y2_o;
-};
-
-
-/* "splikes\connections\Triplet.pyx":178
- * 
- * 
- * cdef class Triplet_BCM_LawCooper(Triplet_BCM):             # <<<<<<<<<<<<<<
- *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):
- *         Triplet_BCM.__init__(self,pre,post,initial_weight_range,state)
- */
-struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper {
-  struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM __pyx_base;
+struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 {
+  struct __pyx_obj_10plasticnet_10plasticnet_connection __pyx_base;
+  double tau_rho;
+  double tau_H;
+  double theta;
+  double rho_max;
+  double rho_min;
+  double yo;
+  PyArrayObject *rho;
+  PyArrayObject *H;
+  PyArrayObject *initial_rho;
+  PyArrayObject *initial_H;
+  PyObject *initial_rho_range;
+  PyObject *initial_H_range;
 };
 
 
 
-/* "splikes\splikes.pxd":29
+/* "plasticnet\plasticnet.pxd":42
  * 
  * 
- * cdef class monitor:             # <<<<<<<<<<<<<<
+ * cdef class monitor(group):             # <<<<<<<<<<<<<<
  *     cdef public double time_to_next_save
  *     cdef public double save_interval
  */
 
-struct __pyx_vtabstruct_7splikes_7splikes_monitor {
-  PyObject *(*update)(struct __pyx_obj_7splikes_7splikes_monitor *, double, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor {
+  PyObject *(*update)(struct __pyx_obj_10plasticnet_10plasticnet_monitor *, double, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_7splikes_7splikes_monitor *__pyx_vtabptr_7splikes_7splikes_monitor;
+static struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor *__pyx_vtabptr_10plasticnet_10plasticnet_monitor;
 
 
-/* "splikes\splikes.pxd":36
+/* "plasticnet\plasticnet.pxd":49
  *     cpdef update(self,double t)
  * 
- * cdef class simulation:             # <<<<<<<<<<<<<<
+ * cdef class simulation(group):             # <<<<<<<<<<<<<<
  *     cdef public double dt
  *     cdef public double total_time
  */
 
-struct __pyx_vtabstruct_7splikes_7splikes_simulation {
-  PyObject *(*_reset)(struct __pyx_obj_7splikes_7splikes_simulation *, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation {
+  PyObject *(*_reset)(struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_7splikes_7splikes_simulation *__pyx_vtabptr_7splikes_7splikes_simulation;
+static struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation *__pyx_vtabptr_10plasticnet_10plasticnet_simulation;
 
 
-/* "splikes\splikes.pxd":45
+/* "plasticnet\plasticnet.pxd":60
  *     cpdef _reset(self)
  * 
- * cdef class neuron:             # <<<<<<<<<<<<<<
+ * cdef class neuron(group):             # <<<<<<<<<<<<<<
  *     cdef public int verbose
- *     cdef public int is_spike
+ *     cdef public object name
  */
 
-struct __pyx_vtabstruct_7splikes_7splikes_neuron {
-  PyObject *(*_reset)(struct __pyx_obj_7splikes_7splikes_neuron *, int __pyx_skip_dispatch);
-  PyObject *(*update)(struct __pyx_obj_7splikes_7splikes_neuron *, double, struct __pyx_obj_7splikes_7splikes_simulation *, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron {
+  PyObject *(*_reset)(struct __pyx_obj_10plasticnet_10plasticnet_neuron *, int __pyx_skip_dispatch);
+  PyObject *(*update)(struct __pyx_obj_10plasticnet_10plasticnet_neuron *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_7splikes_7splikes_neuron *__pyx_vtabptr_7splikes_7splikes_neuron;
+static struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron *__pyx_vtabptr_10plasticnet_10plasticnet_neuron;
 
 
-/* "splikes\splikes.pxd":62
+/* "plasticnet\plasticnet.pxd":71
+ *     cpdef update(self,double t,simulation sim)
  * 
+ * cdef class post_process_neuron(group):             # <<<<<<<<<<<<<<
+ *     cpdef _reset(self)
+ *     cpdef update(self,double t,simulation sim)
+ */
+
+struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron {
+  PyObject *(*_reset)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *, int __pyx_skip_dispatch);
+  PyObject *(*update)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch);
+};
+static struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron;
+
+
+/* "plasticnet\plasticnet.pxd":76
+ *     cdef public neuron n
  * 
- * cdef class connection:             # <<<<<<<<<<<<<<
+ * cdef class post_process_channel(group):             # <<<<<<<<<<<<<<
+ *     cdef public channel ch
+ *     cpdef _reset(self)
+ */
+
+struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel {
+  PyObject *(*_reset)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel *, int __pyx_skip_dispatch);
+  PyObject *(*update)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch);
+};
+static struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel;
+
+
+/* "plasticnet\plasticnet.pxd":81
+ *     cpdef update(self,double t,simulation sim)
+ * 
+ * cdef class channel(neuron):             # <<<<<<<<<<<<<<
+ *     cdef public object neuron_list
+ *     cdef public int number_of_neurons
+ */
+
+struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel {
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron __pyx_base;
+};
+static struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel *__pyx_vtabptr_10plasticnet_10plasticnet_channel;
+
+
+/* "plasticnet\plasticnet.pxd":86
+ *     cdef public double time_between_patterns,time_to_next_pattern
+ * 
+ * cdef class connection(group):             # <<<<<<<<<<<<<<
  *     cdef public np.ndarray weights
  *     cdef public np.ndarray initial_weights
  */
 
-struct __pyx_vtabstruct_7splikes_7splikes_connection {
-  PyObject *(*_reset)(struct __pyx_obj_7splikes_7splikes_connection *, int __pyx_skip_dispatch);
-  PyObject *(*update)(struct __pyx_obj_7splikes_7splikes_connection *, double, struct __pyx_obj_7splikes_7splikes_simulation *, int __pyx_skip_dispatch);
-  PyObject *(*apply_weight_limits)(struct __pyx_obj_7splikes_7splikes_connection *, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection {
+  PyObject *(*_reset)(struct __pyx_obj_10plasticnet_10plasticnet_connection *, int __pyx_skip_dispatch);
+  PyObject *(*update)(struct __pyx_obj_10plasticnet_10plasticnet_connection *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_7splikes_7splikes_connection *__pyx_vtabptr_7splikes_7splikes_connection;
+static struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection *__pyx_vtabptr_10plasticnet_10plasticnet_connection;
 
 
-/* "splikes\connections\Triplet.pyx":28
- * #     - tau_x_slow=946.0
- * #
- * cdef class Gerstner2006(connection):             # <<<<<<<<<<<<<<
- *     cdef public double tau_x_slow,tau_y_slow,A3_minus,A2_minus,tau_y_fast,tau_x_fast,A3_plus,A2_plus
- *     cdef public double eta
+/* "plasticnet\plasticnet.pxd":101
+ *     cpdef update(self,double t,simulation sim)
+ * 
+ * cdef class post_process_connection(group):             # <<<<<<<<<<<<<<
+ *     cpdef _reset(self)
+ *     cpdef update(self,double t,simulation sim)
  */
 
-struct __pyx_vtabstruct_7splikes_11connections_7Triplet_Gerstner2006 {
-  struct __pyx_vtabstruct_7splikes_7splikes_connection __pyx_base;
+struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_connection {
+  PyObject *(*_reset)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_connection *, int __pyx_skip_dispatch);
+  PyObject *(*update)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_connection *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_vtabptr_7splikes_11connections_7Triplet_Gerstner2006;
+static struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_connection *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_connection;
 
 
-/* "splikes\connections\Triplet.pyx":99
+/* "plasticnet\connections\Miller2014.pyx":14
+ *         return 0
  * 
+ * cdef class Miller2014_Eq3(connection):             # <<<<<<<<<<<<<<
  * 
- * cdef class Triplet_BCM(Gerstner2006):             # <<<<<<<<<<<<<<
- *     cdef public np.ndarray y2,theta
- *     cdef public double tau_y2,y2_o
+ *     cdef public double tau_w,gamma,tau_y,theta
  */
 
-struct __pyx_vtabstruct_7splikes_11connections_7Triplet_Triplet_BCM {
-  struct __pyx_vtabstruct_7splikes_11connections_7Triplet_Gerstner2006 __pyx_base;
+struct __pyx_vtabstruct_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 {
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection __pyx_base;
 };
-static struct __pyx_vtabstruct_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_vtabptr_7splikes_11connections_7Triplet_Triplet_BCM;
+static struct __pyx_vtabstruct_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_vtabptr_10plasticnet_11connections_10Miller2014_Miller2014_Eq3;
 
 
-/* "splikes\connections\Triplet.pyx":178
+/* "plasticnet\connections\Miller2014.pyx":78
  * 
  * 
- * cdef class Triplet_BCM_LawCooper(Triplet_BCM):             # <<<<<<<<<<<<<<
- *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):
- *         Triplet_BCM.__init__(self,pre,post,initial_weight_range,state)
+ * cdef class Miller2014_Eq5(connection):             # <<<<<<<<<<<<<<
+ * 
+ *     cdef public double tau_rho,tau_H,theta
  */
 
-struct __pyx_vtabstruct_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper {
-  struct __pyx_vtabstruct_7splikes_11connections_7Triplet_Triplet_BCM __pyx_base;
+struct __pyx_vtabstruct_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 {
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection __pyx_base;
 };
-static struct __pyx_vtabstruct_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper *__pyx_vtabptr_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper;
+static struct __pyx_vtabstruct_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_vtabptr_10plasticnet_11connections_10Miller2014_Miller2014_Eq5;
 
 /* --- Runtime support code (head) --- */
 #ifndef CYTHON_REFNANNY
@@ -1061,9 +1166,30 @@ static CYTHON_INLINE PyObject* __Pyx_PyObject_CallNoArg(PyObject *func);
 #define __Pyx_PyObject_CallNoArg(func) __Pyx_PyObject_Call(func, __pyx_empty_tuple, NULL)
 #endif
 
+static CYTHON_INLINE int __Pyx_TypeTest(PyObject *obj, PyTypeObject *type);
+
 static CYTHON_INLINE PyObject *__Pyx_GetModuleGlobalName(PyObject *name);
 
-static CYTHON_INLINE int __Pyx_TypeTest(PyObject *obj, PyTypeObject *type);
+#define __Pyx_GetItemInt(o, i, type, is_signed, to_py_func, is_list, wraparound, boundscheck) \
+    (__Pyx_fits_Py_ssize_t(i, type, is_signed) ? \
+    __Pyx_GetItemInt_Fast(o, (Py_ssize_t)i, is_list, wraparound, boundscheck) : \
+    (is_list ? (PyErr_SetString(PyExc_IndexError, "list index out of range"), (PyObject*)NULL) : \
+               __Pyx_GetItemInt_Generic(o, to_py_func(i))))
+#define __Pyx_GetItemInt_List(o, i, type, is_signed, to_py_func, is_list, wraparound, boundscheck) \
+    (__Pyx_fits_Py_ssize_t(i, type, is_signed) ? \
+    __Pyx_GetItemInt_List_Fast(o, (Py_ssize_t)i, wraparound, boundscheck) : \
+    (PyErr_SetString(PyExc_IndexError, "list index out of range"), (PyObject*)NULL))
+static CYTHON_INLINE PyObject *__Pyx_GetItemInt_List_Fast(PyObject *o, Py_ssize_t i,
+                                                              int wraparound, int boundscheck);
+#define __Pyx_GetItemInt_Tuple(o, i, type, is_signed, to_py_func, is_list, wraparound, boundscheck) \
+    (__Pyx_fits_Py_ssize_t(i, type, is_signed) ? \
+    __Pyx_GetItemInt_Tuple_Fast(o, (Py_ssize_t)i, wraparound, boundscheck) : \
+    (PyErr_SetString(PyExc_IndexError, "tuple index out of range"), (PyObject*)NULL))
+static CYTHON_INLINE PyObject *__Pyx_GetItemInt_Tuple_Fast(PyObject *o, Py_ssize_t i,
+                                                              int wraparound, int boundscheck);
+static CYTHON_INLINE PyObject *__Pyx_GetItemInt_Generic(PyObject *o, PyObject* j);
+static CYTHON_INLINE PyObject *__Pyx_GetItemInt_Fast(PyObject *o, Py_ssize_t i,
+                                                     int is_list, int wraparound, int boundscheck);
 
 static void __Pyx_RaiseArgtupleInvalid(const char* func_name, int exact,
     Py_ssize_t num_min, Py_ssize_t num_max, Py_ssize_t num_found);
@@ -1138,6 +1264,8 @@ static void __Pyx_AddTraceback(const char *funcname, int c_line,
 static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level);
 
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value);
+
+static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value);
 
 static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *);
 
@@ -1239,8 +1367,6 @@ static CYTHON_INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(do
     #endif
 #endif
 
-static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value);
-
 static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *);
 
 static int __Pyx_check_binary_version(void);
@@ -1259,11 +1385,12 @@ static PyTypeObject *__Pyx_ImportType(const char *module_name, const char *class
 
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
-static PyObject *__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006__reset(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
-static PyObject *__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006_update(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim, int __pyx_skip_dispatch); /* proto*/
-static PyObject *__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM__reset(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
-static PyObject *__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM_update(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim, int __pyx_skip_dispatch); /* proto*/
-static PyObject *__pyx_f_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper_update(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3__reset(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_update(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5__reset(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_update(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim, int __pyx_skip_dispatch); /* proto*/
+
+/* Module declarations from 'cython' */
 
 /* Module declarations from 'cpython.buffer' */
 
@@ -1292,78 +1419,91 @@ static PyTypeObject *__pyx_ptype_5numpy_ndarray = 0;
 static PyTypeObject *__pyx_ptype_5numpy_ufunc = 0;
 static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, char *, char *, int *); /*proto*/
 
-/* Module declarations from 'splikes.splikes' */
-static PyTypeObject *__pyx_ptype_7splikes_7splikes_monitor = 0;
-static PyTypeObject *__pyx_ptype_7splikes_7splikes_simulation = 0;
-static PyTypeObject *__pyx_ptype_7splikes_7splikes_neuron = 0;
-static PyTypeObject *__pyx_ptype_7splikes_7splikes_connection = 0;
+/* Module declarations from 'plasticnet.plasticnet' */
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_group = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_monitor = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_simulation = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_neuron = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_post_process_channel = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_channel = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_connection = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_10plasticnet_post_process_connection = 0;
 
-/* Module declarations from 'cython' */
+/* Module declarations from 'plasticnet.connections.Miller2014' */
+static PyTypeObject *__pyx_ptype_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 = 0;
+static PyTypeObject *__pyx_ptype_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 = 0;
+static PyObject *__pyx_f_10plasticnet_11connections_10Miller2014_truncate(double); /*proto*/
+#define __Pyx_MODULE_NAME "plasticnet.connections.Miller2014"
+int __pyx_module_is_main_plasticnet__connections__Miller2014 = 0;
 
-/* Module declarations from 'splikes.connections.Triplet' */
-static PyTypeObject *__pyx_ptype_7splikes_11connections_7Triplet_Gerstner2006 = 0;
-static PyTypeObject *__pyx_ptype_7splikes_11connections_7Triplet_Triplet_BCM = 0;
-static PyTypeObject *__pyx_ptype_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper = 0;
-#define __Pyx_MODULE_NAME "splikes.connections.Triplet"
-int __pyx_module_is_main_splikes__connections__Triplet = 0;
-
-/* Implementation of 'splikes.connections.Triplet' */
+/* Implementation of 'plasticnet.connections.Miller2014' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_RuntimeError;
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006__reset(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_2__init__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_pre, struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_post, PyObject *__pyx_v_initial_weight_range, PyObject *__pyx_v_state); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_4update(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_slow___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_slow_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_slow___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_slow_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A3_minus___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A3_minus_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A2_minus___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A2_minus_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_fast___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_fast_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_fast___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_fast_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A3_plus___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A3_plus_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A2_plus___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A2_plus_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_3eta___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_3eta_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast_4__del__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast_4__del__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow_4__del__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow_4__del__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM__reset(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2__init__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self, struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_pre, struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_post, PyObject *__pyx_v_initial_weight_range, PyObject *__pyx_v_state); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_4update(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2y2___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_4__del__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_5theta___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_4__del__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_6tau_y2___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_6tau_y2_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_4y2_o___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_4y2_o_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static int __pyx_pf_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper___init__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper *__pyx_v_self, struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_pre, struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_post, PyObject *__pyx_v_initial_weight_range, PyObject *__pyx_v_state); /* proto */
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper_2update(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3__reset(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_2__init__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, struct __pyx_obj_10plasticnet_10plasticnet_neuron *__pyx_v_pre, struct __pyx_obj_10plasticnet_10plasticnet_neuron *__pyx_v_post, PyObject *__pyx_v_initial_weight_range, PyObject *__pyx_v_initial_y_bar_range); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_4update(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_w___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_w_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5gamma___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5gamma_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_y___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_y_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5theta___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5theta_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_max___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_max_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_min___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_min_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_2yo___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_2yo_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5__reset(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_2__init__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, struct __pyx_obj_10plasticnet_10plasticnet_neuron *__pyx_v_pre, struct __pyx_obj_10plasticnet_10plasticnet_neuron *__pyx_v_post, PyObject *__pyx_v_initial_rho_range, PyObject *__pyx_v_initial_H_range); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_4update(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7tau_rho___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7tau_rho_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5tau_H___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5tau_H_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5theta___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5theta_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_max___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_max_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_min___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_min_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_2yo___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_2yo_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
-static PyObject *__pyx_tp_new_7splikes_11connections_7Triplet_Gerstner2006(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_7splikes_11connections_7Triplet_Triplet_BCM(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_10plasticnet_11connections_10Miller2014_Miller2014_Eq3(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_10plasticnet_11connections_10Miller2014_Miller2014_Eq5(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static char __pyx_k_B[] = "B";
 static char __pyx_k_H[] = "H";
 static char __pyx_k_I[] = "I";
@@ -1385,27 +1525,27 @@ static char __pyx_k_Zg[] = "Zg";
 static char __pyx_k_np[] = "np";
 static char __pyx_k_pre[] = "pre";
 static char __pyx_k_sim[] = "sim";
+static char __pyx_k_copy[] = "copy";
 static char __pyx_k_init[] = "__init__";
 static char __pyx_k_main[] = "__main__";
 static char __pyx_k_post[] = "post";
+static char __pyx_k_rand[] = "rand";
 static char __pyx_k_test[] = "__test__";
-static char __pyx_k_dtype[] = "dtype";
-static char __pyx_k_float[] = "float";
 static char __pyx_k_numpy[] = "numpy";
 static char __pyx_k_pylab[] = "pylab";
 static char __pyx_k_range[] = "range";
 static char __pyx_k_reset[] = "_reset";
-static char __pyx_k_state[] = "state";
-static char __pyx_k_zeros[] = "zeros";
 static char __pyx_k_import[] = "__import__";
 static char __pyx_k_update[] = "update";
 static char __pyx_k_ValueError[] = "ValueError";
 static char __pyx_k_pyx_vtable[] = "__pyx_vtable__";
-static char __pyx_k_Triplet_BCM[] = "Triplet BCM";
-static char __pyx_k_Gerstner2006[] = "Gerstner2006";
 static char __pyx_k_RuntimeError[] = "RuntimeError";
+static char __pyx_k_Miller2014_Eq3[] = "Miller2014_Eq3";
+static char __pyx_k_Miller2014_Eq5[] = "Miller2014_Eq5";
+static char __pyx_k_initial_H_range[] = "initial_H_range";
+static char __pyx_k_initial_rho_range[] = "initial_rho_range";
+static char __pyx_k_initial_y_bar_range[] = "initial_y_bar_range";
 static char __pyx_k_initial_weight_range[] = "initial_weight_range";
-static char __pyx_k_Triplet_BCM_LawCooper[] = "Triplet BCM LawCooper";
 static char __pyx_k_ndarray_is_not_C_contiguous[] = "ndarray is not C contiguous";
 static char __pyx_k_unknown_dtype_code_in_numpy_pxd[] = "unknown dtype code in numpy.pxd (%d)";
 static char __pyx_k_Format_string_allocated_too_shor[] = "Format string allocated too short, see comment in numpy.pxd";
@@ -1414,17 +1554,18 @@ static char __pyx_k_ndarray_is_not_Fortran_contiguou[] = "ndarray is not Fortran
 static char __pyx_k_Format_string_allocated_too_shor_2[] = "Format string allocated too short.";
 static PyObject *__pyx_kp_u_Format_string_allocated_too_shor;
 static PyObject *__pyx_kp_u_Format_string_allocated_too_shor_2;
-static PyObject *__pyx_n_s_Gerstner2006;
+static PyObject *__pyx_n_s_Miller2014_Eq3;
+static PyObject *__pyx_n_s_Miller2014_Eq5;
 static PyObject *__pyx_kp_u_Non_native_byte_order_not_suppor;
 static PyObject *__pyx_n_s_RuntimeError;
-static PyObject *__pyx_kp_s_Triplet_BCM;
-static PyObject *__pyx_kp_s_Triplet_BCM_LawCooper;
 static PyObject *__pyx_n_s_ValueError;
-static PyObject *__pyx_n_s_dtype;
-static PyObject *__pyx_n_s_float;
+static PyObject *__pyx_n_s_copy;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_init;
+static PyObject *__pyx_n_s_initial_H_range;
+static PyObject *__pyx_n_s_initial_rho_range;
 static PyObject *__pyx_n_s_initial_weight_range;
+static PyObject *__pyx_n_s_initial_y_bar_range;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_kp_u_ndarray_is_not_C_contiguous;
 static PyObject *__pyx_kp_u_ndarray_is_not_Fortran_contiguou;
@@ -1434,15 +1575,16 @@ static PyObject *__pyx_n_s_post;
 static PyObject *__pyx_n_s_pre;
 static PyObject *__pyx_n_s_pylab;
 static PyObject *__pyx_n_s_pyx_vtable;
+static PyObject *__pyx_n_s_rand;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_reset;
 static PyObject *__pyx_n_s_sim;
-static PyObject *__pyx_n_s_state;
 static PyObject *__pyx_n_s_t;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_kp_u_unknown_dtype_code_in_numpy_pxd;
 static PyObject *__pyx_n_s_update;
-static PyObject *__pyx_n_s_zeros;
+static PyObject *__pyx_float__1;
+static PyObject *__pyx_int_0;
 static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__2;
 static PyObject *__pyx_tuple__3;
@@ -1450,23 +1592,100 @@ static PyObject *__pyx_tuple__4;
 static PyObject *__pyx_tuple__5;
 static PyObject *__pyx_tuple__6;
 
-/* "splikes\connections\Triplet.pyx":32
- *     cdef public double eta
- *     cdef public np.ndarray y_fast,x_fast,y_slow,x_slow
- *     cpdef _reset(self):             # <<<<<<<<<<<<<<
- *         self.y_fast=np.zeros(self.post.N,dtype=np.float)
- *         self.x_fast=np.zeros(self.pre.N,dtype=np.float)
+/* "plasticnet\connections\Miller2014.pyx":8
+ * cimport numpy as np
+ * 
+ * cdef truncate(double x):             # <<<<<<<<<<<<<<
+ *     if x>0.0:
+ *         return x
  */
 
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_1_reset(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006__reset(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, int __pyx_skip_dispatch) {
+static PyObject *__pyx_f_10plasticnet_11connections_10Miller2014_truncate(double __pyx_v_x) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  int __pyx_t_1;
+  PyObject *__pyx_t_2 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("truncate", 0);
+
+  /* "plasticnet\connections\Miller2014.pyx":9
+ * 
+ * cdef truncate(double x):
+ *     if x>0.0:             # <<<<<<<<<<<<<<
+ *         return x
+ *     else:
+ */
+  __pyx_t_1 = ((__pyx_v_x > 0.0) != 0);
+  if (__pyx_t_1) {
+
+    /* "plasticnet\connections\Miller2014.pyx":10
+ * cdef truncate(double x):
+ *     if x>0.0:
+ *         return x             # <<<<<<<<<<<<<<
+ *     else:
+ *         return 0
+ */
+    __Pyx_XDECREF(__pyx_r);
+    __pyx_t_2 = PyFloat_FromDouble(__pyx_v_x); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_r = __pyx_t_2;
+    __pyx_t_2 = 0;
+    goto __pyx_L0;
+  }
+  /*else*/ {
+
+    /* "plasticnet\connections\Miller2014.pyx":12
+ *         return x
+ *     else:
+ *         return 0             # <<<<<<<<<<<<<<
+ * 
+ * cdef class Miller2014_Eq3(connection):
+ */
+    __Pyx_XDECREF(__pyx_r);
+    __Pyx_INCREF(__pyx_int_0);
+    __pyx_r = __pyx_int_0;
+    goto __pyx_L0;
+  }
+
+  /* "plasticnet\connections\Miller2014.pyx":8
+ * cimport numpy as np
+ * 
+ * cdef truncate(double x):             # <<<<<<<<<<<<<<
+ *     if x>0.0:
+ *         return x
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.truncate", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "plasticnet\connections\Miller2014.pyx":22
+ *     cdef public object initial_y_bar_range
+ * 
+ *     cpdef _reset(self):             # <<<<<<<<<<<<<<
+ *         if self.reset_to_initial:
+ *             self.y_bar=self.initial_y_bar.copy()
+ */
+
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_1_reset(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_f_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3__reset(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, int __pyx_skip_dispatch) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
-  PyObject *__pyx_t_5 = NULL;
+  int __pyx_t_5;
+  PyObject *__pyx_t_6 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -1475,9 +1694,9 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006__reset(s
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_1_reset)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_1_reset)) {
       __Pyx_XDECREF(__pyx_r);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -1491,10 +1710,10 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006__reset(s
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -1506,183 +1725,203 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006__reset(s
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes\connections\Triplet.pyx":33
- *     cdef public np.ndarray y_fast,x_fast,y_slow,x_slow
+  /* "plasticnet\connections\Miller2014.pyx":23
+ * 
  *     cpdef _reset(self):
- *         self.y_fast=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
- *         self.x_fast=np.zeros(self.pre.N,dtype=np.float)
- *         self.y_slow=np.zeros(self.post.N,dtype=np.float)
+ *         if self.reset_to_initial:             # <<<<<<<<<<<<<<
+ *             self.y_bar=self.initial_y_bar.copy()
+ *         else:
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_1);
-  __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GIVEREF(__pyx_t_5);
-  __Pyx_GOTREF(__pyx_v_self->y_fast);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->y_fast));
-  __pyx_v_self->y_fast = ((PyArrayObject *)__pyx_t_5);
-  __pyx_t_5 = 0;
+  __pyx_t_5 = (__pyx_v_self->__pyx_base.reset_to_initial != 0);
+  if (__pyx_t_5) {
 
-  /* "splikes\connections\Triplet.pyx":34
+    /* "plasticnet\connections\Miller2014.pyx":24
  *     cpdef _reset(self):
- *         self.y_fast=np.zeros(self.post.N,dtype=np.float)
- *         self.x_fast=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
- *         self.y_slow=np.zeros(self.post.N,dtype=np.float)
- *         self.x_slow=np.zeros(self.pre.N,dtype=np.float)
+ *         if self.reset_to_initial:
+ *             self.y_bar=self.initial_y_bar.copy()             # <<<<<<<<<<<<<<
+ *         else:
+ *             self.y_bar=pylab.rand(self.post.N)*(self.initial_y_bar_range[1]-
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_5);
-  __pyx_t_5 = 0;
-  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GIVEREF(__pyx_t_4);
-  __Pyx_GOTREF(__pyx_v_self->x_fast);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->x_fast));
-  __pyx_v_self->x_fast = ((PyArrayObject *)__pyx_t_4);
-  __pyx_t_4 = 0;
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->initial_y_bar), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_3 = NULL;
+    if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+      if (likely(__pyx_t_3)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_3);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_2, function);
+      }
+    }
+    if (__pyx_t_3) {
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    } else {
+      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    }
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GIVEREF(__pyx_t_1);
+    __Pyx_GOTREF(__pyx_v_self->y_bar);
+    __Pyx_DECREF(((PyObject *)__pyx_v_self->y_bar));
+    __pyx_v_self->y_bar = ((PyArrayObject *)__pyx_t_1);
+    __pyx_t_1 = 0;
+    goto __pyx_L3;
+  }
+  /*else*/ {
 
-  /* "splikes\connections\Triplet.pyx":35
- *         self.y_fast=np.zeros(self.post.N,dtype=np.float)
- *         self.x_fast=np.zeros(self.pre.N,dtype=np.float)
- *         self.y_slow=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
- *         self.x_slow=np.zeros(self.pre.N,dtype=np.float)
- *         connection._reset(self)
+    /* "plasticnet\connections\Miller2014.pyx":26
+ *             self.y_bar=self.initial_y_bar.copy()
+ *         else:
+ *             self.y_bar=pylab.rand(self.post.N)*(self.initial_y_bar_range[1]-             # <<<<<<<<<<<<<<
+ *                                        self.initial_y_bar_range[0])+self.initial_y_bar_range[0]
+ * 
  */
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
-  __Pyx_GIVEREF(__pyx_t_4);
-  __pyx_t_4 = 0;
-  __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GIVEREF(__pyx_t_2);
-  __Pyx_GOTREF(__pyx_v_self->y_slow);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->y_slow));
-  __pyx_v_self->y_slow = ((PyArrayObject *)__pyx_t_2);
-  __pyx_t_2 = 0;
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_rand); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_4 = NULL;
+    if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
+      __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
+      if (likely(__pyx_t_4)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+        __Pyx_INCREF(__pyx_t_4);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_3, function);
+      }
+    }
+    if (!__pyx_t_4) {
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+    } else {
+      __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_6);
+      PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
+      PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_t_2);
+      __Pyx_GIVEREF(__pyx_t_2);
+      __pyx_t_2 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_y_bar_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+    __Pyx_GOTREF(__pyx_t_3);
 
-  /* "splikes\connections\Triplet.pyx":36
- *         self.x_fast=np.zeros(self.pre.N,dtype=np.float)
- *         self.y_slow=np.zeros(self.post.N,dtype=np.float)
- *         self.x_slow=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
+    /* "plasticnet\connections\Miller2014.pyx":27
+ *         else:
+ *             self.y_bar=pylab.rand(self.post.N)*(self.initial_y_bar_range[1]-
+ *                                        self.initial_y_bar_range[0])+self.initial_y_bar_range[0]             # <<<<<<<<<<<<<<
+ * 
+ *         self.initial_y_bar=self.y_bar.copy()
+ */
+    __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_self->initial_y_bar_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_6 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+    __Pyx_GOTREF(__pyx_t_6);
+
+    /* "plasticnet\connections\Miller2014.pyx":26
+ *             self.y_bar=self.initial_y_bar.copy()
+ *         else:
+ *             self.y_bar=pylab.rand(self.post.N)*(self.initial_y_bar_range[1]-             # <<<<<<<<<<<<<<
+ *                                        self.initial_y_bar_range[0])+self.initial_y_bar_range[0]
+ * 
+ */
+    __pyx_t_2 = PyNumber_Subtract(__pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __pyx_t_6 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+    /* "plasticnet\connections\Miller2014.pyx":27
+ *         else:
+ *             self.y_bar=pylab.rand(self.post.N)*(self.initial_y_bar_range[1]-
+ *                                        self.initial_y_bar_range[0])+self.initial_y_bar_range[0]             # <<<<<<<<<<<<<<
+ * 
+ *         self.initial_y_bar=self.y_bar.copy()
+ */
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_y_bar_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_1 = PyNumber_Add(__pyx_t_6, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+
+    /* "plasticnet\connections\Miller2014.pyx":26
+ *             self.y_bar=self.initial_y_bar.copy()
+ *         else:
+ *             self.y_bar=pylab.rand(self.post.N)*(self.initial_y_bar_range[1]-             # <<<<<<<<<<<<<<
+ *                                        self.initial_y_bar_range[0])+self.initial_y_bar_range[0]
+ * 
+ */
+    __Pyx_GIVEREF(__pyx_t_1);
+    __Pyx_GOTREF(__pyx_v_self->y_bar);
+    __Pyx_DECREF(((PyObject *)__pyx_v_self->y_bar));
+    __pyx_v_self->y_bar = ((PyArrayObject *)__pyx_t_1);
+    __pyx_t_1 = 0;
+  }
+  __pyx_L3:;
+
+  /* "plasticnet\connections\Miller2014.pyx":29
+ *                                        self.initial_y_bar_range[0])+self.initial_y_bar_range[0]
+ * 
+ *         self.initial_y_bar=self.y_bar.copy()             # <<<<<<<<<<<<<<
  *         connection._reset(self)
  * 
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->y_bar), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_2);
-  __Pyx_GIVEREF(__pyx_t_2);
-  __pyx_t_2 = 0;
-  __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = NULL;
+  if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_6)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_6);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+    }
+  }
+  if (__pyx_t_6) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  } else {
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  }
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_1);
-  __Pyx_GOTREF(__pyx_v_self->x_slow);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->x_slow));
-  __pyx_v_self->x_slow = ((PyArrayObject *)__pyx_t_1);
+  __Pyx_GOTREF(__pyx_v_self->initial_y_bar);
+  __Pyx_DECREF(((PyObject *)__pyx_v_self->initial_y_bar));
+  __pyx_v_self->initial_y_bar = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes\connections\Triplet.pyx":37
- *         self.y_slow=np.zeros(self.post.N,dtype=np.float)
- *         self.x_slow=np.zeros(self.pre.N,dtype=np.float)
+  /* "plasticnet\connections\Miller2014.pyx":30
+ * 
+ *         self.initial_y_bar=self.y_bar.copy()
  *         connection._reset(self)             # <<<<<<<<<<<<<<
  * 
- *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):
+ *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,initial_y_bar_range=None):
  */
-  __pyx_t_1 = __pyx_vtabptr_7splikes_7splikes_connection->_reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 37; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_vtabptr_10plasticnet_10plasticnet_connection->_reset(((struct __pyx_obj_10plasticnet_10plasticnet_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes\connections\Triplet.pyx":32
- *     cdef public double eta
- *     cdef public np.ndarray y_fast,x_fast,y_slow,x_slow
+  /* "plasticnet\connections\Miller2014.pyx":22
+ *     cdef public object initial_y_bar_range
+ * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
- *         self.y_fast=np.zeros(self.post.N,dtype=np.float)
- *         self.x_fast=np.zeros(self.pre.N,dtype=np.float)
+ *         if self.reset_to_initial:
+ *             self.y_bar=self.initial_y_bar.copy()
  */
 
   /* function exit code */
@@ -1693,8 +1932,8 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006__reset(s
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006._reset", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_XDECREF(__pyx_t_6);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3._reset", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1703,19 +1942,19 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006__reset(s
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_1_reset(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_1_reset(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_1_reset(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_1_reset(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("_reset (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006__reset(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3__reset(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006__reset(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3__reset(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1724,7 +1963,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006__reset(
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_reset", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_7Triplet_12Gerstner2006__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -1733,7 +1972,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006__reset(
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006._reset", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3._reset", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1741,21 +1980,21 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006__reset(
   return __pyx_r;
 }
 
-/* "splikes\connections\Triplet.pyx":39
+/* "plasticnet\connections\Miller2014.pyx":32
  *         connection._reset(self)
  * 
- *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):             # <<<<<<<<<<<<<<
- *         connection.__init__(self,pre,post,initial_weight_range,state)
- *         self.name='Gerstner2006'
+ *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,initial_y_bar_range=None):             # <<<<<<<<<<<<<<
+ *         if initial_y_bar_range is None:
+ *             self.initial_y_bar_range=[0,.1]
  */
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_3__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_3__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_pre = 0;
-  struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_post = 0;
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_3__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_3__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  struct __pyx_obj_10plasticnet_10plasticnet_neuron *__pyx_v_pre = 0;
+  struct __pyx_obj_10plasticnet_10plasticnet_neuron *__pyx_v_post = 0;
   PyObject *__pyx_v_initial_weight_range = 0;
-  PyObject *__pyx_v_state = 0;
+  PyObject *__pyx_v_initial_y_bar_range = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -1763,7 +2002,7 @@ static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_3__init__(PyO
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__init__ (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_pre,&__pyx_n_s_post,&__pyx_n_s_initial_weight_range,&__pyx_n_s_state,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_pre,&__pyx_n_s_post,&__pyx_n_s_initial_weight_range,&__pyx_n_s_initial_y_bar_range,0};
     PyObject* values[4] = {0,0,0,0};
     values[2] = ((PyObject *)Py_None);
     values[3] = ((PyObject *)Py_None);
@@ -1786,7 +2025,7 @@ static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_3__init__(PyO
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_post)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 4, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 4, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  2:
         if (kw_args > 0) {
@@ -1795,12 +2034,12 @@ static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_3__init__(PyO
         }
         case  3:
         if (kw_args > 0) {
-          PyObject* value = PyDict_GetItem(__pyx_kwds, __pyx_n_s_state);
+          PyObject* value = PyDict_GetItem(__pyx_kwds, __pyx_n_s_initial_y_bar_range);
           if (value) { values[3] = value; kw_args--; }
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -1812,22 +2051,22 @@ static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_3__init__(PyO
         default: goto __pyx_L5_argtuple_error;
       }
     }
-    __pyx_v_pre = ((struct __pyx_obj_7splikes_7splikes_neuron *)values[0]);
-    __pyx_v_post = ((struct __pyx_obj_7splikes_7splikes_neuron *)values[1]);
+    __pyx_v_pre = ((struct __pyx_obj_10plasticnet_10plasticnet_neuron *)values[0]);
+    __pyx_v_post = ((struct __pyx_obj_10plasticnet_10plasticnet_neuron *)values[1]);
     __pyx_v_initial_weight_range = values[2];
-    __pyx_v_state = values[3];
+    __pyx_v_initial_y_bar_range = values[3];
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_7splikes_7splikes_neuron, 1, "pre", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_2__init__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self), __pyx_v_pre, __pyx_v_post, __pyx_v_initial_weight_range, __pyx_v_state);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_10plasticnet_10plasticnet_neuron, 1, "pre", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_10plasticnet_10plasticnet_neuron, 1, "post", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_2__init__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self), __pyx_v_pre, __pyx_v_post, __pyx_v_initial_weight_range, __pyx_v_initial_y_bar_range);
 
   /* function exit code */
   goto __pyx_L0;
@@ -1838,195 +2077,226 @@ static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_3__init__(PyO
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_2__init__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_pre, struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_post, PyObject *__pyx_v_initial_weight_range, PyObject *__pyx_v_state) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_2__init__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, struct __pyx_obj_10plasticnet_10plasticnet_neuron *__pyx_v_pre, struct __pyx_obj_10plasticnet_10plasticnet_neuron *__pyx_v_post, PyObject *__pyx_v_initial_weight_range, PyObject *__pyx_v_initial_y_bar_range) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
+  int __pyx_t_1;
+  int __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
-  Py_ssize_t __pyx_t_4;
+  PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
+  Py_ssize_t __pyx_t_6;
+  PyObject *__pyx_t_7 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "splikes\connections\Triplet.pyx":40
+  /* "plasticnet\connections\Miller2014.pyx":33
  * 
- *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):
- *         connection.__init__(self,pre,post,initial_weight_range,state)             # <<<<<<<<<<<<<<
- *         self.name='Gerstner2006'
- * 
+ *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,initial_y_bar_range=None):
+ *         if initial_y_bar_range is None:             # <<<<<<<<<<<<<<
+ *             self.initial_y_bar_range=[0,.1]
+ *         else:
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)((PyObject*)__pyx_ptype_7splikes_7splikes_connection)), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = NULL;
-  __pyx_t_4 = 0;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_3)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_3);
+  __pyx_t_1 = (__pyx_v_initial_y_bar_range == Py_None);
+  __pyx_t_2 = (__pyx_t_1 != 0);
+  if (__pyx_t_2) {
+
+    /* "plasticnet\connections\Miller2014.pyx":34
+ *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,initial_y_bar_range=None):
+ *         if initial_y_bar_range is None:
+ *             self.initial_y_bar_range=[0,.1]             # <<<<<<<<<<<<<<
+ *         else:
+ *             self.initial_y_bar_range=initial_y_bar_range
+ */
+    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_INCREF(__pyx_int_0);
+    PyList_SET_ITEM(__pyx_t_3, 0, __pyx_int_0);
+    __Pyx_GIVEREF(__pyx_int_0);
+    __Pyx_INCREF(__pyx_float__1);
+    PyList_SET_ITEM(__pyx_t_3, 1, __pyx_float__1);
+    __Pyx_GIVEREF(__pyx_float__1);
+    __Pyx_GIVEREF(__pyx_t_3);
+    __Pyx_GOTREF(__pyx_v_self->initial_y_bar_range);
+    __Pyx_DECREF(__pyx_v_self->initial_y_bar_range);
+    __pyx_v_self->initial_y_bar_range = __pyx_t_3;
+    __pyx_t_3 = 0;
+    goto __pyx_L3;
+  }
+  /*else*/ {
+
+    /* "plasticnet\connections\Miller2014.pyx":36
+ *             self.initial_y_bar_range=[0,.1]
+ *         else:
+ *             self.initial_y_bar_range=initial_y_bar_range             # <<<<<<<<<<<<<<
+ * 
+ *         connection.__init__(self,pre,post,initial_weight_range)
+ */
+    __Pyx_INCREF(__pyx_v_initial_y_bar_range);
+    __Pyx_GIVEREF(__pyx_v_initial_y_bar_range);
+    __Pyx_GOTREF(__pyx_v_self->initial_y_bar_range);
+    __Pyx_DECREF(__pyx_v_self->initial_y_bar_range);
+    __pyx_v_self->initial_y_bar_range = __pyx_v_initial_y_bar_range;
+  }
+  __pyx_L3:;
+
+  /* "plasticnet\connections\Miller2014.pyx":38
+ *             self.initial_y_bar_range=initial_y_bar_range
+ * 
+ *         connection.__init__(self,pre,post,initial_weight_range)             # <<<<<<<<<<<<<<
+ * 
+ *         self.tau_w=0.3  # days - not sure what days is
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)((PyObject*)__pyx_ptype_10plasticnet_10plasticnet_connection)), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = NULL;
+  __pyx_t_6 = 0;
+  if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
+    if (likely(__pyx_t_5)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+      __Pyx_INCREF(__pyx_t_5);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_2, function);
-      __pyx_t_4 = 1;
+      __Pyx_DECREF_SET(__pyx_t_4, function);
+      __pyx_t_6 = 1;
     }
   }
-  __pyx_t_5 = PyTuple_New(5+__pyx_t_4); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  if (__pyx_t_3) {
-    PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
+  __pyx_t_7 = PyTuple_New(4+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_7);
+  if (__pyx_t_5) {
+    PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
   }
   __Pyx_INCREF(((PyObject *)__pyx_v_self));
-  PyTuple_SET_ITEM(__pyx_t_5, 0+__pyx_t_4, ((PyObject *)__pyx_v_self));
+  PyTuple_SET_ITEM(__pyx_t_7, 0+__pyx_t_6, ((PyObject *)__pyx_v_self));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
   __Pyx_INCREF(((PyObject *)__pyx_v_pre));
-  PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, ((PyObject *)__pyx_v_pre));
+  PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_pre));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_pre));
   __Pyx_INCREF(((PyObject *)__pyx_v_post));
-  PyTuple_SET_ITEM(__pyx_t_5, 2+__pyx_t_4, ((PyObject *)__pyx_v_post));
+  PyTuple_SET_ITEM(__pyx_t_7, 2+__pyx_t_6, ((PyObject *)__pyx_v_post));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_post));
   __Pyx_INCREF(__pyx_v_initial_weight_range);
-  PyTuple_SET_ITEM(__pyx_t_5, 3+__pyx_t_4, __pyx_v_initial_weight_range);
+  PyTuple_SET_ITEM(__pyx_t_7, 3+__pyx_t_6, __pyx_v_initial_weight_range);
   __Pyx_GIVEREF(__pyx_v_initial_weight_range);
-  __Pyx_INCREF(__pyx_v_state);
-  PyTuple_SET_ITEM(__pyx_t_5, 4+__pyx_t_4, __pyx_v_state);
-  __Pyx_GIVEREF(__pyx_v_state);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes\connections\Triplet.pyx":41
- *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):
- *         connection.__init__(self,pre,post,initial_weight_range,state)
- *         self.name='Gerstner2006'             # <<<<<<<<<<<<<<
+  /* "plasticnet\connections\Miller2014.pyx":40
+ *         connection.__init__(self,pre,post,initial_weight_range)
  * 
- *         self.tau_x_slow=0.946
+ *         self.tau_w=0.3  # days - not sure what days is             # <<<<<<<<<<<<<<
+ *         self.tau_y=100.0
+ *         self.yo=0.8
  */
-  __Pyx_INCREF(__pyx_n_s_Gerstner2006);
-  __Pyx_GIVEREF(__pyx_n_s_Gerstner2006);
+  __pyx_v_self->tau_w = 0.3;
+
+  /* "plasticnet\connections\Miller2014.pyx":41
+ * 
+ *         self.tau_w=0.3  # days - not sure what days is
+ *         self.tau_y=100.0             # <<<<<<<<<<<<<<
+ *         self.yo=0.8
+ *         self.gamma=0.23
+ */
+  __pyx_v_self->tau_y = 100.0;
+
+  /* "plasticnet\connections\Miller2014.pyx":42
+ *         self.tau_w=0.3  # days - not sure what days is
+ *         self.tau_y=100.0
+ *         self.yo=0.8             # <<<<<<<<<<<<<<
+ *         self.gamma=0.23
+ *         self.theta=0.6
+ */
+  __pyx_v_self->yo = 0.8;
+
+  /* "plasticnet\connections\Miller2014.pyx":43
+ *         self.tau_y=100.0
+ *         self.yo=0.8
+ *         self.gamma=0.23             # <<<<<<<<<<<<<<
+ *         self.theta=0.6
+ *         self.w_max=1.0
+ */
+  __pyx_v_self->gamma = 0.23;
+
+  /* "plasticnet\connections\Miller2014.pyx":44
+ *         self.yo=0.8
+ *         self.gamma=0.23
+ *         self.theta=0.6             # <<<<<<<<<<<<<<
+ *         self.w_max=1.0
+ *         self.w_min=0.6
+ */
+  __pyx_v_self->theta = 0.6;
+
+  /* "plasticnet\connections\Miller2014.pyx":45
+ *         self.gamma=0.23
+ *         self.theta=0.6
+ *         self.w_max=1.0             # <<<<<<<<<<<<<<
+ *         self.w_min=0.6
+ *         self.name='Miller2014_Eq3'
+ */
+  __pyx_v_self->w_max = 1.0;
+
+  /* "plasticnet\connections\Miller2014.pyx":46
+ *         self.theta=0.6
+ *         self.w_max=1.0
+ *         self.w_min=0.6             # <<<<<<<<<<<<<<
+ *         self.name='Miller2014_Eq3'
+ *         self._reset()
+ */
+  __pyx_v_self->w_min = 0.6;
+
+  /* "plasticnet\connections\Miller2014.pyx":47
+ *         self.w_max=1.0
+ *         self.w_min=0.6
+ *         self.name='Miller2014_Eq3'             # <<<<<<<<<<<<<<
+ *         self._reset()
+ * 
+ */
+  __Pyx_INCREF(__pyx_n_s_Miller2014_Eq3);
+  __Pyx_GIVEREF(__pyx_n_s_Miller2014_Eq3);
   __Pyx_GOTREF(__pyx_v_self->__pyx_base.name);
   __Pyx_DECREF(__pyx_v_self->__pyx_base.name);
-  __pyx_v_self->__pyx_base.name = __pyx_n_s_Gerstner2006;
+  __pyx_v_self->__pyx_base.name = __pyx_n_s_Miller2014_Eq3;
 
-  /* "splikes\connections\Triplet.pyx":43
- *         self.name='Gerstner2006'
- * 
- *         self.tau_x_slow=0.946             # <<<<<<<<<<<<<<
- *         self.tau_y_slow=0.114
- *         self.A3_minus=0
- */
-  __pyx_v_self->tau_x_slow = 0.946;
-
-  /* "splikes\connections\Triplet.pyx":44
- * 
- *         self.tau_x_slow=0.946
- *         self.tau_y_slow=0.114             # <<<<<<<<<<<<<<
- *         self.A3_minus=0
- *         self.eta=1.0
- */
-  __pyx_v_self->tau_y_slow = 0.114;
-
-  /* "splikes\connections\Triplet.pyx":45
- *         self.tau_x_slow=0.946
- *         self.tau_y_slow=0.114
- *         self.A3_minus=0             # <<<<<<<<<<<<<<
- *         self.eta=1.0
- *         self.A2_minus=0.0071
- */
-  __pyx_v_self->A3_minus = 0.0;
-
-  /* "splikes\connections\Triplet.pyx":46
- *         self.tau_y_slow=0.114
- *         self.A3_minus=0
- *         self.eta=1.0             # <<<<<<<<<<<<<<
- *         self.A2_minus=0.0071
- *         self.tau_y_fast=0.0337
- */
-  __pyx_v_self->eta = 1.0;
-
-  /* "splikes\connections\Triplet.pyx":47
- *         self.A3_minus=0
- *         self.eta=1.0
- *         self.A2_minus=0.0071             # <<<<<<<<<<<<<<
- *         self.tau_y_fast=0.0337
- *         self.tau_x_fast=0.0168
- */
-  __pyx_v_self->A2_minus = 0.0071;
-
-  /* "splikes\connections\Triplet.pyx":48
- *         self.eta=1.0
- *         self.A2_minus=0.0071
- *         self.tau_y_fast=0.0337             # <<<<<<<<<<<<<<
- *         self.tau_x_fast=0.0168
- *         self.A3_plus=0.0065
- */
-  __pyx_v_self->tau_y_fast = 0.0337;
-
-  /* "splikes\connections\Triplet.pyx":49
- *         self.A2_minus=0.0071
- *         self.tau_y_fast=0.0337
- *         self.tau_x_fast=0.0168             # <<<<<<<<<<<<<<
- *         self.A3_plus=0.0065
- *         self.A2_plus=0
- */
-  __pyx_v_self->tau_x_fast = 0.0168;
-
-  /* "splikes\connections\Triplet.pyx":50
- *         self.tau_y_fast=0.0337
- *         self.tau_x_fast=0.0168
- *         self.A3_plus=0.0065             # <<<<<<<<<<<<<<
- *         self.A2_plus=0
- *         self._reset()
- */
-  __pyx_v_self->A3_plus = 0.0065;
-
-  /* "splikes\connections\Triplet.pyx":51
- *         self.tau_x_fast=0.0168
- *         self.A3_plus=0.0065
- *         self.A2_plus=0             # <<<<<<<<<<<<<<
- *         self._reset()
- * 
- */
-  __pyx_v_self->A2_plus = 0.0;
-
-  /* "splikes\connections\Triplet.pyx":52
- *         self.A3_plus=0.0065
- *         self.A2_plus=0
+  /* "plasticnet\connections\Miller2014.pyx":48
+ *         self.w_min=0.6
+ *         self.name='Miller2014_Eq3'
  *         self._reset()             # <<<<<<<<<<<<<<
  * 
- *     @cython.cdivision(True)
+ * 
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_3 = ((struct __pyx_vtabstruct_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_10plasticnet_10plasticnet_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes\connections\Triplet.pyx":39
+  /* "plasticnet\connections\Miller2014.pyx":32
  *         connection._reset(self)
  * 
- *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):             # <<<<<<<<<<<<<<
- *         connection.__init__(self,pre,post,initial_weight_range,state)
- *         self.name='Gerstner2006'
+ *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,initial_y_bar_range=None):             # <<<<<<<<<<<<<<
+ *         if initial_y_bar_range is None:
+ *             self.initial_y_bar_range=[0,.1]
  */
 
   /* function exit code */
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_XDECREF(__pyx_t_7);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "splikes\connections\Triplet.pyx":56
+/* "plasticnet\connections\Miller2014.pyx":53
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -2034,28 +2304,14 @@ static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_2__init__(str
  * 
  */
 
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_5update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006_update(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_update(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim, int __pyx_skip_dispatch) {
   int __pyx_v___i;
   int __pyx_v___j;
-  double *__pyx_v_y_fast;
-  double *__pyx_v_x_fast;
-  double *__pyx_v_y_slow;
-  double *__pyx_v_x_slow;
-  double __pyx_v_tau_x_slow;
-  double __pyx_v_tau_y_slow;
-  double __pyx_v_A3_minus;
-  double __pyx_v_A2_minus;
-  double __pyx_v_tau_y_fast;
-  double __pyx_v_tau_x_fast;
-  double __pyx_v_A3_plus;
-  double __pyx_v_A2_plus;
-  double __pyx_v_eta;
   double *__pyx_v_W;
-  CYTHON_UNUSED double *__pyx_v_post_rate;
-  CYTHON_UNUSED double *__pyx_v_pre_rate;
-  int *__pyx_v_pre;
-  int *__pyx_v_post;
+  double *__pyx_v_y_bar;
+  double *__pyx_v_X;
+  double *__pyx_v_Y;
   int __pyx_v___wi;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -2066,13 +2322,12 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006_update(s
   PyObject *__pyx_t_5 = NULL;
   Py_ssize_t __pyx_t_6;
   PyObject *__pyx_t_7 = NULL;
-  double __pyx_t_8;
-  double *__pyx_t_9;
+  int __pyx_t_8;
+  int __pyx_t_9;
   int __pyx_t_10;
   int __pyx_t_11;
   int __pyx_t_12;
-  int __pyx_t_13;
-  int __pyx_t_14;
+  double __pyx_t_13;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -2081,11 +2336,11 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006_update(s
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_5update)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -2100,7 +2355,7 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006_update(s
           __pyx_t_6 = 1;
         }
       }
-      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_7);
       if (__pyx_t_5) {
         PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
@@ -2111,7 +2366,7 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006_update(s
       PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
       __pyx_t_3 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -2123,321 +2378,210 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006_update(s
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes\connections\Triplet.pyx":59
+  /* "plasticnet\connections\Miller2014.pyx":56
  *         cdef int __i,__j
  * 
- *         cdef double *y_fast=<double *>self.y_fast.data             # <<<<<<<<<<<<<<
- *         cdef double *x_fast=<double *>self.x_fast.data
- *         cdef double *y_slow=<double *>self.y_slow.data
+ *         cdef double *W=<double *>self.weights.data             # <<<<<<<<<<<<<<
+ *         cdef double *y_bar=<double *>self.y_bar.data
+ *         cdef double *X,*Y   # outputs for pre and post
  */
-  __pyx_v_y_fast = ((double *)__pyx_v_self->y_fast->data);
+  __pyx_v_W = ((double *)__pyx_v_self->__pyx_base.weights->data);
 
-  /* "splikes\connections\Triplet.pyx":60
+  /* "plasticnet\connections\Miller2014.pyx":57
  * 
- *         cdef double *y_fast=<double *>self.y_fast.data
- *         cdef double *x_fast=<double *>self.x_fast.data             # <<<<<<<<<<<<<<
- *         cdef double *y_slow=<double *>self.y_slow.data
- *         cdef double *x_slow=<double *>self.x_slow.data
- */
-  __pyx_v_x_fast = ((double *)__pyx_v_self->x_fast->data);
-
-  /* "splikes\connections\Triplet.pyx":61
- *         cdef double *y_fast=<double *>self.y_fast.data
- *         cdef double *x_fast=<double *>self.x_fast.data
- *         cdef double *y_slow=<double *>self.y_slow.data             # <<<<<<<<<<<<<<
- *         cdef double *x_slow=<double *>self.x_slow.data
- *         cdef double tau_x_slow=self.tau_x_slow
- */
-  __pyx_v_y_slow = ((double *)__pyx_v_self->y_slow->data);
-
-  /* "splikes\connections\Triplet.pyx":62
- *         cdef double *x_fast=<double *>self.x_fast.data
- *         cdef double *y_slow=<double *>self.y_slow.data
- *         cdef double *x_slow=<double *>self.x_slow.data             # <<<<<<<<<<<<<<
- *         cdef double tau_x_slow=self.tau_x_slow
- *         cdef double tau_y_slow=self.tau_y_slow
- */
-  __pyx_v_x_slow = ((double *)__pyx_v_self->x_slow->data);
-
-  /* "splikes\connections\Triplet.pyx":63
- *         cdef double *y_slow=<double *>self.y_slow.data
- *         cdef double *x_slow=<double *>self.x_slow.data
- *         cdef double tau_x_slow=self.tau_x_slow             # <<<<<<<<<<<<<<
- *         cdef double tau_y_slow=self.tau_y_slow
- *         cdef double A3_minus=self.A3_minus
- */
-  __pyx_t_8 = __pyx_v_self->tau_x_slow;
-  __pyx_v_tau_x_slow = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":64
- *         cdef double *x_slow=<double *>self.x_slow.data
- *         cdef double tau_x_slow=self.tau_x_slow
- *         cdef double tau_y_slow=self.tau_y_slow             # <<<<<<<<<<<<<<
- *         cdef double A3_minus=self.A3_minus
- *         cdef double A2_minus=self.A2_minus
- */
-  __pyx_t_8 = __pyx_v_self->tau_y_slow;
-  __pyx_v_tau_y_slow = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":65
- *         cdef double tau_x_slow=self.tau_x_slow
- *         cdef double tau_y_slow=self.tau_y_slow
- *         cdef double A3_minus=self.A3_minus             # <<<<<<<<<<<<<<
- *         cdef double A2_minus=self.A2_minus
- *         cdef double tau_y_fast=self.tau_y_fast
- */
-  __pyx_t_8 = __pyx_v_self->A3_minus;
-  __pyx_v_A3_minus = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":66
- *         cdef double tau_y_slow=self.tau_y_slow
- *         cdef double A3_minus=self.A3_minus
- *         cdef double A2_minus=self.A2_minus             # <<<<<<<<<<<<<<
- *         cdef double tau_y_fast=self.tau_y_fast
- *         cdef double tau_x_fast=self.tau_x_fast
- */
-  __pyx_t_8 = __pyx_v_self->A2_minus;
-  __pyx_v_A2_minus = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":67
- *         cdef double A3_minus=self.A3_minus
- *         cdef double A2_minus=self.A2_minus
- *         cdef double tau_y_fast=self.tau_y_fast             # <<<<<<<<<<<<<<
- *         cdef double tau_x_fast=self.tau_x_fast
- *         cdef double A3_plus=self.A3_plus
- */
-  __pyx_t_8 = __pyx_v_self->tau_y_fast;
-  __pyx_v_tau_y_fast = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":68
- *         cdef double A2_minus=self.A2_minus
- *         cdef double tau_y_fast=self.tau_y_fast
- *         cdef double tau_x_fast=self.tau_x_fast             # <<<<<<<<<<<<<<
- *         cdef double A3_plus=self.A3_plus
- *         cdef double A2_plus=self.A2_plus
- */
-  __pyx_t_8 = __pyx_v_self->tau_x_fast;
-  __pyx_v_tau_x_fast = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":69
- *         cdef double tau_y_fast=self.tau_y_fast
- *         cdef double tau_x_fast=self.tau_x_fast
- *         cdef double A3_plus=self.A3_plus             # <<<<<<<<<<<<<<
- *         cdef double A2_plus=self.A2_plus
- *         cdef double eta=self.eta
- */
-  __pyx_t_8 = __pyx_v_self->A3_plus;
-  __pyx_v_A3_plus = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":70
- *         cdef double tau_x_fast=self.tau_x_fast
- *         cdef double A3_plus=self.A3_plus
- *         cdef double A2_plus=self.A2_plus             # <<<<<<<<<<<<<<
- *         cdef double eta=self.eta
+ *         cdef double *W=<double *>self.weights.data
+ *         cdef double *y_bar=<double *>self.y_bar.data             # <<<<<<<<<<<<<<
+ *         cdef double *X,*Y   # outputs for pre and post
  * 
  */
-  __pyx_t_8 = __pyx_v_self->A2_plus;
-  __pyx_v_A2_plus = __pyx_t_8;
+  __pyx_v_y_bar = ((double *)__pyx_v_self->y_bar->data);
 
-  /* "splikes\connections\Triplet.pyx":71
- *         cdef double A3_plus=self.A3_plus
- *         cdef double A2_plus=self.A2_plus
- *         cdef double eta=self.eta             # <<<<<<<<<<<<<<
+  /* "plasticnet\connections\Miller2014.pyx":61
  * 
- *         cdef double *W=self.W
- */
-  __pyx_t_8 = __pyx_v_self->eta;
-  __pyx_v_eta = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":73
- *         cdef double eta=self.eta
- * 
- *         cdef double *W=self.W             # <<<<<<<<<<<<<<
- *         cdef double *post_rate=<double *>self.post.rate.data
- *         cdef double *pre_rate=<double *>self.pre.rate.data
- */
-  __pyx_t_9 = __pyx_v_self->__pyx_base.W;
-  __pyx_v_W = __pyx_t_9;
-
-  /* "splikes\connections\Triplet.pyx":74
- * 
- *         cdef double *W=self.W
- *         cdef double *post_rate=<double *>self.post.rate.data             # <<<<<<<<<<<<<<
- *         cdef double *pre_rate=<double *>self.pre.rate.data
- *         cdef int *pre,*post   # spikes for pre and post
- */
-  __pyx_v_post_rate = ((double *)__pyx_v_self->__pyx_base.post->rate->data);
-
-  /* "splikes\connections\Triplet.pyx":75
- *         cdef double *W=self.W
- *         cdef double *post_rate=<double *>self.post.rate.data
- *         cdef double *pre_rate=<double *>self.pre.rate.data             # <<<<<<<<<<<<<<
- *         cdef int *pre,*post   # spikes for pre and post
  *         cdef int __wi
- */
-  __pyx_v_pre_rate = ((double *)__pyx_v_self->__pyx_base.pre->rate->data);
-
-  /* "splikes\connections\Triplet.pyx":80
- * 
- * 
- *         pre=<int *>self.pre.spiking.data             # <<<<<<<<<<<<<<
- *         post=<int *>self.post.spiking.data
+ *         X=<double *>self.pre.output.data             # <<<<<<<<<<<<<<
+ *         Y=<double *>self.post.output.data
  * 
  */
-  __pyx_v_pre = ((int *)__pyx_v_self->__pyx_base.pre->spiking->data);
+  __pyx_v_X = ((double *)__pyx_v_self->__pyx_base.pre->output->data);
 
-  /* "splikes\connections\Triplet.pyx":81
+  /* "plasticnet\connections\Miller2014.pyx":62
+ *         cdef int __wi
+ *         X=<double *>self.pre.output.data
+ *         Y=<double *>self.post.output.data             # <<<<<<<<<<<<<<
  * 
- *         pre=<int *>self.pre.spiking.data
- *         post=<int *>self.post.spiking.data             # <<<<<<<<<<<<<<
  * 
- *         for __j in range(self.pre.N):
  */
-  __pyx_v_post = ((int *)__pyx_v_self->__pyx_base.post->spiking->data);
+  __pyx_v_Y = ((double *)__pyx_v_self->__pyx_base.post->output->data);
 
-  /* "splikes\connections\Triplet.pyx":83
- *         post=<int *>self.post.spiking.data
+  /* "plasticnet\connections\Miller2014.pyx":65
  * 
- *         for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
- *             x_fast[__j]+=sim.dt*(-x_fast[__j]/tau_x_fast+pre[__j]/sim.dt)
- *         for __i in range(self.post.N):
- */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.pre->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___j = __pyx_t_11;
-
-    /* "splikes\connections\Triplet.pyx":84
  * 
- *         for __j in range(self.pre.N):
- *             x_fast[__j]+=sim.dt*(-x_fast[__j]/tau_x_fast+pre[__j]/sim.dt)             # <<<<<<<<<<<<<<
- *         for __i in range(self.post.N):
- *             y_fast[__i]+=sim.dt*(-y_fast[__i]/tau_y_fast+post[__i]/sim.dt)
- */
-    __pyx_t_12 = __pyx_v___j;
-    (__pyx_v_x_fast[__pyx_t_12]) = ((__pyx_v_x_fast[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_x_fast[__pyx_v___j])) / __pyx_v_tau_x_fast) + ((__pyx_v_pre[__pyx_v___j]) / __pyx_v_sim->dt))));
-  }
-
-  /* "splikes\connections\Triplet.pyx":85
- *         for __j in range(self.pre.N):
- *             x_fast[__j]+=sim.dt*(-x_fast[__j]/tau_x_fast+pre[__j]/sim.dt)
- *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
- *             y_fast[__i]+=sim.dt*(-y_fast[__i]/tau_y_fast+post[__i]/sim.dt)
- *         for __i in range(self.post.N):
- */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.post->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___i = __pyx_t_11;
-
-    /* "splikes\connections\Triplet.pyx":86
- *             x_fast[__j]+=sim.dt*(-x_fast[__j]/tau_x_fast+pre[__j]/sim.dt)
- *         for __i in range(self.post.N):
- *             y_fast[__i]+=sim.dt*(-y_fast[__i]/tau_y_fast+post[__i]/sim.dt)             # <<<<<<<<<<<<<<
- *         for __i in range(self.post.N):
- *             for __j in range(self.pre.N):
- */
-    __pyx_t_12 = __pyx_v___i;
-    (__pyx_v_y_fast[__pyx_t_12]) = ((__pyx_v_y_fast[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_y_fast[__pyx_v___i])) / __pyx_v_tau_y_fast) + ((__pyx_v_post[__pyx_v___i]) / __pyx_v_sim->dt))));
-  }
-
-  /* "splikes\connections\Triplet.pyx":87
- *         for __i in range(self.post.N):
- *             y_fast[__i]+=sim.dt*(-y_fast[__i]/tau_y_fast+post[__i]/sim.dt)
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
  *             for __j in range(self.pre.N):
  *                 __wi=__i*self.pre.N+__j
  */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.post->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___i = __pyx_t_11;
+  __pyx_t_8 = __pyx_v_self->__pyx_base.post->N;
+  for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
+    __pyx_v___i = __pyx_t_9;
 
-    /* "splikes\connections\Triplet.pyx":88
- *             y_fast[__i]+=sim.dt*(-y_fast[__i]/tau_y_fast+post[__i]/sim.dt)
+    /* "plasticnet\connections\Miller2014.pyx":66
+ * 
  *         for __i in range(self.post.N):
  *             for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
  *                 __wi=__i*self.pre.N+__j
- *                 W[__wi]+=sim.dt*eta*(-pre[__j]/sim.dt*y_fast[__i]*(A2_minus+A3_minus*x_slow[__j])+post[__i]/sim.dt*x_fast[__j]*(A2_plus+A3_plus*y_slow[__i]))
+ *                 W[__wi]+=sim.dt*(truncate(self.w_max-W[__wi])*truncate(X[__j]*Y[__i]-self.theta) -
  */
-    __pyx_t_12 = __pyx_v_self->__pyx_base.pre->N;
-    for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
-      __pyx_v___j = __pyx_t_13;
+    __pyx_t_10 = __pyx_v_self->__pyx_base.pre->N;
+    for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
+      __pyx_v___j = __pyx_t_11;
 
-      /* "splikes\connections\Triplet.pyx":89
+      /* "plasticnet\connections\Miller2014.pyx":67
  *         for __i in range(self.post.N):
  *             for __j in range(self.pre.N):
  *                 __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
- *                 W[__wi]+=sim.dt*eta*(-pre[__j]/sim.dt*y_fast[__i]*(A2_minus+A3_minus*x_slow[__j])+post[__i]/sim.dt*x_fast[__j]*(A2_plus+A3_plus*y_slow[__i]))
- *         for __j in range(self.pre.N):
+ *                 W[__wi]+=sim.dt*(truncate(self.w_max-W[__wi])*truncate(X[__j]*Y[__i]-self.theta) -
+ *                                  truncate(W[__wi]-self.w_min)*truncate(self.theta-X[__j]*Y[__i])+
  */
       __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-      /* "splikes\connections\Triplet.pyx":90
+      /* "plasticnet\connections\Miller2014.pyx":68
  *             for __j in range(self.pre.N):
  *                 __wi=__i*self.pre.N+__j
- *                 W[__wi]+=sim.dt*eta*(-pre[__j]/sim.dt*y_fast[__i]*(A2_minus+A3_minus*x_slow[__j])+post[__i]/sim.dt*x_fast[__j]*(A2_plus+A3_plus*y_slow[__i]))             # <<<<<<<<<<<<<<
- *         for __j in range(self.pre.N):
- *             x_slow[__j]+=sim.dt*(-x_slow[__j]/tau_x_slow+pre[__j]/sim.dt)
+ *                 W[__wi]+=sim.dt*(truncate(self.w_max-W[__wi])*truncate(X[__j]*Y[__i]-self.theta) -             # <<<<<<<<<<<<<<
+ *                                  truncate(W[__wi]-self.w_min)*truncate(self.theta-X[__j]*Y[__i])+
+ *                                  self.gamma*W[__wi]*(1-y_bar[__i]/self.yo))/self.tau_w
  */
-      __pyx_t_14 = __pyx_v___wi;
-      (__pyx_v_W[__pyx_t_14]) = ((__pyx_v_W[__pyx_t_14]) + ((__pyx_v_sim->dt * __pyx_v_eta) * (((((-(__pyx_v_pre[__pyx_v___j])) / __pyx_v_sim->dt) * (__pyx_v_y_fast[__pyx_v___i])) * (__pyx_v_A2_minus + (__pyx_v_A3_minus * (__pyx_v_x_slow[__pyx_v___j])))) + ((((__pyx_v_post[__pyx_v___i]) / __pyx_v_sim->dt) * (__pyx_v_x_fast[__pyx_v___j])) * (__pyx_v_A2_plus + (__pyx_v_A3_plus * (__pyx_v_y_slow[__pyx_v___i])))))));
+      __pyx_t_12 = __pyx_v___wi;
+      __pyx_t_1 = PyFloat_FromDouble((__pyx_v_W[__pyx_t_12])); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_2 = PyFloat_FromDouble(__pyx_v_sim->dt); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_4 = __pyx_f_10plasticnet_11connections_10Miller2014_truncate((__pyx_v_self->w_max - (__pyx_v_W[__pyx_v___wi]))); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_4);
+      __pyx_t_7 = __pyx_f_10plasticnet_11connections_10Miller2014_truncate((((__pyx_v_X[__pyx_v___j]) * (__pyx_v_Y[__pyx_v___i])) - __pyx_v_self->theta)); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_3 = PyNumber_Multiply(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+
+      /* "plasticnet\connections\Miller2014.pyx":69
+ *                 __wi=__i*self.pre.N+__j
+ *                 W[__wi]+=sim.dt*(truncate(self.w_max-W[__wi])*truncate(X[__j]*Y[__i]-self.theta) -
+ *                                  truncate(W[__wi]-self.w_min)*truncate(self.theta-X[__j]*Y[__i])+             # <<<<<<<<<<<<<<
+ *                                  self.gamma*W[__wi]*(1-y_bar[__i]/self.yo))/self.tau_w
+ * 
+ */
+      __pyx_t_7 = __pyx_f_10plasticnet_11connections_10Miller2014_truncate(((__pyx_v_W[__pyx_v___wi]) - __pyx_v_self->w_min)); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_4 = __pyx_f_10plasticnet_11connections_10Miller2014_truncate((__pyx_v_self->theta - ((__pyx_v_X[__pyx_v___j]) * (__pyx_v_Y[__pyx_v___i])))); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_4);
+      __pyx_t_5 = PyNumber_Multiply(__pyx_t_7, __pyx_t_4); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+
+      /* "plasticnet\connections\Miller2014.pyx":68
+ *             for __j in range(self.pre.N):
+ *                 __wi=__i*self.pre.N+__j
+ *                 W[__wi]+=sim.dt*(truncate(self.w_max-W[__wi])*truncate(X[__j]*Y[__i]-self.theta) -             # <<<<<<<<<<<<<<
+ *                                  truncate(W[__wi]-self.w_min)*truncate(self.theta-X[__j]*Y[__i])+
+ *                                  self.gamma*W[__wi]*(1-y_bar[__i]/self.yo))/self.tau_w
+ */
+      __pyx_t_4 = PyNumber_Subtract(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+
+      /* "plasticnet\connections\Miller2014.pyx":70
+ *                 W[__wi]+=sim.dt*(truncate(self.w_max-W[__wi])*truncate(X[__j]*Y[__i]-self.theta) -
+ *                                  truncate(W[__wi]-self.w_min)*truncate(self.theta-X[__j]*Y[__i])+
+ *                                  self.gamma*W[__wi]*(1-y_bar[__i]/self.yo))/self.tau_w             # <<<<<<<<<<<<<<
+ * 
+ *         for __i in range(self.post.N):
+ */
+      __pyx_t_5 = PyFloat_FromDouble(((__pyx_v_self->gamma * (__pyx_v_W[__pyx_v___wi])) * (1.0 - ((__pyx_v_y_bar[__pyx_v___i]) / __pyx_v_self->yo)))); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 70; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_5);
+
+      /* "plasticnet\connections\Miller2014.pyx":69
+ *                 __wi=__i*self.pre.N+__j
+ *                 W[__wi]+=sim.dt*(truncate(self.w_max-W[__wi])*truncate(X[__j]*Y[__i]-self.theta) -
+ *                                  truncate(W[__wi]-self.w_min)*truncate(self.theta-X[__j]*Y[__i])+             # <<<<<<<<<<<<<<
+ *                                  self.gamma*W[__wi]*(1-y_bar[__i]/self.yo))/self.tau_w
+ * 
+ */
+      __pyx_t_3 = PyNumber_Add(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+
+      /* "plasticnet\connections\Miller2014.pyx":68
+ *             for __j in range(self.pre.N):
+ *                 __wi=__i*self.pre.N+__j
+ *                 W[__wi]+=sim.dt*(truncate(self.w_max-W[__wi])*truncate(X[__j]*Y[__i]-self.theta) -             # <<<<<<<<<<<<<<
+ *                                  truncate(W[__wi]-self.w_min)*truncate(self.theta-X[__j]*Y[__i])+
+ *                                  self.gamma*W[__wi]*(1-y_bar[__i]/self.yo))/self.tau_w
+ */
+      __pyx_t_5 = PyNumber_Multiply(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+      /* "plasticnet\connections\Miller2014.pyx":70
+ *                 W[__wi]+=sim.dt*(truncate(self.w_max-W[__wi])*truncate(X[__j]*Y[__i]-self.theta) -
+ *                                  truncate(W[__wi]-self.w_min)*truncate(self.theta-X[__j]*Y[__i])+
+ *                                  self.gamma*W[__wi]*(1-y_bar[__i]/self.yo))/self.tau_w             # <<<<<<<<<<<<<<
+ * 
+ *         for __i in range(self.post.N):
+ */
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_self->tau_w); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 70; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_3);
+      __pyx_t_2 = __Pyx_PyNumber_Divide(__pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 70; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+      /* "plasticnet\connections\Miller2014.pyx":68
+ *             for __j in range(self.pre.N):
+ *                 __wi=__i*self.pre.N+__j
+ *                 W[__wi]+=sim.dt*(truncate(self.w_max-W[__wi])*truncate(X[__j]*Y[__i]-self.theta) -             # <<<<<<<<<<<<<<
+ *                                  truncate(W[__wi]-self.w_min)*truncate(self.theta-X[__j]*Y[__i])+
+ *                                  self.gamma*W[__wi]*(1-y_bar[__i]/self.yo))/self.tau_w
+ */
+      __pyx_t_3 = PyNumber_InPlaceAdd(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      (__pyx_v_W[__pyx_t_12]) = __pyx_t_13;
     }
   }
 
-  /* "splikes\connections\Triplet.pyx":91
- *                 __wi=__i*self.pre.N+__j
- *                 W[__wi]+=sim.dt*eta*(-pre[__j]/sim.dt*y_fast[__i]*(A2_minus+A3_minus*x_slow[__j])+post[__i]/sim.dt*x_fast[__j]*(A2_plus+A3_plus*y_slow[__i]))
- *         for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
- *             x_slow[__j]+=sim.dt*(-x_slow[__j]/tau_x_slow+pre[__j]/sim.dt)
- *         for __i in range(self.post.N):
- */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.pre->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___j = __pyx_t_11;
-
-    /* "splikes\connections\Triplet.pyx":92
- *                 W[__wi]+=sim.dt*eta*(-pre[__j]/sim.dt*y_fast[__i]*(A2_minus+A3_minus*x_slow[__j])+post[__i]/sim.dt*x_fast[__j]*(A2_plus+A3_plus*y_slow[__i]))
- *         for __j in range(self.pre.N):
- *             x_slow[__j]+=sim.dt*(-x_slow[__j]/tau_x_slow+pre[__j]/sim.dt)             # <<<<<<<<<<<<<<
- *         for __i in range(self.post.N):
- *             y_slow[__i]+=sim.dt*(-y_slow[__i]/tau_y_slow+post[__i]/sim.dt)
- */
-    __pyx_t_12 = __pyx_v___j;
-    (__pyx_v_x_slow[__pyx_t_12]) = ((__pyx_v_x_slow[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_x_slow[__pyx_v___j])) / __pyx_v_tau_x_slow) + ((__pyx_v_pre[__pyx_v___j]) / __pyx_v_sim->dt))));
-  }
-
-  /* "splikes\connections\Triplet.pyx":93
- *         for __j in range(self.pre.N):
- *             x_slow[__j]+=sim.dt*(-x_slow[__j]/tau_x_slow+pre[__j]/sim.dt)
+  /* "plasticnet\connections\Miller2014.pyx":72
+ *                                  self.gamma*W[__wi]*(1-y_bar[__i]/self.yo))/self.tau_w
+ * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
- *             y_slow[__i]+=sim.dt*(-y_slow[__i]/tau_y_slow+post[__i]/sim.dt)
+ *             y_bar[__i]+=sim.dt*(Y[__i]-y_bar[__i])/self.tau_y
  * 
  */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.post->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___i = __pyx_t_11;
+  __pyx_t_8 = __pyx_v_self->__pyx_base.post->N;
+  for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
+    __pyx_v___i = __pyx_t_9;
 
-    /* "splikes\connections\Triplet.pyx":94
- *             x_slow[__j]+=sim.dt*(-x_slow[__j]/tau_x_slow+pre[__j]/sim.dt)
- *         for __i in range(self.post.N):
- *             y_slow[__i]+=sim.dt*(-y_slow[__i]/tau_y_slow+post[__i]/sim.dt)             # <<<<<<<<<<<<<<
+    /* "plasticnet\connections\Miller2014.pyx":73
  * 
- *         self.apply_weight_limits()
+ *         for __i in range(self.post.N):
+ *             y_bar[__i]+=sim.dt*(Y[__i]-y_bar[__i])/self.tau_y             # <<<<<<<<<<<<<<
+ * 
+ * 
  */
-    __pyx_t_12 = __pyx_v___i;
-    (__pyx_v_y_slow[__pyx_t_12]) = ((__pyx_v_y_slow[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_y_slow[__pyx_v___i])) / __pyx_v_tau_y_slow) + ((__pyx_v_post[__pyx_v___i]) / __pyx_v_sim->dt))));
+    __pyx_t_10 = __pyx_v___i;
+    (__pyx_v_y_bar[__pyx_t_10]) = ((__pyx_v_y_bar[__pyx_t_10]) + ((__pyx_v_sim->dt * ((__pyx_v_Y[__pyx_v___i]) - (__pyx_v_y_bar[__pyx_v___i]))) / __pyx_v_self->tau_y));
   }
 
-  /* "splikes\connections\Triplet.pyx":96
- *             y_slow[__i]+=sim.dt*(-y_slow[__i]/tau_y_slow+post[__i]/sim.dt)
- * 
- *         self.apply_weight_limits()             # <<<<<<<<<<<<<<
- * 
- * 
- */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "splikes\connections\Triplet.pyx":56
+  /* "plasticnet\connections\Miller2014.pyx":53
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -2455,7 +2599,7 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006_update(s
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2464,10 +2608,10 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006_update(s
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_5update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_5update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_t;
-  struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim = 0;
+  struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -2494,11 +2638,11 @@ static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_5update
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -2506,19 +2650,19 @@ static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_5update
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_sim = ((struct __pyx_obj_7splikes_7splikes_simulation *)values[1]);
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_sim = ((struct __pyx_obj_10plasticnet_10plasticnet_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_4update(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_4update(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
   goto __pyx_L0;
@@ -2529,7 +2673,7 @@ static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_5update
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_4update(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_4update(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2538,7 +2682,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_4update
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_7Triplet_12Gerstner2006_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2547,7 +2691,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_4update
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2555,28 +2699,28 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_4update
   return __pyx_r;
 }
 
-/* "splikes\connections\Triplet.pyx":29
- * #
- * cdef class Gerstner2006(connection):
- *     cdef public double tau_x_slow,tau_y_slow,A3_minus,A2_minus,tau_y_fast,tau_x_fast,A3_plus,A2_plus             # <<<<<<<<<<<<<<
- *     cdef public double eta
- *     cdef public np.ndarray y_fast,x_fast,y_slow,x_slow
+/* "plasticnet\connections\Miller2014.pyx":16
+ * cdef class Miller2014_Eq3(connection):
+ * 
+ *     cdef public double tau_w,gamma,tau_y,theta             # <<<<<<<<<<<<<<
+ *     cdef public double w_max,w_min,yo
+ *     cdef public np.ndarray y_bar
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_slow_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_slow_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_w_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_w_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_slow___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_w___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_slow___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_w___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2585,7 +2729,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_x_slow); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_w); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2594,7 +2738,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.tau_x_slow.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.tau_w.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2603,19 +2747,19 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x
 }
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_slow_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_slow_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_w_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_w_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_slow_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_w_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_slow_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_w_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -2623,14 +2767,14 @@ static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_slow_
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->tau_x_slow = __pyx_t_1;
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_self->tau_w = __pyx_t_1;
 
   /* function exit code */
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.tau_x_slow.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.tau_w.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -2638,19 +2782,19 @@ static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_slow_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_slow_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_slow_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5gamma_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5gamma_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_slow___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5gamma___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_slow___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5gamma___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2659,7 +2803,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_y_slow); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->gamma); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2668,7 +2812,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.tau_y_slow.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.gamma.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2677,19 +2821,19 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y
 }
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_slow_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_slow_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5gamma_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5gamma_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_slow_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5gamma_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_slow_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5gamma_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -2697,14 +2841,14 @@ static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_slow_
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->tau_y_slow = __pyx_t_1;
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_self->gamma = __pyx_t_1;
 
   /* function exit code */
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.tau_y_slow.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.gamma.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -2712,19 +2856,19 @@ static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_slow_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_8A3_minus_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_8A3_minus_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_y_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_y_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A3_minus___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_y___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A3_minus___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_y___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2733,7 +2877,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A3_min
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->A3_minus); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_y); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2742,7 +2886,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A3_min
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.A3_minus.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.tau_y.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2751,19 +2895,19 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A3_min
 }
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_8A3_minus_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_8A3_minus_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_y_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_y_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A3_minus_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_y_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A3_minus_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_y_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -2771,14 +2915,14 @@ static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A3_minus_2__
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->A3_minus = __pyx_t_1;
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_self->tau_y = __pyx_t_1;
 
   /* function exit code */
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.A3_minus.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.tau_y.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -2786,19 +2930,19 @@ static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A3_minus_2__
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_8A2_minus_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_8A2_minus_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5theta_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5theta_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A2_minus___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5theta___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A2_minus___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5theta___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2807,7 +2951,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A2_min
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->A2_minus); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->theta); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2816,7 +2960,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A2_min
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.A2_minus.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.theta.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2825,19 +2969,19 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A2_min
 }
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_8A2_minus_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_8A2_minus_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5theta_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5theta_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A2_minus_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5theta_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A2_minus_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5theta_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -2845,34 +2989,42 @@ static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_8A2_minus_2__
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->A2_minus = __pyx_t_1;
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_self->theta = __pyx_t_1;
 
   /* function exit code */
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.A2_minus.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.theta.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
+/* "plasticnet\connections\Miller2014.pyx":17
+ * 
+ *     cdef public double tau_w,gamma,tau_y,theta
+ *     cdef public double w_max,w_min,yo             # <<<<<<<<<<<<<<
+ *     cdef public np.ndarray y_bar
+ *     cdef public np.ndarray initial_y_bar
+ */
+
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_fast_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_fast_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_max_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_max_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_fast___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_max___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_fast___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_max___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2881,7 +3033,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_y_fast); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->w_max); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2890,7 +3042,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.tau_y_fast.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.w_max.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2899,19 +3051,19 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y
 }
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_fast_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_fast_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_max_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_max_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_fast_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_max_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_fast_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_max_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -2919,14 +3071,14 @@ static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_fast_
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->tau_y_fast = __pyx_t_1;
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_self->w_max = __pyx_t_1;
 
   /* function exit code */
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.tau_y_fast.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.w_max.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -2934,19 +3086,19 @@ static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_fast_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_fast_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_fast_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_min_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_min_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_fast___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_min___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_fast___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_min___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2955,7 +3107,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_x_fast); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->w_min); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2964,7 +3116,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.tau_x_fast.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.w_min.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2973,19 +3125,19 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x
 }
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_fast_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_fast_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_min_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_min_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_fast_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_min_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_fast_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_min_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -2993,14 +3145,14 @@ static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_fast_
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->tau_x_fast = __pyx_t_1;
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_self->w_min = __pyx_t_1;
 
   /* function exit code */
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.tau_x_fast.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.w_min.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -3008,19 +3160,19 @@ static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_fast_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_7A3_plus_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_7A3_plus_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_2yo_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_2yo_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A3_plus___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_2yo___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A3_plus___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_2yo___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3029,7 +3181,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A3_plu
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->A3_plus); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->yo); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3038,7 +3190,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A3_plu
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.A3_plus.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.yo.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3047,19 +3199,19 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A3_plu
 }
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_7A3_plus_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_7A3_plus_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_2yo_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_2yo_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A3_plus_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_2yo_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A3_plus_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_2yo_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -3067,53 +3219,159 @@ static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A3_plus_2__s
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->A3_plus = __pyx_t_1;
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_self->yo = __pyx_t_1;
 
   /* function exit code */
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.A3_plus.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.yo.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
+/* "plasticnet\connections\Miller2014.pyx":18
+ *     cdef public double tau_w,gamma,tau_y,theta
+ *     cdef public double w_max,w_min,yo
+ *     cdef public np.ndarray y_bar             # <<<<<<<<<<<<<<
+ *     cdef public np.ndarray initial_y_bar
+ *     cdef public object initial_y_bar_range
+ */
+
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_7A2_plus_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_7A2_plus_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A2_plus___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A2_plus___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __Pyx_INCREF(((PyObject *)__pyx_v_self->y_bar));
+  __pyx_r = ((PyObject *)__pyx_v_self->y_bar);
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__set__", 0);
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 18; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_v_value;
+  __Pyx_INCREF(__pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_1);
+  __Pyx_GOTREF(__pyx_v_self->y_bar);
+  __Pyx_DECREF(((PyObject *)__pyx_v_self->y_bar));
+  __pyx_v_self->y_bar = ((PyArrayObject *)__pyx_t_1);
+  __pyx_t_1 = 0;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.y_bar.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar_5__del__(PyObject *__pyx_v_self); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar_5__del__(PyObject *__pyx_v_self) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar_4__del__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__del__", 0);
+  __Pyx_INCREF(Py_None);
+  __Pyx_GIVEREF(Py_None);
+  __Pyx_GOTREF(__pyx_v_self->y_bar);
+  __Pyx_DECREF(((PyObject *)__pyx_v_self->y_bar));
+  __pyx_v_self->y_bar = ((PyArrayObject *)Py_None);
+
+  /* function exit code */
+  __pyx_r = 0;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "plasticnet\connections\Miller2014.pyx":19
+ *     cdef public double w_max,w_min,yo
+ *     cdef public np.ndarray y_bar
+ *     cdef public np.ndarray initial_y_bar             # <<<<<<<<<<<<<<
+ *     cdef public object initial_y_bar_range
+ * 
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar_1__get__(PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->A2_plus); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
+  __Pyx_INCREF(((PyObject *)__pyx_v_self->initial_y_bar));
+  __pyx_r = ((PyObject *)__pyx_v_self->initial_y_bar);
   goto __pyx_L0;
 
   /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.A2_plus.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
@@ -3121,150 +3379,104 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A2_plu
 }
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_7A2_plus_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_7A2_plus_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A2_plus_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_7A2_plus_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
-  double __pyx_t_1;
+  PyObject *__pyx_t_1 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->A2_plus = __pyx_t_1;
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 19; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_v_value;
+  __Pyx_INCREF(__pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_1);
+  __Pyx_GOTREF(__pyx_v_self->initial_y_bar);
+  __Pyx_DECREF(((PyObject *)__pyx_v_self->initial_y_bar));
+  __pyx_v_self->initial_y_bar = ((PyArrayObject *)__pyx_t_1);
+  __pyx_t_1 = 0;
 
   /* function exit code */
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.A2_plus.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq3.initial_y_bar.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "splikes\connections\Triplet.pyx":30
- * cdef class Gerstner2006(connection):
- *     cdef public double tau_x_slow,tau_y_slow,A3_minus,A2_minus,tau_y_fast,tau_x_fast,A3_plus,A2_plus
- *     cdef public double eta             # <<<<<<<<<<<<<<
- *     cdef public np.ndarray y_fast,x_fast,y_slow,x_slow
+/* Python wrapper */
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar_5__del__(PyObject *__pyx_v_self); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar_5__del__(PyObject *__pyx_v_self) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar_4__del__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__del__", 0);
+  __Pyx_INCREF(Py_None);
+  __Pyx_GIVEREF(Py_None);
+  __Pyx_GOTREF(__pyx_v_self->initial_y_bar);
+  __Pyx_DECREF(((PyObject *)__pyx_v_self->initial_y_bar));
+  __pyx_v_self->initial_y_bar = ((PyArrayObject *)Py_None);
+
+  /* function exit code */
+  __pyx_r = 0;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "plasticnet\connections\Miller2014.pyx":20
+ *     cdef public np.ndarray y_bar
+ *     cdef public np.ndarray initial_y_bar
+ *     cdef public object initial_y_bar_range             # <<<<<<<<<<<<<<
+ * 
  *     cpdef _reset(self):
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_3eta_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_3eta_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_3eta___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_3eta___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__get__", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->eta); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.eta.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_3eta_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_3eta_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_3eta_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_3eta_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  double __pyx_t_1;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->eta = __pyx_t_1;
-
-  /* function exit code */
-  __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.eta.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "splikes\connections\Triplet.pyx":31
- *     cdef public double tau_x_slow,tau_y_slow,A3_minus,A2_minus,tau_y_fast,tau_x_fast,A3_plus,A2_plus
- *     cdef public double eta
- *     cdef public np.ndarray y_fast,x_fast,y_slow,x_slow             # <<<<<<<<<<<<<<
- *     cpdef _reset(self):
- *         self.y_fast=np.zeros(self.post.N,dtype=np.float)
- */
-
-/* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast_1__get__(PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_INCREF(((PyObject *)__pyx_v_self->y_fast));
-  __pyx_r = ((PyObject *)__pyx_v_self->y_fast);
+  __Pyx_INCREF(__pyx_v_self->initial_y_bar_range);
+  __pyx_r = __pyx_v_self->initial_y_bar_range;
   goto __pyx_L0;
 
   /* function exit code */
@@ -3275,69 +3487,56 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast
 }
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_1 = __pyx_v_value;
-  __Pyx_INCREF(__pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_1);
-  __Pyx_GOTREF(__pyx_v_self->y_fast);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->y_fast));
-  __pyx_v_self->y_fast = ((PyArrayObject *)__pyx_t_1);
-  __pyx_t_1 = 0;
+  __Pyx_INCREF(__pyx_v_value);
+  __Pyx_GIVEREF(__pyx_v_value);
+  __Pyx_GOTREF(__pyx_v_self->initial_y_bar_range);
+  __Pyx_DECREF(__pyx_v_self->initial_y_bar_range);
+  __pyx_v_self->initial_y_bar_range = __pyx_v_value;
 
   /* function exit code */
   __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.y_fast.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast_5__del__(PyObject *__pyx_v_self); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast_5__del__(PyObject *__pyx_v_self) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range_5__del__(PyObject *__pyx_v_self); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range_5__del__(PyObject *__pyx_v_self) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast_4__del__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range_4__del__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast_4__del__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *__pyx_v_self) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__del__", 0);
   __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(Py_None);
-  __Pyx_GOTREF(__pyx_v_self->y_fast);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->y_fast));
-  __pyx_v_self->y_fast = ((PyArrayObject *)Py_None);
+  __Pyx_GOTREF(__pyx_v_self->initial_y_bar_range);
+  __Pyx_DECREF(__pyx_v_self->initial_y_bar_range);
+  __pyx_v_self->initial_y_bar_range = Py_None;
 
   /* function exit code */
   __pyx_r = 0;
@@ -3345,323 +3544,26 @@ static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast_4__de
   return __pyx_r;
 }
 
-/* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast_1__get__(PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_INCREF(((PyObject *)__pyx_v_self->x_fast));
-  __pyx_r = ((PyObject *)__pyx_v_self->x_fast);
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_1 = __pyx_v_value;
-  __Pyx_INCREF(__pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_1);
-  __Pyx_GOTREF(__pyx_v_self->x_fast);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->x_fast));
-  __pyx_v_self->x_fast = ((PyArrayObject *)__pyx_t_1);
-  __pyx_t_1 = 0;
-
-  /* function exit code */
-  __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.x_fast.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast_5__del__(PyObject *__pyx_v_self); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast_5__del__(PyObject *__pyx_v_self) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast_4__del__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast_4__del__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__del__", 0);
-  __Pyx_INCREF(Py_None);
-  __Pyx_GIVEREF(Py_None);
-  __Pyx_GOTREF(__pyx_v_self->x_fast);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->x_fast));
-  __pyx_v_self->x_fast = ((PyArrayObject *)Py_None);
-
-  /* function exit code */
-  __pyx_r = 0;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow_1__get__(PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_INCREF(((PyObject *)__pyx_v_self->y_slow));
-  __pyx_r = ((PyObject *)__pyx_v_self->y_slow);
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_1 = __pyx_v_value;
-  __Pyx_INCREF(__pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_1);
-  __Pyx_GOTREF(__pyx_v_self->y_slow);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->y_slow));
-  __pyx_v_self->y_slow = ((PyArrayObject *)__pyx_t_1);
-  __pyx_t_1 = 0;
-
-  /* function exit code */
-  __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.y_slow.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow_5__del__(PyObject *__pyx_v_self); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow_5__del__(PyObject *__pyx_v_self) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow_4__del__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow_4__del__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__del__", 0);
-  __Pyx_INCREF(Py_None);
-  __Pyx_GIVEREF(Py_None);
-  __Pyx_GOTREF(__pyx_v_self->y_slow);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->y_slow));
-  __pyx_v_self->y_slow = ((PyArrayObject *)Py_None);
-
-  /* function exit code */
-  __pyx_r = 0;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow_1__get__(PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__get__", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_INCREF(((PyObject *)__pyx_v_self->x_slow));
-  __pyx_r = ((PyObject *)__pyx_v_self->x_slow);
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self, PyObject *__pyx_v_value) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_1 = __pyx_v_value;
-  __Pyx_INCREF(__pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_1);
-  __Pyx_GOTREF(__pyx_v_self->x_slow);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->x_slow));
-  __pyx_v_self->x_slow = ((PyArrayObject *)__pyx_t_1);
-  __pyx_t_1 = 0;
-
-  /* function exit code */
-  __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Gerstner2006.x_slow.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow_5__del__(PyObject *__pyx_v_self); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow_5__del__(PyObject *__pyx_v_self) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow_4__del__(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow_4__del__(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *__pyx_v_self) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__del__", 0);
-  __Pyx_INCREF(Py_None);
-  __Pyx_GIVEREF(Py_None);
-  __Pyx_GOTREF(__pyx_v_self->x_slow);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->x_slow));
-  __pyx_v_self->x_slow = ((PyArrayObject *)Py_None);
-
-  /* function exit code */
-  __pyx_r = 0;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "splikes\connections\Triplet.pyx":103
- *     cdef public double tau_y2,y2_o
+/* "plasticnet\connections\Miller2014.pyx":86
+ *     cdef public object initial_rho_range,initial_H_range
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
- *         self.y2=np.zeros(self.post.N,dtype=np.float)
- *         self.theta=np.zeros(self.post.N,dtype=np.float)
+ *         if self.reset_to_initial:
+ *             self.H=self.initial_H.copy()
  */
 
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_1_reset(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM__reset(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1_reset(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_f_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5__reset(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, int __pyx_skip_dispatch) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
-  PyObject *__pyx_t_5 = NULL;
+  int __pyx_t_5;
+  PyObject *__pyx_t_6 = NULL;
+  Py_ssize_t __pyx_t_7;
+  PyObject *__pyx_t_8 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -3670,9 +3572,9 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM__reset(st
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 103; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 86; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_1_reset)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1_reset)) {
       __Pyx_XDECREF(__pyx_r);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -3686,10 +3588,10 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM__reset(st
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 103; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 86; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 103; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 86; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -3701,103 +3603,371 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM__reset(st
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes\connections\Triplet.pyx":104
+  /* "plasticnet\connections\Miller2014.pyx":87
  * 
  *     cpdef _reset(self):
- *         self.y2=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
- *         self.theta=np.zeros(self.post.N,dtype=np.float)
- *         Gerstner2006._reset(self)
+ *         if self.reset_to_initial:             # <<<<<<<<<<<<<<
+ *             self.H=self.initial_H.copy()
+ *             self.rho=self.initial_rho.copy()
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.__pyx_base.post->N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = (__pyx_v_self->__pyx_base.reset_to_initial != 0);
+  if (__pyx_t_5) {
+
+    /* "plasticnet\connections\Miller2014.pyx":88
+ *     cpdef _reset(self):
+ *         if self.reset_to_initial:
+ *             self.H=self.initial_H.copy()             # <<<<<<<<<<<<<<
+ *             self.rho=self.initial_rho.copy()
+ *         else:
+ */
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->initial_H), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 88; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_3 = NULL;
+    if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+      if (likely(__pyx_t_3)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_3);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_2, function);
+      }
+    }
+    if (__pyx_t_3) {
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 88; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    } else {
+      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 88; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    }
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 88; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GIVEREF(__pyx_t_1);
+    __Pyx_GOTREF(__pyx_v_self->H);
+    __Pyx_DECREF(((PyObject *)__pyx_v_self->H));
+    __pyx_v_self->H = ((PyArrayObject *)__pyx_t_1);
+    __pyx_t_1 = 0;
+
+    /* "plasticnet\connections\Miller2014.pyx":89
+ *         if self.reset_to_initial:
+ *             self.H=self.initial_H.copy()
+ *             self.rho=self.initial_rho.copy()             # <<<<<<<<<<<<<<
+ *         else:
+ *             self.H=pylab.rand(self.post.N)*(self.initial_H_range[1]-
+ */
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->initial_rho), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_3 = NULL;
+    if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+      if (likely(__pyx_t_3)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_3);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_2, function);
+      }
+    }
+    if (__pyx_t_3) {
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    } else {
+      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    }
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GIVEREF(__pyx_t_1);
+    __Pyx_GOTREF(__pyx_v_self->rho);
+    __Pyx_DECREF(((PyObject *)__pyx_v_self->rho));
+    __pyx_v_self->rho = ((PyArrayObject *)__pyx_t_1);
+    __pyx_t_1 = 0;
+    goto __pyx_L3;
+  }
+  /*else*/ {
+
+    /* "plasticnet\connections\Miller2014.pyx":91
+ *             self.rho=self.initial_rho.copy()
+ *         else:
+ *             self.H=pylab.rand(self.post.N)*(self.initial_H_range[1]-             # <<<<<<<<<<<<<<
+ *                                        self.initial_H_range[0])+self.initial_H_range[0]
+ *             self.rho=pylab.rand(self.post.N,self.pre.N)*(self.initial_rho_range[1]-
+ */
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 91; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_rand); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 91; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 91; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_4 = NULL;
+    if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
+      __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
+      if (likely(__pyx_t_4)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+        __Pyx_INCREF(__pyx_t_4);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_3, function);
+      }
+    }
+    if (!__pyx_t_4) {
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 91; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+    } else {
+      __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 91; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_6);
+      PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
+      PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_t_2);
+      __Pyx_GIVEREF(__pyx_t_2);
+      __pyx_t_2 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 91; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_H_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 91; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+    __Pyx_GOTREF(__pyx_t_3);
+
+    /* "plasticnet\connections\Miller2014.pyx":92
+ *         else:
+ *             self.H=pylab.rand(self.post.N)*(self.initial_H_range[1]-
+ *                                        self.initial_H_range[0])+self.initial_H_range[0]             # <<<<<<<<<<<<<<
+ *             self.rho=pylab.rand(self.post.N,self.pre.N)*(self.initial_rho_range[1]-
+ *                                        self.initial_rho_range[0])+self.initial_rho_range[0]
+ */
+    __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_self->initial_H_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_6 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 92; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+    __Pyx_GOTREF(__pyx_t_6);
+
+    /* "plasticnet\connections\Miller2014.pyx":91
+ *             self.rho=self.initial_rho.copy()
+ *         else:
+ *             self.H=pylab.rand(self.post.N)*(self.initial_H_range[1]-             # <<<<<<<<<<<<<<
+ *                                        self.initial_H_range[0])+self.initial_H_range[0]
+ *             self.rho=pylab.rand(self.post.N,self.pre.N)*(self.initial_rho_range[1]-
+ */
+    __pyx_t_2 = PyNumber_Subtract(__pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 91; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __pyx_t_6 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 91; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+    /* "plasticnet\connections\Miller2014.pyx":92
+ *         else:
+ *             self.H=pylab.rand(self.post.N)*(self.initial_H_range[1]-
+ *                                        self.initial_H_range[0])+self.initial_H_range[0]             # <<<<<<<<<<<<<<
+ *             self.rho=pylab.rand(self.post.N,self.pre.N)*(self.initial_rho_range[1]-
+ *                                        self.initial_rho_range[0])+self.initial_rho_range[0]
+ */
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_H_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 92; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_1 = PyNumber_Add(__pyx_t_6, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 92; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 92; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+
+    /* "plasticnet\connections\Miller2014.pyx":91
+ *             self.rho=self.initial_rho.copy()
+ *         else:
+ *             self.H=pylab.rand(self.post.N)*(self.initial_H_range[1]-             # <<<<<<<<<<<<<<
+ *                                        self.initial_H_range[0])+self.initial_H_range[0]
+ *             self.rho=pylab.rand(self.post.N,self.pre.N)*(self.initial_rho_range[1]-
+ */
+    __Pyx_GIVEREF(__pyx_t_1);
+    __Pyx_GOTREF(__pyx_v_self->H);
+    __Pyx_DECREF(((PyObject *)__pyx_v_self->H));
+    __pyx_v_self->H = ((PyArrayObject *)__pyx_t_1);
+    __pyx_t_1 = 0;
+
+    /* "plasticnet\connections\Miller2014.pyx":93
+ *             self.H=pylab.rand(self.post.N)*(self.initial_H_range[1]-
+ *                                        self.initial_H_range[0])+self.initial_H_range[0]
+ *             self.rho=pylab.rand(self.post.N,self.pre.N)*(self.initial_rho_range[1]-             # <<<<<<<<<<<<<<
+ *                                        self.initial_rho_range[0])+self.initial_rho_range[0]
+ * 
+ */
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_rand); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_4 = NULL;
+    __pyx_t_7 = 0;
+    if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_6))) {
+      __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_6);
+      if (likely(__pyx_t_4)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
+        __Pyx_INCREF(__pyx_t_4);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_6, function);
+        __pyx_t_7 = 1;
+      }
+    }
+    __pyx_t_8 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_8);
+    if (__pyx_t_4) {
+      PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
+    }
+    PyTuple_SET_ITEM(__pyx_t_8, 0+__pyx_t_7, __pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_7, __pyx_t_3);
+    __Pyx_GIVEREF(__pyx_t_3);
+    __pyx_t_2 = 0;
+    __pyx_t_3 = 0;
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_self->initial_rho_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_6 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+    __Pyx_GOTREF(__pyx_t_6);
+
+    /* "plasticnet\connections\Miller2014.pyx":94
+ *                                        self.initial_H_range[0])+self.initial_H_range[0]
+ *             self.rho=pylab.rand(self.post.N,self.pre.N)*(self.initial_rho_range[1]-
+ *                                        self.initial_rho_range[0])+self.initial_rho_range[0]             # <<<<<<<<<<<<<<
+ * 
+ *         self.initial_H=self.H.copy()
+ */
+    __pyx_t_8 = __Pyx_GetItemInt(__pyx_v_self->initial_rho_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_8 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+    __Pyx_GOTREF(__pyx_t_8);
+
+    /* "plasticnet\connections\Miller2014.pyx":93
+ *             self.H=pylab.rand(self.post.N)*(self.initial_H_range[1]-
+ *                                        self.initial_H_range[0])+self.initial_H_range[0]
+ *             self.rho=pylab.rand(self.post.N,self.pre.N)*(self.initial_rho_range[1]-             # <<<<<<<<<<<<<<
+ *                                        self.initial_rho_range[0])+self.initial_rho_range[0]
+ * 
+ */
+    __pyx_t_3 = PyNumber_Subtract(__pyx_t_6, __pyx_t_8); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __pyx_t_8 = PyNumber_Multiply(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+    /* "plasticnet\connections\Miller2014.pyx":94
+ *                                        self.initial_H_range[0])+self.initial_H_range[0]
+ *             self.rho=pylab.rand(self.post.N,self.pre.N)*(self.initial_rho_range[1]-
+ *                                        self.initial_rho_range[0])+self.initial_rho_range[0]             # <<<<<<<<<<<<<<
+ * 
+ *         self.initial_H=self.H.copy()
+ */
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_rho_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_1 = PyNumber_Add(__pyx_t_8, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+
+    /* "plasticnet\connections\Miller2014.pyx":93
+ *             self.H=pylab.rand(self.post.N)*(self.initial_H_range[1]-
+ *                                        self.initial_H_range[0])+self.initial_H_range[0]
+ *             self.rho=pylab.rand(self.post.N,self.pre.N)*(self.initial_rho_range[1]-             # <<<<<<<<<<<<<<
+ *                                        self.initial_rho_range[0])+self.initial_rho_range[0]
+ * 
+ */
+    __Pyx_GIVEREF(__pyx_t_1);
+    __Pyx_GOTREF(__pyx_v_self->rho);
+    __Pyx_DECREF(((PyObject *)__pyx_v_self->rho));
+    __pyx_v_self->rho = ((PyArrayObject *)__pyx_t_1);
+    __pyx_t_1 = 0;
+  }
+  __pyx_L3:;
+
+  /* "plasticnet\connections\Miller2014.pyx":96
+ *                                        self.initial_rho_range[0])+self.initial_rho_range[0]
+ * 
+ *         self.initial_H=self.H.copy()             # <<<<<<<<<<<<<<
+ *         self.initial_rho=self.rho.copy()
+ *         connection._reset(self)
+ */
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->H), __pyx_n_s_copy); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
+  __pyx_t_8 = NULL;
+  if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_8)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_8);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  if (__pyx_t_8) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_8); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+  } else {
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  }
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_1);
+  __Pyx_GOTREF(__pyx_v_self->initial_H);
+  __Pyx_DECREF(((PyObject *)__pyx_v_self->initial_H));
+  __pyx_v_self->initial_H = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GIVEREF(__pyx_t_5);
-  __Pyx_GOTREF(__pyx_v_self->y2);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->y2));
-  __pyx_v_self->y2 = ((PyArrayObject *)__pyx_t_5);
-  __pyx_t_5 = 0;
 
-  /* "splikes\connections\Triplet.pyx":105
- *     cpdef _reset(self):
- *         self.y2=np.zeros(self.post.N,dtype=np.float)
- *         self.theta=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
- *         Gerstner2006._reset(self)
+  /* "plasticnet\connections\Miller2014.pyx":97
+ * 
+ *         self.initial_H=self.H.copy()
+ *         self.initial_rho=self.rho.copy()             # <<<<<<<<<<<<<<
+ *         connection._reset(self)
  * 
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.__pyx_base.post->N); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->rho), __pyx_n_s_copy); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_5);
-  __pyx_t_5 = 0;
-  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_8 = NULL;
+  if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_8)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_8);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  if (__pyx_t_8) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_8); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+  } else {
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  }
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GIVEREF(__pyx_t_4);
-  __Pyx_GOTREF(__pyx_v_self->theta);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->theta));
-  __pyx_v_self->theta = ((PyArrayObject *)__pyx_t_4);
-  __pyx_t_4 = 0;
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GIVEREF(__pyx_t_1);
+  __Pyx_GOTREF(__pyx_v_self->initial_rho);
+  __Pyx_DECREF(((PyObject *)__pyx_v_self->initial_rho));
+  __pyx_v_self->initial_rho = ((PyArrayObject *)__pyx_t_1);
+  __pyx_t_1 = 0;
 
-  /* "splikes\connections\Triplet.pyx":106
- *         self.y2=np.zeros(self.post.N,dtype=np.float)
- *         self.theta=np.zeros(self.post.N,dtype=np.float)
- *         Gerstner2006._reset(self)             # <<<<<<<<<<<<<<
+  /* "plasticnet\connections\Miller2014.pyx":98
+ *         self.initial_H=self.H.copy()
+ *         self.initial_rho=self.rho.copy()
+ *         connection._reset(self)             # <<<<<<<<<<<<<<
  * 
- *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):
+ *     def __init__(self,neuron pre,neuron post,initial_rho_range=None,initial_H_range=None):
  */
-  __pyx_t_4 = __pyx_f_7splikes_11connections_7Triplet_12Gerstner2006__reset(((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)__pyx_v_self), 1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 106; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __pyx_t_1 = __pyx_vtabptr_10plasticnet_10plasticnet_connection->_reset(((struct __pyx_obj_10plasticnet_10plasticnet_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 98; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes\connections\Triplet.pyx":103
- *     cdef public double tau_y2,y2_o
+  /* "plasticnet\connections\Miller2014.pyx":86
+ *     cdef public object initial_rho_range,initial_H_range
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
- *         self.y2=np.zeros(self.post.N,dtype=np.float)
- *         self.theta=np.zeros(self.post.N,dtype=np.float)
+ *         if self.reset_to_initial:
+ *             self.H=self.initial_H.copy()
  */
 
   /* function exit code */
@@ -3808,8 +3978,9 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM__reset(st
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM._reset", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_XDECREF(__pyx_t_6);
+  __Pyx_XDECREF(__pyx_t_8);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5._reset", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3818,19 +3989,19 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM__reset(st
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_1_reset(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_1_reset(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1_reset(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1_reset(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("_reset (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM__reset(((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5__reset(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM__reset(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5__reset(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3839,7 +4010,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM__reset(s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_reset", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 103; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 86; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3848,7 +4019,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM__reset(s
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM._reset", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5._reset", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3856,21 +4027,21 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM__reset(s
   return __pyx_r;
 }
 
-/* "splikes\connections\Triplet.pyx":108
- *         Gerstner2006._reset(self)
+/* "plasticnet\connections\Miller2014.pyx":100
+ *         connection._reset(self)
  * 
- *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):             # <<<<<<<<<<<<<<
- *         Gerstner2006.__init__(self,pre,post,initial_weight_range,state)
- *         self.tau_y2=5.0 # seconds - not sure what the default should be
+ *     def __init__(self,neuron pre,neuron post,initial_rho_range=None,initial_H_range=None):             # <<<<<<<<<<<<<<
+ *         if initial_H_range is None:
+ *             self.initial_H_range=[0,.1]
  */
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_3__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_3__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_pre = 0;
-  struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_post = 0;
-  PyObject *__pyx_v_initial_weight_range = 0;
-  PyObject *__pyx_v_state = 0;
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  struct __pyx_obj_10plasticnet_10plasticnet_neuron *__pyx_v_pre = 0;
+  struct __pyx_obj_10plasticnet_10plasticnet_neuron *__pyx_v_post = 0;
+  PyObject *__pyx_v_initial_rho_range = 0;
+  PyObject *__pyx_v_initial_H_range = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -3878,7 +4049,7 @@ static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_3__init__(PyOb
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__init__ (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_pre,&__pyx_n_s_post,&__pyx_n_s_initial_weight_range,&__pyx_n_s_state,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_pre,&__pyx_n_s_post,&__pyx_n_s_initial_rho_range,&__pyx_n_s_initial_H_range,0};
     PyObject* values[4] = {0,0,0,0};
     values[2] = ((PyObject *)Py_None);
     values[3] = ((PyObject *)Py_None);
@@ -3901,21 +4072,21 @@ static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_3__init__(PyOb
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_post)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 4, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 108; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 4, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  2:
         if (kw_args > 0) {
-          PyObject* value = PyDict_GetItem(__pyx_kwds, __pyx_n_s_initial_weight_range);
+          PyObject* value = PyDict_GetItem(__pyx_kwds, __pyx_n_s_initial_rho_range);
           if (value) { values[2] = value; kw_args--; }
         }
         case  3:
         if (kw_args > 0) {
-          PyObject* value = PyDict_GetItem(__pyx_kwds, __pyx_n_s_state);
+          PyObject* value = PyDict_GetItem(__pyx_kwds, __pyx_n_s_initial_H_range);
           if (value) { values[3] = value; kw_args--; }
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 108; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -3927,22 +4098,22 @@ static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_3__init__(PyOb
         default: goto __pyx_L5_argtuple_error;
       }
     }
-    __pyx_v_pre = ((struct __pyx_obj_7splikes_7splikes_neuron *)values[0]);
-    __pyx_v_post = ((struct __pyx_obj_7splikes_7splikes_neuron *)values[1]);
-    __pyx_v_initial_weight_range = values[2];
-    __pyx_v_state = values[3];
+    __pyx_v_pre = ((struct __pyx_obj_10plasticnet_10plasticnet_neuron *)values[0]);
+    __pyx_v_post = ((struct __pyx_obj_10plasticnet_10plasticnet_neuron *)values[1]);
+    __pyx_v_initial_rho_range = values[2];
+    __pyx_v_initial_H_range = values[3];
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 108; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_7splikes_7splikes_neuron, 1, "pre", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 108; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 108; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2__init__(((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)__pyx_v_self), __pyx_v_pre, __pyx_v_post, __pyx_v_initial_weight_range, __pyx_v_state);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_10plasticnet_10plasticnet_neuron, 1, "pre", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_10plasticnet_10plasticnet_neuron, 1, "post", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_2__init__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self), __pyx_v_pre, __pyx_v_post, __pyx_v_initial_rho_range, __pyx_v_initial_H_range);
 
   /* function exit code */
   goto __pyx_L0;
@@ -3953,121 +4124,267 @@ static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_3__init__(PyOb
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2__init__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self, struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_pre, struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_post, PyObject *__pyx_v_initial_weight_range, PyObject *__pyx_v_state) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_2__init__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, struct __pyx_obj_10plasticnet_10plasticnet_neuron *__pyx_v_pre, struct __pyx_obj_10plasticnet_10plasticnet_neuron *__pyx_v_post, PyObject *__pyx_v_initial_rho_range, PyObject *__pyx_v_initial_H_range) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
+  int __pyx_t_1;
+  int __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
-  Py_ssize_t __pyx_t_4;
+  PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
+  Py_ssize_t __pyx_t_6;
+  PyObject *__pyx_t_7 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "splikes\connections\Triplet.pyx":109
+  /* "plasticnet\connections\Miller2014.pyx":101
  * 
- *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):
- *         Gerstner2006.__init__(self,pre,post,initial_weight_range,state)             # <<<<<<<<<<<<<<
- *         self.tau_y2=5.0 # seconds - not sure what the default should be
- *         self.y2_o=1.0
+ *     def __init__(self,neuron pre,neuron post,initial_rho_range=None,initial_H_range=None):
+ *         if initial_H_range is None:             # <<<<<<<<<<<<<<
+ *             self.initial_H_range=[0,.1]
+ *         else:
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)((PyObject*)__pyx_ptype_7splikes_11connections_7Triplet_Gerstner2006)), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 109; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = NULL;
-  __pyx_t_4 = 0;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_3)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_3);
+  __pyx_t_1 = (__pyx_v_initial_H_range == Py_None);
+  __pyx_t_2 = (__pyx_t_1 != 0);
+  if (__pyx_t_2) {
+
+    /* "plasticnet\connections\Miller2014.pyx":102
+ *     def __init__(self,neuron pre,neuron post,initial_rho_range=None,initial_H_range=None):
+ *         if initial_H_range is None:
+ *             self.initial_H_range=[0,.1]             # <<<<<<<<<<<<<<
+ *         else:
+ *             self.initial_H_range=initial_H_range
+ */
+    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 102; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_INCREF(__pyx_int_0);
+    PyList_SET_ITEM(__pyx_t_3, 0, __pyx_int_0);
+    __Pyx_GIVEREF(__pyx_int_0);
+    __Pyx_INCREF(__pyx_float__1);
+    PyList_SET_ITEM(__pyx_t_3, 1, __pyx_float__1);
+    __Pyx_GIVEREF(__pyx_float__1);
+    __Pyx_GIVEREF(__pyx_t_3);
+    __Pyx_GOTREF(__pyx_v_self->initial_H_range);
+    __Pyx_DECREF(__pyx_v_self->initial_H_range);
+    __pyx_v_self->initial_H_range = __pyx_t_3;
+    __pyx_t_3 = 0;
+    goto __pyx_L3;
+  }
+  /*else*/ {
+
+    /* "plasticnet\connections\Miller2014.pyx":104
+ *             self.initial_H_range=[0,.1]
+ *         else:
+ *             self.initial_H_range=initial_H_range             # <<<<<<<<<<<<<<
+ * 
+ *         if initial_rho_range is None:
+ */
+    __Pyx_INCREF(__pyx_v_initial_H_range);
+    __Pyx_GIVEREF(__pyx_v_initial_H_range);
+    __Pyx_GOTREF(__pyx_v_self->initial_H_range);
+    __Pyx_DECREF(__pyx_v_self->initial_H_range);
+    __pyx_v_self->initial_H_range = __pyx_v_initial_H_range;
+  }
+  __pyx_L3:;
+
+  /* "plasticnet\connections\Miller2014.pyx":106
+ *             self.initial_H_range=initial_H_range
+ * 
+ *         if initial_rho_range is None:             # <<<<<<<<<<<<<<
+ *             self.initial_rho_range=[0,.1]
+ *         else:
+ */
+  __pyx_t_2 = (__pyx_v_initial_rho_range == Py_None);
+  __pyx_t_1 = (__pyx_t_2 != 0);
+  if (__pyx_t_1) {
+
+    /* "plasticnet\connections\Miller2014.pyx":107
+ * 
+ *         if initial_rho_range is None:
+ *             self.initial_rho_range=[0,.1]             # <<<<<<<<<<<<<<
+ *         else:
+ *             self.initial_rho_range=initial_rho_range
+ */
+    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_INCREF(__pyx_int_0);
+    PyList_SET_ITEM(__pyx_t_3, 0, __pyx_int_0);
+    __Pyx_GIVEREF(__pyx_int_0);
+    __Pyx_INCREF(__pyx_float__1);
+    PyList_SET_ITEM(__pyx_t_3, 1, __pyx_float__1);
+    __Pyx_GIVEREF(__pyx_float__1);
+    __Pyx_GIVEREF(__pyx_t_3);
+    __Pyx_GOTREF(__pyx_v_self->initial_rho_range);
+    __Pyx_DECREF(__pyx_v_self->initial_rho_range);
+    __pyx_v_self->initial_rho_range = __pyx_t_3;
+    __pyx_t_3 = 0;
+    goto __pyx_L4;
+  }
+  /*else*/ {
+
+    /* "plasticnet\connections\Miller2014.pyx":109
+ *             self.initial_rho_range=[0,.1]
+ *         else:
+ *             self.initial_rho_range=initial_rho_range             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+    __Pyx_INCREF(__pyx_v_initial_rho_range);
+    __Pyx_GIVEREF(__pyx_v_initial_rho_range);
+    __Pyx_GOTREF(__pyx_v_self->initial_rho_range);
+    __Pyx_DECREF(__pyx_v_self->initial_rho_range);
+    __pyx_v_self->initial_rho_range = __pyx_v_initial_rho_range;
+  }
+  __pyx_L4:;
+
+  /* "plasticnet\connections\Miller2014.pyx":112
+ * 
+ * 
+ *         connection.__init__(self,pre,post,None)             # <<<<<<<<<<<<<<
+ * 
+ *         self.tau_rho=0.3  # days - not sure what days is
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)((PyObject*)__pyx_ptype_10plasticnet_10plasticnet_connection)), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 112; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = NULL;
+  __pyx_t_6 = 0;
+  if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
+    if (likely(__pyx_t_5)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+      __Pyx_INCREF(__pyx_t_5);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_2, function);
-      __pyx_t_4 = 1;
+      __Pyx_DECREF_SET(__pyx_t_4, function);
+      __pyx_t_6 = 1;
     }
   }
-  __pyx_t_5 = PyTuple_New(5+__pyx_t_4); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 109; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  if (__pyx_t_3) {
-    PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
+  __pyx_t_7 = PyTuple_New(4+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 112; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_7);
+  if (__pyx_t_5) {
+    PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
   }
   __Pyx_INCREF(((PyObject *)__pyx_v_self));
-  PyTuple_SET_ITEM(__pyx_t_5, 0+__pyx_t_4, ((PyObject *)__pyx_v_self));
+  PyTuple_SET_ITEM(__pyx_t_7, 0+__pyx_t_6, ((PyObject *)__pyx_v_self));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
   __Pyx_INCREF(((PyObject *)__pyx_v_pre));
-  PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, ((PyObject *)__pyx_v_pre));
+  PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_pre));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_pre));
   __Pyx_INCREF(((PyObject *)__pyx_v_post));
-  PyTuple_SET_ITEM(__pyx_t_5, 2+__pyx_t_4, ((PyObject *)__pyx_v_post));
+  PyTuple_SET_ITEM(__pyx_t_7, 2+__pyx_t_6, ((PyObject *)__pyx_v_post));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_post));
-  __Pyx_INCREF(__pyx_v_initial_weight_range);
-  PyTuple_SET_ITEM(__pyx_t_5, 3+__pyx_t_4, __pyx_v_initial_weight_range);
-  __Pyx_GIVEREF(__pyx_v_initial_weight_range);
-  __Pyx_INCREF(__pyx_v_state);
-  PyTuple_SET_ITEM(__pyx_t_5, 4+__pyx_t_4, __pyx_v_state);
-  __Pyx_GIVEREF(__pyx_v_state);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 109; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __Pyx_INCREF(Py_None);
+  PyTuple_SET_ITEM(__pyx_t_7, 3+__pyx_t_6, Py_None);
+  __Pyx_GIVEREF(Py_None);
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 112; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes\connections\Triplet.pyx":110
- *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):
- *         Gerstner2006.__init__(self,pre,post,initial_weight_range,state)
- *         self.tau_y2=5.0 # seconds - not sure what the default should be             # <<<<<<<<<<<<<<
- *         self.y2_o=1.0
- *         self.name='Triplet BCM'
+  /* "plasticnet\connections\Miller2014.pyx":114
+ *         connection.__init__(self,pre,post,None)
+ * 
+ *         self.tau_rho=0.3  # days - not sure what days is             # <<<<<<<<<<<<<<
+ *         self.tau_H=100.0
+ *         self.yo=0.8
  */
-  __pyx_v_self->tau_y2 = 5.0;
+  __pyx_v_self->tau_rho = 0.3;
 
-  /* "splikes\connections\Triplet.pyx":111
- *         Gerstner2006.__init__(self,pre,post,initial_weight_range,state)
- *         self.tau_y2=5.0 # seconds - not sure what the default should be
- *         self.y2_o=1.0             # <<<<<<<<<<<<<<
- *         self.name='Triplet BCM'
+  /* "plasticnet\connections\Miller2014.pyx":115
+ * 
+ *         self.tau_rho=0.3  # days - not sure what days is
+ *         self.tau_H=100.0             # <<<<<<<<<<<<<<
+ *         self.yo=0.8
+ *         self.theta=0.6
+ */
+  __pyx_v_self->tau_H = 100.0;
+
+  /* "plasticnet\connections\Miller2014.pyx":116
+ *         self.tau_rho=0.3  # days - not sure what days is
+ *         self.tau_H=100.0
+ *         self.yo=0.8             # <<<<<<<<<<<<<<
+ *         self.theta=0.6
+ *         self.rho_max=1.0
+ */
+  __pyx_v_self->yo = 0.8;
+
+  /* "plasticnet\connections\Miller2014.pyx":117
+ *         self.tau_H=100.0
+ *         self.yo=0.8
+ *         self.theta=0.6             # <<<<<<<<<<<<<<
+ *         self.rho_max=1.0
+ *         self.rho_min=0.6
+ */
+  __pyx_v_self->theta = 0.6;
+
+  /* "plasticnet\connections\Miller2014.pyx":118
+ *         self.yo=0.8
+ *         self.theta=0.6
+ *         self.rho_max=1.0             # <<<<<<<<<<<<<<
+ *         self.rho_min=0.6
+ *         self.name='Miller2014_Eq5'
+ */
+  __pyx_v_self->rho_max = 1.0;
+
+  /* "plasticnet\connections\Miller2014.pyx":119
+ *         self.theta=0.6
+ *         self.rho_max=1.0
+ *         self.rho_min=0.6             # <<<<<<<<<<<<<<
+ *         self.name='Miller2014_Eq5'
+ *         self._reset()
+ */
+  __pyx_v_self->rho_min = 0.6;
+
+  /* "plasticnet\connections\Miller2014.pyx":120
+ *         self.rho_max=1.0
+ *         self.rho_min=0.6
+ *         self.name='Miller2014_Eq5'             # <<<<<<<<<<<<<<
+ *         self._reset()
  * 
  */
-  __pyx_v_self->y2_o = 1.0;
+  __Pyx_INCREF(__pyx_n_s_Miller2014_Eq5);
+  __Pyx_GIVEREF(__pyx_n_s_Miller2014_Eq5);
+  __Pyx_GOTREF(__pyx_v_self->__pyx_base.name);
+  __Pyx_DECREF(__pyx_v_self->__pyx_base.name);
+  __pyx_v_self->__pyx_base.name = __pyx_n_s_Miller2014_Eq5;
 
-  /* "splikes\connections\Triplet.pyx":112
- *         self.tau_y2=5.0 # seconds - not sure what the default should be
- *         self.y2_o=1.0
- *         self.name='Triplet BCM'             # <<<<<<<<<<<<<<
+  /* "plasticnet\connections\Miller2014.pyx":121
+ *         self.rho_min=0.6
+ *         self.name='Miller2014_Eq5'
+ *         self._reset()             # <<<<<<<<<<<<<<
  * 
- *     @cython.cdivision(True)
+ * 
  */
-  __Pyx_INCREF(__pyx_kp_s_Triplet_BCM);
-  __Pyx_GIVEREF(__pyx_kp_s_Triplet_BCM);
-  __Pyx_GOTREF(__pyx_v_self->__pyx_base.__pyx_base.name);
-  __Pyx_DECREF(__pyx_v_self->__pyx_base.__pyx_base.name);
-  __pyx_v_self->__pyx_base.__pyx_base.name = __pyx_kp_s_Triplet_BCM;
+  __pyx_t_3 = ((struct __pyx_vtabstruct_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_10plasticnet_10plasticnet_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes\connections\Triplet.pyx":108
- *         Gerstner2006._reset(self)
+  /* "plasticnet\connections\Miller2014.pyx":100
+ *         connection._reset(self)
  * 
- *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):             # <<<<<<<<<<<<<<
- *         Gerstner2006.__init__(self,pre,post,initial_weight_range,state)
- *         self.tau_y2=5.0 # seconds - not sure what the default should be
+ *     def __init__(self,neuron pre,neuron post,initial_rho_range=None,initial_H_range=None):             # <<<<<<<<<<<<<<
+ *         if initial_H_range is None:
+ *             self.initial_H_range=[0,.1]
  */
 
   /* function exit code */
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_XDECREF(__pyx_t_7);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "splikes\connections\Triplet.pyx":116
+/* "plasticnet\connections\Miller2014.pyx":126
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -4075,34 +4392,15 @@ static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2__init__(stru
  * 
  */
 
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM_update(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_update(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim, int __pyx_skip_dispatch) {
   int __pyx_v___i;
   int __pyx_v___j;
-  double *__pyx_v_y2;
-  double *__pyx_v_theta;
-  double __pyx_v_y2_val;
-  double *__pyx_v_y_fast;
-  double *__pyx_v_x_fast;
-  double *__pyx_v_y_slow;
-  double *__pyx_v_x_slow;
-  double __pyx_v_tau_x_slow;
-  double __pyx_v_tau_y_slow;
-  double __pyx_v_A3_minus;
-  double __pyx_v_A2_minus;
-  double __pyx_v_A2_minus_eff;
-  double __pyx_v_tau_y2;
-  double __pyx_v_y2_o;
-  double __pyx_v_tau_y_fast;
-  double __pyx_v_tau_x_fast;
-  double __pyx_v_A3_plus;
-  double __pyx_v_A2_plus;
-  double __pyx_v_eta;
   double *__pyx_v_W;
-  CYTHON_UNUSED double *__pyx_v_post_rate;
-  CYTHON_UNUSED double *__pyx_v_pre_rate;
-  int *__pyx_v_pre;
-  int *__pyx_v_post;
+  double *__pyx_v_rho;
+  double *__pyx_v_H;
+  double *__pyx_v_X;
+  double *__pyx_v_Y;
   int __pyx_v___wi;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -4113,13 +4411,12 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM_update(st
   PyObject *__pyx_t_5 = NULL;
   Py_ssize_t __pyx_t_6;
   PyObject *__pyx_t_7 = NULL;
-  double __pyx_t_8;
-  double *__pyx_t_9;
+  int __pyx_t_8;
+  int __pyx_t_9;
   int __pyx_t_10;
   int __pyx_t_11;
   int __pyx_t_12;
-  int __pyx_t_13;
-  int __pyx_t_14;
+  double __pyx_t_13;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -4128,11 +4425,11 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM_update(st
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5update)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -4147,7 +4444,7 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM_update(st
           __pyx_t_6 = 1;
         }
       }
-      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_7);
       if (__pyx_t_5) {
         PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
@@ -4158,7 +4455,7 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM_update(st
       PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
       __pyx_t_3 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -4170,408 +4467,192 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM_update(st
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes\connections\Triplet.pyx":119
+  /* "plasticnet\connections\Miller2014.pyx":129
  *         cdef int __i,__j
  * 
- *         cdef double *y2=<double *>self.y2.data             # <<<<<<<<<<<<<<
- *         cdef double *theta=<double *>self.theta.data
- *         cdef double y2_val
+ *         cdef double *W=<double *>self.weights.data             # <<<<<<<<<<<<<<
+ *         cdef double *rho=<double *>self.rho.data
+ *         cdef double *H=<double *>self.H.data
  */
-  __pyx_v_y2 = ((double *)__pyx_v_self->y2->data);
+  __pyx_v_W = ((double *)__pyx_v_self->__pyx_base.weights->data);
 
-  /* "splikes\connections\Triplet.pyx":120
+  /* "plasticnet\connections\Miller2014.pyx":130
  * 
- *         cdef double *y2=<double *>self.y2.data
- *         cdef double *theta=<double *>self.theta.data             # <<<<<<<<<<<<<<
- *         cdef double y2_val
- *         cdef double *y_fast=<double *>self.y_fast.data
+ *         cdef double *W=<double *>self.weights.data
+ *         cdef double *rho=<double *>self.rho.data             # <<<<<<<<<<<<<<
+ *         cdef double *H=<double *>self.H.data
+ *         cdef double *X,*Y   # outputs for pre and post
  */
-  __pyx_v_theta = ((double *)__pyx_v_self->theta->data);
+  __pyx_v_rho = ((double *)__pyx_v_self->rho->data);
 
-  /* "splikes\connections\Triplet.pyx":122
- *         cdef double *theta=<double *>self.theta.data
- *         cdef double y2_val
- *         cdef double *y_fast=<double *>self.y_fast.data             # <<<<<<<<<<<<<<
- *         cdef double *x_fast=<double *>self.x_fast.data
- *         cdef double *y_slow=<double *>self.y_slow.data
- */
-  __pyx_v_y_fast = ((double *)__pyx_v_self->__pyx_base.y_fast->data);
-
-  /* "splikes\connections\Triplet.pyx":123
- *         cdef double y2_val
- *         cdef double *y_fast=<double *>self.y_fast.data
- *         cdef double *x_fast=<double *>self.x_fast.data             # <<<<<<<<<<<<<<
- *         cdef double *y_slow=<double *>self.y_slow.data
- *         cdef double *x_slow=<double *>self.x_slow.data
- */
-  __pyx_v_x_fast = ((double *)__pyx_v_self->__pyx_base.x_fast->data);
-
-  /* "splikes\connections\Triplet.pyx":124
- *         cdef double *y_fast=<double *>self.y_fast.data
- *         cdef double *x_fast=<double *>self.x_fast.data
- *         cdef double *y_slow=<double *>self.y_slow.data             # <<<<<<<<<<<<<<
- *         cdef double *x_slow=<double *>self.x_slow.data
- *         cdef double tau_x_slow=self.tau_x_slow
- */
-  __pyx_v_y_slow = ((double *)__pyx_v_self->__pyx_base.y_slow->data);
-
-  /* "splikes\connections\Triplet.pyx":125
- *         cdef double *x_fast=<double *>self.x_fast.data
- *         cdef double *y_slow=<double *>self.y_slow.data
- *         cdef double *x_slow=<double *>self.x_slow.data             # <<<<<<<<<<<<<<
- *         cdef double tau_x_slow=self.tau_x_slow
- *         cdef double tau_y_slow=self.tau_y_slow
- */
-  __pyx_v_x_slow = ((double *)__pyx_v_self->__pyx_base.x_slow->data);
-
-  /* "splikes\connections\Triplet.pyx":126
- *         cdef double *y_slow=<double *>self.y_slow.data
- *         cdef double *x_slow=<double *>self.x_slow.data
- *         cdef double tau_x_slow=self.tau_x_slow             # <<<<<<<<<<<<<<
- *         cdef double tau_y_slow=self.tau_y_slow
- *         cdef double A3_minus=self.A3_minus
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.tau_x_slow;
-  __pyx_v_tau_x_slow = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":127
- *         cdef double *x_slow=<double *>self.x_slow.data
- *         cdef double tau_x_slow=self.tau_x_slow
- *         cdef double tau_y_slow=self.tau_y_slow             # <<<<<<<<<<<<<<
- *         cdef double A3_minus=self.A3_minus
- *         cdef double A2_minus=self.A2_minus
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.tau_y_slow;
-  __pyx_v_tau_y_slow = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":128
- *         cdef double tau_x_slow=self.tau_x_slow
- *         cdef double tau_y_slow=self.tau_y_slow
- *         cdef double A3_minus=self.A3_minus             # <<<<<<<<<<<<<<
- *         cdef double A2_minus=self.A2_minus
- *         cdef double A2_minus_eff
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.A3_minus;
-  __pyx_v_A3_minus = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":129
- *         cdef double tau_y_slow=self.tau_y_slow
- *         cdef double A3_minus=self.A3_minus
- *         cdef double A2_minus=self.A2_minus             # <<<<<<<<<<<<<<
- *         cdef double A2_minus_eff
- *         cdef double tau_y2=self.tau_y2
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.A2_minus;
-  __pyx_v_A2_minus = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":131
- *         cdef double A2_minus=self.A2_minus
- *         cdef double A2_minus_eff
- *         cdef double tau_y2=self.tau_y2             # <<<<<<<<<<<<<<
- *         cdef double y2_o=self.y2_o
- *         cdef double tau_y_fast=self.tau_y_fast
- */
-  __pyx_t_8 = __pyx_v_self->tau_y2;
-  __pyx_v_tau_y2 = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":132
- *         cdef double A2_minus_eff
- *         cdef double tau_y2=self.tau_y2
- *         cdef double y2_o=self.y2_o             # <<<<<<<<<<<<<<
- *         cdef double tau_y_fast=self.tau_y_fast
- *         cdef double tau_x_fast=self.tau_x_fast
- */
-  __pyx_t_8 = __pyx_v_self->y2_o;
-  __pyx_v_y2_o = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":133
- *         cdef double tau_y2=self.tau_y2
- *         cdef double y2_o=self.y2_o
- *         cdef double tau_y_fast=self.tau_y_fast             # <<<<<<<<<<<<<<
- *         cdef double tau_x_fast=self.tau_x_fast
- *         cdef double A3_plus=self.A3_plus
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.tau_y_fast;
-  __pyx_v_tau_y_fast = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":134
- *         cdef double y2_o=self.y2_o
- *         cdef double tau_y_fast=self.tau_y_fast
- *         cdef double tau_x_fast=self.tau_x_fast             # <<<<<<<<<<<<<<
- *         cdef double A3_plus=self.A3_plus
- *         cdef double A2_plus=self.A2_plus
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.tau_x_fast;
-  __pyx_v_tau_x_fast = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":135
- *         cdef double tau_y_fast=self.tau_y_fast
- *         cdef double tau_x_fast=self.tau_x_fast
- *         cdef double A3_plus=self.A3_plus             # <<<<<<<<<<<<<<
- *         cdef double A2_plus=self.A2_plus
- *         cdef double eta=self.eta
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.A3_plus;
-  __pyx_v_A3_plus = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":136
- *         cdef double tau_x_fast=self.tau_x_fast
- *         cdef double A3_plus=self.A3_plus
- *         cdef double A2_plus=self.A2_plus             # <<<<<<<<<<<<<<
- *         cdef double eta=self.eta
+  /* "plasticnet\connections\Miller2014.pyx":131
+ *         cdef double *W=<double *>self.weights.data
+ *         cdef double *rho=<double *>self.rho.data
+ *         cdef double *H=<double *>self.H.data             # <<<<<<<<<<<<<<
+ *         cdef double *X,*Y   # outputs for pre and post
  * 
  */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.A2_plus;
-  __pyx_v_A2_plus = __pyx_t_8;
+  __pyx_v_H = ((double *)__pyx_v_self->H->data);
 
-  /* "splikes\connections\Triplet.pyx":137
- *         cdef double A3_plus=self.A3_plus
- *         cdef double A2_plus=self.A2_plus
- *         cdef double eta=self.eta             # <<<<<<<<<<<<<<
+  /* "plasticnet\connections\Miller2014.pyx":135
  * 
- *         cdef double *W=self.W
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.eta;
-  __pyx_v_eta = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":139
- *         cdef double eta=self.eta
- * 
- *         cdef double *W=self.W             # <<<<<<<<<<<<<<
- *         cdef double *post_rate=<double *>self.post.rate.data
- *         cdef double *pre_rate=<double *>self.pre.rate.data
- */
-  __pyx_t_9 = __pyx_v_self->__pyx_base.__pyx_base.W;
-  __pyx_v_W = __pyx_t_9;
-
-  /* "splikes\connections\Triplet.pyx":140
- * 
- *         cdef double *W=self.W
- *         cdef double *post_rate=<double *>self.post.rate.data             # <<<<<<<<<<<<<<
- *         cdef double *pre_rate=<double *>self.pre.rate.data
- *         cdef int *pre,*post   # spikes for pre and post
- */
-  __pyx_v_post_rate = ((double *)__pyx_v_self->__pyx_base.__pyx_base.post->rate->data);
-
-  /* "splikes\connections\Triplet.pyx":141
- *         cdef double *W=self.W
- *         cdef double *post_rate=<double *>self.post.rate.data
- *         cdef double *pre_rate=<double *>self.pre.rate.data             # <<<<<<<<<<<<<<
- *         cdef int *pre,*post   # spikes for pre and post
  *         cdef int __wi
- */
-  __pyx_v_pre_rate = ((double *)__pyx_v_self->__pyx_base.__pyx_base.pre->rate->data);
-
-  /* "splikes\connections\Triplet.pyx":146
- * 
- * 
- *         pre=<int *>self.pre.spiking.data             # <<<<<<<<<<<<<<
- *         post=<int *>self.post.spiking.data
+ *         X=<double *>self.pre.output.data             # <<<<<<<<<<<<<<
+ *         Y=<double *>self.post.output.data
  * 
  */
-  __pyx_v_pre = ((int *)__pyx_v_self->__pyx_base.__pyx_base.pre->spiking->data);
+  __pyx_v_X = ((double *)__pyx_v_self->__pyx_base.pre->output->data);
 
-  /* "splikes\connections\Triplet.pyx":147
- * 
- *         pre=<int *>self.pre.spiking.data
- *         post=<int *>self.post.spiking.data             # <<<<<<<<<<<<<<
- * 
- *         for __j in range(self.pre.N):
- */
-  __pyx_v_post = ((int *)__pyx_v_self->__pyx_base.__pyx_base.post->spiking->data);
-
-  /* "splikes\connections\Triplet.pyx":149
- *         post=<int *>self.post.spiking.data
- * 
- *         for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
- *             x_fast[__j]+=sim.dt*(-x_fast[__j]/tau_x_fast+pre[__j]/sim.dt)
- *         for __i in range(self.post.N):
- */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.__pyx_base.pre->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___j = __pyx_t_11;
-
-    /* "splikes\connections\Triplet.pyx":150
- * 
- *         for __j in range(self.pre.N):
- *             x_fast[__j]+=sim.dt*(-x_fast[__j]/tau_x_fast+pre[__j]/sim.dt)             # <<<<<<<<<<<<<<
- *         for __i in range(self.post.N):
- *             y_fast[__i]+=sim.dt*(-y_fast[__i]/tau_y_fast+post[__i]/sim.dt)
- */
-    __pyx_t_12 = __pyx_v___j;
-    (__pyx_v_x_fast[__pyx_t_12]) = ((__pyx_v_x_fast[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_x_fast[__pyx_v___j])) / __pyx_v_tau_x_fast) + ((__pyx_v_pre[__pyx_v___j]) / __pyx_v_sim->dt))));
-  }
-
-  /* "splikes\connections\Triplet.pyx":151
- *         for __j in range(self.pre.N):
- *             x_fast[__j]+=sim.dt*(-x_fast[__j]/tau_x_fast+pre[__j]/sim.dt)
- *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
- *             y_fast[__i]+=sim.dt*(-y_fast[__i]/tau_y_fast+post[__i]/sim.dt)
- * 
- */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.__pyx_base.post->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___i = __pyx_t_11;
-
-    /* "splikes\connections\Triplet.pyx":152
- *             x_fast[__j]+=sim.dt*(-x_fast[__j]/tau_x_fast+pre[__j]/sim.dt)
- *         for __i in range(self.post.N):
- *             y_fast[__i]+=sim.dt*(-y_fast[__i]/tau_y_fast+post[__i]/sim.dt)             # <<<<<<<<<<<<<<
- * 
- *         for __i in range(self.post.N):
- */
-    __pyx_t_12 = __pyx_v___i;
-    (__pyx_v_y_fast[__pyx_t_12]) = ((__pyx_v_y_fast[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_y_fast[__pyx_v___i])) / __pyx_v_tau_y_fast) + ((__pyx_v_post[__pyx_v___i]) / __pyx_v_sim->dt))));
-  }
-
-  /* "splikes\connections\Triplet.pyx":154
- *             y_fast[__i]+=sim.dt*(-y_fast[__i]/tau_y_fast+post[__i]/sim.dt)
- * 
- *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
- *             y2_val=y_fast[__i]*y_fast[__i]   #(y_fast[__i]/tau_y_fast)*(y_fast[__i]/tau_y_fast)
- *             y2[__i]+=sim.dt*(y2_val-y2[__i])/tau_y2
- */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.__pyx_base.post->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___i = __pyx_t_11;
-
-    /* "splikes\connections\Triplet.pyx":155
- * 
- *         for __i in range(self.post.N):
- *             y2_val=y_fast[__i]*y_fast[__i]   #(y_fast[__i]/tau_y_fast)*(y_fast[__i]/tau_y_fast)             # <<<<<<<<<<<<<<
- *             y2[__i]+=sim.dt*(y2_val-y2[__i])/tau_y2
- * 
- */
-    __pyx_v_y2_val = ((__pyx_v_y_fast[__pyx_v___i]) * (__pyx_v_y_fast[__pyx_v___i]));
-
-    /* "splikes\connections\Triplet.pyx":156
- *         for __i in range(self.post.N):
- *             y2_val=y_fast[__i]*y_fast[__i]   #(y_fast[__i]/tau_y_fast)*(y_fast[__i]/tau_y_fast)
- *             y2[__i]+=sim.dt*(y2_val-y2[__i])/tau_y2             # <<<<<<<<<<<<<<
+  /* "plasticnet\connections\Miller2014.pyx":136
+ *         cdef int __wi
+ *         X=<double *>self.pre.output.data
+ *         Y=<double *>self.post.output.data             # <<<<<<<<<<<<<<
  * 
  * 
  */
-    __pyx_t_12 = __pyx_v___i;
-    (__pyx_v_y2[__pyx_t_12]) = ((__pyx_v_y2[__pyx_t_12]) + ((__pyx_v_sim->dt * (__pyx_v_y2_val - (__pyx_v_y2[__pyx_v___i]))) / __pyx_v_tau_y2));
-  }
+  __pyx_v_Y = ((double *)__pyx_v_self->__pyx_base.post->output->data);
 
-  /* "splikes\connections\Triplet.pyx":159
+  /* "plasticnet\connections\Miller2014.pyx":139
  * 
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
- *             A2_minus_eff=A2_minus*y2[__i]/y2_o
- * 
- */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.__pyx_base.post->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___i = __pyx_t_11;
-
-    /* "splikes\connections\Triplet.pyx":160
- * 
- *         for __i in range(self.post.N):
- *             A2_minus_eff=A2_minus*y2[__i]/y2_o             # <<<<<<<<<<<<<<
- * 
- *             theta[__i]=A2_minus_eff*tau_y_fast/A3_plus/tau_x_fast/tau_y_slow
- */
-    __pyx_v_A2_minus_eff = ((__pyx_v_A2_minus * (__pyx_v_y2[__pyx_v___i])) / __pyx_v_y2_o);
-
-    /* "splikes\connections\Triplet.pyx":162
- *             A2_minus_eff=A2_minus*y2[__i]/y2_o
- * 
- *             theta[__i]=A2_minus_eff*tau_y_fast/A3_plus/tau_x_fast/tau_y_slow             # <<<<<<<<<<<<<<
- * 
  *             for __j in range(self.pre.N):
+ *                 __wi=__i*self.pre.N+__j
  */
-    (__pyx_v_theta[__pyx_v___i]) = ((((__pyx_v_A2_minus_eff * __pyx_v_tau_y_fast) / __pyx_v_A3_plus) / __pyx_v_tau_x_fast) / __pyx_v_tau_y_slow);
+  __pyx_t_8 = __pyx_v_self->__pyx_base.post->N;
+  for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
+    __pyx_v___i = __pyx_t_9;
 
-    /* "splikes\connections\Triplet.pyx":164
- *             theta[__i]=A2_minus_eff*tau_y_fast/A3_plus/tau_x_fast/tau_y_slow
+    /* "plasticnet\connections\Miller2014.pyx":140
  * 
+ *         for __i in range(self.post.N):
  *             for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
  *                 __wi=__i*self.pre.N+__j
- *                 W[__wi]+=sim.dt*eta*(-pre[__j]/sim.dt*y_fast[__i]*(A2_minus_eff+A3_minus*x_slow[__j])+post[__i]/sim.dt*x_fast[__j]*(A2_plus+A3_plus*y_slow[__i]))
- */
-    __pyx_t_12 = __pyx_v_self->__pyx_base.__pyx_base.pre->N;
-    for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
-      __pyx_v___j = __pyx_t_13;
-
-      /* "splikes\connections\Triplet.pyx":165
  * 
+ */
+    __pyx_t_10 = __pyx_v_self->__pyx_base.pre->N;
+    for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
+      __pyx_v___j = __pyx_t_11;
+
+      /* "plasticnet\connections\Miller2014.pyx":141
+ *         for __i in range(self.post.N):
  *             for __j in range(self.pre.N):
  *                 __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
- *                 W[__wi]+=sim.dt*eta*(-pre[__j]/sim.dt*y_fast[__i]*(A2_minus_eff+A3_minus*x_slow[__j])+post[__i]/sim.dt*x_fast[__j]*(A2_plus+A3_plus*y_slow[__i]))
- *         for __j in range(self.pre.N):
+ * 
+ *                 rho[__wi]+=sim.dt*(
  */
-      __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.__pyx_base.pre->N) + __pyx_v___j);
+      __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-      /* "splikes\connections\Triplet.pyx":166
- *             for __j in range(self.pre.N):
+      /* "plasticnet\connections\Miller2014.pyx":143
  *                 __wi=__i*self.pre.N+__j
- *                 W[__wi]+=sim.dt*eta*(-pre[__j]/sim.dt*y_fast[__i]*(A2_minus_eff+A3_minus*x_slow[__j])+post[__i]/sim.dt*x_fast[__j]*(A2_plus+A3_plus*y_slow[__i]))             # <<<<<<<<<<<<<<
- *         for __j in range(self.pre.N):
- *             x_slow[__j]+=sim.dt*(-x_slow[__j]/tau_x_slow+pre[__j]/sim.dt)
+ * 
+ *                 rho[__wi]+=sim.dt*(             # <<<<<<<<<<<<<<
+ *                     truncate(self.rho_max-rho[__wi])*truncate(X[__j]*Y[__i]-self.theta) -
+ *                     truncate(rho[__wi]-self.rho_min)*truncate(self.theta-X[__j]*Y[__i])
  */
-      __pyx_t_14 = __pyx_v___wi;
-      (__pyx_v_W[__pyx_t_14]) = ((__pyx_v_W[__pyx_t_14]) + ((__pyx_v_sim->dt * __pyx_v_eta) * (((((-(__pyx_v_pre[__pyx_v___j])) / __pyx_v_sim->dt) * (__pyx_v_y_fast[__pyx_v___i])) * (__pyx_v_A2_minus_eff + (__pyx_v_A3_minus * (__pyx_v_x_slow[__pyx_v___j])))) + ((((__pyx_v_post[__pyx_v___i]) / __pyx_v_sim->dt) * (__pyx_v_x_fast[__pyx_v___j])) * (__pyx_v_A2_plus + (__pyx_v_A3_plus * (__pyx_v_y_slow[__pyx_v___i])))))));
+      __pyx_t_12 = __pyx_v___wi;
+      __pyx_t_1 = PyFloat_FromDouble((__pyx_v_rho[__pyx_t_12])); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 143; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_2 = PyFloat_FromDouble(__pyx_v_sim->dt); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 143; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_2);
+
+      /* "plasticnet\connections\Miller2014.pyx":144
+ * 
+ *                 rho[__wi]+=sim.dt*(
+ *                     truncate(self.rho_max-rho[__wi])*truncate(X[__j]*Y[__i]-self.theta) -             # <<<<<<<<<<<<<<
+ *                     truncate(rho[__wi]-self.rho_min)*truncate(self.theta-X[__j]*Y[__i])
+ *                 )
+ */
+      __pyx_t_4 = __pyx_f_10plasticnet_11connections_10Miller2014_truncate((__pyx_v_self->rho_max - (__pyx_v_rho[__pyx_v___wi]))); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_4);
+      __pyx_t_7 = __pyx_f_10plasticnet_11connections_10Miller2014_truncate((((__pyx_v_X[__pyx_v___j]) * (__pyx_v_Y[__pyx_v___i])) - __pyx_v_self->theta)); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_3 = PyNumber_Multiply(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+
+      /* "plasticnet\connections\Miller2014.pyx":145
+ *                 rho[__wi]+=sim.dt*(
+ *                     truncate(self.rho_max-rho[__wi])*truncate(X[__j]*Y[__i]-self.theta) -
+ *                     truncate(rho[__wi]-self.rho_min)*truncate(self.theta-X[__j]*Y[__i])             # <<<<<<<<<<<<<<
+ *                 )
+ * 
+ */
+      __pyx_t_7 = __pyx_f_10plasticnet_11connections_10Miller2014_truncate(((__pyx_v_rho[__pyx_v___wi]) - __pyx_v_self->rho_min)); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_4 = __pyx_f_10plasticnet_11connections_10Miller2014_truncate((__pyx_v_self->theta - ((__pyx_v_X[__pyx_v___j]) * (__pyx_v_Y[__pyx_v___i])))); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_4);
+      __pyx_t_5 = PyNumber_Multiply(__pyx_t_7, __pyx_t_4); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+
+      /* "plasticnet\connections\Miller2014.pyx":144
+ * 
+ *                 rho[__wi]+=sim.dt*(
+ *                     truncate(self.rho_max-rho[__wi])*truncate(X[__j]*Y[__i]-self.theta) -             # <<<<<<<<<<<<<<
+ *                     truncate(rho[__wi]-self.rho_min)*truncate(self.theta-X[__j]*Y[__i])
+ *                 )
+ */
+      __pyx_t_4 = PyNumber_Subtract(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+
+      /* "plasticnet\connections\Miller2014.pyx":143
+ *                 __wi=__i*self.pre.N+__j
+ * 
+ *                 rho[__wi]+=sim.dt*(             # <<<<<<<<<<<<<<
+ *                     truncate(self.rho_max-rho[__wi])*truncate(X[__j]*Y[__i]-self.theta) -
+ *                     truncate(rho[__wi]-self.rho_min)*truncate(self.theta-X[__j]*Y[__i])
+ */
+      __pyx_t_5 = PyNumber_Multiply(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 143; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __pyx_t_4 = PyNumber_InPlaceAdd(__pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 143; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 143; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      (__pyx_v_rho[__pyx_t_12]) = __pyx_t_13;
+
+      /* "plasticnet\connections\Miller2014.pyx":148
+ *                 )
+ * 
+ *                 W[__wi]=rho[__wi]*H[__i]             # <<<<<<<<<<<<<<
+ * 
+ *         for __i in range(self.post.N):
+ */
+      (__pyx_v_W[__pyx_v___wi]) = ((__pyx_v_rho[__pyx_v___wi]) * (__pyx_v_H[__pyx_v___i]));
     }
   }
 
-  /* "splikes\connections\Triplet.pyx":167
- *                 __wi=__i*self.pre.N+__j
- *                 W[__wi]+=sim.dt*eta*(-pre[__j]/sim.dt*y_fast[__i]*(A2_minus_eff+A3_minus*x_slow[__j])+post[__i]/sim.dt*x_fast[__j]*(A2_plus+A3_plus*y_slow[__i]))
- *         for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
- *             x_slow[__j]+=sim.dt*(-x_slow[__j]/tau_x_slow+pre[__j]/sim.dt)
- *         for __i in range(self.post.N):
- */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.__pyx_base.pre->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___j = __pyx_t_11;
-
-    /* "splikes\connections\Triplet.pyx":168
- *                 W[__wi]+=sim.dt*eta*(-pre[__j]/sim.dt*y_fast[__i]*(A2_minus_eff+A3_minus*x_slow[__j])+post[__i]/sim.dt*x_fast[__j]*(A2_plus+A3_plus*y_slow[__i]))
- *         for __j in range(self.pre.N):
- *             x_slow[__j]+=sim.dt*(-x_slow[__j]/tau_x_slow+pre[__j]/sim.dt)             # <<<<<<<<<<<<<<
- *         for __i in range(self.post.N):
- *             y_slow[__i]+=sim.dt*(-y_slow[__i]/tau_y_slow+post[__i]/sim.dt)
- */
-    __pyx_t_12 = __pyx_v___j;
-    (__pyx_v_x_slow[__pyx_t_12]) = ((__pyx_v_x_slow[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_x_slow[__pyx_v___j])) / __pyx_v_tau_x_slow) + ((__pyx_v_pre[__pyx_v___j]) / __pyx_v_sim->dt))));
-  }
-
-  /* "splikes\connections\Triplet.pyx":169
- *         for __j in range(self.pre.N):
- *             x_slow[__j]+=sim.dt*(-x_slow[__j]/tau_x_slow+pre[__j]/sim.dt)
+  /* "plasticnet\connections\Miller2014.pyx":150
+ *                 W[__wi]=rho[__wi]*H[__i]
+ * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
- *             y_slow[__i]+=sim.dt*(-y_slow[__i]/tau_y_slow+post[__i]/sim.dt)
+ *             H[__i]+=sim.dt*H[__i]*(1-Y[__i]/self.yo)/self.tau_H
  * 
  */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.__pyx_base.post->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___i = __pyx_t_11;
+  __pyx_t_8 = __pyx_v_self->__pyx_base.post->N;
+  for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
+    __pyx_v___i = __pyx_t_9;
 
-    /* "splikes\connections\Triplet.pyx":170
- *             x_slow[__j]+=sim.dt*(-x_slow[__j]/tau_x_slow+pre[__j]/sim.dt)
- *         for __i in range(self.post.N):
- *             y_slow[__i]+=sim.dt*(-y_slow[__i]/tau_y_slow+post[__i]/sim.dt)             # <<<<<<<<<<<<<<
+    /* "plasticnet\connections\Miller2014.pyx":151
  * 
- *         self.apply_weight_limits()
+ *         for __i in range(self.post.N):
+ *             H[__i]+=sim.dt*H[__i]*(1-Y[__i]/self.yo)/self.tau_H             # <<<<<<<<<<<<<<
+ * 
+ * 
  */
-    __pyx_t_12 = __pyx_v___i;
-    (__pyx_v_y_slow[__pyx_t_12]) = ((__pyx_v_y_slow[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_y_slow[__pyx_v___i])) / __pyx_v_tau_y_slow) + ((__pyx_v_post[__pyx_v___i]) / __pyx_v_sim->dt))));
+    __pyx_t_10 = __pyx_v___i;
+    (__pyx_v_H[__pyx_t_10]) = ((__pyx_v_H[__pyx_t_10]) + (((__pyx_v_sim->dt * (__pyx_v_H[__pyx_v___i])) * (1.0 - ((__pyx_v_Y[__pyx_v___i]) / __pyx_v_self->yo))) / __pyx_v_self->tau_H));
   }
 
-  /* "splikes\connections\Triplet.pyx":172
- *             y_slow[__i]+=sim.dt*(-y_slow[__i]/tau_y_slow+post[__i]/sim.dt)
- * 
- *         self.apply_weight_limits()             # <<<<<<<<<<<<<<
- * 
- * 
- */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_7Triplet_Triplet_BCM *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->__pyx_base.__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "splikes\connections\Triplet.pyx":116
+  /* "plasticnet\connections\Miller2014.pyx":126
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -4589,7 +4670,7 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM_update(st
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -4598,10 +4679,10 @@ static PyObject *__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM_update(st
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_t;
-  struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim = 0;
+  struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -4628,11 +4709,11 @@ static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5update(
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -4640,19 +4721,19 @@ static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5update(
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_sim = ((struct __pyx_obj_7splikes_7splikes_simulation *)values[1]);
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_sim = ((struct __pyx_obj_10plasticnet_10plasticnet_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_4update(((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_4update(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
   goto __pyx_L0;
@@ -4663,7 +4744,7 @@ static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5update(
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_4update(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_4update(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4672,7 +4753,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_4update(
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4681,7 +4762,7 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_4update(
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -4689,34 +4770,702 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_4update(
   return __pyx_r;
 }
 
-/* "splikes\connections\Triplet.pyx":100
+/* "plasticnet\connections\Miller2014.pyx":80
+ * cdef class Miller2014_Eq5(connection):
  * 
- * cdef class Triplet_BCM(Gerstner2006):
- *     cdef public np.ndarray y2,theta             # <<<<<<<<<<<<<<
- *     cdef public double tau_y2,y2_o
+ *     cdef public double tau_rho,tau_H,theta             # <<<<<<<<<<<<<<
+ *     cdef public double rho_max,rho_min,yo
+ *     cdef public np.ndarray rho,H
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7tau_rho_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7tau_rho_1__get__(PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7tau_rho___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7tau_rho___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__get__", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_rho); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.tau_rho.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7tau_rho_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7tau_rho_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7tau_rho_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7tau_rho_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  double __pyx_t_1;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__set__", 0);
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_self->tau_rho = __pyx_t_1;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.tau_rho.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5tau_H_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5tau_H_1__get__(PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5tau_H___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5tau_H___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__get__", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_H); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.tau_H.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5tau_H_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5tau_H_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5tau_H_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5tau_H_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  double __pyx_t_1;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__set__", 0);
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_self->tau_H = __pyx_t_1;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.tau_H.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5theta_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5theta_1__get__(PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5theta___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5theta___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__get__", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->theta); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.theta.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5theta_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5theta_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5theta_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5theta_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  double __pyx_t_1;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__set__", 0);
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_self->theta = __pyx_t_1;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.theta.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "plasticnet\connections\Miller2014.pyx":81
+ * 
+ *     cdef public double tau_rho,tau_H,theta
+ *     cdef public double rho_max,rho_min,yo             # <<<<<<<<<<<<<<
+ *     cdef public np.ndarray rho,H
+ *     cdef public np.ndarray initial_rho,initial_H
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_max_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_max_1__get__(PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_max___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_max___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__get__", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->rho_max); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.rho_max.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_max_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_max_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_max_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_max_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  double __pyx_t_1;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__set__", 0);
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_self->rho_max = __pyx_t_1;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.rho_max.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_min_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_min_1__get__(PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_min___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_min___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__get__", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->rho_min); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.rho_min.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_min_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_min_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_min_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_min_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  double __pyx_t_1;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__set__", 0);
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_self->rho_min = __pyx_t_1;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.rho_min.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_2yo_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_2yo_1__get__(PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_2yo___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_2yo___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__get__", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->yo); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.yo.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_2yo_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_2yo_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_2yo_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_2yo_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  double __pyx_t_1;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__set__", 0);
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_self->yo = __pyx_t_1;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.yo.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "plasticnet\connections\Miller2014.pyx":82
+ *     cdef public double tau_rho,tau_H,theta
+ *     cdef public double rho_max,rho_min,yo
+ *     cdef public np.ndarray rho,H             # <<<<<<<<<<<<<<
+ *     cdef public np.ndarray initial_rho,initial_H
+ *     cdef public object initial_rho_range,initial_H_range
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho_1__get__(PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __Pyx_INCREF(((PyObject *)__pyx_v_self->rho));
+  __pyx_r = ((PyObject *)__pyx_v_self->rho);
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__set__", 0);
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_v_value;
+  __Pyx_INCREF(__pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_1);
+  __Pyx_GOTREF(__pyx_v_self->rho);
+  __Pyx_DECREF(((PyObject *)__pyx_v_self->rho));
+  __pyx_v_self->rho = ((PyArrayObject *)__pyx_t_1);
+  __pyx_t_1 = 0;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.rho.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho_5__del__(PyObject *__pyx_v_self); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho_5__del__(PyObject *__pyx_v_self) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho_4__del__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__del__", 0);
+  __Pyx_INCREF(Py_None);
+  __Pyx_GIVEREF(Py_None);
+  __Pyx_GOTREF(__pyx_v_self->rho);
+  __Pyx_DECREF(((PyObject *)__pyx_v_self->rho));
+  __pyx_v_self->rho = ((PyArrayObject *)Py_None);
+
+  /* function exit code */
+  __pyx_r = 0;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H_1__get__(PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __Pyx_INCREF(((PyObject *)__pyx_v_self->H));
+  __pyx_r = ((PyObject *)__pyx_v_self->H);
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("__set__", 0);
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_v_value;
+  __Pyx_INCREF(__pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_1);
+  __Pyx_GOTREF(__pyx_v_self->H);
+  __Pyx_DECREF(((PyObject *)__pyx_v_self->H));
+  __pyx_v_self->H = ((PyArrayObject *)__pyx_t_1);
+  __pyx_t_1 = 0;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.H.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H_5__del__(PyObject *__pyx_v_self); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H_5__del__(PyObject *__pyx_v_self) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H_4__del__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__del__", 0);
+  __Pyx_INCREF(Py_None);
+  __Pyx_GIVEREF(Py_None);
+  __Pyx_GOTREF(__pyx_v_self->H);
+  __Pyx_DECREF(((PyObject *)__pyx_v_self->H));
+  __pyx_v_self->H = ((PyArrayObject *)Py_None);
+
+  /* function exit code */
+  __pyx_r = 0;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "plasticnet\connections\Miller2014.pyx":83
+ *     cdef public double rho_max,rho_min,yo
+ *     cdef public np.ndarray rho,H
+ *     cdef public np.ndarray initial_rho,initial_H             # <<<<<<<<<<<<<<
+ *     cdef public object initial_rho_range,initial_H_range
  * 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2y2___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2y2___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_INCREF(((PyObject *)__pyx_v_self->y2));
-  __pyx_r = ((PyObject *)__pyx_v_self->y2);
+  __Pyx_INCREF(((PyObject *)__pyx_v_self->initial_rho));
+  __pyx_r = ((PyObject *)__pyx_v_self->initial_rho);
   goto __pyx_L0;
 
   /* function exit code */
@@ -4727,19 +5476,19 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2y2___ge
 }
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4747,13 +5496,13 @@ static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_2__set__(s
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
-  __Pyx_GOTREF(__pyx_v_self->y2);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->y2));
-  __pyx_v_self->y2 = ((PyArrayObject *)__pyx_t_1);
+  __Pyx_GOTREF(__pyx_v_self->initial_rho);
+  __Pyx_DECREF(((PyObject *)__pyx_v_self->initial_rho));
+  __pyx_v_self->initial_rho = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
   /* function exit code */
@@ -4761,7 +5510,7 @@ static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_2__set__(s
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM.y2.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.initial_rho.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -4769,27 +5518,27 @@ static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_2__set__(s
 }
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_5__del__(PyObject *__pyx_v_self); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_5__del__(PyObject *__pyx_v_self) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho_5__del__(PyObject *__pyx_v_self); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho_5__del__(PyObject *__pyx_v_self) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_4__del__(((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho_4__del__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_4__del__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__del__", 0);
   __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(Py_None);
-  __Pyx_GOTREF(__pyx_v_self->y2);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->y2));
-  __pyx_v_self->y2 = ((PyArrayObject *)Py_None);
+  __Pyx_GOTREF(__pyx_v_self->initial_rho);
+  __Pyx_DECREF(((PyObject *)__pyx_v_self->initial_rho));
+  __pyx_v_self->initial_rho = ((PyArrayObject *)Py_None);
 
   /* function exit code */
   __pyx_r = 0;
@@ -4798,25 +5547,25 @@ static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_4__del__(s
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_5theta___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_5theta___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_INCREF(((PyObject *)__pyx_v_self->theta));
-  __pyx_r = ((PyObject *)__pyx_v_self->theta);
+  __Pyx_INCREF(((PyObject *)__pyx_v_self->initial_H));
+  __pyx_r = ((PyObject *)__pyx_v_self->initial_H);
   goto __pyx_L0;
 
   /* function exit code */
@@ -4827,19 +5576,19 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_5theta__
 }
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4847,13 +5596,13 @@ static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_2__set_
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
-  __Pyx_GOTREF(__pyx_v_self->theta);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->theta));
-  __pyx_v_self->theta = ((PyArrayObject *)__pyx_t_1);
+  __Pyx_GOTREF(__pyx_v_self->initial_H);
+  __Pyx_DECREF(((PyObject *)__pyx_v_self->initial_H));
+  __pyx_v_self->initial_H = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
   /* function exit code */
@@ -4861,7 +5610,7 @@ static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_2__set_
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM.theta.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("plasticnet.connections.Miller2014.Miller2014_Eq5.initial_H.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -4869,27 +5618,27 @@ static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_2__set_
 }
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_5__del__(PyObject *__pyx_v_self); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_5__del__(PyObject *__pyx_v_self) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H_5__del__(PyObject *__pyx_v_self); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H_5__del__(PyObject *__pyx_v_self) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_4__del__(((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H_4__del__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_4__del__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__del__", 0);
   __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(Py_None);
-  __Pyx_GOTREF(__pyx_v_self->theta);
-  __Pyx_DECREF(((PyObject *)__pyx_v_self->theta));
-  __pyx_v_self->theta = ((PyArrayObject *)Py_None);
+  __Pyx_GOTREF(__pyx_v_self->initial_H);
+  __Pyx_DECREF(((PyObject *)__pyx_v_self->initial_H));
+  __pyx_v_self->initial_H = ((PyArrayObject *)Py_None);
 
   /* function exit code */
   __pyx_r = 0;
@@ -4897,47 +5646,37 @@ static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_4__del_
   return __pyx_r;
 }
 
-/* "splikes\connections\Triplet.pyx":101
- * cdef class Triplet_BCM(Gerstner2006):
- *     cdef public np.ndarray y2,theta
- *     cdef public double tau_y2,y2_o             # <<<<<<<<<<<<<<
+/* "plasticnet\connections\Miller2014.pyx":84
+ *     cdef public np.ndarray rho,H
+ *     cdef public np.ndarray initial_rho,initial_H
+ *     cdef public object initial_rho_range,initial_H_range             # <<<<<<<<<<<<<<
  * 
  *     cpdef _reset(self):
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_6tau_y2_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_6tau_y2_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_6tau_y2___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_6tau_y2___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_y2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
+  __Pyx_INCREF(__pyx_v_self->initial_rho_range);
+  __pyx_r = __pyx_v_self->initial_rho_range;
   goto __pyx_L0;
 
   /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM.tau_y2.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
@@ -4945,73 +5684,86 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_6tau_y2_
 }
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_6tau_y2_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_6tau_y2_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_6tau_y2_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_6tau_y2_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
-  double __pyx_t_1;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->tau_y2 = __pyx_t_1;
+  __Pyx_INCREF(__pyx_v_value);
+  __Pyx_GIVEREF(__pyx_v_value);
+  __Pyx_GOTREF(__pyx_v_self->initial_rho_range);
+  __Pyx_DECREF(__pyx_v_self->initial_rho_range);
+  __pyx_v_self->initial_rho_range = __pyx_v_value;
 
   /* function exit code */
   __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM.tau_y2.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_4y2_o_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_4y2_o_1__get__(PyObject *__pyx_v_self) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range_5__del__(PyObject *__pyx_v_self); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range_5__del__(PyObject *__pyx_v_self) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range_4__del__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__del__", 0);
+  __Pyx_INCREF(Py_None);
+  __Pyx_GIVEREF(Py_None);
+  __Pyx_GOTREF(__pyx_v_self->initial_rho_range);
+  __Pyx_DECREF(__pyx_v_self->initial_rho_range);
+  __pyx_v_self->initial_rho_range = Py_None;
+
+  /* function exit code */
+  __pyx_r = 0;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_4y2_o___get__(((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range___get__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_4y2_o___get__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self) {
+static PyObject *__pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range___get__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->y2_o); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
+  __Pyx_INCREF(__pyx_v_self->initial_H_range);
+  __pyx_r = __pyx_v_self->initial_H_range;
   goto __pyx_L0;
 
   /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM.y2_o.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
@@ -5019,859 +5771,59 @@ static PyObject *__pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_4y2_o___
 }
 
 /* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_4y2_o_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_4y2_o_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_4y2_o_2__set__(((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range_2__set__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7splikes_11connections_7Triplet_11Triplet_BCM_4y2_o_2__set__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range_2__set__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
-  double __pyx_t_1;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_self->y2_o = __pyx_t_1;
+  __Pyx_INCREF(__pyx_v_value);
+  __Pyx_GIVEREF(__pyx_v_value);
+  __Pyx_GOTREF(__pyx_v_self->initial_H_range);
+  __Pyx_DECREF(__pyx_v_self->initial_H_range);
+  __pyx_v_self->initial_H_range = __pyx_v_value;
 
   /* function exit code */
   __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM.y2_o.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "splikes\connections\Triplet.pyx":179
- * 
- * cdef class Triplet_BCM_LawCooper(Triplet_BCM):
- *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):             # <<<<<<<<<<<<<<
- *         Triplet_BCM.__init__(self,pre,post,initial_weight_range,state)
- *         self.y2_o=19.2
- */
-
-/* Python wrapper */
-static int __pyx_pw_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_pre = 0;
-  struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_post = 0;
-  PyObject *__pyx_v_initial_weight_range = 0;
-  PyObject *__pyx_v_state = 0;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("__init__ (wrapper)", 0);
-  {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_pre,&__pyx_n_s_post,&__pyx_n_s_initial_weight_range,&__pyx_n_s_state,0};
-    PyObject* values[4] = {0,0,0,0};
-    values[2] = ((PyObject *)Py_None);
-    values[3] = ((PyObject *)Py_None);
-    if (unlikely(__pyx_kwds)) {
-      Py_ssize_t kw_args;
-      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
-      switch (pos_args) {
-        case  4: values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
-        case  3: values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
-        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
-        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
-        case  0: break;
-        default: goto __pyx_L5_argtuple_error;
-      }
-      kw_args = PyDict_Size(__pyx_kwds);
-      switch (pos_args) {
-        case  0:
-        if (likely((values[0] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_pre)) != 0)) kw_args--;
-        else goto __pyx_L5_argtuple_error;
-        case  1:
-        if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_post)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 4, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 179; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-        }
-        case  2:
-        if (kw_args > 0) {
-          PyObject* value = PyDict_GetItem(__pyx_kwds, __pyx_n_s_initial_weight_range);
-          if (value) { values[2] = value; kw_args--; }
-        }
-        case  3:
-        if (kw_args > 0) {
-          PyObject* value = PyDict_GetItem(__pyx_kwds, __pyx_n_s_state);
-          if (value) { values[3] = value; kw_args--; }
-        }
-      }
-      if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 179; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-      }
-    } else {
-      switch (PyTuple_GET_SIZE(__pyx_args)) {
-        case  4: values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
-        case  3: values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
-        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
-        values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
-        break;
-        default: goto __pyx_L5_argtuple_error;
-      }
-    }
-    __pyx_v_pre = ((struct __pyx_obj_7splikes_7splikes_neuron *)values[0]);
-    __pyx_v_post = ((struct __pyx_obj_7splikes_7splikes_neuron *)values[1]);
-    __pyx_v_initial_weight_range = values[2];
-    __pyx_v_state = values[3];
-  }
-  goto __pyx_L4_argument_unpacking_done;
-  __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 179; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-  __pyx_L3_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM_LawCooper.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __Pyx_RefNannyFinishContext();
-  return -1;
-  __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_7splikes_7splikes_neuron, 1, "pre", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 179; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 179; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper___init__(((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper *)__pyx_v_self), __pyx_v_pre, __pyx_v_post, __pyx_v_initial_weight_range, __pyx_v_state);
-
-  /* function exit code */
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static int __pyx_pf_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper___init__(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper *__pyx_v_self, struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_pre, struct __pyx_obj_7splikes_7splikes_neuron *__pyx_v_post, PyObject *__pyx_v_initial_weight_range, PyObject *__pyx_v_state) {
-  int __pyx_r;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
-  PyObject *__pyx_t_3 = NULL;
-  Py_ssize_t __pyx_t_4;
-  PyObject *__pyx_t_5 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("__init__", 0);
-
-  /* "splikes\connections\Triplet.pyx":180
- * cdef class Triplet_BCM_LawCooper(Triplet_BCM):
- *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):
- *         Triplet_BCM.__init__(self,pre,post,initial_weight_range,state)             # <<<<<<<<<<<<<<
- *         self.y2_o=19.2
- *         self.name='Triplet BCM LawCooper'
- */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)((PyObject*)__pyx_ptype_7splikes_11connections_7Triplet_Triplet_BCM)), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 180; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = NULL;
-  __pyx_t_4 = 0;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_3)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_3);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_2, function);
-      __pyx_t_4 = 1;
-    }
-  }
-  __pyx_t_5 = PyTuple_New(5+__pyx_t_4); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 180; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  if (__pyx_t_3) {
-    PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
-  }
-  __Pyx_INCREF(((PyObject *)__pyx_v_self));
-  PyTuple_SET_ITEM(__pyx_t_5, 0+__pyx_t_4, ((PyObject *)__pyx_v_self));
-  __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
-  __Pyx_INCREF(((PyObject *)__pyx_v_pre));
-  PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, ((PyObject *)__pyx_v_pre));
-  __Pyx_GIVEREF(((PyObject *)__pyx_v_pre));
-  __Pyx_INCREF(((PyObject *)__pyx_v_post));
-  PyTuple_SET_ITEM(__pyx_t_5, 2+__pyx_t_4, ((PyObject *)__pyx_v_post));
-  __Pyx_GIVEREF(((PyObject *)__pyx_v_post));
-  __Pyx_INCREF(__pyx_v_initial_weight_range);
-  PyTuple_SET_ITEM(__pyx_t_5, 3+__pyx_t_4, __pyx_v_initial_weight_range);
-  __Pyx_GIVEREF(__pyx_v_initial_weight_range);
-  __Pyx_INCREF(__pyx_v_state);
-  PyTuple_SET_ITEM(__pyx_t_5, 4+__pyx_t_4, __pyx_v_state);
-  __Pyx_GIVEREF(__pyx_v_state);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 180; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "splikes\connections\Triplet.pyx":181
- *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):
- *         Triplet_BCM.__init__(self,pre,post,initial_weight_range,state)
- *         self.y2_o=19.2             # <<<<<<<<<<<<<<
- *         self.name='Triplet BCM LawCooper'
- * 
- */
-  __pyx_v_self->__pyx_base.y2_o = 19.2;
-
-  /* "splikes\connections\Triplet.pyx":182
- *         Triplet_BCM.__init__(self,pre,post,initial_weight_range,state)
- *         self.y2_o=19.2
- *         self.name='Triplet BCM LawCooper'             # <<<<<<<<<<<<<<
- * 
- * 
- */
-  __Pyx_INCREF(__pyx_kp_s_Triplet_BCM_LawCooper);
-  __Pyx_GIVEREF(__pyx_kp_s_Triplet_BCM_LawCooper);
-  __Pyx_GOTREF(__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.name);
-  __Pyx_DECREF(__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.name);
-  __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.name = __pyx_kp_s_Triplet_BCM_LawCooper;
-
-  /* "splikes\connections\Triplet.pyx":179
- * 
- * cdef class Triplet_BCM_LawCooper(Triplet_BCM):
- *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):             # <<<<<<<<<<<<<<
- *         Triplet_BCM.__init__(self,pre,post,initial_weight_range,state)
- *         self.y2_o=19.2
- */
-
-  /* function exit code */
-  __pyx_r = 0;
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM_LawCooper.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "splikes\connections\Triplet.pyx":187
- *     @cython.cdivision(True)
- *     @cython.boundscheck(False) # turn of bounds-checking for entire function
- *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
- *         cdef int __i,__j
- * 
- */
-
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper_3update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper_update(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim, int __pyx_skip_dispatch) {
-  int __pyx_v___i;
-  int __pyx_v___j;
-  double *__pyx_v_y2;
-  double *__pyx_v_theta;
-  double __pyx_v_y2_val;
-  double *__pyx_v_y_fast;
-  double *__pyx_v_x_fast;
-  double *__pyx_v_y_slow;
-  double *__pyx_v_x_slow;
-  double __pyx_v_tau_x_slow;
-  double __pyx_v_tau_y_slow;
-  double __pyx_v_A3_minus;
-  double __pyx_v_A2_minus;
-  double __pyx_v_A3_plus_eff;
-  double __pyx_v_tau_y2;
-  double __pyx_v_y2_o;
-  double __pyx_v_tau_y_fast;
-  double __pyx_v_tau_x_fast;
-  double __pyx_v_A3_plus;
-  double __pyx_v_A2_plus;
-  double __pyx_v_eta;
-  double *__pyx_v_W;
-  CYTHON_UNUSED double *__pyx_v_post_rate;
-  CYTHON_UNUSED double *__pyx_v_pre_rate;
-  int *__pyx_v_pre;
-  int *__pyx_v_post;
-  int __pyx_v___wi;
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
-  PyObject *__pyx_t_3 = NULL;
-  PyObject *__pyx_t_4 = NULL;
-  PyObject *__pyx_t_5 = NULL;
-  Py_ssize_t __pyx_t_6;
-  PyObject *__pyx_t_7 = NULL;
-  double __pyx_t_8;
-  double *__pyx_t_9;
-  int __pyx_t_10;
-  int __pyx_t_11;
-  int __pyx_t_12;
-  int __pyx_t_13;
-  int __pyx_t_14;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("update", 0);
-  /* Check if called by wrapper */
-  if (unlikely(__pyx_skip_dispatch)) ;
-  /* Check if overridden in Python */
-  else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper_3update)) {
-      __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_1);
-      __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
-      __pyx_t_6 = 0;
-      if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_4))) {
-        __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
-        if (likely(__pyx_t_5)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-          __Pyx_INCREF(__pyx_t_5);
-          __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_4, function);
-          __pyx_t_6 = 1;
-        }
-      }
-      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_7);
-      if (__pyx_t_5) {
-        PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
-      }
-      PyTuple_SET_ITEM(__pyx_t_7, 0+__pyx_t_6, __pyx_t_3);
-      __Pyx_GIVEREF(__pyx_t_3);
-      __Pyx_INCREF(((PyObject *)__pyx_v_sim));
-      PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
-      __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
-      __pyx_t_3 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_r = __pyx_t_2;
-      __pyx_t_2 = 0;
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      goto __pyx_L0;
-    }
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  }
-
-  /* "splikes\connections\Triplet.pyx":190
- *         cdef int __i,__j
- * 
- *         cdef double *y2=<double *>self.y2.data             # <<<<<<<<<<<<<<
- *         cdef double *theta=<double *>self.theta.data
- *         cdef double y2_val
- */
-  __pyx_v_y2 = ((double *)__pyx_v_self->__pyx_base.y2->data);
-
-  /* "splikes\connections\Triplet.pyx":191
- * 
- *         cdef double *y2=<double *>self.y2.data
- *         cdef double *theta=<double *>self.theta.data             # <<<<<<<<<<<<<<
- *         cdef double y2_val
- *         cdef double *y_fast=<double *>self.y_fast.data
- */
-  __pyx_v_theta = ((double *)__pyx_v_self->__pyx_base.theta->data);
-
-  /* "splikes\connections\Triplet.pyx":193
- *         cdef double *theta=<double *>self.theta.data
- *         cdef double y2_val
- *         cdef double *y_fast=<double *>self.y_fast.data             # <<<<<<<<<<<<<<
- *         cdef double *x_fast=<double *>self.x_fast.data
- *         cdef double *y_slow=<double *>self.y_slow.data
- */
-  __pyx_v_y_fast = ((double *)__pyx_v_self->__pyx_base.__pyx_base.y_fast->data);
-
-  /* "splikes\connections\Triplet.pyx":194
- *         cdef double y2_val
- *         cdef double *y_fast=<double *>self.y_fast.data
- *         cdef double *x_fast=<double *>self.x_fast.data             # <<<<<<<<<<<<<<
- *         cdef double *y_slow=<double *>self.y_slow.data
- *         cdef double *x_slow=<double *>self.x_slow.data
- */
-  __pyx_v_x_fast = ((double *)__pyx_v_self->__pyx_base.__pyx_base.x_fast->data);
-
-  /* "splikes\connections\Triplet.pyx":195
- *         cdef double *y_fast=<double *>self.y_fast.data
- *         cdef double *x_fast=<double *>self.x_fast.data
- *         cdef double *y_slow=<double *>self.y_slow.data             # <<<<<<<<<<<<<<
- *         cdef double *x_slow=<double *>self.x_slow.data
- *         cdef double tau_x_slow=self.tau_x_slow
- */
-  __pyx_v_y_slow = ((double *)__pyx_v_self->__pyx_base.__pyx_base.y_slow->data);
-
-  /* "splikes\connections\Triplet.pyx":196
- *         cdef double *x_fast=<double *>self.x_fast.data
- *         cdef double *y_slow=<double *>self.y_slow.data
- *         cdef double *x_slow=<double *>self.x_slow.data             # <<<<<<<<<<<<<<
- *         cdef double tau_x_slow=self.tau_x_slow
- *         cdef double tau_y_slow=self.tau_y_slow
- */
-  __pyx_v_x_slow = ((double *)__pyx_v_self->__pyx_base.__pyx_base.x_slow->data);
-
-  /* "splikes\connections\Triplet.pyx":197
- *         cdef double *y_slow=<double *>self.y_slow.data
- *         cdef double *x_slow=<double *>self.x_slow.data
- *         cdef double tau_x_slow=self.tau_x_slow             # <<<<<<<<<<<<<<
- *         cdef double tau_y_slow=self.tau_y_slow
- *         cdef double A3_minus=self.A3_minus
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.__pyx_base.tau_x_slow;
-  __pyx_v_tau_x_slow = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":198
- *         cdef double *x_slow=<double *>self.x_slow.data
- *         cdef double tau_x_slow=self.tau_x_slow
- *         cdef double tau_y_slow=self.tau_y_slow             # <<<<<<<<<<<<<<
- *         cdef double A3_minus=self.A3_minus
- *         cdef double A2_minus=self.A2_minus
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.__pyx_base.tau_y_slow;
-  __pyx_v_tau_y_slow = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":199
- *         cdef double tau_x_slow=self.tau_x_slow
- *         cdef double tau_y_slow=self.tau_y_slow
- *         cdef double A3_minus=self.A3_minus             # <<<<<<<<<<<<<<
- *         cdef double A2_minus=self.A2_minus
- *         cdef double A3_plus_eff
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.__pyx_base.A3_minus;
-  __pyx_v_A3_minus = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":200
- *         cdef double tau_y_slow=self.tau_y_slow
- *         cdef double A3_minus=self.A3_minus
- *         cdef double A2_minus=self.A2_minus             # <<<<<<<<<<<<<<
- *         cdef double A3_plus_eff
- *         cdef double tau_y2=self.tau_y2
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.__pyx_base.A2_minus;
-  __pyx_v_A2_minus = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":202
- *         cdef double A2_minus=self.A2_minus
- *         cdef double A3_plus_eff
- *         cdef double tau_y2=self.tau_y2             # <<<<<<<<<<<<<<
- *         cdef double y2_o=self.y2_o
- *         cdef double tau_y_fast=self.tau_y_fast
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.tau_y2;
-  __pyx_v_tau_y2 = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":203
- *         cdef double A3_plus_eff
- *         cdef double tau_y2=self.tau_y2
- *         cdef double y2_o=self.y2_o             # <<<<<<<<<<<<<<
- *         cdef double tau_y_fast=self.tau_y_fast
- *         cdef double tau_x_fast=self.tau_x_fast
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.y2_o;
-  __pyx_v_y2_o = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":204
- *         cdef double tau_y2=self.tau_y2
- *         cdef double y2_o=self.y2_o
- *         cdef double tau_y_fast=self.tau_y_fast             # <<<<<<<<<<<<<<
- *         cdef double tau_x_fast=self.tau_x_fast
- *         cdef double A3_plus=self.A3_plus
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.__pyx_base.tau_y_fast;
-  __pyx_v_tau_y_fast = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":205
- *         cdef double y2_o=self.y2_o
- *         cdef double tau_y_fast=self.tau_y_fast
- *         cdef double tau_x_fast=self.tau_x_fast             # <<<<<<<<<<<<<<
- *         cdef double A3_plus=self.A3_plus
- *         cdef double A2_plus=self.A2_plus
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.__pyx_base.tau_x_fast;
-  __pyx_v_tau_x_fast = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":206
- *         cdef double tau_y_fast=self.tau_y_fast
- *         cdef double tau_x_fast=self.tau_x_fast
- *         cdef double A3_plus=self.A3_plus             # <<<<<<<<<<<<<<
- *         cdef double A2_plus=self.A2_plus
- *         cdef double eta=self.eta
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.__pyx_base.A3_plus;
-  __pyx_v_A3_plus = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":207
- *         cdef double tau_x_fast=self.tau_x_fast
- *         cdef double A3_plus=self.A3_plus
- *         cdef double A2_plus=self.A2_plus             # <<<<<<<<<<<<<<
- *         cdef double eta=self.eta
- * 
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.__pyx_base.A2_plus;
-  __pyx_v_A2_plus = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":208
- *         cdef double A3_plus=self.A3_plus
- *         cdef double A2_plus=self.A2_plus
- *         cdef double eta=self.eta             # <<<<<<<<<<<<<<
- * 
- *         cdef double *W=self.W
- */
-  __pyx_t_8 = __pyx_v_self->__pyx_base.__pyx_base.eta;
-  __pyx_v_eta = __pyx_t_8;
-
-  /* "splikes\connections\Triplet.pyx":210
- *         cdef double eta=self.eta
- * 
- *         cdef double *W=self.W             # <<<<<<<<<<<<<<
- *         cdef double *post_rate=<double *>self.post.rate.data
- *         cdef double *pre_rate=<double *>self.pre.rate.data
- */
-  __pyx_t_9 = __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.W;
-  __pyx_v_W = __pyx_t_9;
-
-  /* "splikes\connections\Triplet.pyx":211
- * 
- *         cdef double *W=self.W
- *         cdef double *post_rate=<double *>self.post.rate.data             # <<<<<<<<<<<<<<
- *         cdef double *pre_rate=<double *>self.pre.rate.data
- *         cdef int *pre,*post   # spikes for pre and post
- */
-  __pyx_v_post_rate = ((double *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.post->rate->data);
-
-  /* "splikes\connections\Triplet.pyx":212
- *         cdef double *W=self.W
- *         cdef double *post_rate=<double *>self.post.rate.data
- *         cdef double *pre_rate=<double *>self.pre.rate.data             # <<<<<<<<<<<<<<
- *         cdef int *pre,*post   # spikes for pre and post
- *         cdef int __wi
- */
-  __pyx_v_pre_rate = ((double *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.pre->rate->data);
-
-  /* "splikes\connections\Triplet.pyx":217
- * 
- * 
- *         pre=<int *>self.pre.spiking.data             # <<<<<<<<<<<<<<
- *         post=<int *>self.post.spiking.data
- * 
- */
-  __pyx_v_pre = ((int *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.pre->spiking->data);
-
-  /* "splikes\connections\Triplet.pyx":218
- * 
- *         pre=<int *>self.pre.spiking.data
- *         post=<int *>self.post.spiking.data             # <<<<<<<<<<<<<<
- * 
- *         for __j in range(self.pre.N):
- */
-  __pyx_v_post = ((int *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.post->spiking->data);
-
-  /* "splikes\connections\Triplet.pyx":220
- *         post=<int *>self.post.spiking.data
- * 
- *         for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
- *             x_fast[__j]+=sim.dt*(-x_fast[__j]/tau_x_fast+pre[__j]/sim.dt)
- *         for __i in range(self.post.N):
- */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.pre->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___j = __pyx_t_11;
-
-    /* "splikes\connections\Triplet.pyx":221
- * 
- *         for __j in range(self.pre.N):
- *             x_fast[__j]+=sim.dt*(-x_fast[__j]/tau_x_fast+pre[__j]/sim.dt)             # <<<<<<<<<<<<<<
- *         for __i in range(self.post.N):
- *             y_fast[__i]+=sim.dt*(-y_fast[__i]/tau_y_fast+post[__i]/sim.dt)
- */
-    __pyx_t_12 = __pyx_v___j;
-    (__pyx_v_x_fast[__pyx_t_12]) = ((__pyx_v_x_fast[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_x_fast[__pyx_v___j])) / __pyx_v_tau_x_fast) + ((__pyx_v_pre[__pyx_v___j]) / __pyx_v_sim->dt))));
-  }
-
-  /* "splikes\connections\Triplet.pyx":222
- *         for __j in range(self.pre.N):
- *             x_fast[__j]+=sim.dt*(-x_fast[__j]/tau_x_fast+pre[__j]/sim.dt)
- *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
- *             y_fast[__i]+=sim.dt*(-y_fast[__i]/tau_y_fast+post[__i]/sim.dt)
- * 
- */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.post->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___i = __pyx_t_11;
-
-    /* "splikes\connections\Triplet.pyx":223
- *             x_fast[__j]+=sim.dt*(-x_fast[__j]/tau_x_fast+pre[__j]/sim.dt)
- *         for __i in range(self.post.N):
- *             y_fast[__i]+=sim.dt*(-y_fast[__i]/tau_y_fast+post[__i]/sim.dt)             # <<<<<<<<<<<<<<
- * 
- *         for __i in range(self.post.N):
- */
-    __pyx_t_12 = __pyx_v___i;
-    (__pyx_v_y_fast[__pyx_t_12]) = ((__pyx_v_y_fast[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_y_fast[__pyx_v___i])) / __pyx_v_tau_y_fast) + ((__pyx_v_post[__pyx_v___i]) / __pyx_v_sim->dt))));
-  }
-
-  /* "splikes\connections\Triplet.pyx":225
- *             y_fast[__i]+=sim.dt*(-y_fast[__i]/tau_y_fast+post[__i]/sim.dt)
- * 
- *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
- *             y2_val=(y_slow[__i]/tau_y_slow)*(y_slow[__i]/tau_y_slow)
- *             y2[__i]+=sim.dt*(y2_val-y2[__i])/tau_y2
- */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.post->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___i = __pyx_t_11;
-
-    /* "splikes\connections\Triplet.pyx":226
- * 
- *         for __i in range(self.post.N):
- *             y2_val=(y_slow[__i]/tau_y_slow)*(y_slow[__i]/tau_y_slow)             # <<<<<<<<<<<<<<
- *             y2[__i]+=sim.dt*(y2_val-y2[__i])/tau_y2
- * 
- */
-    __pyx_v_y2_val = (((__pyx_v_y_slow[__pyx_v___i]) / __pyx_v_tau_y_slow) * ((__pyx_v_y_slow[__pyx_v___i]) / __pyx_v_tau_y_slow));
-
-    /* "splikes\connections\Triplet.pyx":227
- *         for __i in range(self.post.N):
- *             y2_val=(y_slow[__i]/tau_y_slow)*(y_slow[__i]/tau_y_slow)
- *             y2[__i]+=sim.dt*(y2_val-y2[__i])/tau_y2             # <<<<<<<<<<<<<<
- * 
- *         for __i in range(self.post.N):
- */
-    __pyx_t_12 = __pyx_v___i;
-    (__pyx_v_y2[__pyx_t_12]) = ((__pyx_v_y2[__pyx_t_12]) + ((__pyx_v_sim->dt * (__pyx_v_y2_val - (__pyx_v_y2[__pyx_v___i]))) / __pyx_v_tau_y2));
-  }
-
-  /* "splikes\connections\Triplet.pyx":229
- *             y2[__i]+=sim.dt*(y2_val-y2[__i])/tau_y2
- * 
- *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
- *             A3_plus_eff=A3_plus/(y2[__i]/y2_o+1e-4)
- *             theta[__i]=A2_minus*tau_y_fast/A3_plus_eff/tau_x_fast/tau_y_slow
- */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.post->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___i = __pyx_t_11;
-
-    /* "splikes\connections\Triplet.pyx":230
- * 
- *         for __i in range(self.post.N):
- *             A3_plus_eff=A3_plus/(y2[__i]/y2_o+1e-4)             # <<<<<<<<<<<<<<
- *             theta[__i]=A2_minus*tau_y_fast/A3_plus_eff/tau_x_fast/tau_y_slow
- * 
- */
-    __pyx_v_A3_plus_eff = (__pyx_v_A3_plus / (((__pyx_v_y2[__pyx_v___i]) / __pyx_v_y2_o) + 1e-4));
-
-    /* "splikes\connections\Triplet.pyx":231
- *         for __i in range(self.post.N):
- *             A3_plus_eff=A3_plus/(y2[__i]/y2_o+1e-4)
- *             theta[__i]=A2_minus*tau_y_fast/A3_plus_eff/tau_x_fast/tau_y_slow             # <<<<<<<<<<<<<<
- * 
- *             for __j in range(self.pre.N):
- */
-    (__pyx_v_theta[__pyx_v___i]) = ((((__pyx_v_A2_minus * __pyx_v_tau_y_fast) / __pyx_v_A3_plus_eff) / __pyx_v_tau_x_fast) / __pyx_v_tau_y_slow);
-
-    /* "splikes\connections\Triplet.pyx":233
- *             theta[__i]=A2_minus*tau_y_fast/A3_plus_eff/tau_x_fast/tau_y_slow
- * 
- *             for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
- *                 __wi=__i*self.pre.N+__j
- *                 W[__wi]+=sim.dt*eta*(-pre[__j]/sim.dt*y_fast[__i]*(A2_minus+A3_minus*x_slow[__j])+post[__i]/sim.dt*x_fast[__j]*(A2_plus+A3_plus_eff*y_slow[__i]))
- */
-    __pyx_t_12 = __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.pre->N;
-    for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
-      __pyx_v___j = __pyx_t_13;
-
-      /* "splikes\connections\Triplet.pyx":234
- * 
- *             for __j in range(self.pre.N):
- *                 __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
- *                 W[__wi]+=sim.dt*eta*(-pre[__j]/sim.dt*y_fast[__i]*(A2_minus+A3_minus*x_slow[__j])+post[__i]/sim.dt*x_fast[__j]*(A2_plus+A3_plus_eff*y_slow[__i]))
- * 
- */
-      __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.pre->N) + __pyx_v___j);
-
-      /* "splikes\connections\Triplet.pyx":235
- *             for __j in range(self.pre.N):
- *                 __wi=__i*self.pre.N+__j
- *                 W[__wi]+=sim.dt*eta*(-pre[__j]/sim.dt*y_fast[__i]*(A2_minus+A3_minus*x_slow[__j])+post[__i]/sim.dt*x_fast[__j]*(A2_plus+A3_plus_eff*y_slow[__i]))             # <<<<<<<<<<<<<<
- * 
- *         for __j in range(self.pre.N):
- */
-      __pyx_t_14 = __pyx_v___wi;
-      (__pyx_v_W[__pyx_t_14]) = ((__pyx_v_W[__pyx_t_14]) + ((__pyx_v_sim->dt * __pyx_v_eta) * (((((-(__pyx_v_pre[__pyx_v___j])) / __pyx_v_sim->dt) * (__pyx_v_y_fast[__pyx_v___i])) * (__pyx_v_A2_minus + (__pyx_v_A3_minus * (__pyx_v_x_slow[__pyx_v___j])))) + ((((__pyx_v_post[__pyx_v___i]) / __pyx_v_sim->dt) * (__pyx_v_x_fast[__pyx_v___j])) * (__pyx_v_A2_plus + (__pyx_v_A3_plus_eff * (__pyx_v_y_slow[__pyx_v___i])))))));
-    }
-  }
-
-  /* "splikes\connections\Triplet.pyx":237
- *                 W[__wi]+=sim.dt*eta*(-pre[__j]/sim.dt*y_fast[__i]*(A2_minus+A3_minus*x_slow[__j])+post[__i]/sim.dt*x_fast[__j]*(A2_plus+A3_plus_eff*y_slow[__i]))
- * 
- *         for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
- *             x_slow[__j]+=sim.dt*(-x_slow[__j]/tau_x_slow+pre[__j]/sim.dt)
- *         for __i in range(self.post.N):
- */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.pre->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___j = __pyx_t_11;
-
-    /* "splikes\connections\Triplet.pyx":238
- * 
- *         for __j in range(self.pre.N):
- *             x_slow[__j]+=sim.dt*(-x_slow[__j]/tau_x_slow+pre[__j]/sim.dt)             # <<<<<<<<<<<<<<
- *         for __i in range(self.post.N):
- *             y_slow[__i]+=sim.dt*(-y_slow[__i]/tau_y_slow+post[__i]/sim.dt)
- */
-    __pyx_t_12 = __pyx_v___j;
-    (__pyx_v_x_slow[__pyx_t_12]) = ((__pyx_v_x_slow[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_x_slow[__pyx_v___j])) / __pyx_v_tau_x_slow) + ((__pyx_v_pre[__pyx_v___j]) / __pyx_v_sim->dt))));
-  }
-
-  /* "splikes\connections\Triplet.pyx":239
- *         for __j in range(self.pre.N):
- *             x_slow[__j]+=sim.dt*(-x_slow[__j]/tau_x_slow+pre[__j]/sim.dt)
- *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
- *             y_slow[__i]+=sim.dt*(-y_slow[__i]/tau_y_slow+post[__i]/sim.dt)
- * 
- */
-  __pyx_t_10 = __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.post->N;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v___i = __pyx_t_11;
-
-    /* "splikes\connections\Triplet.pyx":240
- *             x_slow[__j]+=sim.dt*(-x_slow[__j]/tau_x_slow+pre[__j]/sim.dt)
- *         for __i in range(self.post.N):
- *             y_slow[__i]+=sim.dt*(-y_slow[__i]/tau_y_slow+post[__i]/sim.dt)             # <<<<<<<<<<<<<<
- * 
- *         self.apply_weight_limits()
- */
-    __pyx_t_12 = __pyx_v___i;
-    (__pyx_v_y_slow[__pyx_t_12]) = ((__pyx_v_y_slow[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_y_slow[__pyx_v___i])) / __pyx_v_tau_y_slow) + ((__pyx_v_post[__pyx_v___i]) / __pyx_v_sim->dt))));
-  }
-
-  /* "splikes\connections\Triplet.pyx":242
- *             y_slow[__i]+=sim.dt*(-y_slow[__i]/tau_y_slow+post[__i]/sim.dt)
- * 
- *         self.apply_weight_limits()             # <<<<<<<<<<<<<<
- * 
- */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->__pyx_base.__pyx_base.__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 242; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "splikes\connections\Triplet.pyx":187
- *     @cython.cdivision(True)
- *     @cython.boundscheck(False) # turn of bounds-checking for entire function
- *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
- *         cdef int __i,__j
- * 
- */
-
-  /* function exit code */
-  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM_LawCooper.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = 0;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper_3update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper_3update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  double __pyx_v_t;
-  struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim = 0;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  PyObject *__pyx_r = 0;
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range_5__del__(PyObject *__pyx_v_self); /*proto*/
+static int __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range_5__del__(PyObject *__pyx_v_self) {
+  int __pyx_r;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("update (wrapper)", 0);
-  {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_t,&__pyx_n_s_sim,0};
-    PyObject* values[2] = {0,0};
-    if (unlikely(__pyx_kwds)) {
-      Py_ssize_t kw_args;
-      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
-      switch (pos_args) {
-        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
-        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
-        case  0: break;
-        default: goto __pyx_L5_argtuple_error;
-      }
-      kw_args = PyDict_Size(__pyx_kwds);
-      switch (pos_args) {
-        case  0:
-        if (likely((values[0] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_t)) != 0)) kw_args--;
-        else goto __pyx_L5_argtuple_error;
-        case  1:
-        if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-        }
-      }
-      if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-      }
-    } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
-      goto __pyx_L5_argtuple_error;
-    } else {
-      values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
-      values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
-    }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_sim = ((struct __pyx_obj_7splikes_7splikes_simulation *)values[1]);
-  }
-  goto __pyx_L4_argument_unpacking_done;
-  __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-  __pyx_L3_error:;
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM_LawCooper.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __Pyx_RefNannyFinishContext();
-  return NULL;
-  __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper_2update(((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
+  __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range_4__del__(((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)__pyx_v_self));
 
   /* function exit code */
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __pyx_r = NULL;
-  __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper_2update(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_7splikes_7splikes_simulation *__pyx_v_sim) {
-  PyObject *__pyx_r = NULL;
+static int __pyx_pf_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range_4__del__(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *__pyx_v_self) {
+  int __pyx_r;
   __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("update", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
+  __Pyx_RefNannySetupContext("__del__", 0);
+  __Pyx_INCREF(Py_None);
+  __Pyx_GIVEREF(Py_None);
+  __Pyx_GOTREF(__pyx_v_self->initial_H_range);
+  __Pyx_DECREF(__pyx_v_self->initial_H_range);
+  __pyx_v_self->initial_H_range = Py_None;
 
   /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("splikes.connections.Triplet.Triplet_BCM_LawCooper.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
+  __pyx_r = 0;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
@@ -7877,82 +7829,74 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
-static struct __pyx_vtabstruct_7splikes_11connections_7Triplet_Gerstner2006 __pyx_vtable_7splikes_11connections_7Triplet_Gerstner2006;
+static struct __pyx_vtabstruct_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 __pyx_vtable_10plasticnet_11connections_10Miller2014_Miller2014_Eq3;
 
-static PyObject *__pyx_tp_new_7splikes_11connections_7Triplet_Gerstner2006(PyTypeObject *t, PyObject *a, PyObject *k) {
-  struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *p;
-  PyObject *o = __pyx_ptype_7splikes_7splikes_connection->tp_new(t, a, k);
+static PyObject *__pyx_tp_new_10plasticnet_11connections_10Miller2014_Miller2014_Eq3(PyTypeObject *t, PyObject *a, PyObject *k) {
+  struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *p;
+  PyObject *o = __pyx_ptype_10plasticnet_10plasticnet_connection->tp_new(t, a, k);
   if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)o);
-  p->__pyx_base.__pyx_vtab = (struct __pyx_vtabstruct_7splikes_7splikes_connection*)__pyx_vtabptr_7splikes_11connections_7Triplet_Gerstner2006;
-  p->y_fast = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
-  p->x_fast = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
-  p->y_slow = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
-  p->x_slow = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  p = ((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)o);
+  p->__pyx_base.__pyx_vtab = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection*)__pyx_vtabptr_10plasticnet_11connections_10Miller2014_Miller2014_Eq3;
+  p->y_bar = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  p->initial_y_bar = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  p->initial_y_bar_range = Py_None; Py_INCREF(Py_None);
   return o;
 }
 
-static void __pyx_tp_dealloc_7splikes_11connections_7Triplet_Gerstner2006(PyObject *o) {
-  struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *p = (struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)o;
+static void __pyx_tp_dealloc_10plasticnet_11connections_10Miller2014_Miller2014_Eq3(PyObject *o) {
+  struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *p = (struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)o;
   #if PY_VERSION_HEX >= 0x030400a1
   if (unlikely(Py_TYPE(o)->tp_finalize) && !_PyGC_FINALIZED(o)) {
     if (PyObject_CallFinalizerFromDealloc(o)) return;
   }
   #endif
   PyObject_GC_UnTrack(o);
-  Py_CLEAR(p->y_fast);
-  Py_CLEAR(p->x_fast);
-  Py_CLEAR(p->y_slow);
-  Py_CLEAR(p->x_slow);
+  Py_CLEAR(p->y_bar);
+  Py_CLEAR(p->initial_y_bar);
+  Py_CLEAR(p->initial_y_bar_range);
   PyObject_GC_Track(o);
-  if (likely(__pyx_ptype_7splikes_7splikes_connection)) __pyx_ptype_7splikes_7splikes_connection->tp_dealloc(o); else __Pyx_call_next_tp_dealloc(o, __pyx_tp_dealloc_7splikes_11connections_7Triplet_Gerstner2006);
+  if (likely(__pyx_ptype_10plasticnet_10plasticnet_connection)) __pyx_ptype_10plasticnet_10plasticnet_connection->tp_dealloc(o); else __Pyx_call_next_tp_dealloc(o, __pyx_tp_dealloc_10plasticnet_11connections_10Miller2014_Miller2014_Eq3);
 }
 
-static int __pyx_tp_traverse_7splikes_11connections_7Triplet_Gerstner2006(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_10plasticnet_11connections_10Miller2014_Miller2014_Eq3(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *p = (struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)o;
-  e = ((likely(__pyx_ptype_7splikes_7splikes_connection)) ? ((__pyx_ptype_7splikes_7splikes_connection->tp_traverse) ? __pyx_ptype_7splikes_7splikes_connection->tp_traverse(o, v, a) : 0) : __Pyx_call_next_tp_traverse(o, v, a, __pyx_tp_traverse_7splikes_11connections_7Triplet_Gerstner2006)); if (e) return e;
-  if (p->y_fast) {
-    e = (*v)(((PyObject*)p->y_fast), a); if (e) return e;
+  struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *p = (struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)o;
+  e = ((likely(__pyx_ptype_10plasticnet_10plasticnet_connection)) ? ((__pyx_ptype_10plasticnet_10plasticnet_connection->tp_traverse) ? __pyx_ptype_10plasticnet_10plasticnet_connection->tp_traverse(o, v, a) : 0) : __Pyx_call_next_tp_traverse(o, v, a, __pyx_tp_traverse_10plasticnet_11connections_10Miller2014_Miller2014_Eq3)); if (e) return e;
+  if (p->y_bar) {
+    e = (*v)(((PyObject*)p->y_bar), a); if (e) return e;
   }
-  if (p->x_fast) {
-    e = (*v)(((PyObject*)p->x_fast), a); if (e) return e;
+  if (p->initial_y_bar) {
+    e = (*v)(((PyObject*)p->initial_y_bar), a); if (e) return e;
   }
-  if (p->y_slow) {
-    e = (*v)(((PyObject*)p->y_slow), a); if (e) return e;
-  }
-  if (p->x_slow) {
-    e = (*v)(((PyObject*)p->x_slow), a); if (e) return e;
+  if (p->initial_y_bar_range) {
+    e = (*v)(p->initial_y_bar_range, a); if (e) return e;
   }
   return 0;
 }
 
-static int __pyx_tp_clear_7splikes_11connections_7Triplet_Gerstner2006(PyObject *o) {
+static int __pyx_tp_clear_10plasticnet_11connections_10Miller2014_Miller2014_Eq3(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *p = (struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006 *)o;
-  if (likely(__pyx_ptype_7splikes_7splikes_connection)) { if (__pyx_ptype_7splikes_7splikes_connection->tp_clear) __pyx_ptype_7splikes_7splikes_connection->tp_clear(o); } else __Pyx_call_next_tp_clear(o, __pyx_tp_clear_7splikes_11connections_7Triplet_Gerstner2006);
-  tmp = ((PyObject*)p->y_fast);
-  p->y_fast = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *p = (struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 *)o;
+  if (likely(__pyx_ptype_10plasticnet_10plasticnet_connection)) { if (__pyx_ptype_10plasticnet_10plasticnet_connection->tp_clear) __pyx_ptype_10plasticnet_10plasticnet_connection->tp_clear(o); } else __Pyx_call_next_tp_clear(o, __pyx_tp_clear_10plasticnet_11connections_10Miller2014_Miller2014_Eq3);
+  tmp = ((PyObject*)p->y_bar);
+  p->y_bar = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
-  tmp = ((PyObject*)p->x_fast);
-  p->x_fast = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  tmp = ((PyObject*)p->initial_y_bar);
+  p->initial_y_bar = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
-  tmp = ((PyObject*)p->y_slow);
-  p->y_slow = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
-  Py_XDECREF(tmp);
-  tmp = ((PyObject*)p->x_slow);
-  p->x_slow = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  tmp = ((PyObject*)p->initial_y_bar_range);
+  p->initial_y_bar_range = Py_None; Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   return 0;
 }
 
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_x_slow(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_slow_1__get__(o);
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_tau_w(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_w_1__get__(o);
 }
 
-static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_x_slow(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_tau_w(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_slow_3__set__(o, v);
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_w_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -7960,13 +7904,13 @@ static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_x_sl
   }
 }
 
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_y_slow(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_slow_1__get__(o);
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_gamma(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5gamma_1__get__(o);
 }
 
-static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_y_slow(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_gamma(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_slow_3__set__(o, v);
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5gamma_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -7974,13 +7918,13 @@ static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_y_sl
   }
 }
 
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_A3_minus(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_8A3_minus_1__get__(o);
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_tau_y(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_y_1__get__(o);
 }
 
-static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_A3_minus(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_tau_y(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_8A3_minus_3__set__(o, v);
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5tau_y_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -7988,13 +7932,13 @@ static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_A3_minus
   }
 }
 
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_A2_minus(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_8A2_minus_1__get__(o);
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_theta(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5theta_1__get__(o);
 }
 
-static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_A2_minus(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_theta(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_8A2_minus_3__set__(o, v);
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5theta_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -8002,13 +7946,13 @@ static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_A2_minus
   }
 }
 
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_y_fast(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_fast_1__get__(o);
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_w_max(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_max_1__get__(o);
 }
 
-static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_y_fast(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_w_max(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_y_fast_3__set__(o, v);
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_max_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -8016,13 +7960,13 @@ static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_y_fa
   }
 }
 
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_x_fast(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_fast_1__get__(o);
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_w_min(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_min_1__get__(o);
 }
 
-static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_x_fast(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_w_min(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_10tau_x_fast_3__set__(o, v);
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5w_min_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -8030,13 +7974,13 @@ static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_x_fa
   }
 }
 
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_A3_plus(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_7A3_plus_1__get__(o);
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_yo(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_2yo_1__get__(o);
 }
 
-static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_A3_plus(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_yo(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_7A3_plus_3__set__(o, v);
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_2yo_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -8044,115 +7988,71 @@ static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_A3_plus(
   }
 }
 
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_A2_plus(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_7A2_plus_1__get__(o);
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_y_bar(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar_1__get__(o);
 }
 
-static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_A2_plus(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_y_bar(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_7A2_plus_3__set__(o, v);
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar_3__set__(o, v);
   }
   else {
-    PyErr_SetString(PyExc_NotImplementedError, "__del__");
-    return -1;
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5y_bar_5__del__(o);
   }
 }
 
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_eta(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_3eta_1__get__(o);
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_initial_y_bar(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar_1__get__(o);
 }
 
-static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_eta(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_initial_y_bar(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_3eta_3__set__(o, v);
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar_3__set__(o, v);
   }
   else {
-    PyErr_SetString(PyExc_NotImplementedError, "__del__");
-    return -1;
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_13initial_y_bar_5__del__(o);
   }
 }
 
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_y_fast(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast_1__get__(o);
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_initial_y_bar_range(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range_1__get__(o);
 }
 
-static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_y_fast(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_initial_y_bar_range(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast_3__set__(o, v);
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range_3__set__(o, v);
   }
   else {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_fast_5__del__(o);
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_19initial_y_bar_range_5__del__(o);
   }
 }
 
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_x_fast(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast_1__get__(o);
-}
-
-static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_x_fast(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
-  if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast_3__set__(o, v);
-  }
-  else {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_fast_5__del__(o);
-  }
-}
-
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_y_slow(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow_1__get__(o);
-}
-
-static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_y_slow(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
-  if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow_3__set__(o, v);
-  }
-  else {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6y_slow_5__del__(o);
-  }
-}
-
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_x_slow(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow_1__get__(o);
-}
-
-static int __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_x_slow(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
-  if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow_3__set__(o, v);
-  }
-  else {
-    return __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_6x_slow_5__del__(o);
-  }
-}
-
-static PyMethodDef __pyx_methods_7splikes_11connections_7Triplet_Gerstner2006[] = {
-  {"_reset", (PyCFunction)__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_1_reset, METH_NOARGS, 0},
-  {"update", (PyCFunction)__pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_5update, METH_VARARGS|METH_KEYWORDS, 0},
+static PyMethodDef __pyx_methods_10plasticnet_11connections_10Miller2014_Miller2014_Eq3[] = {
+  {"_reset", (PyCFunction)__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_1_reset, METH_NOARGS, 0},
+  {"update", (PyCFunction)__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_5update, METH_VARARGS|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 
-static struct PyGetSetDef __pyx_getsets_7splikes_11connections_7Triplet_Gerstner2006[] = {
-  {(char *)"tau_x_slow", __pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_x_slow, __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_x_slow, 0, 0},
-  {(char *)"tau_y_slow", __pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_y_slow, __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_y_slow, 0, 0},
-  {(char *)"A3_minus", __pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_A3_minus, __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_A3_minus, 0, 0},
-  {(char *)"A2_minus", __pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_A2_minus, __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_A2_minus, 0, 0},
-  {(char *)"tau_y_fast", __pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_y_fast, __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_y_fast, 0, 0},
-  {(char *)"tau_x_fast", __pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_x_fast, __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_tau_x_fast, 0, 0},
-  {(char *)"A3_plus", __pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_A3_plus, __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_A3_plus, 0, 0},
-  {(char *)"A2_plus", __pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_A2_plus, __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_A2_plus, 0, 0},
-  {(char *)"eta", __pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_eta, __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_eta, 0, 0},
-  {(char *)"y_fast", __pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_y_fast, __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_y_fast, 0, 0},
-  {(char *)"x_fast", __pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_x_fast, __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_x_fast, 0, 0},
-  {(char *)"y_slow", __pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_y_slow, __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_y_slow, 0, 0},
-  {(char *)"x_slow", __pyx_getprop_7splikes_11connections_7Triplet_12Gerstner2006_x_slow, __pyx_setprop_7splikes_11connections_7Triplet_12Gerstner2006_x_slow, 0, 0},
+static struct PyGetSetDef __pyx_getsets_10plasticnet_11connections_10Miller2014_Miller2014_Eq3[] = {
+  {(char *)"tau_w", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_tau_w, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_tau_w, 0, 0},
+  {(char *)"gamma", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_gamma, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_gamma, 0, 0},
+  {(char *)"tau_y", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_tau_y, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_tau_y, 0, 0},
+  {(char *)"theta", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_theta, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_theta, 0, 0},
+  {(char *)"w_max", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_w_max, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_w_max, 0, 0},
+  {(char *)"w_min", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_w_min, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_w_min, 0, 0},
+  {(char *)"yo", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_yo, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_yo, 0, 0},
+  {(char *)"y_bar", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_y_bar, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_y_bar, 0, 0},
+  {(char *)"initial_y_bar", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_initial_y_bar, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_initial_y_bar, 0, 0},
+  {(char *)"initial_y_bar_range", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_initial_y_bar_range, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_initial_y_bar_range, 0, 0},
   {0, 0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_7splikes_11connections_7Triplet_Gerstner2006 = {
+static PyTypeObject __pyx_type_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 = {
   PyVarObject_HEAD_INIT(0, 0)
-  "splikes.connections.Triplet.Gerstner2006", /*tp_name*/
-  sizeof(struct __pyx_obj_7splikes_11connections_7Triplet_Gerstner2006), /*tp_basicsize*/
+  "plasticnet.connections.Miller2014.Miller2014_Eq3", /*tp_name*/
+  sizeof(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq3), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_7splikes_11connections_7Triplet_Gerstner2006, /*tp_dealloc*/
+  __pyx_tp_dealloc_10plasticnet_11connections_10Miller2014_Miller2014_Eq3, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -8173,23 +8073,23 @@ static PyTypeObject __pyx_type_7splikes_11connections_7Triplet_Gerstner2006 = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_7splikes_11connections_7Triplet_Gerstner2006, /*tp_traverse*/
-  __pyx_tp_clear_7splikes_11connections_7Triplet_Gerstner2006, /*tp_clear*/
+  __pyx_tp_traverse_10plasticnet_11connections_10Miller2014_Miller2014_Eq3, /*tp_traverse*/
+  __pyx_tp_clear_10plasticnet_11connections_10Miller2014_Miller2014_Eq3, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_7splikes_11connections_7Triplet_Gerstner2006, /*tp_methods*/
+  __pyx_methods_10plasticnet_11connections_10Miller2014_Miller2014_Eq3, /*tp_methods*/
   0, /*tp_members*/
-  __pyx_getsets_7splikes_11connections_7Triplet_Gerstner2006, /*tp_getset*/
+  __pyx_getsets_10plasticnet_11connections_10Miller2014_Miller2014_Eq3, /*tp_getset*/
   0, /*tp_base*/
   0, /*tp_dict*/
   0, /*tp_descr_get*/
   0, /*tp_descr_set*/
   0, /*tp_dictoffset*/
-  __pyx_pw_7splikes_11connections_7Triplet_12Gerstner2006_3__init__, /*tp_init*/
+  __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_3__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_7splikes_11connections_7Triplet_Gerstner2006, /*tp_new*/
+  __pyx_tp_new_10plasticnet_11connections_10Miller2014_Miller2014_Eq3, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -8203,92 +8103,98 @@ static PyTypeObject __pyx_type_7splikes_11connections_7Triplet_Gerstner2006 = {
   0, /*tp_finalize*/
   #endif
 };
-static struct __pyx_vtabstruct_7splikes_11connections_7Triplet_Triplet_BCM __pyx_vtable_7splikes_11connections_7Triplet_Triplet_BCM;
+static struct __pyx_vtabstruct_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 __pyx_vtable_10plasticnet_11connections_10Miller2014_Miller2014_Eq5;
 
-static PyObject *__pyx_tp_new_7splikes_11connections_7Triplet_Triplet_BCM(PyTypeObject *t, PyObject *a, PyObject *k) {
-  struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *p;
-  PyObject *o = __pyx_tp_new_7splikes_11connections_7Triplet_Gerstner2006(t, a, k);
+static PyObject *__pyx_tp_new_10plasticnet_11connections_10Miller2014_Miller2014_Eq5(PyTypeObject *t, PyObject *a, PyObject *k) {
+  struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *p;
+  PyObject *o = __pyx_ptype_10plasticnet_10plasticnet_connection->tp_new(t, a, k);
   if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)o);
-  p->__pyx_base.__pyx_base.__pyx_vtab = (struct __pyx_vtabstruct_7splikes_7splikes_connection*)__pyx_vtabptr_7splikes_11connections_7Triplet_Triplet_BCM;
-  p->y2 = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
-  p->theta = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  p = ((struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)o);
+  p->__pyx_base.__pyx_vtab = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection*)__pyx_vtabptr_10plasticnet_11connections_10Miller2014_Miller2014_Eq5;
+  p->rho = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  p->H = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  p->initial_rho = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  p->initial_H = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  p->initial_rho_range = Py_None; Py_INCREF(Py_None);
+  p->initial_H_range = Py_None; Py_INCREF(Py_None);
   return o;
 }
 
-static void __pyx_tp_dealloc_7splikes_11connections_7Triplet_Triplet_BCM(PyObject *o) {
-  struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *p = (struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)o;
+static void __pyx_tp_dealloc_10plasticnet_11connections_10Miller2014_Miller2014_Eq5(PyObject *o) {
+  struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *p = (struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)o;
   #if PY_VERSION_HEX >= 0x030400a1
   if (unlikely(Py_TYPE(o)->tp_finalize) && !_PyGC_FINALIZED(o)) {
     if (PyObject_CallFinalizerFromDealloc(o)) return;
   }
   #endif
   PyObject_GC_UnTrack(o);
-  Py_CLEAR(p->y2);
-  Py_CLEAR(p->theta);
+  Py_CLEAR(p->rho);
+  Py_CLEAR(p->H);
+  Py_CLEAR(p->initial_rho);
+  Py_CLEAR(p->initial_H);
+  Py_CLEAR(p->initial_rho_range);
+  Py_CLEAR(p->initial_H_range);
   PyObject_GC_Track(o);
-  __pyx_tp_dealloc_7splikes_11connections_7Triplet_Gerstner2006(o);
+  if (likely(__pyx_ptype_10plasticnet_10plasticnet_connection)) __pyx_ptype_10plasticnet_10plasticnet_connection->tp_dealloc(o); else __Pyx_call_next_tp_dealloc(o, __pyx_tp_dealloc_10plasticnet_11connections_10Miller2014_Miller2014_Eq5);
 }
 
-static int __pyx_tp_traverse_7splikes_11connections_7Triplet_Triplet_BCM(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_10plasticnet_11connections_10Miller2014_Miller2014_Eq5(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *p = (struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)o;
-  e = __pyx_tp_traverse_7splikes_11connections_7Triplet_Gerstner2006(o, v, a); if (e) return e;
-  if (p->y2) {
-    e = (*v)(((PyObject*)p->y2), a); if (e) return e;
+  struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *p = (struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)o;
+  e = ((likely(__pyx_ptype_10plasticnet_10plasticnet_connection)) ? ((__pyx_ptype_10plasticnet_10plasticnet_connection->tp_traverse) ? __pyx_ptype_10plasticnet_10plasticnet_connection->tp_traverse(o, v, a) : 0) : __Pyx_call_next_tp_traverse(o, v, a, __pyx_tp_traverse_10plasticnet_11connections_10Miller2014_Miller2014_Eq5)); if (e) return e;
+  if (p->rho) {
+    e = (*v)(((PyObject*)p->rho), a); if (e) return e;
   }
-  if (p->theta) {
-    e = (*v)(((PyObject*)p->theta), a); if (e) return e;
+  if (p->H) {
+    e = (*v)(((PyObject*)p->H), a); if (e) return e;
+  }
+  if (p->initial_rho) {
+    e = (*v)(((PyObject*)p->initial_rho), a); if (e) return e;
+  }
+  if (p->initial_H) {
+    e = (*v)(((PyObject*)p->initial_H), a); if (e) return e;
+  }
+  if (p->initial_rho_range) {
+    e = (*v)(p->initial_rho_range, a); if (e) return e;
+  }
+  if (p->initial_H_range) {
+    e = (*v)(p->initial_H_range, a); if (e) return e;
   }
   return 0;
 }
 
-static int __pyx_tp_clear_7splikes_11connections_7Triplet_Triplet_BCM(PyObject *o) {
+static int __pyx_tp_clear_10plasticnet_11connections_10Miller2014_Miller2014_Eq5(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *p = (struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM *)o;
-  __pyx_tp_clear_7splikes_11connections_7Triplet_Gerstner2006(o);
-  tmp = ((PyObject*)p->y2);
-  p->y2 = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *p = (struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 *)o;
+  if (likely(__pyx_ptype_10plasticnet_10plasticnet_connection)) { if (__pyx_ptype_10plasticnet_10plasticnet_connection->tp_clear) __pyx_ptype_10plasticnet_10plasticnet_connection->tp_clear(o); } else __Pyx_call_next_tp_clear(o, __pyx_tp_clear_10plasticnet_11connections_10Miller2014_Miller2014_Eq5);
+  tmp = ((PyObject*)p->rho);
+  p->rho = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
-  tmp = ((PyObject*)p->theta);
-  p->theta = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  tmp = ((PyObject*)p->H);
+  p->H = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  Py_XDECREF(tmp);
+  tmp = ((PyObject*)p->initial_rho);
+  p->initial_rho = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  Py_XDECREF(tmp);
+  tmp = ((PyObject*)p->initial_H);
+  p->initial_H = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
+  Py_XDECREF(tmp);
+  tmp = ((PyObject*)p->initial_rho_range);
+  p->initial_rho_range = Py_None; Py_INCREF(Py_None);
+  Py_XDECREF(tmp);
+  tmp = ((PyObject*)p->initial_H_range);
+  p->initial_H_range = Py_None; Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   return 0;
 }
 
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_11Triplet_BCM_y2(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_1__get__(o);
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_tau_rho(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7tau_rho_1__get__(o);
 }
 
-static int __pyx_setprop_7splikes_11connections_7Triplet_11Triplet_BCM_y2(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_tau_rho(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_3__set__(o, v);
-  }
-  else {
-    return __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_2y2_5__del__(o);
-  }
-}
-
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_11Triplet_BCM_theta(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_1__get__(o);
-}
-
-static int __pyx_setprop_7splikes_11connections_7Triplet_11Triplet_BCM_theta(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
-  if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_3__set__(o, v);
-  }
-  else {
-    return __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5theta_5__del__(o);
-  }
-}
-
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_11Triplet_BCM_tau_y2(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_6tau_y2_1__get__(o);
-}
-
-static int __pyx_setprop_7splikes_11connections_7Triplet_11Triplet_BCM_tau_y2(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
-  if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_6tau_y2_3__set__(o, v);
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7tau_rho_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -8296,13 +8202,13 @@ static int __pyx_setprop_7splikes_11connections_7Triplet_11Triplet_BCM_tau_y2(Py
   }
 }
 
-static PyObject *__pyx_getprop_7splikes_11connections_7Triplet_11Triplet_BCM_y2_o(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_4y2_o_1__get__(o);
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_tau_H(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5tau_H_1__get__(o);
 }
 
-static int __pyx_setprop_7splikes_11connections_7Triplet_11Triplet_BCM_y2_o(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_tau_H(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_4y2_o_3__set__(o, v);
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5tau_H_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -8310,26 +8216,168 @@ static int __pyx_setprop_7splikes_11connections_7Triplet_11Triplet_BCM_y2_o(PyOb
   }
 }
 
-static PyMethodDef __pyx_methods_7splikes_11connections_7Triplet_Triplet_BCM[] = {
-  {"_reset", (PyCFunction)__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_1_reset, METH_NOARGS, 0},
-  {"update", (PyCFunction)__pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_5update, METH_VARARGS|METH_KEYWORDS, 0},
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_theta(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5theta_1__get__(o);
+}
+
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_theta(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5theta_3__set__(o, v);
+  }
+  else {
+    PyErr_SetString(PyExc_NotImplementedError, "__del__");
+    return -1;
+  }
+}
+
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_rho_max(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_max_1__get__(o);
+}
+
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_rho_max(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_max_3__set__(o, v);
+  }
+  else {
+    PyErr_SetString(PyExc_NotImplementedError, "__del__");
+    return -1;
+  }
+}
+
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_rho_min(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_min_1__get__(o);
+}
+
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_rho_min(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_7rho_min_3__set__(o, v);
+  }
+  else {
+    PyErr_SetString(PyExc_NotImplementedError, "__del__");
+    return -1;
+  }
+}
+
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_yo(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_2yo_1__get__(o);
+}
+
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_yo(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_2yo_3__set__(o, v);
+  }
+  else {
+    PyErr_SetString(PyExc_NotImplementedError, "__del__");
+    return -1;
+  }
+}
+
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_rho(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho_1__get__(o);
+}
+
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_rho(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho_3__set__(o, v);
+  }
+  else {
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3rho_5__del__(o);
+  }
+}
+
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_H(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H_1__get__(o);
+}
+
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_H(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H_3__set__(o, v);
+  }
+  else {
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1H_5__del__(o);
+  }
+}
+
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_initial_rho(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho_1__get__(o);
+}
+
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_initial_rho(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho_3__set__(o, v);
+  }
+  else {
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_11initial_rho_5__del__(o);
+  }
+}
+
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_initial_H(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H_1__get__(o);
+}
+
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_initial_H(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H_3__set__(o, v);
+  }
+  else {
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_9initial_H_5__del__(o);
+  }
+}
+
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_initial_rho_range(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range_1__get__(o);
+}
+
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_initial_rho_range(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range_3__set__(o, v);
+  }
+  else {
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_17initial_rho_range_5__del__(o);
+  }
+}
+
+static PyObject *__pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_initial_H_range(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range_1__get__(o);
+}
+
+static int __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_initial_H_range(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range_3__set__(o, v);
+  }
+  else {
+    return __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_15initial_H_range_5__del__(o);
+  }
+}
+
+static PyMethodDef __pyx_methods_10plasticnet_11connections_10Miller2014_Miller2014_Eq5[] = {
+  {"_reset", (PyCFunction)__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_1_reset, METH_NOARGS, 0},
+  {"update", (PyCFunction)__pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_5update, METH_VARARGS|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 
-static struct PyGetSetDef __pyx_getsets_7splikes_11connections_7Triplet_Triplet_BCM[] = {
-  {(char *)"y2", __pyx_getprop_7splikes_11connections_7Triplet_11Triplet_BCM_y2, __pyx_setprop_7splikes_11connections_7Triplet_11Triplet_BCM_y2, 0, 0},
-  {(char *)"theta", __pyx_getprop_7splikes_11connections_7Triplet_11Triplet_BCM_theta, __pyx_setprop_7splikes_11connections_7Triplet_11Triplet_BCM_theta, 0, 0},
-  {(char *)"tau_y2", __pyx_getprop_7splikes_11connections_7Triplet_11Triplet_BCM_tau_y2, __pyx_setprop_7splikes_11connections_7Triplet_11Triplet_BCM_tau_y2, 0, 0},
-  {(char *)"y2_o", __pyx_getprop_7splikes_11connections_7Triplet_11Triplet_BCM_y2_o, __pyx_setprop_7splikes_11connections_7Triplet_11Triplet_BCM_y2_o, 0, 0},
+static struct PyGetSetDef __pyx_getsets_10plasticnet_11connections_10Miller2014_Miller2014_Eq5[] = {
+  {(char *)"tau_rho", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_tau_rho, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_tau_rho, 0, 0},
+  {(char *)"tau_H", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_tau_H, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_tau_H, 0, 0},
+  {(char *)"theta", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_theta, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_theta, 0, 0},
+  {(char *)"rho_max", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_rho_max, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_rho_max, 0, 0},
+  {(char *)"rho_min", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_rho_min, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_rho_min, 0, 0},
+  {(char *)"yo", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_yo, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_yo, 0, 0},
+  {(char *)"rho", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_rho, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_rho, 0, 0},
+  {(char *)"H", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_H, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_H, 0, 0},
+  {(char *)"initial_rho", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_initial_rho, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_initial_rho, 0, 0},
+  {(char *)"initial_H", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_initial_H, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_initial_H, 0, 0},
+  {(char *)"initial_rho_range", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_initial_rho_range, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_initial_rho_range, 0, 0},
+  {(char *)"initial_H_range", __pyx_getprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_initial_H_range, __pyx_setprop_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_initial_H_range, 0, 0},
   {0, 0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_7splikes_11connections_7Triplet_Triplet_BCM = {
+static PyTypeObject __pyx_type_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 = {
   PyVarObject_HEAD_INIT(0, 0)
-  "splikes.connections.Triplet.Triplet_BCM", /*tp_name*/
-  sizeof(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM), /*tp_basicsize*/
+  "plasticnet.connections.Miller2014.Miller2014_Eq5", /*tp_name*/
+  sizeof(struct __pyx_obj_10plasticnet_11connections_10Miller2014_Miller2014_Eq5), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_7splikes_11connections_7Triplet_Triplet_BCM, /*tp_dealloc*/
+  __pyx_tp_dealloc_10plasticnet_11connections_10Miller2014_Miller2014_Eq5, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -8350,95 +8398,23 @@ static PyTypeObject __pyx_type_7splikes_11connections_7Triplet_Triplet_BCM = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_7splikes_11connections_7Triplet_Triplet_BCM, /*tp_traverse*/
-  __pyx_tp_clear_7splikes_11connections_7Triplet_Triplet_BCM, /*tp_clear*/
+  __pyx_tp_traverse_10plasticnet_11connections_10Miller2014_Miller2014_Eq5, /*tp_traverse*/
+  __pyx_tp_clear_10plasticnet_11connections_10Miller2014_Miller2014_Eq5, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_7splikes_11connections_7Triplet_Triplet_BCM, /*tp_methods*/
+  __pyx_methods_10plasticnet_11connections_10Miller2014_Miller2014_Eq5, /*tp_methods*/
   0, /*tp_members*/
-  __pyx_getsets_7splikes_11connections_7Triplet_Triplet_BCM, /*tp_getset*/
+  __pyx_getsets_10plasticnet_11connections_10Miller2014_Miller2014_Eq5, /*tp_getset*/
   0, /*tp_base*/
   0, /*tp_dict*/
   0, /*tp_descr_get*/
   0, /*tp_descr_set*/
   0, /*tp_dictoffset*/
-  __pyx_pw_7splikes_11connections_7Triplet_11Triplet_BCM_3__init__, /*tp_init*/
+  __pyx_pw_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_3__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_7splikes_11connections_7Triplet_Triplet_BCM, /*tp_new*/
-  0, /*tp_free*/
-  0, /*tp_is_gc*/
-  0, /*tp_bases*/
-  0, /*tp_mro*/
-  0, /*tp_cache*/
-  0, /*tp_subclasses*/
-  0, /*tp_weaklist*/
-  0, /*tp_del*/
-  0, /*tp_version_tag*/
-  #if PY_VERSION_HEX >= 0x030400a1
-  0, /*tp_finalize*/
-  #endif
-};
-static struct __pyx_vtabstruct_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper __pyx_vtable_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper;
-
-static PyObject *__pyx_tp_new_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper(PyTypeObject *t, PyObject *a, PyObject *k) {
-  struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper *p;
-  PyObject *o = __pyx_tp_new_7splikes_11connections_7Triplet_Triplet_BCM(t, a, k);
-  if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper *)o);
-  p->__pyx_base.__pyx_base.__pyx_base.__pyx_vtab = (struct __pyx_vtabstruct_7splikes_7splikes_connection*)__pyx_vtabptr_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper;
-  return o;
-}
-
-static PyMethodDef __pyx_methods_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper[] = {
-  {"update", (PyCFunction)__pyx_pw_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper_3update, METH_VARARGS|METH_KEYWORDS, 0},
-  {0, 0, 0, 0}
-};
-
-static PyTypeObject __pyx_type_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper = {
-  PyVarObject_HEAD_INIT(0, 0)
-  "splikes.connections.Triplet.Triplet_BCM_LawCooper", /*tp_name*/
-  sizeof(struct __pyx_obj_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper), /*tp_basicsize*/
-  0, /*tp_itemsize*/
-  __pyx_tp_dealloc_7splikes_11connections_7Triplet_Triplet_BCM, /*tp_dealloc*/
-  0, /*tp_print*/
-  0, /*tp_getattr*/
-  0, /*tp_setattr*/
-  #if PY_MAJOR_VERSION < 3
-  0, /*tp_compare*/
-  #else
-  0, /*reserved*/
-  #endif
-  0, /*tp_repr*/
-  0, /*tp_as_number*/
-  0, /*tp_as_sequence*/
-  0, /*tp_as_mapping*/
-  0, /*tp_hash*/
-  0, /*tp_call*/
-  0, /*tp_str*/
-  0, /*tp_getattro*/
-  0, /*tp_setattro*/
-  0, /*tp_as_buffer*/
-  Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
-  0, /*tp_doc*/
-  __pyx_tp_traverse_7splikes_11connections_7Triplet_Triplet_BCM, /*tp_traverse*/
-  __pyx_tp_clear_7splikes_11connections_7Triplet_Triplet_BCM, /*tp_clear*/
-  0, /*tp_richcompare*/
-  0, /*tp_weaklistoffset*/
-  0, /*tp_iter*/
-  0, /*tp_iternext*/
-  __pyx_methods_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper, /*tp_methods*/
-  0, /*tp_members*/
-  0, /*tp_getset*/
-  0, /*tp_base*/
-  0, /*tp_dict*/
-  0, /*tp_descr_get*/
-  0, /*tp_descr_set*/
-  0, /*tp_dictoffset*/
-  __pyx_pw_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper_1__init__, /*tp_init*/
-  0, /*tp_alloc*/
-  __pyx_tp_new_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper, /*tp_new*/
+  __pyx_tp_new_10plasticnet_11connections_10Miller2014_Miller2014_Eq5, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -8464,7 +8440,7 @@ static struct PyModuleDef __pyx_moduledef = {
   #else
     PyModuleDef_HEAD_INIT,
   #endif
-    "Triplet",
+    "Miller2014",
     0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -8478,17 +8454,18 @@ static struct PyModuleDef __pyx_moduledef = {
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_Format_string_allocated_too_shor, __pyx_k_Format_string_allocated_too_shor, sizeof(__pyx_k_Format_string_allocated_too_shor), 0, 1, 0, 0},
   {&__pyx_kp_u_Format_string_allocated_too_shor_2, __pyx_k_Format_string_allocated_too_shor_2, sizeof(__pyx_k_Format_string_allocated_too_shor_2), 0, 1, 0, 0},
-  {&__pyx_n_s_Gerstner2006, __pyx_k_Gerstner2006, sizeof(__pyx_k_Gerstner2006), 0, 0, 1, 1},
+  {&__pyx_n_s_Miller2014_Eq3, __pyx_k_Miller2014_Eq3, sizeof(__pyx_k_Miller2014_Eq3), 0, 0, 1, 1},
+  {&__pyx_n_s_Miller2014_Eq5, __pyx_k_Miller2014_Eq5, sizeof(__pyx_k_Miller2014_Eq5), 0, 0, 1, 1},
   {&__pyx_kp_u_Non_native_byte_order_not_suppor, __pyx_k_Non_native_byte_order_not_suppor, sizeof(__pyx_k_Non_native_byte_order_not_suppor), 0, 1, 0, 0},
   {&__pyx_n_s_RuntimeError, __pyx_k_RuntimeError, sizeof(__pyx_k_RuntimeError), 0, 0, 1, 1},
-  {&__pyx_kp_s_Triplet_BCM, __pyx_k_Triplet_BCM, sizeof(__pyx_k_Triplet_BCM), 0, 0, 1, 0},
-  {&__pyx_kp_s_Triplet_BCM_LawCooper, __pyx_k_Triplet_BCM_LawCooper, sizeof(__pyx_k_Triplet_BCM_LawCooper), 0, 0, 1, 0},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
-  {&__pyx_n_s_dtype, __pyx_k_dtype, sizeof(__pyx_k_dtype), 0, 0, 1, 1},
-  {&__pyx_n_s_float, __pyx_k_float, sizeof(__pyx_k_float), 0, 0, 1, 1},
+  {&__pyx_n_s_copy, __pyx_k_copy, sizeof(__pyx_k_copy), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_init, __pyx_k_init, sizeof(__pyx_k_init), 0, 0, 1, 1},
+  {&__pyx_n_s_initial_H_range, __pyx_k_initial_H_range, sizeof(__pyx_k_initial_H_range), 0, 0, 1, 1},
+  {&__pyx_n_s_initial_rho_range, __pyx_k_initial_rho_range, sizeof(__pyx_k_initial_rho_range), 0, 0, 1, 1},
   {&__pyx_n_s_initial_weight_range, __pyx_k_initial_weight_range, sizeof(__pyx_k_initial_weight_range), 0, 0, 1, 1},
+  {&__pyx_n_s_initial_y_bar_range, __pyx_k_initial_y_bar_range, sizeof(__pyx_k_initial_y_bar_range), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_kp_u_ndarray_is_not_C_contiguous, __pyx_k_ndarray_is_not_C_contiguous, sizeof(__pyx_k_ndarray_is_not_C_contiguous), 0, 1, 0, 0},
   {&__pyx_kp_u_ndarray_is_not_Fortran_contiguou, __pyx_k_ndarray_is_not_Fortran_contiguou, sizeof(__pyx_k_ndarray_is_not_Fortran_contiguou), 0, 1, 0, 0},
@@ -8498,19 +8475,18 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_pre, __pyx_k_pre, sizeof(__pyx_k_pre), 0, 0, 1, 1},
   {&__pyx_n_s_pylab, __pyx_k_pylab, sizeof(__pyx_k_pylab), 0, 0, 1, 1},
   {&__pyx_n_s_pyx_vtable, __pyx_k_pyx_vtable, sizeof(__pyx_k_pyx_vtable), 0, 0, 1, 1},
+  {&__pyx_n_s_rand, __pyx_k_rand, sizeof(__pyx_k_rand), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_n_s_reset, __pyx_k_reset, sizeof(__pyx_k_reset), 0, 0, 1, 1},
   {&__pyx_n_s_sim, __pyx_k_sim, sizeof(__pyx_k_sim), 0, 0, 1, 1},
-  {&__pyx_n_s_state, __pyx_k_state, sizeof(__pyx_k_state), 0, 0, 1, 1},
   {&__pyx_n_s_t, __pyx_k_t, sizeof(__pyx_k_t), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
   {&__pyx_kp_u_unknown_dtype_code_in_numpy_pxd, __pyx_k_unknown_dtype_code_in_numpy_pxd, sizeof(__pyx_k_unknown_dtype_code_in_numpy_pxd), 0, 1, 0, 0},
   {&__pyx_n_s_update, __pyx_k_update, sizeof(__pyx_k_update), 0, 0, 1, 1},
-  {&__pyx_n_s_zeros, __pyx_k_zeros, sizeof(__pyx_k_zeros), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 218; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 802; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   return 0;
@@ -8595,18 +8571,20 @@ static int __Pyx_InitCachedConstants(void) {
 }
 
 static int __Pyx_InitGlobals(void) {
-  if (__Pyx_InitStrings(__pyx_string_tab) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  if (__Pyx_InitStrings(__pyx_string_tab) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_float__1 = PyFloat_FromDouble(.1); if (unlikely(!__pyx_float__1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_int_0 = PyInt_FromLong(0); if (unlikely(!__pyx_int_0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   return 0;
   __pyx_L1_error:;
   return -1;
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC initTriplet(void); /*proto*/
-PyMODINIT_FUNC initTriplet(void)
+PyMODINIT_FUNC initMiller2014(void); /*proto*/
+PyMODINIT_FUNC initMiller2014(void)
 #else
-PyMODINIT_FUNC PyInit_Triplet(void); /*proto*/
-PyMODINIT_FUNC PyInit_Triplet(void)
+PyMODINIT_FUNC PyInit_Miller2014(void); /*proto*/
+PyMODINIT_FUNC PyInit_Miller2014(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -8623,18 +8601,18 @@ PyMODINIT_FUNC PyInit_Triplet(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_Triplet(void)", 0);
-  if ( __Pyx_check_binary_version() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_Miller2014(void)", 0);
+  if ( __Pyx_check_binary_version() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #ifdef __Pyx_CyFunction_USED
-  if (__Pyx_CyFunction_init() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_CyFunction_init() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
   #ifdef __Pyx_FusedFunction_USED
-  if (__pyx_FusedFunction_init() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__pyx_FusedFunction_init() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
   #ifdef __Pyx_Generator_USED
-  if (__pyx_Generator_init() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__pyx_Generator_init() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
   /*--- Library function declarations ---*/
   /*--- Threads initialization code ---*/
@@ -8645,73 +8623,64 @@ PyMODINIT_FUNC PyInit_Triplet(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("Triplet", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("Miller2014", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
-  if (unlikely(!__pyx_m)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_d = PyModule_GetDict(__pyx_m); if (unlikely(!__pyx_d)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__pyx_m)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_d = PyModule_GetDict(__pyx_m); if (unlikely(!__pyx_d)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_INCREF(__pyx_d);
-  __pyx_b = PyImport_AddModule(__Pyx_BUILTIN_MODULE_NAME); if (unlikely(!__pyx_b)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_b = PyImport_AddModule(__Pyx_BUILTIN_MODULE_NAME); if (unlikely(!__pyx_b)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #if CYTHON_COMPILING_IN_PYPY
   Py_INCREF(__pyx_b);
   #endif
-  if (PyObject_SetAttrString(__pyx_m, "__builtins__", __pyx_b) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  if (PyObject_SetAttrString(__pyx_m, "__builtins__", __pyx_b) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   /*--- Initialize various global constants etc. ---*/
-  if (unlikely(__Pyx_InitGlobals() < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(__Pyx_InitGlobals() < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
-  if (__Pyx_init_sys_getdefaultencoding_params() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_init_sys_getdefaultencoding_params() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
-  if (__pyx_module_is_main_splikes__connections__Triplet) {
-    if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  if (__pyx_module_is_main_plasticnet__connections__Miller2014) {
+    if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   }
   #if PY_MAJOR_VERSION >= 3
   {
-    PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "splikes.connections.Triplet")) {
-      if (unlikely(PyDict_SetItemString(modules, "splikes.connections.Triplet", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "plasticnet.connections.Miller2014")) {
+      if (unlikely(PyDict_SetItemString(modules, "plasticnet.connections.Miller2014", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
   /*--- Builtin init code ---*/
-  if (unlikely(__Pyx_InitCachedBuiltins() < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(__Pyx_InitCachedBuiltins() < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   /*--- Constants init code ---*/
-  if (unlikely(__Pyx_InitCachedConstants() < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(__Pyx_InitCachedConstants() < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   /*--- Global init code ---*/
   /*--- Variable export code ---*/
   /*--- Function export code ---*/
   /*--- Type init code ---*/
-  __pyx_ptype_7splikes_7splikes_connection = __Pyx_ImportType("splikes.splikes", "connection", sizeof(struct __pyx_obj_7splikes_7splikes_connection), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_connection)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_connection = (struct __pyx_vtabstruct_7splikes_7splikes_connection*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_connection->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_connection)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_11connections_7Triplet_Gerstner2006 = &__pyx_vtable_7splikes_11connections_7Triplet_Gerstner2006;
-  __pyx_vtable_7splikes_11connections_7Triplet_Gerstner2006.__pyx_base = *__pyx_vtabptr_7splikes_7splikes_connection;
-  __pyx_vtable_7splikes_11connections_7Triplet_Gerstner2006.__pyx_base._reset = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_connection *, int __pyx_skip_dispatch))__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006__reset;
-  __pyx_vtable_7splikes_11connections_7Triplet_Gerstner2006.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_connection *, double, struct __pyx_obj_7splikes_7splikes_simulation *, int __pyx_skip_dispatch))__pyx_f_7splikes_11connections_7Triplet_12Gerstner2006_update;
-  __pyx_type_7splikes_11connections_7Triplet_Gerstner2006.tp_base = __pyx_ptype_7splikes_7splikes_connection;
-  if (PyType_Ready(&__pyx_type_7splikes_11connections_7Triplet_Gerstner2006) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_type_7splikes_11connections_7Triplet_Gerstner2006.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_7splikes_11connections_7Triplet_Gerstner2006.tp_dict, __pyx_vtabptr_7splikes_11connections_7Triplet_Gerstner2006) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "Gerstner2006", (PyObject *)&__pyx_type_7splikes_11connections_7Triplet_Gerstner2006) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_11connections_7Triplet_Gerstner2006 = &__pyx_type_7splikes_11connections_7Triplet_Gerstner2006;
-  __pyx_vtabptr_7splikes_11connections_7Triplet_Triplet_BCM = &__pyx_vtable_7splikes_11connections_7Triplet_Triplet_BCM;
-  __pyx_vtable_7splikes_11connections_7Triplet_Triplet_BCM.__pyx_base = *__pyx_vtabptr_7splikes_11connections_7Triplet_Gerstner2006;
-  __pyx_vtable_7splikes_11connections_7Triplet_Triplet_BCM.__pyx_base.__pyx_base._reset = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_connection *, int __pyx_skip_dispatch))__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM__reset;
-  __pyx_vtable_7splikes_11connections_7Triplet_Triplet_BCM.__pyx_base.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_connection *, double, struct __pyx_obj_7splikes_7splikes_simulation *, int __pyx_skip_dispatch))__pyx_f_7splikes_11connections_7Triplet_11Triplet_BCM_update;
-  __pyx_type_7splikes_11connections_7Triplet_Triplet_BCM.tp_base = __pyx_ptype_7splikes_11connections_7Triplet_Gerstner2006;
-  if (PyType_Ready(&__pyx_type_7splikes_11connections_7Triplet_Triplet_BCM) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 99; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_type_7splikes_11connections_7Triplet_Triplet_BCM.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_7splikes_11connections_7Triplet_Triplet_BCM.tp_dict, __pyx_vtabptr_7splikes_11connections_7Triplet_Triplet_BCM) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 99; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "Triplet_BCM", (PyObject *)&__pyx_type_7splikes_11connections_7Triplet_Triplet_BCM) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 99; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_11connections_7Triplet_Triplet_BCM = &__pyx_type_7splikes_11connections_7Triplet_Triplet_BCM;
-  __pyx_vtabptr_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper = &__pyx_vtable_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper;
-  __pyx_vtable_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper.__pyx_base = *__pyx_vtabptr_7splikes_11connections_7Triplet_Triplet_BCM;
-  __pyx_vtable_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper.__pyx_base.__pyx_base.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_connection *, double, struct __pyx_obj_7splikes_7splikes_simulation *, int __pyx_skip_dispatch))__pyx_f_7splikes_11connections_7Triplet_21Triplet_BCM_LawCooper_update;
-  __pyx_type_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper.tp_base = __pyx_ptype_7splikes_11connections_7Triplet_Triplet_BCM;
-  if (PyType_Ready(&__pyx_type_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 178; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_type_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper.tp_dict, __pyx_vtabptr_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 178; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "Triplet_BCM_LawCooper", (PyObject *)&__pyx_type_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 178; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper = &__pyx_type_7splikes_11connections_7Triplet_Triplet_BCM_LawCooper;
+  __pyx_ptype_10plasticnet_10plasticnet_connection = __Pyx_ImportType("plasticnet.plasticnet", "connection", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_connection), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_connection)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_connection = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_connection->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_connection)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 = &__pyx_vtable_10plasticnet_11connections_10Miller2014_Miller2014_Eq3;
+  __pyx_vtable_10plasticnet_11connections_10Miller2014_Miller2014_Eq3.__pyx_base = *__pyx_vtabptr_10plasticnet_10plasticnet_connection;
+  __pyx_vtable_10plasticnet_11connections_10Miller2014_Miller2014_Eq3.__pyx_base._reset = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_connection *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3__reset;
+  __pyx_vtable_10plasticnet_11connections_10Miller2014_Miller2014_Eq3.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_connection *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_11connections_10Miller2014_14Miller2014_Eq3_update;
+  __pyx_type_10plasticnet_11connections_10Miller2014_Miller2014_Eq3.tp_base = __pyx_ptype_10plasticnet_10plasticnet_connection;
+  if (PyType_Ready(&__pyx_type_10plasticnet_11connections_10Miller2014_Miller2014_Eq3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_type_10plasticnet_11connections_10Miller2014_Miller2014_Eq3.tp_print = 0;
+  if (__Pyx_SetVtable(__pyx_type_10plasticnet_11connections_10Miller2014_Miller2014_Eq3.tp_dict, __pyx_vtabptr_10plasticnet_11connections_10Miller2014_Miller2014_Eq3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "Miller2014_Eq3", (PyObject *)&__pyx_type_10plasticnet_11connections_10Miller2014_Miller2014_Eq3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_11connections_10Miller2014_Miller2014_Eq3 = &__pyx_type_10plasticnet_11connections_10Miller2014_Miller2014_Eq3;
+  __pyx_vtabptr_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 = &__pyx_vtable_10plasticnet_11connections_10Miller2014_Miller2014_Eq5;
+  __pyx_vtable_10plasticnet_11connections_10Miller2014_Miller2014_Eq5.__pyx_base = *__pyx_vtabptr_10plasticnet_10plasticnet_connection;
+  __pyx_vtable_10plasticnet_11connections_10Miller2014_Miller2014_Eq5.__pyx_base._reset = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_connection *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5__reset;
+  __pyx_vtable_10plasticnet_11connections_10Miller2014_Miller2014_Eq5.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_connection *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_11connections_10Miller2014_14Miller2014_Eq5_update;
+  __pyx_type_10plasticnet_11connections_10Miller2014_Miller2014_Eq5.tp_base = __pyx_ptype_10plasticnet_10plasticnet_connection;
+  if (PyType_Ready(&__pyx_type_10plasticnet_11connections_10Miller2014_Miller2014_Eq5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_type_10plasticnet_11connections_10Miller2014_Miller2014_Eq5.tp_print = 0;
+  if (__Pyx_SetVtable(__pyx_type_10plasticnet_11connections_10Miller2014_Miller2014_Eq5.tp_dict, __pyx_vtabptr_10plasticnet_11connections_10Miller2014_Miller2014_Eq5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "Miller2014_Eq5", (PyObject *)&__pyx_type_10plasticnet_11connections_10Miller2014_Miller2014_Eq5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_11connections_10Miller2014_Miller2014_Eq5 = &__pyx_type_10plasticnet_11connections_10Miller2014_Miller2014_Eq5;
   /*--- Type import code ---*/
   __pyx_ptype_7cpython_4type_type = __Pyx_ImportType(__Pyx_BUILTIN_MODULE_NAME, "type", 
   #if CYTHON_COMPILING_IN_PYPY
@@ -8725,49 +8694,57 @@ PyMODINIT_FUNC PyInit_Triplet(void)
   __pyx_ptype_5numpy_broadcast = __Pyx_ImportType("numpy", "broadcast", sizeof(PyArrayMultiIterObject), 0); if (unlikely(!__pyx_ptype_5numpy_broadcast)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5numpy_ndarray = __Pyx_ImportType("numpy", "ndarray", sizeof(PyArrayObject), 0); if (unlikely(!__pyx_ptype_5numpy_ndarray)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 181; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5numpy_ufunc = __Pyx_ImportType("numpy", "ufunc", sizeof(PyUFuncObject), 0); if (unlikely(!__pyx_ptype_5numpy_ufunc)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 864; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7splikes_monitor = __Pyx_ImportType("splikes.splikes", "monitor", sizeof(struct __pyx_obj_7splikes_7splikes_monitor), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_monitor = (struct __pyx_vtabstruct_7splikes_7splikes_monitor*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_monitor->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7splikes_simulation = __Pyx_ImportType("splikes.splikes", "simulation", sizeof(struct __pyx_obj_7splikes_7splikes_simulation), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_simulation = (struct __pyx_vtabstruct_7splikes_7splikes_simulation*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7splikes_neuron = __Pyx_ImportType("splikes.splikes", "neuron", sizeof(struct __pyx_obj_7splikes_7splikes_neuron), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_neuron = (struct __pyx_vtabstruct_7splikes_7splikes_neuron*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_group = __Pyx_ImportType("plasticnet.plasticnet", "group", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_group), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_group)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_monitor = __Pyx_ImportType("plasticnet.plasticnet", "monitor", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_monitor), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_monitor = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_monitor->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_simulation = __Pyx_ImportType("plasticnet.plasticnet", "simulation", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_simulation), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_simulation = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_neuron = __Pyx_ImportType("plasticnet.plasticnet", "neuron", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_neuron), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_neuron = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron = __Pyx_ImportType("plasticnet.plasticnet", "post_process_neuron", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_post_process_channel = __Pyx_ImportType("plasticnet.plasticnet", "post_process_channel", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_channel->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_channel = __Pyx_ImportType("plasticnet.plasticnet", "channel", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_channel), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_channel = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_channel->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_post_process_connection = __Pyx_ImportType("plasticnet.plasticnet", "post_process_connection", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_connection), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_connection)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_connection = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_connection*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_connection->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_connection)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   /*--- Variable import code ---*/
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "splikes\connections\Triplet.pyx":4
- * from splikes.splikes cimport *
+  /* "plasticnet\connections\Miller2014.pyx":3
+ * from plasticnet.plasticnet cimport *
  * cimport cython
  * import pylab             # <<<<<<<<<<<<<<
  * 
  * import numpy as np
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_pylab, 0, -1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 4; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_pylab, 0, -1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 3; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_pylab, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 4; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_pylab, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 3; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes\connections\Triplet.pyx":6
+  /* "plasticnet\connections\Miller2014.pyx":5
  * import pylab
  * 
  * import numpy as np             # <<<<<<<<<<<<<<
  * cimport numpy as np
  * 
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_numpy, 0, -1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 6; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_numpy, 0, -1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 5; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 6; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 5; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes\connections\Triplet.pyx":2
- * 
- * from splikes.splikes cimport *             # <<<<<<<<<<<<<<
+  /* "plasticnet\connections\Miller2014.pyx":1
+ * from plasticnet.plasticnet cimport *             # <<<<<<<<<<<<<<
  * cimport cython
  * import pylab
  */
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":979
@@ -8785,11 +8762,11 @@ PyMODINIT_FUNC PyInit_Triplet(void)
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init splikes.connections.Triplet", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init plasticnet.connections.Miller2014", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init splikes.connections.Triplet");
+    PyErr_SetString(PyExc_ImportError, "init plasticnet.connections.Miller2014");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -8913,6 +8890,18 @@ static CYTHON_INLINE PyObject* __Pyx_PyObject_CallNoArg(PyObject *func) {
 }
 #endif
 
+static CYTHON_INLINE int __Pyx_TypeTest(PyObject *obj, PyTypeObject *type) {
+    if (unlikely(!type)) {
+        PyErr_SetString(PyExc_SystemError, "Missing type object");
+        return 0;
+    }
+    if (likely(PyObject_TypeCheck(obj, type)))
+        return 1;
+    PyErr_Format(PyExc_TypeError, "Cannot convert %.200s to %.200s",
+                 Py_TYPE(obj)->tp_name, type->tp_name);
+    return 0;
+}
+
 static CYTHON_INLINE PyObject *__Pyx_GetModuleGlobalName(PyObject *name) {
     PyObject *result;
 #if CYTHON_COMPILING_IN_CPYTHON
@@ -8930,16 +8919,82 @@ static CYTHON_INLINE PyObject *__Pyx_GetModuleGlobalName(PyObject *name) {
     return result;
 }
 
-static CYTHON_INLINE int __Pyx_TypeTest(PyObject *obj, PyTypeObject *type) {
-    if (unlikely(!type)) {
-        PyErr_SetString(PyExc_SystemError, "Missing type object");
-        return 0;
+static CYTHON_INLINE PyObject *__Pyx_GetItemInt_Generic(PyObject *o, PyObject* j) {
+    PyObject *r;
+    if (!j) return NULL;
+    r = PyObject_GetItem(o, j);
+    Py_DECREF(j);
+    return r;
+}
+static CYTHON_INLINE PyObject *__Pyx_GetItemInt_List_Fast(PyObject *o, Py_ssize_t i,
+                                                              int wraparound, int boundscheck) {
+#if CYTHON_COMPILING_IN_CPYTHON
+    if (wraparound & unlikely(i < 0)) i += PyList_GET_SIZE(o);
+    if ((!boundscheck) || likely((0 <= i) & (i < PyList_GET_SIZE(o)))) {
+        PyObject *r = PyList_GET_ITEM(o, i);
+        Py_INCREF(r);
+        return r;
     }
-    if (likely(PyObject_TypeCheck(obj, type)))
-        return 1;
-    PyErr_Format(PyExc_TypeError, "Cannot convert %.200s to %.200s",
-                 Py_TYPE(obj)->tp_name, type->tp_name);
-    return 0;
+    return __Pyx_GetItemInt_Generic(o, PyInt_FromSsize_t(i));
+#else
+    return PySequence_GetItem(o, i);
+#endif
+}
+static CYTHON_INLINE PyObject *__Pyx_GetItemInt_Tuple_Fast(PyObject *o, Py_ssize_t i,
+                                                              int wraparound, int boundscheck) {
+#if CYTHON_COMPILING_IN_CPYTHON
+    if (wraparound & unlikely(i < 0)) i += PyTuple_GET_SIZE(o);
+    if ((!boundscheck) || likely((0 <= i) & (i < PyTuple_GET_SIZE(o)))) {
+        PyObject *r = PyTuple_GET_ITEM(o, i);
+        Py_INCREF(r);
+        return r;
+    }
+    return __Pyx_GetItemInt_Generic(o, PyInt_FromSsize_t(i));
+#else
+    return PySequence_GetItem(o, i);
+#endif
+}
+static CYTHON_INLINE PyObject *__Pyx_GetItemInt_Fast(PyObject *o, Py_ssize_t i,
+                                                     int is_list, int wraparound, int boundscheck) {
+#if CYTHON_COMPILING_IN_CPYTHON
+    if (is_list || PyList_CheckExact(o)) {
+        Py_ssize_t n = ((!wraparound) | likely(i >= 0)) ? i : i + PyList_GET_SIZE(o);
+        if ((!boundscheck) || (likely((n >= 0) & (n < PyList_GET_SIZE(o))))) {
+            PyObject *r = PyList_GET_ITEM(o, n);
+            Py_INCREF(r);
+            return r;
+        }
+    }
+    else if (PyTuple_CheckExact(o)) {
+        Py_ssize_t n = ((!wraparound) | likely(i >= 0)) ? i : i + PyTuple_GET_SIZE(o);
+        if ((!boundscheck) || likely((n >= 0) & (n < PyTuple_GET_SIZE(o)))) {
+            PyObject *r = PyTuple_GET_ITEM(o, n);
+            Py_INCREF(r);
+            return r;
+        }
+    } else {
+        PySequenceMethods *m = Py_TYPE(o)->tp_as_sequence;
+        if (likely(m && m->sq_item)) {
+            if (wraparound && unlikely(i < 0) && likely(m->sq_length)) {
+                Py_ssize_t l = m->sq_length(o);
+                if (likely(l >= 0)) {
+                    i += l;
+                } else {
+                    if (PyErr_ExceptionMatches(PyExc_OverflowError))
+                        PyErr_Clear();
+                    else
+                        return NULL;
+                }
+            }
+            return m->sq_item(o, i);
+        }
+    }
+#else
+    if (is_list || PySequence_Check(o)) {
+        return PySequence_GetItem(o, i);
+    }
+#endif
+    return __Pyx_GetItemInt_Generic(o, PyInt_FromSsize_t(i));
 }
 
 static void __Pyx_RaiseArgtupleInvalid(
@@ -9635,6 +9690,32 @@ static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value) {
     }
 }
 
+static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value) {
+    const long neg_one = (long) -1, const_zero = 0;
+    const int is_unsigned = neg_one > const_zero;
+    if (is_unsigned) {
+        if (sizeof(long) < sizeof(long)) {
+            return PyInt_FromLong((long) value);
+        } else if (sizeof(long) <= sizeof(unsigned long)) {
+            return PyLong_FromUnsignedLong((unsigned long) value);
+        } else if (sizeof(long) <= sizeof(unsigned long long)) {
+            return PyLong_FromUnsignedLongLong((unsigned long long) value);
+        }
+    } else {
+        if (sizeof(long) <= sizeof(long)) {
+            return PyInt_FromLong((long) value);
+        } else if (sizeof(long) <= sizeof(long long)) {
+            return PyLong_FromLongLong((long long) value);
+        }
+    }
+    {
+        int one = 1; int little = (int)*(unsigned char *)&one;
+        unsigned char *bytes = (unsigned char *)&value;
+        return _PyLong_FromByteArray(bytes, sizeof(long),
+                                     little, !is_unsigned);
+    }
+}
+
 #define __PYX_VERIFY_RETURN_INT(target_type, func_type, func_value)       \
     {                                                                     \
         func_type value = func_value;                                     \
@@ -9990,32 +10071,6 @@ raise_neg_overflow:
         }
     #endif
 #endif
-
-static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value) {
-    const long neg_one = (long) -1, const_zero = 0;
-    const int is_unsigned = neg_one > const_zero;
-    if (is_unsigned) {
-        if (sizeof(long) < sizeof(long)) {
-            return PyInt_FromLong((long) value);
-        } else if (sizeof(long) <= sizeof(unsigned long)) {
-            return PyLong_FromUnsignedLong((unsigned long) value);
-        } else if (sizeof(long) <= sizeof(unsigned long long)) {
-            return PyLong_FromUnsignedLongLong((unsigned long long) value);
-        }
-    } else {
-        if (sizeof(long) <= sizeof(long)) {
-            return PyInt_FromLong((long) value);
-        } else if (sizeof(long) <= sizeof(long long)) {
-            return PyLong_FromLongLong((long long) value);
-        }
-    }
-    {
-        int one = 1; int little = (int)*(unsigned char *)&one;
-        unsigned char *bytes = (unsigned char *)&value;
-        return _PyLong_FromByteArray(bytes, sizeof(long),
-                                     little, !is_unsigned);
-    }
-}
 
 static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *x) {
     const long neg_one = (long) -1, const_zero = 0;
