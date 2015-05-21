@@ -87,7 +87,22 @@ day=24*hour
 year=365.25*day
 Hz=1.0
 
-cdef class monitor:
+cdef class group:
+
+    def save(self,g):
+        g.attrs['type']=str(type(self))
+        g.attrs['name']=self.__getattribute__('name')
+
+
+        for attr in self.save_attrs:
+            g.attrs[attr]=self.__getattribute__(attr)
+
+        for dataname in self.save_data:
+            data=self.__getattribute__(dataname)
+            g.create_dataset(dataname,data=data)
+
+
+cdef class monitor(group):
     
     def __init__(self,container,name,save_interval,start_time=0.0):
         self.name=name
