@@ -28,6 +28,10 @@ cdef class srm0(neuron):
         self.name='SRM0'
         self._reset()
 
+        self.save_attrs.extend(['tau','a','rate_slope','rate_offset','tau_beta','smoothed'])
+        self.save_data.extend(['u','v','beta'])
+
+
     @cython.cdivision(True)
     @cython.boundscheck(False) # turn of bounds-checking for entire function
     cpdef update(self,double t,simulation sim):

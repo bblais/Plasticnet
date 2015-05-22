@@ -37,6 +37,11 @@ cdef class poisson_pattern(neuron):
         self.verbose=verbose
         self.name='Poisson Pattern'
         
+        self.save_attrs.extend(['number_of_patterns','time_between_patterns','sequential'])
+        self.save_data.extend(['patterns'])
+
+
+
         self._reset()
         
         
@@ -155,6 +160,9 @@ cdef class poisson_plasticnet(neuron):
         self.name='Poisson Plasticnet'
         
         self._reset()
+
+        self.save_attrs.extend(['time_between_patterns'])
+
 
     def plot_spikes(self,count=False):
         spikes=self.saved_spikes
