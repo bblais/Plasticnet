@@ -454,13 +454,13 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "splikes\\connections\\BCM.pyx",
+  "splikes/connections/BCM.pyx",
   "__init__.pxd",
   "type.pxd",
-  "splikes\\splikes.pxd",
+  "splikes/splikes.pxd",
 };
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":726
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":726
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -469,7 +469,7 @@ static const char *__pyx_f[] = {
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":727
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":727
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -478,7 +478,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":728
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":728
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -487,7 +487,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":729
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":729
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -496,7 +496,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":733
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":733
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -505,7 +505,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":734
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":734
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -514,7 +514,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":735
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":735
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -523,7 +523,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":736
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":736
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -532,7 +532,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":740
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":740
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -541,7 +541,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":741
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":741
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -550,7 +550,7 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":750
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":750
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
@@ -559,7 +559,7 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":751
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":751
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t             # <<<<<<<<<<<<<<
@@ -568,7 +568,7 @@ typedef npy_long __pyx_t_5numpy_int_t;
  */
 typedef npy_longlong __pyx_t_5numpy_long_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":752
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":752
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -577,7 +577,7 @@ typedef npy_longlong __pyx_t_5numpy_long_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":754
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":754
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
@@ -586,7 +586,7 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":755
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":755
  * 
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t             # <<<<<<<<<<<<<<
@@ -595,7 +595,7 @@ typedef npy_ulong __pyx_t_5numpy_uint_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":756
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":756
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -604,7 +604,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":758
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":758
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -613,7 +613,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":759
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":759
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -622,7 +622,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":761
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":761
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -631,7 +631,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":762
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":762
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -640,7 +640,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":763
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":763
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -670,6 +670,7 @@ typedef npy_longdouble __pyx_t_5numpy_longdouble_t;
 
 
 /*--- Type declarations ---*/
+struct __pyx_obj_7splikes_7splikes_group;
 struct __pyx_obj_7splikes_7splikes_monitor;
 struct __pyx_obj_7splikes_7splikes_simulation;
 struct __pyx_obj_7splikes_7splikes_neuron;
@@ -678,7 +679,7 @@ struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper;
 struct __pyx_obj_7splikes_11connections_3BCM_BCM;
 struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper_Offset;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":765
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":765
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -687,7 +688,7 @@ struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper_Offset;
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":766
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":766
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -696,7 +697,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":767
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":767
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -705,7 +706,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":769
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":769
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -714,33 +715,48 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
 
-/* "splikes\splikes.pxd":29
+/* "splikes/splikes.pxd":28
+ * cdef double rande()
+ * 
+ * cdef class group:             # <<<<<<<<<<<<<<
+ *     cdef public object save_attrs,save_data
+ * 
+ */
+struct __pyx_obj_7splikes_7splikes_group {
+  PyObject_HEAD
+  PyObject *save_attrs;
+  PyObject *save_data;
+};
+
+
+/* "splikes/splikes.pxd":32
  * 
  * 
- * cdef class monitor:             # <<<<<<<<<<<<<<
+ * cdef class monitor(group):             # <<<<<<<<<<<<<<
  *     cdef public double time_to_next_save
  *     cdef public double save_interval
  */
 struct __pyx_obj_7splikes_7splikes_monitor {
-  PyObject_HEAD
+  struct __pyx_obj_7splikes_7splikes_group __pyx_base;
   struct __pyx_vtabstruct_7splikes_7splikes_monitor *__pyx_vtab;
   double time_to_next_save;
   double save_interval;
   PyObject *container;
   PyObject *name;
-  PyObject *saved_results;
+  PyObject *t;
+  PyObject *values;
 };
 
 
-/* "splikes\splikes.pxd":36
+/* "splikes/splikes.pxd":39
  *     cpdef update(self,double t)
  * 
- * cdef class simulation:             # <<<<<<<<<<<<<<
+ * cdef class simulation(group):             # <<<<<<<<<<<<<<
  *     cdef public double dt
  *     cdef public double total_time
  */
 struct __pyx_obj_7splikes_7splikes_simulation {
-  PyObject_HEAD
+  struct __pyx_obj_7splikes_7splikes_group __pyx_base;
   struct __pyx_vtabstruct_7splikes_7splikes_simulation *__pyx_vtab;
   double dt;
   double total_time;
@@ -753,15 +769,15 @@ struct __pyx_obj_7splikes_7splikes_simulation {
 };
 
 
-/* "splikes\splikes.pxd":45
+/* "splikes/splikes.pxd":48
  *     cpdef _reset(self)
  * 
- * cdef class neuron:             # <<<<<<<<<<<<<<
+ * cdef class neuron(group):             # <<<<<<<<<<<<<<
  *     cdef public int verbose
  *     cdef public int is_spike
  */
 struct __pyx_obj_7splikes_7splikes_neuron {
-  PyObject_HEAD
+  struct __pyx_obj_7splikes_7splikes_group __pyx_base;
   struct __pyx_vtabstruct_7splikes_7splikes_neuron *__pyx_vtab;
   int verbose;
   int is_spike;
@@ -782,15 +798,15 @@ struct __pyx_obj_7splikes_7splikes_neuron {
 };
 
 
-/* "splikes\splikes.pxd":62
+/* "splikes/splikes.pxd":65
  * 
  * 
- * cdef class connection:             # <<<<<<<<<<<<<<
+ * cdef class connection(group):             # <<<<<<<<<<<<<<
  *     cdef public np.ndarray weights
  *     cdef public np.ndarray initial_weights
  */
 struct __pyx_obj_7splikes_7splikes_connection {
-  PyObject_HEAD
+  struct __pyx_obj_7splikes_7splikes_group __pyx_base;
   struct __pyx_vtabstruct_7splikes_7splikes_connection *__pyx_vtab;
   PyArrayObject *weights;
   PyArrayObject *initial_weights;
@@ -809,7 +825,7 @@ struct __pyx_obj_7splikes_7splikes_connection {
 };
 
 
-/* "splikes\connections\BCM.pyx":30
+/* "splikes/connections/BCM.pyx":30
  * #     - tau_thresh=10000
  * #
  * cdef class BCM_LawCooper(connection):             # <<<<<<<<<<<<<<
@@ -849,7 +865,7 @@ struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper {
 };
 
 
-/* "splikes\connections\BCM.pyx":212
+/* "splikes/connections/BCM.pyx":212
  *             self.apply_weight_limits()
  * 
  * cdef class BCM(connection):             # <<<<<<<<<<<<<<
@@ -881,7 +897,7 @@ struct __pyx_obj_7splikes_11connections_3BCM_BCM {
 };
 
 
-/* "splikes\connections\BCM.pyx":327
+/* "splikes/connections/BCM.pyx":327
  * 
  * 
  * cdef class BCM_LawCooper_Offset(connection):             # <<<<<<<<<<<<<<
@@ -910,10 +926,10 @@ struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper_Offset {
 
 
 
-/* "splikes\splikes.pxd":29
+/* "splikes/splikes.pxd":32
  * 
  * 
- * cdef class monitor:             # <<<<<<<<<<<<<<
+ * cdef class monitor(group):             # <<<<<<<<<<<<<<
  *     cdef public double time_to_next_save
  *     cdef public double save_interval
  */
@@ -924,10 +940,10 @@ struct __pyx_vtabstruct_7splikes_7splikes_monitor {
 static struct __pyx_vtabstruct_7splikes_7splikes_monitor *__pyx_vtabptr_7splikes_7splikes_monitor;
 
 
-/* "splikes\splikes.pxd":36
+/* "splikes/splikes.pxd":39
  *     cpdef update(self,double t)
  * 
- * cdef class simulation:             # <<<<<<<<<<<<<<
+ * cdef class simulation(group):             # <<<<<<<<<<<<<<
  *     cdef public double dt
  *     cdef public double total_time
  */
@@ -938,10 +954,10 @@ struct __pyx_vtabstruct_7splikes_7splikes_simulation {
 static struct __pyx_vtabstruct_7splikes_7splikes_simulation *__pyx_vtabptr_7splikes_7splikes_simulation;
 
 
-/* "splikes\splikes.pxd":45
+/* "splikes/splikes.pxd":48
  *     cpdef _reset(self)
  * 
- * cdef class neuron:             # <<<<<<<<<<<<<<
+ * cdef class neuron(group):             # <<<<<<<<<<<<<<
  *     cdef public int verbose
  *     cdef public int is_spike
  */
@@ -953,10 +969,10 @@ struct __pyx_vtabstruct_7splikes_7splikes_neuron {
 static struct __pyx_vtabstruct_7splikes_7splikes_neuron *__pyx_vtabptr_7splikes_7splikes_neuron;
 
 
-/* "splikes\splikes.pxd":62
+/* "splikes/splikes.pxd":65
  * 
  * 
- * cdef class connection:             # <<<<<<<<<<<<<<
+ * cdef class connection(group):             # <<<<<<<<<<<<<<
  *     cdef public np.ndarray weights
  *     cdef public np.ndarray initial_weights
  */
@@ -969,7 +985,7 @@ struct __pyx_vtabstruct_7splikes_7splikes_connection {
 static struct __pyx_vtabstruct_7splikes_7splikes_connection *__pyx_vtabptr_7splikes_7splikes_connection;
 
 
-/* "splikes\connections\BCM.pyx":30
+/* "splikes/connections/BCM.pyx":30
  * #     - tau_thresh=10000
  * #
  * cdef class BCM_LawCooper(connection):             # <<<<<<<<<<<<<<
@@ -983,7 +999,7 @@ struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper {
 static struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_vtabptr_7splikes_11connections_3BCM_BCM_LawCooper;
 
 
-/* "splikes\connections\BCM.pyx":212
+/* "splikes/connections/BCM.pyx":212
  *             self.apply_weight_limits()
  * 
  * cdef class BCM(connection):             # <<<<<<<<<<<<<<
@@ -997,7 +1013,7 @@ struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM {
 static struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM *__pyx_vtabptr_7splikes_11connections_3BCM_BCM;
 
 
-/* "splikes\connections\BCM.pyx":327
+/* "splikes/connections/BCM.pyx":327
  * 
  * 
  * cdef class BCM_LawCooper_Offset(connection):             # <<<<<<<<<<<<<<
@@ -1386,6 +1402,7 @@ static PyTypeObject *__pyx_ptype_5numpy_ufunc = 0;
 static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, char *, char *, int *); /*proto*/
 
 /* Module declarations from 'splikes.splikes' */
+static PyTypeObject *__pyx_ptype_7splikes_7splikes_group = 0;
 static PyTypeObject *__pyx_ptype_7splikes_7splikes_monitor = 0;
 static PyTypeObject *__pyx_ptype_7splikes_7splikes_simulation = 0;
 static PyTypeObject *__pyx_ptype_7splikes_7splikes_neuron = 0;
@@ -1677,7 +1694,7 @@ static PyObject *__pyx_tuple__4;
 static PyObject *__pyx_tuple__5;
 static PyObject *__pyx_tuple__6;
 
-/* "splikes\connections\BCM.pyx":40
+/* "splikes/connections/BCM.pyx":40
  *     cdef public int theta_squares_the_average
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -1734,7 +1751,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes\connections\BCM.pyx":41
+  /* "splikes/connections/BCM.pyx":41
  * 
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -1777,7 +1794,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "splikes\connections\BCM.pyx":42
+  /* "splikes/connections/BCM.pyx":42
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
@@ -1787,7 +1804,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_5 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "splikes\connections\BCM.pyx":41
+  /* "splikes/connections/BCM.pyx":41
  * 
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -1803,7 +1820,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "splikes\connections\BCM.pyx":42
+  /* "splikes/connections/BCM.pyx":42
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
@@ -1818,7 +1835,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "splikes\connections\BCM.pyx":41
+  /* "splikes/connections/BCM.pyx":41
  * 
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -1831,7 +1848,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_v_self->theta = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes\connections\BCM.pyx":43
+  /* "splikes/connections/BCM.pyx":43
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -1874,7 +1891,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_5 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "splikes\connections\BCM.pyx":44
+  /* "splikes/connections/BCM.pyx":44
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
@@ -1884,7 +1901,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_4 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "splikes\connections\BCM.pyx":43
+  /* "splikes/connections/BCM.pyx":43
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -1900,7 +1917,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "splikes\connections\BCM.pyx":44
+  /* "splikes/connections/BCM.pyx":44
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
@@ -1915,7 +1932,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "splikes\connections\BCM.pyx":43
+  /* "splikes/connections/BCM.pyx":43
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -1928,7 +1945,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_v_self->beta = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes\connections\BCM.pyx":46
+  /* "splikes/connections/BCM.pyx":46
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  * 
  *         self.mod_theta=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -1968,7 +1985,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_v_self->mod_theta = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "splikes\connections\BCM.pyx":47
+  /* "splikes/connections/BCM.pyx":47
  * 
  *         self.mod_theta=np.zeros(self.post.N,dtype=np.float)
  *         self.mod_beta=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -2008,7 +2025,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_v_self->mod_beta = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "splikes\connections\BCM.pyx":50
+  /* "splikes/connections/BCM.pyx":50
  * 
  * 
  *         self.y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -2048,7 +2065,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_v_self->y = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "splikes\connections\BCM.pyx":51
+  /* "splikes/connections/BCM.pyx":51
  * 
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -2088,7 +2105,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_v_self->Y = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes\connections\BCM.pyx":52
+  /* "splikes/connections/BCM.pyx":52
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.mod_Y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -2128,7 +2145,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_v_self->mod_Y = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "splikes\connections\BCM.pyx":54
+  /* "splikes/connections/BCM.pyx":54
  *         self.mod_Y=np.zeros(self.post.N,dtype=np.float)
  * 
  *         self.y_avg=np.sqrt(self.theta)             # <<<<<<<<<<<<<<
@@ -2172,7 +2189,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_v_self->y_avg = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "splikes\connections\BCM.pyx":55
+  /* "splikes/connections/BCM.pyx":55
  * 
  *         self.y_avg=np.sqrt(self.theta)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -2212,7 +2229,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_v_self->x = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "splikes\connections\BCM.pyx":56
+  /* "splikes/connections/BCM.pyx":56
  *         self.y_avg=np.sqrt(self.theta)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.X=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -2252,7 +2269,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_v_self->X = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes\connections\BCM.pyx":57
+  /* "splikes/connections/BCM.pyx":57
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.mod_X=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -2292,7 +2309,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_v_self->mod_X = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "splikes\connections\BCM.pyx":59
+  /* "splikes/connections/BCM.pyx":59
  *         self.mod_X=np.zeros(self.pre.N,dtype=np.float)
  * 
  *         self.time_to_next_modification=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -2302,7 +2319,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_t_6 = __pyx_v_self->time_between_modification;
   __pyx_v_self->time_to_next_modification = __pyx_t_6;
 
-  /* "splikes\connections\BCM.pyx":61
+  /* "splikes/connections/BCM.pyx":61
  *         self.time_to_next_modification=self.time_between_modification
  * 
  *         connection._reset(self)             # <<<<<<<<<<<<<<
@@ -2313,7 +2330,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "splikes\connections\BCM.pyx":40
+  /* "splikes/connections/BCM.pyx":40
  *     cdef public int theta_squares_the_average
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -2377,7 +2394,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper__reset(str
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":63
+/* "splikes/connections/BCM.pyx":63
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -2403,7 +2420,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_3__init__(PyObje
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_pre,&__pyx_n_s_post,&__pyx_n_s_initial_weight_range,&__pyx_n_s_state,&__pyx_n_s_initial_theta_range,0};
     PyObject* values[5] = {0,0,0,0,0};
 
-    /* "splikes\connections\BCM.pyx":64
+    /* "splikes/connections/BCM.pyx":64
  * 
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,             # <<<<<<<<<<<<<<
@@ -2412,7 +2429,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_3__init__(PyObje
  */
     values[2] = ((PyObject *)Py_None);
 
-    /* "splikes\connections\BCM.pyx":65
+    /* "splikes/connections/BCM.pyx":65
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,
  *                         state=None,             # <<<<<<<<<<<<<<
@@ -2421,7 +2438,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_3__init__(PyObje
  */
     values[3] = ((PyObject *)Py_None);
 
-    /* "splikes\connections\BCM.pyx":66
+    /* "splikes/connections/BCM.pyx":66
  *                         initial_weight_range=None,
  *                         state=None,
  *                         initial_theta_range=None,):             # <<<<<<<<<<<<<<
@@ -2499,7 +2516,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_3__init__(PyObje
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(((struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *)__pyx_v_self), __pyx_v_pre, __pyx_v_post, __pyx_v_initial_weight_range, __pyx_v_state, __pyx_v_initial_theta_range);
 
-  /* "splikes\connections\BCM.pyx":63
+  /* "splikes/connections/BCM.pyx":63
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -2532,7 +2549,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_RefNannySetupContext("__init__", 0);
   __Pyx_INCREF(__pyx_v_initial_theta_range);
 
-  /* "splikes\connections\BCM.pyx":69
+  /* "splikes/connections/BCM.pyx":69
  * 
  * 
  *         if initial_theta_range is None:             # <<<<<<<<<<<<<<
@@ -2543,7 +2560,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "splikes\connections\BCM.pyx":70
+    /* "splikes/connections/BCM.pyx":70
  * 
  *         if initial_theta_range is None:
  *             initial_theta_range=[0.0,0.1]             # <<<<<<<<<<<<<<
@@ -2564,7 +2581,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   }
   __pyx_L3:;
 
-  /* "splikes\connections\BCM.pyx":72
+  /* "splikes/connections/BCM.pyx":72
  *             initial_theta_range=[0.0,0.1]
  * 
  *         self.initial_theta_range=initial_theta_range             # <<<<<<<<<<<<<<
@@ -2577,7 +2594,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_DECREF(__pyx_v_self->initial_theta_range);
   __pyx_v_self->initial_theta_range = __pyx_v_initial_theta_range;
 
-  /* "splikes\connections\BCM.pyx":74
+  /* "splikes/connections/BCM.pyx":74
  *         self.initial_theta_range=initial_theta_range
  * 
  *         connection.__init__(self,pre,post,initial_weight_range,state)             # <<<<<<<<<<<<<<
@@ -2624,7 +2641,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes\connections\BCM.pyx":76
+  /* "splikes/connections/BCM.pyx":76
  *         connection.__init__(self,pre,post,initial_weight_range,state)
  * 
  *         self.name='Spiking BCM LawCooper'             # <<<<<<<<<<<<<<
@@ -2637,7 +2654,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_DECREF(__pyx_v_self->__pyx_base.name);
   __pyx_v_self->__pyx_base.name = __pyx_kp_s_Spiking_BCM_LawCooper;
 
-  /* "splikes\connections\BCM.pyx":77
+  /* "splikes/connections/BCM.pyx":77
  * 
  *         self.name='Spiking BCM LawCooper'
  *         self.tau_x=0.01             # <<<<<<<<<<<<<<
@@ -2646,7 +2663,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->tau_x = 0.01;
 
-  /* "splikes\connections\BCM.pyx":78
+  /* "splikes/connections/BCM.pyx":78
  *         self.name='Spiking BCM LawCooper'
  *         self.tau_x=0.01
  *         self.tau_y=0.01             # <<<<<<<<<<<<<<
@@ -2655,7 +2672,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->tau_y = 0.01;
 
-  /* "splikes\connections\BCM.pyx":79
+  /* "splikes/connections/BCM.pyx":79
  *         self.tau_x=0.01
  *         self.tau_y=0.01
  *         self.ax=1.0/self.tau_x             # <<<<<<<<<<<<<<
@@ -2674,7 +2691,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   }
   __pyx_v_self->ax = (1.0 / __pyx_v_self->tau_x);
 
-  /* "splikes\connections\BCM.pyx":80
+  /* "splikes/connections/BCM.pyx":80
  *         self.tau_y=0.01
  *         self.ax=1.0/self.tau_x
  *         self.ay=1.0/self.tau_y             # <<<<<<<<<<<<<<
@@ -2693,7 +2710,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   }
   __pyx_v_self->ay = (1.0 / __pyx_v_self->tau_y);
 
-  /* "splikes\connections\BCM.pyx":81
+  /* "splikes/connections/BCM.pyx":81
  *         self.ax=1.0/self.tau_x
  *         self.ay=1.0/self.tau_y
  *         self.smoothed_x=False             # <<<<<<<<<<<<<<
@@ -2702,7 +2719,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->smoothed_x = 0;
 
-  /* "splikes\connections\BCM.pyx":82
+  /* "splikes/connections/BCM.pyx":82
  *         self.ay=1.0/self.tau_y
  *         self.smoothed_x=False
  *         self.smoothed_y=False             # <<<<<<<<<<<<<<
@@ -2711,7 +2728,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->smoothed_y = 0;
 
-  /* "splikes\connections\BCM.pyx":84
+  /* "splikes/connections/BCM.pyx":84
  *         self.smoothed_y=False
  * 
  *         self.xo=0             # <<<<<<<<<<<<<<
@@ -2720,7 +2737,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->xo = 0.0;
 
-  /* "splikes\connections\BCM.pyx":85
+  /* "splikes/connections/BCM.pyx":85
  * 
  *         self.xo=0
  *         self.yo=0             # <<<<<<<<<<<<<<
@@ -2729,7 +2746,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->yo = 0.0;
 
-  /* "splikes\connections\BCM.pyx":86
+  /* "splikes/connections/BCM.pyx":86
  *         self.xo=0
  *         self.yo=0
  *         self.theta_o=1             # <<<<<<<<<<<<<<
@@ -2738,7 +2755,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->theta_o = 1.0;
 
-  /* "splikes\connections\BCM.pyx":87
+  /* "splikes/connections/BCM.pyx":87
  *         self.yo=0
  *         self.theta_o=1
  *         self.gamma=0             # <<<<<<<<<<<<<<
@@ -2747,7 +2764,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->gamma = 0.0;
 
-  /* "splikes\connections\BCM.pyx":88
+  /* "splikes/connections/BCM.pyx":88
  *         self.theta_o=1
  *         self.gamma=0
  *         self.eta=4e-06             # <<<<<<<<<<<<<<
@@ -2756,7 +2773,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->eta = 4e-06;
 
-  /* "splikes\connections\BCM.pyx":89
+  /* "splikes/connections/BCM.pyx":89
  *         self.gamma=0
  *         self.eta=4e-06
  *         self.tau_theta=10             # <<<<<<<<<<<<<<
@@ -2769,7 +2786,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_DECREF(__pyx_v_self->tau_theta);
   __pyx_v_self->tau_theta = __pyx_int_10;
 
-  /* "splikes\connections\BCM.pyx":90
+  /* "splikes/connections/BCM.pyx":90
  *         self.eta=4e-06
  *         self.tau_theta=10
  *         self.tau_beta=-1             # <<<<<<<<<<<<<<
@@ -2782,7 +2799,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_DECREF(__pyx_v_self->tau_beta);
   __pyx_v_self->tau_beta = __pyx_int_neg_1;
 
-  /* "splikes\connections\BCM.pyx":91
+  /* "splikes/connections/BCM.pyx":91
  *         self.tau_theta=10
  *         self.tau_beta=-1
  *         self.time_between_modification=-1.0             # <<<<<<<<<<<<<<
@@ -2791,7 +2808,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->time_between_modification = -1.0;
 
-  /* "splikes\connections\BCM.pyx":92
+  /* "splikes/connections/BCM.pyx":92
  *         self.tau_beta=-1
  *         self.time_between_modification=-1.0
  *         self.theta_squares_the_average=False             # <<<<<<<<<<<<<<
@@ -2800,7 +2817,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->theta_squares_the_average = 0;
 
-  /* "splikes\connections\BCM.pyx":93
+  /* "splikes/connections/BCM.pyx":93
  *         self.time_between_modification=-1.0
  *         self.theta_squares_the_average=False
  *         self._reset()             # <<<<<<<<<<<<<<
@@ -2811,7 +2828,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes\connections\BCM.pyx":63
+  /* "splikes/connections/BCM.pyx":63
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -2835,7 +2852,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":97
+/* "splikes/connections/BCM.pyx":97
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -2945,7 +2962,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes\connections\BCM.pyx":100
+  /* "splikes/connections/BCM.pyx":100
  *         cdef int __i,__j
  * 
  *         cdef double *W=self.W             # <<<<<<<<<<<<<<
@@ -2955,7 +2972,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_8 = __pyx_v_self->__pyx_base.W;
   __pyx_v_W = __pyx_t_8;
 
-  /* "splikes\connections\BCM.pyx":101
+  /* "splikes/connections/BCM.pyx":101
  * 
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data             # <<<<<<<<<<<<<<
@@ -2964,7 +2981,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_theta = ((double *)__pyx_v_self->theta->data);
 
-  /* "splikes\connections\BCM.pyx":102
+  /* "splikes/connections/BCM.pyx":102
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *beta=<double *>self.beta.data             # <<<<<<<<<<<<<<
@@ -2973,7 +2990,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_beta = ((double *)__pyx_v_self->beta->data);
 
-  /* "splikes\connections\BCM.pyx":103
+  /* "splikes/connections/BCM.pyx":103
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *beta=<double *>self.beta.data
  *         cdef double *y=<double *>self.y.data             # <<<<<<<<<<<<<<
@@ -2982,7 +2999,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_y = ((double *)__pyx_v_self->y->data);
 
-  /* "splikes\connections\BCM.pyx":104
+  /* "splikes/connections/BCM.pyx":104
  *         cdef double *beta=<double *>self.beta.data
  *         cdef double *y=<double *>self.y.data
  *         cdef double *x=<double *>self.x.data             # <<<<<<<<<<<<<<
@@ -2991,7 +3008,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_x = ((double *)__pyx_v_self->x->data);
 
-  /* "splikes\connections\BCM.pyx":105
+  /* "splikes/connections/BCM.pyx":105
  *         cdef double *y=<double *>self.y.data
  *         cdef double *x=<double *>self.x.data
  *         cdef double *Y=<double *>self.Y.data             # <<<<<<<<<<<<<<
@@ -3000,7 +3017,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_Y = ((double *)__pyx_v_self->Y->data);
 
-  /* "splikes\connections\BCM.pyx":106
+  /* "splikes/connections/BCM.pyx":106
  *         cdef double *x=<double *>self.x.data
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *X=<double *>self.X.data             # <<<<<<<<<<<<<<
@@ -3009,7 +3026,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_X = ((double *)__pyx_v_self->X->data);
 
-  /* "splikes\connections\BCM.pyx":107
+  /* "splikes/connections/BCM.pyx":107
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *X=<double *>self.X.data
  *         cdef double *y_avg=<double *>self.y_avg.data             # <<<<<<<<<<<<<<
@@ -3018,7 +3035,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_y_avg = ((double *)__pyx_v_self->y_avg->data);
 
-  /* "splikes\connections\BCM.pyx":109
+  /* "splikes/connections/BCM.pyx":109
  *         cdef double *y_avg=<double *>self.y_avg.data
  * 
  *         cdef double *mod_X=<double *>self.mod_X.data             # <<<<<<<<<<<<<<
@@ -3027,7 +3044,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_mod_X = ((double *)__pyx_v_self->mod_X->data);
 
-  /* "splikes\connections\BCM.pyx":110
+  /* "splikes/connections/BCM.pyx":110
  * 
  *         cdef double *mod_X=<double *>self.mod_X.data
  *         cdef double *mod_Y=<double *>self.mod_Y.data             # <<<<<<<<<<<<<<
@@ -3036,7 +3053,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_mod_Y = ((double *)__pyx_v_self->mod_Y->data);
 
-  /* "splikes\connections\BCM.pyx":111
+  /* "splikes/connections/BCM.pyx":111
  *         cdef double *mod_X=<double *>self.mod_X.data
  *         cdef double *mod_Y=<double *>self.mod_Y.data
  *         cdef double *mod_theta=<double *>self.mod_theta.data             # <<<<<<<<<<<<<<
@@ -3045,7 +3062,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_mod_theta = ((double *)__pyx_v_self->mod_theta->data);
 
-  /* "splikes\connections\BCM.pyx":112
+  /* "splikes/connections/BCM.pyx":112
  *         cdef double *mod_Y=<double *>self.mod_Y.data
  *         cdef double *mod_theta=<double *>self.mod_theta.data
  *         cdef double *mod_beta=<double *>self.mod_beta.data             # <<<<<<<<<<<<<<
@@ -3054,7 +3071,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_mod_beta = ((double *)__pyx_v_self->mod_beta->data);
 
-  /* "splikes\connections\BCM.pyx":114
+  /* "splikes/connections/BCM.pyx":114
  *         cdef double *mod_beta=<double *>self.mod_beta.data
  * 
  *         cdef double tau_x=self.tau_x             # <<<<<<<<<<<<<<
@@ -3064,7 +3081,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->tau_x;
   __pyx_v_tau_x = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":115
+  /* "splikes/connections/BCM.pyx":115
  * 
  *         cdef double tau_x=self.tau_x
  *         cdef double tau_y=self.tau_y             # <<<<<<<<<<<<<<
@@ -3074,7 +3091,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->tau_y;
   __pyx_v_tau_y = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":116
+  /* "splikes/connections/BCM.pyx":116
  *         cdef double tau_x=self.tau_x
  *         cdef double tau_y=self.tau_y
  *         cdef double ax=self.ax             # <<<<<<<<<<<<<<
@@ -3084,7 +3101,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->ax;
   __pyx_v_ax = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":117
+  /* "splikes/connections/BCM.pyx":117
  *         cdef double tau_y=self.tau_y
  *         cdef double ax=self.ax
  *         cdef double ay=self.ay             # <<<<<<<<<<<<<<
@@ -3094,7 +3111,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->ay;
   __pyx_v_ay = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":118
+  /* "splikes/connections/BCM.pyx":118
  *         cdef double ax=self.ax
  *         cdef double ay=self.ay
  *         cdef double xo=self.xo             # <<<<<<<<<<<<<<
@@ -3104,7 +3121,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->xo;
   __pyx_v_xo = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":119
+  /* "splikes/connections/BCM.pyx":119
  *         cdef double ay=self.ay
  *         cdef double xo=self.xo
  *         cdef double yo=self.yo             # <<<<<<<<<<<<<<
@@ -3114,7 +3131,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->yo;
   __pyx_v_yo = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":120
+  /* "splikes/connections/BCM.pyx":120
  *         cdef double xo=self.xo
  *         cdef double yo=self.yo
  *         cdef double theta_o=self.theta_o             # <<<<<<<<<<<<<<
@@ -3124,7 +3141,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->theta_o;
   __pyx_v_theta_o = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":121
+  /* "splikes/connections/BCM.pyx":121
  *         cdef double yo=self.yo
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma             # <<<<<<<<<<<<<<
@@ -3134,7 +3151,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->gamma;
   __pyx_v_gamma = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":122
+  /* "splikes/connections/BCM.pyx":122
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta             # <<<<<<<<<<<<<<
@@ -3144,7 +3161,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->eta;
   __pyx_v_eta = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":123
+  /* "splikes/connections/BCM.pyx":123
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta
  *         cdef double tau_theta=self.tau_theta             # <<<<<<<<<<<<<<
@@ -3154,7 +3171,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_self->tau_theta); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 123; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_tau_theta = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":124
+  /* "splikes/connections/BCM.pyx":124
  *         cdef double eta=self.eta
  *         cdef double tau_theta=self.tau_theta
  *         cdef double tau_beta=self.tau_beta             # <<<<<<<<<<<<<<
@@ -3164,7 +3181,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_self->tau_beta); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 124; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_tau_beta = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":133
+  /* "splikes/connections/BCM.pyx":133
  *         cdef int __wi
  * 
  *         use_beta=self.tau_beta>0             # <<<<<<<<<<<<<<
@@ -3176,7 +3193,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_use_beta = __pyx_t_10;
 
-  /* "splikes\connections\BCM.pyx":135
+  /* "splikes/connections/BCM.pyx":135
  *         use_beta=self.tau_beta>0
  * 
  *         pre=<int *>self.pre.spiking.data             # <<<<<<<<<<<<<<
@@ -3185,7 +3202,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_pre = ((int *)__pyx_v_self->__pyx_base.pre->spiking->data);
 
-  /* "splikes\connections\BCM.pyx":136
+  /* "splikes/connections/BCM.pyx":136
  * 
  *         pre=<int *>self.pre.spiking.data
  *         post=<int *>self.post.spiking.data             # <<<<<<<<<<<<<<
@@ -3194,7 +3211,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_post = ((int *)__pyx_v_self->__pyx_base.post->spiking->data);
 
-  /* "splikes\connections\BCM.pyx":139
+  /* "splikes/connections/BCM.pyx":139
  * 
  * 
  *         for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -3205,7 +3222,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v___j = __pyx_t_11;
 
-    /* "splikes\connections\BCM.pyx":140
+    /* "splikes/connections/BCM.pyx":140
  * 
  *         for __j in range(self.pre.N):
  *             x[__j]+=sim.dt*(-x[__j]/tau_x+ax*pre[__j]/sim.dt)             # <<<<<<<<<<<<<<
@@ -3216,7 +3233,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     (__pyx_v_x[__pyx_t_12]) = ((__pyx_v_x[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_x[__pyx_v___j])) / __pyx_v_tau_x) + ((__pyx_v_ax * (__pyx_v_pre[__pyx_v___j])) / __pyx_v_sim->dt))));
   }
 
-  /* "splikes\connections\BCM.pyx":142
+  /* "splikes/connections/BCM.pyx":142
  *             x[__j]+=sim.dt*(-x[__j]/tau_x+ax*pre[__j]/sim.dt)
  * 
  *         if self.smoothed_x:             # <<<<<<<<<<<<<<
@@ -3226,7 +3243,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_13 = (__pyx_v_self->smoothed_x != 0);
   if (__pyx_t_13) {
 
-    /* "splikes\connections\BCM.pyx":143
+    /* "splikes/connections/BCM.pyx":143
  * 
  *         if self.smoothed_x:
  *             for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -3237,7 +3254,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___j = __pyx_t_11;
 
-      /* "splikes\connections\BCM.pyx":144
+      /* "splikes/connections/BCM.pyx":144
  *         if self.smoothed_x:
  *             for __j in range(self.pre.N):
  *                 X[__j]+=sim.dt*(x[__j]-X[__j])/tau_x             # <<<<<<<<<<<<<<
@@ -3251,7 +3268,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   /*else*/ {
 
-    /* "splikes\connections\BCM.pyx":146
+    /* "splikes/connections/BCM.pyx":146
  *                 X[__j]+=sim.dt*(x[__j]-X[__j])/tau_x
  *         else:
  *             for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -3262,7 +3279,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___j = __pyx_t_11;
 
-      /* "splikes\connections\BCM.pyx":147
+      /* "splikes/connections/BCM.pyx":147
  *         else:
  *             for __j in range(self.pre.N):
  *                 X[__j]=x[__j]             # <<<<<<<<<<<<<<
@@ -3274,7 +3291,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   __pyx_L5:;
 
-  /* "splikes\connections\BCM.pyx":149
+  /* "splikes/connections/BCM.pyx":149
  *                 X[__j]=x[__j]
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3285,7 +3302,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v___i = __pyx_t_11;
 
-    /* "splikes\connections\BCM.pyx":150
+    /* "splikes/connections/BCM.pyx":150
  * 
  *         for __i in range(self.post.N):
  *             y[__i]+=sim.dt*(-y[__i]/tau_y+ay*post[__i]/sim.dt)             # <<<<<<<<<<<<<<
@@ -3296,7 +3313,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     (__pyx_v_y[__pyx_t_12]) = ((__pyx_v_y[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_y[__pyx_v___i])) / __pyx_v_tau_y) + ((__pyx_v_ay * (__pyx_v_post[__pyx_v___i])) / __pyx_v_sim->dt))));
   }
 
-  /* "splikes\connections\BCM.pyx":152
+  /* "splikes/connections/BCM.pyx":152
  *             y[__i]+=sim.dt*(-y[__i]/tau_y+ay*post[__i]/sim.dt)
  * 
  *         if self.smoothed_y:             # <<<<<<<<<<<<<<
@@ -3306,7 +3323,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_13 = (__pyx_v_self->smoothed_y != 0);
   if (__pyx_t_13) {
 
-    /* "splikes\connections\BCM.pyx":153
+    /* "splikes/connections/BCM.pyx":153
  * 
  *         if self.smoothed_y:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3317,7 +3334,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___i = __pyx_t_11;
 
-      /* "splikes\connections\BCM.pyx":154
+      /* "splikes/connections/BCM.pyx":154
  *         if self.smoothed_y:
  *             for __i in range(self.post.N):
  *                 Y[__i]+=sim.dt*(y[__i]-Y[__i])/tau_y             # <<<<<<<<<<<<<<
@@ -3331,7 +3348,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   /*else*/ {
 
-    /* "splikes\connections\BCM.pyx":156
+    /* "splikes/connections/BCM.pyx":156
  *                 Y[__i]+=sim.dt*(y[__i]-Y[__i])/tau_y
  *         else:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3342,7 +3359,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___i = __pyx_t_11;
 
-      /* "splikes\connections\BCM.pyx":157
+      /* "splikes/connections/BCM.pyx":157
  *         else:
  *             for __i in range(self.post.N):
  *                 Y[__i]=y[__i]             # <<<<<<<<<<<<<<
@@ -3354,7 +3371,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   __pyx_L12:;
 
-  /* "splikes\connections\BCM.pyx":160
+  /* "splikes/connections/BCM.pyx":160
  * 
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3365,7 +3382,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v___i = __pyx_t_11;
 
-    /* "splikes\connections\BCM.pyx":161
+    /* "splikes/connections/BCM.pyx":161
  * 
  *         for __i in range(self.post.N):
  *             y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/tau_y-yo)-y_avg[__i]))             # <<<<<<<<<<<<<<
@@ -3376,7 +3393,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     (__pyx_v_y_avg[__pyx_t_12]) = ((__pyx_v_y_avg[__pyx_t_12]) + (__pyx_v_sim->dt * ((1.0 / __pyx_v_tau_theta) * ((((__pyx_v_Y[__pyx_v___i]) / __pyx_v_tau_y) - __pyx_v_yo) - (__pyx_v_y_avg[__pyx_v___i])))));
   }
 
-  /* "splikes\connections\BCM.pyx":163
+  /* "splikes/connections/BCM.pyx":163
  *             y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/tau_y-yo)-y_avg[__i]))
  * 
  *         if use_beta:             # <<<<<<<<<<<<<<
@@ -3386,7 +3403,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_13 = (__pyx_v_use_beta != 0);
   if (__pyx_t_13) {
 
-    /* "splikes\connections\BCM.pyx":164
+    /* "splikes/connections/BCM.pyx":164
  * 
  *         if use_beta:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3397,7 +3414,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___i = __pyx_t_11;
 
-      /* "splikes\connections\BCM.pyx":165
+      /* "splikes/connections/BCM.pyx":165
  *         if use_beta:
  *             for __i in range(self.post.N):
  *                 beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]-beta[__i])             # <<<<<<<<<<<<<<
@@ -3411,7 +3428,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   __pyx_L19:;
 
-  /* "splikes\connections\BCM.pyx":167
+  /* "splikes/connections/BCM.pyx":167
  *                 beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]-beta[__i])
  * 
  *         modify_now=False             # <<<<<<<<<<<<<<
@@ -3420,7 +3437,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_modify_now = 0;
 
-  /* "splikes\connections\BCM.pyx":168
+  /* "splikes/connections/BCM.pyx":168
  * 
  *         modify_now=False
  *         if self.time_between_modification<0.0:             # <<<<<<<<<<<<<<
@@ -3430,7 +3447,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_13 = ((__pyx_v_self->time_between_modification < 0.0) != 0);
   if (__pyx_t_13) {
 
-    /* "splikes\connections\BCM.pyx":169
+    /* "splikes/connections/BCM.pyx":169
  *         modify_now=False
  *         if self.time_between_modification<0.0:
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -3439,7 +3456,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes\connections\BCM.pyx":170
+    /* "splikes/connections/BCM.pyx":170
  *         if self.time_between_modification<0.0:
  *             modify_now=True
  *             dt=sim.dt             # <<<<<<<<<<<<<<
@@ -3451,7 +3468,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     goto __pyx_L22;
   }
 
-  /* "splikes\connections\BCM.pyx":171
+  /* "splikes/connections/BCM.pyx":171
  *             modify_now=True
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):             # <<<<<<<<<<<<<<
@@ -3461,7 +3478,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_13 = ((__pyx_v_t > (__pyx_v_self->time_to_next_modification - 1e-6)) != 0);
   if (__pyx_t_13) {
 
-    /* "splikes\connections\BCM.pyx":172
+    /* "splikes/connections/BCM.pyx":172
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -3470,7 +3487,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes\connections\BCM.pyx":173
+    /* "splikes/connections/BCM.pyx":173
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -3479,7 +3496,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
     __pyx_v_self->time_to_next_modification = (__pyx_v_self->time_to_next_modification + __pyx_v_self->time_between_modification);
 
-    /* "splikes\connections\BCM.pyx":174
+    /* "splikes/connections/BCM.pyx":174
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification
  *             dt=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -3492,7 +3509,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   __pyx_L22:;
 
-  /* "splikes\connections\BCM.pyx":176
+  /* "splikes/connections/BCM.pyx":176
  *             dt=self.time_between_modification
  * 
  *         if modify_now:             # <<<<<<<<<<<<<<
@@ -3502,7 +3519,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_13 = (__pyx_v_modify_now != 0);
   if (__pyx_t_13) {
 
-    /* "splikes\connections\BCM.pyx":177
+    /* "splikes/connections/BCM.pyx":177
  * 
  *         if modify_now:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3513,7 +3530,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___i = __pyx_t_11;
 
-      /* "splikes\connections\BCM.pyx":178
+      /* "splikes/connections/BCM.pyx":178
  *         if modify_now:
  *             for __i in range(self.post.N):
  *                 if use_beta:             # <<<<<<<<<<<<<<
@@ -3523,7 +3540,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       __pyx_t_13 = (__pyx_v_use_beta != 0);
       if (__pyx_t_13) {
 
-        /* "splikes\connections\BCM.pyx":179
+        /* "splikes/connections/BCM.pyx":179
  *             for __i in range(self.post.N):
  *                 if use_beta:
  *                     YY=Y[__i]-beta[__i]             # <<<<<<<<<<<<<<
@@ -3532,7 +3549,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
         __pyx_v_YY = ((__pyx_v_Y[__pyx_v___i]) - (__pyx_v_beta[__pyx_v___i]));
 
-        /* "splikes\connections\BCM.pyx":180
+        /* "splikes/connections/BCM.pyx":180
  *                 if use_beta:
  *                     YY=Y[__i]-beta[__i]
  *                     if YY<0.0:             # <<<<<<<<<<<<<<
@@ -3542,7 +3559,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
         __pyx_t_13 = ((__pyx_v_YY < 0.0) != 0);
         if (__pyx_t_13) {
 
-          /* "splikes\connections\BCM.pyx":181
+          /* "splikes/connections/BCM.pyx":181
  *                     YY=Y[__i]-beta[__i]
  *                     if YY<0.0:
  *                         YY=0.0             # <<<<<<<<<<<<<<
@@ -3557,7 +3574,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       }
       /*else*/ {
 
-        /* "splikes\connections\BCM.pyx":183
+        /* "splikes/connections/BCM.pyx":183
  *                         YY=0.0
  *                 else:
  *                     YY=Y[__i]             # <<<<<<<<<<<<<<
@@ -3568,7 +3585,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       }
       __pyx_L26:;
 
-      /* "splikes\connections\BCM.pyx":185
+      /* "splikes/connections/BCM.pyx":185
  *                     YY=Y[__i]
  * 
  *                 mod_Y[__i]=YY             # <<<<<<<<<<<<<<
@@ -3577,7 +3594,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
       (__pyx_v_mod_Y[__pyx_v___i]) = __pyx_v_YY;
 
-      /* "splikes\connections\BCM.pyx":186
+      /* "splikes/connections/BCM.pyx":186
  * 
  *                 mod_Y[__i]=YY
  *                 mod_theta[__i]=theta[__i]             # <<<<<<<<<<<<<<
@@ -3586,7 +3603,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
       (__pyx_v_mod_theta[__pyx_v___i]) = (__pyx_v_theta[__pyx_v___i]);
 
-      /* "splikes\connections\BCM.pyx":187
+      /* "splikes/connections/BCM.pyx":187
  *                 mod_Y[__i]=YY
  *                 mod_theta[__i]=theta[__i]
  *                 mod_beta[__i]=beta[__i]             # <<<<<<<<<<<<<<
@@ -3595,7 +3612,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
       (__pyx_v_mod_beta[__pyx_v___i]) = (__pyx_v_beta[__pyx_v___i]);
 
-      /* "splikes\connections\BCM.pyx":190
+      /* "splikes/connections/BCM.pyx":190
  * 
  * 
  *                 for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -3606,7 +3623,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_12; __pyx_t_14+=1) {
         __pyx_v___j = __pyx_t_14;
 
-        /* "splikes\connections\BCM.pyx":191
+        /* "splikes/connections/BCM.pyx":191
  * 
  *                 for __j in range(self.pre.N):
  *                     mod_X[__j]=X[__j]             # <<<<<<<<<<<<<<
@@ -3615,7 +3632,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
         (__pyx_v_mod_X[__pyx_v___j]) = (__pyx_v_X[__pyx_v___j]);
 
-        /* "splikes\connections\BCM.pyx":192
+        /* "splikes/connections/BCM.pyx":192
  *                 for __j in range(self.pre.N):
  *                     mod_X[__j]=X[__j]
  *                     __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
@@ -3624,7 +3641,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
         __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-        /* "splikes\connections\BCM.pyx":193
+        /* "splikes/connections/BCM.pyx":193
  *                     mod_X[__j]=X[__j]
  *                     __wi=__i*self.pre.N+__j
  *                     dw=(eta*(X[__j]-xo)*((YY-yo)*((YY-yo)-theta[__i])/theta[__i])-eta*gamma*W[__wi])             # <<<<<<<<<<<<<<
@@ -3633,7 +3650,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
         __pyx_v_dw = (((__pyx_v_eta * ((__pyx_v_X[__pyx_v___j]) - __pyx_v_xo)) * (((__pyx_v_YY - __pyx_v_yo) * ((__pyx_v_YY - __pyx_v_yo) - (__pyx_v_theta[__pyx_v___i]))) / (__pyx_v_theta[__pyx_v___i]))) - ((__pyx_v_eta * __pyx_v_gamma) * (__pyx_v_W[__pyx_v___wi])));
 
-        /* "splikes\connections\BCM.pyx":194
+        /* "splikes/connections/BCM.pyx":194
  *                     __wi=__i*self.pre.N+__j
  *                     dw=(eta*(X[__j]-xo)*((YY-yo)*((YY-yo)-theta[__i])/theta[__i])-eta*gamma*W[__wi])
  *                     W[__wi]+=dt*dw             # <<<<<<<<<<<<<<
@@ -3648,7 +3665,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   __pyx_L23:;
 
-  /* "splikes\connections\BCM.pyx":197
+  /* "splikes/connections/BCM.pyx":197
  * 
  * 
  *         if self.theta_squares_the_average:             # <<<<<<<<<<<<<<
@@ -3658,7 +3675,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_13 = (__pyx_v_self->theta_squares_the_average != 0);
   if (__pyx_t_13) {
 
-    /* "splikes\connections\BCM.pyx":198
+    /* "splikes/connections/BCM.pyx":198
  * 
  *         if self.theta_squares_the_average:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3669,7 +3686,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___i = __pyx_t_11;
 
-      /* "splikes\connections\BCM.pyx":199
+      /* "splikes/connections/BCM.pyx":199
  *         if self.theta_squares_the_average:
  *             for __i in range(self.post.N):
  *                 theta[__i]=y_avg[__i]*y_avg[__i]/theta_o             # <<<<<<<<<<<<<<
@@ -3682,7 +3699,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   /*else*/ {
 
-    /* "splikes\connections\BCM.pyx":201
+    /* "splikes/connections/BCM.pyx":201
  *                 theta[__i]=y_avg[__i]*y_avg[__i]/theta_o
  *         else:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3693,7 +3710,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___i = __pyx_t_11;
 
-      /* "splikes\connections\BCM.pyx":202
+      /* "splikes/connections/BCM.pyx":202
  *         else:
  *             for __i in range(self.post.N):
  *                 if use_beta:             # <<<<<<<<<<<<<<
@@ -3703,7 +3720,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       __pyx_t_13 = (__pyx_v_use_beta != 0);
       if (__pyx_t_13) {
 
-        /* "splikes\connections\BCM.pyx":203
+        /* "splikes/connections/BCM.pyx":203
  *             for __i in range(self.post.N):
  *                 if use_beta:
  *                     YY=Y[__i]-beta[__i]             # <<<<<<<<<<<<<<
@@ -3712,7 +3729,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
         __pyx_v_YY = ((__pyx_v_Y[__pyx_v___i]) - (__pyx_v_beta[__pyx_v___i]));
 
-        /* "splikes\connections\BCM.pyx":204
+        /* "splikes/connections/BCM.pyx":204
  *                 if use_beta:
  *                     YY=Y[__i]-beta[__i]
  *                     if YY<0.0:             # <<<<<<<<<<<<<<
@@ -3722,7 +3739,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
         __pyx_t_13 = ((__pyx_v_YY < 0.0) != 0);
         if (__pyx_t_13) {
 
-          /* "splikes\connections\BCM.pyx":205
+          /* "splikes/connections/BCM.pyx":205
  *                     YY=Y[__i]-beta[__i]
  *                     if YY<0.0:
  *                         YY=0.0             # <<<<<<<<<<<<<<
@@ -3737,7 +3754,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       }
       /*else*/ {
 
-        /* "splikes\connections\BCM.pyx":207
+        /* "splikes/connections/BCM.pyx":207
  *                         YY=0.0
  *                 else:
  *                     YY=Y[__i]             # <<<<<<<<<<<<<<
@@ -3748,7 +3765,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       }
       __pyx_L35:;
 
-      /* "splikes\connections\BCM.pyx":208
+      /* "splikes/connections/BCM.pyx":208
  *                 else:
  *                     YY=Y[__i]
  *                 theta[__i]+=sim.dt*((1.0/tau_theta)*(YY*YY/theta_o-theta[__i]))             # <<<<<<<<<<<<<<
@@ -3759,7 +3776,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       (__pyx_v_theta[__pyx_t_12]) = ((__pyx_v_theta[__pyx_t_12]) + (__pyx_v_sim->dt * ((1.0 / __pyx_v_tau_theta) * (((__pyx_v_YY * __pyx_v_YY) / __pyx_v_theta_o) - (__pyx_v_theta[__pyx_v___i])))));
     }
 
-    /* "splikes\connections\BCM.pyx":210
+    /* "splikes/connections/BCM.pyx":210
  *                 theta[__i]+=sim.dt*((1.0/tau_theta)*(YY*YY/theta_o-theta[__i]))
  * 
  *             self.apply_weight_limits()             # <<<<<<<<<<<<<<
@@ -3772,7 +3789,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   __pyx_L30:;
 
-  /* "splikes\connections\BCM.pyx":97
+  /* "splikes/connections/BCM.pyx":97
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -3890,7 +3907,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_4update(st
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":31
+/* "splikes/connections/BCM.pyx":31
  * #
  * cdef class BCM_LawCooper(connection):
  *     cdef public double tau_x,tau_y,xo,yo,theta_o,gamma,eta,             # <<<<<<<<<<<<<<
@@ -4416,7 +4433,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_3eta_2__set__(st
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":32
+/* "splikes/connections/BCM.pyx":32
  * cdef class BCM_LawCooper(connection):
  *     cdef public double tau_x,tau_y,xo,yo,theta_o,gamma,eta,
  *     cdef public tau_theta,tau_beta             # <<<<<<<<<<<<<<
@@ -4598,7 +4615,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_8tau_beta_4__del
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":33
+/* "splikes/connections/BCM.pyx":33
  *     cdef public double tau_x,tau_y,xo,yo,theta_o,gamma,eta,
  *     cdef public tau_theta,tau_beta
  *     cdef public double ax,ay             # <<<<<<<<<<<<<<
@@ -4754,7 +4771,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2ay_2__set__(str
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":34
+/* "splikes/connections/BCM.pyx":34
  *     cdef public tau_theta,tau_beta
  *     cdef public double ax,ay
  *     cdef public bint smoothed_x,smoothed_y             # <<<<<<<<<<<<<<
@@ -4910,7 +4927,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_10smoothed_y_2__
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":35
+/* "splikes/connections/BCM.pyx":35
  *     cdef public double ax,ay
  *     cdef public bint smoothed_x,smoothed_y
  *     cdef public np.ndarray theta,beta,y,x,y_avg,X,Y,mod_X,mod_Y,mod_theta,mod_beta             # <<<<<<<<<<<<<<
@@ -6018,7 +6035,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_8mod_beta_4__del
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":36
+/* "splikes/connections/BCM.pyx":36
  *     cdef public bint smoothed_x,smoothed_y
  *     cdef public np.ndarray theta,beta,y,x,y_avg,X,Y,mod_X,mod_Y,mod_theta,mod_beta
  *     cdef public object initial_theta_range             # <<<<<<<<<<<<<<
@@ -6113,7 +6130,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_19initial_theta_
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":37
+/* "splikes/connections/BCM.pyx":37
  *     cdef public np.ndarray theta,beta,y,x,y_avg,X,Y,mod_X,mod_Y,mod_theta,mod_beta
  *     cdef public object initial_theta_range
  *     cdef public double time_between_modification,time_to_next_modification             # <<<<<<<<<<<<<<
@@ -6269,7 +6286,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_25time_to_next_m
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":38
+/* "splikes/connections/BCM.pyx":38
  *     cdef public object initial_theta_range
  *     cdef public double time_between_modification,time_to_next_modification
  *     cdef public int theta_squares_the_average             # <<<<<<<<<<<<<<
@@ -6351,7 +6368,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_25theta_squares_
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":220
+/* "splikes/connections/BCM.pyx":220
  *     cdef public int save_inputs
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -6408,7 +6425,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes\connections\BCM.pyx":221
+  /* "splikes/connections/BCM.pyx":221
  * 
  *     cpdef _reset(self):
  *         self.X=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -6448,7 +6465,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   __pyx_v_self->X = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "splikes\connections\BCM.pyx":222
+  /* "splikes/connections/BCM.pyx":222
  *     cpdef _reset(self):
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -6488,7 +6505,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   __pyx_v_self->Y = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "splikes\connections\BCM.pyx":223
+  /* "splikes/connections/BCM.pyx":223
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -6531,7 +6548,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "splikes\connections\BCM.pyx":224
+  /* "splikes/connections/BCM.pyx":224
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
@@ -6541,7 +6558,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 224; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "splikes\connections\BCM.pyx":223
+  /* "splikes/connections/BCM.pyx":223
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -6557,7 +6574,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "splikes\connections\BCM.pyx":224
+  /* "splikes/connections/BCM.pyx":224
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
@@ -6572,7 +6589,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 224; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "splikes\connections\BCM.pyx":223
+  /* "splikes/connections/BCM.pyx":223
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -6585,7 +6602,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   __pyx_v_self->theta = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "splikes\connections\BCM.pyx":225
+  /* "splikes/connections/BCM.pyx":225
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -6625,7 +6642,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   __pyx_v_self->y = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes\connections\BCM.pyx":226
+  /* "splikes/connections/BCM.pyx":226
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -6665,7 +6682,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   __pyx_v_self->x = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "splikes\connections\BCM.pyx":227
+  /* "splikes/connections/BCM.pyx":227
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.time_to_next_modification=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -6675,7 +6692,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   __pyx_t_6 = __pyx_v_self->time_between_modification;
   __pyx_v_self->time_to_next_modification = __pyx_t_6;
 
-  /* "splikes\connections\BCM.pyx":228
+  /* "splikes/connections/BCM.pyx":228
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.time_to_next_modification=self.time_between_modification
  *         connection._reset(self)             # <<<<<<<<<<<<<<
@@ -6686,7 +6703,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes\connections\BCM.pyx":220
+  /* "splikes/connections/BCM.pyx":220
  *     cdef public int save_inputs
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -6750,7 +6767,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_o
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":230
+/* "splikes/connections/BCM.pyx":230
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -6776,7 +6793,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_3BCM_3__init__(PyObject *__pyx_v
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_pre,&__pyx_n_s_post,&__pyx_n_s_initial_weight_range,&__pyx_n_s_state,&__pyx_n_s_initial_theta_range,0};
     PyObject* values[5] = {0,0,0,0,0};
 
-    /* "splikes\connections\BCM.pyx":231
+    /* "splikes/connections/BCM.pyx":231
  * 
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,             # <<<<<<<<<<<<<<
@@ -6785,7 +6802,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_3BCM_3__init__(PyObject *__pyx_v
  */
     values[2] = ((PyObject *)Py_None);
 
-    /* "splikes\connections\BCM.pyx":232
+    /* "splikes/connections/BCM.pyx":232
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,
  *                         state=None,             # <<<<<<<<<<<<<<
@@ -6794,7 +6811,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_3BCM_3__init__(PyObject *__pyx_v
  */
     values[3] = ((PyObject *)Py_None);
 
-    /* "splikes\connections\BCM.pyx":233
+    /* "splikes/connections/BCM.pyx":233
  *                         initial_weight_range=None,
  *                         state=None,
  *                         initial_theta_range=None,):             # <<<<<<<<<<<<<<
@@ -6872,7 +6889,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_3BCM_3__init__(PyObject *__pyx_v
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 230; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(((struct __pyx_obj_7splikes_11connections_3BCM_BCM *)__pyx_v_self), __pyx_v_pre, __pyx_v_post, __pyx_v_initial_weight_range, __pyx_v_state, __pyx_v_initial_theta_range);
 
-  /* "splikes\connections\BCM.pyx":230
+  /* "splikes/connections/BCM.pyx":230
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -6905,7 +6922,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __Pyx_RefNannySetupContext("__init__", 0);
   __Pyx_INCREF(__pyx_v_initial_theta_range);
 
-  /* "splikes\connections\BCM.pyx":236
+  /* "splikes/connections/BCM.pyx":236
  * 
  *         # initial theta range needs to be defined before connection init
  *         if initial_theta_range is None:             # <<<<<<<<<<<<<<
@@ -6916,7 +6933,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "splikes\connections\BCM.pyx":237
+    /* "splikes/connections/BCM.pyx":237
  *         # initial theta range needs to be defined before connection init
  *         if initial_theta_range is None:
  *             initial_theta_range=[0.0,0.1]             # <<<<<<<<<<<<<<
@@ -6937,7 +6954,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   }
   __pyx_L3:;
 
-  /* "splikes\connections\BCM.pyx":239
+  /* "splikes/connections/BCM.pyx":239
  *             initial_theta_range=[0.0,0.1]
  * 
  *         self.initial_theta_range=initial_theta_range             # <<<<<<<<<<<<<<
@@ -6950,7 +6967,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __Pyx_DECREF(__pyx_v_self->initial_theta_range);
   __pyx_v_self->initial_theta_range = __pyx_v_initial_theta_range;
 
-  /* "splikes\connections\BCM.pyx":241
+  /* "splikes/connections/BCM.pyx":241
  *         self.initial_theta_range=initial_theta_range
  * 
  *         connection.__init__(self,pre,post,initial_weight_range,state)             # <<<<<<<<<<<<<<
@@ -6997,7 +7014,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes\connections\BCM.pyx":243
+  /* "splikes/connections/BCM.pyx":243
  *         connection.__init__(self,pre,post,initial_weight_range,state)
  * 
  *         self.name='Spiking BCM'             # <<<<<<<<<<<<<<
@@ -7010,7 +7027,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __Pyx_DECREF(__pyx_v_self->__pyx_base.name);
   __pyx_v_self->__pyx_base.name = __pyx_kp_s_Spiking_BCM;
 
-  /* "splikes\connections\BCM.pyx":244
+  /* "splikes/connections/BCM.pyx":244
  * 
  *         self.name='Spiking BCM'
  *         self.save_inputs=False             # <<<<<<<<<<<<<<
@@ -7019,7 +7036,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->save_inputs = 0;
 
-  /* "splikes\connections\BCM.pyx":245
+  /* "splikes/connections/BCM.pyx":245
  *         self.name='Spiking BCM'
  *         self.save_inputs=False
  *         self.saved_inputs=[]             # <<<<<<<<<<<<<<
@@ -7034,7 +7051,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __pyx_v_self->saved_inputs = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "splikes\connections\BCM.pyx":246
+  /* "splikes/connections/BCM.pyx":246
  *         self.save_inputs=False
  *         self.saved_inputs=[]
  *         self.saved_weights=[]             # <<<<<<<<<<<<<<
@@ -7049,7 +7066,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __pyx_v_self->saved_weights = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "splikes\connections\BCM.pyx":247
+  /* "splikes/connections/BCM.pyx":247
  *         self.saved_inputs=[]
  *         self.saved_weights=[]
  *         self.saved_outputs=[]             # <<<<<<<<<<<<<<
@@ -7064,7 +7081,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __pyx_v_self->saved_outputs = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "splikes\connections\BCM.pyx":249
+  /* "splikes/connections/BCM.pyx":249
  *         self.saved_outputs=[]
  * 
  *         self.a=1             # <<<<<<<<<<<<<<
@@ -7073,7 +7090,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->a = 1.0;
 
-  /* "splikes\connections\BCM.pyx":250
+  /* "splikes/connections/BCM.pyx":250
  * 
  *         self.a=1
  *         self.tau=100             # <<<<<<<<<<<<<<
@@ -7082,7 +7099,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->tau = 100.0;
 
-  /* "splikes\connections\BCM.pyx":251
+  /* "splikes/connections/BCM.pyx":251
  *         self.a=1
  *         self.tau=100
  *         self.xo=0             # <<<<<<<<<<<<<<
@@ -7091,7 +7108,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->xo = 0.0;
 
-  /* "splikes\connections\BCM.pyx":252
+  /* "splikes/connections/BCM.pyx":252
  *         self.tau=100
  *         self.xo=0
  *         self.yo=0             # <<<<<<<<<<<<<<
@@ -7100,7 +7117,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->yo = 0.0;
 
-  /* "splikes\connections\BCM.pyx":253
+  /* "splikes/connections/BCM.pyx":253
  *         self.xo=0
  *         self.yo=0
  *         self.theta_o=1             # <<<<<<<<<<<<<<
@@ -7109,7 +7126,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->theta_o = 1.0;
 
-  /* "splikes\connections\BCM.pyx":254
+  /* "splikes/connections/BCM.pyx":254
  *         self.yo=0
  *         self.theta_o=1
  *         self.gamma=0             # <<<<<<<<<<<<<<
@@ -7118,7 +7135,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->gamma = 0.0;
 
-  /* "splikes\connections\BCM.pyx":255
+  /* "splikes/connections/BCM.pyx":255
  *         self.theta_o=1
  *         self.gamma=0
  *         self.eta=4e-06             # <<<<<<<<<<<<<<
@@ -7127,7 +7144,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->eta = 4e-06;
 
-  /* "splikes\connections\BCM.pyx":256
+  /* "splikes/connections/BCM.pyx":256
  *         self.gamma=0
  *         self.eta=4e-06
  *         self.tau_theta=10000             # <<<<<<<<<<<<<<
@@ -7136,7 +7153,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->tau_theta = 10000.0;
 
-  /* "splikes\connections\BCM.pyx":257
+  /* "splikes/connections/BCM.pyx":257
  *         self.eta=4e-06
  *         self.tau_theta=10000
  *         self.time_between_modification=-1.0             # <<<<<<<<<<<<<<
@@ -7145,7 +7162,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->time_between_modification = -1.0;
 
-  /* "splikes\connections\BCM.pyx":259
+  /* "splikes/connections/BCM.pyx":259
  *         self.time_between_modification=-1.0
  * 
  *         self._reset()             # <<<<<<<<<<<<<<
@@ -7156,7 +7173,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes\connections\BCM.pyx":230
+  /* "splikes/connections/BCM.pyx":230
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -7180,7 +7197,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":263
+/* "splikes/connections/BCM.pyx":263
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -7279,7 +7296,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes\connections\BCM.pyx":266
+  /* "splikes/connections/BCM.pyx":266
  *         cdef int __i,__j
  * 
  *         cdef double *X=<double *>self.X.data             # <<<<<<<<<<<<<<
@@ -7288,7 +7305,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_X = ((double *)__pyx_v_self->X->data);
 
-  /* "splikes\connections\BCM.pyx":267
+  /* "splikes/connections/BCM.pyx":267
  * 
  *         cdef double *X=<double *>self.X.data
  *         cdef double *Y=<double *>self.Y.data             # <<<<<<<<<<<<<<
@@ -7297,7 +7314,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_Y = ((double *)__pyx_v_self->Y->data);
 
-  /* "splikes\connections\BCM.pyx":268
+  /* "splikes/connections/BCM.pyx":268
  *         cdef double *X=<double *>self.X.data
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *W=self.W             # <<<<<<<<<<<<<<
@@ -7307,7 +7324,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_8 = __pyx_v_self->__pyx_base.W;
   __pyx_v_W = __pyx_t_8;
 
-  /* "splikes\connections\BCM.pyx":269
+  /* "splikes/connections/BCM.pyx":269
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data             # <<<<<<<<<<<<<<
@@ -7316,7 +7333,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_theta = ((double *)__pyx_v_self->theta->data);
 
-  /* "splikes\connections\BCM.pyx":270
+  /* "splikes/connections/BCM.pyx":270
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *y=<double *>self.y.data             # <<<<<<<<<<<<<<
@@ -7325,7 +7342,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_y = ((double *)__pyx_v_self->y->data);
 
-  /* "splikes\connections\BCM.pyx":271
+  /* "splikes/connections/BCM.pyx":271
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *y=<double *>self.y.data
  *         cdef double *x=<double *>self.x.data             # <<<<<<<<<<<<<<
@@ -7334,7 +7351,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_x = ((double *)__pyx_v_self->x->data);
 
-  /* "splikes\connections\BCM.pyx":272
+  /* "splikes/connections/BCM.pyx":272
  *         cdef double *y=<double *>self.y.data
  *         cdef double *x=<double *>self.x.data
  *         cdef double a=self.a             # <<<<<<<<<<<<<<
@@ -7344,7 +7361,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->a;
   __pyx_v_a = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":273
+  /* "splikes/connections/BCM.pyx":273
  *         cdef double *x=<double *>self.x.data
  *         cdef double a=self.a
  *         cdef double tau=self.tau             # <<<<<<<<<<<<<<
@@ -7354,7 +7371,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->tau;
   __pyx_v_tau = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":274
+  /* "splikes/connections/BCM.pyx":274
  *         cdef double a=self.a
  *         cdef double tau=self.tau
  *         cdef double xo=self.xo             # <<<<<<<<<<<<<<
@@ -7364,7 +7381,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->xo;
   __pyx_v_xo = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":275
+  /* "splikes/connections/BCM.pyx":275
  *         cdef double tau=self.tau
  *         cdef double xo=self.xo
  *         cdef double yo=self.yo             # <<<<<<<<<<<<<<
@@ -7374,7 +7391,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->yo;
   __pyx_v_yo = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":276
+  /* "splikes/connections/BCM.pyx":276
  *         cdef double xo=self.xo
  *         cdef double yo=self.yo
  *         cdef double theta_o=self.theta_o             # <<<<<<<<<<<<<<
@@ -7384,7 +7401,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->theta_o;
   __pyx_v_theta_o = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":277
+  /* "splikes/connections/BCM.pyx":277
  *         cdef double yo=self.yo
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma             # <<<<<<<<<<<<<<
@@ -7394,7 +7411,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->gamma;
   __pyx_v_gamma = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":278
+  /* "splikes/connections/BCM.pyx":278
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta             # <<<<<<<<<<<<<<
@@ -7404,7 +7421,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->eta;
   __pyx_v_eta = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":279
+  /* "splikes/connections/BCM.pyx":279
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta
  *         cdef double tau_theta=self.tau_theta             # <<<<<<<<<<<<<<
@@ -7414,7 +7431,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->tau_theta;
   __pyx_v_tau_theta = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":289
+  /* "splikes/connections/BCM.pyx":289
  * 
  * 
  *         pre=<int *>self.pre.spiking.data             # <<<<<<<<<<<<<<
@@ -7423,7 +7440,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_pre = ((int *)__pyx_v_self->__pyx_base.pre->spiking->data);
 
-  /* "splikes\connections\BCM.pyx":290
+  /* "splikes/connections/BCM.pyx":290
  * 
  *         pre=<int *>self.pre.spiking.data
  *         post=<int *>self.post.spiking.data             # <<<<<<<<<<<<<<
@@ -7432,7 +7449,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_post = ((int *)__pyx_v_self->__pyx_base.post->spiking->data);
 
-  /* "splikes\connections\BCM.pyx":292
+  /* "splikes/connections/BCM.pyx":292
  *         post=<int *>self.post.spiking.data
  * 
  *         for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -7443,7 +7460,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v___j = __pyx_t_11;
 
-    /* "splikes\connections\BCM.pyx":293
+    /* "splikes/connections/BCM.pyx":293
  * 
  *         for __j in range(self.pre.N):
  *             x[__j]+=sim.dt*(-x[__j]/tau+a*pre[__j]/sim.dt)             # <<<<<<<<<<<<<<
@@ -7453,7 +7470,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     __pyx_t_12 = __pyx_v___j;
     (__pyx_v_x[__pyx_t_12]) = ((__pyx_v_x[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_x[__pyx_v___j])) / __pyx_v_tau) + ((__pyx_v_a * (__pyx_v_pre[__pyx_v___j])) / __pyx_v_sim->dt))));
 
-    /* "splikes\connections\BCM.pyx":294
+    /* "splikes/connections/BCM.pyx":294
  *         for __j in range(self.pre.N):
  *             x[__j]+=sim.dt*(-x[__j]/tau+a*pre[__j]/sim.dt)
  *             X[__j]+=sim.dt*((x[__j]-X[__j])/tau)             # <<<<<<<<<<<<<<
@@ -7464,7 +7481,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     (__pyx_v_X[__pyx_t_12]) = ((__pyx_v_X[__pyx_t_12]) + (__pyx_v_sim->dt * (((__pyx_v_x[__pyx_v___j]) - (__pyx_v_X[__pyx_v___j])) / __pyx_v_tau)));
   }
 
-  /* "splikes\connections\BCM.pyx":295
+  /* "splikes/connections/BCM.pyx":295
  *             x[__j]+=sim.dt*(-x[__j]/tau+a*pre[__j]/sim.dt)
  *             X[__j]+=sim.dt*((x[__j]-X[__j])/tau)
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -7475,7 +7492,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v___i = __pyx_t_11;
 
-    /* "splikes\connections\BCM.pyx":296
+    /* "splikes/connections/BCM.pyx":296
  *             X[__j]+=sim.dt*((x[__j]-X[__j])/tau)
  *         for __i in range(self.post.N):
  *             y[__i]+=sim.dt*(-y[__i]/tau+a*post[__i]/sim.dt)             # <<<<<<<<<<<<<<
@@ -7485,7 +7502,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     __pyx_t_12 = __pyx_v___i;
     (__pyx_v_y[__pyx_t_12]) = ((__pyx_v_y[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_y[__pyx_v___i])) / __pyx_v_tau) + ((__pyx_v_a * (__pyx_v_post[__pyx_v___i])) / __pyx_v_sim->dt))));
 
-    /* "splikes\connections\BCM.pyx":297
+    /* "splikes/connections/BCM.pyx":297
  *         for __i in range(self.post.N):
  *             y[__i]+=sim.dt*(-y[__i]/tau+a*post[__i]/sim.dt)
  *             Y[__i]+=sim.dt*((y[__i]-Y[__i])/tau)             # <<<<<<<<<<<<<<
@@ -7496,7 +7513,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     (__pyx_v_Y[__pyx_t_12]) = ((__pyx_v_Y[__pyx_t_12]) + (__pyx_v_sim->dt * (((__pyx_v_y[__pyx_v___i]) - (__pyx_v_Y[__pyx_v___i])) / __pyx_v_tau)));
   }
 
-  /* "splikes\connections\BCM.pyx":299
+  /* "splikes/connections/BCM.pyx":299
  *             Y[__i]+=sim.dt*((y[__i]-Y[__i])/tau)
  * 
  *         modify_now=False             # <<<<<<<<<<<<<<
@@ -7505,7 +7522,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_modify_now = 0;
 
-  /* "splikes\connections\BCM.pyx":300
+  /* "splikes/connections/BCM.pyx":300
  * 
  *         modify_now=False
  *         if self.time_between_modification<0.0:             # <<<<<<<<<<<<<<
@@ -7515,7 +7532,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_13 = ((__pyx_v_self->time_between_modification < 0.0) != 0);
   if (__pyx_t_13) {
 
-    /* "splikes\connections\BCM.pyx":301
+    /* "splikes/connections/BCM.pyx":301
  *         modify_now=False
  *         if self.time_between_modification<0.0:
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -7524,7 +7541,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes\connections\BCM.pyx":302
+    /* "splikes/connections/BCM.pyx":302
  *         if self.time_between_modification<0.0:
  *             modify_now=True
  *             dt=sim.dt             # <<<<<<<<<<<<<<
@@ -7536,7 +7553,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     goto __pyx_L7;
   }
 
-  /* "splikes\connections\BCM.pyx":303
+  /* "splikes/connections/BCM.pyx":303
  *             modify_now=True
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):             # <<<<<<<<<<<<<<
@@ -7546,7 +7563,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_13 = ((__pyx_v_t > (__pyx_v_self->time_to_next_modification - 1e-6)) != 0);
   if (__pyx_t_13) {
 
-    /* "splikes\connections\BCM.pyx":304
+    /* "splikes/connections/BCM.pyx":304
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -7555,7 +7572,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes\connections\BCM.pyx":305
+    /* "splikes/connections/BCM.pyx":305
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -7564,7 +7581,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
     __pyx_v_self->time_to_next_modification = (__pyx_v_self->time_to_next_modification + __pyx_v_self->time_between_modification);
 
-    /* "splikes\connections\BCM.pyx":306
+    /* "splikes/connections/BCM.pyx":306
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification
  *             dt=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -7577,7 +7594,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   }
   __pyx_L7:;
 
-  /* "splikes\connections\BCM.pyx":309
+  /* "splikes/connections/BCM.pyx":309
  * 
  * 
  *         if modify_now:             # <<<<<<<<<<<<<<
@@ -7587,7 +7604,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_13 = (__pyx_v_modify_now != 0);
   if (__pyx_t_13) {
 
-    /* "splikes\connections\BCM.pyx":310
+    /* "splikes/connections/BCM.pyx":310
  * 
  *         if modify_now:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -7598,7 +7615,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___i = __pyx_t_11;
 
-      /* "splikes\connections\BCM.pyx":311
+      /* "splikes/connections/BCM.pyx":311
  *         if modify_now:
  *             for __i in range(self.post.N):
  *                 for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -7609,7 +7626,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
       for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_12; __pyx_t_14+=1) {
         __pyx_v___j = __pyx_t_14;
 
-        /* "splikes\connections\BCM.pyx":312
+        /* "splikes/connections/BCM.pyx":312
  *             for __i in range(self.post.N):
  *                 for __j in range(self.pre.N):
  *                     __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
@@ -7618,7 +7635,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
         __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-        /* "splikes\connections\BCM.pyx":313
+        /* "splikes/connections/BCM.pyx":313
  *                 for __j in range(self.pre.N):
  *                     __wi=__i*self.pre.N+__j
  *                     W[__wi]+=dt*(eta*(X[__j]-xo)*((Y[__i]-yo)*((Y[__i]-yo)-theta[__i]))-eta*gamma*W[__wi])             # <<<<<<<<<<<<<<
@@ -7630,7 +7647,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
       }
     }
 
-    /* "splikes\connections\BCM.pyx":315
+    /* "splikes/connections/BCM.pyx":315
  *                     W[__wi]+=dt*(eta*(X[__j]-xo)*((Y[__i]-yo)*((Y[__i]-yo)-theta[__i]))-eta*gamma*W[__wi])
  * 
  *             self.apply_weight_limits()             # <<<<<<<<<<<<<<
@@ -7641,7 +7658,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "splikes\connections\BCM.pyx":317
+    /* "splikes/connections/BCM.pyx":317
  *             self.apply_weight_limits()
  * 
  *             if self.save_inputs:             # <<<<<<<<<<<<<<
@@ -7651,7 +7668,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     __pyx_t_13 = (__pyx_v_self->save_inputs != 0);
     if (__pyx_t_13) {
 
-      /* "splikes\connections\BCM.pyx":318
+      /* "splikes/connections/BCM.pyx":318
  * 
  *             if self.save_inputs:
  *                 self.saved_inputs.append(self.X.copy())             # <<<<<<<<<<<<<<
@@ -7681,7 +7698,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
       __pyx_t_16 = __Pyx_PyObject_Append(__pyx_v_self->saved_inputs, __pyx_t_1); if (unlikely(__pyx_t_16 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 318; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "splikes\connections\BCM.pyx":319
+      /* "splikes/connections/BCM.pyx":319
  *             if self.save_inputs:
  *                 self.saved_inputs.append(self.X.copy())
  *                 self.saved_outputs.append(self.Y.copy())             # <<<<<<<<<<<<<<
@@ -7711,7 +7728,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
       __pyx_t_16 = __Pyx_PyObject_Append(__pyx_v_self->saved_outputs, __pyx_t_1); if (unlikely(__pyx_t_16 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 319; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "splikes\connections\BCM.pyx":320
+      /* "splikes/connections/BCM.pyx":320
  *                 self.saved_inputs.append(self.X.copy())
  *                 self.saved_outputs.append(self.Y.copy())
  *                 self.saved_weights.append(self.weights.copy())             # <<<<<<<<<<<<<<
@@ -7747,7 +7764,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   }
   __pyx_L8:;
 
-  /* "splikes\connections\BCM.pyx":322
+  /* "splikes/connections/BCM.pyx":322
  *                 self.saved_weights.append(self.weights.copy())
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -7758,7 +7775,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v___i = __pyx_t_11;
 
-    /* "splikes\connections\BCM.pyx":323
+    /* "splikes/connections/BCM.pyx":323
  * 
  *         for __i in range(self.post.N):
  *             theta[__i]+=sim.dt*((1.0/tau_theta)*(Y[__i]*Y[__i]/theta_o-theta[__i]))             # <<<<<<<<<<<<<<
@@ -7769,7 +7786,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     (__pyx_v_theta[__pyx_t_12]) = ((__pyx_v_theta[__pyx_t_12]) + (__pyx_v_sim->dt * ((1.0 / __pyx_v_tau_theta) * ((((__pyx_v_Y[__pyx_v___i]) * (__pyx_v_Y[__pyx_v___i])) / __pyx_v_theta_o) - (__pyx_v_theta[__pyx_v___i])))));
   }
 
-  /* "splikes\connections\BCM.pyx":263
+  /* "splikes/connections/BCM.pyx":263
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -7887,7 +7904,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_4update(struct __pyx_
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":213
+/* "splikes/connections/BCM.pyx":213
  * 
  * cdef class BCM(connection):
  *     cdef public double a,tau,xo,yo,theta_o,gamma,eta,tau_theta             # <<<<<<<<<<<<<<
@@ -8487,7 +8504,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_9tau_theta_2__set__(struct 
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":214
+/* "splikes/connections/BCM.pyx":214
  * cdef class BCM(connection):
  *     cdef public double a,tau,xo,yo,theta_o,gamma,eta,tau_theta
  *     cdef public np.ndarray X,Y,theta,y,x             # <<<<<<<<<<<<<<
@@ -8995,7 +9012,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_1x_4__del__(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":215
+/* "splikes/connections/BCM.pyx":215
  *     cdef public double a,tau,xo,yo,theta_o,gamma,eta,tau_theta
  *     cdef public np.ndarray X,Y,theta,y,x
  *     cdef public object initial_theta_range             # <<<<<<<<<<<<<<
@@ -9090,7 +9107,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_19initial_theta_range_4__de
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":216
+/* "splikes/connections/BCM.pyx":216
  *     cdef public np.ndarray X,Y,theta,y,x
  *     cdef public object initial_theta_range
  *     cdef public double time_between_modification,time_to_next_modification             # <<<<<<<<<<<<<<
@@ -9246,7 +9263,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_25time_to_next_modification
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":217
+/* "splikes/connections/BCM.pyx":217
  *     cdef public object initial_theta_range
  *     cdef public double time_between_modification,time_to_next_modification
  *     cdef public object saved_inputs,saved_weights,saved_outputs             # <<<<<<<<<<<<<<
@@ -9515,7 +9532,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_13saved_outputs_4__del__(st
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":218
+/* "splikes/connections/BCM.pyx":218
  *     cdef public double time_between_modification,time_to_next_modification
  *     cdef public object saved_inputs,saved_weights,saved_outputs
  *     cdef public int save_inputs             # <<<<<<<<<<<<<<
@@ -9597,7 +9614,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_11save_inputs_2__set__(stru
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":333
+/* "splikes/connections/BCM.pyx":333
  *     cdef public double time_between_modification,time_to_next_modification
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -9654,7 +9671,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes\connections\BCM.pyx":334
+  /* "splikes/connections/BCM.pyx":334
  * 
  *     cpdef _reset(self):
  *         self.X=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -9694,7 +9711,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   __pyx_v_self->X = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "splikes\connections\BCM.pyx":335
+  /* "splikes/connections/BCM.pyx":335
  *     cpdef _reset(self):
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -9734,7 +9751,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   __pyx_v_self->Y = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "splikes\connections\BCM.pyx":336
+  /* "splikes/connections/BCM.pyx":336
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -9777,7 +9794,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 336; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "splikes\connections\BCM.pyx":337
+  /* "splikes/connections/BCM.pyx":337
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
@@ -9787,7 +9804,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 337; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "splikes\connections\BCM.pyx":336
+  /* "splikes/connections/BCM.pyx":336
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -9803,7 +9820,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "splikes\connections\BCM.pyx":337
+  /* "splikes/connections/BCM.pyx":337
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
@@ -9818,7 +9835,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 337; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "splikes\connections\BCM.pyx":336
+  /* "splikes/connections/BCM.pyx":336
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -9831,7 +9848,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   __pyx_v_self->theta = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "splikes\connections\BCM.pyx":339
+  /* "splikes/connections/BCM.pyx":339
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  * 
  *         self.yo=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -9871,7 +9888,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   __pyx_v_self->yo = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes\connections\BCM.pyx":340
+  /* "splikes/connections/BCM.pyx":340
  * 
  *         self.yo=np.zeros(self.post.N,dtype=np.float)
  *         self.y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -9911,7 +9928,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   __pyx_v_self->y = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "splikes\connections\BCM.pyx":341
+  /* "splikes/connections/BCM.pyx":341
  *         self.yo=np.zeros(self.post.N,dtype=np.float)
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -9951,7 +9968,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   __pyx_v_self->x = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "splikes\connections\BCM.pyx":342
+  /* "splikes/connections/BCM.pyx":342
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.time_to_next_modification=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -9961,7 +9978,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   __pyx_t_6 = __pyx_v_self->time_between_modification;
   __pyx_v_self->time_to_next_modification = __pyx_t_6;
 
-  /* "splikes\connections\BCM.pyx":344
+  /* "splikes/connections/BCM.pyx":344
  *         self.time_to_next_modification=self.time_between_modification
  * 
  *         connection._reset(self)             # <<<<<<<<<<<<<<
@@ -9972,7 +9989,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "splikes\connections\BCM.pyx":333
+  /* "splikes/connections/BCM.pyx":333
  *     cdef public double time_between_modification,time_to_next_modification
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -10036,7 +10053,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__re
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":346
+/* "splikes/connections/BCM.pyx":346
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -10062,7 +10079,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3__init__
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_pre,&__pyx_n_s_post,&__pyx_n_s_initial_weight_range,&__pyx_n_s_state,&__pyx_n_s_initial_theta_range,0};
     PyObject* values[5] = {0,0,0,0,0};
 
-    /* "splikes\connections\BCM.pyx":347
+    /* "splikes/connections/BCM.pyx":347
  * 
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,             # <<<<<<<<<<<<<<
@@ -10071,7 +10088,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3__init__
  */
     values[2] = ((PyObject *)Py_None);
 
-    /* "splikes\connections\BCM.pyx":348
+    /* "splikes/connections/BCM.pyx":348
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,
  *                         state=None,             # <<<<<<<<<<<<<<
@@ -10080,7 +10097,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3__init__
  */
     values[3] = ((PyObject *)Py_None);
 
-    /* "splikes\connections\BCM.pyx":349
+    /* "splikes/connections/BCM.pyx":349
  *                         initial_weight_range=None,
  *                         state=None,
  *                         initial_theta_range=None,):             # <<<<<<<<<<<<<<
@@ -10158,7 +10175,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3__init__
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__(((struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper_Offset *)__pyx_v_self), __pyx_v_pre, __pyx_v_post, __pyx_v_initial_weight_range, __pyx_v_state, __pyx_v_initial_theta_range);
 
-  /* "splikes\connections\BCM.pyx":346
+  /* "splikes/connections/BCM.pyx":346
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -10191,7 +10208,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   __Pyx_RefNannySetupContext("__init__", 0);
   __Pyx_INCREF(__pyx_v_initial_theta_range);
 
-  /* "splikes\connections\BCM.pyx":352
+  /* "splikes/connections/BCM.pyx":352
  * 
  * 
  *         if initial_theta_range is None:             # <<<<<<<<<<<<<<
@@ -10202,7 +10219,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "splikes\connections\BCM.pyx":353
+    /* "splikes/connections/BCM.pyx":353
  * 
  *         if initial_theta_range is None:
  *             initial_theta_range=[0.0,0.1]             # <<<<<<<<<<<<<<
@@ -10223,7 +10240,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   }
   __pyx_L3:;
 
-  /* "splikes\connections\BCM.pyx":355
+  /* "splikes/connections/BCM.pyx":355
  *             initial_theta_range=[0.0,0.1]
  * 
  *         self.initial_theta_range=initial_theta_range             # <<<<<<<<<<<<<<
@@ -10236,7 +10253,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   __Pyx_DECREF(__pyx_v_self->initial_theta_range);
   __pyx_v_self->initial_theta_range = __pyx_v_initial_theta_range;
 
-  /* "splikes\connections\BCM.pyx":357
+  /* "splikes/connections/BCM.pyx":357
  *         self.initial_theta_range=initial_theta_range
  * 
  *         connection.__init__(self,pre,post,initial_weight_range,state)             # <<<<<<<<<<<<<<
@@ -10283,7 +10300,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes\connections\BCM.pyx":359
+  /* "splikes/connections/BCM.pyx":359
  *         connection.__init__(self,pre,post,initial_weight_range,state)
  * 
  *         self.name='Spiking BCM LawCooper'             # <<<<<<<<<<<<<<
@@ -10296,7 +10313,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   __Pyx_DECREF(__pyx_v_self->__pyx_base.name);
   __pyx_v_self->__pyx_base.name = __pyx_kp_s_Spiking_BCM_LawCooper;
 
-  /* "splikes\connections\BCM.pyx":360
+  /* "splikes/connections/BCM.pyx":360
  * 
  *         self.name='Spiking BCM LawCooper'
  *         self.a=1             # <<<<<<<<<<<<<<
@@ -10305,7 +10322,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->a = 1.0;
 
-  /* "splikes\connections\BCM.pyx":361
+  /* "splikes/connections/BCM.pyx":361
  *         self.name='Spiking BCM LawCooper'
  *         self.a=1
  *         self.tau=100             # <<<<<<<<<<<<<<
@@ -10314,7 +10331,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->tau = 100.0;
 
-  /* "splikes\connections\BCM.pyx":362
+  /* "splikes/connections/BCM.pyx":362
  *         self.a=1
  *         self.tau=100
  *         self.xo=0             # <<<<<<<<<<<<<<
@@ -10323,7 +10340,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->xo = 0.0;
 
-  /* "splikes\connections\BCM.pyx":363
+  /* "splikes/connections/BCM.pyx":363
  *         self.tau=100
  *         self.xo=0
  *         self.theta_o=1             # <<<<<<<<<<<<<<
@@ -10332,7 +10349,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->theta_o = 1.0;
 
-  /* "splikes\connections\BCM.pyx":364
+  /* "splikes/connections/BCM.pyx":364
  *         self.xo=0
  *         self.theta_o=1
  *         self.gamma=0             # <<<<<<<<<<<<<<
@@ -10341,7 +10358,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->gamma = 0.0;
 
-  /* "splikes\connections\BCM.pyx":365
+  /* "splikes/connections/BCM.pyx":365
  *         self.theta_o=1
  *         self.gamma=0
  *         self.eta=4e-06             # <<<<<<<<<<<<<<
@@ -10350,7 +10367,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->eta = 4e-06;
 
-  /* "splikes\connections\BCM.pyx":366
+  /* "splikes/connections/BCM.pyx":366
  *         self.gamma=0
  *         self.eta=4e-06
  *         self.tau_thresh=10000             # <<<<<<<<<<<<<<
@@ -10359,7 +10376,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->tau_thresh = 10000.0;
 
-  /* "splikes\connections\BCM.pyx":367
+  /* "splikes/connections/BCM.pyx":367
  *         self.eta=4e-06
  *         self.tau_thresh=10000
  *         self.time_between_modification=-1.0             # <<<<<<<<<<<<<<
@@ -10368,7 +10385,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->time_between_modification = -1.0;
 
-  /* "splikes\connections\BCM.pyx":368
+  /* "splikes/connections/BCM.pyx":368
  *         self.tau_thresh=10000
  *         self.time_between_modification=-1.0
  *         self._reset()             # <<<<<<<<<<<<<<
@@ -10379,7 +10396,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes\connections\BCM.pyx":346
+  /* "splikes/connections/BCM.pyx":346
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -10403,7 +10420,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":372
+/* "splikes/connections/BCM.pyx":372
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -10502,7 +10519,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes\connections\BCM.pyx":375
+  /* "splikes/connections/BCM.pyx":375
  *         cdef int __i,__j
  * 
  *         cdef double *X=<double *>self.X.data             # <<<<<<<<<<<<<<
@@ -10511,7 +10528,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_X = ((double *)__pyx_v_self->X->data);
 
-  /* "splikes\connections\BCM.pyx":376
+  /* "splikes/connections/BCM.pyx":376
  * 
  *         cdef double *X=<double *>self.X.data
  *         cdef double *Y=<double *>self.Y.data             # <<<<<<<<<<<<<<
@@ -10520,7 +10537,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_Y = ((double *)__pyx_v_self->Y->data);
 
-  /* "splikes\connections\BCM.pyx":377
+  /* "splikes/connections/BCM.pyx":377
  *         cdef double *X=<double *>self.X.data
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *W=self.W             # <<<<<<<<<<<<<<
@@ -10530,7 +10547,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_8 = __pyx_v_self->__pyx_base.W;
   __pyx_v_W = __pyx_t_8;
 
-  /* "splikes\connections\BCM.pyx":378
+  /* "splikes/connections/BCM.pyx":378
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data             # <<<<<<<<<<<<<<
@@ -10539,7 +10556,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_theta = ((double *)__pyx_v_self->theta->data);
 
-  /* "splikes\connections\BCM.pyx":379
+  /* "splikes/connections/BCM.pyx":379
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *y=<double *>self.y.data             # <<<<<<<<<<<<<<
@@ -10548,7 +10565,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_y = ((double *)__pyx_v_self->y->data);
 
-  /* "splikes\connections\BCM.pyx":380
+  /* "splikes/connections/BCM.pyx":380
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *y=<double *>self.y.data
  *         cdef double *yo=<double *>self.yo.data             # <<<<<<<<<<<<<<
@@ -10557,7 +10574,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_yo = ((double *)__pyx_v_self->yo->data);
 
-  /* "splikes\connections\BCM.pyx":381
+  /* "splikes/connections/BCM.pyx":381
  *         cdef double *y=<double *>self.y.data
  *         cdef double *yo=<double *>self.yo.data
  *         cdef double *x=<double *>self.x.data             # <<<<<<<<<<<<<<
@@ -10566,7 +10583,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_x = ((double *)__pyx_v_self->x->data);
 
-  /* "splikes\connections\BCM.pyx":382
+  /* "splikes/connections/BCM.pyx":382
  *         cdef double *yo=<double *>self.yo.data
  *         cdef double *x=<double *>self.x.data
  *         cdef double a=self.a             # <<<<<<<<<<<<<<
@@ -10576,7 +10593,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->a;
   __pyx_v_a = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":383
+  /* "splikes/connections/BCM.pyx":383
  *         cdef double *x=<double *>self.x.data
  *         cdef double a=self.a
  *         cdef double tau=self.tau             # <<<<<<<<<<<<<<
@@ -10586,7 +10603,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->tau;
   __pyx_v_tau = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":384
+  /* "splikes/connections/BCM.pyx":384
  *         cdef double a=self.a
  *         cdef double tau=self.tau
  *         cdef double xo=self.xo             # <<<<<<<<<<<<<<
@@ -10596,7 +10613,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->xo;
   __pyx_v_xo = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":385
+  /* "splikes/connections/BCM.pyx":385
  *         cdef double tau=self.tau
  *         cdef double xo=self.xo
  *         cdef double theta_o=self.theta_o             # <<<<<<<<<<<<<<
@@ -10606,7 +10623,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->theta_o;
   __pyx_v_theta_o = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":386
+  /* "splikes/connections/BCM.pyx":386
  *         cdef double xo=self.xo
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma             # <<<<<<<<<<<<<<
@@ -10616,7 +10633,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->gamma;
   __pyx_v_gamma = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":387
+  /* "splikes/connections/BCM.pyx":387
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta             # <<<<<<<<<<<<<<
@@ -10626,7 +10643,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->eta;
   __pyx_v_eta = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":388
+  /* "splikes/connections/BCM.pyx":388
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta
  *         cdef double tau_thresh=self.tau_thresh             # <<<<<<<<<<<<<<
@@ -10636,7 +10653,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->tau_thresh;
   __pyx_v_tau_thresh = __pyx_t_9;
 
-  /* "splikes\connections\BCM.pyx":398
+  /* "splikes/connections/BCM.pyx":398
  * 
  * 
  *         pre=<int *>self.pre.spiking.data             # <<<<<<<<<<<<<<
@@ -10645,7 +10662,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_pre = ((int *)__pyx_v_self->__pyx_base.pre->spiking->data);
 
-  /* "splikes\connections\BCM.pyx":399
+  /* "splikes/connections/BCM.pyx":399
  * 
  *         pre=<int *>self.pre.spiking.data
  *         post=<int *>self.post.spiking.data             # <<<<<<<<<<<<<<
@@ -10654,7 +10671,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_post = ((int *)__pyx_v_self->__pyx_base.post->spiking->data);
 
-  /* "splikes\connections\BCM.pyx":401
+  /* "splikes/connections/BCM.pyx":401
  *         post=<int *>self.post.spiking.data
  * 
  *         for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -10665,7 +10682,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v___j = __pyx_t_11;
 
-    /* "splikes\connections\BCM.pyx":402
+    /* "splikes/connections/BCM.pyx":402
  * 
  *         for __j in range(self.pre.N):
  *             x[__j]+=sim.dt*(-x[__j]/tau+a*pre[__j]/sim.dt)             # <<<<<<<<<<<<<<
@@ -10675,7 +10692,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __pyx_t_12 = __pyx_v___j;
     (__pyx_v_x[__pyx_t_12]) = ((__pyx_v_x[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_x[__pyx_v___j])) / __pyx_v_tau) + ((__pyx_v_a * (__pyx_v_pre[__pyx_v___j])) / __pyx_v_sim->dt))));
 
-    /* "splikes\connections\BCM.pyx":403
+    /* "splikes/connections/BCM.pyx":403
  *         for __j in range(self.pre.N):
  *             x[__j]+=sim.dt*(-x[__j]/tau+a*pre[__j]/sim.dt)
  *             X[__j]+=x[__j]-xo             # <<<<<<<<<<<<<<
@@ -10686,7 +10703,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     (__pyx_v_X[__pyx_t_12]) = ((__pyx_v_X[__pyx_t_12]) + ((__pyx_v_x[__pyx_v___j]) - __pyx_v_xo));
   }
 
-  /* "splikes\connections\BCM.pyx":405
+  /* "splikes/connections/BCM.pyx":405
  *             X[__j]+=x[__j]-xo
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -10697,7 +10714,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v___i = __pyx_t_11;
 
-    /* "splikes\connections\BCM.pyx":406
+    /* "splikes/connections/BCM.pyx":406
  * 
  *         for __i in range(self.post.N):
  *             y[__i]+=sim.dt*(-y[__i]/tau+a*post[__i]/sim.dt)             # <<<<<<<<<<<<<<
@@ -10707,7 +10724,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __pyx_t_12 = __pyx_v___i;
     (__pyx_v_y[__pyx_t_12]) = ((__pyx_v_y[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_y[__pyx_v___i])) / __pyx_v_tau) + ((__pyx_v_a * (__pyx_v_post[__pyx_v___i])) / __pyx_v_sim->dt))));
 
-    /* "splikes\connections\BCM.pyx":408
+    /* "splikes/connections/BCM.pyx":408
  *             y[__i]+=sim.dt*(-y[__i]/tau+a*post[__i]/sim.dt)
  * 
  *             sum_w=0.0             # <<<<<<<<<<<<<<
@@ -10716,7 +10733,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
     __pyx_v_sum_w = 0.0;
 
-    /* "splikes\connections\BCM.pyx":409
+    /* "splikes/connections/BCM.pyx":409
  * 
  *             sum_w=0.0
  *             for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -10727,7 +10744,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
       __pyx_v___j = __pyx_t_13;
 
-      /* "splikes\connections\BCM.pyx":410
+      /* "splikes/connections/BCM.pyx":410
  *             sum_w=0.0
  *             for __j in range(self.pre.N):
  *                 __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
@@ -10736,7 +10753,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
       __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-      /* "splikes\connections\BCM.pyx":411
+      /* "splikes/connections/BCM.pyx":411
  *             for __j in range(self.pre.N):
  *                 __wi=__i*self.pre.N+__j
  *                 sum_w+=W[__wi]             # <<<<<<<<<<<<<<
@@ -10746,7 +10763,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
       __pyx_v_sum_w = (__pyx_v_sum_w + (__pyx_v_W[__pyx_v___wi]));
     }
 
-    /* "splikes\connections\BCM.pyx":413
+    /* "splikes/connections/BCM.pyx":413
  *                 sum_w+=W[__wi]
  * 
  *             yo[__i]=xo*sum_w             # <<<<<<<<<<<<<<
@@ -10755,7 +10772,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
     (__pyx_v_yo[__pyx_v___i]) = (__pyx_v_xo * __pyx_v_sum_w);
 
-    /* "splikes\connections\BCM.pyx":414
+    /* "splikes/connections/BCM.pyx":414
  * 
  *             yo[__i]=xo*sum_w
  *             Y[__i]+=y[__i]-yo[__i]             # <<<<<<<<<<<<<<
@@ -10765,7 +10782,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __pyx_t_12 = __pyx_v___i;
     (__pyx_v_Y[__pyx_t_12]) = ((__pyx_v_Y[__pyx_t_12]) + ((__pyx_v_y[__pyx_v___i]) - (__pyx_v_yo[__pyx_v___i])));
 
-    /* "splikes\connections\BCM.pyx":415
+    /* "splikes/connections/BCM.pyx":415
  *             yo[__i]=xo*sum_w
  *             Y[__i]+=y[__i]-yo[__i]
  *             if Y[__i]<0.0:             # <<<<<<<<<<<<<<
@@ -10775,7 +10792,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __pyx_t_14 = (((__pyx_v_Y[__pyx_v___i]) < 0.0) != 0);
     if (__pyx_t_14) {
 
-      /* "splikes\connections\BCM.pyx":416
+      /* "splikes/connections/BCM.pyx":416
  *             Y[__i]+=y[__i]-yo[__i]
  *             if Y[__i]<0.0:
  *                 Y[__i]=0.0             # <<<<<<<<<<<<<<
@@ -10787,7 +10804,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     }
     __pyx_L9:;
 
-    /* "splikes\connections\BCM.pyx":418
+    /* "splikes/connections/BCM.pyx":418
  *                 Y[__i]=0.0
  * 
  *             theta[__i]+=sim.dt*((1.0/tau_thresh)*(Y[__i]*Y[__i]/theta_o-theta[__i]))             # <<<<<<<<<<<<<<
@@ -10798,7 +10815,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     (__pyx_v_theta[__pyx_t_12]) = ((__pyx_v_theta[__pyx_t_12]) + (__pyx_v_sim->dt * ((1.0 / __pyx_v_tau_thresh) * ((((__pyx_v_Y[__pyx_v___i]) * (__pyx_v_Y[__pyx_v___i])) / __pyx_v_theta_o) - (__pyx_v_theta[__pyx_v___i])))));
   }
 
-  /* "splikes\connections\BCM.pyx":421
+  /* "splikes/connections/BCM.pyx":421
  * 
  * 
  *         modify_now=False             # <<<<<<<<<<<<<<
@@ -10807,7 +10824,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_modify_now = 0;
 
-  /* "splikes\connections\BCM.pyx":422
+  /* "splikes/connections/BCM.pyx":422
  * 
  *         modify_now=False
  *         if self.time_between_modification<0.0:             # <<<<<<<<<<<<<<
@@ -10817,7 +10834,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_14 = ((__pyx_v_self->time_between_modification < 0.0) != 0);
   if (__pyx_t_14) {
 
-    /* "splikes\connections\BCM.pyx":423
+    /* "splikes/connections/BCM.pyx":423
  *         modify_now=False
  *         if self.time_between_modification<0.0:
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -10826,7 +10843,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes\connections\BCM.pyx":424
+    /* "splikes/connections/BCM.pyx":424
  *         if self.time_between_modification<0.0:
  *             modify_now=True
  *             dt=sim.dt             # <<<<<<<<<<<<<<
@@ -10838,7 +10855,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     goto __pyx_L10;
   }
 
-  /* "splikes\connections\BCM.pyx":425
+  /* "splikes/connections/BCM.pyx":425
  *             modify_now=True
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):             # <<<<<<<<<<<<<<
@@ -10848,7 +10865,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_14 = ((__pyx_v_t > (__pyx_v_self->time_to_next_modification - 1e-6)) != 0);
   if (__pyx_t_14) {
 
-    /* "splikes\connections\BCM.pyx":426
+    /* "splikes/connections/BCM.pyx":426
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -10857,7 +10874,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes\connections\BCM.pyx":427
+    /* "splikes/connections/BCM.pyx":427
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -10866,7 +10883,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
     __pyx_v_self->time_to_next_modification = (__pyx_v_self->time_to_next_modification + __pyx_v_self->time_between_modification);
 
-    /* "splikes\connections\BCM.pyx":428
+    /* "splikes/connections/BCM.pyx":428
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification
  *             dt=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -10879,7 +10896,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   }
   __pyx_L10:;
 
-  /* "splikes\connections\BCM.pyx":430
+  /* "splikes/connections/BCM.pyx":430
  *             dt=self.time_between_modification
  * 
  *         if modify_now:             # <<<<<<<<<<<<<<
@@ -10889,7 +10906,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_14 = (__pyx_v_modify_now != 0);
   if (__pyx_t_14) {
 
-    /* "splikes\connections\BCM.pyx":431
+    /* "splikes/connections/BCM.pyx":431
  * 
  *         if modify_now:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -10900,7 +10917,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___i = __pyx_t_11;
 
-      /* "splikes\connections\BCM.pyx":432
+      /* "splikes/connections/BCM.pyx":432
  *         if modify_now:
  *             for __i in range(self.post.N):
  *                 for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -10911,7 +10928,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
       for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
         __pyx_v___j = __pyx_t_13;
 
-        /* "splikes\connections\BCM.pyx":433
+        /* "splikes/connections/BCM.pyx":433
  *             for __i in range(self.post.N):
  *                 for __j in range(self.pre.N):
  *                     __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
@@ -10920,7 +10937,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
         __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-        /* "splikes\connections\BCM.pyx":434
+        /* "splikes/connections/BCM.pyx":434
  *                 for __j in range(self.pre.N):
  *                     __wi=__i*self.pre.N+__j
  *                     W[__wi]+=dt*(eta*X[__j]*(Y[__i]*(Y[__i]-theta[__i])/theta[__i])-eta*gamma*W[__wi])             # <<<<<<<<<<<<<<
@@ -10932,7 +10949,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
       }
     }
 
-    /* "splikes\connections\BCM.pyx":436
+    /* "splikes/connections/BCM.pyx":436
  *                     W[__wi]+=dt*(eta*X[__j]*(Y[__i]*(Y[__i]-theta[__i])/theta[__i])-eta*gamma*W[__wi])
  * 
  *             self.apply_weight_limits()             # <<<<<<<<<<<<<<
@@ -10945,7 +10962,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   }
   __pyx_L11:;
 
-  /* "splikes\connections\BCM.pyx":372
+  /* "splikes/connections/BCM.pyx":372
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -11063,7 +11080,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_4up
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":328
+/* "splikes/connections/BCM.pyx":328
  * 
  * cdef class BCM_LawCooper_Offset(connection):
  *     cdef public double a,tau,xo,theta_o,gamma,eta,tau_thresh             # <<<<<<<<<<<<<<
@@ -11589,7 +11606,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_10tau_thr
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":329
+/* "splikes/connections/BCM.pyx":329
  * cdef class BCM_LawCooper_Offset(connection):
  *     cdef public double a,tau,xo,theta_o,gamma,eta,tau_thresh
  *     cdef public np.ndarray X,Y,theta,y,x,yo  # offset for y depends on w             # <<<<<<<<<<<<<<
@@ -12197,7 +12214,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2yo_4__de
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":330
+/* "splikes/connections/BCM.pyx":330
  *     cdef public double a,tau,xo,theta_o,gamma,eta,tau_thresh
  *     cdef public np.ndarray X,Y,theta,y,x,yo  # offset for y depends on w
  *     cdef public object initial_theta_range             # <<<<<<<<<<<<<<
@@ -12292,7 +12309,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_19initial
   return __pyx_r;
 }
 
-/* "splikes\connections\BCM.pyx":331
+/* "splikes/connections/BCM.pyx":331
  *     cdef public np.ndarray X,Y,theta,y,x,yo  # offset for y depends on w
  *     cdef public object initial_theta_range
  *     cdef public double time_between_modification,time_to_next_modification             # <<<<<<<<<<<<<<
@@ -12448,7 +12465,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_25time_to
   return __pyx_r;
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":197
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":197
  *         # experimental exception made for __getbuffer__ and __releasebuffer__
  *         # -- the details of this may change.
  *         def __getbuffer__(ndarray self, Py_buffer* info, int flags):             # <<<<<<<<<<<<<<
@@ -12498,7 +12515,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_GIVEREF(__pyx_v_info->obj);
   }
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":203
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":203
  *             # of flags
  * 
  *             if info == NULL: return             # <<<<<<<<<<<<<<
@@ -12511,7 +12528,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L0;
   }
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":206
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":206
  * 
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1             # <<<<<<<<<<<<<<
@@ -12520,7 +12537,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_endian_detector = 1;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":207
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":207
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
@@ -12529,7 +12546,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":209
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":209
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
  * 
  *             ndim = PyArray_NDIM(self)             # <<<<<<<<<<<<<<
@@ -12538,7 +12555,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_ndim = PyArray_NDIM(__pyx_v_self);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":211
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":211
  *             ndim = PyArray_NDIM(self)
  * 
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -12548,7 +12565,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = (((sizeof(npy_intp)) != (sizeof(Py_ssize_t))) != 0);
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":212
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":212
  * 
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 copy_shape = 1             # <<<<<<<<<<<<<<
@@ -12560,7 +12577,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   /*else*/ {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":214
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":214
  *                 copy_shape = 1
  *             else:
  *                 copy_shape = 0             # <<<<<<<<<<<<<<
@@ -12571,7 +12588,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L4:;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":216
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":216
  *                 copy_shape = 0
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -12585,7 +12602,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L6_bool_binop_done;
   }
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":217
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":217
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):             # <<<<<<<<<<<<<<
@@ -12597,7 +12614,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_L6_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":218
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":218
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
@@ -12611,7 +12628,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     {__pyx_filename = __pyx_f[1]; __pyx_lineno = 218; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":220
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":220
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -12625,7 +12642,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L9_bool_binop_done;
   }
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":221
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":221
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):             # <<<<<<<<<<<<<<
@@ -12637,7 +12654,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_L9_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":222
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":222
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
@@ -12651,7 +12668,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     {__pyx_filename = __pyx_f[1]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":224
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":224
  *                 raise ValueError(u"ndarray is not Fortran contiguous")
  * 
  *             info.buf = PyArray_DATA(self)             # <<<<<<<<<<<<<<
@@ -12660,7 +12677,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->buf = PyArray_DATA(__pyx_v_self);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":225
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":225
  * 
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim             # <<<<<<<<<<<<<<
@@ -12669,7 +12686,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->ndim = __pyx_v_ndim;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":226
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":226
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim
  *             if copy_shape:             # <<<<<<<<<<<<<<
@@ -12679,7 +12696,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = (__pyx_v_copy_shape != 0);
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":229
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":229
  *                 # Allocate new buffer for strides and shape info.
  *                 # This is allocated as one block, strides first.
  *                 info.strides = <Py_ssize_t*>stdlib.malloc(sizeof(Py_ssize_t) * <size_t>ndim * 2)             # <<<<<<<<<<<<<<
@@ -12688,7 +12705,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->strides = ((Py_ssize_t *)malloc((((sizeof(Py_ssize_t)) * ((size_t)__pyx_v_ndim)) * 2)));
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":230
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":230
  *                 # This is allocated as one block, strides first.
  *                 info.strides = <Py_ssize_t*>stdlib.malloc(sizeof(Py_ssize_t) * <size_t>ndim * 2)
  *                 info.shape = info.strides + ndim             # <<<<<<<<<<<<<<
@@ -12697,7 +12714,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->shape = (__pyx_v_info->strides + __pyx_v_ndim);
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":231
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":231
  *                 info.strides = <Py_ssize_t*>stdlib.malloc(sizeof(Py_ssize_t) * <size_t>ndim * 2)
  *                 info.shape = info.strides + ndim
  *                 for i in range(ndim):             # <<<<<<<<<<<<<<
@@ -12708,7 +12725,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
       __pyx_v_i = __pyx_t_5;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":232
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":232
  *                 info.shape = info.strides + ndim
  *                 for i in range(ndim):
  *                     info.strides[i] = PyArray_STRIDES(self)[i]             # <<<<<<<<<<<<<<
@@ -12717,7 +12734,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
       (__pyx_v_info->strides[__pyx_v_i]) = (PyArray_STRIDES(__pyx_v_self)[__pyx_v_i]);
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":233
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":233
  *                 for i in range(ndim):
  *                     info.strides[i] = PyArray_STRIDES(self)[i]
  *                     info.shape[i] = PyArray_DIMS(self)[i]             # <<<<<<<<<<<<<<
@@ -12730,7 +12747,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   /*else*/ {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":235
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":235
  *                     info.shape[i] = PyArray_DIMS(self)[i]
  *             else:
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)             # <<<<<<<<<<<<<<
@@ -12739,7 +12756,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->strides = ((Py_ssize_t *)PyArray_STRIDES(__pyx_v_self));
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":236
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":236
  *             else:
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)             # <<<<<<<<<<<<<<
@@ -12750,7 +12767,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L11:;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":237
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":237
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)
  *             info.suboffsets = NULL             # <<<<<<<<<<<<<<
@@ -12759,7 +12776,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->suboffsets = NULL;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":238
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":238
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)             # <<<<<<<<<<<<<<
@@ -12768,7 +12785,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->itemsize = PyArray_ITEMSIZE(__pyx_v_self);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":239
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":239
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)
  *             info.readonly = not PyArray_ISWRITEABLE(self)             # <<<<<<<<<<<<<<
@@ -12777,7 +12794,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->readonly = (!(PyArray_ISWRITEABLE(__pyx_v_self) != 0));
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":242
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":242
  * 
  *             cdef int t
  *             cdef char* f = NULL             # <<<<<<<<<<<<<<
@@ -12786,7 +12803,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_f = NULL;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":243
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":243
  *             cdef int t
  *             cdef char* f = NULL
  *             cdef dtype descr = self.descr             # <<<<<<<<<<<<<<
@@ -12798,7 +12815,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_v_descr = ((PyArray_Descr *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":247
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":247
  *             cdef int offset
  * 
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)             # <<<<<<<<<<<<<<
@@ -12807,7 +12824,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_hasfields = PyDataType_HASFIELDS(__pyx_v_descr);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":249
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":249
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)
  * 
  *             if not hasfields and not copy_shape:             # <<<<<<<<<<<<<<
@@ -12825,7 +12842,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_L15_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":251
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":251
  *             if not hasfields and not copy_shape:
  *                 # do not call releasebuffer
  *                 info.obj = None             # <<<<<<<<<<<<<<
@@ -12841,7 +12858,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   /*else*/ {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":254
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":254
  *             else:
  *                 # need to call releasebuffer
  *                 info.obj = self             # <<<<<<<<<<<<<<
@@ -12856,7 +12873,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L14:;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":256
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":256
  *                 info.obj = self
  * 
  *             if not hasfields:             # <<<<<<<<<<<<<<
@@ -12866,7 +12883,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = ((!(__pyx_v_hasfields != 0)) != 0);
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":257
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":257
  * 
  *             if not hasfields:
  *                 t = descr.type_num             # <<<<<<<<<<<<<<
@@ -12876,7 +12893,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_4 = __pyx_v_descr->type_num;
     __pyx_v_t = __pyx_t_4;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":258
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":258
  *             if not hasfields:
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -12896,7 +12913,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     }
     __pyx_L20_next_or:;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":259
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":259
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):             # <<<<<<<<<<<<<<
@@ -12914,7 +12931,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_L19_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":260
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":260
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -12928,7 +12945,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       {__pyx_filename = __pyx_f[1]; __pyx_lineno = 260; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":277
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":277
  *                 elif t == NPY_CDOUBLE:     f = "Zd"
  *                 elif t == NPY_CLONGDOUBLE: f = "Zg"
  *                 elif t == NPY_OBJECT:      f = "O"             # <<<<<<<<<<<<<<
@@ -12937,7 +12954,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     switch (__pyx_v_t) {
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":261
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":261
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")
  *                 if   t == NPY_BYTE:        f = "b"             # <<<<<<<<<<<<<<
@@ -12948,7 +12965,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_b;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":262
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":262
  *                     raise ValueError(u"Non-native byte order not supported")
  *                 if   t == NPY_BYTE:        f = "b"
  *                 elif t == NPY_UBYTE:       f = "B"             # <<<<<<<<<<<<<<
@@ -12959,7 +12976,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_B;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":263
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":263
  *                 if   t == NPY_BYTE:        f = "b"
  *                 elif t == NPY_UBYTE:       f = "B"
  *                 elif t == NPY_SHORT:       f = "h"             # <<<<<<<<<<<<<<
@@ -12970,7 +12987,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_h;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":264
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":264
  *                 elif t == NPY_UBYTE:       f = "B"
  *                 elif t == NPY_SHORT:       f = "h"
  *                 elif t == NPY_USHORT:      f = "H"             # <<<<<<<<<<<<<<
@@ -12981,7 +12998,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_H;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":265
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":265
  *                 elif t == NPY_SHORT:       f = "h"
  *                 elif t == NPY_USHORT:      f = "H"
  *                 elif t == NPY_INT:         f = "i"             # <<<<<<<<<<<<<<
@@ -12992,7 +13009,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_i;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":266
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":266
  *                 elif t == NPY_USHORT:      f = "H"
  *                 elif t == NPY_INT:         f = "i"
  *                 elif t == NPY_UINT:        f = "I"             # <<<<<<<<<<<<<<
@@ -13003,7 +13020,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_I;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":267
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":267
  *                 elif t == NPY_INT:         f = "i"
  *                 elif t == NPY_UINT:        f = "I"
  *                 elif t == NPY_LONG:        f = "l"             # <<<<<<<<<<<<<<
@@ -13014,7 +13031,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_l;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":268
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":268
  *                 elif t == NPY_UINT:        f = "I"
  *                 elif t == NPY_LONG:        f = "l"
  *                 elif t == NPY_ULONG:       f = "L"             # <<<<<<<<<<<<<<
@@ -13025,7 +13042,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_L;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":269
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":269
  *                 elif t == NPY_LONG:        f = "l"
  *                 elif t == NPY_ULONG:       f = "L"
  *                 elif t == NPY_LONGLONG:    f = "q"             # <<<<<<<<<<<<<<
@@ -13036,7 +13053,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_q;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":270
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":270
  *                 elif t == NPY_ULONG:       f = "L"
  *                 elif t == NPY_LONGLONG:    f = "q"
  *                 elif t == NPY_ULONGLONG:   f = "Q"             # <<<<<<<<<<<<<<
@@ -13047,7 +13064,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_Q;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":271
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":271
  *                 elif t == NPY_LONGLONG:    f = "q"
  *                 elif t == NPY_ULONGLONG:   f = "Q"
  *                 elif t == NPY_FLOAT:       f = "f"             # <<<<<<<<<<<<<<
@@ -13058,7 +13075,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_f;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":272
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":272
  *                 elif t == NPY_ULONGLONG:   f = "Q"
  *                 elif t == NPY_FLOAT:       f = "f"
  *                 elif t == NPY_DOUBLE:      f = "d"             # <<<<<<<<<<<<<<
@@ -13069,7 +13086,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_d;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":273
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":273
  *                 elif t == NPY_FLOAT:       f = "f"
  *                 elif t == NPY_DOUBLE:      f = "d"
  *                 elif t == NPY_LONGDOUBLE:  f = "g"             # <<<<<<<<<<<<<<
@@ -13080,7 +13097,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_g;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":274
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":274
  *                 elif t == NPY_DOUBLE:      f = "d"
  *                 elif t == NPY_LONGDOUBLE:  f = "g"
  *                 elif t == NPY_CFLOAT:      f = "Zf"             # <<<<<<<<<<<<<<
@@ -13091,7 +13108,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_Zf;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":275
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":275
  *                 elif t == NPY_LONGDOUBLE:  f = "g"
  *                 elif t == NPY_CFLOAT:      f = "Zf"
  *                 elif t == NPY_CDOUBLE:     f = "Zd"             # <<<<<<<<<<<<<<
@@ -13102,7 +13119,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_Zd;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":276
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":276
  *                 elif t == NPY_CFLOAT:      f = "Zf"
  *                 elif t == NPY_CDOUBLE:     f = "Zd"
  *                 elif t == NPY_CLONGDOUBLE: f = "Zg"             # <<<<<<<<<<<<<<
@@ -13113,7 +13130,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_Zg;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":277
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":277
  *                 elif t == NPY_CDOUBLE:     f = "Zd"
  *                 elif t == NPY_CLONGDOUBLE: f = "Zg"
  *                 elif t == NPY_OBJECT:      f = "O"             # <<<<<<<<<<<<<<
@@ -13125,7 +13142,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       default:
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":279
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":279
  *                 elif t == NPY_OBJECT:      f = "O"
  *                 else:
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)             # <<<<<<<<<<<<<<
@@ -13151,7 +13168,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
     }
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":280
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":280
  *                 else:
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *                 info.format = f             # <<<<<<<<<<<<<<
@@ -13160,7 +13177,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->format = __pyx_v_f;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":281
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":281
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *                 info.format = f
  *                 return             # <<<<<<<<<<<<<<
@@ -13172,7 +13189,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   /*else*/ {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":283
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":283
  *                 return
  *             else:
  *                 info.format = <char*>stdlib.malloc(_buffer_format_string_len)             # <<<<<<<<<<<<<<
@@ -13181,7 +13198,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->format = ((char *)malloc(255));
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":284
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":284
  *             else:
  *                 info.format = <char*>stdlib.malloc(_buffer_format_string_len)
  *                 info.format[0] = c'^' # Native data types, manual alignment             # <<<<<<<<<<<<<<
@@ -13190,7 +13207,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     (__pyx_v_info->format[0]) = '^';
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":285
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":285
  *                 info.format = <char*>stdlib.malloc(_buffer_format_string_len)
  *                 info.format[0] = c'^' # Native data types, manual alignment
  *                 offset = 0             # <<<<<<<<<<<<<<
@@ -13199,7 +13216,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_offset = 0;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":286
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":286
  *                 info.format[0] = c'^' # Native data types, manual alignment
  *                 offset = 0
  *                 f = _util_dtypestring(descr, info.format + 1,             # <<<<<<<<<<<<<<
@@ -13209,7 +13226,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_7 = __pyx_f_5numpy__util_dtypestring(__pyx_v_descr, (__pyx_v_info->format + 1), (__pyx_v_info->format + 255), (&__pyx_v_offset)); if (unlikely(__pyx_t_7 == NULL)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 286; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_f = __pyx_t_7;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":289
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":289
  *                                       info.format + _buffer_format_string_len,
  *                                       &offset)
  *                 f[0] = c'\0' # Terminate format string             # <<<<<<<<<<<<<<
@@ -13219,7 +13236,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     (__pyx_v_f[0]) = '\x00';
   }
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":197
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":197
  *         # experimental exception made for __getbuffer__ and __releasebuffer__
  *         # -- the details of this may change.
  *         def __getbuffer__(ndarray self, Py_buffer* info, int flags):             # <<<<<<<<<<<<<<
@@ -13251,7 +13268,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   return __pyx_r;
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":291
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":291
  *                 f[0] = c'\0' # Terminate format string
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
@@ -13275,7 +13292,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("__releasebuffer__", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":292
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":292
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):             # <<<<<<<<<<<<<<
@@ -13285,7 +13302,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __pyx_t_1 = (PyArray_HASFIELDS(__pyx_v_self) != 0);
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":293
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":293
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)             # <<<<<<<<<<<<<<
@@ -13297,7 +13314,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   }
   __pyx_L3:;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":294
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":294
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -13307,7 +13324,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __pyx_t_1 = (((sizeof(npy_intp)) != (sizeof(Py_ssize_t))) != 0);
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":295
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":295
  *                 stdlib.free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 stdlib.free(info.strides)             # <<<<<<<<<<<<<<
@@ -13319,7 +13336,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   }
   __pyx_L4:;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":291
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":291
  *                 f[0] = c'\0' # Terminate format string
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
@@ -13331,7 +13348,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __Pyx_RefNannyFinishContext();
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":771
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":771
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -13348,7 +13365,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":772
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":772
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -13362,7 +13379,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":771
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":771
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -13381,7 +13398,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":774
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":774
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -13398,7 +13415,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":775
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":775
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -13412,7 +13429,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":774
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":774
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -13431,7 +13448,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":777
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":777
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -13448,7 +13465,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":778
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":778
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -13462,7 +13479,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":777
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":777
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -13481,7 +13498,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":780
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":780
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -13498,7 +13515,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":781
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":781
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -13512,7 +13529,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":780
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":780
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -13531,7 +13548,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":783
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":783
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -13548,7 +13565,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":784
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":784
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -13562,7 +13579,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":783
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":783
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -13581,7 +13598,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":786
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":786
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
@@ -13613,7 +13630,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_util_dtypestring", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":793
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":793
  *     cdef int delta_offset
  *     cdef tuple i
  *     cdef int endian_detector = 1             # <<<<<<<<<<<<<<
@@ -13622,7 +13639,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
   __pyx_v_endian_detector = 1;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":794
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":794
  *     cdef tuple i
  *     cdef int endian_detector = 1
  *     cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
@@ -13631,7 +13648,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":797
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":797
  *     cdef tuple fields
  * 
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
@@ -13653,7 +13670,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_childname, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":798
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":798
  * 
  *     for childname in descr.names:
  *         fields = descr.fields[childname]             # <<<<<<<<<<<<<<
@@ -13670,7 +13687,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_fields, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":799
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":799
  *     for childname in descr.names:
  *         fields = descr.fields[childname]
  *         child, new_offset = fields             # <<<<<<<<<<<<<<
@@ -13709,7 +13726,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_new_offset, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":801
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":801
  *         child, new_offset = fields
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:             # <<<<<<<<<<<<<<
@@ -13726,7 +13743,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = ((((__pyx_v_end - __pyx_v_f) - ((int)__pyx_t_5)) < 15) != 0);
     if (__pyx_t_6) {
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":802
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":802
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
@@ -13740,7 +13757,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       {__pyx_filename = __pyx_f[1]; __pyx_lineno = 802; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":804
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":804
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -13760,7 +13777,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     }
     __pyx_L8_next_or:;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":805
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":805
  * 
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):             # <<<<<<<<<<<<<<
@@ -13778,7 +13795,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_L7_bool_binop_done:;
     if (__pyx_t_6) {
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":806
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":806
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):
  *             raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -13792,7 +13809,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       {__pyx_filename = __pyx_f[1]; __pyx_lineno = 806; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":816
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":816
  * 
  *         # Output padding bytes
  *         while offset[0] < new_offset:             # <<<<<<<<<<<<<<
@@ -13808,7 +13825,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       if (!__pyx_t_6) break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":817
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":817
  *         # Output padding bytes
  *         while offset[0] < new_offset:
  *             f[0] = 120 # "x"; pad byte             # <<<<<<<<<<<<<<
@@ -13817,7 +13834,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       (__pyx_v_f[0]) = 120;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":818
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":818
  *         while offset[0] < new_offset:
  *             f[0] = 120 # "x"; pad byte
  *             f += 1             # <<<<<<<<<<<<<<
@@ -13826,7 +13843,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       __pyx_v_f = (__pyx_v_f + 1);
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":819
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":819
  *             f[0] = 120 # "x"; pad byte
  *             f += 1
  *             offset[0] += 1             # <<<<<<<<<<<<<<
@@ -13837,7 +13854,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       (__pyx_v_offset[__pyx_t_8]) = ((__pyx_v_offset[__pyx_t_8]) + 1);
     }
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":821
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":821
  *             offset[0] += 1
  * 
  *         offset[0] += child.itemsize             # <<<<<<<<<<<<<<
@@ -13847,7 +13864,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_8 = 0;
     (__pyx_v_offset[__pyx_t_8]) = ((__pyx_v_offset[__pyx_t_8]) + __pyx_v_child->elsize);
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":823
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":823
  *         offset[0] += child.itemsize
  * 
  *         if not PyDataType_HASFIELDS(child):             # <<<<<<<<<<<<<<
@@ -13857,7 +13874,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = ((!(PyDataType_HASFIELDS(__pyx_v_child) != 0)) != 0);
     if (__pyx_t_6) {
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":824
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":824
  * 
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num             # <<<<<<<<<<<<<<
@@ -13869,7 +13886,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_XDECREF_SET(__pyx_v_t, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":825
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":825
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num
  *             if end - f < 5:             # <<<<<<<<<<<<<<
@@ -13879,7 +13896,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __pyx_t_6 = (((__pyx_v_end - __pyx_v_f) < 5) != 0);
       if (__pyx_t_6) {
 
-        /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":826
+        /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":826
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
@@ -13893,7 +13910,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         {__pyx_filename = __pyx_f[1]; __pyx_lineno = 826; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":829
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":829
  * 
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"             # <<<<<<<<<<<<<<
@@ -13911,7 +13928,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":830
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":830
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"             # <<<<<<<<<<<<<<
@@ -13929,7 +13946,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":831
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":831
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"             # <<<<<<<<<<<<<<
@@ -13947,7 +13964,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":832
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":832
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"             # <<<<<<<<<<<<<<
@@ -13965,7 +13982,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":833
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":833
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"
  *             elif t == NPY_INT:         f[0] = 105 #"i"             # <<<<<<<<<<<<<<
@@ -13983,7 +14000,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":834
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":834
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"
  *             elif t == NPY_INT:         f[0] = 105 #"i"
  *             elif t == NPY_UINT:        f[0] =  73 #"I"             # <<<<<<<<<<<<<<
@@ -14001,7 +14018,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":835
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":835
  *             elif t == NPY_INT:         f[0] = 105 #"i"
  *             elif t == NPY_UINT:        f[0] =  73 #"I"
  *             elif t == NPY_LONG:        f[0] = 108 #"l"             # <<<<<<<<<<<<<<
@@ -14019,7 +14036,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":836
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":836
  *             elif t == NPY_UINT:        f[0] =  73 #"I"
  *             elif t == NPY_LONG:        f[0] = 108 #"l"
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"             # <<<<<<<<<<<<<<
@@ -14037,7 +14054,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":837
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":837
  *             elif t == NPY_LONG:        f[0] = 108 #"l"
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"             # <<<<<<<<<<<<<<
@@ -14055,7 +14072,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":838
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":838
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"             # <<<<<<<<<<<<<<
@@ -14073,7 +14090,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":839
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":839
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"             # <<<<<<<<<<<<<<
@@ -14091,7 +14108,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":840
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":840
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"             # <<<<<<<<<<<<<<
@@ -14109,7 +14126,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":841
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":841
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"             # <<<<<<<<<<<<<<
@@ -14127,7 +14144,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":842
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":842
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf             # <<<<<<<<<<<<<<
@@ -14147,7 +14164,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":843
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":843
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd             # <<<<<<<<<<<<<<
@@ -14167,7 +14184,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":844
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":844
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd
  *             elif t == NPY_CLONGDOUBLE: f[0] = 90; f[1] = 103; f += 1 # Zg             # <<<<<<<<<<<<<<
@@ -14187,7 +14204,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":845
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":845
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd
  *             elif t == NPY_CLONGDOUBLE: f[0] = 90; f[1] = 103; f += 1 # Zg
  *             elif t == NPY_OBJECT:      f[0] = 79 #"O"             # <<<<<<<<<<<<<<
@@ -14206,7 +14223,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       }
       /*else*/ {
 
-        /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":847
+        /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":847
  *             elif t == NPY_OBJECT:      f[0] = 79 #"O"
  *             else:
  *                 raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)             # <<<<<<<<<<<<<<
@@ -14229,7 +14246,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       }
       __pyx_L15:;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":848
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":848
  *             else:
  *                 raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *             f += 1             # <<<<<<<<<<<<<<
@@ -14241,7 +14258,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     }
     /*else*/ {
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":852
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":852
  *             # Cython ignores struct boundary information ("T{...}"),
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)             # <<<<<<<<<<<<<<
@@ -14253,7 +14270,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     }
     __pyx_L13:;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":797
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":797
  *     cdef tuple fields
  * 
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
@@ -14263,7 +14280,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":853
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":853
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)
  *     return f             # <<<<<<<<<<<<<<
@@ -14273,7 +14290,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   __pyx_r = __pyx_v_f;
   goto __pyx_L0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":786
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":786
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
@@ -14298,7 +14315,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   return __pyx_r;
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":969
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":969
  * 
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -14313,7 +14330,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   int __pyx_t_2;
   __Pyx_RefNannySetupContext("set_array_base", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":971
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":971
  * cdef inline void set_array_base(ndarray arr, object base):
  *      cdef PyObject* baseptr
  *      if base is None:             # <<<<<<<<<<<<<<
@@ -14324,7 +14341,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":972
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":972
  *      cdef PyObject* baseptr
  *      if base is None:
  *          baseptr = NULL             # <<<<<<<<<<<<<<
@@ -14336,7 +14353,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   }
   /*else*/ {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":974
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":974
  *          baseptr = NULL
  *      else:
  *          Py_INCREF(base) # important to do this before decref below!             # <<<<<<<<<<<<<<
@@ -14345,7 +14362,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
     Py_INCREF(__pyx_v_base);
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":975
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":975
  *      else:
  *          Py_INCREF(base) # important to do this before decref below!
  *          baseptr = <PyObject*>base             # <<<<<<<<<<<<<<
@@ -14356,7 +14373,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   }
   __pyx_L3:;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":976
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":976
  *          Py_INCREF(base) # important to do this before decref below!
  *          baseptr = <PyObject*>base
  *      Py_XDECREF(arr.base)             # <<<<<<<<<<<<<<
@@ -14365,7 +14382,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_XDECREF(__pyx_v_arr->base);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":977
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":977
  *          baseptr = <PyObject*>base
  *      Py_XDECREF(arr.base)
  *      arr.base = baseptr             # <<<<<<<<<<<<<<
@@ -14374,7 +14391,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   __pyx_v_arr->base = __pyx_v_baseptr;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":969
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":969
  * 
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -14386,7 +14403,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyFinishContext();
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":979
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":979
  *      arr.base = baseptr
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -14400,7 +14417,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":980
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":980
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     if arr.base is NULL:             # <<<<<<<<<<<<<<
@@ -14410,7 +14427,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = ((__pyx_v_arr->base == NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":981
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":981
  * cdef inline object get_array_base(ndarray arr):
  *     if arr.base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -14424,7 +14441,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   }
   /*else*/ {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":983
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":983
  *         return None
  *     else:
  *         return <object>arr.base             # <<<<<<<<<<<<<<
@@ -14435,7 +14452,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     goto __pyx_L0;
   }
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":979
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":979
  *      arr.base = baseptr
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -16003,7 +16020,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":218
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":218
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
@@ -16014,7 +16031,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":222
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":222
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
@@ -16025,7 +16042,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":260
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":260
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -16036,7 +16053,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":802
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":802
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
@@ -16047,7 +16064,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":806
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":806
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):
  *             raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -16058,7 +16075,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":826
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":826
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
@@ -16212,17 +16229,18 @@ PyMODINIT_FUNC PyInit_BCM(void)
   __pyx_ptype_5numpy_broadcast = __Pyx_ImportType("numpy", "broadcast", sizeof(PyArrayMultiIterObject), 0); if (unlikely(!__pyx_ptype_5numpy_broadcast)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5numpy_ndarray = __Pyx_ImportType("numpy", "ndarray", sizeof(PyArrayObject), 0); if (unlikely(!__pyx_ptype_5numpy_ndarray)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 181; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5numpy_ufunc = __Pyx_ImportType("numpy", "ufunc", sizeof(PyUFuncObject), 0); if (unlikely(!__pyx_ptype_5numpy_ufunc)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 864; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7splikes_monitor = __Pyx_ImportType("splikes.splikes", "monitor", sizeof(struct __pyx_obj_7splikes_7splikes_monitor), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_monitor = (struct __pyx_vtabstruct_7splikes_7splikes_monitor*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_monitor->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7splikes_simulation = __Pyx_ImportType("splikes.splikes", "simulation", sizeof(struct __pyx_obj_7splikes_7splikes_simulation), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_simulation = (struct __pyx_vtabstruct_7splikes_7splikes_simulation*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7splikes_neuron = __Pyx_ImportType("splikes.splikes", "neuron", sizeof(struct __pyx_obj_7splikes_7splikes_neuron), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_neuron = (struct __pyx_vtabstruct_7splikes_7splikes_neuron*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_7splikes_7splikes_group = __Pyx_ImportType("splikes.splikes", "group", sizeof(struct __pyx_obj_7splikes_7splikes_group), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_group)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_7splikes_7splikes_monitor = __Pyx_ImportType("splikes.splikes", "monitor", sizeof(struct __pyx_obj_7splikes_7splikes_monitor), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_7splikes_7splikes_monitor = (struct __pyx_vtabstruct_7splikes_7splikes_monitor*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_monitor->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_7splikes_7splikes_simulation = __Pyx_ImportType("splikes.splikes", "simulation", sizeof(struct __pyx_obj_7splikes_7splikes_simulation), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_7splikes_7splikes_simulation = (struct __pyx_vtabstruct_7splikes_7splikes_simulation*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_7splikes_7splikes_neuron = __Pyx_ImportType("splikes.splikes", "neuron", sizeof(struct __pyx_obj_7splikes_7splikes_neuron), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_7splikes_7splikes_neuron = (struct __pyx_vtabstruct_7splikes_7splikes_neuron*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   /*--- Variable import code ---*/
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "splikes\connections\BCM.pyx":4
+  /* "splikes/connections/BCM.pyx":4
  * from splikes.splikes cimport *
  * cimport cython
  * import pylab             # <<<<<<<<<<<<<<
@@ -16234,7 +16252,7 @@ PyMODINIT_FUNC PyInit_BCM(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pylab, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 4; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes\connections\BCM.pyx":6
+  /* "splikes/connections/BCM.pyx":6
  * import pylab
  * 
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -16246,7 +16264,7 @@ PyMODINIT_FUNC PyInit_BCM(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 6; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes\connections\BCM.pyx":9
+  /* "splikes/connections/BCM.pyx":9
  * cimport numpy as np
  * 
  * import sys             # <<<<<<<<<<<<<<
@@ -16258,7 +16276,7 @@ PyMODINIT_FUNC PyInit_BCM(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_sys, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 9; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes\connections\BCM.pyx":2
+  /* "splikes/connections/BCM.pyx":2
  * 
  * from splikes.splikes cimport *             # <<<<<<<<<<<<<<
  * cimport cython
@@ -16269,7 +16287,7 @@ PyMODINIT_FUNC PyInit_BCM(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":979
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":979
  *      arr.base = baseptr
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<

@@ -110,25 +110,31 @@ cdef class monitor(group):
         self.time_to_next_save=start_time
         self.save_interval=save_interval
         self._reset()
+
+        self.save_attrs=['time_to_next_save','save_interval']
+        self.save_data=['t','values']
+
+
     def _reset(self):
-        self.saved_results={'t':[],self.name:[]}
+        self.t=[]
+        self.values=[]
         
     cpdef update(self,double t):
         if t<=self.time_to_next_save:
             return
-        self.saved_results['t'].append(t)
+        self.t.append(t)
         variable=self.container.__getattribute__(self.name)
-        self.saved_results[self.name].append(deepcopy(variable))
+        self.values.append(deepcopy(variable))
         self.time_to_next_save+=self.save_interval
 
     def arrays(self):
         return self.time_array(),self.array()
         
     def array(self):
-        return np.array(self.saved_results[self.name]).squeeze()
+        return np.array(self.values).squeeze()
         
     def time_array(self):
-        return np.array(self.saved_results['t'])
+        return np.array(self.t)
         
     def plot(self,*args,**kwargs):
         import matplotlib.pyplot as plt 
@@ -160,7 +166,7 @@ cdef class monitor(group):
         pylab.ylabel(self.name)
 
 
-cdef class simulation:
+cdef class simulation(group):
     
     def __init__(self,total_time,dt=0.00025,start_time=0.0):
         self.dt=dt
@@ -171,6 +177,9 @@ cdef class simulation:
         self.seed=-1
         self.monitors={}
         self.filters=[]  # functions for processing
+        self.save_attrs=['seed','total_time','dt','time_to_next_save','time_to_next_filter',
+                    'verbose',]
+        self.save_data=[]
         
         
     cpdef _reset(self):
@@ -206,8 +215,17 @@ cdef class simulation:
             
         self.time_to_next_save=min([self.monitors[name].time_to_next_save for name in self.monitors])
         
+    def save(self,group):
+        group.attrs['type']=str(type(self))
+
+        for attr in self.save_attrs:
+            group.attrs[attr]=self.__getattribute__(attr)
+
+        for dataname in self.save_data:
+            data=self.__getattribute__(dataname)
+            group.create_dataset(dataname,data=data)
         
-cdef class neuron:
+cdef class neuron(group):
     
     def __init__(self,N):
         self.N=N
@@ -222,6 +240,12 @@ cdef class neuron:
         self.connections_post=[]
         self.name=None
     
+        self.save_attrs=['num_pre','num_post','verbose',
+                            'save_spikes_begin','save_spikes_end','post_count']
+        self.save_data=['spiking','last_spike_time','rate','saved_spikes']
+
+
+
     cpdef _reset(self):
         self.spiking=np.zeros(self.N,dtype=np.int32)            
         self.last_spike_time=-np.ones(self.N,dtype=np.float)    
@@ -254,7 +278,7 @@ cdef class neuron:
 
 
         
-cdef class connection:
+cdef class connection(group):
     
     cpdef _reset(self):
         if self.reset_to_initial:
@@ -269,6 +293,9 @@ cdef class connection:
         if self.use_state:
             self.state=self.post.__getattribute__(self.state_variable)
     
+
+
+
     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):
         cdef np.ndarray arr
     
@@ -280,8 +307,8 @@ cdef class connection:
         self.post=post
         self.post.connections_pre.append(self)
         self.pre.connections_post.append(self)
-        self.w_max=3000
-        self.w_min=0.0
+        self.w_max=1e500
+        self.w_min=-1e500
         self.spike_scale=1.0
         self.reset_to_initial=False
         self.name=None
@@ -293,6 +320,10 @@ cdef class connection:
             self.use_state=True
             self.state_variable=state
             
+        self.save_attrs=['verbose','reset_to_initial','w_min','w_max',
+                    'spike_scale','use_state']
+        self.save_data=['initial_weight_range','initial_weights','weights','state_variable']
+
         self._reset()
     
     cpdef apply_weight_limits(self):

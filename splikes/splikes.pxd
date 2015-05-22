@@ -25,15 +25,18 @@ cdef double randu()
 cdef double randn()
 cdef double rande()
 
+cdef class group:
+    cdef public object save_attrs,save_data
 
-cdef class monitor:
+
+cdef class monitor(group):
     cdef public double time_to_next_save
     cdef public double save_interval
     cdef public object container,name
-    cdef public object saved_results
+    cdef public object t,values
     cpdef update(self,double t)
 
-cdef class simulation:
+cdef class simulation(group):
     cdef public double dt
     cdef public double total_time
     cdef public double start_time
@@ -42,7 +45,7 @@ cdef class simulation:
     cdef public int seed
     cpdef _reset(self)
 
-cdef class neuron:
+cdef class neuron(group):
     cdef public int verbose
     cdef public int is_spike
     cdef public int post_count    
@@ -59,7 +62,7 @@ cdef class neuron:
     cpdef update(self,double t,simulation sim)
 
 
-cdef class connection:
+cdef class connection(group):
     cdef public np.ndarray weights
     cdef public np.ndarray initial_weights
     cdef public bint reset_to_initial

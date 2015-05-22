@@ -454,14 +454,14 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "splikes\\neurons\\srm0.pyx",
-  "splikes\\neurons\\isi_distributions.pxd",
+  "splikes/neurons/srm0.pyx",
+  "splikes/neurons/isi_distributions.pxd",
   "__init__.pxd",
   "type.pxd",
-  "splikes\\splikes.pxd",
+  "splikes/splikes.pxd",
 };
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":726
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":726
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -470,7 +470,7 @@ static const char *__pyx_f[] = {
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":727
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":727
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -479,7 +479,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":728
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":728
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -488,7 +488,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":729
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":729
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -497,7 +497,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":733
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":733
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -506,7 +506,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":734
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":734
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -515,7 +515,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":735
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":735
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -524,7 +524,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":736
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":736
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -533,7 +533,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":740
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":740
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -542,7 +542,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":741
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":741
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -551,7 +551,7 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":750
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":750
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
@@ -560,7 +560,7 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":751
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":751
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t             # <<<<<<<<<<<<<<
@@ -569,7 +569,7 @@ typedef npy_long __pyx_t_5numpy_int_t;
  */
 typedef npy_longlong __pyx_t_5numpy_long_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":752
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":752
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -578,7 +578,7 @@ typedef npy_longlong __pyx_t_5numpy_long_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":754
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":754
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
@@ -587,7 +587,7 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":755
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":755
  * 
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t             # <<<<<<<<<<<<<<
@@ -596,7 +596,7 @@ typedef npy_ulong __pyx_t_5numpy_uint_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":756
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":756
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -605,7 +605,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":758
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":758
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -614,7 +614,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":759
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":759
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -623,7 +623,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":761
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":761
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -632,7 +632,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":762
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":762
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -641,7 +641,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":763
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":763
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -671,6 +671,7 @@ typedef npy_longdouble __pyx_t_5numpy_longdouble_t;
 
 
 /*--- Type declarations ---*/
+struct __pyx_obj_7splikes_7splikes_group;
 struct __pyx_obj_7splikes_7splikes_monitor;
 struct __pyx_obj_7splikes_7splikes_simulation;
 struct __pyx_obj_7splikes_7splikes_neuron;
@@ -683,7 +684,7 @@ struct __pyx_obj_7splikes_7neurons_17isi_distributions_uniform;
 struct __pyx_obj_7splikes_7neurons_4srm0_srm0;
 struct __pyx_obj_7splikes_7neurons_4srm0_srm0_isi;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":765
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":765
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -692,7 +693,7 @@ struct __pyx_obj_7splikes_7neurons_4srm0_srm0_isi;
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":766
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":766
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -701,7 +702,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":767
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":767
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -710,7 +711,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":769
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":769
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -719,33 +720,48 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
 
-/* "splikes\splikes.pxd":29
+/* "splikes/splikes.pxd":28
+ * cdef double rande()
+ * 
+ * cdef class group:             # <<<<<<<<<<<<<<
+ *     cdef public object save_attrs,save_data
+ * 
+ */
+struct __pyx_obj_7splikes_7splikes_group {
+  PyObject_HEAD
+  PyObject *save_attrs;
+  PyObject *save_data;
+};
+
+
+/* "splikes/splikes.pxd":32
  * 
  * 
- * cdef class monitor:             # <<<<<<<<<<<<<<
+ * cdef class monitor(group):             # <<<<<<<<<<<<<<
  *     cdef public double time_to_next_save
  *     cdef public double save_interval
  */
 struct __pyx_obj_7splikes_7splikes_monitor {
-  PyObject_HEAD
+  struct __pyx_obj_7splikes_7splikes_group __pyx_base;
   struct __pyx_vtabstruct_7splikes_7splikes_monitor *__pyx_vtab;
   double time_to_next_save;
   double save_interval;
   PyObject *container;
   PyObject *name;
-  PyObject *saved_results;
+  PyObject *t;
+  PyObject *values;
 };
 
 
-/* "splikes\splikes.pxd":36
+/* "splikes/splikes.pxd":39
  *     cpdef update(self,double t)
  * 
- * cdef class simulation:             # <<<<<<<<<<<<<<
+ * cdef class simulation(group):             # <<<<<<<<<<<<<<
  *     cdef public double dt
  *     cdef public double total_time
  */
 struct __pyx_obj_7splikes_7splikes_simulation {
-  PyObject_HEAD
+  struct __pyx_obj_7splikes_7splikes_group __pyx_base;
   struct __pyx_vtabstruct_7splikes_7splikes_simulation *__pyx_vtab;
   double dt;
   double total_time;
@@ -758,15 +774,15 @@ struct __pyx_obj_7splikes_7splikes_simulation {
 };
 
 
-/* "splikes\splikes.pxd":45
+/* "splikes/splikes.pxd":48
  *     cpdef _reset(self)
  * 
- * cdef class neuron:             # <<<<<<<<<<<<<<
+ * cdef class neuron(group):             # <<<<<<<<<<<<<<
  *     cdef public int verbose
  *     cdef public int is_spike
  */
 struct __pyx_obj_7splikes_7splikes_neuron {
-  PyObject_HEAD
+  struct __pyx_obj_7splikes_7splikes_group __pyx_base;
   struct __pyx_vtabstruct_7splikes_7splikes_neuron *__pyx_vtab;
   int verbose;
   int is_spike;
@@ -787,15 +803,15 @@ struct __pyx_obj_7splikes_7splikes_neuron {
 };
 
 
-/* "splikes\splikes.pxd":62
+/* "splikes/splikes.pxd":65
  * 
  * 
- * cdef class connection:             # <<<<<<<<<<<<<<
+ * cdef class connection(group):             # <<<<<<<<<<<<<<
  *     cdef public np.ndarray weights
  *     cdef public np.ndarray initial_weights
  */
 struct __pyx_obj_7splikes_7splikes_connection {
-  PyObject_HEAD
+  struct __pyx_obj_7splikes_7splikes_group __pyx_base;
   struct __pyx_vtabstruct_7splikes_7splikes_connection *__pyx_vtab;
   PyArrayObject *weights;
   PyArrayObject *initial_weights;
@@ -814,7 +830,7 @@ struct __pyx_obj_7splikes_7splikes_connection {
 };
 
 
-/* "splikes\neurons\isi_distributions.pxd":9
+/* "splikes/neurons/isi_distributions.pxd":9
  *     double pow(double,double)
  * 
  * cdef class distribution:             # <<<<<<<<<<<<<<
@@ -827,7 +843,7 @@ struct __pyx_obj_7splikes_7neurons_17isi_distributions_distribution {
 };
 
 
-/* "splikes\neurons\isi_distributions.pxd":17
+/* "splikes/neurons/isi_distributions.pxd":17
  *     return 0.5*(1+erf(x/sqrt(2)))
  * 
  * cdef class invgauss(distribution):             # <<<<<<<<<<<<<<
@@ -842,7 +858,7 @@ struct __pyx_obj_7splikes_7neurons_17isi_distributions_invgauss {
 };
 
 
-/* "splikes\neurons\isi_distributions.pxd":20
+/* "splikes/neurons/isi_distributions.pxd":20
  *     cdef public double mu,_lambda,pi
  * 
  * cdef class exponential(distribution):             # <<<<<<<<<<<<<<
@@ -855,7 +871,7 @@ struct __pyx_obj_7splikes_7neurons_17isi_distributions_exponential {
 };
 
 
-/* "splikes\neurons\isi_distributions.pxd":23
+/* "splikes/neurons/isi_distributions.pxd":23
  *     cdef public double _lambda
  * 
  * cdef class normal(distribution):             # <<<<<<<<<<<<<<
@@ -870,7 +886,7 @@ struct __pyx_obj_7splikes_7neurons_17isi_distributions_normal {
 };
 
 
-/* "splikes\neurons\isi_distributions.pxd":26
+/* "splikes/neurons/isi_distributions.pxd":26
  *     cdef public double mu,sigma,pi
  * 
  * cdef class uniform(distribution):             # <<<<<<<<<<<<<<
@@ -885,7 +901,7 @@ struct __pyx_obj_7splikes_7neurons_17isi_distributions_uniform {
 };
 
 
-/* "splikes\neurons\srm0.pyx":9
+/* "splikes/neurons/srm0.pyx":9
  * from splikes.neurons.isi_distributions cimport *
  * 
  * cdef class srm0(neuron):             # <<<<<<<<<<<<<<
@@ -906,7 +922,7 @@ struct __pyx_obj_7splikes_7neurons_4srm0_srm0 {
 };
 
 
-/* "splikes\neurons\srm0.pyx":94
+/* "splikes/neurons/srm0.pyx":94
  * 
  * 
  * cdef class srm0_isi(srm0):             # <<<<<<<<<<<<<<
@@ -921,10 +937,10 @@ struct __pyx_obj_7splikes_7neurons_4srm0_srm0_isi {
 
 
 
-/* "splikes\splikes.pxd":29
+/* "splikes/splikes.pxd":32
  * 
  * 
- * cdef class monitor:             # <<<<<<<<<<<<<<
+ * cdef class monitor(group):             # <<<<<<<<<<<<<<
  *     cdef public double time_to_next_save
  *     cdef public double save_interval
  */
@@ -935,10 +951,10 @@ struct __pyx_vtabstruct_7splikes_7splikes_monitor {
 static struct __pyx_vtabstruct_7splikes_7splikes_monitor *__pyx_vtabptr_7splikes_7splikes_monitor;
 
 
-/* "splikes\splikes.pxd":36
+/* "splikes/splikes.pxd":39
  *     cpdef update(self,double t)
  * 
- * cdef class simulation:             # <<<<<<<<<<<<<<
+ * cdef class simulation(group):             # <<<<<<<<<<<<<<
  *     cdef public double dt
  *     cdef public double total_time
  */
@@ -949,10 +965,10 @@ struct __pyx_vtabstruct_7splikes_7splikes_simulation {
 static struct __pyx_vtabstruct_7splikes_7splikes_simulation *__pyx_vtabptr_7splikes_7splikes_simulation;
 
 
-/* "splikes\splikes.pxd":45
+/* "splikes/splikes.pxd":48
  *     cpdef _reset(self)
  * 
- * cdef class neuron:             # <<<<<<<<<<<<<<
+ * cdef class neuron(group):             # <<<<<<<<<<<<<<
  *     cdef public int verbose
  *     cdef public int is_spike
  */
@@ -964,10 +980,10 @@ struct __pyx_vtabstruct_7splikes_7splikes_neuron {
 static struct __pyx_vtabstruct_7splikes_7splikes_neuron *__pyx_vtabptr_7splikes_7splikes_neuron;
 
 
-/* "splikes\splikes.pxd":62
+/* "splikes/splikes.pxd":65
  * 
  * 
- * cdef class connection:             # <<<<<<<<<<<<<<
+ * cdef class connection(group):             # <<<<<<<<<<<<<<
  *     cdef public np.ndarray weights
  *     cdef public np.ndarray initial_weights
  */
@@ -980,7 +996,7 @@ struct __pyx_vtabstruct_7splikes_7splikes_connection {
 static struct __pyx_vtabstruct_7splikes_7splikes_connection *__pyx_vtabptr_7splikes_7splikes_connection;
 
 
-/* "splikes\neurons\isi_distributions.pxd":9
+/* "splikes/neurons/isi_distributions.pxd":9
  *     double pow(double,double)
  * 
  * cdef class distribution:             # <<<<<<<<<<<<<<
@@ -996,7 +1012,7 @@ struct __pyx_vtabstruct_7splikes_7neurons_17isi_distributions_distribution {
 static struct __pyx_vtabstruct_7splikes_7neurons_17isi_distributions_distribution *__pyx_vtabptr_7splikes_7neurons_17isi_distributions_distribution;
 
 
-/* "splikes\neurons\isi_distributions.pxd":17
+/* "splikes/neurons/isi_distributions.pxd":17
  *     return 0.5*(1+erf(x/sqrt(2)))
  * 
  * cdef class invgauss(distribution):             # <<<<<<<<<<<<<<
@@ -1010,7 +1026,7 @@ struct __pyx_vtabstruct_7splikes_7neurons_17isi_distributions_invgauss {
 static struct __pyx_vtabstruct_7splikes_7neurons_17isi_distributions_invgauss *__pyx_vtabptr_7splikes_7neurons_17isi_distributions_invgauss;
 
 
-/* "splikes\neurons\isi_distributions.pxd":20
+/* "splikes/neurons/isi_distributions.pxd":20
  *     cdef public double mu,_lambda,pi
  * 
  * cdef class exponential(distribution):             # <<<<<<<<<<<<<<
@@ -1024,7 +1040,7 @@ struct __pyx_vtabstruct_7splikes_7neurons_17isi_distributions_exponential {
 static struct __pyx_vtabstruct_7splikes_7neurons_17isi_distributions_exponential *__pyx_vtabptr_7splikes_7neurons_17isi_distributions_exponential;
 
 
-/* "splikes\neurons\isi_distributions.pxd":23
+/* "splikes/neurons/isi_distributions.pxd":23
  *     cdef public double _lambda
  * 
  * cdef class normal(distribution):             # <<<<<<<<<<<<<<
@@ -1038,7 +1054,7 @@ struct __pyx_vtabstruct_7splikes_7neurons_17isi_distributions_normal {
 static struct __pyx_vtabstruct_7splikes_7neurons_17isi_distributions_normal *__pyx_vtabptr_7splikes_7neurons_17isi_distributions_normal;
 
 
-/* "splikes\neurons\isi_distributions.pxd":26
+/* "splikes/neurons/isi_distributions.pxd":26
  *     cdef public double mu,sigma,pi
  * 
  * cdef class uniform(distribution):             # <<<<<<<<<<<<<<
@@ -1052,7 +1068,7 @@ struct __pyx_vtabstruct_7splikes_7neurons_17isi_distributions_uniform {
 static struct __pyx_vtabstruct_7splikes_7neurons_17isi_distributions_uniform *__pyx_vtabptr_7splikes_7neurons_17isi_distributions_uniform;
 
 
-/* "splikes\neurons\srm0.pyx":9
+/* "splikes/neurons/srm0.pyx":9
  * from splikes.neurons.isi_distributions cimport *
  * 
  * cdef class srm0(neuron):             # <<<<<<<<<<<<<<
@@ -1066,7 +1082,7 @@ struct __pyx_vtabstruct_7splikes_7neurons_4srm0_srm0 {
 static struct __pyx_vtabstruct_7splikes_7neurons_4srm0_srm0 *__pyx_vtabptr_7splikes_7neurons_4srm0_srm0;
 
 
-/* "splikes\neurons\srm0.pyx":94
+/* "splikes/neurons/srm0.pyx":94
  * 
  * 
  * cdef class srm0_isi(srm0):             # <<<<<<<<<<<<<<
@@ -1451,6 +1467,7 @@ static PyTypeObject *__pyx_ptype_5numpy_ufunc = 0;
 static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, char *, char *, int *); /*proto*/
 
 /* Module declarations from 'splikes.splikes' */
+static PyTypeObject *__pyx_ptype_7splikes_7splikes_group = 0;
 static PyTypeObject *__pyx_ptype_7splikes_7splikes_monitor = 0;
 static PyTypeObject *__pyx_ptype_7splikes_7splikes_simulation = 0;
 static PyTypeObject *__pyx_ptype_7splikes_7splikes_neuron = 0;
@@ -1602,7 +1619,7 @@ static PyObject *__pyx_tuple__8;
 static PyObject *__pyx_tuple__9;
 static PyObject *__pyx_tuple__10;
 
-/* "splikes\neurons\srm0.pyx":14
+/* "splikes/neurons/srm0.pyx":14
  *     cdef public int smoothed
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -1658,7 +1675,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0__reset(struct __pyx_obj_7
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes\neurons\srm0.pyx":15
+  /* "splikes/neurons/srm0.pyx":15
  * 
  *     cpdef _reset(self):
  *         self.u=np.zeros(self.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -1698,7 +1715,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0__reset(struct __pyx_obj_7
   __pyx_v_self->u = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "splikes\neurons\srm0.pyx":16
+  /* "splikes/neurons/srm0.pyx":16
  *     cpdef _reset(self):
  *         self.u=np.zeros(self.N,dtype=np.float)
  *         self.v=np.zeros(self.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -1738,7 +1755,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0__reset(struct __pyx_obj_7
   __pyx_v_self->v = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "splikes\neurons\srm0.pyx":17
+  /* "splikes/neurons/srm0.pyx":17
  *         self.u=np.zeros(self.N,dtype=np.float)
  *         self.v=np.zeros(self.N,dtype=np.float)
  *         self.beta=np.zeros(self.N,dtype=np.float)             # <<<<<<<<<<<<<<
@@ -1778,7 +1795,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0__reset(struct __pyx_obj_7
   __pyx_v_self->beta = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "splikes\neurons\srm0.pyx":18
+  /* "splikes/neurons/srm0.pyx":18
  *         self.v=np.zeros(self.N,dtype=np.float)
  *         self.beta=np.zeros(self.N,dtype=np.float)
  *         neuron._reset(self)             # <<<<<<<<<<<<<<
@@ -1789,7 +1806,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0__reset(struct __pyx_obj_7
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "splikes\neurons\srm0.pyx":14
+  /* "splikes/neurons/srm0.pyx":14
  *     cdef public int smoothed
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -1853,7 +1870,7 @@ static PyObject *__pyx_pf_7splikes_7neurons_4srm0_4srm0__reset(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "splikes\neurons\srm0.pyx":20
+/* "splikes/neurons/srm0.pyx":20
  *         neuron._reset(self)
  * 
  *     def __init__(self,N):             # <<<<<<<<<<<<<<
@@ -1926,7 +1943,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_4srm0_2__init__(struct __pyx_obj_7sp
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "splikes\neurons\srm0.pyx":21
+  /* "splikes/neurons/srm0.pyx":21
  * 
  *     def __init__(self,N):
  *         neuron.__init__(self,N)             # <<<<<<<<<<<<<<
@@ -1964,7 +1981,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_4srm0_2__init__(struct __pyx_obj_7sp
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes\neurons\srm0.pyx":22
+  /* "splikes/neurons/srm0.pyx":22
  *     def __init__(self,N):
  *         neuron.__init__(self,N)
  *         self.tau=0.1    #in s, membrane time constant (EPSP timescale)             # <<<<<<<<<<<<<<
@@ -1973,7 +1990,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_4srm0_2__init__(struct __pyx_obj_7sp
  */
   __pyx_v_self->tau = 0.1;
 
-  /* "splikes\neurons\srm0.pyx":23
+  /* "splikes/neurons/srm0.pyx":23
  *         neuron.__init__(self,N)
  *         self.tau=0.1    #in s, membrane time constant (EPSP timescale)
  *         self.a=1.0  # baseline firing rate             # <<<<<<<<<<<<<<
@@ -1982,7 +1999,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_4srm0_2__init__(struct __pyx_obj_7sp
  */
   __pyx_v_self->a = 1.0;
 
-  /* "splikes\neurons\srm0.pyx":24
+  /* "splikes/neurons/srm0.pyx":24
  *         self.tau=0.1    #in s, membrane time constant (EPSP timescale)
  *         self.a=1.0  # baseline firing rate
  *         self.rate_slope=1.0             # <<<<<<<<<<<<<<
@@ -1991,7 +2008,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_4srm0_2__init__(struct __pyx_obj_7sp
  */
   __pyx_v_self->rate_slope = 1.0;
 
-  /* "splikes\neurons\srm0.pyx":25
+  /* "splikes/neurons/srm0.pyx":25
  *         self.a=1.0  # baseline firing rate
  *         self.rate_slope=1.0
  *         self.rate_offset=0.0             # <<<<<<<<<<<<<<
@@ -2000,7 +2017,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_4srm0_2__init__(struct __pyx_obj_7sp
  */
   __pyx_v_self->rate_offset = 0.0;
 
-  /* "splikes\neurons\srm0.pyx":26
+  /* "splikes/neurons/srm0.pyx":26
  *         self.rate_slope=1.0
  *         self.rate_offset=0.0
  *         self.smoothed=False             # <<<<<<<<<<<<<<
@@ -2009,7 +2026,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_4srm0_2__init__(struct __pyx_obj_7sp
  */
   __pyx_v_self->smoothed = 0;
 
-  /* "splikes\neurons\srm0.pyx":27
+  /* "splikes/neurons/srm0.pyx":27
  *         self.rate_offset=0.0
  *         self.smoothed=False
  *         self.tau_beta=-1             # <<<<<<<<<<<<<<
@@ -2018,7 +2035,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_4srm0_2__init__(struct __pyx_obj_7sp
  */
   __pyx_v_self->tau_beta = -1.0;
 
-  /* "splikes\neurons\srm0.pyx":28
+  /* "splikes/neurons/srm0.pyx":28
  *         self.smoothed=False
  *         self.tau_beta=-1
  *         self.name='SRM0'             # <<<<<<<<<<<<<<
@@ -2031,7 +2048,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_4srm0_2__init__(struct __pyx_obj_7sp
   __Pyx_DECREF(__pyx_v_self->__pyx_base.name);
   __pyx_v_self->__pyx_base.name = __pyx_n_s_SRM0;
 
-  /* "splikes\neurons\srm0.pyx":29
+  /* "splikes/neurons/srm0.pyx":29
  *         self.tau_beta=-1
  *         self.name='SRM0'
  *         self._reset()             # <<<<<<<<<<<<<<
@@ -2042,7 +2059,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_4srm0_2__init__(struct __pyx_obj_7sp
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes\neurons\srm0.pyx":20
+  /* "splikes/neurons/srm0.pyx":20
  *         neuron._reset(self)
  * 
  *     def __init__(self,N):             # <<<<<<<<<<<<<<
@@ -2065,7 +2082,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_4srm0_2__init__(struct __pyx_obj_7sp
   return __pyx_r;
 }
 
-/* "splikes\neurons\srm0.pyx":33
+/* "splikes/neurons/srm0.pyx":33
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -2156,7 +2173,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes\neurons\srm0.pyx":38
+  /* "splikes/neurons/srm0.pyx":38
  *         cdef double x
  *         cdef neuron pre
  *         cdef double *beta=<double *>self.beta.data             # <<<<<<<<<<<<<<
@@ -2165,7 +2182,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
  */
   __pyx_v_beta = ((double *)__pyx_v_self->beta->data);
 
-  /* "splikes\neurons\srm0.pyx":39
+  /* "splikes/neurons/srm0.pyx":39
  *         cdef neuron pre
  *         cdef double *beta=<double *>self.beta.data
  *         cdef double *u=<double *>self.u.data             # <<<<<<<<<<<<<<
@@ -2174,7 +2191,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
  */
   __pyx_v_u = ((double *)__pyx_v_self->u->data);
 
-  /* "splikes\neurons\srm0.pyx":40
+  /* "splikes/neurons/srm0.pyx":40
  *         cdef double *beta=<double *>self.beta.data
  *         cdef double *u=<double *>self.u.data
  *         cdef double *v=<double *>self.v.data             # <<<<<<<<<<<<<<
@@ -2183,7 +2200,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
  */
   __pyx_v_v = ((double *)__pyx_v_self->v->data);
 
-  /* "splikes\neurons\srm0.pyx":41
+  /* "splikes/neurons/srm0.pyx":41
  *         cdef double *u=<double *>self.u.data
  *         cdef double *v=<double *>self.v.data
  *         cdef double *rate=<double *>self.rate.data             # <<<<<<<<<<<<<<
@@ -2192,7 +2209,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
  */
   __pyx_v_rate = ((double *)__pyx_v_self->__pyx_base.rate->data);
 
-  /* "splikes\neurons\srm0.pyx":43
+  /* "splikes/neurons/srm0.pyx":43
  *         cdef double *rate=<double *>self.rate.data
  * 
  *         use_beta=self.tau_beta>0             # <<<<<<<<<<<<<<
@@ -2204,7 +2221,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
   __pyx_v_use_beta = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "splikes\neurons\srm0.pyx":47
+  /* "splikes/neurons/srm0.pyx":47
  * 
  *         # quantities decay exponentially
  *         x=-sim.dt/self.tau             # <<<<<<<<<<<<<<
@@ -2213,7 +2230,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
  */
   __pyx_v_x = ((-__pyx_v_sim->dt) / __pyx_v_self->tau);
 
-  /* "splikes\neurons\srm0.pyx":48
+  /* "splikes/neurons/srm0.pyx":48
  *         # quantities decay exponentially
  *         x=-sim.dt/self.tau
  *         if self.smoothed:             # <<<<<<<<<<<<<<
@@ -2223,7 +2240,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
   __pyx_t_8 = (__pyx_v_self->smoothed != 0);
   if (__pyx_t_8) {
 
-    /* "splikes\neurons\srm0.pyx":49
+    /* "splikes/neurons/srm0.pyx":49
  *         x=-sim.dt/self.tau
  *         if self.smoothed:
  *             for i in range(self.N):             # <<<<<<<<<<<<<<
@@ -2234,7 +2251,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
       __pyx_v_i = __pyx_t_10;
 
-      /* "splikes\neurons\srm0.pyx":50
+      /* "splikes/neurons/srm0.pyx":50
  *         if self.smoothed:
  *             for i in range(self.N):
  *                 v[i]*=exp(x)             # <<<<<<<<<<<<<<
@@ -2244,7 +2261,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
       __pyx_t_11 = __pyx_v_i;
       (__pyx_v_v[__pyx_t_11]) = ((__pyx_v_v[__pyx_t_11]) * exp(__pyx_v_x));
 
-      /* "splikes\neurons\srm0.pyx":51
+      /* "splikes/neurons/srm0.pyx":51
  *             for i in range(self.N):
  *                 v[i]*=exp(x)
  *                 u[i]-=(v[i]-u[i])*x  # x is negative, so do -=             # <<<<<<<<<<<<<<
@@ -2258,7 +2275,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
   }
   /*else*/ {
 
-    /* "splikes\neurons\srm0.pyx":53
+    /* "splikes/neurons/srm0.pyx":53
  *                 u[i]-=(v[i]-u[i])*x  # x is negative, so do -=
  *         else:
  *             for i in range(self.N):             # <<<<<<<<<<<<<<
@@ -2269,7 +2286,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
       __pyx_v_i = __pyx_t_10;
 
-      /* "splikes\neurons\srm0.pyx":54
+      /* "splikes/neurons/srm0.pyx":54
  *         else:
  *             for i in range(self.N):
  *                 u[i]*=exp(x)             # <<<<<<<<<<<<<<
@@ -2282,7 +2299,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
   }
   __pyx_L3:;
 
-  /* "splikes\neurons\srm0.pyx":59
+  /* "splikes/neurons/srm0.pyx":59
  *         cdef int *spiking   #=<int *>pre.spiking.data
  * 
  *         for c in self.connections_pre:             # <<<<<<<<<<<<<<
@@ -2330,7 +2347,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
     __Pyx_XDECREF_SET(__pyx_v_c, ((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "splikes\neurons\srm0.pyx":60
+    /* "splikes/neurons/srm0.pyx":60
  * 
  *         for c in self.connections_pre:
  *             pre=c.pre             # <<<<<<<<<<<<<<
@@ -2342,7 +2359,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
     __Pyx_XDECREF_SET(__pyx_v_pre, ((struct __pyx_obj_7splikes_7splikes_neuron *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "splikes\neurons\srm0.pyx":61
+    /* "splikes/neurons/srm0.pyx":61
  *         for c in self.connections_pre:
  *             pre=c.pre
  *             W=c.W             # <<<<<<<<<<<<<<
@@ -2352,7 +2369,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
     __pyx_t_13 = __pyx_v_c->W;
     __pyx_v_W = __pyx_t_13;
 
-    /* "splikes\neurons\srm0.pyx":62
+    /* "splikes/neurons/srm0.pyx":62
  *             pre=c.pre
  *             W=c.W
  *             spiking=<int *>pre.spiking.data             # <<<<<<<<<<<<<<
@@ -2361,7 +2378,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
  */
     __pyx_v_spiking = ((int *)__pyx_v_pre->spiking->data);
 
-    /* "splikes\neurons\srm0.pyx":64
+    /* "splikes/neurons/srm0.pyx":64
  *             spiking=<int *>pre.spiking.data
  * 
  *             if pre.is_spike:             # <<<<<<<<<<<<<<
@@ -2371,7 +2388,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
     __pyx_t_8 = (__pyx_v_pre->is_spike != 0);
     if (__pyx_t_8) {
 
-      /* "splikes\neurons\srm0.pyx":65
+      /* "splikes/neurons/srm0.pyx":65
  * 
  *             if pre.is_spike:
  *                 for j in range(pre.N):             # <<<<<<<<<<<<<<
@@ -2382,7 +2399,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
       for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
         __pyx_v_j = __pyx_t_10;
 
-        /* "splikes\neurons\srm0.pyx":66
+        /* "splikes/neurons/srm0.pyx":66
  *             if pre.is_spike:
  *                 for j in range(pre.N):
  *                     if spiking[j]:             # <<<<<<<<<<<<<<
@@ -2392,7 +2409,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
         __pyx_t_8 = ((__pyx_v_spiking[__pyx_v_j]) != 0);
         if (__pyx_t_8) {
 
-          /* "splikes\neurons\srm0.pyx":67
+          /* "splikes/neurons/srm0.pyx":67
  *                 for j in range(pre.N):
  *                     if spiking[j]:
  *                         if self.smoothed:             # <<<<<<<<<<<<<<
@@ -2402,7 +2419,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
           __pyx_t_8 = (__pyx_v_self->smoothed != 0);
           if (__pyx_t_8) {
 
-            /* "splikes\neurons\srm0.pyx":68
+            /* "splikes/neurons/srm0.pyx":68
  *                     if spiking[j]:
  *                         if self.smoothed:
  *                             for i in range(self.N):             # <<<<<<<<<<<<<<
@@ -2413,7 +2430,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
             for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_11; __pyx_t_14+=1) {
               __pyx_v_i = __pyx_t_14;
 
-              /* "splikes\neurons\srm0.pyx":69
+              /* "splikes/neurons/srm0.pyx":69
  *                         if self.smoothed:
  *                             for i in range(self.N):
  *                                 v[i]+=self.a*W[i*pre.N+j]             # <<<<<<<<<<<<<<
@@ -2427,7 +2444,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
           }
           /*else*/ {
 
-            /* "splikes\neurons\srm0.pyx":71
+            /* "splikes/neurons/srm0.pyx":71
  *                                 v[i]+=self.a*W[i*pre.N+j]
  *                         else:
  *                             for i in range(self.N):             # <<<<<<<<<<<<<<
@@ -2438,7 +2455,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
             for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_11; __pyx_t_14+=1) {
               __pyx_v_i = __pyx_t_14;
 
-              /* "splikes\neurons\srm0.pyx":72
+              /* "splikes/neurons/srm0.pyx":72
  *                         else:
  *                             for i in range(self.N):
  *                                 u[i]+=self.a*W[i*pre.N+j]             # <<<<<<<<<<<<<<
@@ -2458,7 +2475,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
     }
     __pyx_L10:;
 
-    /* "splikes\neurons\srm0.pyx":59
+    /* "splikes/neurons/srm0.pyx":59
  *         cdef int *spiking   #=<int *>pre.spiking.data
  * 
  *         for c in self.connections_pre:             # <<<<<<<<<<<<<<
@@ -2468,7 +2485,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes\neurons\srm0.pyx":74
+  /* "splikes/neurons/srm0.pyx":74
  *                                 u[i]+=self.a*W[i*pre.N+j]
  * 
  *         if use_beta:             # <<<<<<<<<<<<<<
@@ -2478,7 +2495,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
   __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_v_use_beta); if (unlikely(__pyx_t_8 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 74; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_8) {
 
-    /* "splikes\neurons\srm0.pyx":75
+    /* "splikes/neurons/srm0.pyx":75
  * 
  *         if use_beta:
  *             for i in range(self.N):             # <<<<<<<<<<<<<<
@@ -2489,7 +2506,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
       __pyx_v_i = __pyx_t_10;
 
-      /* "splikes\neurons\srm0.pyx":76
+      /* "splikes/neurons/srm0.pyx":76
  *         if use_beta:
  *             for i in range(self.N):
  *                 beta[i]+=sim.dt*(1.0/self.tau_beta)*(u[i]-beta[i])             # <<<<<<<<<<<<<<
@@ -2503,7 +2520,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
   }
   __pyx_L19:;
 
-  /* "splikes\neurons\srm0.pyx":79
+  /* "splikes/neurons/srm0.pyx":79
  * 
  * 
  *         spiking=<int *>self.spiking.data             # <<<<<<<<<<<<<<
@@ -2512,7 +2529,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
  */
   __pyx_v_spiking = ((int *)__pyx_v_self->__pyx_base.spiking->data);
 
-  /* "splikes\neurons\srm0.pyx":80
+  /* "splikes/neurons/srm0.pyx":80
  * 
  *         spiking=<int *>self.spiking.data
  *         self.is_spike=0             # <<<<<<<<<<<<<<
@@ -2521,7 +2538,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
  */
   __pyx_v_self->__pyx_base.is_spike = 0;
 
-  /* "splikes\neurons\srm0.pyx":81
+  /* "splikes/neurons/srm0.pyx":81
  *         spiking=<int *>self.spiking.data
  *         self.is_spike=0
  *         for i in range(self.N):             # <<<<<<<<<<<<<<
@@ -2532,7 +2549,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
     __pyx_v_i = __pyx_t_10;
 
-    /* "splikes\neurons\srm0.pyx":82
+    /* "splikes/neurons/srm0.pyx":82
  *         self.is_spike=0
  *         for i in range(self.N):
  *             rate[i]=self.rate_offset+self.rate_slope*(u[i]-beta[i])             # <<<<<<<<<<<<<<
@@ -2541,7 +2558,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
  */
     (__pyx_v_rate[__pyx_v_i]) = (__pyx_v_self->rate_offset + (__pyx_v_self->rate_slope * ((__pyx_v_u[__pyx_v_i]) - (__pyx_v_beta[__pyx_v_i]))));
 
-    /* "splikes\neurons\srm0.pyx":84
+    /* "splikes/neurons/srm0.pyx":84
  *             rate[i]=self.rate_offset+self.rate_slope*(u[i]-beta[i])
  * 
  *             if randu()<(rate[i]*sim.dt):             # <<<<<<<<<<<<<<
@@ -2551,7 +2568,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
     __pyx_t_8 = ((__pyx_f_7splikes_7splikes_randu() < ((__pyx_v_rate[__pyx_v_i]) * __pyx_v_sim->dt)) != 0);
     if (__pyx_t_8) {
 
-      /* "splikes\neurons\srm0.pyx":85
+      /* "splikes/neurons/srm0.pyx":85
  * 
  *             if randu()<(rate[i]*sim.dt):
  *                 spiking[i]=1             # <<<<<<<<<<<<<<
@@ -2560,7 +2577,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
  */
       (__pyx_v_spiking[__pyx_v_i]) = 1;
 
-      /* "splikes\neurons\srm0.pyx":86
+      /* "splikes/neurons/srm0.pyx":86
  *             if randu()<(rate[i]*sim.dt):
  *                 spiking[i]=1
  *                 self.is_spike=1             # <<<<<<<<<<<<<<
@@ -2569,7 +2586,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
  */
       __pyx_v_self->__pyx_base.is_spike = 1;
 
-      /* "splikes\neurons\srm0.pyx":87
+      /* "splikes/neurons/srm0.pyx":87
  *                 spiking[i]=1
  *                 self.is_spike=1
  *                 self.post_count+=1             # <<<<<<<<<<<<<<
@@ -2578,7 +2595,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
  */
       __pyx_v_self->__pyx_base.post_count = (__pyx_v_self->__pyx_base.post_count + 1);
 
-      /* "splikes\neurons\srm0.pyx":88
+      /* "splikes/neurons/srm0.pyx":88
  *                 self.is_spike=1
  *                 self.post_count+=1
  *                 if self.save_spikes_begin<=t<=self.save_spikes_end:             # <<<<<<<<<<<<<<
@@ -2592,7 +2609,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
       __pyx_t_16 = (__pyx_t_8 != 0);
       if (__pyx_t_16) {
 
-        /* "splikes\neurons\srm0.pyx":89
+        /* "splikes/neurons/srm0.pyx":89
  *                 self.post_count+=1
  *                 if self.save_spikes_begin<=t<=self.save_spikes_end:
  *                     self.saved_spikes.append( (t,i) )             # <<<<<<<<<<<<<<
@@ -2620,7 +2637,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
     }
     /*else*/ {
 
-      /* "splikes\neurons\srm0.pyx":91
+      /* "splikes/neurons/srm0.pyx":91
  *                     self.saved_spikes.append( (t,i) )
  *             else:
  *                 spiking[i]=0             # <<<<<<<<<<<<<<
@@ -2632,7 +2649,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_4srm0_update(struct __pyx_obj_7
     __pyx_L24:;
   }
 
-  /* "splikes\neurons\srm0.pyx":33
+  /* "splikes/neurons/srm0.pyx":33
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -2753,7 +2770,7 @@ static PyObject *__pyx_pf_7splikes_7neurons_4srm0_4srm0_4update(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "splikes\neurons\srm0.pyx":10
+/* "splikes/neurons/srm0.pyx":10
  * 
  * cdef class srm0(neuron):
  *     cdef public double tau,a,rate_slope,rate_offset,tau_beta             # <<<<<<<<<<<<<<
@@ -3131,7 +3148,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_4srm0_8tau_beta_2__set__(struct __py
   return __pyx_r;
 }
 
-/* "splikes\neurons\srm0.pyx":11
+/* "splikes/neurons/srm0.pyx":11
  * cdef class srm0(neuron):
  *     cdef public double tau,a,rate_slope,rate_offset,tau_beta
  *     cdef public np.ndarray u,v,beta             # <<<<<<<<<<<<<<
@@ -3439,7 +3456,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_4srm0_4beta_4__del__(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "splikes\neurons\srm0.pyx":12
+/* "splikes/neurons/srm0.pyx":12
  *     cdef public double tau,a,rate_slope,rate_offset,tau_beta
  *     cdef public np.ndarray u,v,beta
  *     cdef public int smoothed             # <<<<<<<<<<<<<<
@@ -3521,7 +3538,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_4srm0_8smoothed_2__set__(struct __py
   return __pyx_r;
 }
 
-/* "splikes\neurons\srm0.pyx":98
+/* "splikes/neurons/srm0.pyx":98
  *     cdef public int need_to_reset_last_spike_time
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -3576,7 +3593,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi__reset(struct __pyx_o
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes\neurons\srm0.pyx":99
+  /* "splikes/neurons/srm0.pyx":99
  * 
  *     cpdef _reset(self):
  *         srm0._reset(self)             # <<<<<<<<<<<<<<
@@ -3587,7 +3604,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi__reset(struct __pyx_o
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes\neurons\srm0.pyx":100
+  /* "splikes/neurons/srm0.pyx":100
  *     cpdef _reset(self):
  *         srm0._reset(self)
  *         self.need_to_reset_last_spike_time=True             # <<<<<<<<<<<<<<
@@ -3596,7 +3613,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi__reset(struct __pyx_o
  */
   __pyx_v_self->need_to_reset_last_spike_time = 1;
 
-  /* "splikes\neurons\srm0.pyx":98
+  /* "splikes/neurons/srm0.pyx":98
  *     cdef public int need_to_reset_last_spike_time
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -3659,7 +3676,7 @@ static PyObject *__pyx_pf_7splikes_7neurons_4srm0_8srm0_isi__reset(struct __pyx_
   return __pyx_r;
 }
 
-/* "splikes\neurons\srm0.pyx":102
+/* "splikes/neurons/srm0.pyx":102
  *         self.need_to_reset_last_spike_time=True
  * 
  *     def __init__(self,N,distribution ISI):             # <<<<<<<<<<<<<<
@@ -3747,7 +3764,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_8srm0_isi_2__init__(struct __pyx_obj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "splikes\neurons\srm0.pyx":103
+  /* "splikes/neurons/srm0.pyx":103
  * 
  *     def __init__(self,N,distribution ISI):
  *         srm0.__init__(self,N)             # <<<<<<<<<<<<<<
@@ -3785,7 +3802,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_8srm0_isi_2__init__(struct __pyx_obj
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes\neurons\srm0.pyx":104
+  /* "splikes/neurons/srm0.pyx":104
  *     def __init__(self,N,distribution ISI):
  *         srm0.__init__(self,N)
  *         self.ISI=ISI             # <<<<<<<<<<<<<<
@@ -3798,7 +3815,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_8srm0_isi_2__init__(struct __pyx_obj
   __Pyx_DECREF(((PyObject *)__pyx_v_self->ISI));
   __pyx_v_self->ISI = __pyx_v_ISI;
 
-  /* "splikes\neurons\srm0.pyx":105
+  /* "splikes/neurons/srm0.pyx":105
  *         srm0.__init__(self,N)
  *         self.ISI=ISI
  *         s=str(ISI)             # <<<<<<<<<<<<<<
@@ -3816,7 +3833,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_8srm0_isi_2__init__(struct __pyx_obj
   __pyx_v_s = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "splikes\neurons\srm0.pyx":106
+  /* "splikes/neurons/srm0.pyx":106
  *         self.ISI=ISI
  *         s=str(ISI)
  *         s=s.split(' ')[0].split('.')[-1]             # <<<<<<<<<<<<<<
@@ -3843,7 +3860,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_8srm0_isi_2__init__(struct __pyx_obj
   __Pyx_DECREF_SET(__pyx_v_s, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes\neurons\srm0.pyx":108
+  /* "splikes/neurons/srm0.pyx":108
  *         s=s.split(' ')[0].split('.')[-1]
  * 
  *         self.name='SRM0 ISI %s' % s             # <<<<<<<<<<<<<<
@@ -3858,7 +3875,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_8srm0_isi_2__init__(struct __pyx_obj
   __pyx_v_self->__pyx_base.__pyx_base.name = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "splikes\neurons\srm0.pyx":110
+  /* "splikes/neurons/srm0.pyx":110
  *         self.name='SRM0 ISI %s' % s
  * 
  *         self._reset()             # <<<<<<<<<<<<<<
@@ -3869,7 +3886,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_8srm0_isi_2__init__(struct __pyx_obj
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes\neurons\srm0.pyx":102
+  /* "splikes/neurons/srm0.pyx":102
  *         self.need_to_reset_last_spike_time=True
  * 
  *     def __init__(self,N,distribution ISI):             # <<<<<<<<<<<<<<
@@ -3893,7 +3910,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_8srm0_isi_2__init__(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "splikes\neurons\srm0.pyx":114
+/* "splikes/neurons/srm0.pyx":114
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -3987,7 +4004,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes\neurons\srm0.pyx":119
+  /* "splikes/neurons/srm0.pyx":119
  *         cdef double x,cdf,pdf,_lambda
  *         cdef neuron pre
  *         cdef double *u=<double *>self.u.data             # <<<<<<<<<<<<<<
@@ -3996,7 +4013,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
   __pyx_v_u = ((double *)__pyx_v_self->__pyx_base.u->data);
 
-  /* "splikes\neurons\srm0.pyx":120
+  /* "splikes/neurons/srm0.pyx":120
  *         cdef neuron pre
  *         cdef double *u=<double *>self.u.data
  *         cdef double *v=<double *>self.v.data             # <<<<<<<<<<<<<<
@@ -4005,7 +4022,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
   __pyx_v_v = ((double *)__pyx_v_self->__pyx_base.v->data);
 
-  /* "splikes\neurons\srm0.pyx":121
+  /* "splikes/neurons/srm0.pyx":121
  *         cdef double *u=<double *>self.u.data
  *         cdef double *v=<double *>self.v.data
  *         cdef double *rate=<double *>self.rate.data             # <<<<<<<<<<<<<<
@@ -4014,7 +4031,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
   __pyx_v_rate = ((double *)__pyx_v_self->__pyx_base.__pyx_base.rate->data);
 
-  /* "splikes\neurons\srm0.pyx":122
+  /* "splikes/neurons/srm0.pyx":122
  *         cdef double *v=<double *>self.v.data
  *         cdef double *rate=<double *>self.rate.data
  *         cdef double *last_spike_time=<double *>self.last_spike_time.data             # <<<<<<<<<<<<<<
@@ -4023,7 +4040,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
   __pyx_v_last_spike_time = ((double *)__pyx_v_self->__pyx_base.__pyx_base.last_spike_time->data);
 
-  /* "splikes\neurons\srm0.pyx":124
+  /* "splikes/neurons/srm0.pyx":124
  *         cdef double *last_spike_time=<double *>self.last_spike_time.data
  * 
  *         if self.need_to_reset_last_spike_time:             # <<<<<<<<<<<<<<
@@ -4033,7 +4050,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
   __pyx_t_8 = (__pyx_v_self->need_to_reset_last_spike_time != 0);
   if (__pyx_t_8) {
 
-    /* "splikes\neurons\srm0.pyx":125
+    /* "splikes/neurons/srm0.pyx":125
  * 
  *         if self.need_to_reset_last_spike_time:
  *             for i in range(self.N):             # <<<<<<<<<<<<<<
@@ -4044,7 +4061,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
       __pyx_v_i = __pyx_t_10;
 
-      /* "splikes\neurons\srm0.pyx":126
+      /* "splikes/neurons/srm0.pyx":126
  *         if self.need_to_reset_last_spike_time:
  *             for i in range(self.N):
  *                 last_spike_time[i]=-sim.dt    # assume a spike one dt ago             # <<<<<<<<<<<<<<
@@ -4054,7 +4071,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
       (__pyx_v_last_spike_time[__pyx_v_i]) = (-__pyx_v_sim->dt);
     }
 
-    /* "splikes\neurons\srm0.pyx":127
+    /* "splikes/neurons/srm0.pyx":127
  *             for i in range(self.N):
  *                 last_spike_time[i]=-sim.dt    # assume a spike one dt ago
  *             self.need_to_reset_last_spike_time=False             # <<<<<<<<<<<<<<
@@ -4066,7 +4083,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
   }
   __pyx_L3:;
 
-  /* "splikes\neurons\srm0.pyx":130
+  /* "splikes/neurons/srm0.pyx":130
  * 
  *         # quantities decay exponentially
  *         x=-sim.dt/self.tau             # <<<<<<<<<<<<<<
@@ -4075,7 +4092,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
   __pyx_v_x = ((-__pyx_v_sim->dt) / __pyx_v_self->__pyx_base.tau);
 
-  /* "splikes\neurons\srm0.pyx":131
+  /* "splikes/neurons/srm0.pyx":131
  *         # quantities decay exponentially
  *         x=-sim.dt/self.tau
  *         if self.smoothed:             # <<<<<<<<<<<<<<
@@ -4085,7 +4102,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
   __pyx_t_8 = (__pyx_v_self->__pyx_base.smoothed != 0);
   if (__pyx_t_8) {
 
-    /* "splikes\neurons\srm0.pyx":132
+    /* "splikes/neurons/srm0.pyx":132
  *         x=-sim.dt/self.tau
  *         if self.smoothed:
  *             for i in range(self.N):             # <<<<<<<<<<<<<<
@@ -4096,7 +4113,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
       __pyx_v_i = __pyx_t_10;
 
-      /* "splikes\neurons\srm0.pyx":133
+      /* "splikes/neurons/srm0.pyx":133
  *         if self.smoothed:
  *             for i in range(self.N):
  *                 v[i]*=exp(x)             # <<<<<<<<<<<<<<
@@ -4106,7 +4123,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
       __pyx_t_11 = __pyx_v_i;
       (__pyx_v_v[__pyx_t_11]) = ((__pyx_v_v[__pyx_t_11]) * exp(__pyx_v_x));
 
-      /* "splikes\neurons\srm0.pyx":134
+      /* "splikes/neurons/srm0.pyx":134
  *             for i in range(self.N):
  *                 v[i]*=exp(x)
  *                 u[i]-=(v[i]-u[i])*x  # x is negative, so do -=             # <<<<<<<<<<<<<<
@@ -4120,7 +4137,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
   }
   /*else*/ {
 
-    /* "splikes\neurons\srm0.pyx":136
+    /* "splikes/neurons/srm0.pyx":136
  *                 u[i]-=(v[i]-u[i])*x  # x is negative, so do -=
  *         else:
  *             for i in range(self.N):             # <<<<<<<<<<<<<<
@@ -4131,7 +4148,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
       __pyx_v_i = __pyx_t_10;
 
-      /* "splikes\neurons\srm0.pyx":137
+      /* "splikes/neurons/srm0.pyx":137
  *         else:
  *             for i in range(self.N):
  *                 u[i]*=exp(x)             # <<<<<<<<<<<<<<
@@ -4144,7 +4161,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
   }
   __pyx_L6:;
 
-  /* "splikes\neurons\srm0.pyx":142
+  /* "splikes/neurons/srm0.pyx":142
  *         cdef int *spiking   #=<int *>pre.spiking.data
  * 
  *         for c in self.connections_pre:             # <<<<<<<<<<<<<<
@@ -4192,7 +4209,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     __Pyx_XDECREF_SET(__pyx_v_c, ((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "splikes\neurons\srm0.pyx":143
+    /* "splikes/neurons/srm0.pyx":143
  * 
  *         for c in self.connections_pre:
  *             pre=c.pre             # <<<<<<<<<<<<<<
@@ -4204,7 +4221,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     __Pyx_XDECREF_SET(__pyx_v_pre, ((struct __pyx_obj_7splikes_7splikes_neuron *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "splikes\neurons\srm0.pyx":144
+    /* "splikes/neurons/srm0.pyx":144
  *         for c in self.connections_pre:
  *             pre=c.pre
  *             W=c.W             # <<<<<<<<<<<<<<
@@ -4214,7 +4231,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     __pyx_t_13 = __pyx_v_c->W;
     __pyx_v_W = __pyx_t_13;
 
-    /* "splikes\neurons\srm0.pyx":145
+    /* "splikes/neurons/srm0.pyx":145
  *             pre=c.pre
  *             W=c.W
  *             spiking=<int *>pre.spiking.data             # <<<<<<<<<<<<<<
@@ -4223,7 +4240,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
     __pyx_v_spiking = ((int *)__pyx_v_pre->spiking->data);
 
-    /* "splikes\neurons\srm0.pyx":147
+    /* "splikes/neurons/srm0.pyx":147
  *             spiking=<int *>pre.spiking.data
  * 
  *             if pre.is_spike:             # <<<<<<<<<<<<<<
@@ -4233,7 +4250,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     __pyx_t_8 = (__pyx_v_pre->is_spike != 0);
     if (__pyx_t_8) {
 
-      /* "splikes\neurons\srm0.pyx":148
+      /* "splikes/neurons/srm0.pyx":148
  * 
  *             if pre.is_spike:
  *                 for j in range(pre.N):             # <<<<<<<<<<<<<<
@@ -4244,7 +4261,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
       for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
         __pyx_v_j = __pyx_t_10;
 
-        /* "splikes\neurons\srm0.pyx":149
+        /* "splikes/neurons/srm0.pyx":149
  *             if pre.is_spike:
  *                 for j in range(pre.N):
  *                     if spiking[j]:             # <<<<<<<<<<<<<<
@@ -4254,7 +4271,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
         __pyx_t_8 = ((__pyx_v_spiking[__pyx_v_j]) != 0);
         if (__pyx_t_8) {
 
-          /* "splikes\neurons\srm0.pyx":150
+          /* "splikes/neurons/srm0.pyx":150
  *                 for j in range(pre.N):
  *                     if spiking[j]:
  *                         if self.smoothed:             # <<<<<<<<<<<<<<
@@ -4264,7 +4281,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
           __pyx_t_8 = (__pyx_v_self->__pyx_base.smoothed != 0);
           if (__pyx_t_8) {
 
-            /* "splikes\neurons\srm0.pyx":151
+            /* "splikes/neurons/srm0.pyx":151
  *                     if spiking[j]:
  *                         if self.smoothed:
  *                             for i in range(self.N):             # <<<<<<<<<<<<<<
@@ -4275,7 +4292,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
             for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_11; __pyx_t_14+=1) {
               __pyx_v_i = __pyx_t_14;
 
-              /* "splikes\neurons\srm0.pyx":152
+              /* "splikes/neurons/srm0.pyx":152
  *                         if self.smoothed:
  *                             for i in range(self.N):
  *                                 v[i]+=self.a*W[i*pre.N+j]             # <<<<<<<<<<<<<<
@@ -4289,7 +4306,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
           }
           /*else*/ {
 
-            /* "splikes\neurons\srm0.pyx":154
+            /* "splikes/neurons/srm0.pyx":154
  *                                 v[i]+=self.a*W[i*pre.N+j]
  *                         else:
  *                             for i in range(self.N):             # <<<<<<<<<<<<<<
@@ -4300,7 +4317,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
             for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_11; __pyx_t_14+=1) {
               __pyx_v_i = __pyx_t_14;
 
-              /* "splikes\neurons\srm0.pyx":155
+              /* "splikes/neurons/srm0.pyx":155
  *                         else:
  *                             for i in range(self.N):
  *                                 u[i]+=self.a*W[i*pre.N+j]             # <<<<<<<<<<<<<<
@@ -4320,7 +4337,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     }
     __pyx_L13:;
 
-    /* "splikes\neurons\srm0.pyx":142
+    /* "splikes/neurons/srm0.pyx":142
  *         cdef int *spiking   #=<int *>pre.spiking.data
  * 
  *         for c in self.connections_pre:             # <<<<<<<<<<<<<<
@@ -4330,7 +4347,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes\neurons\srm0.pyx":157
+  /* "splikes/neurons/srm0.pyx":157
  *                                 u[i]+=self.a*W[i*pre.N+j]
  * 
  *         spiking=<int *>self.spiking.data             # <<<<<<<<<<<<<<
@@ -4339,7 +4356,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
   __pyx_v_spiking = ((int *)__pyx_v_self->__pyx_base.__pyx_base.spiking->data);
 
-  /* "splikes\neurons\srm0.pyx":158
+  /* "splikes/neurons/srm0.pyx":158
  * 
  *         spiking=<int *>self.spiking.data
  *         self.is_spike=0             # <<<<<<<<<<<<<<
@@ -4348,7 +4365,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
   __pyx_v_self->__pyx_base.__pyx_base.is_spike = 0;
 
-  /* "splikes\neurons\srm0.pyx":159
+  /* "splikes/neurons/srm0.pyx":159
  *         spiking=<int *>self.spiking.data
  *         self.is_spike=0
  *         for i in range(self.N):             # <<<<<<<<<<<<<<
@@ -4359,7 +4376,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
     __pyx_v_i = __pyx_t_10;
 
-    /* "splikes\neurons\srm0.pyx":160
+    /* "splikes/neurons/srm0.pyx":160
  *         self.is_spike=0
  *         for i in range(self.N):
  *             rate[i]=self.rate_offset+self.rate_slope*u[i]             # <<<<<<<<<<<<<<
@@ -4368,7 +4385,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
     (__pyx_v_rate[__pyx_v_i]) = (__pyx_v_self->__pyx_base.rate_offset + (__pyx_v_self->__pyx_base.rate_slope * (__pyx_v_u[__pyx_v_i])));
 
-    /* "splikes\neurons\srm0.pyx":162
+    /* "splikes/neurons/srm0.pyx":162
  *             rate[i]=self.rate_offset+self.rate_slope*u[i]
  * 
  *             if rate[i]==0.0:             # <<<<<<<<<<<<<<
@@ -4378,7 +4395,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     __pyx_t_8 = (((__pyx_v_rate[__pyx_v_i]) == 0.0) != 0);
     if (__pyx_t_8) {
 
-      /* "splikes\neurons\srm0.pyx":163
+      /* "splikes/neurons/srm0.pyx":163
  * 
  *             if rate[i]==0.0:
  *                 spiking[i]=0             # <<<<<<<<<<<<<<
@@ -4387,7 +4404,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
       (__pyx_v_spiking[__pyx_v_i]) = 0;
 
-      /* "splikes\neurons\srm0.pyx":164
+      /* "splikes/neurons/srm0.pyx":164
  *             if rate[i]==0.0:
  *                 spiking[i]=0
  *                 continue             # <<<<<<<<<<<<<<
@@ -4397,7 +4414,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
       goto __pyx_L22_continue;
     }
 
-    /* "splikes\neurons\srm0.pyx":166
+    /* "splikes/neurons/srm0.pyx":166
  *                 continue
  * 
  *             x=t-last_spike_time[i]             # <<<<<<<<<<<<<<
@@ -4406,7 +4423,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
     __pyx_v_x = (__pyx_v_t - (__pyx_v_last_spike_time[__pyx_v_i]));
 
-    /* "splikes\neurons\srm0.pyx":167
+    /* "splikes/neurons/srm0.pyx":167
  * 
  *             x=t-last_spike_time[i]
  *             self.ISI.set_rate(rate[i])             # <<<<<<<<<<<<<<
@@ -4417,7 +4434,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "splikes\neurons\srm0.pyx":170
+    /* "splikes/neurons/srm0.pyx":170
  * 
  * 
  *             cdf=self.ISI.cdf(x)             # <<<<<<<<<<<<<<
@@ -4430,7 +4447,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_cdf = __pyx_t_16;
 
-    /* "splikes\neurons\srm0.pyx":171
+    /* "splikes/neurons/srm0.pyx":171
  * 
  *             cdf=self.ISI.cdf(x)
  *             pdf=self.ISI.pdf(x)             # <<<<<<<<<<<<<<
@@ -4443,7 +4460,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_pdf = __pyx_t_16;
 
-    /* "splikes\neurons\srm0.pyx":173
+    /* "splikes/neurons/srm0.pyx":173
  *             pdf=self.ISI.pdf(x)
  * 
  *             if cdf==1.0:  # guarantee a spike - avoid divide by zero             # <<<<<<<<<<<<<<
@@ -4453,7 +4470,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     __pyx_t_8 = ((__pyx_v_cdf == 1.0) != 0);
     if (__pyx_t_8) {
 
-      /* "splikes\neurons\srm0.pyx":174
+      /* "splikes/neurons/srm0.pyx":174
  * 
  *             if cdf==1.0:  # guarantee a spike - avoid divide by zero
  *                 self.is_spike=1             # <<<<<<<<<<<<<<
@@ -4462,7 +4479,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
       __pyx_v_self->__pyx_base.__pyx_base.is_spike = 1;
 
-      /* "splikes\neurons\srm0.pyx":175
+      /* "splikes/neurons/srm0.pyx":175
  *             if cdf==1.0:  # guarantee a spike - avoid divide by zero
  *                 self.is_spike=1
  *                 spiking[i]=1             # <<<<<<<<<<<<<<
@@ -4474,7 +4491,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     }
     /*else*/ {
 
-      /* "splikes\neurons\srm0.pyx":177
+      /* "splikes/neurons/srm0.pyx":177
  *                 spiking[i]=1
  *             else:
  *                 _lambda=pdf/(1-cdf)             # <<<<<<<<<<<<<<
@@ -4483,7 +4500,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
       __pyx_v__lambda = (__pyx_v_pdf / (1.0 - __pyx_v_cdf));
 
-      /* "splikes\neurons\srm0.pyx":179
+      /* "splikes/neurons/srm0.pyx":179
  *                 _lambda=pdf/(1-cdf)
  * 
  *                 if randu()<_lambda*sim.dt:             # <<<<<<<<<<<<<<
@@ -4493,7 +4510,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
       __pyx_t_8 = ((__pyx_f_7splikes_7splikes_randu() < (__pyx_v__lambda * __pyx_v_sim->dt)) != 0);
       if (__pyx_t_8) {
 
-        /* "splikes\neurons\srm0.pyx":180
+        /* "splikes/neurons/srm0.pyx":180
  * 
  *                 if randu()<_lambda*sim.dt:
  *                     self.is_spike=1             # <<<<<<<<<<<<<<
@@ -4502,7 +4519,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
         __pyx_v_self->__pyx_base.__pyx_base.is_spike = 1;
 
-        /* "splikes\neurons\srm0.pyx":181
+        /* "splikes/neurons/srm0.pyx":181
  *                 if randu()<_lambda*sim.dt:
  *                     self.is_spike=1
  *                     spiking[i]=1             # <<<<<<<<<<<<<<
@@ -4514,7 +4531,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
       }
       /*else*/ {
 
-        /* "splikes\neurons\srm0.pyx":183
+        /* "splikes/neurons/srm0.pyx":183
  *                     spiking[i]=1
  *                 else:
  *                     spiking[i]=0             # <<<<<<<<<<<<<<
@@ -4527,7 +4544,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     }
     __pyx_L25:;
 
-    /* "splikes\neurons\srm0.pyx":185
+    /* "splikes/neurons/srm0.pyx":185
  *                     spiking[i]=0
  * 
  *             if spiking[i]:             # <<<<<<<<<<<<<<
@@ -4537,7 +4554,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     __pyx_t_8 = ((__pyx_v_spiking[__pyx_v_i]) != 0);
     if (__pyx_t_8) {
 
-      /* "splikes\neurons\srm0.pyx":186
+      /* "splikes/neurons/srm0.pyx":186
  * 
  *             if spiking[i]:
  *                 last_spike_time[i]=t             # <<<<<<<<<<<<<<
@@ -4546,7 +4563,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
       (__pyx_v_last_spike_time[__pyx_v_i]) = __pyx_v_t;
 
-      /* "splikes\neurons\srm0.pyx":187
+      /* "splikes/neurons/srm0.pyx":187
  *             if spiking[i]:
  *                 last_spike_time[i]=t
  *                 self.is_spike=1             # <<<<<<<<<<<<<<
@@ -4555,7 +4572,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
       __pyx_v_self->__pyx_base.__pyx_base.is_spike = 1;
 
-      /* "splikes\neurons\srm0.pyx":188
+      /* "splikes/neurons/srm0.pyx":188
  *                 last_spike_time[i]=t
  *                 self.is_spike=1
  *                 self.post_count+=1             # <<<<<<<<<<<<<<
@@ -4564,7 +4581,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
  */
       __pyx_v_self->__pyx_base.__pyx_base.post_count = (__pyx_v_self->__pyx_base.__pyx_base.post_count + 1);
 
-      /* "splikes\neurons\srm0.pyx":189
+      /* "splikes/neurons/srm0.pyx":189
  *                 self.is_spike=1
  *                 self.post_count+=1
  *                 if self.save_spikes_begin<=t<=self.save_spikes_end:             # <<<<<<<<<<<<<<
@@ -4578,7 +4595,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
       __pyx_t_17 = (__pyx_t_8 != 0);
       if (__pyx_t_17) {
 
-        /* "splikes\neurons\srm0.pyx":190
+        /* "splikes/neurons/srm0.pyx":190
  *                 self.post_count+=1
  *                 if self.save_spikes_begin<=t<=self.save_spikes_end:
  *                     self.saved_spikes.append( (t,i) )             # <<<<<<<<<<<<<<
@@ -4608,7 +4625,7 @@ static PyObject *__pyx_f_7splikes_7neurons_4srm0_8srm0_isi_update(struct __pyx_o
     __pyx_L22_continue:;
   }
 
-  /* "splikes\neurons\srm0.pyx":114
+  /* "splikes/neurons/srm0.pyx":114
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -4728,7 +4745,7 @@ static PyObject *__pyx_pf_7splikes_7neurons_4srm0_8srm0_isi_4update(struct __pyx
   return __pyx_r;
 }
 
-/* "splikes\neurons\srm0.pyx":95
+/* "splikes/neurons/srm0.pyx":95
  * 
  * cdef class srm0_isi(srm0):
  *     cdef public distribution ISI             # <<<<<<<<<<<<<<
@@ -4836,7 +4853,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_8srm0_isi_3ISI_4__del__(struct __pyx
   return __pyx_r;
 }
 
-/* "splikes\neurons\srm0.pyx":96
+/* "splikes/neurons/srm0.pyx":96
  * cdef class srm0_isi(srm0):
  *     cdef public distribution ISI
  *     cdef public int need_to_reset_last_spike_time             # <<<<<<<<<<<<<<
@@ -4918,7 +4935,7 @@ static int __pyx_pf_7splikes_7neurons_4srm0_8srm0_isi_29need_to_reset_last_spike
   return __pyx_r;
 }
 
-/* "splikes\neurons\isi_distributions.pxd":14
+/* "splikes/neurons/isi_distributions.pxd":14
  *     cpdef set_rate(self,double rate)
  * 
  * cdef inline phi(x):  # standard normal cdf             # <<<<<<<<<<<<<<
@@ -4937,7 +4954,7 @@ static CYTHON_INLINE PyObject *__pyx_f_7splikes_7neurons_17isi_distributions_phi
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("phi", 0);
 
-  /* "splikes\neurons\isi_distributions.pxd":15
+  /* "splikes/neurons/isi_distributions.pxd":15
  * 
  * cdef inline phi(x):  # standard normal cdf
  *     return 0.5*(1+erf(x/sqrt(2)))             # <<<<<<<<<<<<<<
@@ -4958,7 +4975,7 @@ static CYTHON_INLINE PyObject *__pyx_f_7splikes_7neurons_17isi_distributions_phi
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "splikes\neurons\isi_distributions.pxd":14
+  /* "splikes/neurons/isi_distributions.pxd":14
  *     cpdef set_rate(self,double rate)
  * 
  * cdef inline phi(x):  # standard normal cdf             # <<<<<<<<<<<<<<
@@ -4978,7 +4995,7 @@ static CYTHON_INLINE PyObject *__pyx_f_7splikes_7neurons_17isi_distributions_phi
   return __pyx_r;
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":197
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":197
  *         # experimental exception made for __getbuffer__ and __releasebuffer__
  *         # -- the details of this may change.
  *         def __getbuffer__(ndarray self, Py_buffer* info, int flags):             # <<<<<<<<<<<<<<
@@ -5028,7 +5045,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_GIVEREF(__pyx_v_info->obj);
   }
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":203
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":203
  *             # of flags
  * 
  *             if info == NULL: return             # <<<<<<<<<<<<<<
@@ -5041,7 +5058,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L0;
   }
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":206
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":206
  * 
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1             # <<<<<<<<<<<<<<
@@ -5050,7 +5067,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_endian_detector = 1;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":207
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":207
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
@@ -5059,7 +5076,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":209
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":209
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
  * 
  *             ndim = PyArray_NDIM(self)             # <<<<<<<<<<<<<<
@@ -5068,7 +5085,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_ndim = PyArray_NDIM(__pyx_v_self);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":211
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":211
  *             ndim = PyArray_NDIM(self)
  * 
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -5078,7 +5095,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = (((sizeof(npy_intp)) != (sizeof(Py_ssize_t))) != 0);
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":212
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":212
  * 
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 copy_shape = 1             # <<<<<<<<<<<<<<
@@ -5090,7 +5107,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   /*else*/ {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":214
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":214
  *                 copy_shape = 1
  *             else:
  *                 copy_shape = 0             # <<<<<<<<<<<<<<
@@ -5101,7 +5118,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L4:;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":216
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":216
  *                 copy_shape = 0
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -5115,7 +5132,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L6_bool_binop_done;
   }
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":217
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":217
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):             # <<<<<<<<<<<<<<
@@ -5127,7 +5144,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_L6_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":218
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":218
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
@@ -5141,7 +5158,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     {__pyx_filename = __pyx_f[2]; __pyx_lineno = 218; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":220
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":220
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -5155,7 +5172,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L9_bool_binop_done;
   }
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":221
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":221
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):             # <<<<<<<<<<<<<<
@@ -5167,7 +5184,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_L9_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":222
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":222
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
@@ -5181,7 +5198,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     {__pyx_filename = __pyx_f[2]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":224
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":224
  *                 raise ValueError(u"ndarray is not Fortran contiguous")
  * 
  *             info.buf = PyArray_DATA(self)             # <<<<<<<<<<<<<<
@@ -5190,7 +5207,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->buf = PyArray_DATA(__pyx_v_self);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":225
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":225
  * 
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim             # <<<<<<<<<<<<<<
@@ -5199,7 +5216,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->ndim = __pyx_v_ndim;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":226
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":226
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim
  *             if copy_shape:             # <<<<<<<<<<<<<<
@@ -5209,7 +5226,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = (__pyx_v_copy_shape != 0);
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":229
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":229
  *                 # Allocate new buffer for strides and shape info.
  *                 # This is allocated as one block, strides first.
  *                 info.strides = <Py_ssize_t*>stdlib.malloc(sizeof(Py_ssize_t) * <size_t>ndim * 2)             # <<<<<<<<<<<<<<
@@ -5218,7 +5235,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->strides = ((Py_ssize_t *)malloc((((sizeof(Py_ssize_t)) * ((size_t)__pyx_v_ndim)) * 2)));
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":230
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":230
  *                 # This is allocated as one block, strides first.
  *                 info.strides = <Py_ssize_t*>stdlib.malloc(sizeof(Py_ssize_t) * <size_t>ndim * 2)
  *                 info.shape = info.strides + ndim             # <<<<<<<<<<<<<<
@@ -5227,7 +5244,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->shape = (__pyx_v_info->strides + __pyx_v_ndim);
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":231
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":231
  *                 info.strides = <Py_ssize_t*>stdlib.malloc(sizeof(Py_ssize_t) * <size_t>ndim * 2)
  *                 info.shape = info.strides + ndim
  *                 for i in range(ndim):             # <<<<<<<<<<<<<<
@@ -5238,7 +5255,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
       __pyx_v_i = __pyx_t_5;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":232
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":232
  *                 info.shape = info.strides + ndim
  *                 for i in range(ndim):
  *                     info.strides[i] = PyArray_STRIDES(self)[i]             # <<<<<<<<<<<<<<
@@ -5247,7 +5264,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
       (__pyx_v_info->strides[__pyx_v_i]) = (PyArray_STRIDES(__pyx_v_self)[__pyx_v_i]);
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":233
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":233
  *                 for i in range(ndim):
  *                     info.strides[i] = PyArray_STRIDES(self)[i]
  *                     info.shape[i] = PyArray_DIMS(self)[i]             # <<<<<<<<<<<<<<
@@ -5260,7 +5277,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   /*else*/ {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":235
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":235
  *                     info.shape[i] = PyArray_DIMS(self)[i]
  *             else:
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)             # <<<<<<<<<<<<<<
@@ -5269,7 +5286,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->strides = ((Py_ssize_t *)PyArray_STRIDES(__pyx_v_self));
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":236
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":236
  *             else:
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)             # <<<<<<<<<<<<<<
@@ -5280,7 +5297,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L11:;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":237
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":237
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)
  *             info.suboffsets = NULL             # <<<<<<<<<<<<<<
@@ -5289,7 +5306,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->suboffsets = NULL;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":238
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":238
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)             # <<<<<<<<<<<<<<
@@ -5298,7 +5315,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->itemsize = PyArray_ITEMSIZE(__pyx_v_self);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":239
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":239
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)
  *             info.readonly = not PyArray_ISWRITEABLE(self)             # <<<<<<<<<<<<<<
@@ -5307,7 +5324,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->readonly = (!(PyArray_ISWRITEABLE(__pyx_v_self) != 0));
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":242
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":242
  * 
  *             cdef int t
  *             cdef char* f = NULL             # <<<<<<<<<<<<<<
@@ -5316,7 +5333,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_f = NULL;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":243
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":243
  *             cdef int t
  *             cdef char* f = NULL
  *             cdef dtype descr = self.descr             # <<<<<<<<<<<<<<
@@ -5328,7 +5345,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_v_descr = ((PyArray_Descr *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":247
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":247
  *             cdef int offset
  * 
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)             # <<<<<<<<<<<<<<
@@ -5337,7 +5354,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_hasfields = PyDataType_HASFIELDS(__pyx_v_descr);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":249
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":249
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)
  * 
  *             if not hasfields and not copy_shape:             # <<<<<<<<<<<<<<
@@ -5355,7 +5372,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_L15_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":251
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":251
  *             if not hasfields and not copy_shape:
  *                 # do not call releasebuffer
  *                 info.obj = None             # <<<<<<<<<<<<<<
@@ -5371,7 +5388,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   /*else*/ {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":254
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":254
  *             else:
  *                 # need to call releasebuffer
  *                 info.obj = self             # <<<<<<<<<<<<<<
@@ -5386,7 +5403,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L14:;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":256
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":256
  *                 info.obj = self
  * 
  *             if not hasfields:             # <<<<<<<<<<<<<<
@@ -5396,7 +5413,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = ((!(__pyx_v_hasfields != 0)) != 0);
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":257
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":257
  * 
  *             if not hasfields:
  *                 t = descr.type_num             # <<<<<<<<<<<<<<
@@ -5406,7 +5423,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_4 = __pyx_v_descr->type_num;
     __pyx_v_t = __pyx_t_4;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":258
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":258
  *             if not hasfields:
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -5426,7 +5443,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     }
     __pyx_L20_next_or:;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":259
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":259
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):             # <<<<<<<<<<<<<<
@@ -5444,7 +5461,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_L19_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":260
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":260
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -5458,7 +5475,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       {__pyx_filename = __pyx_f[2]; __pyx_lineno = 260; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":277
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":277
  *                 elif t == NPY_CDOUBLE:     f = "Zd"
  *                 elif t == NPY_CLONGDOUBLE: f = "Zg"
  *                 elif t == NPY_OBJECT:      f = "O"             # <<<<<<<<<<<<<<
@@ -5467,7 +5484,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     switch (__pyx_v_t) {
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":261
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":261
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")
  *                 if   t == NPY_BYTE:        f = "b"             # <<<<<<<<<<<<<<
@@ -5478,7 +5495,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_b;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":262
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":262
  *                     raise ValueError(u"Non-native byte order not supported")
  *                 if   t == NPY_BYTE:        f = "b"
  *                 elif t == NPY_UBYTE:       f = "B"             # <<<<<<<<<<<<<<
@@ -5489,7 +5506,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_B;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":263
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":263
  *                 if   t == NPY_BYTE:        f = "b"
  *                 elif t == NPY_UBYTE:       f = "B"
  *                 elif t == NPY_SHORT:       f = "h"             # <<<<<<<<<<<<<<
@@ -5500,7 +5517,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_h;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":264
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":264
  *                 elif t == NPY_UBYTE:       f = "B"
  *                 elif t == NPY_SHORT:       f = "h"
  *                 elif t == NPY_USHORT:      f = "H"             # <<<<<<<<<<<<<<
@@ -5511,7 +5528,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_H;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":265
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":265
  *                 elif t == NPY_SHORT:       f = "h"
  *                 elif t == NPY_USHORT:      f = "H"
  *                 elif t == NPY_INT:         f = "i"             # <<<<<<<<<<<<<<
@@ -5522,7 +5539,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_i;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":266
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":266
  *                 elif t == NPY_USHORT:      f = "H"
  *                 elif t == NPY_INT:         f = "i"
  *                 elif t == NPY_UINT:        f = "I"             # <<<<<<<<<<<<<<
@@ -5533,7 +5550,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_I;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":267
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":267
  *                 elif t == NPY_INT:         f = "i"
  *                 elif t == NPY_UINT:        f = "I"
  *                 elif t == NPY_LONG:        f = "l"             # <<<<<<<<<<<<<<
@@ -5544,7 +5561,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_l;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":268
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":268
  *                 elif t == NPY_UINT:        f = "I"
  *                 elif t == NPY_LONG:        f = "l"
  *                 elif t == NPY_ULONG:       f = "L"             # <<<<<<<<<<<<<<
@@ -5555,7 +5572,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_L;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":269
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":269
  *                 elif t == NPY_LONG:        f = "l"
  *                 elif t == NPY_ULONG:       f = "L"
  *                 elif t == NPY_LONGLONG:    f = "q"             # <<<<<<<<<<<<<<
@@ -5566,7 +5583,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_q;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":270
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":270
  *                 elif t == NPY_ULONG:       f = "L"
  *                 elif t == NPY_LONGLONG:    f = "q"
  *                 elif t == NPY_ULONGLONG:   f = "Q"             # <<<<<<<<<<<<<<
@@ -5577,7 +5594,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_Q;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":271
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":271
  *                 elif t == NPY_LONGLONG:    f = "q"
  *                 elif t == NPY_ULONGLONG:   f = "Q"
  *                 elif t == NPY_FLOAT:       f = "f"             # <<<<<<<<<<<<<<
@@ -5588,7 +5605,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_f;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":272
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":272
  *                 elif t == NPY_ULONGLONG:   f = "Q"
  *                 elif t == NPY_FLOAT:       f = "f"
  *                 elif t == NPY_DOUBLE:      f = "d"             # <<<<<<<<<<<<<<
@@ -5599,7 +5616,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_d;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":273
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":273
  *                 elif t == NPY_FLOAT:       f = "f"
  *                 elif t == NPY_DOUBLE:      f = "d"
  *                 elif t == NPY_LONGDOUBLE:  f = "g"             # <<<<<<<<<<<<<<
@@ -5610,7 +5627,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_g;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":274
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":274
  *                 elif t == NPY_DOUBLE:      f = "d"
  *                 elif t == NPY_LONGDOUBLE:  f = "g"
  *                 elif t == NPY_CFLOAT:      f = "Zf"             # <<<<<<<<<<<<<<
@@ -5621,7 +5638,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_Zf;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":275
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":275
  *                 elif t == NPY_LONGDOUBLE:  f = "g"
  *                 elif t == NPY_CFLOAT:      f = "Zf"
  *                 elif t == NPY_CDOUBLE:     f = "Zd"             # <<<<<<<<<<<<<<
@@ -5632,7 +5649,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_Zd;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":276
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":276
  *                 elif t == NPY_CFLOAT:      f = "Zf"
  *                 elif t == NPY_CDOUBLE:     f = "Zd"
  *                 elif t == NPY_CLONGDOUBLE: f = "Zg"             # <<<<<<<<<<<<<<
@@ -5643,7 +5660,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = __pyx_k_Zg;
       break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":277
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":277
  *                 elif t == NPY_CDOUBLE:     f = "Zd"
  *                 elif t == NPY_CLONGDOUBLE: f = "Zg"
  *                 elif t == NPY_OBJECT:      f = "O"             # <<<<<<<<<<<<<<
@@ -5655,7 +5672,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       default:
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":279
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":279
  *                 elif t == NPY_OBJECT:      f = "O"
  *                 else:
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)             # <<<<<<<<<<<<<<
@@ -5681,7 +5698,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
     }
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":280
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":280
  *                 else:
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *                 info.format = f             # <<<<<<<<<<<<<<
@@ -5690,7 +5707,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->format = __pyx_v_f;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":281
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":281
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *                 info.format = f
  *                 return             # <<<<<<<<<<<<<<
@@ -5702,7 +5719,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   /*else*/ {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":283
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":283
  *                 return
  *             else:
  *                 info.format = <char*>stdlib.malloc(_buffer_format_string_len)             # <<<<<<<<<<<<<<
@@ -5711,7 +5728,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->format = ((char *)malloc(255));
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":284
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":284
  *             else:
  *                 info.format = <char*>stdlib.malloc(_buffer_format_string_len)
  *                 info.format[0] = c'^' # Native data types, manual alignment             # <<<<<<<<<<<<<<
@@ -5720,7 +5737,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     (__pyx_v_info->format[0]) = '^';
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":285
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":285
  *                 info.format = <char*>stdlib.malloc(_buffer_format_string_len)
  *                 info.format[0] = c'^' # Native data types, manual alignment
  *                 offset = 0             # <<<<<<<<<<<<<<
@@ -5729,7 +5746,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_offset = 0;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":286
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":286
  *                 info.format[0] = c'^' # Native data types, manual alignment
  *                 offset = 0
  *                 f = _util_dtypestring(descr, info.format + 1,             # <<<<<<<<<<<<<<
@@ -5739,7 +5756,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_7 = __pyx_f_5numpy__util_dtypestring(__pyx_v_descr, (__pyx_v_info->format + 1), (__pyx_v_info->format + 255), (&__pyx_v_offset)); if (unlikely(__pyx_t_7 == NULL)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 286; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_f = __pyx_t_7;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":289
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":289
  *                                       info.format + _buffer_format_string_len,
  *                                       &offset)
  *                 f[0] = c'\0' # Terminate format string             # <<<<<<<<<<<<<<
@@ -5749,7 +5766,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     (__pyx_v_f[0]) = '\x00';
   }
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":197
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":197
  *         # experimental exception made for __getbuffer__ and __releasebuffer__
  *         # -- the details of this may change.
  *         def __getbuffer__(ndarray self, Py_buffer* info, int flags):             # <<<<<<<<<<<<<<
@@ -5781,7 +5798,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   return __pyx_r;
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":291
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":291
  *                 f[0] = c'\0' # Terminate format string
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
@@ -5805,7 +5822,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("__releasebuffer__", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":292
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":292
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):             # <<<<<<<<<<<<<<
@@ -5815,7 +5832,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __pyx_t_1 = (PyArray_HASFIELDS(__pyx_v_self) != 0);
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":293
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":293
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)             # <<<<<<<<<<<<<<
@@ -5827,7 +5844,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   }
   __pyx_L3:;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":294
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":294
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -5837,7 +5854,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __pyx_t_1 = (((sizeof(npy_intp)) != (sizeof(Py_ssize_t))) != 0);
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":295
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":295
  *                 stdlib.free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 stdlib.free(info.strides)             # <<<<<<<<<<<<<<
@@ -5849,7 +5866,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   }
   __pyx_L4:;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":291
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":291
  *                 f[0] = c'\0' # Terminate format string
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
@@ -5861,7 +5878,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __Pyx_RefNannyFinishContext();
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":771
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":771
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -5878,7 +5895,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":772
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":772
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -5892,7 +5909,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":771
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":771
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -5911,7 +5928,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":774
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":774
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -5928,7 +5945,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":775
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":775
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -5942,7 +5959,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":774
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":774
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -5961,7 +5978,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":777
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":777
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -5978,7 +5995,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":778
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":778
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -5992,7 +6009,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":777
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":777
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -6011,7 +6028,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":780
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":780
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -6028,7 +6045,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":781
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":781
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -6042,7 +6059,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":780
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":780
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -6061,7 +6078,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":783
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":783
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -6078,7 +6095,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":784
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":784
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -6092,7 +6109,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":783
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":783
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -6111,7 +6128,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":786
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":786
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
@@ -6143,7 +6160,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_util_dtypestring", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":793
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":793
  *     cdef int delta_offset
  *     cdef tuple i
  *     cdef int endian_detector = 1             # <<<<<<<<<<<<<<
@@ -6152,7 +6169,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
   __pyx_v_endian_detector = 1;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":794
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":794
  *     cdef tuple i
  *     cdef int endian_detector = 1
  *     cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
@@ -6161,7 +6178,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":797
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":797
  *     cdef tuple fields
  * 
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
@@ -6183,7 +6200,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_childname, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":798
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":798
  * 
  *     for childname in descr.names:
  *         fields = descr.fields[childname]             # <<<<<<<<<<<<<<
@@ -6200,7 +6217,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_fields, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":799
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":799
  *     for childname in descr.names:
  *         fields = descr.fields[childname]
  *         child, new_offset = fields             # <<<<<<<<<<<<<<
@@ -6239,7 +6256,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_new_offset, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":801
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":801
  *         child, new_offset = fields
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:             # <<<<<<<<<<<<<<
@@ -6256,7 +6273,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = ((((__pyx_v_end - __pyx_v_f) - ((int)__pyx_t_5)) < 15) != 0);
     if (__pyx_t_6) {
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":802
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":802
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
@@ -6270,7 +6287,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       {__pyx_filename = __pyx_f[2]; __pyx_lineno = 802; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":804
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":804
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -6290,7 +6307,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     }
     __pyx_L8_next_or:;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":805
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":805
  * 
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):             # <<<<<<<<<<<<<<
@@ -6308,7 +6325,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_L7_bool_binop_done:;
     if (__pyx_t_6) {
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":806
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":806
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):
  *             raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -6322,7 +6339,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       {__pyx_filename = __pyx_f[2]; __pyx_lineno = 806; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":816
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":816
  * 
  *         # Output padding bytes
  *         while offset[0] < new_offset:             # <<<<<<<<<<<<<<
@@ -6338,7 +6355,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       if (!__pyx_t_6) break;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":817
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":817
  *         # Output padding bytes
  *         while offset[0] < new_offset:
  *             f[0] = 120 # "x"; pad byte             # <<<<<<<<<<<<<<
@@ -6347,7 +6364,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       (__pyx_v_f[0]) = 120;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":818
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":818
  *         while offset[0] < new_offset:
  *             f[0] = 120 # "x"; pad byte
  *             f += 1             # <<<<<<<<<<<<<<
@@ -6356,7 +6373,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       __pyx_v_f = (__pyx_v_f + 1);
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":819
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":819
  *             f[0] = 120 # "x"; pad byte
  *             f += 1
  *             offset[0] += 1             # <<<<<<<<<<<<<<
@@ -6367,7 +6384,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       (__pyx_v_offset[__pyx_t_8]) = ((__pyx_v_offset[__pyx_t_8]) + 1);
     }
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":821
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":821
  *             offset[0] += 1
  * 
  *         offset[0] += child.itemsize             # <<<<<<<<<<<<<<
@@ -6377,7 +6394,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_8 = 0;
     (__pyx_v_offset[__pyx_t_8]) = ((__pyx_v_offset[__pyx_t_8]) + __pyx_v_child->elsize);
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":823
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":823
  *         offset[0] += child.itemsize
  * 
  *         if not PyDataType_HASFIELDS(child):             # <<<<<<<<<<<<<<
@@ -6387,7 +6404,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = ((!(PyDataType_HASFIELDS(__pyx_v_child) != 0)) != 0);
     if (__pyx_t_6) {
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":824
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":824
  * 
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num             # <<<<<<<<<<<<<<
@@ -6399,7 +6416,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_XDECREF_SET(__pyx_v_t, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":825
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":825
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num
  *             if end - f < 5:             # <<<<<<<<<<<<<<
@@ -6409,7 +6426,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __pyx_t_6 = (((__pyx_v_end - __pyx_v_f) < 5) != 0);
       if (__pyx_t_6) {
 
-        /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":826
+        /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":826
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
@@ -6423,7 +6440,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         {__pyx_filename = __pyx_f[2]; __pyx_lineno = 826; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":829
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":829
  * 
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"             # <<<<<<<<<<<<<<
@@ -6441,7 +6458,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":830
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":830
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"             # <<<<<<<<<<<<<<
@@ -6459,7 +6476,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":831
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":831
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"             # <<<<<<<<<<<<<<
@@ -6477,7 +6494,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":832
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":832
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"             # <<<<<<<<<<<<<<
@@ -6495,7 +6512,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":833
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":833
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"
  *             elif t == NPY_INT:         f[0] = 105 #"i"             # <<<<<<<<<<<<<<
@@ -6513,7 +6530,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":834
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":834
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"
  *             elif t == NPY_INT:         f[0] = 105 #"i"
  *             elif t == NPY_UINT:        f[0] =  73 #"I"             # <<<<<<<<<<<<<<
@@ -6531,7 +6548,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":835
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":835
  *             elif t == NPY_INT:         f[0] = 105 #"i"
  *             elif t == NPY_UINT:        f[0] =  73 #"I"
  *             elif t == NPY_LONG:        f[0] = 108 #"l"             # <<<<<<<<<<<<<<
@@ -6549,7 +6566,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":836
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":836
  *             elif t == NPY_UINT:        f[0] =  73 #"I"
  *             elif t == NPY_LONG:        f[0] = 108 #"l"
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"             # <<<<<<<<<<<<<<
@@ -6567,7 +6584,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":837
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":837
  *             elif t == NPY_LONG:        f[0] = 108 #"l"
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"             # <<<<<<<<<<<<<<
@@ -6585,7 +6602,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":838
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":838
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"             # <<<<<<<<<<<<<<
@@ -6603,7 +6620,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":839
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":839
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"             # <<<<<<<<<<<<<<
@@ -6621,7 +6638,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":840
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":840
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"             # <<<<<<<<<<<<<<
@@ -6639,7 +6656,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":841
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":841
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"             # <<<<<<<<<<<<<<
@@ -6657,7 +6674,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":842
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":842
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf             # <<<<<<<<<<<<<<
@@ -6677,7 +6694,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":843
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":843
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd             # <<<<<<<<<<<<<<
@@ -6697,7 +6714,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":844
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":844
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd
  *             elif t == NPY_CLONGDOUBLE: f[0] = 90; f[1] = 103; f += 1 # Zg             # <<<<<<<<<<<<<<
@@ -6717,7 +6734,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":845
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":845
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd
  *             elif t == NPY_CLONGDOUBLE: f[0] = 90; f[1] = 103; f += 1 # Zg
  *             elif t == NPY_OBJECT:      f[0] = 79 #"O"             # <<<<<<<<<<<<<<
@@ -6736,7 +6753,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       }
       /*else*/ {
 
-        /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":847
+        /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":847
  *             elif t == NPY_OBJECT:      f[0] = 79 #"O"
  *             else:
  *                 raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)             # <<<<<<<<<<<<<<
@@ -6759,7 +6776,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       }
       __pyx_L15:;
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":848
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":848
  *             else:
  *                 raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *             f += 1             # <<<<<<<<<<<<<<
@@ -6771,7 +6788,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     }
     /*else*/ {
 
-      /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":852
+      /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":852
  *             # Cython ignores struct boundary information ("T{...}"),
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)             # <<<<<<<<<<<<<<
@@ -6783,7 +6800,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     }
     __pyx_L13:;
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":797
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":797
  *     cdef tuple fields
  * 
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
@@ -6793,7 +6810,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":853
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":853
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)
  *     return f             # <<<<<<<<<<<<<<
@@ -6803,7 +6820,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   __pyx_r = __pyx_v_f;
   goto __pyx_L0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":786
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":786
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
@@ -6828,7 +6845,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   return __pyx_r;
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":969
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":969
  * 
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -6843,7 +6860,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   int __pyx_t_2;
   __Pyx_RefNannySetupContext("set_array_base", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":971
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":971
  * cdef inline void set_array_base(ndarray arr, object base):
  *      cdef PyObject* baseptr
  *      if base is None:             # <<<<<<<<<<<<<<
@@ -6854,7 +6871,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":972
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":972
  *      cdef PyObject* baseptr
  *      if base is None:
  *          baseptr = NULL             # <<<<<<<<<<<<<<
@@ -6866,7 +6883,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   }
   /*else*/ {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":974
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":974
  *          baseptr = NULL
  *      else:
  *          Py_INCREF(base) # important to do this before decref below!             # <<<<<<<<<<<<<<
@@ -6875,7 +6892,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
     Py_INCREF(__pyx_v_base);
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":975
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":975
  *      else:
  *          Py_INCREF(base) # important to do this before decref below!
  *          baseptr = <PyObject*>base             # <<<<<<<<<<<<<<
@@ -6886,7 +6903,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   }
   __pyx_L3:;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":976
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":976
  *          Py_INCREF(base) # important to do this before decref below!
  *          baseptr = <PyObject*>base
  *      Py_XDECREF(arr.base)             # <<<<<<<<<<<<<<
@@ -6895,7 +6912,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_XDECREF(__pyx_v_arr->base);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":977
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":977
  *          baseptr = <PyObject*>base
  *      Py_XDECREF(arr.base)
  *      arr.base = baseptr             # <<<<<<<<<<<<<<
@@ -6904,7 +6921,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   __pyx_v_arr->base = __pyx_v_baseptr;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":969
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":969
  * 
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -6916,7 +6933,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyFinishContext();
 }
 
-/* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":979
+/* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":979
  *      arr.base = baseptr
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -6930,7 +6947,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 0);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":980
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":980
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     if arr.base is NULL:             # <<<<<<<<<<<<<<
@@ -6940,7 +6957,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = ((__pyx_v_arr->base == NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":981
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":981
  * cdef inline object get_array_base(ndarray arr):
  *     if arr.base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -6954,7 +6971,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   }
   /*else*/ {
 
-    /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":983
+    /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":983
  *         return None
  *     else:
  *         return <object>arr.base             # <<<<<<<<<<<<<<
@@ -6965,7 +6982,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     goto __pyx_L0;
   }
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":979
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":979
  *      arr.base = baseptr
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -7449,7 +7466,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "splikes\neurons\srm0.pyx":106
+  /* "splikes/neurons/srm0.pyx":106
  *         self.ISI=ISI
  *         s=str(ISI)
  *         s=s.split(' ')[0].split('.')[-1]             # <<<<<<<<<<<<<<
@@ -7463,7 +7480,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":218
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":218
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
@@ -7474,7 +7491,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":222
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":222
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
@@ -7485,7 +7502,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":260
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":260
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -7496,7 +7513,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":802
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":802
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
@@ -7507,7 +7524,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":806
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":806
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):
  *             raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -7518,7 +7535,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":826
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":826
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
@@ -7658,12 +7675,13 @@ PyMODINIT_FUNC PyInit_srm0(void)
   __pyx_ptype_5numpy_broadcast = __Pyx_ImportType("numpy", "broadcast", sizeof(PyArrayMultiIterObject), 0); if (unlikely(!__pyx_ptype_5numpy_broadcast)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5numpy_ndarray = __Pyx_ImportType("numpy", "ndarray", sizeof(PyArrayObject), 0); if (unlikely(!__pyx_ptype_5numpy_ndarray)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 181; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5numpy_ufunc = __Pyx_ImportType("numpy", "ufunc", sizeof(PyUFuncObject), 0); if (unlikely(!__pyx_ptype_5numpy_ufunc)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 864; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7splikes_monitor = __Pyx_ImportType("splikes.splikes", "monitor", sizeof(struct __pyx_obj_7splikes_7splikes_monitor), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_monitor = (struct __pyx_vtabstruct_7splikes_7splikes_monitor*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_monitor->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7splikes_simulation = __Pyx_ImportType("splikes.splikes", "simulation", sizeof(struct __pyx_obj_7splikes_7splikes_simulation), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_simulation = (struct __pyx_vtabstruct_7splikes_7splikes_simulation*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7splikes_connection = __Pyx_ImportType("splikes.splikes", "connection", sizeof(struct __pyx_obj_7splikes_7splikes_connection), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_connection)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_connection = (struct __pyx_vtabstruct_7splikes_7splikes_connection*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_connection->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_connection)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_7splikes_7splikes_group = __Pyx_ImportType("splikes.splikes", "group", sizeof(struct __pyx_obj_7splikes_7splikes_group), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_group)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_7splikes_7splikes_monitor = __Pyx_ImportType("splikes.splikes", "monitor", sizeof(struct __pyx_obj_7splikes_7splikes_monitor), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_7splikes_7splikes_monitor = (struct __pyx_vtabstruct_7splikes_7splikes_monitor*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_monitor->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_7splikes_7splikes_simulation = __Pyx_ImportType("splikes.splikes", "simulation", sizeof(struct __pyx_obj_7splikes_7splikes_simulation), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_7splikes_7splikes_simulation = (struct __pyx_vtabstruct_7splikes_7splikes_simulation*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_7splikes_7splikes_connection = __Pyx_ImportType("splikes.splikes", "connection", sizeof(struct __pyx_obj_7splikes_7splikes_connection), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_connection)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_7splikes_7splikes_connection = (struct __pyx_vtabstruct_7splikes_7splikes_connection*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_connection->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_connection)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_7splikes_7neurons_17isi_distributions_distribution = __Pyx_ImportType("splikes.neurons.isi_distributions", "distribution", sizeof(struct __pyx_obj_7splikes_7neurons_17isi_distributions_distribution), 1); if (unlikely(!__pyx_ptype_7splikes_7neurons_17isi_distributions_distribution)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 9; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_vtabptr_7splikes_7neurons_17isi_distributions_distribution = (struct __pyx_vtabstruct_7splikes_7neurons_17isi_distributions_distribution*)__Pyx_GetVtable(__pyx_ptype_7splikes_7neurons_17isi_distributions_distribution->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7neurons_17isi_distributions_distribution)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 9; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_7splikes_7neurons_17isi_distributions_invgauss = __Pyx_ImportType("splikes.neurons.isi_distributions", "invgauss", sizeof(struct __pyx_obj_7splikes_7neurons_17isi_distributions_invgauss), 1); if (unlikely(!__pyx_ptype_7splikes_7neurons_17isi_distributions_invgauss)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -7681,7 +7699,7 @@ PyMODINIT_FUNC PyInit_srm0(void)
   Py_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   /*--- Execution code ---*/
 
-  /* "splikes\neurons\srm0.pyx":3
+  /* "splikes/neurons/srm0.pyx":3
  * from splikes.splikes cimport *
  * cimport cython
  * import pylab             # <<<<<<<<<<<<<<
@@ -7693,7 +7711,7 @@ PyMODINIT_FUNC PyInit_srm0(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pylab, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 3; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "splikes\neurons\srm0.pyx":5
+  /* "splikes/neurons/srm0.pyx":5
  * import pylab
  * 
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -7705,7 +7723,7 @@ PyMODINIT_FUNC PyInit_srm0(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 5; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "splikes\neurons\srm0.pyx":1
+  /* "splikes/neurons/srm0.pyx":1
  * from splikes.splikes cimport *             # <<<<<<<<<<<<<<
  * cimport cython
  * import pylab
@@ -7715,7 +7733,7 @@ PyMODINIT_FUNC PyInit_srm0(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "..\..\..\AppData\Local\Continuum\Anaconda\lib\site-packages\Cython\Includes\numpy\__init__.pxd":979
+  /* "../../../anaconda/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":979
  *      arr.base = baseptr
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
