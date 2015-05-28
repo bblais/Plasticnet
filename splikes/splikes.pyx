@@ -1,4 +1,4 @@
-version='0.0.6'
+version='0.0.8'
 
 cimport cython
 
@@ -74,7 +74,7 @@ def time2str(tm):
 
     return s
 
-
+import sys
 
 from copy import deepcopy
 import pylab
@@ -90,16 +90,41 @@ Hz=1.0
 cdef class group:
 
     def save(self,g):
+        if self.verbose:
+            print str(type(self)),":",str(self.__getattribute__('name'))
+            sys.stdout.flush()
+
+
         g.attrs['type']=str(type(self))
-        g.attrs['name']=self.__getattribute__('name')
+        g.attrs['name']=str(self.__getattribute__('name'))
 
 
         for attr in self.save_attrs:
+            if self.verbose:
+                print "\t",attr
+                sys.stdout.flush()
             g.attrs[attr]=self.__getattribute__(attr)
 
         for dataname in self.save_data:
+            if self.verbose:
+                print "\t",dataname
+                sys.stdout.flush()
             data=self.__getattribute__(dataname)
+
+            if self.verbose:
+                print data
+                sys.stdout.flush()
+
+            if data is None:
+                if self.verbose:
+                    print "(skipping)"
+                    sys.stdout.flush()
+                continue
+
             g.create_dataset(dataname,data=data)
+
+
+
 
 
 cdef class monitor(group):
@@ -114,6 +139,11 @@ cdef class monitor(group):
         self.save_attrs=['time_to_next_save','save_interval']
         self.save_data=['t','values']
 
+    def save(self,g):
+        self.t=np.array(self.t)
+        self.values=np.array(self.values).squeeze()
+
+        group.save(self,g)
 
     def _reset(self):
         self.t=[]
@@ -126,6 +156,9 @@ cdef class monitor(group):
         variable=self.container.__getattribute__(self.name)
         self.values.append(deepcopy(variable))
         self.time_to_next_save+=self.save_interval
+
+
+
 
     def arrays(self):
         return self.time_array(),self.array()
@@ -180,6 +213,8 @@ cdef class simulation(group):
         self.save_attrs=['seed','total_time','dt','time_to_next_save','time_to_next_filter',
                     'verbose',]
         self.save_data=[]
+        self.verbose=False
+        self.name='simulation'
         
         
     cpdef _reset(self):
@@ -215,15 +250,6 @@ cdef class simulation(group):
             
         self.time_to_next_save=min([self.monitors[name].time_to_next_save for name in self.monitors])
         
-    def save(self,group):
-        group.attrs['type']=str(type(self))
-
-        for attr in self.save_attrs:
-            group.attrs[attr]=self.__getattribute__(attr)
-
-        for dataname in self.save_data:
-            data=self.__getattribute__(dataname)
-            group.create_dataset(dataname,data=data)
         
 cdef class neuron(group):
     
@@ -315,7 +341,7 @@ cdef class connection(group):
         
         if state is None:
             self.use_state=False
-            self.state_variable=''
+            self.state_variable=None
         else:
             self.use_state=True
             self.state_variable=state
@@ -347,6 +373,7 @@ cdef class connection(group):
     cpdef update(self,double t,simulation sim):
         pass
     
+
 
 def run_sim(simulation sim,object neurons,object connections,
                     int display_hash=False,int print_time=True,

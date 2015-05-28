@@ -725,16 +725,18 @@ typedef npy_cdouble __pyx_t_5numpy_complex_t;
  * 
  * cdef class group:             # <<<<<<<<<<<<<<
  *     cdef public object save_attrs,save_data
- * 
+ *     cdef public object name
  */
 struct __pyx_obj_7splikes_7splikes_group {
   PyObject_HEAD
   PyObject *save_attrs;
   PyObject *save_data;
+  PyObject *name;
+  int verbose;
 };
 
 
-/* "splikes/splikes.pxd":32
+/* "splikes/splikes.pxd":34
  * 
  * 
  * cdef class monitor(group):             # <<<<<<<<<<<<<<
@@ -747,13 +749,12 @@ struct __pyx_obj_7splikes_7splikes_monitor {
   double time_to_next_save;
   double save_interval;
   PyObject *container;
-  PyObject *name;
   PyObject *t;
   PyObject *values;
 };
 
 
-/* "splikes/splikes.pxd":39
+/* "splikes/splikes.pxd":41
  *     cpdef update(self,double t)
  * 
  * cdef class simulation(group):             # <<<<<<<<<<<<<<
@@ -774,17 +775,16 @@ struct __pyx_obj_7splikes_7splikes_simulation {
 };
 
 
-/* "splikes/splikes.pxd":48
+/* "splikes/splikes.pxd":50
  *     cpdef _reset(self)
  * 
  * cdef class neuron(group):             # <<<<<<<<<<<<<<
- *     cdef public int verbose
  *     cdef public int is_spike
+ *     cdef public int post_count
  */
 struct __pyx_obj_7splikes_7splikes_neuron {
   struct __pyx_obj_7splikes_7splikes_group __pyx_base;
   struct __pyx_vtabstruct_7splikes_7splikes_neuron *__pyx_vtab;
-  int verbose;
   int is_spike;
   int post_count;
   PyObject *saved_spikes;
@@ -799,7 +799,6 @@ struct __pyx_obj_7splikes_7splikes_neuron {
   int num_pre;
   int num_post;
   PyObject *state_variable;
-  PyObject *name;
 };
 
 
@@ -822,7 +821,6 @@ struct __pyx_obj_7splikes_7splikes_connection {
   struct __pyx_obj_7splikes_7splikes_neuron *pre;
   struct __pyx_obj_7splikes_7splikes_neuron *post;
   double *W;
-  PyObject *name;
   PyArrayObject *state;
   int use_state;
   PyObject *state_variable;
@@ -937,7 +935,7 @@ struct __pyx_obj_7splikes_7neurons_4srm0_srm0_isi {
 
 
 
-/* "splikes/splikes.pxd":32
+/* "splikes/splikes.pxd":34
  * 
  * 
  * cdef class monitor(group):             # <<<<<<<<<<<<<<
@@ -951,7 +949,7 @@ struct __pyx_vtabstruct_7splikes_7splikes_monitor {
 static struct __pyx_vtabstruct_7splikes_7splikes_monitor *__pyx_vtabptr_7splikes_7splikes_monitor;
 
 
-/* "splikes/splikes.pxd":39
+/* "splikes/splikes.pxd":41
  *     cpdef update(self,double t)
  * 
  * cdef class simulation(group):             # <<<<<<<<<<<<<<
@@ -965,12 +963,12 @@ struct __pyx_vtabstruct_7splikes_7splikes_simulation {
 static struct __pyx_vtabstruct_7splikes_7splikes_simulation *__pyx_vtabptr_7splikes_7splikes_simulation;
 
 
-/* "splikes/splikes.pxd":48
+/* "splikes/splikes.pxd":50
  *     cpdef _reset(self)
  * 
  * cdef class neuron(group):             # <<<<<<<<<<<<<<
- *     cdef public int verbose
  *     cdef public int is_spike
+ *     cdef public int post_count
  */
 
 struct __pyx_vtabstruct_7splikes_7splikes_neuron {
@@ -2065,9 +2063,9 @@ static int __pyx_pf_7splikes_7neurons_4srm0_4srm0_2__init__(struct __pyx_obj_7sp
  */
   __Pyx_INCREF(__pyx_n_s_SRM0);
   __Pyx_GIVEREF(__pyx_n_s_SRM0);
-  __Pyx_GOTREF(__pyx_v_self->__pyx_base.name);
-  __Pyx_DECREF(__pyx_v_self->__pyx_base.name);
-  __pyx_v_self->__pyx_base.name = __pyx_n_s_SRM0;
+  __Pyx_GOTREF(__pyx_v_self->__pyx_base.__pyx_base.name);
+  __Pyx_DECREF(__pyx_v_self->__pyx_base.__pyx_base.name);
+  __pyx_v_self->__pyx_base.__pyx_base.name = __pyx_n_s_SRM0;
 
   /* "splikes/neurons/srm0.pyx":29
  *         self.tau_beta=-1
@@ -3997,9 +3995,9 @@ static int __pyx_pf_7splikes_7neurons_4srm0_8srm0_isi_2__init__(struct __pyx_obj
   __pyx_t_1 = __Pyx_PyString_Format(__pyx_kp_s_SRM0_ISI_s, __pyx_v_s); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 112; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
-  __Pyx_GOTREF(__pyx_v_self->__pyx_base.__pyx_base.name);
-  __Pyx_DECREF(__pyx_v_self->__pyx_base.__pyx_base.name);
-  __pyx_v_self->__pyx_base.__pyx_base.name = __pyx_t_1;
+  __Pyx_GOTREF(__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.name);
+  __Pyx_DECREF(__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.name);
+  __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.name = __pyx_t_1;
   __pyx_t_1 = 0;
 
   /* "splikes/neurons/srm0.pyx":114
@@ -7813,10 +7811,10 @@ PyMODINIT_FUNC PyInit_srm0(void)
   __pyx_ptype_5numpy_ndarray = __Pyx_ImportType("numpy", "ndarray", sizeof(PyArrayObject), 0); if (unlikely(!__pyx_ptype_5numpy_ndarray)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 181; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5numpy_ufunc = __Pyx_ImportType("numpy", "ufunc", sizeof(PyUFuncObject), 0); if (unlikely(!__pyx_ptype_5numpy_ufunc)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 864; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_7splikes_7splikes_group = __Pyx_ImportType("splikes.splikes", "group", sizeof(struct __pyx_obj_7splikes_7splikes_group), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_group)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7splikes_monitor = __Pyx_ImportType("splikes.splikes", "monitor", sizeof(struct __pyx_obj_7splikes_7splikes_monitor), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_monitor = (struct __pyx_vtabstruct_7splikes_7splikes_monitor*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_monitor->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7splikes_simulation = __Pyx_ImportType("splikes.splikes", "simulation", sizeof(struct __pyx_obj_7splikes_7splikes_simulation), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_simulation = (struct __pyx_vtabstruct_7splikes_7splikes_simulation*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_7splikes_7splikes_monitor = __Pyx_ImportType("splikes.splikes", "monitor", sizeof(struct __pyx_obj_7splikes_7splikes_monitor), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_7splikes_7splikes_monitor = (struct __pyx_vtabstruct_7splikes_7splikes_monitor*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_monitor->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_7splikes_7splikes_simulation = __Pyx_ImportType("splikes.splikes", "simulation", sizeof(struct __pyx_obj_7splikes_7splikes_simulation), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_7splikes_7splikes_simulation = (struct __pyx_vtabstruct_7splikes_7splikes_simulation*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_7splikes_7splikes_connection = __Pyx_ImportType("splikes.splikes", "connection", sizeof(struct __pyx_obj_7splikes_7splikes_connection), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_connection)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_vtabptr_7splikes_7splikes_connection = (struct __pyx_vtabstruct_7splikes_7splikes_connection*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_connection->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_connection)) {__pyx_filename = __pyx_f[4]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_7splikes_7neurons_17isi_distributions_distribution = __Pyx_ImportType("splikes.neurons.isi_distributions", "distribution", sizeof(struct __pyx_obj_7splikes_7neurons_17isi_distributions_distribution), 1); if (unlikely(!__pyx_ptype_7splikes_7neurons_17isi_distributions_distribution)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 9; __pyx_clineno = __LINE__; goto __pyx_L1_error;}

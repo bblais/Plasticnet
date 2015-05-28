@@ -37,12 +37,14 @@ cdef double rande()
  
 cdef class group:
     cdef public object save_attrs,save_data
+    cdef public object name
+    cdef public int verbose
 
 
 cdef class monitor(group):
     cdef public double time_to_next_save
     cdef public double save_interval
-    cdef public object container,name
+    cdef public object container
     cdef public object t,values
     cpdef update(self,double t)
 
@@ -53,13 +55,10 @@ cdef class simulation(group):
     cdef public double time_to_next_save,time_to_next_filter
     cdef public object monitors,filters
     cdef public int seed
-    cdef public int verbose
 
     cpdef _reset(self)
 
 cdef class neuron(group):
-    cdef public int verbose
-    cdef public object name
     cdef public int N
     cdef public np.ndarray output,linear_output
     cdef public connections_pre,connections_post
@@ -91,9 +90,6 @@ cdef class connection(group):
     cdef double *w
     cdef public bint reset_to_initial
     cdef public post_process
-    cdef public object name
-    cdef public int verbose
-
 
     cpdef _reset(self)
     cpdef update(self,double t,simulation sim)

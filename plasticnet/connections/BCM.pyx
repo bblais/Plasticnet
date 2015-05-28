@@ -38,6 +38,9 @@ cdef class BCM(connection):
         self.name='BCM'
         self._reset()
     
+        self.save_attrs.extend(['eta','tau','gamma','theta_o','yo'])
+        self.save_data.extend(['theta','initial_theta','initial_theta_range'])
+
     
     @cython.cdivision(True)
     @cython.boundscheck(False) # turn of bounds-checking for entire function

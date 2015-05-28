@@ -8,6 +8,69 @@ mpl.rcParams['lines.linewidth'] = 3
 mpl.rcParams['figure.figsize'] = (10,8)
 mpl.rcParams['axes.grid']=True
 
+import h5py
+import plasticnet as pn
+import splikes as sp
+
+def save(fname,sim,neurons=[],connections=[]):
+    f=h5py.File(fname,'w')
+    
+    try:
+
+        f.attrs['plasticnet version']=pn.version
+        f.attrs['splikes version']=sp.version
+        
+        group=f.create_group("simulation")
+        sim.save(group)
+
+        for n,neuron in enumerate(neurons):
+            group=f.create_group("neuron %d" % n)
+            if neuron.verbose:
+                print "<<<<  group   neuron %d >>>>" % n
+                sys.stdout.flush()
+            neuron.save(group)
+
+            for monitor_name in sim.monitors:
+                m=sim.monitors[monitor_name]
+                if m.container==neuron:
+                    mgroup=group.create_group("monitor %s" % m.name)
+                    m.save(mgroup)
+            
+            
+            
+        for c,connection in enumerate(connections):
+            group=f.create_group("connection %d" % c)
+            
+            if connection.verbose:
+                print "<<<<  group   connection %d >>>>" % c
+                sys.stdout.flush()
+            connection.save(group)
+    
+            try:
+                idx=neurons.index(connection.pre)
+            except ValueError:
+                idx=None
+            group.attrs['pre number']=idx
+
+            try:
+                idx=neurons.index(connection.post)
+            except ValueError:
+                idx=None
+            group.attrs['post number']=idx
+            
+            for monitor_name in sim.monitors:
+                m=sim.monitors[monitor_name]
+                if m.container==connection:
+                    mgroup=group.create_group("monitor %s" % m.name)
+                    m.save(mgroup)
+            
+    finally:
+        f.close()
+
+
+
+
+
 def bigfonts(size=20,family='sans-serif'):
     
     from matplotlib import rc

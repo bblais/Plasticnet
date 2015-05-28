@@ -726,16 +726,18 @@ typedef npy_cdouble __pyx_t_5numpy_complex_t;
  * 
  * cdef class group:             # <<<<<<<<<<<<<<
  *     cdef public object save_attrs,save_data
- * 
+ *     cdef public object name
  */
 struct __pyx_obj_10plasticnet_10plasticnet_group {
   PyObject_HEAD
   PyObject *save_attrs;
   PyObject *save_data;
+  PyObject *name;
+  int verbose;
 };
 
 
-/* "plasticnet/plasticnet.pxd":42
+/* "plasticnet/plasticnet.pxd":44
  * 
  * 
  * cdef class monitor(group):             # <<<<<<<<<<<<<<
@@ -748,13 +750,12 @@ struct __pyx_obj_10plasticnet_10plasticnet_monitor {
   double time_to_next_save;
   double save_interval;
   PyObject *container;
-  PyObject *name;
   PyObject *t;
   PyObject *values;
 };
 
 
-/* "plasticnet/plasticnet.pxd":49
+/* "plasticnet/plasticnet.pxd":51
  *     cpdef update(self,double t)
  * 
  * cdef class simulation(group):             # <<<<<<<<<<<<<<
@@ -772,22 +773,19 @@ struct __pyx_obj_10plasticnet_10plasticnet_simulation {
   PyObject *monitors;
   PyObject *filters;
   int seed;
-  int verbose;
 };
 
 
-/* "plasticnet/plasticnet.pxd":60
+/* "plasticnet/plasticnet.pxd":61
  *     cpdef _reset(self)
  * 
  * cdef class neuron(group):             # <<<<<<<<<<<<<<
- *     cdef public int verbose
- *     cdef public object name
+ *     cdef public int N
+ *     cdef public np.ndarray output,linear_output
  */
 struct __pyx_obj_10plasticnet_10plasticnet_neuron {
   struct __pyx_obj_10plasticnet_10plasticnet_group __pyx_base;
   struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron *__pyx_vtab;
-  int verbose;
-  PyObject *name;
   int N;
   PyArrayObject *output;
   PyArrayObject *linear_output;
@@ -799,7 +797,7 @@ struct __pyx_obj_10plasticnet_10plasticnet_neuron {
 };
 
 
-/* "plasticnet/plasticnet.pxd":71
+/* "plasticnet/plasticnet.pxd":70
  *     cpdef update(self,double t,simulation sim)
  * 
  * cdef class post_process_neuron(group):             # <<<<<<<<<<<<<<
@@ -813,7 +811,7 @@ struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron {
 };
 
 
-/* "plasticnet/plasticnet.pxd":76
+/* "plasticnet/plasticnet.pxd":75
  *     cdef public neuron n
  * 
  * cdef class post_process_channel(group):             # <<<<<<<<<<<<<<
@@ -827,7 +825,7 @@ struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel {
 };
 
 
-/* "plasticnet/plasticnet.pxd":81
+/* "plasticnet/plasticnet.pxd":80
  *     cpdef update(self,double t,simulation sim)
  * 
  * cdef class channel(neuron):             # <<<<<<<<<<<<<<
@@ -843,7 +841,7 @@ struct __pyx_obj_10plasticnet_10plasticnet_channel {
 };
 
 
-/* "plasticnet/plasticnet.pxd":86
+/* "plasticnet/plasticnet.pxd":85
  *     cdef public double time_between_patterns,time_to_next_pattern
  * 
  * cdef class connection(group):             # <<<<<<<<<<<<<<
@@ -861,12 +859,10 @@ struct __pyx_obj_10plasticnet_10plasticnet_connection {
   double *w;
   int reset_to_initial;
   PyObject *post_process;
-  PyObject *name;
-  int verbose;
 };
 
 
-/* "plasticnet/plasticnet.pxd":101
+/* "plasticnet/plasticnet.pxd":97
  *     cpdef update(self,double t,simulation sim)
  * 
  * cdef class post_process_connection(group):             # <<<<<<<<<<<<<<
@@ -956,7 +952,7 @@ struct __pyx_obj_10plasticnet_11connections_7process_normalization {
 
 
 
-/* "plasticnet/plasticnet.pxd":42
+/* "plasticnet/plasticnet.pxd":44
  * 
  * 
  * cdef class monitor(group):             # <<<<<<<<<<<<<<
@@ -970,7 +966,7 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor *__pyx_vtabptr_10plasticnet_10plasticnet_monitor;
 
 
-/* "plasticnet/plasticnet.pxd":49
+/* "plasticnet/plasticnet.pxd":51
  *     cpdef update(self,double t)
  * 
  * cdef class simulation(group):             # <<<<<<<<<<<<<<
@@ -984,12 +980,12 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation *__pyx_vtabptr_10plasticnet_10plasticnet_simulation;
 
 
-/* "plasticnet/plasticnet.pxd":60
+/* "plasticnet/plasticnet.pxd":61
  *     cpdef _reset(self)
  * 
  * cdef class neuron(group):             # <<<<<<<<<<<<<<
- *     cdef public int verbose
- *     cdef public object name
+ *     cdef public int N
+ *     cdef public np.ndarray output,linear_output
  */
 
 struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron {
@@ -999,7 +995,7 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron *__pyx_vtabptr_10plasticnet_10plasticnet_neuron;
 
 
-/* "plasticnet/plasticnet.pxd":71
+/* "plasticnet/plasticnet.pxd":70
  *     cpdef update(self,double t,simulation sim)
  * 
  * cdef class post_process_neuron(group):             # <<<<<<<<<<<<<<
@@ -1014,7 +1010,7 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron;
 
 
-/* "plasticnet/plasticnet.pxd":76
+/* "plasticnet/plasticnet.pxd":75
  *     cdef public neuron n
  * 
  * cdef class post_process_channel(group):             # <<<<<<<<<<<<<<
@@ -1029,7 +1025,7 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel;
 
 
-/* "plasticnet/plasticnet.pxd":81
+/* "plasticnet/plasticnet.pxd":80
  *     cpdef update(self,double t,simulation sim)
  * 
  * cdef class channel(neuron):             # <<<<<<<<<<<<<<
@@ -1043,7 +1039,7 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel *__pyx_vtabptr_10plasticnet_10plasticnet_channel;
 
 
-/* "plasticnet/plasticnet.pxd":86
+/* "plasticnet/plasticnet.pxd":85
  *     cdef public double time_between_patterns,time_to_next_pattern
  * 
  * cdef class connection(group):             # <<<<<<<<<<<<<<
@@ -1058,7 +1054,7 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection *__pyx_vtabptr_10plasticnet_10plasticnet_connection;
 
 
-/* "plasticnet/plasticnet.pxd":101
+/* "plasticnet/plasticnet.pxd":97
  *     cpdef update(self,double t,simulation sim)
  * 
  * cdef class post_process_connection(group):             # <<<<<<<<<<<<<<
@@ -9019,20 +9015,20 @@ PyMODINIT_FUNC PyInit_process(void)
   __pyx_ptype_5numpy_ndarray = __Pyx_ImportType("numpy", "ndarray", sizeof(PyArrayObject), 0); if (unlikely(!__pyx_ptype_5numpy_ndarray)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 181; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5numpy_ufunc = __Pyx_ImportType("numpy", "ufunc", sizeof(PyUFuncObject), 0); if (unlikely(!__pyx_ptype_5numpy_ufunc)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 864; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_10plasticnet_10plasticnet_group = __Pyx_ImportType("plasticnet.plasticnet", "group", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_group), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_group)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_10plasticnet_10plasticnet_monitor = __Pyx_ImportType("plasticnet.plasticnet", "monitor", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_monitor), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_10plasticnet_10plasticnet_monitor = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_monitor->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_10plasticnet_10plasticnet_simulation = __Pyx_ImportType("plasticnet.plasticnet", "simulation", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_simulation), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_10plasticnet_10plasticnet_simulation = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_10plasticnet_10plasticnet_neuron = __Pyx_ImportType("plasticnet.plasticnet", "neuron", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_neuron), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_10plasticnet_10plasticnet_neuron = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron = __Pyx_ImportType("plasticnet.plasticnet", "post_process_neuron", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_10plasticnet_10plasticnet_post_process_channel = __Pyx_ImportType("plasticnet.plasticnet", "post_process_channel", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_channel->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_10plasticnet_10plasticnet_channel = __Pyx_ImportType("plasticnet.plasticnet", "channel", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_channel), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_10plasticnet_10plasticnet_channel = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_channel->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_10plasticnet_10plasticnet_connection = __Pyx_ImportType("plasticnet.plasticnet", "connection", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_connection), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_connection)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 86; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_10plasticnet_10plasticnet_connection = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_connection->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_connection)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 86; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_monitor = __Pyx_ImportType("plasticnet.plasticnet", "monitor", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_monitor), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_monitor = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_monitor->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_simulation = __Pyx_ImportType("plasticnet.plasticnet", "simulation", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_simulation), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_simulation = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_neuron = __Pyx_ImportType("plasticnet.plasticnet", "neuron", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_neuron), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_neuron = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron = __Pyx_ImportType("plasticnet.plasticnet", "post_process_neuron", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 70; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 70; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_post_process_channel = __Pyx_ImportType("plasticnet.plasticnet", "post_process_channel", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_channel->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_channel = __Pyx_ImportType("plasticnet.plasticnet", "channel", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_channel), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_channel = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_channel->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_connection = __Pyx_ImportType("plasticnet.plasticnet", "connection", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_connection), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_connection)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 85; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_connection = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_connection->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_connection)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 85; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   /*--- Variable import code ---*/
   /*--- Function import code ---*/
   /*--- Execution code ---*/

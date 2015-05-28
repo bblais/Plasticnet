@@ -72,7 +72,7 @@ def makeExtension(extName):
         extName,
         files,
         include_dirs = [numpy.get_include(), ".", "%s/" % folder],   # adding the '.' to include_dirs is CRUCIAL!!
-        extra_compile_args = ["-O3", "-Wall"],
+        extra_compile_args = ["-O3", ],
         extra_link_args = ['-g'],
         )
 

@@ -723,16 +723,18 @@ typedef npy_cdouble __pyx_t_5numpy_complex_t;
  * 
  * cdef class group:             # <<<<<<<<<<<<<<
  *     cdef public object save_attrs,save_data
- * 
+ *     cdef public object name
  */
 struct __pyx_obj_10plasticnet_10plasticnet_group {
   PyObject_HEAD
   PyObject *save_attrs;
   PyObject *save_data;
+  PyObject *name;
+  int verbose;
 };
 
 
-/* "plasticnet/plasticnet.pxd":42
+/* "plasticnet/plasticnet.pxd":44
  * 
  * 
  * cdef class monitor(group):             # <<<<<<<<<<<<<<
@@ -745,13 +747,12 @@ struct __pyx_obj_10plasticnet_10plasticnet_monitor {
   double time_to_next_save;
   double save_interval;
   PyObject *container;
-  PyObject *name;
   PyObject *t;
   PyObject *values;
 };
 
 
-/* "plasticnet/plasticnet.pxd":49
+/* "plasticnet/plasticnet.pxd":51
  *     cpdef update(self,double t)
  * 
  * cdef class simulation(group):             # <<<<<<<<<<<<<<
@@ -769,22 +770,19 @@ struct __pyx_obj_10plasticnet_10plasticnet_simulation {
   PyObject *monitors;
   PyObject *filters;
   int seed;
-  int verbose;
 };
 
 
-/* "plasticnet/plasticnet.pxd":60
+/* "plasticnet/plasticnet.pxd":61
  *     cpdef _reset(self)
  * 
  * cdef class neuron(group):             # <<<<<<<<<<<<<<
- *     cdef public int verbose
- *     cdef public object name
+ *     cdef public int N
+ *     cdef public np.ndarray output,linear_output
  */
 struct __pyx_obj_10plasticnet_10plasticnet_neuron {
   struct __pyx_obj_10plasticnet_10plasticnet_group __pyx_base;
   struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron *__pyx_vtab;
-  int verbose;
-  PyObject *name;
   int N;
   PyArrayObject *output;
   PyArrayObject *linear_output;
@@ -796,7 +794,7 @@ struct __pyx_obj_10plasticnet_10plasticnet_neuron {
 };
 
 
-/* "plasticnet/plasticnet.pxd":71
+/* "plasticnet/plasticnet.pxd":70
  *     cpdef update(self,double t,simulation sim)
  * 
  * cdef class post_process_neuron(group):             # <<<<<<<<<<<<<<
@@ -810,7 +808,7 @@ struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron {
 };
 
 
-/* "plasticnet/plasticnet.pxd":76
+/* "plasticnet/plasticnet.pxd":75
  *     cdef public neuron n
  * 
  * cdef class post_process_channel(group):             # <<<<<<<<<<<<<<
@@ -824,7 +822,7 @@ struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel {
 };
 
 
-/* "plasticnet/plasticnet.pxd":81
+/* "plasticnet/plasticnet.pxd":80
  *     cpdef update(self,double t,simulation sim)
  * 
  * cdef class channel(neuron):             # <<<<<<<<<<<<<<
@@ -840,7 +838,7 @@ struct __pyx_obj_10plasticnet_10plasticnet_channel {
 };
 
 
-/* "plasticnet/plasticnet.pxd":86
+/* "plasticnet/plasticnet.pxd":85
  *     cdef public double time_between_patterns,time_to_next_pattern
  * 
  * cdef class connection(group):             # <<<<<<<<<<<<<<
@@ -858,12 +856,10 @@ struct __pyx_obj_10plasticnet_10plasticnet_connection {
   double *w;
   int reset_to_initial;
   PyObject *post_process;
-  PyObject *name;
-  int verbose;
 };
 
 
-/* "plasticnet/plasticnet.pxd":101
+/* "plasticnet/plasticnet.pxd":97
  *     cpdef update(self,double t,simulation sim)
  * 
  * cdef class post_process_connection(group):             # <<<<<<<<<<<<<<
@@ -897,7 +893,7 @@ struct __pyx_obj_10plasticnet_11connections_3BCM_BCM {
 };
 
 
-/* "plasticnet/connections/BCM.pyx":70
+/* "plasticnet/connections/BCM.pyx":73
  * 
  * 
  * cdef class BCM_LawCooper(connection):             # <<<<<<<<<<<<<<
@@ -918,7 +914,7 @@ struct __pyx_obj_10plasticnet_11connections_3BCM_BCM_LawCooper {
 
 
 
-/* "plasticnet/plasticnet.pxd":42
+/* "plasticnet/plasticnet.pxd":44
  * 
  * 
  * cdef class monitor(group):             # <<<<<<<<<<<<<<
@@ -932,7 +928,7 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor *__pyx_vtabptr_10plasticnet_10plasticnet_monitor;
 
 
-/* "plasticnet/plasticnet.pxd":49
+/* "plasticnet/plasticnet.pxd":51
  *     cpdef update(self,double t)
  * 
  * cdef class simulation(group):             # <<<<<<<<<<<<<<
@@ -946,12 +942,12 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation *__pyx_vtabptr_10plasticnet_10plasticnet_simulation;
 
 
-/* "plasticnet/plasticnet.pxd":60
+/* "plasticnet/plasticnet.pxd":61
  *     cpdef _reset(self)
  * 
  * cdef class neuron(group):             # <<<<<<<<<<<<<<
- *     cdef public int verbose
- *     cdef public object name
+ *     cdef public int N
+ *     cdef public np.ndarray output,linear_output
  */
 
 struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron {
@@ -961,7 +957,7 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron *__pyx_vtabptr_10plasticnet_10plasticnet_neuron;
 
 
-/* "plasticnet/plasticnet.pxd":71
+/* "plasticnet/plasticnet.pxd":70
  *     cpdef update(self,double t,simulation sim)
  * 
  * cdef class post_process_neuron(group):             # <<<<<<<<<<<<<<
@@ -976,7 +972,7 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron;
 
 
-/* "plasticnet/plasticnet.pxd":76
+/* "plasticnet/plasticnet.pxd":75
  *     cdef public neuron n
  * 
  * cdef class post_process_channel(group):             # <<<<<<<<<<<<<<
@@ -991,7 +987,7 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel;
 
 
-/* "plasticnet/plasticnet.pxd":81
+/* "plasticnet/plasticnet.pxd":80
  *     cpdef update(self,double t,simulation sim)
  * 
  * cdef class channel(neuron):             # <<<<<<<<<<<<<<
@@ -1005,7 +1001,7 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel *__pyx_vtabptr_10plasticnet_10plasticnet_channel;
 
 
-/* "plasticnet/plasticnet.pxd":86
+/* "plasticnet/plasticnet.pxd":85
  *     cdef public double time_between_patterns,time_to_next_pattern
  * 
  * cdef class connection(group):             # <<<<<<<<<<<<<<
@@ -1020,7 +1016,7 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection *__pyx_vtabptr_10plasticnet_10plasticnet_connection;
 
 
-/* "plasticnet/plasticnet.pxd":101
+/* "plasticnet/plasticnet.pxd":97
  *     cpdef update(self,double t,simulation sim)
  * 
  * cdef class post_process_connection(group):             # <<<<<<<<<<<<<<
@@ -1049,7 +1045,7 @@ struct __pyx_vtabstruct_10plasticnet_11connections_3BCM_BCM {
 static struct __pyx_vtabstruct_10plasticnet_11connections_3BCM_BCM *__pyx_vtabptr_10plasticnet_11connections_3BCM_BCM;
 
 
-/* "plasticnet/connections/BCM.pyx":70
+/* "plasticnet/connections/BCM.pyx":73
  * 
  * 
  * cdef class BCM_LawCooper(connection):             # <<<<<<<<<<<<<<
@@ -1501,25 +1497,33 @@ static char __pyx_k_Zd[] = "Zd";
 static char __pyx_k_Zf[] = "Zf";
 static char __pyx_k_Zg[] = "Zg";
 static char __pyx_k_np[] = "np";
+static char __pyx_k_yo[] = "yo";
 static char __pyx_k_BCM[] = "BCM";
+static char __pyx_k_eta[] = "eta";
 static char __pyx_k_pre[] = "pre";
 static char __pyx_k_sim[] = "sim";
+static char __pyx_k_tau[] = "tau";
 static char __pyx_k_copy[] = "copy";
 static char __pyx_k_init[] = "__init__";
 static char __pyx_k_main[] = "__main__";
 static char __pyx_k_post[] = "post";
 static char __pyx_k_rand[] = "rand";
 static char __pyx_k_test[] = "__test__";
+static char __pyx_k_gamma[] = "gamma";
 static char __pyx_k_numpy[] = "numpy";
 static char __pyx_k_pylab[] = "pylab";
 static char __pyx_k_range[] = "range";
 static char __pyx_k_reset[] = "_reset";
+static char __pyx_k_theta[] = "theta";
+static char __pyx_k_extend[] = "extend";
 static char __pyx_k_import[] = "__import__";
 static char __pyx_k_update[] = "update";
+static char __pyx_k_theta_o[] = "theta_o";
 static char __pyx_k_ValueError[] = "ValueError";
 static char __pyx_k_pyx_vtable[] = "__pyx_vtable__";
 static char __pyx_k_RuntimeError[] = "RuntimeError";
 static char __pyx_k_BCM_LawCooper[] = "BCM LawCooper";
+static char __pyx_k_initial_theta[] = "initial_theta";
 static char __pyx_k_initial_theta_range[] = "initial_theta_range";
 static char __pyx_k_initial_weight_range[] = "initial_weight_range";
 static char __pyx_k_ndarray_is_not_C_contiguous[] = "ndarray is not C contiguous";
@@ -1536,8 +1540,12 @@ static PyObject *__pyx_kp_u_Non_native_byte_order_not_suppor;
 static PyObject *__pyx_n_s_RuntimeError;
 static PyObject *__pyx_n_s_ValueError;
 static PyObject *__pyx_n_s_copy;
+static PyObject *__pyx_n_s_eta;
+static PyObject *__pyx_n_s_extend;
+static PyObject *__pyx_n_s_gamma;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_init;
+static PyObject *__pyx_n_s_initial_theta;
 static PyObject *__pyx_n_s_initial_theta_range;
 static PyObject *__pyx_n_s_initial_weight_range;
 static PyObject *__pyx_n_s_main;
@@ -1554,9 +1562,13 @@ static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_reset;
 static PyObject *__pyx_n_s_sim;
 static PyObject *__pyx_n_s_t;
+static PyObject *__pyx_n_s_tau;
 static PyObject *__pyx_n_s_test;
+static PyObject *__pyx_n_s_theta;
+static PyObject *__pyx_n_s_theta_o;
 static PyObject *__pyx_kp_u_unknown_dtype_code_in_numpy_pxd;
 static PyObject *__pyx_n_s_update;
+static PyObject *__pyx_n_s_yo;
 static PyObject *__pyx_float__1;
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_tuple_;
@@ -1985,6 +1997,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_3BCM_2__init__(struct __pyx_
   PyObject *__pyx_t_5 = NULL;
   Py_ssize_t __pyx_t_6;
   PyObject *__pyx_t_7 = NULL;
+  PyObject *__pyx_t_8 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -2138,19 +2151,121 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_3BCM_2__init__(struct __pyx_
  */
   __Pyx_INCREF(__pyx_n_s_BCM);
   __Pyx_GIVEREF(__pyx_n_s_BCM);
-  __Pyx_GOTREF(__pyx_v_self->__pyx_base.name);
-  __Pyx_DECREF(__pyx_v_self->__pyx_base.name);
-  __pyx_v_self->__pyx_base.name = __pyx_n_s_BCM;
+  __Pyx_GOTREF(__pyx_v_self->__pyx_base.__pyx_base.name);
+  __Pyx_DECREF(__pyx_v_self->__pyx_base.__pyx_base.name);
+  __pyx_v_self->__pyx_base.__pyx_base.name = __pyx_n_s_BCM;
 
   /* "plasticnet/connections/BCM.pyx":39
  *         self.yo=0.0
  *         self.name='BCM'
  *         self._reset()             # <<<<<<<<<<<<<<
  * 
- * 
+ *         self.save_attrs.extend(['eta','tau','gamma','theta_o','yo'])
  */
   __pyx_t_3 = ((struct __pyx_vtabstruct_10plasticnet_11connections_3BCM_BCM *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_10plasticnet_10plasticnet_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+  /* "plasticnet/connections/BCM.pyx":41
+ *         self._reset()
+ * 
+ *         self.save_attrs.extend(['eta','tau','gamma','theta_o','yo'])             # <<<<<<<<<<<<<<
+ *         self.save_data.extend(['theta','initial_theta','initial_theta_range'])
+ * 
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_n_s_extend); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_7 = PyList_New(5); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_7);
+  __Pyx_INCREF(__pyx_n_s_eta);
+  PyList_SET_ITEM(__pyx_t_7, 0, __pyx_n_s_eta);
+  __Pyx_GIVEREF(__pyx_n_s_eta);
+  __Pyx_INCREF(__pyx_n_s_tau);
+  PyList_SET_ITEM(__pyx_t_7, 1, __pyx_n_s_tau);
+  __Pyx_GIVEREF(__pyx_n_s_tau);
+  __Pyx_INCREF(__pyx_n_s_gamma);
+  PyList_SET_ITEM(__pyx_t_7, 2, __pyx_n_s_gamma);
+  __Pyx_GIVEREF(__pyx_n_s_gamma);
+  __Pyx_INCREF(__pyx_n_s_theta_o);
+  PyList_SET_ITEM(__pyx_t_7, 3, __pyx_n_s_theta_o);
+  __Pyx_GIVEREF(__pyx_n_s_theta_o);
+  __Pyx_INCREF(__pyx_n_s_yo);
+  PyList_SET_ITEM(__pyx_t_7, 4, __pyx_n_s_yo);
+  __Pyx_GIVEREF(__pyx_n_s_yo);
+  __pyx_t_5 = NULL;
+  if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
+    if (likely(__pyx_t_5)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+      __Pyx_INCREF(__pyx_t_5);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_4, function);
+    }
+  }
+  if (!__pyx_t_5) {
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __Pyx_GOTREF(__pyx_t_3);
+  } else {
+    __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_8);
+    PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
+    PyTuple_SET_ITEM(__pyx_t_8, 0+1, __pyx_t_7);
+    __Pyx_GIVEREF(__pyx_t_7);
+    __pyx_t_7 = 0;
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+  }
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+  /* "plasticnet/connections/BCM.pyx":42
+ * 
+ *         self.save_attrs.extend(['eta','tau','gamma','theta_o','yo'])
+ *         self.save_data.extend(['theta','initial_theta','initial_theta_range'])             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->__pyx_base.__pyx_base.save_data, __pyx_n_s_extend); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_8 = PyList_New(3); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_8);
+  __Pyx_INCREF(__pyx_n_s_theta);
+  PyList_SET_ITEM(__pyx_t_8, 0, __pyx_n_s_theta);
+  __Pyx_GIVEREF(__pyx_n_s_theta);
+  __Pyx_INCREF(__pyx_n_s_initial_theta);
+  PyList_SET_ITEM(__pyx_t_8, 1, __pyx_n_s_initial_theta);
+  __Pyx_GIVEREF(__pyx_n_s_initial_theta);
+  __Pyx_INCREF(__pyx_n_s_initial_theta_range);
+  PyList_SET_ITEM(__pyx_t_8, 2, __pyx_n_s_initial_theta_range);
+  __Pyx_GIVEREF(__pyx_n_s_initial_theta_range);
+  __pyx_t_7 = NULL;
+  if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
+    __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_4);
+    if (likely(__pyx_t_7)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+      __Pyx_INCREF(__pyx_t_7);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_4, function);
+    }
+  }
+  if (!__pyx_t_7) {
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_8); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __Pyx_GOTREF(__pyx_t_3);
+  } else {
+    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_5);
+    PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_7); __Pyx_GIVEREF(__pyx_t_7); __pyx_t_7 = NULL;
+    PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_8);
+    __Pyx_GIVEREF(__pyx_t_8);
+    __pyx_t_8 = 0;
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  }
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "plasticnet/connections/BCM.pyx":25
@@ -2169,6 +2284,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_3BCM_2__init__(struct __pyx_
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7);
+  __Pyx_XDECREF(__pyx_t_8);
   __Pyx_AddTraceback("plasticnet.connections.BCM.BCM.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
@@ -2176,7 +2292,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_3BCM_2__init__(struct __pyx_
   return __pyx_r;
 }
 
-/* "plasticnet/connections/BCM.pyx":44
+/* "plasticnet/connections/BCM.pyx":47
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -2221,11 +2337,11 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_11connections_3BCM_3BCM_5update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -2240,7 +2356,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
           __pyx_t_6 = 1;
         }
       }
-      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_7);
       if (__pyx_t_5) {
         PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
@@ -2251,7 +2367,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
       PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
       __pyx_t_3 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -2263,7 +2379,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "plasticnet/connections/BCM.pyx":47
+  /* "plasticnet/connections/BCM.pyx":50
  *         cdef int __i,__j
  * 
  *         cdef double *W=<double *>self.weights.data             # <<<<<<<<<<<<<<
@@ -2272,7 +2388,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
  */
   __pyx_v_W = ((double *)__pyx_v_self->__pyx_base.weights->data);
 
-  /* "plasticnet/connections/BCM.pyx":48
+  /* "plasticnet/connections/BCM.pyx":51
  * 
  *         cdef double *W=<double *>self.weights.data
  *         cdef double *theta=<double *>self.theta.data             # <<<<<<<<<<<<<<
@@ -2281,7 +2397,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
  */
   __pyx_v_theta = ((double *)__pyx_v_self->theta->data);
 
-  /* "plasticnet/connections/BCM.pyx":52
+  /* "plasticnet/connections/BCM.pyx":55
  *         cdef double *Y   # outputs for pre and post
  *         cdef int __wi
  *         cdef double eta=self.eta             # <<<<<<<<<<<<<<
@@ -2291,7 +2407,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
   __pyx_t_8 = __pyx_v_self->eta;
   __pyx_v_eta = __pyx_t_8;
 
-  /* "plasticnet/connections/BCM.pyx":53
+  /* "plasticnet/connections/BCM.pyx":56
  *         cdef int __wi
  *         cdef double eta=self.eta
  *         cdef double tau=self.tau             # <<<<<<<<<<<<<<
@@ -2301,7 +2417,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
   __pyx_t_8 = __pyx_v_self->tau;
   __pyx_v_tau = __pyx_t_8;
 
-  /* "plasticnet/connections/BCM.pyx":54
+  /* "plasticnet/connections/BCM.pyx":57
  *         cdef double eta=self.eta
  *         cdef double tau=self.tau
  *         cdef double gamma=self.gamma             # <<<<<<<<<<<<<<
@@ -2311,7 +2427,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
   __pyx_t_8 = __pyx_v_self->gamma;
   __pyx_v_gamma = __pyx_t_8;
 
-  /* "plasticnet/connections/BCM.pyx":55
+  /* "plasticnet/connections/BCM.pyx":58
  *         cdef double tau=self.tau
  *         cdef double gamma=self.gamma
  *         cdef double yo=self.yo             # <<<<<<<<<<<<<<
@@ -2321,7 +2437,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
   __pyx_t_8 = __pyx_v_self->yo;
   __pyx_v_yo = __pyx_t_8;
 
-  /* "plasticnet/connections/BCM.pyx":56
+  /* "plasticnet/connections/BCM.pyx":59
  *         cdef double gamma=self.gamma
  *         cdef double yo=self.yo
  *         cdef double theta_o=self.theta_o             # <<<<<<<<<<<<<<
@@ -2331,7 +2447,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
   __pyx_t_8 = __pyx_v_self->theta_o;
   __pyx_v_theta_o = __pyx_t_8;
 
-  /* "plasticnet/connections/BCM.pyx":58
+  /* "plasticnet/connections/BCM.pyx":61
  *         cdef double theta_o=self.theta_o
  * 
  *         X=<double *>self.pre.output.data             # <<<<<<<<<<<<<<
@@ -2340,7 +2456,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
  */
   __pyx_v_X = ((double *)__pyx_v_self->__pyx_base.pre->output->data);
 
-  /* "plasticnet/connections/BCM.pyx":59
+  /* "plasticnet/connections/BCM.pyx":62
  * 
  *         X=<double *>self.pre.output.data
  *         Y=<double *>self.post.output.data             # <<<<<<<<<<<<<<
@@ -2349,7 +2465,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
  */
   __pyx_v_Y = ((double *)__pyx_v_self->__pyx_base.post->output->data);
 
-  /* "plasticnet/connections/BCM.pyx":61
+  /* "plasticnet/connections/BCM.pyx":64
  *         Y=<double *>self.post.output.data
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -2360,7 +2476,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
     __pyx_v___i = __pyx_t_10;
 
-    /* "plasticnet/connections/BCM.pyx":62
+    /* "plasticnet/connections/BCM.pyx":65
  * 
  *         for __i in range(self.post.N):
  *             for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -2371,7 +2487,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
     for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
       __pyx_v___j = __pyx_t_12;
 
-      /* "plasticnet/connections/BCM.pyx":63
+      /* "plasticnet/connections/BCM.pyx":66
  *         for __i in range(self.post.N):
  *             for __j in range(self.pre.N):
  *                 __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
@@ -2380,7 +2496,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
  */
       __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-      /* "plasticnet/connections/BCM.pyx":64
+      /* "plasticnet/connections/BCM.pyx":67
  *             for __j in range(self.pre.N):
  *                 __wi=__i*self.pre.N+__j
  *                 W[__wi]+=sim.dt*(eta*X[__j]*(Y[__i]-yo)*((Y[__i]-yo)-theta[__i])-eta*gamma*W[__wi])             # <<<<<<<<<<<<<<
@@ -2392,7 +2508,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
     }
   }
 
-  /* "plasticnet/connections/BCM.pyx":66
+  /* "plasticnet/connections/BCM.pyx":69
  *                 W[__wi]+=sim.dt*(eta*X[__j]*(Y[__i]-yo)*((Y[__i]-yo)-theta[__i])-eta*gamma*W[__wi])
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -2403,7 +2519,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
     __pyx_v___i = __pyx_t_10;
 
-    /* "plasticnet/connections/BCM.pyx":67
+    /* "plasticnet/connections/BCM.pyx":70
  * 
  *         for __i in range(self.post.N):
  *             theta[__i]+=sim.dt*(Y[__i]*Y[__i]/theta_o-theta[__i])/tau             # <<<<<<<<<<<<<<
@@ -2414,7 +2530,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_3BCM_update(struct __py
     (__pyx_v_theta[__pyx_t_11]) = ((__pyx_v_theta[__pyx_t_11]) + ((__pyx_v_sim->dt * ((((__pyx_v_Y[__pyx_v___i]) * (__pyx_v_Y[__pyx_v___i])) / __pyx_v_theta_o) - (__pyx_v_theta[__pyx_v___i]))) / __pyx_v_tau));
   }
 
-  /* "plasticnet/connections/BCM.pyx":44
+  /* "plasticnet/connections/BCM.pyx":47
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -2471,11 +2587,11 @@ static PyObject *__pyx_pw_10plasticnet_11connections_3BCM_3BCM_5update(PyObject 
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -2483,18 +2599,18 @@ static PyObject *__pyx_pw_10plasticnet_11connections_3BCM_3BCM_5update(PyObject 
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     __pyx_v_sim = ((struct __pyx_obj_10plasticnet_10plasticnet_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.connections.BCM.BCM.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_10plasticnet_11connections_3BCM_3BCM_4update(((struct __pyx_obj_10plasticnet_11connections_3BCM_BCM *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -2515,7 +2631,7 @@ static PyObject *__pyx_pf_10plasticnet_11connections_3BCM_3BCM_4update(struct __
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_10plasticnet_11connections_3BCM_3BCM_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_10plasticnet_11connections_3BCM_3BCM_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3221,7 +3337,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_3BCM_19initial_theta_range_4
   return __pyx_r;
 }
 
-/* "plasticnet/connections/BCM.pyx":77
+/* "plasticnet/connections/BCM.pyx":80
  *     cdef public object initial_theta_range
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -3246,7 +3362,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper__reset(
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 77; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_11connections_3BCM_13BCM_LawCooper_1_reset)) {
       __Pyx_XDECREF(__pyx_r);
@@ -3262,10 +3378,10 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper__reset(
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 77; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 77; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -3277,19 +3393,19 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper__reset(
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "plasticnet/connections/BCM.pyx":78
+  /* "plasticnet/connections/BCM.pyx":81
  * 
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.initial_theta=self.theta.copy()
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_rand); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_rand); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -3302,66 +3418,66 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper__reset(
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
     PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_2);
     __Pyx_GIVEREF(__pyx_t_2);
     __pyx_t_2 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "plasticnet/connections/BCM.pyx":79
+  /* "plasticnet/connections/BCM.pyx":82
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  *         self.initial_theta=self.theta.copy()
  *         connection._reset(self)
  */
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_5 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 79; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_5 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "plasticnet/connections/BCM.pyx":78
+  /* "plasticnet/connections/BCM.pyx":81
  * 
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.initial_theta=self.theta.copy()
  */
-  __pyx_t_2 = PyNumber_Subtract(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyNumber_Subtract(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "plasticnet/connections/BCM.pyx":79
+  /* "plasticnet/connections/BCM.pyx":82
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  *         self.initial_theta=self.theta.copy()
  *         connection._reset(self)
  */
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 79; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyNumber_Add(__pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 79; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyNumber_Add(__pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 79; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "plasticnet/connections/BCM.pyx":78
+  /* "plasticnet/connections/BCM.pyx":81
  * 
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -3374,14 +3490,14 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper__reset(
   __pyx_v_self->theta = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "plasticnet/connections/BCM.pyx":80
+  /* "plasticnet/connections/BCM.pyx":83
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.initial_theta=self.theta.copy()             # <<<<<<<<<<<<<<
  *         connection._reset(self)
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->theta), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->theta), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_5 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -3394,32 +3510,32 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper__reset(
     }
   }
   if (__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->initial_theta);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->initial_theta));
   __pyx_v_self->initial_theta = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "plasticnet/connections/BCM.pyx":81
+  /* "plasticnet/connections/BCM.pyx":84
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.initial_theta=self.theta.copy()
  *         connection._reset(self)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_1 = __pyx_vtabptr_10plasticnet_10plasticnet_connection->_reset(((struct __pyx_obj_10plasticnet_10plasticnet_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_vtabptr_10plasticnet_10plasticnet_connection->_reset(((struct __pyx_obj_10plasticnet_10plasticnet_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 84; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "plasticnet/connections/BCM.pyx":77
+  /* "plasticnet/connections/BCM.pyx":80
  *     cdef public object initial_theta_range
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -3466,7 +3582,7 @@ static PyObject *__pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper__reset
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_reset", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 77; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3483,7 +3599,7 @@ static PyObject *__pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper__reset
   return __pyx_r;
 }
 
-/* "plasticnet/connections/BCM.pyx":84
+/* "plasticnet/connections/BCM.pyx":87
  * 
  * 
  *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,initial_theta_range=None):             # <<<<<<<<<<<<<<
@@ -3528,7 +3644,7 @@ static int __pyx_pw_10plasticnet_11connections_3BCM_13BCM_LawCooper_3__init__(Py
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_post)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 4, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 84; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 4, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 87; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  2:
         if (kw_args > 0) {
@@ -3542,7 +3658,7 @@ static int __pyx_pw_10plasticnet_11connections_3BCM_13BCM_LawCooper_3__init__(Py
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 84; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 87; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -3561,14 +3677,14 @@ static int __pyx_pw_10plasticnet_11connections_3BCM_13BCM_LawCooper_3__init__(Py
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 84; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 87; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.connections.BCM.BCM_LawCooper.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_10plasticnet_10plasticnet_neuron, 1, "pre", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 84; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_10plasticnet_10plasticnet_neuron, 1, "post", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 84; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_10plasticnet_10plasticnet_neuron, 1, "pre", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 87; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_10plasticnet_10plasticnet_neuron, 1, "post", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 87; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2__init__(((struct __pyx_obj_10plasticnet_11connections_3BCM_BCM_LawCooper *)__pyx_v_self), __pyx_v_pre, __pyx_v_post, __pyx_v_initial_weight_range, __pyx_v_initial_theta_range);
 
   /* function exit code */
@@ -3595,7 +3711,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2__init__(st
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "plasticnet/connections/BCM.pyx":85
+  /* "plasticnet/connections/BCM.pyx":88
  * 
  *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,initial_theta_range=None):
  *         if initial_theta_range is None:             # <<<<<<<<<<<<<<
@@ -3606,14 +3722,14 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2__init__(st
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "plasticnet/connections/BCM.pyx":86
+    /* "plasticnet/connections/BCM.pyx":89
  *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,initial_theta_range=None):
  *         if initial_theta_range is None:
  *             self.initial_theta_range=[0,.1]             # <<<<<<<<<<<<<<
  *         else:
  *             self.initial_theta_range=initial_theta_range
  */
-    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 86; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_int_0);
     PyList_SET_ITEM(__pyx_t_3, 0, __pyx_int_0);
@@ -3630,7 +3746,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2__init__(st
   }
   /*else*/ {
 
-    /* "plasticnet/connections/BCM.pyx":88
+    /* "plasticnet/connections/BCM.pyx":91
  *             self.initial_theta_range=[0,.1]
  *         else:
  *             self.initial_theta_range=initial_theta_range             # <<<<<<<<<<<<<<
@@ -3645,14 +3761,14 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2__init__(st
   }
   __pyx_L3:;
 
-  /* "plasticnet/connections/BCM.pyx":90
+  /* "plasticnet/connections/BCM.pyx":93
  *             self.initial_theta_range=initial_theta_range
  * 
  *         connection.__init__(self,pre,post,initial_weight_range)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)((PyObject*)__pyx_ptype_10plasticnet_10plasticnet_connection)), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 90; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)((PyObject*)__pyx_ptype_10plasticnet_10plasticnet_connection)), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -3666,7 +3782,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2__init__(st
       __pyx_t_6 = 1;
     }
   }
-  __pyx_t_7 = PyTuple_New(4+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 90; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = PyTuple_New(4+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
   if (__pyx_t_5) {
     PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
@@ -3683,13 +3799,13 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2__init__(st
   __Pyx_INCREF(__pyx_v_initial_weight_range);
   PyTuple_SET_ITEM(__pyx_t_7, 3+__pyx_t_6, __pyx_v_initial_weight_range);
   __Pyx_GIVEREF(__pyx_v_initial_weight_range);
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 90; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "plasticnet/connections/BCM.pyx":93
+  /* "plasticnet/connections/BCM.pyx":96
  * 
  * 
  *         self.eta=1e-5             # <<<<<<<<<<<<<<
@@ -3698,7 +3814,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2__init__(st
  */
   __pyx_v_self->eta = 1e-5;
 
-  /* "plasticnet/connections/BCM.pyx":94
+  /* "plasticnet/connections/BCM.pyx":97
  * 
  *         self.eta=1e-5
  *         self.tau=100.0             # <<<<<<<<<<<<<<
@@ -3707,7 +3823,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2__init__(st
  */
   __pyx_v_self->tau = 100.0;
 
-  /* "plasticnet/connections/BCM.pyx":95
+  /* "plasticnet/connections/BCM.pyx":98
  *         self.eta=1e-5
  *         self.tau=100.0
  *         self.gamma=0.0             # <<<<<<<<<<<<<<
@@ -3716,7 +3832,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2__init__(st
  */
   __pyx_v_self->gamma = 0.0;
 
-  /* "plasticnet/connections/BCM.pyx":96
+  /* "plasticnet/connections/BCM.pyx":99
  *         self.tau=100.0
  *         self.gamma=0.0
  *         self.theta_o=1.0             # <<<<<<<<<<<<<<
@@ -3725,7 +3841,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2__init__(st
  */
   __pyx_v_self->theta_o = 1.0;
 
-  /* "plasticnet/connections/BCM.pyx":97
+  /* "plasticnet/connections/BCM.pyx":100
  *         self.gamma=0.0
  *         self.theta_o=1.0
  *         self.yo=0.0             # <<<<<<<<<<<<<<
@@ -3734,7 +3850,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2__init__(st
  */
   __pyx_v_self->yo = 0.0;
 
-  /* "plasticnet/connections/BCM.pyx":98
+  /* "plasticnet/connections/BCM.pyx":101
  *         self.theta_o=1.0
  *         self.yo=0.0
  *         self.name='BCM LawCooper'             # <<<<<<<<<<<<<<
@@ -3743,22 +3859,22 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2__init__(st
  */
   __Pyx_INCREF(__pyx_kp_s_BCM_LawCooper);
   __Pyx_GIVEREF(__pyx_kp_s_BCM_LawCooper);
-  __Pyx_GOTREF(__pyx_v_self->__pyx_base.name);
-  __Pyx_DECREF(__pyx_v_self->__pyx_base.name);
-  __pyx_v_self->__pyx_base.name = __pyx_kp_s_BCM_LawCooper;
+  __Pyx_GOTREF(__pyx_v_self->__pyx_base.__pyx_base.name);
+  __Pyx_DECREF(__pyx_v_self->__pyx_base.__pyx_base.name);
+  __pyx_v_self->__pyx_base.__pyx_base.name = __pyx_kp_s_BCM_LawCooper;
 
-  /* "plasticnet/connections/BCM.pyx":99
+  /* "plasticnet/connections/BCM.pyx":102
  *         self.yo=0.0
  *         self.name='BCM LawCooper'
  *         self._reset()             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_3 = ((struct __pyx_vtabstruct_10plasticnet_11connections_3BCM_BCM_LawCooper *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_10plasticnet_10plasticnet_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 99; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = ((struct __pyx_vtabstruct_10plasticnet_11connections_3BCM_BCM_LawCooper *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_10plasticnet_10plasticnet_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 102; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "plasticnet/connections/BCM.pyx":84
+  /* "plasticnet/connections/BCM.pyx":87
  * 
  * 
  *     def __init__(self,neuron pre,neuron post,initial_weight_range=None,initial_theta_range=None):             # <<<<<<<<<<<<<<
@@ -3781,7 +3897,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2__init__(st
   return __pyx_r;
 }
 
-/* "plasticnet/connections/BCM.pyx":104
+/* "plasticnet/connections/BCM.pyx":107
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -3826,11 +3942,11 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_11connections_3BCM_13BCM_LawCooper_5update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -3845,7 +3961,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
           __pyx_t_6 = 1;
         }
       }
-      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_7);
       if (__pyx_t_5) {
         PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
@@ -3856,7 +3972,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
       PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
       __pyx_t_3 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -3868,7 +3984,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "plasticnet/connections/BCM.pyx":107
+  /* "plasticnet/connections/BCM.pyx":110
  *         cdef int __i,__j
  * 
  *         cdef double *W=<double *>self.weights.data             # <<<<<<<<<<<<<<
@@ -3877,7 +3993,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
  */
   __pyx_v_W = ((double *)__pyx_v_self->__pyx_base.weights->data);
 
-  /* "plasticnet/connections/BCM.pyx":108
+  /* "plasticnet/connections/BCM.pyx":111
  * 
  *         cdef double *W=<double *>self.weights.data
  *         cdef double *theta=<double *>self.theta.data             # <<<<<<<<<<<<<<
@@ -3886,7 +4002,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
  */
   __pyx_v_theta = ((double *)__pyx_v_self->theta->data);
 
-  /* "plasticnet/connections/BCM.pyx":112
+  /* "plasticnet/connections/BCM.pyx":115
  *         cdef double *Y   # outputs for pre and post
  *         cdef int __wi
  *         cdef double eta=self.eta             # <<<<<<<<<<<<<<
@@ -3896,7 +4012,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
   __pyx_t_8 = __pyx_v_self->eta;
   __pyx_v_eta = __pyx_t_8;
 
-  /* "plasticnet/connections/BCM.pyx":113
+  /* "plasticnet/connections/BCM.pyx":116
  *         cdef int __wi
  *         cdef double eta=self.eta
  *         cdef double tau=self.tau             # <<<<<<<<<<<<<<
@@ -3906,7 +4022,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
   __pyx_t_8 = __pyx_v_self->tau;
   __pyx_v_tau = __pyx_t_8;
 
-  /* "plasticnet/connections/BCM.pyx":114
+  /* "plasticnet/connections/BCM.pyx":117
  *         cdef double eta=self.eta
  *         cdef double tau=self.tau
  *         cdef double gamma=self.gamma             # <<<<<<<<<<<<<<
@@ -3916,7 +4032,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
   __pyx_t_8 = __pyx_v_self->gamma;
   __pyx_v_gamma = __pyx_t_8;
 
-  /* "plasticnet/connections/BCM.pyx":115
+  /* "plasticnet/connections/BCM.pyx":118
  *         cdef double tau=self.tau
  *         cdef double gamma=self.gamma
  *         cdef double theta_o=self.theta_o             # <<<<<<<<<<<<<<
@@ -3926,7 +4042,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
   __pyx_t_8 = __pyx_v_self->theta_o;
   __pyx_v_theta_o = __pyx_t_8;
 
-  /* "plasticnet/connections/BCM.pyx":116
+  /* "plasticnet/connections/BCM.pyx":119
  *         cdef double gamma=self.gamma
  *         cdef double theta_o=self.theta_o
  *         cdef double yo=self.yo             # <<<<<<<<<<<<<<
@@ -3936,7 +4052,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
   __pyx_t_8 = __pyx_v_self->yo;
   __pyx_v_yo = __pyx_t_8;
 
-  /* "plasticnet/connections/BCM.pyx":119
+  /* "plasticnet/connections/BCM.pyx":122
  *         cdef double dw
  * 
  *         X=<double *>self.pre.output.data             # <<<<<<<<<<<<<<
@@ -3945,7 +4061,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
  */
   __pyx_v_X = ((double *)__pyx_v_self->__pyx_base.pre->output->data);
 
-  /* "plasticnet/connections/BCM.pyx":120
+  /* "plasticnet/connections/BCM.pyx":123
  * 
  *         X=<double *>self.pre.output.data
  *         Y=<double *>self.post.output.data             # <<<<<<<<<<<<<<
@@ -3954,7 +4070,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
  */
   __pyx_v_Y = ((double *)__pyx_v_self->__pyx_base.post->output->data);
 
-  /* "plasticnet/connections/BCM.pyx":122
+  /* "plasticnet/connections/BCM.pyx":125
  *         Y=<double *>self.post.output.data
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3965,7 +4081,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
     __pyx_v___i = __pyx_t_10;
 
-    /* "plasticnet/connections/BCM.pyx":123
+    /* "plasticnet/connections/BCM.pyx":126
  * 
  *         for __i in range(self.post.N):
  *             for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -3976,7 +4092,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
     for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
       __pyx_v___j = __pyx_t_12;
 
-      /* "plasticnet/connections/BCM.pyx":124
+      /* "plasticnet/connections/BCM.pyx":127
  *         for __i in range(self.post.N):
  *             for __j in range(self.pre.N):
  *                 __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
@@ -3985,7 +4101,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
  */
       __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-      /* "plasticnet/connections/BCM.pyx":128
+      /* "plasticnet/connections/BCM.pyx":131
  * 
  * 
  *                 W[__wi]+=sim.dt*(eta*X[__j]*(Y[__i]-yo)*((Y[__i]-yo)-theta[__i])/theta[__i]-eta*gamma*W[__wi])             # <<<<<<<<<<<<<<
@@ -3997,7 +4113,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
     }
   }
 
-  /* "plasticnet/connections/BCM.pyx":130
+  /* "plasticnet/connections/BCM.pyx":133
  *                 W[__wi]+=sim.dt*(eta*X[__j]*(Y[__i]-yo)*((Y[__i]-yo)-theta[__i])/theta[__i]-eta*gamma*W[__wi])
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -4008,7 +4124,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
     __pyx_v___i = __pyx_t_10;
 
-    /* "plasticnet/connections/BCM.pyx":131
+    /* "plasticnet/connections/BCM.pyx":134
  * 
  *         for __i in range(self.post.N):
  *             theta[__i]+=sim.dt*(Y[__i]*Y[__i]/theta_o-theta[__i])/tau             # <<<<<<<<<<<<<<
@@ -4019,7 +4135,7 @@ static PyObject *__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(
     (__pyx_v_theta[__pyx_t_11]) = ((__pyx_v_theta[__pyx_t_11]) + ((__pyx_v_sim->dt * ((((__pyx_v_Y[__pyx_v___i]) * (__pyx_v_Y[__pyx_v___i])) / __pyx_v_theta_o) - (__pyx_v_theta[__pyx_v___i]))) / __pyx_v_tau));
   }
 
-  /* "plasticnet/connections/BCM.pyx":104
+  /* "plasticnet/connections/BCM.pyx":107
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -4076,11 +4192,11 @@ static PyObject *__pyx_pw_10plasticnet_11connections_3BCM_13BCM_LawCooper_5updat
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -4088,18 +4204,18 @@ static PyObject *__pyx_pw_10plasticnet_11connections_3BCM_13BCM_LawCooper_5updat
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     __pyx_v_sim = ((struct __pyx_obj_10plasticnet_10plasticnet_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.connections.BCM.BCM_LawCooper.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_4update(((struct __pyx_obj_10plasticnet_11connections_3BCM_BCM_LawCooper *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -4120,7 +4236,7 @@ static PyObject *__pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_4updat
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4137,7 +4253,7 @@ static PyObject *__pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_4updat
   return __pyx_r;
 }
 
-/* "plasticnet/connections/BCM.pyx":72
+/* "plasticnet/connections/BCM.pyx":75
  * cdef class BCM_LawCooper(connection):
  * 
  *     cdef public double eta,tau,theta_o,gamma,yo             # <<<<<<<<<<<<<<
@@ -4167,7 +4283,7 @@ static PyObject *__pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_3eta__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->eta); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 72; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->eta); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4205,7 +4321,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_3eta_2__set_
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 72; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->eta = __pyx_t_1;
 
   /* function exit code */
@@ -4241,7 +4357,7 @@ static PyObject *__pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_3tau__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 72; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4279,7 +4395,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_3tau_2__set_
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 72; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->tau = __pyx_t_1;
 
   /* function exit code */
@@ -4315,7 +4431,7 @@ static PyObject *__pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_7theta
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->theta_o); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 72; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->theta_o); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4353,7 +4469,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_7theta_o_2__
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 72; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->theta_o = __pyx_t_1;
 
   /* function exit code */
@@ -4389,7 +4505,7 @@ static PyObject *__pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_5gamma
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->gamma); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 72; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->gamma); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4427,7 +4543,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_5gamma_2__se
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 72; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->gamma = __pyx_t_1;
 
   /* function exit code */
@@ -4463,7 +4579,7 @@ static PyObject *__pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2yo___
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->yo); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 72; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->yo); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4501,7 +4617,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2yo_2__set__
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 72; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->yo = __pyx_t_1;
 
   /* function exit code */
@@ -4515,7 +4631,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_2yo_2__set__
   return __pyx_r;
 }
 
-/* "plasticnet/connections/BCM.pyx":73
+/* "plasticnet/connections/BCM.pyx":76
  * 
  *     cdef public double eta,tau,theta_o,gamma,yo
  *     cdef public np.ndarray theta             # <<<<<<<<<<<<<<
@@ -4573,7 +4689,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_5theta_2__se
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -4623,7 +4739,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_5theta_4__de
   return __pyx_r;
 }
 
-/* "plasticnet/connections/BCM.pyx":74
+/* "plasticnet/connections/BCM.pyx":77
  *     cdef public double eta,tau,theta_o,gamma,yo
  *     cdef public np.ndarray theta
  *     cdef public np.ndarray initial_theta             # <<<<<<<<<<<<<<
@@ -4681,7 +4797,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_13initial_th
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 74; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 77; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -4731,7 +4847,7 @@ static int __pyx_pf_10plasticnet_11connections_3BCM_13BCM_LawCooper_13initial_th
   return __pyx_r;
 }
 
-/* "plasticnet/connections/BCM.pyx":75
+/* "plasticnet/connections/BCM.pyx":78
  *     cdef public np.ndarray theta
  *     cdef public np.ndarray initial_theta
  *     cdef public object initial_theta_range             # <<<<<<<<<<<<<<
@@ -7347,8 +7463,12 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_RuntimeError, __pyx_k_RuntimeError, sizeof(__pyx_k_RuntimeError), 0, 0, 1, 1},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
   {&__pyx_n_s_copy, __pyx_k_copy, sizeof(__pyx_k_copy), 0, 0, 1, 1},
+  {&__pyx_n_s_eta, __pyx_k_eta, sizeof(__pyx_k_eta), 0, 0, 1, 1},
+  {&__pyx_n_s_extend, __pyx_k_extend, sizeof(__pyx_k_extend), 0, 0, 1, 1},
+  {&__pyx_n_s_gamma, __pyx_k_gamma, sizeof(__pyx_k_gamma), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_init, __pyx_k_init, sizeof(__pyx_k_init), 0, 0, 1, 1},
+  {&__pyx_n_s_initial_theta, __pyx_k_initial_theta, sizeof(__pyx_k_initial_theta), 0, 0, 1, 1},
   {&__pyx_n_s_initial_theta_range, __pyx_k_initial_theta_range, sizeof(__pyx_k_initial_theta_range), 0, 0, 1, 1},
   {&__pyx_n_s_initial_weight_range, __pyx_k_initial_weight_range, sizeof(__pyx_k_initial_weight_range), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
@@ -7365,13 +7485,17 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_reset, __pyx_k_reset, sizeof(__pyx_k_reset), 0, 0, 1, 1},
   {&__pyx_n_s_sim, __pyx_k_sim, sizeof(__pyx_k_sim), 0, 0, 1, 1},
   {&__pyx_n_s_t, __pyx_k_t, sizeof(__pyx_k_t), 0, 0, 1, 1},
+  {&__pyx_n_s_tau, __pyx_k_tau, sizeof(__pyx_k_tau), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
+  {&__pyx_n_s_theta, __pyx_k_theta, sizeof(__pyx_k_theta), 0, 0, 1, 1},
+  {&__pyx_n_s_theta_o, __pyx_k_theta_o, sizeof(__pyx_k_theta_o), 0, 0, 1, 1},
   {&__pyx_kp_u_unknown_dtype_code_in_numpy_pxd, __pyx_k_unknown_dtype_code_in_numpy_pxd, sizeof(__pyx_k_unknown_dtype_code_in_numpy_pxd), 0, 1, 0, 0},
   {&__pyx_n_s_update, __pyx_k_update, sizeof(__pyx_k_update), 0, 0, 1, 1},
+  {&__pyx_n_s_yo, __pyx_k_yo, sizeof(__pyx_k_yo), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 218; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 802; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   return 0;
@@ -7561,10 +7685,10 @@ PyMODINIT_FUNC PyInit_BCM(void)
   __pyx_vtable_10plasticnet_11connections_3BCM_BCM_LawCooper.__pyx_base._reset = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_connection *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper__reset;
   __pyx_vtable_10plasticnet_11connections_3BCM_BCM_LawCooper.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_connection *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_11connections_3BCM_13BCM_LawCooper_update;
   __pyx_type_10plasticnet_11connections_3BCM_BCM_LawCooper.tp_base = __pyx_ptype_10plasticnet_10plasticnet_connection;
-  if (PyType_Ready(&__pyx_type_10plasticnet_11connections_3BCM_BCM_LawCooper) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 70; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyType_Ready(&__pyx_type_10plasticnet_11connections_3BCM_BCM_LawCooper) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_type_10plasticnet_11connections_3BCM_BCM_LawCooper.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_10plasticnet_11connections_3BCM_BCM_LawCooper.tp_dict, __pyx_vtabptr_10plasticnet_11connections_3BCM_BCM_LawCooper) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 70; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "BCM_LawCooper", (PyObject *)&__pyx_type_10plasticnet_11connections_3BCM_BCM_LawCooper) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 70; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_SetVtable(__pyx_type_10plasticnet_11connections_3BCM_BCM_LawCooper.tp_dict, __pyx_vtabptr_10plasticnet_11connections_3BCM_BCM_LawCooper) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "BCM_LawCooper", (PyObject *)&__pyx_type_10plasticnet_11connections_3BCM_BCM_LawCooper) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_10plasticnet_11connections_3BCM_BCM_LawCooper = &__pyx_type_10plasticnet_11connections_3BCM_BCM_LawCooper;
   /*--- Type import code ---*/
   __pyx_ptype_7cpython_4type_type = __Pyx_ImportType(__Pyx_BUILTIN_MODULE_NAME, "type", 
@@ -7580,20 +7704,20 @@ PyMODINIT_FUNC PyInit_BCM(void)
   __pyx_ptype_5numpy_ndarray = __Pyx_ImportType("numpy", "ndarray", sizeof(PyArrayObject), 0); if (unlikely(!__pyx_ptype_5numpy_ndarray)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 181; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5numpy_ufunc = __Pyx_ImportType("numpy", "ufunc", sizeof(PyUFuncObject), 0); if (unlikely(!__pyx_ptype_5numpy_ufunc)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 864; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_10plasticnet_10plasticnet_group = __Pyx_ImportType("plasticnet.plasticnet", "group", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_group), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_group)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_10plasticnet_10plasticnet_monitor = __Pyx_ImportType("plasticnet.plasticnet", "monitor", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_monitor), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_10plasticnet_10plasticnet_monitor = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_monitor->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_10plasticnet_10plasticnet_simulation = __Pyx_ImportType("plasticnet.plasticnet", "simulation", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_simulation), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_10plasticnet_10plasticnet_simulation = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_10plasticnet_10plasticnet_neuron = __Pyx_ImportType("plasticnet.plasticnet", "neuron", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_neuron), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_10plasticnet_10plasticnet_neuron = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron = __Pyx_ImportType("plasticnet.plasticnet", "post_process_neuron", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_10plasticnet_10plasticnet_post_process_channel = __Pyx_ImportType("plasticnet.plasticnet", "post_process_channel", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_channel->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_10plasticnet_10plasticnet_channel = __Pyx_ImportType("plasticnet.plasticnet", "channel", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_channel), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_10plasticnet_10plasticnet_channel = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_channel->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_10plasticnet_10plasticnet_post_process_connection = __Pyx_ImportType("plasticnet.plasticnet", "post_process_connection", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_connection), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_connection)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_connection = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_connection*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_connection->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_connection)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_monitor = __Pyx_ImportType("plasticnet.plasticnet", "monitor", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_monitor), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_monitor = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_monitor->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_simulation = __Pyx_ImportType("plasticnet.plasticnet", "simulation", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_simulation), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_simulation = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_neuron = __Pyx_ImportType("plasticnet.plasticnet", "neuron", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_neuron), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_neuron = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron = __Pyx_ImportType("plasticnet.plasticnet", "post_process_neuron", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 70; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 70; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_post_process_channel = __Pyx_ImportType("plasticnet.plasticnet", "post_process_channel", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_channel->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_channel = __Pyx_ImportType("plasticnet.plasticnet", "channel", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_channel), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_channel = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_channel->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_channel)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10plasticnet_10plasticnet_post_process_connection = __Pyx_ImportType("plasticnet.plasticnet", "post_process_connection", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_connection), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_connection)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_connection = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_connection*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_connection->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_connection)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   /*--- Variable import code ---*/
   /*--- Function import code ---*/
   /*--- Execution code ---*/
