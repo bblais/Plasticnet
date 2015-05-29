@@ -138,11 +138,15 @@ cdef class monitor(group):
         self.values=[]
 
     def save(self,g):
+        # to save the values, we need to make them arrays
+        # if we want to continue a simulation, we need them to stay as lists
+        self.t_tmp,self.values_tmp=self.t,self.values
+
         self.t=np.array(self.t)
         self.values=np.array(self.values).squeeze()
 
         group.save(self,g)
-
+        self.t,self.values=self.t_tmp,self.values_tmp
 
     cpdef update(self,double t):
         if t<=self.time_to_next_save:
@@ -272,7 +276,14 @@ cdef class neuron(group):
         self.save_data=['output','linear_output']
 
         self.name=None
-        
+
+    def save(self,g):
+        group.save(self,g)
+
+        for i,p in enumerate(self.post_process):
+            g2=g.create_group("process %d" % i)
+            p.save(g2)
+
     cpdef _reset(self):
         self.linear_output=np.zeros(self.N,dtype=np.float)
         self.output=np.zeros(self.N,dtype=np.float)    

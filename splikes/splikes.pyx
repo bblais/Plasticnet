@@ -140,10 +140,15 @@ cdef class monitor(group):
         self.save_data=['t','values']
 
     def save(self,g):
+        # to save the values, we need to make them arrays
+        # if we want to continue a simulation, we need them to stay as lists
+        self.t_tmp,self.values_tmp=self.t,self.values
+
         self.t=np.array(self.t)
         self.values=np.array(self.values).squeeze()
 
         group.save(self,g)
+        self.t,self.values=self.t_tmp,self.values_tmp
 
     def _reset(self):
         self.t=[]

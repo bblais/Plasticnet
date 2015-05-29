@@ -36,6 +36,7 @@ cdef class monitor(group):
     cdef public double save_interval
     cdef public object container
     cdef public object t,values
+    cdef object t_tmp,values_tmp
     cpdef update(self,double t)
 
 cdef class simulation(group):

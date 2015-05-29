@@ -746,10 +746,12 @@ struct __pyx_obj_7splikes_7splikes_monitor {
   PyObject *container;
   PyObject *t;
   PyObject *values;
+  PyObject *t_tmp;
+  PyObject *values_tmp;
 };
 
 
-/* "splikes/splikes.pxd":41
+/* "splikes/splikes.pxd":42
  *     cpdef update(self,double t)
  * 
  * cdef class simulation(group):             # <<<<<<<<<<<<<<
@@ -770,7 +772,7 @@ struct __pyx_obj_7splikes_7splikes_simulation {
 };
 
 
-/* "splikes/splikes.pxd":50
+/* "splikes/splikes.pxd":51
  *     cpdef _reset(self)
  * 
  * cdef class neuron(group):             # <<<<<<<<<<<<<<
@@ -797,7 +799,7 @@ struct __pyx_obj_7splikes_7splikes_neuron {
 };
 
 
-/* "splikes/splikes.pxd":65
+/* "splikes/splikes.pxd":66
  * 
  * 
  * cdef class connection(group):             # <<<<<<<<<<<<<<
@@ -863,7 +865,7 @@ struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper {
 };
 
 
-/* "splikes/connections/BCM.pyx":212
+/* "splikes/connections/BCM.pyx":225
  *             self.apply_weight_limits()
  * 
  * cdef class BCM(connection):             # <<<<<<<<<<<<<<
@@ -895,7 +897,7 @@ struct __pyx_obj_7splikes_11connections_3BCM_BCM {
 };
 
 
-/* "splikes/connections/BCM.pyx":327
+/* "splikes/connections/BCM.pyx":340
  * 
  * 
  * cdef class BCM_LawCooper_Offset(connection):             # <<<<<<<<<<<<<<
@@ -938,7 +940,7 @@ struct __pyx_vtabstruct_7splikes_7splikes_monitor {
 static struct __pyx_vtabstruct_7splikes_7splikes_monitor *__pyx_vtabptr_7splikes_7splikes_monitor;
 
 
-/* "splikes/splikes.pxd":41
+/* "splikes/splikes.pxd":42
  *     cpdef update(self,double t)
  * 
  * cdef class simulation(group):             # <<<<<<<<<<<<<<
@@ -952,7 +954,7 @@ struct __pyx_vtabstruct_7splikes_7splikes_simulation {
 static struct __pyx_vtabstruct_7splikes_7splikes_simulation *__pyx_vtabptr_7splikes_7splikes_simulation;
 
 
-/* "splikes/splikes.pxd":50
+/* "splikes/splikes.pxd":51
  *     cpdef _reset(self)
  * 
  * cdef class neuron(group):             # <<<<<<<<<<<<<<
@@ -967,7 +969,7 @@ struct __pyx_vtabstruct_7splikes_7splikes_neuron {
 static struct __pyx_vtabstruct_7splikes_7splikes_neuron *__pyx_vtabptr_7splikes_7splikes_neuron;
 
 
-/* "splikes/splikes.pxd":65
+/* "splikes/splikes.pxd":66
  * 
  * 
  * cdef class connection(group):             # <<<<<<<<<<<<<<
@@ -997,7 +999,7 @@ struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper {
 static struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_vtabptr_7splikes_11connections_3BCM_BCM_LawCooper;
 
 
-/* "splikes/connections/BCM.pyx":212
+/* "splikes/connections/BCM.pyx":225
  *             self.apply_weight_limits()
  * 
  * cdef class BCM(connection):             # <<<<<<<<<<<<<<
@@ -1011,7 +1013,7 @@ struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM {
 static struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM *__pyx_vtabptr_7splikes_11connections_3BCM_BCM;
 
 
-/* "splikes/connections/BCM.pyx":327
+/* "splikes/connections/BCM.pyx":340
  * 
  * 
  * cdef class BCM_LawCooper_Offset(connection):             # <<<<<<<<<<<<<<
@@ -1597,6 +1599,8 @@ static char __pyx_k_I[] = "I";
 static char __pyx_k_L[] = "L";
 static char __pyx_k_O[] = "O";
 static char __pyx_k_Q[] = "Q";
+static char __pyx_k_X[] = "X";
+static char __pyx_k_Y[] = "Y";
 static char __pyx_k_b[] = "b";
 static char __pyx_k_d[] = "d";
 static char __pyx_k_f[] = "f";
@@ -1606,13 +1610,21 @@ static char __pyx_k_i[] = "i";
 static char __pyx_k_l[] = "l";
 static char __pyx_k_q[] = "q";
 static char __pyx_k_t[] = "t";
+static char __pyx_k_x[] = "x";
+static char __pyx_k_y[] = "y";
 static char __pyx_k_Zd[] = "Zd";
 static char __pyx_k_Zf[] = "Zf";
 static char __pyx_k_Zg[] = "Zg";
+static char __pyx_k_ax[] = "ax";
+static char __pyx_k_ay[] = "ay";
 static char __pyx_k_np[] = "np";
+static char __pyx_k_xo[] = "xo";
+static char __pyx_k_yo[] = "yo";
+static char __pyx_k_eta[] = "eta";
 static char __pyx_k_pre[] = "pre";
 static char __pyx_k_sim[] = "sim";
 static char __pyx_k_sys[] = "sys";
+static char __pyx_k_beta[] = "beta";
 static char __pyx_k_copy[] = "copy";
 static char __pyx_k_init[] = "__init__";
 static char __pyx_k_main[] = "__main__";
@@ -1622,22 +1634,40 @@ static char __pyx_k_sqrt[] = "sqrt";
 static char __pyx_k_test[] = "__test__";
 static char __pyx_k_dtype[] = "dtype";
 static char __pyx_k_float[] = "float";
+static char __pyx_k_gamma[] = "gamma";
+static char __pyx_k_mod_X[] = "mod_X";
+static char __pyx_k_mod_Y[] = "mod_Y";
 static char __pyx_k_numpy[] = "numpy";
 static char __pyx_k_pylab[] = "pylab";
 static char __pyx_k_range[] = "range";
 static char __pyx_k_reset[] = "_reset";
 static char __pyx_k_state[] = "state";
+static char __pyx_k_tau_x[] = "tau_x";
+static char __pyx_k_tau_y[] = "tau_y";
+static char __pyx_k_theta[] = "theta";
+static char __pyx_k_y_avg[] = "y_avg";
 static char __pyx_k_zeros[] = "zeros";
 static char __pyx_k_append[] = "append";
+static char __pyx_k_extend[] = "extend";
 static char __pyx_k_import[] = "__import__";
 static char __pyx_k_update[] = "update";
+static char __pyx_k_theta_o[] = "theta_o";
+static char __pyx_k_mod_beta[] = "mod_beta";
+static char __pyx_k_tau_beta[] = "tau_beta";
+static char __pyx_k_mod_theta[] = "mod_theta";
+static char __pyx_k_tau_theta[] = "tau_theta";
 static char __pyx_k_ValueError[] = "ValueError";
 static char __pyx_k_pyx_vtable[] = "__pyx_vtable__";
+static char __pyx_k_smoothed_x[] = "smoothed_x";
+static char __pyx_k_smoothed_y[] = "smoothed_y";
 static char __pyx_k_Spiking_BCM[] = "Spiking BCM";
 static char __pyx_k_RuntimeError[] = "RuntimeError";
 static char __pyx_k_initial_theta_range[] = "initial_theta_range";
 static char __pyx_k_initial_weight_range[] = "initial_weight_range";
 static char __pyx_k_Spiking_BCM_LawCooper[] = "Spiking BCM LawCooper";
+static char __pyx_k_theta_squares_the_average[] = "theta_squares_the_average";
+static char __pyx_k_time_between_modification[] = "time_between_modification";
+static char __pyx_k_time_to_next_modification[] = "time_to_next_modification";
 static char __pyx_k_ndarray_is_not_C_contiguous[] = "ndarray is not C contiguous";
 static char __pyx_k_unknown_dtype_code_in_numpy_pxd[] = "unknown dtype code in numpy.pxd (%d)";
 static char __pyx_k_Format_string_allocated_too_shor[] = "Format string allocated too short, see comment in numpy.pxd";
@@ -1651,15 +1681,27 @@ static PyObject *__pyx_n_s_RuntimeError;
 static PyObject *__pyx_kp_s_Spiking_BCM;
 static PyObject *__pyx_kp_s_Spiking_BCM_LawCooper;
 static PyObject *__pyx_n_s_ValueError;
+static PyObject *__pyx_n_s_X;
+static PyObject *__pyx_n_s_Y;
 static PyObject *__pyx_n_s_append;
+static PyObject *__pyx_n_s_ax;
+static PyObject *__pyx_n_s_ay;
+static PyObject *__pyx_n_s_beta;
 static PyObject *__pyx_n_s_copy;
 static PyObject *__pyx_n_s_dtype;
+static PyObject *__pyx_n_s_eta;
+static PyObject *__pyx_n_s_extend;
 static PyObject *__pyx_n_s_float;
+static PyObject *__pyx_n_s_gamma;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_init;
 static PyObject *__pyx_n_s_initial_theta_range;
 static PyObject *__pyx_n_s_initial_weight_range;
 static PyObject *__pyx_n_s_main;
+static PyObject *__pyx_n_s_mod_X;
+static PyObject *__pyx_n_s_mod_Y;
+static PyObject *__pyx_n_s_mod_beta;
+static PyObject *__pyx_n_s_mod_theta;
 static PyObject *__pyx_kp_u_ndarray_is_not_C_contiguous;
 static PyObject *__pyx_kp_u_ndarray_is_not_Fortran_contiguou;
 static PyObject *__pyx_n_s_np;
@@ -1672,13 +1714,29 @@ static PyObject *__pyx_n_s_rand;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_reset;
 static PyObject *__pyx_n_s_sim;
+static PyObject *__pyx_n_s_smoothed_x;
+static PyObject *__pyx_n_s_smoothed_y;
 static PyObject *__pyx_n_s_sqrt;
 static PyObject *__pyx_n_s_state;
 static PyObject *__pyx_n_s_sys;
 static PyObject *__pyx_n_s_t;
+static PyObject *__pyx_n_s_tau_beta;
+static PyObject *__pyx_n_s_tau_theta;
+static PyObject *__pyx_n_s_tau_x;
+static PyObject *__pyx_n_s_tau_y;
 static PyObject *__pyx_n_s_test;
+static PyObject *__pyx_n_s_theta;
+static PyObject *__pyx_n_s_theta_o;
+static PyObject *__pyx_n_s_theta_squares_the_average;
+static PyObject *__pyx_n_s_time_between_modification;
+static PyObject *__pyx_n_s_time_to_next_modification;
 static PyObject *__pyx_kp_u_unknown_dtype_code_in_numpy_pxd;
 static PyObject *__pyx_n_s_update;
+static PyObject *__pyx_n_s_x;
+static PyObject *__pyx_n_s_xo;
+static PyObject *__pyx_n_s_y;
+static PyObject *__pyx_n_s_y_avg;
+static PyObject *__pyx_n_s_yo;
 static PyObject *__pyx_n_s_zeros;
 static PyObject *__pyx_float_0_0;
 static PyObject *__pyx_float_0_1;
@@ -1692,8 +1750,8 @@ static PyObject *__pyx_tuple__4;
 static PyObject *__pyx_tuple__5;
 static PyObject *__pyx_tuple__6;
 
-/* "splikes/connections/BCM.pyx":40
- *     cdef public int theta_squares_the_average
+/* "splikes/connections/BCM.pyx":43
+ * 
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
@@ -1718,7 +1776,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_1_reset)) {
       __Pyx_XDECREF(__pyx_r);
@@ -1734,10 +1792,10 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -1749,19 +1807,19 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes/connections/BCM.pyx":41
+  /* "splikes/connections/BCM.pyx":44
  * 
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_rand); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_rand); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -1774,66 +1832,66 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
     PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_2);
     __Pyx_GIVEREF(__pyx_t_2);
     __pyx_t_2 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "splikes/connections/BCM.pyx":42
+  /* "splikes/connections/BCM.pyx":45
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  */
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_5 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_5 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "splikes/connections/BCM.pyx":41
+  /* "splikes/connections/BCM.pyx":44
  * 
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  */
-  __pyx_t_2 = PyNumber_Subtract(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyNumber_Subtract(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "splikes/connections/BCM.pyx":42
+  /* "splikes/connections/BCM.pyx":45
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  */
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyNumber_Add(__pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyNumber_Add(__pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "splikes/connections/BCM.pyx":41
+  /* "splikes/connections/BCM.pyx":44
  * 
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -1846,19 +1904,19 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_v_self->theta = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes/connections/BCM.pyx":43
+  /* "splikes/connections/BCM.pyx":46
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  * 
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_rand); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_rand); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_5))) {
@@ -1871,66 +1929,66 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
     PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_2);
     __Pyx_GIVEREF(__pyx_t_2);
     __pyx_t_2 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_5 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_5 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "splikes/connections/BCM.pyx":44
+  /* "splikes/connections/BCM.pyx":47
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  * 
  *         self.mod_theta=np.zeros(self.post.N,dtype=np.float)
  */
-  __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_4 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_4 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "splikes/connections/BCM.pyx":43
+  /* "splikes/connections/BCM.pyx":46
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  * 
  */
-  __pyx_t_2 = PyNumber_Subtract(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyNumber_Subtract(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "splikes/connections/BCM.pyx":44
+  /* "splikes/connections/BCM.pyx":47
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  * 
  *         self.mod_theta=np.zeros(self.post.N,dtype=np.float)
  */
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyNumber_Add(__pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyNumber_Add(__pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "splikes/connections/BCM.pyx":43
+  /* "splikes/connections/BCM.pyx":46
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -1943,216 +2001,216 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_v_self->beta = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes/connections/BCM.pyx":46
+  /* "splikes/connections/BCM.pyx":49
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  * 
  *         self.mod_theta=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.mod_beta=np.zeros(self.post.N,dtype=np.float)
  * 
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_v_self->mod_theta);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->mod_theta));
   __pyx_v_self->mod_theta = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":47
+  /* "splikes/connections/BCM.pyx":50
  * 
  *         self.mod_theta=np.zeros(self.post.N,dtype=np.float)
  *         self.mod_beta=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_5);
   __Pyx_GOTREF(__pyx_v_self->mod_beta);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->mod_beta));
   __pyx_v_self->mod_beta = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "splikes/connections/BCM.pyx":50
+  /* "splikes/connections/BCM.pyx":53
  * 
  * 
  *         self.y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.mod_Y=np.zeros(self.post.N,dtype=np.float)
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_2);
   __Pyx_GOTREF(__pyx_v_self->y);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->y));
   __pyx_v_self->y = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "splikes/connections/BCM.pyx":51
+  /* "splikes/connections/BCM.pyx":54
  * 
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.mod_Y=np.zeros(self.post.N,dtype=np.float)
  * 
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_2);
   __pyx_t_2 = 0;
-  __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->Y);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->Y));
   __pyx_v_self->Y = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes/connections/BCM.pyx":52
+  /* "splikes/connections/BCM.pyx":55
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.mod_Y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  * 
  *         self.y_avg=np.sqrt(self.theta)
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_v_self->mod_Y);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->mod_Y));
   __pyx_v_self->mod_Y = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":54
+  /* "splikes/connections/BCM.pyx":57
  *         self.mod_Y=np.zeros(self.post.N,dtype=np.float)
  * 
  *         self.y_avg=np.sqrt(self.theta)             # <<<<<<<<<<<<<<
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = NULL;
@@ -2166,148 +2224,148 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
     }
   }
   if (!__pyx_t_1) {
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_self->theta)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_self->theta)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
   } else {
-    __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1); __Pyx_GIVEREF(__pyx_t_1); __pyx_t_1 = NULL;
     __Pyx_INCREF(((PyObject *)__pyx_v_self->theta));
     PyTuple_SET_ITEM(__pyx_t_2, 0+1, ((PyObject *)__pyx_v_self->theta));
     __Pyx_GIVEREF(((PyObject *)__pyx_v_self->theta));
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_v_self->y_avg);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->y_avg));
   __pyx_v_self->y_avg = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":55
+  /* "splikes/connections/BCM.pyx":58
  * 
  *         self.y_avg=np.sqrt(self.theta)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.mod_X=np.zeros(self.pre.N,dtype=np.float)
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_5);
   __Pyx_GOTREF(__pyx_v_self->x);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->x));
   __pyx_v_self->x = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "splikes/connections/BCM.pyx":56
+  /* "splikes/connections/BCM.pyx":59
  *         self.y_avg=np.sqrt(self.theta)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.X=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.mod_X=np.zeros(self.pre.N,dtype=np.float)
  * 
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->X);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->X));
   __pyx_v_self->X = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes/connections/BCM.pyx":57
+  /* "splikes/connections/BCM.pyx":60
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.mod_X=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
  * 
  *         self.time_to_next_modification=self.time_between_modification
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_4);
   __Pyx_GOTREF(__pyx_v_self->mod_X);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->mod_X));
   __pyx_v_self->mod_X = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "splikes/connections/BCM.pyx":59
+  /* "splikes/connections/BCM.pyx":62
  *         self.mod_X=np.zeros(self.pre.N,dtype=np.float)
  * 
  *         self.time_to_next_modification=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -2317,19 +2375,19 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(stru
   __pyx_t_6 = __pyx_v_self->time_between_modification;
   __pyx_v_self->time_to_next_modification = __pyx_t_6;
 
-  /* "splikes/connections/BCM.pyx":61
+  /* "splikes/connections/BCM.pyx":64
  *         self.time_to_next_modification=self.time_between_modification
  * 
  *         connection._reset(self)             # <<<<<<<<<<<<<<
  * 
  *     def __init__(self,neuron pre,neuron post,
  */
-  __pyx_t_4 = __pyx_vtabptr_7splikes_7splikes_connection->_reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __pyx_vtabptr_7splikes_7splikes_connection->_reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "splikes/connections/BCM.pyx":40
- *     cdef public int theta_squares_the_average
+  /* "splikes/connections/BCM.pyx":43
+ * 
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
@@ -2375,7 +2433,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper__reset(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_reset", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2392,7 +2450,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper__reset(str
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":63
+/* "splikes/connections/BCM.pyx":66
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -2418,7 +2476,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_3__init__(PyObje
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_pre,&__pyx_n_s_post,&__pyx_n_s_initial_weight_range,&__pyx_n_s_state,&__pyx_n_s_initial_theta_range,0};
     PyObject* values[5] = {0,0,0,0,0};
 
-    /* "splikes/connections/BCM.pyx":64
+    /* "splikes/connections/BCM.pyx":67
  * 
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,             # <<<<<<<<<<<<<<
@@ -2427,7 +2485,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_3__init__(PyObje
  */
     values[2] = ((PyObject *)Py_None);
 
-    /* "splikes/connections/BCM.pyx":65
+    /* "splikes/connections/BCM.pyx":68
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,
  *                         state=None,             # <<<<<<<<<<<<<<
@@ -2436,7 +2494,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_3__init__(PyObje
  */
     values[3] = ((PyObject *)Py_None);
 
-    /* "splikes/connections/BCM.pyx":66
+    /* "splikes/connections/BCM.pyx":69
  *                         initial_weight_range=None,
  *                         state=None,
  *                         initial_theta_range=None,):             # <<<<<<<<<<<<<<
@@ -2464,7 +2522,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_3__init__(PyObje
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_post)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 66; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  2:
         if (kw_args > 0) {
@@ -2483,7 +2541,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_3__init__(PyObje
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 66; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -2504,17 +2562,17 @@ static int __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_3__init__(PyObje
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 66; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("splikes.connections.BCM.BCM_LawCooper.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_7splikes_7splikes_neuron, 1, "pre", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_7splikes_7splikes_neuron, 1, "pre", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 66; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 66; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(((struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *)__pyx_v_self), __pyx_v_pre, __pyx_v_post, __pyx_v_initial_weight_range, __pyx_v_state, __pyx_v_initial_theta_range);
 
-  /* "splikes/connections/BCM.pyx":63
+  /* "splikes/connections/BCM.pyx":66
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -2541,13 +2599,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   PyObject *__pyx_t_5 = NULL;
   Py_ssize_t __pyx_t_6;
   PyObject *__pyx_t_7 = NULL;
+  PyObject *__pyx_t_8 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 0);
   __Pyx_INCREF(__pyx_v_initial_theta_range);
 
-  /* "splikes/connections/BCM.pyx":69
+  /* "splikes/connections/BCM.pyx":72
  * 
  * 
  *         if initial_theta_range is None:             # <<<<<<<<<<<<<<
@@ -2558,14 +2617,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "splikes/connections/BCM.pyx":70
+    /* "splikes/connections/BCM.pyx":73
  * 
  *         if initial_theta_range is None:
  *             initial_theta_range=[0.0,0.1]             # <<<<<<<<<<<<<<
  * 
  *         self.initial_theta_range=initial_theta_range
  */
-    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 70; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_float_0_0);
     PyList_SET_ITEM(__pyx_t_3, 0, __pyx_float_0_0);
@@ -2579,7 +2638,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   }
   __pyx_L3:;
 
-  /* "splikes/connections/BCM.pyx":72
+  /* "splikes/connections/BCM.pyx":75
  *             initial_theta_range=[0.0,0.1]
  * 
  *         self.initial_theta_range=initial_theta_range             # <<<<<<<<<<<<<<
@@ -2592,14 +2651,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_DECREF(__pyx_v_self->initial_theta_range);
   __pyx_v_self->initial_theta_range = __pyx_v_initial_theta_range;
 
-  /* "splikes/connections/BCM.pyx":74
+  /* "splikes/connections/BCM.pyx":77
  *         self.initial_theta_range=initial_theta_range
  * 
  *         connection.__init__(self,pre,post,initial_weight_range,state)             # <<<<<<<<<<<<<<
  * 
  *         self.name='Spiking BCM LawCooper'
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)((PyObject*)__pyx_ptype_7splikes_7splikes_connection)), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 74; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)((PyObject*)__pyx_ptype_7splikes_7splikes_connection)), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 77; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -2613,7 +2672,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
       __pyx_t_6 = 1;
     }
   }
-  __pyx_t_7 = PyTuple_New(5+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 74; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = PyTuple_New(5+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 77; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
   if (__pyx_t_5) {
     PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
@@ -2633,13 +2692,13 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_INCREF(__pyx_v_state);
   PyTuple_SET_ITEM(__pyx_t_7, 4+__pyx_t_6, __pyx_v_state);
   __Pyx_GIVEREF(__pyx_v_state);
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 74; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 77; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":76
+  /* "splikes/connections/BCM.pyx":79
  *         connection.__init__(self,pre,post,initial_weight_range,state)
  * 
  *         self.name='Spiking BCM LawCooper'             # <<<<<<<<<<<<<<
@@ -2652,7 +2711,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_DECREF(__pyx_v_self->__pyx_base.__pyx_base.name);
   __pyx_v_self->__pyx_base.__pyx_base.name = __pyx_kp_s_Spiking_BCM_LawCooper;
 
-  /* "splikes/connections/BCM.pyx":77
+  /* "splikes/connections/BCM.pyx":80
  * 
  *         self.name='Spiking BCM LawCooper'
  *         self.tau_x=0.01             # <<<<<<<<<<<<<<
@@ -2661,7 +2720,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->tau_x = 0.01;
 
-  /* "splikes/connections/BCM.pyx":78
+  /* "splikes/connections/BCM.pyx":81
  *         self.name='Spiking BCM LawCooper'
  *         self.tau_x=0.01
  *         self.tau_y=0.01             # <<<<<<<<<<<<<<
@@ -2670,7 +2729,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->tau_y = 0.01;
 
-  /* "splikes/connections/BCM.pyx":79
+  /* "splikes/connections/BCM.pyx":82
  *         self.tau_x=0.01
  *         self.tau_y=0.01
  *         self.ax=1.0/self.tau_x             # <<<<<<<<<<<<<<
@@ -2685,11 +2744,11 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
     #ifdef WITH_THREAD
     PyGILState_Release(__pyx_gilstate_save);
     #endif
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 79; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __pyx_v_self->ax = (1.0 / __pyx_v_self->tau_x);
 
-  /* "splikes/connections/BCM.pyx":80
+  /* "splikes/connections/BCM.pyx":83
  *         self.tau_y=0.01
  *         self.ax=1.0/self.tau_x
  *         self.ay=1.0/self.tau_y             # <<<<<<<<<<<<<<
@@ -2704,11 +2763,11 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
     #ifdef WITH_THREAD
     PyGILState_Release(__pyx_gilstate_save);
     #endif
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __pyx_v_self->ay = (1.0 / __pyx_v_self->tau_y);
 
-  /* "splikes/connections/BCM.pyx":81
+  /* "splikes/connections/BCM.pyx":84
  *         self.ax=1.0/self.tau_x
  *         self.ay=1.0/self.tau_y
  *         self.smoothed_x=False             # <<<<<<<<<<<<<<
@@ -2717,7 +2776,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->smoothed_x = 0;
 
-  /* "splikes/connections/BCM.pyx":82
+  /* "splikes/connections/BCM.pyx":85
  *         self.ay=1.0/self.tau_y
  *         self.smoothed_x=False
  *         self.smoothed_y=False             # <<<<<<<<<<<<<<
@@ -2726,7 +2785,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->smoothed_y = 0;
 
-  /* "splikes/connections/BCM.pyx":84
+  /* "splikes/connections/BCM.pyx":87
  *         self.smoothed_y=False
  * 
  *         self.xo=0             # <<<<<<<<<<<<<<
@@ -2735,7 +2794,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->xo = 0.0;
 
-  /* "splikes/connections/BCM.pyx":85
+  /* "splikes/connections/BCM.pyx":88
  * 
  *         self.xo=0
  *         self.yo=0             # <<<<<<<<<<<<<<
@@ -2744,7 +2803,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->yo = 0.0;
 
-  /* "splikes/connections/BCM.pyx":86
+  /* "splikes/connections/BCM.pyx":89
  *         self.xo=0
  *         self.yo=0
  *         self.theta_o=1             # <<<<<<<<<<<<<<
@@ -2753,7 +2812,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->theta_o = 1.0;
 
-  /* "splikes/connections/BCM.pyx":87
+  /* "splikes/connections/BCM.pyx":90
  *         self.yo=0
  *         self.theta_o=1
  *         self.gamma=0             # <<<<<<<<<<<<<<
@@ -2762,7 +2821,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->gamma = 0.0;
 
-  /* "splikes/connections/BCM.pyx":88
+  /* "splikes/connections/BCM.pyx":91
  *         self.theta_o=1
  *         self.gamma=0
  *         self.eta=4e-06             # <<<<<<<<<<<<<<
@@ -2771,7 +2830,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->eta = 4e-06;
 
-  /* "splikes/connections/BCM.pyx":89
+  /* "splikes/connections/BCM.pyx":92
  *         self.gamma=0
  *         self.eta=4e-06
  *         self.tau_theta=10             # <<<<<<<<<<<<<<
@@ -2784,7 +2843,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_DECREF(__pyx_v_self->tau_theta);
   __pyx_v_self->tau_theta = __pyx_int_10;
 
-  /* "splikes/connections/BCM.pyx":90
+  /* "splikes/connections/BCM.pyx":93
  *         self.eta=4e-06
  *         self.tau_theta=10
  *         self.tau_beta=-1             # <<<<<<<<<<<<<<
@@ -2797,7 +2856,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_DECREF(__pyx_v_self->tau_beta);
   __pyx_v_self->tau_beta = __pyx_int_neg_1;
 
-  /* "splikes/connections/BCM.pyx":91
+  /* "splikes/connections/BCM.pyx":94
  *         self.tau_theta=10
  *         self.tau_beta=-1
  *         self.time_between_modification=-1.0             # <<<<<<<<<<<<<<
@@ -2806,7 +2865,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->time_between_modification = -1.0;
 
-  /* "splikes/connections/BCM.pyx":92
+  /* "splikes/connections/BCM.pyx":95
  *         self.tau_beta=-1
  *         self.time_between_modification=-1.0
  *         self.theta_squares_the_average=False             # <<<<<<<<<<<<<<
@@ -2815,18 +2874,180 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->theta_squares_the_average = 0;
 
-  /* "splikes/connections/BCM.pyx":93
+  /* "splikes/connections/BCM.pyx":96
  *         self.time_between_modification=-1.0
  *         self.theta_squares_the_average=False
  *         self._reset()             # <<<<<<<<<<<<<<
  * 
- *     @cython.cdivision(True)
+ *         self.save_attrs.extend(['tau_x','tau_y','xo','yo','theta_o',
  */
-  __pyx_t_3 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":63
+  /* "splikes/connections/BCM.pyx":98
+ *         self._reset()
+ * 
+ *         self.save_attrs.extend(['tau_x','tau_y','xo','yo','theta_o',             # <<<<<<<<<<<<<<
+ *             'gamma','eta','tau_theta','tau_beta','ax',
+ *             'ay','smoothed_x','smoothed_y','time_between_modification',
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_n_s_extend); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 98; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_7 = PyList_New(16); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 98; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_7);
+  __Pyx_INCREF(__pyx_n_s_tau_x);
+  PyList_SET_ITEM(__pyx_t_7, 0, __pyx_n_s_tau_x);
+  __Pyx_GIVEREF(__pyx_n_s_tau_x);
+  __Pyx_INCREF(__pyx_n_s_tau_y);
+  PyList_SET_ITEM(__pyx_t_7, 1, __pyx_n_s_tau_y);
+  __Pyx_GIVEREF(__pyx_n_s_tau_y);
+  __Pyx_INCREF(__pyx_n_s_xo);
+  PyList_SET_ITEM(__pyx_t_7, 2, __pyx_n_s_xo);
+  __Pyx_GIVEREF(__pyx_n_s_xo);
+  __Pyx_INCREF(__pyx_n_s_yo);
+  PyList_SET_ITEM(__pyx_t_7, 3, __pyx_n_s_yo);
+  __Pyx_GIVEREF(__pyx_n_s_yo);
+  __Pyx_INCREF(__pyx_n_s_theta_o);
+  PyList_SET_ITEM(__pyx_t_7, 4, __pyx_n_s_theta_o);
+  __Pyx_GIVEREF(__pyx_n_s_theta_o);
+  __Pyx_INCREF(__pyx_n_s_gamma);
+  PyList_SET_ITEM(__pyx_t_7, 5, __pyx_n_s_gamma);
+  __Pyx_GIVEREF(__pyx_n_s_gamma);
+  __Pyx_INCREF(__pyx_n_s_eta);
+  PyList_SET_ITEM(__pyx_t_7, 6, __pyx_n_s_eta);
+  __Pyx_GIVEREF(__pyx_n_s_eta);
+  __Pyx_INCREF(__pyx_n_s_tau_theta);
+  PyList_SET_ITEM(__pyx_t_7, 7, __pyx_n_s_tau_theta);
+  __Pyx_GIVEREF(__pyx_n_s_tau_theta);
+  __Pyx_INCREF(__pyx_n_s_tau_beta);
+  PyList_SET_ITEM(__pyx_t_7, 8, __pyx_n_s_tau_beta);
+  __Pyx_GIVEREF(__pyx_n_s_tau_beta);
+  __Pyx_INCREF(__pyx_n_s_ax);
+  PyList_SET_ITEM(__pyx_t_7, 9, __pyx_n_s_ax);
+  __Pyx_GIVEREF(__pyx_n_s_ax);
+  __Pyx_INCREF(__pyx_n_s_ay);
+  PyList_SET_ITEM(__pyx_t_7, 10, __pyx_n_s_ay);
+  __Pyx_GIVEREF(__pyx_n_s_ay);
+  __Pyx_INCREF(__pyx_n_s_smoothed_x);
+  PyList_SET_ITEM(__pyx_t_7, 11, __pyx_n_s_smoothed_x);
+  __Pyx_GIVEREF(__pyx_n_s_smoothed_x);
+  __Pyx_INCREF(__pyx_n_s_smoothed_y);
+  PyList_SET_ITEM(__pyx_t_7, 12, __pyx_n_s_smoothed_y);
+  __Pyx_GIVEREF(__pyx_n_s_smoothed_y);
+  __Pyx_INCREF(__pyx_n_s_time_between_modification);
+  PyList_SET_ITEM(__pyx_t_7, 13, __pyx_n_s_time_between_modification);
+  __Pyx_GIVEREF(__pyx_n_s_time_between_modification);
+  __Pyx_INCREF(__pyx_n_s_time_to_next_modification);
+  PyList_SET_ITEM(__pyx_t_7, 14, __pyx_n_s_time_to_next_modification);
+  __Pyx_GIVEREF(__pyx_n_s_time_to_next_modification);
+  __Pyx_INCREF(__pyx_n_s_theta_squares_the_average);
+  PyList_SET_ITEM(__pyx_t_7, 15, __pyx_n_s_theta_squares_the_average);
+  __Pyx_GIVEREF(__pyx_n_s_theta_squares_the_average);
+  __pyx_t_5 = NULL;
+  if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
+    if (likely(__pyx_t_5)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+      __Pyx_INCREF(__pyx_t_5);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_4, function);
+    }
+  }
+  if (!__pyx_t_5) {
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 98; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __Pyx_GOTREF(__pyx_t_3);
+  } else {
+    __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 98; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_8);
+    PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
+    PyTuple_SET_ITEM(__pyx_t_8, 0+1, __pyx_t_7);
+    __Pyx_GIVEREF(__pyx_t_7);
+    __pyx_t_7 = 0;
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 98; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+  }
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+  /* "splikes/connections/BCM.pyx":102
+ *             'ay','smoothed_x','smoothed_y','time_between_modification',
+ *             'time_to_next_modification','theta_squares_the_average',])
+ *         self.save_data.extend(['theta','beta','x','y',             # <<<<<<<<<<<<<<
+ *             'y_avg','X','Y','mod_X','mod_Y','mod_theta','mod_beta',
+ *             'initial_theta_range'])
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->__pyx_base.__pyx_base.save_data, __pyx_n_s_extend); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 102; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_8 = PyList_New(12); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 102; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_8);
+  __Pyx_INCREF(__pyx_n_s_theta);
+  PyList_SET_ITEM(__pyx_t_8, 0, __pyx_n_s_theta);
+  __Pyx_GIVEREF(__pyx_n_s_theta);
+  __Pyx_INCREF(__pyx_n_s_beta);
+  PyList_SET_ITEM(__pyx_t_8, 1, __pyx_n_s_beta);
+  __Pyx_GIVEREF(__pyx_n_s_beta);
+  __Pyx_INCREF(__pyx_n_s_x);
+  PyList_SET_ITEM(__pyx_t_8, 2, __pyx_n_s_x);
+  __Pyx_GIVEREF(__pyx_n_s_x);
+  __Pyx_INCREF(__pyx_n_s_y);
+  PyList_SET_ITEM(__pyx_t_8, 3, __pyx_n_s_y);
+  __Pyx_GIVEREF(__pyx_n_s_y);
+  __Pyx_INCREF(__pyx_n_s_y_avg);
+  PyList_SET_ITEM(__pyx_t_8, 4, __pyx_n_s_y_avg);
+  __Pyx_GIVEREF(__pyx_n_s_y_avg);
+  __Pyx_INCREF(__pyx_n_s_X);
+  PyList_SET_ITEM(__pyx_t_8, 5, __pyx_n_s_X);
+  __Pyx_GIVEREF(__pyx_n_s_X);
+  __Pyx_INCREF(__pyx_n_s_Y);
+  PyList_SET_ITEM(__pyx_t_8, 6, __pyx_n_s_Y);
+  __Pyx_GIVEREF(__pyx_n_s_Y);
+  __Pyx_INCREF(__pyx_n_s_mod_X);
+  PyList_SET_ITEM(__pyx_t_8, 7, __pyx_n_s_mod_X);
+  __Pyx_GIVEREF(__pyx_n_s_mod_X);
+  __Pyx_INCREF(__pyx_n_s_mod_Y);
+  PyList_SET_ITEM(__pyx_t_8, 8, __pyx_n_s_mod_Y);
+  __Pyx_GIVEREF(__pyx_n_s_mod_Y);
+  __Pyx_INCREF(__pyx_n_s_mod_theta);
+  PyList_SET_ITEM(__pyx_t_8, 9, __pyx_n_s_mod_theta);
+  __Pyx_GIVEREF(__pyx_n_s_mod_theta);
+  __Pyx_INCREF(__pyx_n_s_mod_beta);
+  PyList_SET_ITEM(__pyx_t_8, 10, __pyx_n_s_mod_beta);
+  __Pyx_GIVEREF(__pyx_n_s_mod_beta);
+  __Pyx_INCREF(__pyx_n_s_initial_theta_range);
+  PyList_SET_ITEM(__pyx_t_8, 11, __pyx_n_s_initial_theta_range);
+  __Pyx_GIVEREF(__pyx_n_s_initial_theta_range);
+  __pyx_t_7 = NULL;
+  if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
+    __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_4);
+    if (likely(__pyx_t_7)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+      __Pyx_INCREF(__pyx_t_7);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_4, function);
+    }
+  }
+  if (!__pyx_t_7) {
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_8); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 102; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __Pyx_GOTREF(__pyx_t_3);
+  } else {
+    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 102; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_5);
+    PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_7); __Pyx_GIVEREF(__pyx_t_7); __pyx_t_7 = NULL;
+    PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_8);
+    __Pyx_GIVEREF(__pyx_t_8);
+    __pyx_t_8 = 0;
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 102; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  }
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+  /* "splikes/connections/BCM.pyx":66
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -2842,6 +3063,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7);
+  __Pyx_XDECREF(__pyx_t_8);
   __Pyx_AddTraceback("splikes.connections.BCM.BCM_LawCooper.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
@@ -2850,7 +3072,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":97
+/* "splikes/connections/BCM.pyx":110
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -2918,11 +3140,11 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_5update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -2937,7 +3159,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
           __pyx_t_6 = 1;
         }
       }
-      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_7);
       if (__pyx_t_5) {
         PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
@@ -2948,7 +3170,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
       __pyx_t_3 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -2960,7 +3182,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes/connections/BCM.pyx":100
+  /* "splikes/connections/BCM.pyx":113
  *         cdef int __i,__j
  * 
  *         cdef double *W=self.W             # <<<<<<<<<<<<<<
@@ -2970,7 +3192,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_8 = __pyx_v_self->__pyx_base.W;
   __pyx_v_W = __pyx_t_8;
 
-  /* "splikes/connections/BCM.pyx":101
+  /* "splikes/connections/BCM.pyx":114
  * 
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data             # <<<<<<<<<<<<<<
@@ -2979,7 +3201,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_theta = ((double *)__pyx_v_self->theta->data);
 
-  /* "splikes/connections/BCM.pyx":102
+  /* "splikes/connections/BCM.pyx":115
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *beta=<double *>self.beta.data             # <<<<<<<<<<<<<<
@@ -2988,7 +3210,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_beta = ((double *)__pyx_v_self->beta->data);
 
-  /* "splikes/connections/BCM.pyx":103
+  /* "splikes/connections/BCM.pyx":116
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *beta=<double *>self.beta.data
  *         cdef double *y=<double *>self.y.data             # <<<<<<<<<<<<<<
@@ -2997,7 +3219,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_y = ((double *)__pyx_v_self->y->data);
 
-  /* "splikes/connections/BCM.pyx":104
+  /* "splikes/connections/BCM.pyx":117
  *         cdef double *beta=<double *>self.beta.data
  *         cdef double *y=<double *>self.y.data
  *         cdef double *x=<double *>self.x.data             # <<<<<<<<<<<<<<
@@ -3006,7 +3228,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_x = ((double *)__pyx_v_self->x->data);
 
-  /* "splikes/connections/BCM.pyx":105
+  /* "splikes/connections/BCM.pyx":118
  *         cdef double *y=<double *>self.y.data
  *         cdef double *x=<double *>self.x.data
  *         cdef double *Y=<double *>self.Y.data             # <<<<<<<<<<<<<<
@@ -3015,7 +3237,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_Y = ((double *)__pyx_v_self->Y->data);
 
-  /* "splikes/connections/BCM.pyx":106
+  /* "splikes/connections/BCM.pyx":119
  *         cdef double *x=<double *>self.x.data
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *X=<double *>self.X.data             # <<<<<<<<<<<<<<
@@ -3024,7 +3246,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_X = ((double *)__pyx_v_self->X->data);
 
-  /* "splikes/connections/BCM.pyx":107
+  /* "splikes/connections/BCM.pyx":120
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *X=<double *>self.X.data
  *         cdef double *y_avg=<double *>self.y_avg.data             # <<<<<<<<<<<<<<
@@ -3033,7 +3255,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_y_avg = ((double *)__pyx_v_self->y_avg->data);
 
-  /* "splikes/connections/BCM.pyx":109
+  /* "splikes/connections/BCM.pyx":122
  *         cdef double *y_avg=<double *>self.y_avg.data
  * 
  *         cdef double *mod_X=<double *>self.mod_X.data             # <<<<<<<<<<<<<<
@@ -3042,7 +3264,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_mod_X = ((double *)__pyx_v_self->mod_X->data);
 
-  /* "splikes/connections/BCM.pyx":110
+  /* "splikes/connections/BCM.pyx":123
  * 
  *         cdef double *mod_X=<double *>self.mod_X.data
  *         cdef double *mod_Y=<double *>self.mod_Y.data             # <<<<<<<<<<<<<<
@@ -3051,7 +3273,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_mod_Y = ((double *)__pyx_v_self->mod_Y->data);
 
-  /* "splikes/connections/BCM.pyx":111
+  /* "splikes/connections/BCM.pyx":124
  *         cdef double *mod_X=<double *>self.mod_X.data
  *         cdef double *mod_Y=<double *>self.mod_Y.data
  *         cdef double *mod_theta=<double *>self.mod_theta.data             # <<<<<<<<<<<<<<
@@ -3060,7 +3282,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_mod_theta = ((double *)__pyx_v_self->mod_theta->data);
 
-  /* "splikes/connections/BCM.pyx":112
+  /* "splikes/connections/BCM.pyx":125
  *         cdef double *mod_Y=<double *>self.mod_Y.data
  *         cdef double *mod_theta=<double *>self.mod_theta.data
  *         cdef double *mod_beta=<double *>self.mod_beta.data             # <<<<<<<<<<<<<<
@@ -3069,7 +3291,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_mod_beta = ((double *)__pyx_v_self->mod_beta->data);
 
-  /* "splikes/connections/BCM.pyx":114
+  /* "splikes/connections/BCM.pyx":127
  *         cdef double *mod_beta=<double *>self.mod_beta.data
  * 
  *         cdef double tau_x=self.tau_x             # <<<<<<<<<<<<<<
@@ -3079,7 +3301,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->tau_x;
   __pyx_v_tau_x = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":115
+  /* "splikes/connections/BCM.pyx":128
  * 
  *         cdef double tau_x=self.tau_x
  *         cdef double tau_y=self.tau_y             # <<<<<<<<<<<<<<
@@ -3089,7 +3311,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->tau_y;
   __pyx_v_tau_y = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":116
+  /* "splikes/connections/BCM.pyx":129
  *         cdef double tau_x=self.tau_x
  *         cdef double tau_y=self.tau_y
  *         cdef double ax=self.ax             # <<<<<<<<<<<<<<
@@ -3099,7 +3321,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->ax;
   __pyx_v_ax = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":117
+  /* "splikes/connections/BCM.pyx":130
  *         cdef double tau_y=self.tau_y
  *         cdef double ax=self.ax
  *         cdef double ay=self.ay             # <<<<<<<<<<<<<<
@@ -3109,7 +3331,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->ay;
   __pyx_v_ay = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":118
+  /* "splikes/connections/BCM.pyx":131
  *         cdef double ax=self.ax
  *         cdef double ay=self.ay
  *         cdef double xo=self.xo             # <<<<<<<<<<<<<<
@@ -3119,7 +3341,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->xo;
   __pyx_v_xo = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":119
+  /* "splikes/connections/BCM.pyx":132
  *         cdef double ay=self.ay
  *         cdef double xo=self.xo
  *         cdef double yo=self.yo             # <<<<<<<<<<<<<<
@@ -3129,7 +3351,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->yo;
   __pyx_v_yo = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":120
+  /* "splikes/connections/BCM.pyx":133
  *         cdef double xo=self.xo
  *         cdef double yo=self.yo
  *         cdef double theta_o=self.theta_o             # <<<<<<<<<<<<<<
@@ -3139,7 +3361,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->theta_o;
   __pyx_v_theta_o = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":121
+  /* "splikes/connections/BCM.pyx":134
  *         cdef double yo=self.yo
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma             # <<<<<<<<<<<<<<
@@ -3149,7 +3371,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->gamma;
   __pyx_v_gamma = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":122
+  /* "splikes/connections/BCM.pyx":135
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta             # <<<<<<<<<<<<<<
@@ -3159,39 +3381,39 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->eta;
   __pyx_v_eta = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":123
+  /* "splikes/connections/BCM.pyx":136
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta
  *         cdef double tau_theta=self.tau_theta             # <<<<<<<<<<<<<<
  *         cdef double tau_beta=self.tau_beta
  *         cdef double dt,dw
  */
-  __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_self->tau_theta); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 123; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_self->tau_theta); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 136; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_tau_theta = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":124
+  /* "splikes/connections/BCM.pyx":137
  *         cdef double eta=self.eta
  *         cdef double tau_theta=self.tau_theta
  *         cdef double tau_beta=self.tau_beta             # <<<<<<<<<<<<<<
  *         cdef double dt,dw
  *         cdef double YY
  */
-  __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_self->tau_beta); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 124; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_self->tau_beta); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 137; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_tau_beta = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":133
+  /* "splikes/connections/BCM.pyx":146
  *         cdef int __wi
  * 
  *         use_beta=self.tau_beta>0             # <<<<<<<<<<<<<<
  * 
  *         pre=<int *>self.pre.spiking.data
  */
-  __pyx_t_1 = PyObject_RichCompare(__pyx_v_self->tau_beta, __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 133; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_10 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_10 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 133; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyObject_RichCompare(__pyx_v_self->tau_beta, __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_10 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_10 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_use_beta = __pyx_t_10;
 
-  /* "splikes/connections/BCM.pyx":135
+  /* "splikes/connections/BCM.pyx":148
  *         use_beta=self.tau_beta>0
  * 
  *         pre=<int *>self.pre.spiking.data             # <<<<<<<<<<<<<<
@@ -3200,7 +3422,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_pre = ((int *)__pyx_v_self->__pyx_base.pre->spiking->data);
 
-  /* "splikes/connections/BCM.pyx":136
+  /* "splikes/connections/BCM.pyx":149
  * 
  *         pre=<int *>self.pre.spiking.data
  *         post=<int *>self.post.spiking.data             # <<<<<<<<<<<<<<
@@ -3209,7 +3431,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_post = ((int *)__pyx_v_self->__pyx_base.post->spiking->data);
 
-  /* "splikes/connections/BCM.pyx":139
+  /* "splikes/connections/BCM.pyx":152
  * 
  * 
  *         for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -3220,7 +3442,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v___j = __pyx_t_11;
 
-    /* "splikes/connections/BCM.pyx":140
+    /* "splikes/connections/BCM.pyx":153
  * 
  *         for __j in range(self.pre.N):
  *             x[__j]+=sim.dt*(-x[__j]/tau_x+ax*pre[__j]/sim.dt)             # <<<<<<<<<<<<<<
@@ -3231,7 +3453,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     (__pyx_v_x[__pyx_t_12]) = ((__pyx_v_x[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_x[__pyx_v___j])) / __pyx_v_tau_x) + ((__pyx_v_ax * (__pyx_v_pre[__pyx_v___j])) / __pyx_v_sim->dt))));
   }
 
-  /* "splikes/connections/BCM.pyx":142
+  /* "splikes/connections/BCM.pyx":155
  *             x[__j]+=sim.dt*(-x[__j]/tau_x+ax*pre[__j]/sim.dt)
  * 
  *         if self.smoothed_x:             # <<<<<<<<<<<<<<
@@ -3241,7 +3463,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_13 = (__pyx_v_self->smoothed_x != 0);
   if (__pyx_t_13) {
 
-    /* "splikes/connections/BCM.pyx":143
+    /* "splikes/connections/BCM.pyx":156
  * 
  *         if self.smoothed_x:
  *             for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -3252,7 +3474,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___j = __pyx_t_11;
 
-      /* "splikes/connections/BCM.pyx":144
+      /* "splikes/connections/BCM.pyx":157
  *         if self.smoothed_x:
  *             for __j in range(self.pre.N):
  *                 X[__j]+=sim.dt*(x[__j]-X[__j])/tau_x             # <<<<<<<<<<<<<<
@@ -3266,7 +3488,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   /*else*/ {
 
-    /* "splikes/connections/BCM.pyx":146
+    /* "splikes/connections/BCM.pyx":159
  *                 X[__j]+=sim.dt*(x[__j]-X[__j])/tau_x
  *         else:
  *             for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -3277,7 +3499,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___j = __pyx_t_11;
 
-      /* "splikes/connections/BCM.pyx":147
+      /* "splikes/connections/BCM.pyx":160
  *         else:
  *             for __j in range(self.pre.N):
  *                 X[__j]=x[__j]             # <<<<<<<<<<<<<<
@@ -3289,7 +3511,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   __pyx_L5:;
 
-  /* "splikes/connections/BCM.pyx":149
+  /* "splikes/connections/BCM.pyx":162
  *                 X[__j]=x[__j]
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3300,7 +3522,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v___i = __pyx_t_11;
 
-    /* "splikes/connections/BCM.pyx":150
+    /* "splikes/connections/BCM.pyx":163
  * 
  *         for __i in range(self.post.N):
  *             y[__i]+=sim.dt*(-y[__i]/tau_y+ay*post[__i]/sim.dt)             # <<<<<<<<<<<<<<
@@ -3311,7 +3533,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     (__pyx_v_y[__pyx_t_12]) = ((__pyx_v_y[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_y[__pyx_v___i])) / __pyx_v_tau_y) + ((__pyx_v_ay * (__pyx_v_post[__pyx_v___i])) / __pyx_v_sim->dt))));
   }
 
-  /* "splikes/connections/BCM.pyx":152
+  /* "splikes/connections/BCM.pyx":165
  *             y[__i]+=sim.dt*(-y[__i]/tau_y+ay*post[__i]/sim.dt)
  * 
  *         if self.smoothed_y:             # <<<<<<<<<<<<<<
@@ -3321,7 +3543,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_13 = (__pyx_v_self->smoothed_y != 0);
   if (__pyx_t_13) {
 
-    /* "splikes/connections/BCM.pyx":153
+    /* "splikes/connections/BCM.pyx":166
  * 
  *         if self.smoothed_y:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3332,7 +3554,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___i = __pyx_t_11;
 
-      /* "splikes/connections/BCM.pyx":154
+      /* "splikes/connections/BCM.pyx":167
  *         if self.smoothed_y:
  *             for __i in range(self.post.N):
  *                 Y[__i]+=sim.dt*(y[__i]-Y[__i])/tau_y             # <<<<<<<<<<<<<<
@@ -3346,7 +3568,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   /*else*/ {
 
-    /* "splikes/connections/BCM.pyx":156
+    /* "splikes/connections/BCM.pyx":169
  *                 Y[__i]+=sim.dt*(y[__i]-Y[__i])/tau_y
  *         else:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3357,7 +3579,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___i = __pyx_t_11;
 
-      /* "splikes/connections/BCM.pyx":157
+      /* "splikes/connections/BCM.pyx":170
  *         else:
  *             for __i in range(self.post.N):
  *                 Y[__i]=y[__i]             # <<<<<<<<<<<<<<
@@ -3369,7 +3591,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   __pyx_L12:;
 
-  /* "splikes/connections/BCM.pyx":160
+  /* "splikes/connections/BCM.pyx":173
  * 
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3380,7 +3602,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v___i = __pyx_t_11;
 
-    /* "splikes/connections/BCM.pyx":161
+    /* "splikes/connections/BCM.pyx":174
  * 
  *         for __i in range(self.post.N):
  *             y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/tau_y-yo)-y_avg[__i]))             # <<<<<<<<<<<<<<
@@ -3391,7 +3613,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     (__pyx_v_y_avg[__pyx_t_12]) = ((__pyx_v_y_avg[__pyx_t_12]) + (__pyx_v_sim->dt * ((1.0 / __pyx_v_tau_theta) * ((((__pyx_v_Y[__pyx_v___i]) / __pyx_v_tau_y) - __pyx_v_yo) - (__pyx_v_y_avg[__pyx_v___i])))));
   }
 
-  /* "splikes/connections/BCM.pyx":163
+  /* "splikes/connections/BCM.pyx":176
  *             y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/tau_y-yo)-y_avg[__i]))
  * 
  *         if use_beta:             # <<<<<<<<<<<<<<
@@ -3401,7 +3623,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_13 = (__pyx_v_use_beta != 0);
   if (__pyx_t_13) {
 
-    /* "splikes/connections/BCM.pyx":164
+    /* "splikes/connections/BCM.pyx":177
  * 
  *         if use_beta:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3412,7 +3634,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___i = __pyx_t_11;
 
-      /* "splikes/connections/BCM.pyx":165
+      /* "splikes/connections/BCM.pyx":178
  *         if use_beta:
  *             for __i in range(self.post.N):
  *                 beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]-beta[__i])             # <<<<<<<<<<<<<<
@@ -3426,7 +3648,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   __pyx_L19:;
 
-  /* "splikes/connections/BCM.pyx":167
+  /* "splikes/connections/BCM.pyx":180
  *                 beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]-beta[__i])
  * 
  *         modify_now=False             # <<<<<<<<<<<<<<
@@ -3435,7 +3657,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_modify_now = 0;
 
-  /* "splikes/connections/BCM.pyx":168
+  /* "splikes/connections/BCM.pyx":181
  * 
  *         modify_now=False
  *         if self.time_between_modification<0.0:             # <<<<<<<<<<<<<<
@@ -3445,7 +3667,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_13 = ((__pyx_v_self->time_between_modification < 0.0) != 0);
   if (__pyx_t_13) {
 
-    /* "splikes/connections/BCM.pyx":169
+    /* "splikes/connections/BCM.pyx":182
  *         modify_now=False
  *         if self.time_between_modification<0.0:
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -3454,7 +3676,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes/connections/BCM.pyx":170
+    /* "splikes/connections/BCM.pyx":183
  *         if self.time_between_modification<0.0:
  *             modify_now=True
  *             dt=sim.dt             # <<<<<<<<<<<<<<
@@ -3466,7 +3688,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     goto __pyx_L22;
   }
 
-  /* "splikes/connections/BCM.pyx":171
+  /* "splikes/connections/BCM.pyx":184
  *             modify_now=True
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):             # <<<<<<<<<<<<<<
@@ -3476,7 +3698,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_13 = ((__pyx_v_t > (__pyx_v_self->time_to_next_modification - 1e-6)) != 0);
   if (__pyx_t_13) {
 
-    /* "splikes/connections/BCM.pyx":172
+    /* "splikes/connections/BCM.pyx":185
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -3485,7 +3707,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes/connections/BCM.pyx":173
+    /* "splikes/connections/BCM.pyx":186
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -3494,7 +3716,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
     __pyx_v_self->time_to_next_modification = (__pyx_v_self->time_to_next_modification + __pyx_v_self->time_between_modification);
 
-    /* "splikes/connections/BCM.pyx":174
+    /* "splikes/connections/BCM.pyx":187
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification
  *             dt=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -3507,7 +3729,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   __pyx_L22:;
 
-  /* "splikes/connections/BCM.pyx":176
+  /* "splikes/connections/BCM.pyx":189
  *             dt=self.time_between_modification
  * 
  *         if modify_now:             # <<<<<<<<<<<<<<
@@ -3517,7 +3739,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_13 = (__pyx_v_modify_now != 0);
   if (__pyx_t_13) {
 
-    /* "splikes/connections/BCM.pyx":177
+    /* "splikes/connections/BCM.pyx":190
  * 
  *         if modify_now:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3528,7 +3750,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___i = __pyx_t_11;
 
-      /* "splikes/connections/BCM.pyx":178
+      /* "splikes/connections/BCM.pyx":191
  *         if modify_now:
  *             for __i in range(self.post.N):
  *                 if use_beta:             # <<<<<<<<<<<<<<
@@ -3538,7 +3760,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       __pyx_t_13 = (__pyx_v_use_beta != 0);
       if (__pyx_t_13) {
 
-        /* "splikes/connections/BCM.pyx":179
+        /* "splikes/connections/BCM.pyx":192
  *             for __i in range(self.post.N):
  *                 if use_beta:
  *                     YY=Y[__i]-beta[__i]             # <<<<<<<<<<<<<<
@@ -3547,7 +3769,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
         __pyx_v_YY = ((__pyx_v_Y[__pyx_v___i]) - (__pyx_v_beta[__pyx_v___i]));
 
-        /* "splikes/connections/BCM.pyx":180
+        /* "splikes/connections/BCM.pyx":193
  *                 if use_beta:
  *                     YY=Y[__i]-beta[__i]
  *                     if YY<0.0:             # <<<<<<<<<<<<<<
@@ -3557,7 +3779,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
         __pyx_t_13 = ((__pyx_v_YY < 0.0) != 0);
         if (__pyx_t_13) {
 
-          /* "splikes/connections/BCM.pyx":181
+          /* "splikes/connections/BCM.pyx":194
  *                     YY=Y[__i]-beta[__i]
  *                     if YY<0.0:
  *                         YY=0.0             # <<<<<<<<<<<<<<
@@ -3572,7 +3794,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       }
       /*else*/ {
 
-        /* "splikes/connections/BCM.pyx":183
+        /* "splikes/connections/BCM.pyx":196
  *                         YY=0.0
  *                 else:
  *                     YY=Y[__i]             # <<<<<<<<<<<<<<
@@ -3583,7 +3805,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       }
       __pyx_L26:;
 
-      /* "splikes/connections/BCM.pyx":185
+      /* "splikes/connections/BCM.pyx":198
  *                     YY=Y[__i]
  * 
  *                 mod_Y[__i]=YY             # <<<<<<<<<<<<<<
@@ -3592,7 +3814,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
       (__pyx_v_mod_Y[__pyx_v___i]) = __pyx_v_YY;
 
-      /* "splikes/connections/BCM.pyx":186
+      /* "splikes/connections/BCM.pyx":199
  * 
  *                 mod_Y[__i]=YY
  *                 mod_theta[__i]=theta[__i]             # <<<<<<<<<<<<<<
@@ -3601,7 +3823,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
       (__pyx_v_mod_theta[__pyx_v___i]) = (__pyx_v_theta[__pyx_v___i]);
 
-      /* "splikes/connections/BCM.pyx":187
+      /* "splikes/connections/BCM.pyx":200
  *                 mod_Y[__i]=YY
  *                 mod_theta[__i]=theta[__i]
  *                 mod_beta[__i]=beta[__i]             # <<<<<<<<<<<<<<
@@ -3610,7 +3832,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
       (__pyx_v_mod_beta[__pyx_v___i]) = (__pyx_v_beta[__pyx_v___i]);
 
-      /* "splikes/connections/BCM.pyx":190
+      /* "splikes/connections/BCM.pyx":203
  * 
  * 
  *                 for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -3621,7 +3843,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_12; __pyx_t_14+=1) {
         __pyx_v___j = __pyx_t_14;
 
-        /* "splikes/connections/BCM.pyx":191
+        /* "splikes/connections/BCM.pyx":204
  * 
  *                 for __j in range(self.pre.N):
  *                     mod_X[__j]=X[__j]             # <<<<<<<<<<<<<<
@@ -3630,7 +3852,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
         (__pyx_v_mod_X[__pyx_v___j]) = (__pyx_v_X[__pyx_v___j]);
 
-        /* "splikes/connections/BCM.pyx":192
+        /* "splikes/connections/BCM.pyx":205
  *                 for __j in range(self.pre.N):
  *                     mod_X[__j]=X[__j]
  *                     __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
@@ -3639,7 +3861,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
         __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-        /* "splikes/connections/BCM.pyx":193
+        /* "splikes/connections/BCM.pyx":206
  *                     mod_X[__j]=X[__j]
  *                     __wi=__i*self.pre.N+__j
  *                     dw=(eta*(X[__j]-xo)*((YY-yo)*((YY-yo)-theta[__i])/theta[__i])-eta*gamma*W[__wi])             # <<<<<<<<<<<<<<
@@ -3648,7 +3870,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
         __pyx_v_dw = (((__pyx_v_eta * ((__pyx_v_X[__pyx_v___j]) - __pyx_v_xo)) * (((__pyx_v_YY - __pyx_v_yo) * ((__pyx_v_YY - __pyx_v_yo) - (__pyx_v_theta[__pyx_v___i]))) / (__pyx_v_theta[__pyx_v___i]))) - ((__pyx_v_eta * __pyx_v_gamma) * (__pyx_v_W[__pyx_v___wi])));
 
-        /* "splikes/connections/BCM.pyx":194
+        /* "splikes/connections/BCM.pyx":207
  *                     __wi=__i*self.pre.N+__j
  *                     dw=(eta*(X[__j]-xo)*((YY-yo)*((YY-yo)-theta[__i])/theta[__i])-eta*gamma*W[__wi])
  *                     W[__wi]+=dt*dw             # <<<<<<<<<<<<<<
@@ -3663,7 +3885,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   __pyx_L23:;
 
-  /* "splikes/connections/BCM.pyx":197
+  /* "splikes/connections/BCM.pyx":210
  * 
  * 
  *         if self.theta_squares_the_average:             # <<<<<<<<<<<<<<
@@ -3673,7 +3895,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_13 = (__pyx_v_self->theta_squares_the_average != 0);
   if (__pyx_t_13) {
 
-    /* "splikes/connections/BCM.pyx":198
+    /* "splikes/connections/BCM.pyx":211
  * 
  *         if self.theta_squares_the_average:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3684,7 +3906,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___i = __pyx_t_11;
 
-      /* "splikes/connections/BCM.pyx":199
+      /* "splikes/connections/BCM.pyx":212
  *         if self.theta_squares_the_average:
  *             for __i in range(self.post.N):
  *                 theta[__i]=y_avg[__i]*y_avg[__i]/theta_o             # <<<<<<<<<<<<<<
@@ -3697,7 +3919,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   /*else*/ {
 
-    /* "splikes/connections/BCM.pyx":201
+    /* "splikes/connections/BCM.pyx":214
  *                 theta[__i]=y_avg[__i]*y_avg[__i]/theta_o
  *         else:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -3708,7 +3930,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___i = __pyx_t_11;
 
-      /* "splikes/connections/BCM.pyx":202
+      /* "splikes/connections/BCM.pyx":215
  *         else:
  *             for __i in range(self.post.N):
  *                 if use_beta:             # <<<<<<<<<<<<<<
@@ -3718,7 +3940,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       __pyx_t_13 = (__pyx_v_use_beta != 0);
       if (__pyx_t_13) {
 
-        /* "splikes/connections/BCM.pyx":203
+        /* "splikes/connections/BCM.pyx":216
  *             for __i in range(self.post.N):
  *                 if use_beta:
  *                     YY=Y[__i]-beta[__i]             # <<<<<<<<<<<<<<
@@ -3727,7 +3949,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
         __pyx_v_YY = ((__pyx_v_Y[__pyx_v___i]) - (__pyx_v_beta[__pyx_v___i]));
 
-        /* "splikes/connections/BCM.pyx":204
+        /* "splikes/connections/BCM.pyx":217
  *                 if use_beta:
  *                     YY=Y[__i]-beta[__i]
  *                     if YY<0.0:             # <<<<<<<<<<<<<<
@@ -3737,7 +3959,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
         __pyx_t_13 = ((__pyx_v_YY < 0.0) != 0);
         if (__pyx_t_13) {
 
-          /* "splikes/connections/BCM.pyx":205
+          /* "splikes/connections/BCM.pyx":218
  *                     YY=Y[__i]-beta[__i]
  *                     if YY<0.0:
  *                         YY=0.0             # <<<<<<<<<<<<<<
@@ -3752,7 +3974,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       }
       /*else*/ {
 
-        /* "splikes/connections/BCM.pyx":207
+        /* "splikes/connections/BCM.pyx":220
  *                         YY=0.0
  *                 else:
  *                     YY=Y[__i]             # <<<<<<<<<<<<<<
@@ -3763,7 +3985,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       }
       __pyx_L35:;
 
-      /* "splikes/connections/BCM.pyx":208
+      /* "splikes/connections/BCM.pyx":221
  *                 else:
  *                     YY=Y[__i]
  *                 theta[__i]+=sim.dt*((1.0/tau_theta)*(YY*YY/theta_o-theta[__i]))             # <<<<<<<<<<<<<<
@@ -3774,20 +3996,20 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       (__pyx_v_theta[__pyx_t_12]) = ((__pyx_v_theta[__pyx_t_12]) + (__pyx_v_sim->dt * ((1.0 / __pyx_v_tau_theta) * (((__pyx_v_YY * __pyx_v_YY) / __pyx_v_theta_o) - (__pyx_v_theta[__pyx_v___i])))));
     }
 
-    /* "splikes/connections/BCM.pyx":210
+    /* "splikes/connections/BCM.pyx":223
  *                 theta[__i]+=sim.dt*((1.0/tau_theta)*(YY*YY/theta_o-theta[__i]))
  * 
  *             self.apply_weight_limits()             # <<<<<<<<<<<<<<
  * 
  * cdef class BCM(connection):
  */
-    __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 210; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
   __pyx_L30:;
 
-  /* "splikes/connections/BCM.pyx":97
+  /* "splikes/connections/BCM.pyx":110
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -3844,11 +4066,11 @@ static PyObject *__pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_5update(Py
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -3856,18 +4078,18 @@ static PyObject *__pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_5update(Py
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     __pyx_v_sim = ((struct __pyx_obj_7splikes_7splikes_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("splikes.connections.BCM.BCM_LawCooper.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_4update(((struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -3888,7 +4110,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_4update(st
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6289,7 +6511,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_25time_to_next_m
  *     cdef public double time_between_modification,time_to_next_modification
  *     cdef public int theta_squares_the_average             # <<<<<<<<<<<<<<
  * 
- *     cpdef _reset(self):
+ * 
  */
 
 /* Python wrapper */
@@ -6366,7 +6588,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_25theta_squares_
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":220
+/* "splikes/connections/BCM.pyx":233
  *     cdef public int save_inputs
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -6392,7 +6614,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 220; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 233; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_3BCM_3BCM_1_reset)) {
       __Pyx_XDECREF(__pyx_r);
@@ -6408,10 +6630,10 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 220; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 233; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 220; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 233; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -6423,99 +6645,99 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes/connections/BCM.pyx":221
+  /* "splikes/connections/BCM.pyx":234
  * 
  *     cpdef _reset(self):
  *         self.X=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 221; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 234; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 221; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 234; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 221; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 234; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 221; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 234; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 221; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 234; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 221; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 234; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 221; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 234; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 221; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 234; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 221; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 234; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 221; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 234; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_5);
   __Pyx_GOTREF(__pyx_v_self->X);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->X));
   __pyx_v_self->X = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "splikes/connections/BCM.pyx":222
+  /* "splikes/connections/BCM.pyx":235
  *     cpdef _reset(self):
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 235; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 235; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 235; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 235; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 235; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 235; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 235; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 235; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 235; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 235; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_4);
   __Pyx_GOTREF(__pyx_v_self->Y);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->Y));
   __pyx_v_self->Y = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "splikes/connections/BCM.pyx":223
+  /* "splikes/connections/BCM.pyx":236
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 236; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_rand); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_rand); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 236; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 236; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_1 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -6528,66 +6750,66 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
     }
   }
   if (!__pyx_t_1) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 236; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_4);
   } else {
-    __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 236; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1); __Pyx_GIVEREF(__pyx_t_1); __pyx_t_1 = NULL;
     PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_5);
     __pyx_t_5 = 0;
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 236; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 236; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "splikes/connections/BCM.pyx":224
+  /* "splikes/connections/BCM.pyx":237
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  */
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 224; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 237; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "splikes/connections/BCM.pyx":223
+  /* "splikes/connections/BCM.pyx":236
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  */
-  __pyx_t_5 = PyNumber_Subtract(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyNumber_Subtract(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 236; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Multiply(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyNumber_Multiply(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 236; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "splikes/connections/BCM.pyx":224
+  /* "splikes/connections/BCM.pyx":237
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  */
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_5 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 224; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_5 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 237; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = PyNumber_Add(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 224; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyNumber_Add(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 237; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 224; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 237; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "splikes/connections/BCM.pyx":223
+  /* "splikes/connections/BCM.pyx":236
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -6600,87 +6822,87 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   __pyx_v_self->theta = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "splikes/connections/BCM.pyx":225
+  /* "splikes/connections/BCM.pyx":238
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.time_to_next_modification=self.time_between_modification
  */
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 225; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 238; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 225; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 238; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 225; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 238; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 225; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 238; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 225; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 238; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 225; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 238; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 225; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 238; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 225; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 238; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 225; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 238; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 225; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 238; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->y);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->y));
   __pyx_v_self->y = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes/connections/BCM.pyx":226
+  /* "splikes/connections/BCM.pyx":239
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.time_to_next_modification=self.time_between_modification
  *         connection._reset(self)
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_v_self->x);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->x));
   __pyx_v_self->x = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":227
+  /* "splikes/connections/BCM.pyx":240
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.time_to_next_modification=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -6690,18 +6912,18 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   __pyx_t_6 = __pyx_v_self->time_between_modification;
   __pyx_v_self->time_to_next_modification = __pyx_t_6;
 
-  /* "splikes/connections/BCM.pyx":228
+  /* "splikes/connections/BCM.pyx":241
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.time_to_next_modification=self.time_between_modification
  *         connection._reset(self)             # <<<<<<<<<<<<<<
  * 
  *     def __init__(self,neuron pre,neuron post,
  */
-  __pyx_t_3 = __pyx_vtabptr_7splikes_7splikes_connection->_reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 228; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __pyx_vtabptr_7splikes_7splikes_connection->_reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 241; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":220
+  /* "splikes/connections/BCM.pyx":233
  *     cdef public int save_inputs
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -6748,7 +6970,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_o
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_reset", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_3BCM__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 220; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_3BCM__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 233; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6765,7 +6987,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_o
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":230
+/* "splikes/connections/BCM.pyx":243
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -6791,7 +7013,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_3BCM_3__init__(PyObject *__pyx_v
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_pre,&__pyx_n_s_post,&__pyx_n_s_initial_weight_range,&__pyx_n_s_state,&__pyx_n_s_initial_theta_range,0};
     PyObject* values[5] = {0,0,0,0,0};
 
-    /* "splikes/connections/BCM.pyx":231
+    /* "splikes/connections/BCM.pyx":244
  * 
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,             # <<<<<<<<<<<<<<
@@ -6800,7 +7022,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_3BCM_3__init__(PyObject *__pyx_v
  */
     values[2] = ((PyObject *)Py_None);
 
-    /* "splikes/connections/BCM.pyx":232
+    /* "splikes/connections/BCM.pyx":245
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,
  *                         state=None,             # <<<<<<<<<<<<<<
@@ -6809,7 +7031,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_3BCM_3__init__(PyObject *__pyx_v
  */
     values[3] = ((PyObject *)Py_None);
 
-    /* "splikes/connections/BCM.pyx":233
+    /* "splikes/connections/BCM.pyx":246
  *                         initial_weight_range=None,
  *                         state=None,
  *                         initial_theta_range=None,):             # <<<<<<<<<<<<<<
@@ -6837,7 +7059,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_3BCM_3__init__(PyObject *__pyx_v
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_post)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 230; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 243; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  2:
         if (kw_args > 0) {
@@ -6856,7 +7078,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_3BCM_3__init__(PyObject *__pyx_v
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 230; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 243; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -6877,17 +7099,17 @@ static int __pyx_pw_7splikes_11connections_3BCM_3BCM_3__init__(PyObject *__pyx_v
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 230; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 243; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("splikes.connections.BCM.BCM.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_7splikes_7splikes_neuron, 1, "pre", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 230; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 230; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_7splikes_7splikes_neuron, 1, "pre", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 243; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 243; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(((struct __pyx_obj_7splikes_11connections_3BCM_BCM *)__pyx_v_self), __pyx_v_pre, __pyx_v_post, __pyx_v_initial_weight_range, __pyx_v_state, __pyx_v_initial_theta_range);
 
-  /* "splikes/connections/BCM.pyx":230
+  /* "splikes/connections/BCM.pyx":243
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -6920,7 +7142,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __Pyx_RefNannySetupContext("__init__", 0);
   __Pyx_INCREF(__pyx_v_initial_theta_range);
 
-  /* "splikes/connections/BCM.pyx":236
+  /* "splikes/connections/BCM.pyx":249
  * 
  *         # initial theta range needs to be defined before connection init
  *         if initial_theta_range is None:             # <<<<<<<<<<<<<<
@@ -6931,14 +7153,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "splikes/connections/BCM.pyx":237
+    /* "splikes/connections/BCM.pyx":250
  *         # initial theta range needs to be defined before connection init
  *         if initial_theta_range is None:
  *             initial_theta_range=[0.0,0.1]             # <<<<<<<<<<<<<<
  * 
  *         self.initial_theta_range=initial_theta_range
  */
-    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 237; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 250; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_float_0_0);
     PyList_SET_ITEM(__pyx_t_3, 0, __pyx_float_0_0);
@@ -6952,7 +7174,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   }
   __pyx_L3:;
 
-  /* "splikes/connections/BCM.pyx":239
+  /* "splikes/connections/BCM.pyx":252
  *             initial_theta_range=[0.0,0.1]
  * 
  *         self.initial_theta_range=initial_theta_range             # <<<<<<<<<<<<<<
@@ -6965,14 +7187,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __Pyx_DECREF(__pyx_v_self->initial_theta_range);
   __pyx_v_self->initial_theta_range = __pyx_v_initial_theta_range;
 
-  /* "splikes/connections/BCM.pyx":241
+  /* "splikes/connections/BCM.pyx":254
  *         self.initial_theta_range=initial_theta_range
  * 
  *         connection.__init__(self,pre,post,initial_weight_range,state)             # <<<<<<<<<<<<<<
  * 
  *         self.name='Spiking BCM'
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)((PyObject*)__pyx_ptype_7splikes_7splikes_connection)), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 241; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)((PyObject*)__pyx_ptype_7splikes_7splikes_connection)), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 254; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -6986,7 +7208,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
       __pyx_t_6 = 1;
     }
   }
-  __pyx_t_7 = PyTuple_New(5+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 241; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = PyTuple_New(5+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 254; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
   if (__pyx_t_5) {
     PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
@@ -7006,13 +7228,13 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __Pyx_INCREF(__pyx_v_state);
   PyTuple_SET_ITEM(__pyx_t_7, 4+__pyx_t_6, __pyx_v_state);
   __Pyx_GIVEREF(__pyx_v_state);
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 241; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 254; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":243
+  /* "splikes/connections/BCM.pyx":256
  *         connection.__init__(self,pre,post,initial_weight_range,state)
  * 
  *         self.name='Spiking BCM'             # <<<<<<<<<<<<<<
@@ -7025,7 +7247,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __Pyx_DECREF(__pyx_v_self->__pyx_base.__pyx_base.name);
   __pyx_v_self->__pyx_base.__pyx_base.name = __pyx_kp_s_Spiking_BCM;
 
-  /* "splikes/connections/BCM.pyx":244
+  /* "splikes/connections/BCM.pyx":257
  * 
  *         self.name='Spiking BCM'
  *         self.save_inputs=False             # <<<<<<<<<<<<<<
@@ -7034,14 +7256,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->save_inputs = 0;
 
-  /* "splikes/connections/BCM.pyx":245
+  /* "splikes/connections/BCM.pyx":258
  *         self.name='Spiking BCM'
  *         self.save_inputs=False
  *         self.saved_inputs=[]             # <<<<<<<<<<<<<<
  *         self.saved_weights=[]
  *         self.saved_outputs=[]
  */
-  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 245; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 258; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_v_self->saved_inputs);
@@ -7049,14 +7271,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __pyx_v_self->saved_inputs = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":246
+  /* "splikes/connections/BCM.pyx":259
  *         self.save_inputs=False
  *         self.saved_inputs=[]
  *         self.saved_weights=[]             # <<<<<<<<<<<<<<
  *         self.saved_outputs=[]
  * 
  */
-  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 246; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 259; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_v_self->saved_weights);
@@ -7064,14 +7286,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __pyx_v_self->saved_weights = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":247
+  /* "splikes/connections/BCM.pyx":260
  *         self.saved_inputs=[]
  *         self.saved_weights=[]
  *         self.saved_outputs=[]             # <<<<<<<<<<<<<<
  * 
  *         self.a=1
  */
-  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 247; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 260; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_v_self->saved_outputs);
@@ -7079,7 +7301,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __pyx_v_self->saved_outputs = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":249
+  /* "splikes/connections/BCM.pyx":262
  *         self.saved_outputs=[]
  * 
  *         self.a=1             # <<<<<<<<<<<<<<
@@ -7088,7 +7310,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->a = 1.0;
 
-  /* "splikes/connections/BCM.pyx":250
+  /* "splikes/connections/BCM.pyx":263
  * 
  *         self.a=1
  *         self.tau=100             # <<<<<<<<<<<<<<
@@ -7097,7 +7319,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->tau = 100.0;
 
-  /* "splikes/connections/BCM.pyx":251
+  /* "splikes/connections/BCM.pyx":264
  *         self.a=1
  *         self.tau=100
  *         self.xo=0             # <<<<<<<<<<<<<<
@@ -7106,7 +7328,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->xo = 0.0;
 
-  /* "splikes/connections/BCM.pyx":252
+  /* "splikes/connections/BCM.pyx":265
  *         self.tau=100
  *         self.xo=0
  *         self.yo=0             # <<<<<<<<<<<<<<
@@ -7115,7 +7337,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->yo = 0.0;
 
-  /* "splikes/connections/BCM.pyx":253
+  /* "splikes/connections/BCM.pyx":266
  *         self.xo=0
  *         self.yo=0
  *         self.theta_o=1             # <<<<<<<<<<<<<<
@@ -7124,7 +7346,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->theta_o = 1.0;
 
-  /* "splikes/connections/BCM.pyx":254
+  /* "splikes/connections/BCM.pyx":267
  *         self.yo=0
  *         self.theta_o=1
  *         self.gamma=0             # <<<<<<<<<<<<<<
@@ -7133,7 +7355,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->gamma = 0.0;
 
-  /* "splikes/connections/BCM.pyx":255
+  /* "splikes/connections/BCM.pyx":268
  *         self.theta_o=1
  *         self.gamma=0
  *         self.eta=4e-06             # <<<<<<<<<<<<<<
@@ -7142,7 +7364,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->eta = 4e-06;
 
-  /* "splikes/connections/BCM.pyx":256
+  /* "splikes/connections/BCM.pyx":269
  *         self.gamma=0
  *         self.eta=4e-06
  *         self.tau_theta=10000             # <<<<<<<<<<<<<<
@@ -7151,7 +7373,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->tau_theta = 10000.0;
 
-  /* "splikes/connections/BCM.pyx":257
+  /* "splikes/connections/BCM.pyx":270
  *         self.eta=4e-06
  *         self.tau_theta=10000
  *         self.time_between_modification=-1.0             # <<<<<<<<<<<<<<
@@ -7160,18 +7382,18 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->time_between_modification = -1.0;
 
-  /* "splikes/connections/BCM.pyx":259
+  /* "splikes/connections/BCM.pyx":272
  *         self.time_between_modification=-1.0
  * 
  *         self._reset()             # <<<<<<<<<<<<<<
  * 
  *     @cython.cdivision(True)
  */
-  __pyx_t_3 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 259; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 272; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":230
+  /* "splikes/connections/BCM.pyx":243
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -7195,7 +7417,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":263
+/* "splikes/connections/BCM.pyx":276
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -7252,11 +7474,11 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 263; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 276; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_3BCM_3BCM_5update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 263; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 276; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -7271,7 +7493,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
           __pyx_t_6 = 1;
         }
       }
-      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 263; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 276; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_7);
       if (__pyx_t_5) {
         PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
@@ -7282,7 +7504,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
       PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
       __pyx_t_3 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 263; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 276; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -7294,7 +7516,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes/connections/BCM.pyx":266
+  /* "splikes/connections/BCM.pyx":279
  *         cdef int __i,__j
  * 
  *         cdef double *X=<double *>self.X.data             # <<<<<<<<<<<<<<
@@ -7303,7 +7525,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_X = ((double *)__pyx_v_self->X->data);
 
-  /* "splikes/connections/BCM.pyx":267
+  /* "splikes/connections/BCM.pyx":280
  * 
  *         cdef double *X=<double *>self.X.data
  *         cdef double *Y=<double *>self.Y.data             # <<<<<<<<<<<<<<
@@ -7312,7 +7534,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_Y = ((double *)__pyx_v_self->Y->data);
 
-  /* "splikes/connections/BCM.pyx":268
+  /* "splikes/connections/BCM.pyx":281
  *         cdef double *X=<double *>self.X.data
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *W=self.W             # <<<<<<<<<<<<<<
@@ -7322,7 +7544,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_8 = __pyx_v_self->__pyx_base.W;
   __pyx_v_W = __pyx_t_8;
 
-  /* "splikes/connections/BCM.pyx":269
+  /* "splikes/connections/BCM.pyx":282
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data             # <<<<<<<<<<<<<<
@@ -7331,7 +7553,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_theta = ((double *)__pyx_v_self->theta->data);
 
-  /* "splikes/connections/BCM.pyx":270
+  /* "splikes/connections/BCM.pyx":283
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *y=<double *>self.y.data             # <<<<<<<<<<<<<<
@@ -7340,7 +7562,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_y = ((double *)__pyx_v_self->y->data);
 
-  /* "splikes/connections/BCM.pyx":271
+  /* "splikes/connections/BCM.pyx":284
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *y=<double *>self.y.data
  *         cdef double *x=<double *>self.x.data             # <<<<<<<<<<<<<<
@@ -7349,7 +7571,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_x = ((double *)__pyx_v_self->x->data);
 
-  /* "splikes/connections/BCM.pyx":272
+  /* "splikes/connections/BCM.pyx":285
  *         cdef double *y=<double *>self.y.data
  *         cdef double *x=<double *>self.x.data
  *         cdef double a=self.a             # <<<<<<<<<<<<<<
@@ -7359,7 +7581,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->a;
   __pyx_v_a = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":273
+  /* "splikes/connections/BCM.pyx":286
  *         cdef double *x=<double *>self.x.data
  *         cdef double a=self.a
  *         cdef double tau=self.tau             # <<<<<<<<<<<<<<
@@ -7369,7 +7591,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->tau;
   __pyx_v_tau = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":274
+  /* "splikes/connections/BCM.pyx":287
  *         cdef double a=self.a
  *         cdef double tau=self.tau
  *         cdef double xo=self.xo             # <<<<<<<<<<<<<<
@@ -7379,7 +7601,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->xo;
   __pyx_v_xo = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":275
+  /* "splikes/connections/BCM.pyx":288
  *         cdef double tau=self.tau
  *         cdef double xo=self.xo
  *         cdef double yo=self.yo             # <<<<<<<<<<<<<<
@@ -7389,7 +7611,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->yo;
   __pyx_v_yo = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":276
+  /* "splikes/connections/BCM.pyx":289
  *         cdef double xo=self.xo
  *         cdef double yo=self.yo
  *         cdef double theta_o=self.theta_o             # <<<<<<<<<<<<<<
@@ -7399,7 +7621,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->theta_o;
   __pyx_v_theta_o = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":277
+  /* "splikes/connections/BCM.pyx":290
  *         cdef double yo=self.yo
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma             # <<<<<<<<<<<<<<
@@ -7409,7 +7631,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->gamma;
   __pyx_v_gamma = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":278
+  /* "splikes/connections/BCM.pyx":291
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta             # <<<<<<<<<<<<<<
@@ -7419,7 +7641,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->eta;
   __pyx_v_eta = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":279
+  /* "splikes/connections/BCM.pyx":292
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta
  *         cdef double tau_theta=self.tau_theta             # <<<<<<<<<<<<<<
@@ -7429,7 +7651,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->tau_theta;
   __pyx_v_tau_theta = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":289
+  /* "splikes/connections/BCM.pyx":302
  * 
  * 
  *         pre=<int *>self.pre.spiking.data             # <<<<<<<<<<<<<<
@@ -7438,7 +7660,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_pre = ((int *)__pyx_v_self->__pyx_base.pre->spiking->data);
 
-  /* "splikes/connections/BCM.pyx":290
+  /* "splikes/connections/BCM.pyx":303
  * 
  *         pre=<int *>self.pre.spiking.data
  *         post=<int *>self.post.spiking.data             # <<<<<<<<<<<<<<
@@ -7447,7 +7669,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_post = ((int *)__pyx_v_self->__pyx_base.post->spiking->data);
 
-  /* "splikes/connections/BCM.pyx":292
+  /* "splikes/connections/BCM.pyx":305
  *         post=<int *>self.post.spiking.data
  * 
  *         for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -7458,7 +7680,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v___j = __pyx_t_11;
 
-    /* "splikes/connections/BCM.pyx":293
+    /* "splikes/connections/BCM.pyx":306
  * 
  *         for __j in range(self.pre.N):
  *             x[__j]+=sim.dt*(-x[__j]/tau+a*pre[__j]/sim.dt)             # <<<<<<<<<<<<<<
@@ -7468,7 +7690,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     __pyx_t_12 = __pyx_v___j;
     (__pyx_v_x[__pyx_t_12]) = ((__pyx_v_x[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_x[__pyx_v___j])) / __pyx_v_tau) + ((__pyx_v_a * (__pyx_v_pre[__pyx_v___j])) / __pyx_v_sim->dt))));
 
-    /* "splikes/connections/BCM.pyx":294
+    /* "splikes/connections/BCM.pyx":307
  *         for __j in range(self.pre.N):
  *             x[__j]+=sim.dt*(-x[__j]/tau+a*pre[__j]/sim.dt)
  *             X[__j]+=sim.dt*((x[__j]-X[__j])/tau)             # <<<<<<<<<<<<<<
@@ -7479,7 +7701,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     (__pyx_v_X[__pyx_t_12]) = ((__pyx_v_X[__pyx_t_12]) + (__pyx_v_sim->dt * (((__pyx_v_x[__pyx_v___j]) - (__pyx_v_X[__pyx_v___j])) / __pyx_v_tau)));
   }
 
-  /* "splikes/connections/BCM.pyx":295
+  /* "splikes/connections/BCM.pyx":308
  *             x[__j]+=sim.dt*(-x[__j]/tau+a*pre[__j]/sim.dt)
  *             X[__j]+=sim.dt*((x[__j]-X[__j])/tau)
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -7490,7 +7712,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v___i = __pyx_t_11;
 
-    /* "splikes/connections/BCM.pyx":296
+    /* "splikes/connections/BCM.pyx":309
  *             X[__j]+=sim.dt*((x[__j]-X[__j])/tau)
  *         for __i in range(self.post.N):
  *             y[__i]+=sim.dt*(-y[__i]/tau+a*post[__i]/sim.dt)             # <<<<<<<<<<<<<<
@@ -7500,7 +7722,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     __pyx_t_12 = __pyx_v___i;
     (__pyx_v_y[__pyx_t_12]) = ((__pyx_v_y[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_y[__pyx_v___i])) / __pyx_v_tau) + ((__pyx_v_a * (__pyx_v_post[__pyx_v___i])) / __pyx_v_sim->dt))));
 
-    /* "splikes/connections/BCM.pyx":297
+    /* "splikes/connections/BCM.pyx":310
  *         for __i in range(self.post.N):
  *             y[__i]+=sim.dt*(-y[__i]/tau+a*post[__i]/sim.dt)
  *             Y[__i]+=sim.dt*((y[__i]-Y[__i])/tau)             # <<<<<<<<<<<<<<
@@ -7511,7 +7733,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     (__pyx_v_Y[__pyx_t_12]) = ((__pyx_v_Y[__pyx_t_12]) + (__pyx_v_sim->dt * (((__pyx_v_y[__pyx_v___i]) - (__pyx_v_Y[__pyx_v___i])) / __pyx_v_tau)));
   }
 
-  /* "splikes/connections/BCM.pyx":299
+  /* "splikes/connections/BCM.pyx":312
  *             Y[__i]+=sim.dt*((y[__i]-Y[__i])/tau)
  * 
  *         modify_now=False             # <<<<<<<<<<<<<<
@@ -7520,7 +7742,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_modify_now = 0;
 
-  /* "splikes/connections/BCM.pyx":300
+  /* "splikes/connections/BCM.pyx":313
  * 
  *         modify_now=False
  *         if self.time_between_modification<0.0:             # <<<<<<<<<<<<<<
@@ -7530,7 +7752,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_13 = ((__pyx_v_self->time_between_modification < 0.0) != 0);
   if (__pyx_t_13) {
 
-    /* "splikes/connections/BCM.pyx":301
+    /* "splikes/connections/BCM.pyx":314
  *         modify_now=False
  *         if self.time_between_modification<0.0:
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -7539,7 +7761,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes/connections/BCM.pyx":302
+    /* "splikes/connections/BCM.pyx":315
  *         if self.time_between_modification<0.0:
  *             modify_now=True
  *             dt=sim.dt             # <<<<<<<<<<<<<<
@@ -7551,7 +7773,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     goto __pyx_L7;
   }
 
-  /* "splikes/connections/BCM.pyx":303
+  /* "splikes/connections/BCM.pyx":316
  *             modify_now=True
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):             # <<<<<<<<<<<<<<
@@ -7561,7 +7783,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_13 = ((__pyx_v_t > (__pyx_v_self->time_to_next_modification - 1e-6)) != 0);
   if (__pyx_t_13) {
 
-    /* "splikes/connections/BCM.pyx":304
+    /* "splikes/connections/BCM.pyx":317
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -7570,7 +7792,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes/connections/BCM.pyx":305
+    /* "splikes/connections/BCM.pyx":318
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -7579,7 +7801,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
     __pyx_v_self->time_to_next_modification = (__pyx_v_self->time_to_next_modification + __pyx_v_self->time_between_modification);
 
-    /* "splikes/connections/BCM.pyx":306
+    /* "splikes/connections/BCM.pyx":319
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification
  *             dt=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -7592,7 +7814,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   }
   __pyx_L7:;
 
-  /* "splikes/connections/BCM.pyx":309
+  /* "splikes/connections/BCM.pyx":322
  * 
  * 
  *         if modify_now:             # <<<<<<<<<<<<<<
@@ -7602,7 +7824,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_13 = (__pyx_v_modify_now != 0);
   if (__pyx_t_13) {
 
-    /* "splikes/connections/BCM.pyx":310
+    /* "splikes/connections/BCM.pyx":323
  * 
  *         if modify_now:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -7613,7 +7835,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___i = __pyx_t_11;
 
-      /* "splikes/connections/BCM.pyx":311
+      /* "splikes/connections/BCM.pyx":324
  *         if modify_now:
  *             for __i in range(self.post.N):
  *                 for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -7624,7 +7846,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
       for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_12; __pyx_t_14+=1) {
         __pyx_v___j = __pyx_t_14;
 
-        /* "splikes/connections/BCM.pyx":312
+        /* "splikes/connections/BCM.pyx":325
  *             for __i in range(self.post.N):
  *                 for __j in range(self.pre.N):
  *                     __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
@@ -7633,7 +7855,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
         __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-        /* "splikes/connections/BCM.pyx":313
+        /* "splikes/connections/BCM.pyx":326
  *                 for __j in range(self.pre.N):
  *                     __wi=__i*self.pre.N+__j
  *                     W[__wi]+=dt*(eta*(X[__j]-xo)*((Y[__i]-yo)*((Y[__i]-yo)-theta[__i]))-eta*gamma*W[__wi])             # <<<<<<<<<<<<<<
@@ -7645,18 +7867,18 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
       }
     }
 
-    /* "splikes/connections/BCM.pyx":315
+    /* "splikes/connections/BCM.pyx":328
  *                     W[__wi]+=dt*(eta*(X[__j]-xo)*((Y[__i]-yo)*((Y[__i]-yo)-theta[__i]))-eta*gamma*W[__wi])
  * 
  *             self.apply_weight_limits()             # <<<<<<<<<<<<<<
  * 
  *             if self.save_inputs:
  */
-    __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 315; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 328; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "splikes/connections/BCM.pyx":317
+    /* "splikes/connections/BCM.pyx":330
  *             self.apply_weight_limits()
  * 
  *             if self.save_inputs:             # <<<<<<<<<<<<<<
@@ -7666,14 +7888,14 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     __pyx_t_13 = (__pyx_v_self->save_inputs != 0);
     if (__pyx_t_13) {
 
-      /* "splikes/connections/BCM.pyx":318
+      /* "splikes/connections/BCM.pyx":331
  * 
  *             if self.save_inputs:
  *                 self.saved_inputs.append(self.X.copy())             # <<<<<<<<<<<<<<
  *                 self.saved_outputs.append(self.Y.copy())
  *                 self.saved_weights.append(self.weights.copy())
  */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->X), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 318; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->X), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 331; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_4 = NULL;
       if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -7686,24 +7908,24 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 318; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 331; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 318; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 331; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_16 = __Pyx_PyObject_Append(__pyx_v_self->saved_inputs, __pyx_t_1); if (unlikely(__pyx_t_16 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 318; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_16 = __Pyx_PyObject_Append(__pyx_v_self->saved_inputs, __pyx_t_1); if (unlikely(__pyx_t_16 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 331; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "splikes/connections/BCM.pyx":319
+      /* "splikes/connections/BCM.pyx":332
  *             if self.save_inputs:
  *                 self.saved_inputs.append(self.X.copy())
  *                 self.saved_outputs.append(self.Y.copy())             # <<<<<<<<<<<<<<
  *                 self.saved_weights.append(self.weights.copy())
  * 
  */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->Y), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 319; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->Y), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 332; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_4 = NULL;
       if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -7716,24 +7938,24 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 319; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 332; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 319; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 332; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_16 = __Pyx_PyObject_Append(__pyx_v_self->saved_outputs, __pyx_t_1); if (unlikely(__pyx_t_16 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 319; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_16 = __Pyx_PyObject_Append(__pyx_v_self->saved_outputs, __pyx_t_1); if (unlikely(__pyx_t_16 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 332; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "splikes/connections/BCM.pyx":320
+      /* "splikes/connections/BCM.pyx":333
  *                 self.saved_inputs.append(self.X.copy())
  *                 self.saved_outputs.append(self.Y.copy())
  *                 self.saved_weights.append(self.weights.copy())             # <<<<<<<<<<<<<<
  * 
  *         for __i in range(self.post.N):
  */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->__pyx_base.weights), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 320; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->__pyx_base.weights), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 333; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_4 = NULL;
       if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -7746,14 +7968,14 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 320; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 333; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 320; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 333; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_16 = __Pyx_PyObject_Append(__pyx_v_self->saved_weights, __pyx_t_1); if (unlikely(__pyx_t_16 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 320; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_16 = __Pyx_PyObject_Append(__pyx_v_self->saved_weights, __pyx_t_1); if (unlikely(__pyx_t_16 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 333; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       goto __pyx_L13;
     }
@@ -7762,7 +7984,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   }
   __pyx_L8:;
 
-  /* "splikes/connections/BCM.pyx":322
+  /* "splikes/connections/BCM.pyx":335
  *                 self.saved_weights.append(self.weights.copy())
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -7773,7 +7995,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v___i = __pyx_t_11;
 
-    /* "splikes/connections/BCM.pyx":323
+    /* "splikes/connections/BCM.pyx":336
  * 
  *         for __i in range(self.post.N):
  *             theta[__i]+=sim.dt*((1.0/tau_theta)*(Y[__i]*Y[__i]/theta_o-theta[__i]))             # <<<<<<<<<<<<<<
@@ -7784,7 +8006,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     (__pyx_v_theta[__pyx_t_12]) = ((__pyx_v_theta[__pyx_t_12]) + (__pyx_v_sim->dt * ((1.0 / __pyx_v_tau_theta) * ((((__pyx_v_Y[__pyx_v___i]) * (__pyx_v_Y[__pyx_v___i])) / __pyx_v_theta_o) - (__pyx_v_theta[__pyx_v___i])))));
   }
 
-  /* "splikes/connections/BCM.pyx":263
+  /* "splikes/connections/BCM.pyx":276
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -7841,11 +8063,11 @@ static PyObject *__pyx_pw_7splikes_11connections_3BCM_3BCM_5update(PyObject *__p
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 263; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 276; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 263; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 276; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -7853,18 +8075,18 @@ static PyObject *__pyx_pw_7splikes_11connections_3BCM_3BCM_5update(PyObject *__p
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 263; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 276; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     __pyx_v_sim = ((struct __pyx_obj_7splikes_7splikes_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 263; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 276; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("splikes.connections.BCM.BCM.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 263; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 276; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_7splikes_11connections_3BCM_3BCM_4update(((struct __pyx_obj_7splikes_11connections_3BCM_BCM *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -7885,7 +8107,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_4update(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_3BCM_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 263; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_3BCM_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 276; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7902,7 +8124,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_4update(struct __pyx_
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":213
+/* "splikes/connections/BCM.pyx":226
  * 
  * cdef class BCM(connection):
  *     cdef public double a,tau,xo,yo,theta_o,gamma,eta,tau_theta             # <<<<<<<<<<<<<<
@@ -7932,7 +8154,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_1a___get__(struct __p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->a); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->a); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7970,7 +8192,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_1a_2__set__(struct __pyx_ob
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->a = __pyx_t_1;
 
   /* function exit code */
@@ -8006,7 +8228,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_3tau___get__(struct _
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8044,7 +8266,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_3tau_2__set__(struct __pyx_
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->tau = __pyx_t_1;
 
   /* function exit code */
@@ -8080,7 +8302,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_2xo___get__(struct __
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->xo); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->xo); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8118,7 +8340,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2xo_2__set__(struct __pyx_o
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->xo = __pyx_t_1;
 
   /* function exit code */
@@ -8154,7 +8376,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_2yo___get__(struct __
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->yo); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->yo); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8192,7 +8414,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2yo_2__set__(struct __pyx_o
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->yo = __pyx_t_1;
 
   /* function exit code */
@@ -8228,7 +8450,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_7theta_o___get__(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->theta_o); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->theta_o); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8266,7 +8488,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_7theta_o_2__set__(struct __
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->theta_o = __pyx_t_1;
 
   /* function exit code */
@@ -8302,7 +8524,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_5gamma___get__(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->gamma); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->gamma); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8340,7 +8562,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_5gamma_2__set__(struct __py
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->gamma = __pyx_t_1;
 
   /* function exit code */
@@ -8376,7 +8598,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_3eta___get__(struct _
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->eta); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->eta); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8414,7 +8636,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_3eta_2__set__(struct __pyx_
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->eta = __pyx_t_1;
 
   /* function exit code */
@@ -8450,7 +8672,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_9tau_theta___get__(st
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_theta); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_theta); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8488,7 +8710,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_9tau_theta_2__set__(struct 
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->tau_theta = __pyx_t_1;
 
   /* function exit code */
@@ -8502,7 +8724,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_9tau_theta_2__set__(struct 
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":214
+/* "splikes/connections/BCM.pyx":227
  * cdef class BCM(connection):
  *     cdef public double a,tau,xo,yo,theta_o,gamma,eta,tau_theta
  *     cdef public np.ndarray X,Y,theta,y,x             # <<<<<<<<<<<<<<
@@ -8560,7 +8782,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_1X_2__set__(struct __pyx_ob
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 214; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 227; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -8660,7 +8882,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_1Y_2__set__(struct __pyx_ob
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 214; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 227; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -8760,7 +8982,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_5theta_2__set__(struct __py
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 214; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 227; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -8860,7 +9082,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_1y_2__set__(struct __pyx_ob
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 214; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 227; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -8960,7 +9182,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_1x_2__set__(struct __pyx_ob
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 214; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 227; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -9010,7 +9232,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_1x_4__del__(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":215
+/* "splikes/connections/BCM.pyx":228
  *     cdef public double a,tau,xo,yo,theta_o,gamma,eta,tau_theta
  *     cdef public np.ndarray X,Y,theta,y,x
  *     cdef public object initial_theta_range             # <<<<<<<<<<<<<<
@@ -9105,7 +9327,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_19initial_theta_range_4__de
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":216
+/* "splikes/connections/BCM.pyx":229
  *     cdef public np.ndarray X,Y,theta,y,x
  *     cdef public object initial_theta_range
  *     cdef public double time_between_modification,time_to_next_modification             # <<<<<<<<<<<<<<
@@ -9135,7 +9357,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_25time_between_modifi
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_between_modification); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 216; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_between_modification); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 229; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9173,7 +9395,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_25time_between_modification
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 216; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 229; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->time_between_modification = __pyx_t_1;
 
   /* function exit code */
@@ -9209,7 +9431,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_25time_to_next_modifi
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_to_next_modification); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 216; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_to_next_modification); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 229; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9247,7 +9469,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_25time_to_next_modification
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 216; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 229; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->time_to_next_modification = __pyx_t_1;
 
   /* function exit code */
@@ -9261,7 +9483,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_25time_to_next_modification
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":217
+/* "splikes/connections/BCM.pyx":230
  *     cdef public object initial_theta_range
  *     cdef public double time_between_modification,time_to_next_modification
  *     cdef public object saved_inputs,saved_weights,saved_outputs             # <<<<<<<<<<<<<<
@@ -9530,7 +9752,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_13saved_outputs_4__del__(st
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":218
+/* "splikes/connections/BCM.pyx":231
  *     cdef public double time_between_modification,time_to_next_modification
  *     cdef public object saved_inputs,saved_weights,saved_outputs
  *     cdef public int save_inputs             # <<<<<<<<<<<<<<
@@ -9560,7 +9782,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_11save_inputs___get__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->save_inputs); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 218; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->save_inputs); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 231; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9598,7 +9820,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_11save_inputs_2__set__(stru
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 218; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 231; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->save_inputs = __pyx_t_1;
 
   /* function exit code */
@@ -9612,7 +9834,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_11save_inputs_2__set__(stru
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":333
+/* "splikes/connections/BCM.pyx":346
  *     cdef public double time_between_modification,time_to_next_modification
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -9638,7 +9860,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 333; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_1_reset)) {
       __Pyx_XDECREF(__pyx_r);
@@ -9654,10 +9876,10 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 333; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 333; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -9669,99 +9891,99 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes/connections/BCM.pyx":334
+  /* "splikes/connections/BCM.pyx":347
  * 
  *     cpdef _reset(self):
  *         self.X=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 334; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 334; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 334; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 334; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 334; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 334; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 334; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 334; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 334; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 334; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_5);
   __Pyx_GOTREF(__pyx_v_self->X);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->X));
   __pyx_v_self->X = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "splikes/connections/BCM.pyx":335
+  /* "splikes/connections/BCM.pyx":348
  *     cpdef _reset(self):
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 335; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 335; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 335; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 335; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 335; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 335; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 335; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 335; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 335; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 335; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_4);
   __Pyx_GOTREF(__pyx_v_self->Y);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->Y));
   __pyx_v_self->Y = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "splikes/connections/BCM.pyx":336
+  /* "splikes/connections/BCM.pyx":349
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  * 
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 336; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_rand); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 336; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_rand); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 336; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_1 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -9774,66 +9996,66 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
     }
   }
   if (!__pyx_t_1) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 336; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_4);
   } else {
-    __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 336; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1); __Pyx_GIVEREF(__pyx_t_1); __pyx_t_1 = NULL;
     PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_5);
     __pyx_t_5 = 0;
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 336; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 336; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "splikes/connections/BCM.pyx":337
+  /* "splikes/connections/BCM.pyx":350
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  * 
  *         self.yo=np.zeros(self.post.N,dtype=np.float)
  */
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 337; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 350; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "splikes/connections/BCM.pyx":336
+  /* "splikes/connections/BCM.pyx":349
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  * 
  */
-  __pyx_t_5 = PyNumber_Subtract(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 336; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyNumber_Subtract(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Multiply(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 336; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyNumber_Multiply(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "splikes/connections/BCM.pyx":337
+  /* "splikes/connections/BCM.pyx":350
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  * 
  *         self.yo=np.zeros(self.post.N,dtype=np.float)
  */
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_5 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 337; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_5 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 350; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = PyNumber_Add(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 337; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyNumber_Add(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 350; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 337; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 350; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "splikes/connections/BCM.pyx":336
+  /* "splikes/connections/BCM.pyx":349
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -9846,127 +10068,127 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   __pyx_v_self->theta = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "splikes/connections/BCM.pyx":339
+  /* "splikes/connections/BCM.pyx":352
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  * 
  *         self.yo=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  */
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 339; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 352; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 339; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 352; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 339; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 352; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 339; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 352; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 339; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 352; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 339; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 352; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 339; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 352; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 339; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 352; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 339; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 352; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 339; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 352; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->yo);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->yo));
   __pyx_v_self->yo = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes/connections/BCM.pyx":340
+  /* "splikes/connections/BCM.pyx":353
  * 
  *         self.yo=np.zeros(self.post.N,dtype=np.float)
  *         self.y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.time_to_next_modification=self.time_between_modification
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 340; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 353; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 340; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 353; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 340; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 353; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 340; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 353; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 340; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 353; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 340; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 353; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 340; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 353; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 340; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 353; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 340; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 353; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 340; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 353; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_v_self->y);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->y));
   __pyx_v_self->y = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":341
+  /* "splikes/connections/BCM.pyx":354
  *         self.yo=np.zeros(self.post.N,dtype=np.float)
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.time_to_next_modification=self.time_between_modification
  * 
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 354; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 354; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 354; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 354; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 354; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 354; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 354; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 354; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 354; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 354; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_5);
   __Pyx_GOTREF(__pyx_v_self->x);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->x));
   __pyx_v_self->x = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "splikes/connections/BCM.pyx":342
+  /* "splikes/connections/BCM.pyx":355
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.time_to_next_modification=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -9976,18 +10198,18 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   __pyx_t_6 = __pyx_v_self->time_between_modification;
   __pyx_v_self->time_to_next_modification = __pyx_t_6;
 
-  /* "splikes/connections/BCM.pyx":344
+  /* "splikes/connections/BCM.pyx":357
  *         self.time_to_next_modification=self.time_between_modification
  * 
  *         connection._reset(self)             # <<<<<<<<<<<<<<
  * 
  *     def __init__(self,neuron pre,neuron post,
  */
-  __pyx_t_5 = __pyx_vtabptr_7splikes_7splikes_connection->_reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 344; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __pyx_vtabptr_7splikes_7splikes_connection->_reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 357; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "splikes/connections/BCM.pyx":333
+  /* "splikes/connections/BCM.pyx":346
  *     cdef public double time_between_modification,time_to_next_modification
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -10034,7 +10256,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__re
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_reset", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 333; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10051,7 +10273,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__re
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":346
+/* "splikes/connections/BCM.pyx":359
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -10077,7 +10299,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3__init__
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_pre,&__pyx_n_s_post,&__pyx_n_s_initial_weight_range,&__pyx_n_s_state,&__pyx_n_s_initial_theta_range,0};
     PyObject* values[5] = {0,0,0,0,0};
 
-    /* "splikes/connections/BCM.pyx":347
+    /* "splikes/connections/BCM.pyx":360
  * 
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,             # <<<<<<<<<<<<<<
@@ -10086,7 +10308,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3__init__
  */
     values[2] = ((PyObject *)Py_None);
 
-    /* "splikes/connections/BCM.pyx":348
+    /* "splikes/connections/BCM.pyx":361
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,
  *                         state=None,             # <<<<<<<<<<<<<<
@@ -10095,7 +10317,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3__init__
  */
     values[3] = ((PyObject *)Py_None);
 
-    /* "splikes/connections/BCM.pyx":349
+    /* "splikes/connections/BCM.pyx":362
  *                         initial_weight_range=None,
  *                         state=None,
  *                         initial_theta_range=None,):             # <<<<<<<<<<<<<<
@@ -10123,7 +10345,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3__init__
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_post)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 359; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  2:
         if (kw_args > 0) {
@@ -10142,7 +10364,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3__init__
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 359; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -10163,17 +10385,17 @@ static int __pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3__init__
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 359; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("splikes.connections.BCM.BCM_LawCooper_Offset.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_7splikes_7splikes_neuron, 1, "pre", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_7splikes_7splikes_neuron, 1, "pre", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 359; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 359; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__(((struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper_Offset *)__pyx_v_self), __pyx_v_pre, __pyx_v_post, __pyx_v_initial_weight_range, __pyx_v_state, __pyx_v_initial_theta_range);
 
-  /* "splikes/connections/BCM.pyx":346
+  /* "splikes/connections/BCM.pyx":359
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -10206,7 +10428,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   __Pyx_RefNannySetupContext("__init__", 0);
   __Pyx_INCREF(__pyx_v_initial_theta_range);
 
-  /* "splikes/connections/BCM.pyx":352
+  /* "splikes/connections/BCM.pyx":365
  * 
  * 
  *         if initial_theta_range is None:             # <<<<<<<<<<<<<<
@@ -10217,14 +10439,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "splikes/connections/BCM.pyx":353
+    /* "splikes/connections/BCM.pyx":366
  * 
  *         if initial_theta_range is None:
  *             initial_theta_range=[0.0,0.1]             # <<<<<<<<<<<<<<
  * 
  *         self.initial_theta_range=initial_theta_range
  */
-    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 353; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 366; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_float_0_0);
     PyList_SET_ITEM(__pyx_t_3, 0, __pyx_float_0_0);
@@ -10238,7 +10460,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   }
   __pyx_L3:;
 
-  /* "splikes/connections/BCM.pyx":355
+  /* "splikes/connections/BCM.pyx":368
  *             initial_theta_range=[0.0,0.1]
  * 
  *         self.initial_theta_range=initial_theta_range             # <<<<<<<<<<<<<<
@@ -10251,14 +10473,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   __Pyx_DECREF(__pyx_v_self->initial_theta_range);
   __pyx_v_self->initial_theta_range = __pyx_v_initial_theta_range;
 
-  /* "splikes/connections/BCM.pyx":357
+  /* "splikes/connections/BCM.pyx":370
  *         self.initial_theta_range=initial_theta_range
  * 
  *         connection.__init__(self,pre,post,initial_weight_range,state)             # <<<<<<<<<<<<<<
  * 
  *         self.name='Spiking BCM LawCooper'
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)((PyObject*)__pyx_ptype_7splikes_7splikes_connection)), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 357; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)((PyObject*)__pyx_ptype_7splikes_7splikes_connection)), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 370; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -10272,7 +10494,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
       __pyx_t_6 = 1;
     }
   }
-  __pyx_t_7 = PyTuple_New(5+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 357; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = PyTuple_New(5+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 370; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
   if (__pyx_t_5) {
     PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
@@ -10292,13 +10514,13 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   __Pyx_INCREF(__pyx_v_state);
   PyTuple_SET_ITEM(__pyx_t_7, 4+__pyx_t_6, __pyx_v_state);
   __Pyx_GIVEREF(__pyx_v_state);
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 357; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 370; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":359
+  /* "splikes/connections/BCM.pyx":372
  *         connection.__init__(self,pre,post,initial_weight_range,state)
  * 
  *         self.name='Spiking BCM LawCooper'             # <<<<<<<<<<<<<<
@@ -10311,7 +10533,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   __Pyx_DECREF(__pyx_v_self->__pyx_base.__pyx_base.name);
   __pyx_v_self->__pyx_base.__pyx_base.name = __pyx_kp_s_Spiking_BCM_LawCooper;
 
-  /* "splikes/connections/BCM.pyx":360
+  /* "splikes/connections/BCM.pyx":373
  * 
  *         self.name='Spiking BCM LawCooper'
  *         self.a=1             # <<<<<<<<<<<<<<
@@ -10320,7 +10542,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->a = 1.0;
 
-  /* "splikes/connections/BCM.pyx":361
+  /* "splikes/connections/BCM.pyx":374
  *         self.name='Spiking BCM LawCooper'
  *         self.a=1
  *         self.tau=100             # <<<<<<<<<<<<<<
@@ -10329,7 +10551,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->tau = 100.0;
 
-  /* "splikes/connections/BCM.pyx":362
+  /* "splikes/connections/BCM.pyx":375
  *         self.a=1
  *         self.tau=100
  *         self.xo=0             # <<<<<<<<<<<<<<
@@ -10338,7 +10560,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->xo = 0.0;
 
-  /* "splikes/connections/BCM.pyx":363
+  /* "splikes/connections/BCM.pyx":376
  *         self.tau=100
  *         self.xo=0
  *         self.theta_o=1             # <<<<<<<<<<<<<<
@@ -10347,7 +10569,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->theta_o = 1.0;
 
-  /* "splikes/connections/BCM.pyx":364
+  /* "splikes/connections/BCM.pyx":377
  *         self.xo=0
  *         self.theta_o=1
  *         self.gamma=0             # <<<<<<<<<<<<<<
@@ -10356,7 +10578,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->gamma = 0.0;
 
-  /* "splikes/connections/BCM.pyx":365
+  /* "splikes/connections/BCM.pyx":378
  *         self.theta_o=1
  *         self.gamma=0
  *         self.eta=4e-06             # <<<<<<<<<<<<<<
@@ -10365,7 +10587,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->eta = 4e-06;
 
-  /* "splikes/connections/BCM.pyx":366
+  /* "splikes/connections/BCM.pyx":379
  *         self.gamma=0
  *         self.eta=4e-06
  *         self.tau_thresh=10000             # <<<<<<<<<<<<<<
@@ -10374,7 +10596,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->tau_thresh = 10000.0;
 
-  /* "splikes/connections/BCM.pyx":367
+  /* "splikes/connections/BCM.pyx":380
  *         self.eta=4e-06
  *         self.tau_thresh=10000
  *         self.time_between_modification=-1.0             # <<<<<<<<<<<<<<
@@ -10383,18 +10605,18 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->time_between_modification = -1.0;
 
-  /* "splikes/connections/BCM.pyx":368
+  /* "splikes/connections/BCM.pyx":381
  *         self.tau_thresh=10000
  *         self.time_between_modification=-1.0
  *         self._reset()             # <<<<<<<<<<<<<<
  * 
  *     @cython.cdivision(True)
  */
-  __pyx_t_3 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper_Offset *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 368; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper_Offset *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 381; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":346
+  /* "splikes/connections/BCM.pyx":359
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -10418,7 +10640,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":372
+/* "splikes/connections/BCM.pyx":385
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -10475,11 +10697,11 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 372; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 385; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_5update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 372; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 385; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -10494,7 +10716,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
           __pyx_t_6 = 1;
         }
       }
-      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 372; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 385; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_7);
       if (__pyx_t_5) {
         PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
@@ -10505,7 +10727,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
       PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
       __pyx_t_3 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 372; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 385; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -10517,7 +10739,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes/connections/BCM.pyx":375
+  /* "splikes/connections/BCM.pyx":388
  *         cdef int __i,__j
  * 
  *         cdef double *X=<double *>self.X.data             # <<<<<<<<<<<<<<
@@ -10526,7 +10748,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_X = ((double *)__pyx_v_self->X->data);
 
-  /* "splikes/connections/BCM.pyx":376
+  /* "splikes/connections/BCM.pyx":389
  * 
  *         cdef double *X=<double *>self.X.data
  *         cdef double *Y=<double *>self.Y.data             # <<<<<<<<<<<<<<
@@ -10535,7 +10757,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_Y = ((double *)__pyx_v_self->Y->data);
 
-  /* "splikes/connections/BCM.pyx":377
+  /* "splikes/connections/BCM.pyx":390
  *         cdef double *X=<double *>self.X.data
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *W=self.W             # <<<<<<<<<<<<<<
@@ -10545,7 +10767,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_8 = __pyx_v_self->__pyx_base.W;
   __pyx_v_W = __pyx_t_8;
 
-  /* "splikes/connections/BCM.pyx":378
+  /* "splikes/connections/BCM.pyx":391
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data             # <<<<<<<<<<<<<<
@@ -10554,7 +10776,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_theta = ((double *)__pyx_v_self->theta->data);
 
-  /* "splikes/connections/BCM.pyx":379
+  /* "splikes/connections/BCM.pyx":392
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *y=<double *>self.y.data             # <<<<<<<<<<<<<<
@@ -10563,7 +10785,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_y = ((double *)__pyx_v_self->y->data);
 
-  /* "splikes/connections/BCM.pyx":380
+  /* "splikes/connections/BCM.pyx":393
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *y=<double *>self.y.data
  *         cdef double *yo=<double *>self.yo.data             # <<<<<<<<<<<<<<
@@ -10572,7 +10794,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_yo = ((double *)__pyx_v_self->yo->data);
 
-  /* "splikes/connections/BCM.pyx":381
+  /* "splikes/connections/BCM.pyx":394
  *         cdef double *y=<double *>self.y.data
  *         cdef double *yo=<double *>self.yo.data
  *         cdef double *x=<double *>self.x.data             # <<<<<<<<<<<<<<
@@ -10581,7 +10803,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_x = ((double *)__pyx_v_self->x->data);
 
-  /* "splikes/connections/BCM.pyx":382
+  /* "splikes/connections/BCM.pyx":395
  *         cdef double *yo=<double *>self.yo.data
  *         cdef double *x=<double *>self.x.data
  *         cdef double a=self.a             # <<<<<<<<<<<<<<
@@ -10591,7 +10813,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->a;
   __pyx_v_a = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":383
+  /* "splikes/connections/BCM.pyx":396
  *         cdef double *x=<double *>self.x.data
  *         cdef double a=self.a
  *         cdef double tau=self.tau             # <<<<<<<<<<<<<<
@@ -10601,7 +10823,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->tau;
   __pyx_v_tau = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":384
+  /* "splikes/connections/BCM.pyx":397
  *         cdef double a=self.a
  *         cdef double tau=self.tau
  *         cdef double xo=self.xo             # <<<<<<<<<<<<<<
@@ -10611,7 +10833,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->xo;
   __pyx_v_xo = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":385
+  /* "splikes/connections/BCM.pyx":398
  *         cdef double tau=self.tau
  *         cdef double xo=self.xo
  *         cdef double theta_o=self.theta_o             # <<<<<<<<<<<<<<
@@ -10621,7 +10843,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->theta_o;
   __pyx_v_theta_o = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":386
+  /* "splikes/connections/BCM.pyx":399
  *         cdef double xo=self.xo
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma             # <<<<<<<<<<<<<<
@@ -10631,7 +10853,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->gamma;
   __pyx_v_gamma = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":387
+  /* "splikes/connections/BCM.pyx":400
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta             # <<<<<<<<<<<<<<
@@ -10641,7 +10863,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->eta;
   __pyx_v_eta = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":388
+  /* "splikes/connections/BCM.pyx":401
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta
  *         cdef double tau_thresh=self.tau_thresh             # <<<<<<<<<<<<<<
@@ -10651,7 +10873,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->tau_thresh;
   __pyx_v_tau_thresh = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":398
+  /* "splikes/connections/BCM.pyx":411
  * 
  * 
  *         pre=<int *>self.pre.spiking.data             # <<<<<<<<<<<<<<
@@ -10660,7 +10882,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_pre = ((int *)__pyx_v_self->__pyx_base.pre->spiking->data);
 
-  /* "splikes/connections/BCM.pyx":399
+  /* "splikes/connections/BCM.pyx":412
  * 
  *         pre=<int *>self.pre.spiking.data
  *         post=<int *>self.post.spiking.data             # <<<<<<<<<<<<<<
@@ -10669,7 +10891,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_post = ((int *)__pyx_v_self->__pyx_base.post->spiking->data);
 
-  /* "splikes/connections/BCM.pyx":401
+  /* "splikes/connections/BCM.pyx":414
  *         post=<int *>self.post.spiking.data
  * 
  *         for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -10680,7 +10902,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v___j = __pyx_t_11;
 
-    /* "splikes/connections/BCM.pyx":402
+    /* "splikes/connections/BCM.pyx":415
  * 
  *         for __j in range(self.pre.N):
  *             x[__j]+=sim.dt*(-x[__j]/tau+a*pre[__j]/sim.dt)             # <<<<<<<<<<<<<<
@@ -10690,7 +10912,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __pyx_t_12 = __pyx_v___j;
     (__pyx_v_x[__pyx_t_12]) = ((__pyx_v_x[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_x[__pyx_v___j])) / __pyx_v_tau) + ((__pyx_v_a * (__pyx_v_pre[__pyx_v___j])) / __pyx_v_sim->dt))));
 
-    /* "splikes/connections/BCM.pyx":403
+    /* "splikes/connections/BCM.pyx":416
  *         for __j in range(self.pre.N):
  *             x[__j]+=sim.dt*(-x[__j]/tau+a*pre[__j]/sim.dt)
  *             X[__j]+=x[__j]-xo             # <<<<<<<<<<<<<<
@@ -10701,7 +10923,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     (__pyx_v_X[__pyx_t_12]) = ((__pyx_v_X[__pyx_t_12]) + ((__pyx_v_x[__pyx_v___j]) - __pyx_v_xo));
   }
 
-  /* "splikes/connections/BCM.pyx":405
+  /* "splikes/connections/BCM.pyx":418
  *             X[__j]+=x[__j]-xo
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -10712,7 +10934,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v___i = __pyx_t_11;
 
-    /* "splikes/connections/BCM.pyx":406
+    /* "splikes/connections/BCM.pyx":419
  * 
  *         for __i in range(self.post.N):
  *             y[__i]+=sim.dt*(-y[__i]/tau+a*post[__i]/sim.dt)             # <<<<<<<<<<<<<<
@@ -10722,7 +10944,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __pyx_t_12 = __pyx_v___i;
     (__pyx_v_y[__pyx_t_12]) = ((__pyx_v_y[__pyx_t_12]) + (__pyx_v_sim->dt * (((-(__pyx_v_y[__pyx_v___i])) / __pyx_v_tau) + ((__pyx_v_a * (__pyx_v_post[__pyx_v___i])) / __pyx_v_sim->dt))));
 
-    /* "splikes/connections/BCM.pyx":408
+    /* "splikes/connections/BCM.pyx":421
  *             y[__i]+=sim.dt*(-y[__i]/tau+a*post[__i]/sim.dt)
  * 
  *             sum_w=0.0             # <<<<<<<<<<<<<<
@@ -10731,7 +10953,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
     __pyx_v_sum_w = 0.0;
 
-    /* "splikes/connections/BCM.pyx":409
+    /* "splikes/connections/BCM.pyx":422
  * 
  *             sum_w=0.0
  *             for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -10742,7 +10964,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
       __pyx_v___j = __pyx_t_13;
 
-      /* "splikes/connections/BCM.pyx":410
+      /* "splikes/connections/BCM.pyx":423
  *             sum_w=0.0
  *             for __j in range(self.pre.N):
  *                 __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
@@ -10751,7 +10973,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
       __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-      /* "splikes/connections/BCM.pyx":411
+      /* "splikes/connections/BCM.pyx":424
  *             for __j in range(self.pre.N):
  *                 __wi=__i*self.pre.N+__j
  *                 sum_w+=W[__wi]             # <<<<<<<<<<<<<<
@@ -10761,7 +10983,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
       __pyx_v_sum_w = (__pyx_v_sum_w + (__pyx_v_W[__pyx_v___wi]));
     }
 
-    /* "splikes/connections/BCM.pyx":413
+    /* "splikes/connections/BCM.pyx":426
  *                 sum_w+=W[__wi]
  * 
  *             yo[__i]=xo*sum_w             # <<<<<<<<<<<<<<
@@ -10770,7 +10992,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
     (__pyx_v_yo[__pyx_v___i]) = (__pyx_v_xo * __pyx_v_sum_w);
 
-    /* "splikes/connections/BCM.pyx":414
+    /* "splikes/connections/BCM.pyx":427
  * 
  *             yo[__i]=xo*sum_w
  *             Y[__i]+=y[__i]-yo[__i]             # <<<<<<<<<<<<<<
@@ -10780,7 +11002,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __pyx_t_12 = __pyx_v___i;
     (__pyx_v_Y[__pyx_t_12]) = ((__pyx_v_Y[__pyx_t_12]) + ((__pyx_v_y[__pyx_v___i]) - (__pyx_v_yo[__pyx_v___i])));
 
-    /* "splikes/connections/BCM.pyx":415
+    /* "splikes/connections/BCM.pyx":428
  *             yo[__i]=xo*sum_w
  *             Y[__i]+=y[__i]-yo[__i]
  *             if Y[__i]<0.0:             # <<<<<<<<<<<<<<
@@ -10790,7 +11012,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __pyx_t_14 = (((__pyx_v_Y[__pyx_v___i]) < 0.0) != 0);
     if (__pyx_t_14) {
 
-      /* "splikes/connections/BCM.pyx":416
+      /* "splikes/connections/BCM.pyx":429
  *             Y[__i]+=y[__i]-yo[__i]
  *             if Y[__i]<0.0:
  *                 Y[__i]=0.0             # <<<<<<<<<<<<<<
@@ -10802,7 +11024,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     }
     __pyx_L9:;
 
-    /* "splikes/connections/BCM.pyx":418
+    /* "splikes/connections/BCM.pyx":431
  *                 Y[__i]=0.0
  * 
  *             theta[__i]+=sim.dt*((1.0/tau_thresh)*(Y[__i]*Y[__i]/theta_o-theta[__i]))             # <<<<<<<<<<<<<<
@@ -10813,7 +11035,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     (__pyx_v_theta[__pyx_t_12]) = ((__pyx_v_theta[__pyx_t_12]) + (__pyx_v_sim->dt * ((1.0 / __pyx_v_tau_thresh) * ((((__pyx_v_Y[__pyx_v___i]) * (__pyx_v_Y[__pyx_v___i])) / __pyx_v_theta_o) - (__pyx_v_theta[__pyx_v___i])))));
   }
 
-  /* "splikes/connections/BCM.pyx":421
+  /* "splikes/connections/BCM.pyx":434
  * 
  * 
  *         modify_now=False             # <<<<<<<<<<<<<<
@@ -10822,7 +11044,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_modify_now = 0;
 
-  /* "splikes/connections/BCM.pyx":422
+  /* "splikes/connections/BCM.pyx":435
  * 
  *         modify_now=False
  *         if self.time_between_modification<0.0:             # <<<<<<<<<<<<<<
@@ -10832,7 +11054,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_14 = ((__pyx_v_self->time_between_modification < 0.0) != 0);
   if (__pyx_t_14) {
 
-    /* "splikes/connections/BCM.pyx":423
+    /* "splikes/connections/BCM.pyx":436
  *         modify_now=False
  *         if self.time_between_modification<0.0:
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -10841,7 +11063,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes/connections/BCM.pyx":424
+    /* "splikes/connections/BCM.pyx":437
  *         if self.time_between_modification<0.0:
  *             modify_now=True
  *             dt=sim.dt             # <<<<<<<<<<<<<<
@@ -10853,7 +11075,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     goto __pyx_L10;
   }
 
-  /* "splikes/connections/BCM.pyx":425
+  /* "splikes/connections/BCM.pyx":438
  *             modify_now=True
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):             # <<<<<<<<<<<<<<
@@ -10863,7 +11085,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_14 = ((__pyx_v_t > (__pyx_v_self->time_to_next_modification - 1e-6)) != 0);
   if (__pyx_t_14) {
 
-    /* "splikes/connections/BCM.pyx":426
+    /* "splikes/connections/BCM.pyx":439
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -10872,7 +11094,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes/connections/BCM.pyx":427
+    /* "splikes/connections/BCM.pyx":440
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -10881,7 +11103,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
     __pyx_v_self->time_to_next_modification = (__pyx_v_self->time_to_next_modification + __pyx_v_self->time_between_modification);
 
-    /* "splikes/connections/BCM.pyx":428
+    /* "splikes/connections/BCM.pyx":441
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification
  *             dt=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -10894,7 +11116,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   }
   __pyx_L10:;
 
-  /* "splikes/connections/BCM.pyx":430
+  /* "splikes/connections/BCM.pyx":443
  *             dt=self.time_between_modification
  * 
  *         if modify_now:             # <<<<<<<<<<<<<<
@@ -10904,7 +11126,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_14 = (__pyx_v_modify_now != 0);
   if (__pyx_t_14) {
 
-    /* "splikes/connections/BCM.pyx":431
+    /* "splikes/connections/BCM.pyx":444
  * 
  *         if modify_now:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -10915,7 +11137,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v___i = __pyx_t_11;
 
-      /* "splikes/connections/BCM.pyx":432
+      /* "splikes/connections/BCM.pyx":445
  *         if modify_now:
  *             for __i in range(self.post.N):
  *                 for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -10926,7 +11148,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
       for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
         __pyx_v___j = __pyx_t_13;
 
-        /* "splikes/connections/BCM.pyx":433
+        /* "splikes/connections/BCM.pyx":446
  *             for __i in range(self.post.N):
  *                 for __j in range(self.pre.N):
  *                     __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
@@ -10935,7 +11157,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
         __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-        /* "splikes/connections/BCM.pyx":434
+        /* "splikes/connections/BCM.pyx":447
  *                 for __j in range(self.pre.N):
  *                     __wi=__i*self.pre.N+__j
  *                     W[__wi]+=dt*(eta*X[__j]*(Y[__i]*(Y[__i]-theta[__i])/theta[__i])-eta*gamma*W[__wi])             # <<<<<<<<<<<<<<
@@ -10947,20 +11169,20 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
       }
     }
 
-    /* "splikes/connections/BCM.pyx":436
+    /* "splikes/connections/BCM.pyx":449
  *                     W[__wi]+=dt*(eta*X[__j]*(Y[__i]*(Y[__i]-theta[__i])/theta[__i])-eta*gamma*W[__wi])
  * 
  *             self.apply_weight_limits()             # <<<<<<<<<<<<<<
  * 
  */
-    __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper_Offset *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 436; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper_Offset *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 449; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     goto __pyx_L11;
   }
   __pyx_L11:;
 
-  /* "splikes/connections/BCM.pyx":372
+  /* "splikes/connections/BCM.pyx":385
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -11017,11 +11239,11 @@ static PyObject *__pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_5up
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 372; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 385; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 372; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 385; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -11029,18 +11251,18 @@ static PyObject *__pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_5up
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 372; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 385; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     __pyx_v_sim = ((struct __pyx_obj_7splikes_7splikes_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 372; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 385; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("splikes.connections.BCM.BCM_LawCooper_Offset.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 372; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 385; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_4update(((struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper_Offset *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -11061,7 +11283,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_4up
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 372; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 385; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11078,7 +11300,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_4up
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":328
+/* "splikes/connections/BCM.pyx":341
  * 
  * cdef class BCM_LawCooper_Offset(connection):
  *     cdef public double a,tau,xo,theta_o,gamma,eta,tau_thresh             # <<<<<<<<<<<<<<
@@ -11108,7 +11330,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_1a_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->a); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 328; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->a); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11146,7 +11368,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_1a_2__set
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 328; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->a = __pyx_t_1;
 
   /* function exit code */
@@ -11182,7 +11404,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3ta
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 328; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11220,7 +11442,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3tau_2__s
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 328; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->tau = __pyx_t_1;
 
   /* function exit code */
@@ -11256,7 +11478,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2xo
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->xo); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 328; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->xo); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11294,7 +11516,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2xo_2__se
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 328; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->xo = __pyx_t_1;
 
   /* function exit code */
@@ -11330,7 +11552,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_7th
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->theta_o); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 328; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->theta_o); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11368,7 +11590,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_7theta_o_
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 328; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->theta_o = __pyx_t_1;
 
   /* function exit code */
@@ -11404,7 +11626,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_5ga
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->gamma); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 328; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->gamma); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11442,7 +11664,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_5gamma_2_
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 328; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->gamma = __pyx_t_1;
 
   /* function exit code */
@@ -11478,7 +11700,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3et
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->eta); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 328; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->eta); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11516,7 +11738,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3eta_2__s
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 328; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->eta = __pyx_t_1;
 
   /* function exit code */
@@ -11552,7 +11774,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_10t
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_thresh); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 328; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_thresh); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11590,7 +11812,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_10tau_thr
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 328; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->tau_thresh = __pyx_t_1;
 
   /* function exit code */
@@ -11604,7 +11826,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_10tau_thr
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":329
+/* "splikes/connections/BCM.pyx":342
  * cdef class BCM_LawCooper_Offset(connection):
  *     cdef public double a,tau,xo,theta_o,gamma,eta,tau_thresh
  *     cdef public np.ndarray X,Y,theta,y,x,yo  # offset for y depends on w             # <<<<<<<<<<<<<<
@@ -11662,7 +11884,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_1X_2__set
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 329; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 342; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -11762,7 +11984,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_1Y_2__set
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 329; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 342; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -11862,7 +12084,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_5theta_2_
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 329; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 342; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -11962,7 +12184,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_1y_2__set
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 329; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 342; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -12062,7 +12284,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_1x_2__set
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 329; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 342; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -12162,7 +12384,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2yo_2__se
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 329; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 342; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -12212,7 +12434,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2yo_4__de
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":330
+/* "splikes/connections/BCM.pyx":343
  *     cdef public double a,tau,xo,theta_o,gamma,eta,tau_thresh
  *     cdef public np.ndarray X,Y,theta,y,x,yo  # offset for y depends on w
  *     cdef public object initial_theta_range             # <<<<<<<<<<<<<<
@@ -12307,7 +12529,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_19initial
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":331
+/* "splikes/connections/BCM.pyx":344
  *     cdef public np.ndarray X,Y,theta,y,x,yo  # offset for y depends on w
  *     cdef public object initial_theta_range
  *     cdef public double time_between_modification,time_to_next_modification             # <<<<<<<<<<<<<<
@@ -12337,7 +12559,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_25t
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_between_modification); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 331; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_between_modification); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 344; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -12375,7 +12597,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_25time_be
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 331; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 344; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->time_between_modification = __pyx_t_1;
 
   /* function exit code */
@@ -12411,7 +12633,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_25t
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_to_next_modification); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 331; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_to_next_modification); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 344; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -12449,7 +12671,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_25time_to
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 331; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 344; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->time_to_next_modification = __pyx_t_1;
 
   /* function exit code */
@@ -15974,15 +16196,27 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_Spiking_BCM, __pyx_k_Spiking_BCM, sizeof(__pyx_k_Spiking_BCM), 0, 0, 1, 0},
   {&__pyx_kp_s_Spiking_BCM_LawCooper, __pyx_k_Spiking_BCM_LawCooper, sizeof(__pyx_k_Spiking_BCM_LawCooper), 0, 0, 1, 0},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
+  {&__pyx_n_s_X, __pyx_k_X, sizeof(__pyx_k_X), 0, 0, 1, 1},
+  {&__pyx_n_s_Y, __pyx_k_Y, sizeof(__pyx_k_Y), 0, 0, 1, 1},
   {&__pyx_n_s_append, __pyx_k_append, sizeof(__pyx_k_append), 0, 0, 1, 1},
+  {&__pyx_n_s_ax, __pyx_k_ax, sizeof(__pyx_k_ax), 0, 0, 1, 1},
+  {&__pyx_n_s_ay, __pyx_k_ay, sizeof(__pyx_k_ay), 0, 0, 1, 1},
+  {&__pyx_n_s_beta, __pyx_k_beta, sizeof(__pyx_k_beta), 0, 0, 1, 1},
   {&__pyx_n_s_copy, __pyx_k_copy, sizeof(__pyx_k_copy), 0, 0, 1, 1},
   {&__pyx_n_s_dtype, __pyx_k_dtype, sizeof(__pyx_k_dtype), 0, 0, 1, 1},
+  {&__pyx_n_s_eta, __pyx_k_eta, sizeof(__pyx_k_eta), 0, 0, 1, 1},
+  {&__pyx_n_s_extend, __pyx_k_extend, sizeof(__pyx_k_extend), 0, 0, 1, 1},
   {&__pyx_n_s_float, __pyx_k_float, sizeof(__pyx_k_float), 0, 0, 1, 1},
+  {&__pyx_n_s_gamma, __pyx_k_gamma, sizeof(__pyx_k_gamma), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_init, __pyx_k_init, sizeof(__pyx_k_init), 0, 0, 1, 1},
   {&__pyx_n_s_initial_theta_range, __pyx_k_initial_theta_range, sizeof(__pyx_k_initial_theta_range), 0, 0, 1, 1},
   {&__pyx_n_s_initial_weight_range, __pyx_k_initial_weight_range, sizeof(__pyx_k_initial_weight_range), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
+  {&__pyx_n_s_mod_X, __pyx_k_mod_X, sizeof(__pyx_k_mod_X), 0, 0, 1, 1},
+  {&__pyx_n_s_mod_Y, __pyx_k_mod_Y, sizeof(__pyx_k_mod_Y), 0, 0, 1, 1},
+  {&__pyx_n_s_mod_beta, __pyx_k_mod_beta, sizeof(__pyx_k_mod_beta), 0, 0, 1, 1},
+  {&__pyx_n_s_mod_theta, __pyx_k_mod_theta, sizeof(__pyx_k_mod_theta), 0, 0, 1, 1},
   {&__pyx_kp_u_ndarray_is_not_C_contiguous, __pyx_k_ndarray_is_not_C_contiguous, sizeof(__pyx_k_ndarray_is_not_C_contiguous), 0, 1, 0, 0},
   {&__pyx_kp_u_ndarray_is_not_Fortran_contiguou, __pyx_k_ndarray_is_not_Fortran_contiguou, sizeof(__pyx_k_ndarray_is_not_Fortran_contiguou), 0, 1, 0, 0},
   {&__pyx_n_s_np, __pyx_k_np, sizeof(__pyx_k_np), 0, 0, 1, 1},
@@ -15995,18 +16229,34 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_n_s_reset, __pyx_k_reset, sizeof(__pyx_k_reset), 0, 0, 1, 1},
   {&__pyx_n_s_sim, __pyx_k_sim, sizeof(__pyx_k_sim), 0, 0, 1, 1},
+  {&__pyx_n_s_smoothed_x, __pyx_k_smoothed_x, sizeof(__pyx_k_smoothed_x), 0, 0, 1, 1},
+  {&__pyx_n_s_smoothed_y, __pyx_k_smoothed_y, sizeof(__pyx_k_smoothed_y), 0, 0, 1, 1},
   {&__pyx_n_s_sqrt, __pyx_k_sqrt, sizeof(__pyx_k_sqrt), 0, 0, 1, 1},
   {&__pyx_n_s_state, __pyx_k_state, sizeof(__pyx_k_state), 0, 0, 1, 1},
   {&__pyx_n_s_sys, __pyx_k_sys, sizeof(__pyx_k_sys), 0, 0, 1, 1},
   {&__pyx_n_s_t, __pyx_k_t, sizeof(__pyx_k_t), 0, 0, 1, 1},
+  {&__pyx_n_s_tau_beta, __pyx_k_tau_beta, sizeof(__pyx_k_tau_beta), 0, 0, 1, 1},
+  {&__pyx_n_s_tau_theta, __pyx_k_tau_theta, sizeof(__pyx_k_tau_theta), 0, 0, 1, 1},
+  {&__pyx_n_s_tau_x, __pyx_k_tau_x, sizeof(__pyx_k_tau_x), 0, 0, 1, 1},
+  {&__pyx_n_s_tau_y, __pyx_k_tau_y, sizeof(__pyx_k_tau_y), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
+  {&__pyx_n_s_theta, __pyx_k_theta, sizeof(__pyx_k_theta), 0, 0, 1, 1},
+  {&__pyx_n_s_theta_o, __pyx_k_theta_o, sizeof(__pyx_k_theta_o), 0, 0, 1, 1},
+  {&__pyx_n_s_theta_squares_the_average, __pyx_k_theta_squares_the_average, sizeof(__pyx_k_theta_squares_the_average), 0, 0, 1, 1},
+  {&__pyx_n_s_time_between_modification, __pyx_k_time_between_modification, sizeof(__pyx_k_time_between_modification), 0, 0, 1, 1},
+  {&__pyx_n_s_time_to_next_modification, __pyx_k_time_to_next_modification, sizeof(__pyx_k_time_to_next_modification), 0, 0, 1, 1},
   {&__pyx_kp_u_unknown_dtype_code_in_numpy_pxd, __pyx_k_unknown_dtype_code_in_numpy_pxd, sizeof(__pyx_k_unknown_dtype_code_in_numpy_pxd), 0, 1, 0, 0},
   {&__pyx_n_s_update, __pyx_k_update, sizeof(__pyx_k_update), 0, 0, 1, 1},
+  {&__pyx_n_s_x, __pyx_k_x, sizeof(__pyx_k_x), 0, 0, 1, 1},
+  {&__pyx_n_s_xo, __pyx_k_xo, sizeof(__pyx_k_xo), 0, 0, 1, 1},
+  {&__pyx_n_s_y, __pyx_k_y, sizeof(__pyx_k_y), 0, 0, 1, 1},
+  {&__pyx_n_s_y_avg, __pyx_k_y_avg, sizeof(__pyx_k_y_avg), 0, 0, 1, 1},
+  {&__pyx_n_s_yo, __pyx_k_yo, sizeof(__pyx_k_yo), 0, 0, 1, 1},
   {&__pyx_n_s_zeros, __pyx_k_zeros, sizeof(__pyx_k_zeros), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 139; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 152; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 218; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 802; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   return 0;
@@ -16199,20 +16449,20 @@ PyMODINIT_FUNC PyInit_BCM(void)
   __pyx_vtable_7splikes_11connections_3BCM_BCM.__pyx_base._reset = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_connection *, int __pyx_skip_dispatch))__pyx_f_7splikes_11connections_3BCM_3BCM__reset;
   __pyx_vtable_7splikes_11connections_3BCM_BCM.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_connection *, double, struct __pyx_obj_7splikes_7splikes_simulation *, int __pyx_skip_dispatch))__pyx_f_7splikes_11connections_3BCM_3BCM_update;
   __pyx_type_7splikes_11connections_3BCM_BCM.tp_base = __pyx_ptype_7splikes_7splikes_connection;
-  if (PyType_Ready(&__pyx_type_7splikes_11connections_3BCM_BCM) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 212; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyType_Ready(&__pyx_type_7splikes_11connections_3BCM_BCM) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 225; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_type_7splikes_11connections_3BCM_BCM.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_7splikes_11connections_3BCM_BCM.tp_dict, __pyx_vtabptr_7splikes_11connections_3BCM_BCM) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 212; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "BCM", (PyObject *)&__pyx_type_7splikes_11connections_3BCM_BCM) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 212; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_SetVtable(__pyx_type_7splikes_11connections_3BCM_BCM.tp_dict, __pyx_vtabptr_7splikes_11connections_3BCM_BCM) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 225; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "BCM", (PyObject *)&__pyx_type_7splikes_11connections_3BCM_BCM) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 225; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_7splikes_11connections_3BCM_BCM = &__pyx_type_7splikes_11connections_3BCM_BCM;
   __pyx_vtabptr_7splikes_11connections_3BCM_BCM_LawCooper_Offset = &__pyx_vtable_7splikes_11connections_3BCM_BCM_LawCooper_Offset;
   __pyx_vtable_7splikes_11connections_3BCM_BCM_LawCooper_Offset.__pyx_base = *__pyx_vtabptr_7splikes_7splikes_connection;
   __pyx_vtable_7splikes_11connections_3BCM_BCM_LawCooper_Offset.__pyx_base._reset = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_connection *, int __pyx_skip_dispatch))__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__reset;
   __pyx_vtable_7splikes_11connections_3BCM_BCM_LawCooper_Offset.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_connection *, double, struct __pyx_obj_7splikes_7splikes_simulation *, int __pyx_skip_dispatch))__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_update;
   __pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset.tp_base = __pyx_ptype_7splikes_7splikes_connection;
-  if (PyType_Ready(&__pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 327; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyType_Ready(&__pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 340; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset.tp_dict, __pyx_vtabptr_7splikes_11connections_3BCM_BCM_LawCooper_Offset) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 327; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "BCM_LawCooper_Offset", (PyObject *)&__pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 327; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_SetVtable(__pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset.tp_dict, __pyx_vtabptr_7splikes_11connections_3BCM_BCM_LawCooper_Offset) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 340; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "BCM_LawCooper_Offset", (PyObject *)&__pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 340; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_7splikes_11connections_3BCM_BCM_LawCooper_Offset = &__pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset;
   /*--- Type import code ---*/
   __pyx_ptype_7cpython_4type_type = __Pyx_ImportType(__Pyx_BUILTIN_MODULE_NAME, "type", 
@@ -16230,10 +16480,10 @@ PyMODINIT_FUNC PyInit_BCM(void)
   __pyx_ptype_7splikes_7splikes_group = __Pyx_ImportType("splikes.splikes", "group", sizeof(struct __pyx_obj_7splikes_7splikes_group), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_group)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_7splikes_7splikes_monitor = __Pyx_ImportType("splikes.splikes", "monitor", sizeof(struct __pyx_obj_7splikes_7splikes_monitor), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_vtabptr_7splikes_7splikes_monitor = (struct __pyx_vtabstruct_7splikes_7splikes_monitor*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_monitor->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_monitor)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7splikes_simulation = __Pyx_ImportType("splikes.splikes", "simulation", sizeof(struct __pyx_obj_7splikes_7splikes_simulation), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_simulation = (struct __pyx_vtabstruct_7splikes_7splikes_simulation*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_7splikes_7splikes_neuron = __Pyx_ImportType("splikes.splikes", "neuron", sizeof(struct __pyx_obj_7splikes_7splikes_neuron), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_vtabptr_7splikes_7splikes_neuron = (struct __pyx_vtabstruct_7splikes_7splikes_neuron*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_7splikes_7splikes_simulation = __Pyx_ImportType("splikes.splikes", "simulation", sizeof(struct __pyx_obj_7splikes_7splikes_simulation), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_7splikes_7splikes_simulation = (struct __pyx_vtabstruct_7splikes_7splikes_simulation*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_simulation)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_7splikes_7splikes_neuron = __Pyx_ImportType("splikes.splikes", "neuron", sizeof(struct __pyx_obj_7splikes_7splikes_neuron), 1); if (unlikely(!__pyx_ptype_7splikes_7splikes_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_vtabptr_7splikes_7splikes_neuron = (struct __pyx_vtabstruct_7splikes_7splikes_neuron*)__Pyx_GetVtable(__pyx_ptype_7splikes_7splikes_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_7splikes_7splikes_neuron)) {__pyx_filename = __pyx_f[3]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   /*--- Variable import code ---*/
   /*--- Function import code ---*/
   /*--- Execution code ---*/

@@ -28,7 +28,8 @@ cdef class srm0(neuron):
         self.name='SRM0'
         self._reset()
 
-        self.save_attrs.extend(['tau','a','rate_slope','rate_offset','tau_beta','smoothed'])
+        self.save_attrs.extend(['tau','a','rate_slope','rate_offset',
+            'tau_beta','smoothed'])
         self.save_data.extend(['u','v','beta'])
 
 

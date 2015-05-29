@@ -163,6 +163,16 @@ cdef class poisson_plasticnet(neuron):
 
         self.save_attrs.extend(['time_between_patterns'])
 
+    def save(self,g):
+
+        group.save(self,g)
+
+        g2=g.create_group("pneuron")
+        self.pneuron.save(g2)
+
+        if not self.psim is None:
+            g2=g.create_group("psim")
+            self.psim(g2)
 
     def plot_spikes(self,count=False):
         spikes=self.saved_spikes

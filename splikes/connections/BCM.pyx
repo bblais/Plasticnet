@@ -37,6 +37,9 @@ cdef class BCM_LawCooper(connection):
     cdef public double time_between_modification,time_to_next_modification
     cdef public int theta_squares_the_average
 
+
+
+
     cpdef _reset(self):
         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
                                    self.initial_theta_range[0])+self.initial_theta_range[0]
@@ -91,6 +94,16 @@ cdef class BCM_LawCooper(connection):
         self.time_between_modification=-1.0
         self.theta_squares_the_average=False
         self._reset()
+
+        self.save_attrs.extend(['tau_x','tau_y','xo','yo','theta_o',
+            'gamma','eta','tau_theta','tau_beta','ax',
+            'ay','smoothed_x','smoothed_y','time_between_modification',
+            'time_to_next_modification','theta_squares_the_average',])
+        self.save_data.extend(['theta','beta','x','y',
+            'y_avg','X','Y','mod_X','mod_Y','mod_theta','mod_beta',
+            'initial_theta_range'])
+
+
 
     @cython.cdivision(True)
     @cython.boundscheck(False) # turn of bounds-checking for entire function
