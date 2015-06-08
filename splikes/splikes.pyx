@@ -220,8 +220,7 @@ cdef class simulation(group):
         self.save_data=[]
         self.verbose=False
         self.name='simulation'
-        
-        
+
     cpdef _reset(self):
         if self.seed<0:
             init_by_entropy()
@@ -271,7 +270,7 @@ cdef class neuron(group):
         self.connections_post=[]
         self.name=None
     
-        self.save_attrs=['num_pre','num_post','verbose',
+        self.save_attrs=['num_pre','num_post','N','verbose',
                             'save_spikes_begin','save_spikes_end','post_count']
         self.save_data=['spiking','last_spike_time','rate','saved_spikes']
 
