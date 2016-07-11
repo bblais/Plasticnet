@@ -99,12 +99,12 @@ class Waitbar(object):
             # terminal IPython has no clear_output
             pass
 
-        print '\r',self,
+        print('\r',self,)
         sys.stdout.flush()
         time.sleep(0.001)
 
     def display_noipython(self):
-        print '\r',self,
+        print('\r',self,)
         sys.stdout.flush()
         
     def updated(self,newAmount=0):
@@ -121,6 +121,6 @@ if __name__=="__main__":
     w = Waitbar(False)
     for i in xrange(1000):
         w.update(i/1000.0)
-        print w,
+        print(w,)
         time.sleep(.01)
     

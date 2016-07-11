@@ -84,7 +84,7 @@ cdef class spike_pattern(neuron):
             self.time_to_next_pattern+=self.time_between_patterns
             self.count=0
             if self.verbose:
-                print "Changing patterns",t
+                print("Changing patterns",t)
 
         for i in range(self.N):
             spiking[i]=0
@@ -97,7 +97,7 @@ cdef class spike_pattern(neuron):
             i=spike_neurons[self.count]
 
             if self.verbose:
-                print "spiking ",i,"at time ",t,"spike time",spike_times[self.count],"count",self.count
+                print("spiking ",i,"at time ",t,"spike time",spike_times[self.count],"count",self.count)
 
             spiking[i]=1
             self.count+=1
@@ -106,7 +106,7 @@ cdef class spike_pattern(neuron):
 
             if self.count>=self.pattern_length:
                 if self.verbose:
-                    print "end of pattern."
+                    print("end of pattern.")
                 break
 
 

@@ -3,7 +3,7 @@
 
 # In[1]:
 
-get_ipython().magic(u'matplotlib inline')
+get_ipython().magic('pylab inline')
 from splikes import *
 
 
@@ -22,7 +22,7 @@ sim=simulation(10,dt=0.0001)
 
 # In[3]:
 
-get_ipython().magic(u'time run_sim(sim,[pre],[])')
+get_ipython().magic('time run_sim(sim,[pre],[])')
 pre.plot_spikes()
 
 
@@ -35,7 +35,7 @@ spike_counts(arange(0,10+1),pre.saved_spikes)
 
 # ### 1D Non-constant rates
 
-# In[12]:
+# In[6]:
 
 pre=neurons.poisson_pattern([5,50],
                             sequential=True,
@@ -46,14 +46,14 @@ pre.save_spikes_end=10.0
 
 sim=simulation(10,dt=0.0001)
 
-get_ipython().magic(u'time run_sim(sim,[pre],[])')
+get_ipython().magic('time run_sim(sim,[pre],[])')
 pre.plot_spikes()
 title('Oops!  This is two neurons!')
 
-print spike_counts(arange(0,10+1),pre.saved_spikes)
+print(spike_counts(arange(0,10+1),pre.saved_spikes))
 
 
-# In[13]:
+# In[7]:
 
 pre=neurons.poisson_pattern([5,50],
                             shape=(2,1),
@@ -65,13 +65,13 @@ pre.save_spikes_end=10.0
 
 sim=simulation(10,dt=0.0001)
 
-get_ipython().magic(u'time run_sim(sim,[pre],[])')
+get_ipython().magic('time run_sim(sim,[pre],[])')
 pre.plot_spikes()
 
 
 # ## 1D SRM0 neuron
 
-# In[12]:
+# In[5]:
 
 pre=neurons.poisson_pattern([10])
 post=neurons.srm0(1)
@@ -84,12 +84,12 @@ sim.monitor(post,['u',],0.001)
 run_sim(sim,[pre,post],[c])
 
 
-# In[13]:
+# In[6]:
 
 sim.monitors['u'].array()
 
 
-# In[14]:
+# In[7]:
 
 m=sim.monitors['u']
 m.plot()
@@ -97,7 +97,7 @@ m.plot()
 
 # ### Checking the effect connection strength
 
-# In[16]:
+# In[11]:
 
 pre=neurons.poisson_pattern([10])
 post=neurons.srm0(1)
@@ -113,20 +113,20 @@ m=sim.monitors['u']
 m.plot()
 
 
-# In[17]:
+# In[12]:
 
 mean(m.array())
 
 
 # ### Running many different connection strengths
 
-# In[22]:
+# In[14]:
 
 w_arr=linspace(1,100,100)
-print w_arr
+print(w_arr)
 
 
-# In[24]:
+# In[15]:
 
 mean_arr=[]
 rate=10
@@ -151,7 +151,7 @@ ylabel('Mean $u$')
 title('Input Rate %.1f' % rate)
 
 
-# In[25]:
+# In[16]:
 
 mean_arr=[]
 rate=30
@@ -180,7 +180,7 @@ title('Input Rate %.1f' % rate)
 
 # ## 2D Spiking Neuron
 
-# In[15]:
+# In[17]:
 
 pre=neurons.poisson_pattern([[10,20],[50,10]],
                             sequential=True,
@@ -211,6 +211,11 @@ m.plot()
 
 
 # Can you figure out an equation to provide the mean $u$ given the two input rate values and the two connection strengths?
+
+# In[ ]:
+
+
+
 
 # In[ ]:
 

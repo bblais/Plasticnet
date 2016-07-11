@@ -1,5 +1,6 @@
 cimport numpy as np
 
+
 cdef extern from "math.h":
     double sqrt(double)
     double exp(double)

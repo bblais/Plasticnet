@@ -70,11 +70,11 @@ cdef class poisson_pattern(neuron):
     cpdef new_pattern(self,double t):
         if not self.sequential:
             if self.verbose:
-                print "random"
+                print("random")
             self.pattern_number=<int> (randu()*self.number_of_patterns)
         else:
             if self.verbose:
-                print "sequential"
+                print("sequential")
             self.pattern_number+=1
             if self.pattern_number>=self.number_of_patterns:
                 self.pattern_number=0
@@ -83,9 +83,9 @@ cdef class poisson_pattern(neuron):
 
         self.time_to_next_pattern=t+self.time_between_patterns
         if self.verbose:
-            print "New pattern %d" % self.pattern_number
+            print("New pattern %d" % self.pattern_number)
             self.print_pattern()
-            print "Time to next pattern: %f" % self.time_to_next_pattern
+            print("Time to next pattern: %f" % self.time_to_next_pattern)
         
         cdef int i
         cdef double *pattern=<double *>self.pattern.data
@@ -96,7 +96,7 @@ cdef class poisson_pattern(neuron):
         cdef int i
         cdef double *pattern=<double *>self.pattern.data
         for i in range(self.N):
-            print pattern[i]
+            print(pattern[i])
             
 
     @cython.cdivision(True)
@@ -157,6 +157,7 @@ cdef class poisson_plasticnet(neuron):
         self.pneuron.time_between_patterns=time_between_patterns
 
         self.verbose=verbose
+        
         self.name='Poisson Plasticnet'
         
         self._reset()
@@ -212,16 +213,16 @@ cdef class poisson_plasticnet(neuron):
             self.rate[i]=self.pneuron.output[i]
 
         if self.verbose:
-            print "New pattern" 
+            print("New pattern")
             self.print_pattern()
-            print "Time to next pattern: %f" % self.time_to_next_pattern
+            print("Time to next pattern: %f" % self.time_to_next_pattern)
         
 
     def print_pattern(self):
         cdef int i
         cdef double *pattern=<double *>self.rate.data
         for i in range(self.N):
-            print pattern[i]
+            print(pattern[i])
 
 
     @cython.cdivision(True)

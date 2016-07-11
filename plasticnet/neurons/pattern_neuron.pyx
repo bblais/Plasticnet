@@ -82,10 +82,10 @@ cdef class pattern_neuron(neuron):
     def print_pattern(self):
         cdef int i
         cdef double *pattern=<double *>self.pattern.data
-        print "[",
+        print("[")
         for i in range(self.N):
-            print pattern[i],
-        print "]"
+            print(pattern[i])
+        print("]")
         sys.stdout.flush()
             
 

@@ -1,5 +1,3 @@
-version='0.0.8'
-
 cimport cython
 
 import numpy as np
@@ -91,7 +89,7 @@ cdef class group:
 
     def save(self,g):
         if self.verbose:
-            print str(type(self)),":",str(self.__getattribute__('name'))
+            print(str(type(self)),":",str(self.__getattribute__('name')))
             sys.stdout.flush()
 
 
@@ -101,23 +99,23 @@ cdef class group:
 
         for attr in self.save_attrs:
             if self.verbose:
-                print "\t",attr
+                print("\t",attr)
                 sys.stdout.flush()
             g.attrs[attr]=self.__getattribute__(attr)
 
         for dataname in self.save_data:
             if self.verbose:
-                print "\t",dataname
+                print("\t",dataname)
                 sys.stdout.flush()
             data=self.__getattribute__(dataname)
 
             if self.verbose:
-                print data
+                print(data)
                 sys.stdout.flush()
 
             if data is None:
                 if self.verbose:
-                    print "(skipping)"
+                    print("(skipping)")
                     sys.stdout.flush()
                 continue
 
@@ -450,6 +448,6 @@ def run_sim(simulation sim,object neurons,object connections,
             next_hash+=hash_step
 
     if print_time:
-        print "Time Elapsed...",time2str(time.time()-t1)
+        print("Time Elapsed...",time2str(time.time()-t1))
         
  

@@ -31,7 +31,7 @@ if os.path.exists("__init__.py"):
     os.rename("__init__.py","backup__init__.py")
     
 s="\n".join(file_lines)
-print s
+print(s)
 
 with open("__init__.py","w") as fid:
     fid.write(s)

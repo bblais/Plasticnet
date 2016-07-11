@@ -13,5 +13,5 @@ if args.home:
 else:
     cmd='python setup.py install'
 
-print cmd
+print(cmd)
 os.system(cmd)
