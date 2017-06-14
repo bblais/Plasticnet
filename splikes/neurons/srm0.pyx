@@ -8,6 +8,7 @@ from splikes.neurons.isi_distributions cimport *
 
 cdef class srm0(neuron):
     cdef public double tau,a,rate_slope,rate_offset,tau_beta
+    cdef public double rate_min,rate_max
     cdef public np.ndarray u,v,beta
     cdef public int smoothed
 
@@ -25,11 +26,14 @@ cdef class srm0(neuron):
         self.rate_offset=0.0
         self.smoothed=False
         self.tau_beta=-1
+        self.rate_min=-1e500
+        self.rate_max=1e500
+
         self.name='SRM0'
         self._reset()
 
         self.save_attrs.extend(['tau','a','rate_slope','rate_offset',
-            'tau_beta','smoothed'])
+            'tau_beta','smoothed','rate_min','rate_max'])
         self.save_data.extend(['u','v','beta'])
 
 
@@ -85,6 +89,10 @@ cdef class srm0(neuron):
         self.is_spike=0
         for i in range(self.N):
             rate[i]=self.rate_offset+self.rate_slope*(u[i]-beta[i])
+            if rate[i]<self.rate_min:
+                rate[i]=self.rate_min
+            elif rate[i]>self.rate_max:
+                rate[i]=self.rate_max
                 
             if randu()<(rate[i]*sim.dt):
                 spiking[i]=1
@@ -180,6 +188,12 @@ cdef class srm0_isi(srm0):
                 spiking[i]=1
             else:
                 _lambda=pdf/(1-cdf)
+
+                if _lambda<self.rate_min:
+                    _lambda=self.rate_min
+                elif _lambda>self.rate_max:
+                    _lambda=self.rate_max
+
             
                 if randu()<_lambda*sim.dt:
                     self.is_spike=1

@@ -38,7 +38,7 @@ cdef class poisson_pattern(neuron):
         self.name='Poisson Pattern'
         
         self.save_attrs.extend(['number_of_patterns','time_between_patterns','sequential'])
-        self.save_data.extend(['patterns'])
+        self.save_data.extend(['patterns','pattern'])
 
 
 
@@ -127,17 +127,17 @@ cdef class poisson_pattern(neuron):
 cdef class poisson_plasticnet(neuron):
     cdef public object pneuron,psim
     cdef public double time_between_patterns,time_to_next_pattern
-    cdef public seed
+    #cdef public seed
     
     cpdef _reset(self):
         cdef int L,k
 
         neuron._reset(self)
 
-        if self.seed<0:
-            pn.init_by_entropy()
-        else:
-            pn.init_by_int(self.seed)
+        # if self.seed<0:
+        #     pn.init_by_entropy()
+        # else:
+        #     pn.init_by_int(self.seed)
 
         self.pneuron._reset()
         self.time_to_next_pattern=0.0 
