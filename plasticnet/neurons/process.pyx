@@ -17,6 +17,9 @@ cdef class add_noise_normal(post_process_neuron):
         post_process_neuron.__init__(self)
         self._reset()
 
+        self.save_attrs+=['mean','std']
+
+
     @cython.cdivision(True)
     @cython.boundscheck(False) # turn of bounds-checking for entire function
     cpdef update(self,double t,simulation sim):
@@ -42,6 +45,7 @@ cdef class add_noise_multiplicative(post_process_neuron):
 
         post_process_neuron.__init__(self)
         self._reset()
+        self.save_attrs+=['std']
 
     @cython.cdivision(True)
     @cython.boundscheck(False) # turn of bounds-checking for entire function
@@ -61,6 +65,7 @@ cdef class add_noise_uniform(post_process_neuron):
         self.std=std
         post_process_neuron.__init__(self)
         self._reset()
+        self.save_attrs+=['mean','std']
 
     @cython.cdivision(True)
     @cython.boundscheck(False) # turn of bounds-checking for entire function
@@ -78,6 +83,7 @@ cdef class relative_to_spontaneous(post_process_neuron):
         self.y0=y0
         post_process_neuron.__init__(self)
         self._reset()
+        self.save_attrs+=['y0']
 
     @cython.cdivision(True)
     @cython.boundscheck(False) # turn of bounds-checking for entire function
@@ -107,6 +113,8 @@ cdef class subtract_beta(post_process_neuron):
         self.a=a
         post_process_neuron.__init__(self)
         self._reset()
+        self.save_attrs+=['tau','a']
+        self.save_data+=['beta','original_output']
         
     @cython.cdivision(True)
     @cython.boundscheck(False) # turn of bounds-checking for entire function
@@ -119,7 +127,7 @@ cdef class subtract_beta(post_process_neuron):
         
         for i in range(self.n.N):
             zo[i]=z[i]
-            beta[i]+=(z[i]-beta[i])/self.tau
+            beta[i]+=sim.dt*(z[i]-beta[i])/self.tau
             z[i]-=self.a*beta[i]
 
 
@@ -129,6 +137,7 @@ cdef class min_max(post_process_neuron):
         self.bottom=bottom
         self.top=top
         post_process_neuron.__init__(self)
+        self.save_attrs+=['bottom','top']
         
     @cython.cdivision(True)
     @cython.boundscheck(False) # turn of bounds-checking for entire function
@@ -151,6 +160,7 @@ cdef class scale_shift(post_process_neuron):
         self.scale=scale
         self.shift=shift
         post_process_neuron.__init__(self)
+        self.save_attrs+=['scale','shift']
         
     @cython.cdivision(True)
     @cython.boundscheck(False) # turn of bounds-checking for entire function
@@ -169,6 +179,7 @@ cdef class sigmoid(post_process_neuron):
         self.bottom=bottom
         self.top=top
         post_process_neuron.__init__(self)
+        self.save_attrs+=['bottom','top']
         
     @cython.cdivision(True)
     @cython.boundscheck(False) # turn of bounds-checking for entire function
@@ -183,5 +194,30 @@ cdef class sigmoid(post_process_neuron):
             else:
                 z[i]=self.top*(2.0/(1.0+exp(-2.0*(z[i]/self.top)))-1.0)
         
+from libc.math cimport log
+
+cdef class log_transform(post_process_neuron):
+    cdef public double scale,shift
+    def __init__(self,double scale,double shift):
+        self.scale=scale
+        self.shift=shift
+        post_process_neuron.__init__(self)
+        self.save_attrs+=['scale','shift']
         
-   
+    @cython.cdivision(True)
+    @cython.boundscheck(False) # turn of bounds-checking for entire function
+    cpdef update(self,double t,simulation sim):
+        cdef int i
+        cdef double value
+        cdef double *y=<double *>self.n.linear_output.data
+        cdef double *z=<double *>self.n.output.data
+        
+        for i in range(self.n.N):
+            value=z[i]*self.scale + self.shift
+            if value<0.0:
+                value=0.0
+
+            z[i]= log(value+1)
+        
+        
+      

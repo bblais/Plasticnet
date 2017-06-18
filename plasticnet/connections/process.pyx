@@ -146,6 +146,7 @@ cdef class weight_limits(post_process_connection):
     def __init__(self,double w_min,double w_max):
         self.w_min=w_min
         self.w_max=w_max
+
         post_process_connection.__init__(self)
         
     @cython.cdivision(True)

@@ -8,6 +8,69 @@ mpl.rcParams['lines.linewidth'] = 3
 mpl.rcParams['figure.figsize'] = (10,8)
 mpl.rcParams['axes.grid']=True
 
+import h5py
+import plasticnet as pn
+import splikes as sp
+
+def save(fname,sim,neurons=[],connections=[]):
+    f=h5py.File(fname,'w')
+    
+    try:
+
+        f.attrs['plasticnet version']=pn.version
+        f.attrs['splikes version']=sp.version
+        
+        group=f.create_group("simulation")
+        sim.save(group)
+
+        for n,neuron in enumerate(neurons):
+            group=f.create_group("neuron %d" % n)
+            if neuron.verbose:
+                print("<<<<  group   neuron %d >>>>" % n)
+                sys.stdout.flush()
+            neuron.save(group)
+
+            for monitor_name in sim.monitors:
+                m=sim.monitors[monitor_name]
+                if m.container==neuron:
+                    mgroup=group.create_group("monitor %s" % m.name)
+                    m.save(mgroup)
+            
+            
+            
+        for c,connection in enumerate(connections):
+            group=f.create_group("connection %d" % c)
+            
+            if connection.verbose:
+                print("<<<<  group   connection %d >>>>" % c)
+                sys.stdout.flush()
+            connection.save(group)
+    
+            try:
+                idx=neurons.index(connection.pre)
+            except ValueError:
+                idx=None
+            group.attrs['pre number']=idx
+
+            try:
+                idx=neurons.index(connection.post)
+            except ValueError:
+                idx=None
+            group.attrs['post number']=idx
+            
+            for monitor_name in sim.monitors:
+                m=sim.monitors[monitor_name]
+                if m.container==connection:
+                    mgroup=group.create_group("monitor %s" % m.name)
+                    m.save(mgroup)
+            
+    finally:
+        f.close()
+
+
+
+
+
 def bigfonts(size=20,family='sans-serif'):
     
     from matplotlib import rc
@@ -53,10 +116,10 @@ def plot_spike_lines(neuron,color,label):
             plot([t,t],[yl[0],yl[0]+.1*dyl],color[n],linewidth=3)
         count+=1
 
-    print "Total number of %s spikes: %d " % (label,len(neuron.saved_spikes))
+    print("Total number of %s spikes: %d " % (label,len(neuron.saved_spikes)))
     if neuron.N>1:
         for i in range(neuron.N):
-            print "    Number of spikes for neuron %d: %d" % (i,len([t for t,n in neuron.saved_spikes if n==i]))
+            print("    Number of spikes for neuron %d: %d" % (i,len([t for t,n in neuron.saved_spikes if n==i])))
     
     
 def timeplot(*args,**kwargs):
@@ -160,7 +223,7 @@ def average_rate_plot(monitors,window=200,neurons=[],xlim=None,ylim=None):
     if not isinstance(monitors,list):
         monitors=[monitors]
         
-    if not isinstance(monitors[0],SpikeMonitor):
+    if not isinstance(monitors[0],sp.SpikeMonitor):
         nn=monitors
         monitors=[]
         for n in nn:
@@ -573,12 +636,12 @@ cimport numpy as np
     if 'threshold' in spiking:
         var_threshold=spiking.split('>')[0].strip()
         if var_threshold not in variables:
-            raise ValueError,"%s not in variables %s" % (var_threshold,str(variables))
+            raise ValueError("%s not in variables %s" % (var_threshold,str(variables)))
     
         if 'reset' not in parameters:
-            raise ValueError,"'reset' not in parameters"
+            raise ValueError("'reset' not in parameters")
         if 'threshold' not in parameters:
-            raise ValueError,"'threshold' not in parameters"
+            raise ValueError("'threshold' not in parameters")
     
         code_str+="""
         spiking=<int *>self.spiking.data
@@ -596,7 +659,7 @@ cimport numpy as np
     """ % (var_threshold,var_threshold)
     elif 'poisson' in spiking:
         if 'rate' not in variables:
-            raise ValueError,"'rate' not in variables"
+            raise ValueError("'rate' not in variables")
         
         code_str+="""
         spiking=<int *>self.spiking.data
@@ -614,7 +677,7 @@ cimport numpy as np
         """
     else:
         if spiking:
-            raise ValueError,"Spiking '%s' not implemented" % spiking
+            raise ValueError("Spiking '%s' not implemented" % spiking)
 
     
     
@@ -834,7 +897,7 @@ cimport numpy as np
         elif shape=='full':
             code_str+="        self.%s=np.zeros( (self.post.N,self.pre.N),dtype=np.float)\n" % varname
         else:
-            raise ValueError,'Illegal shape: %s' % shape
+            raise ValueError('Illegal shape: %s' % shape)
     
     code_str+="        connection._reset(self)\n"
     

@@ -37,6 +37,11 @@ cdef class poisson_pattern(neuron):
         self.verbose=verbose
         self.name='Poisson Pattern'
         
+        self.save_attrs.extend(['number_of_patterns','time_between_patterns','sequential'])
+        self.save_data.extend(['patterns','pattern'])
+
+
+
         self._reset()
         
         
@@ -65,11 +70,11 @@ cdef class poisson_pattern(neuron):
     cpdef new_pattern(self,double t):
         if not self.sequential:
             if self.verbose:
-                print "random"
+                print("random")
             self.pattern_number=<int> (randu()*self.number_of_patterns)
         else:
             if self.verbose:
-                print "sequential"
+                print("sequential")
             self.pattern_number+=1
             if self.pattern_number>=self.number_of_patterns:
                 self.pattern_number=0
@@ -78,9 +83,9 @@ cdef class poisson_pattern(neuron):
 
         self.time_to_next_pattern=t+self.time_between_patterns
         if self.verbose:
-            print "New pattern %d" % self.pattern_number
+            print("New pattern %d" % self.pattern_number)
             self.print_pattern()
-            print "Time to next pattern: %f" % self.time_to_next_pattern
+            print("Time to next pattern: %f" % self.time_to_next_pattern)
         
         cdef int i
         cdef double *pattern=<double *>self.pattern.data
@@ -91,7 +96,7 @@ cdef class poisson_pattern(neuron):
         cdef int i
         cdef double *pattern=<double *>self.pattern.data
         for i in range(self.N):
-            print pattern[i]
+            print(pattern[i])
             
 
     @cython.cdivision(True)
@@ -122,17 +127,17 @@ cdef class poisson_pattern(neuron):
 cdef class poisson_plasticnet(neuron):
     cdef public object pneuron,psim
     cdef public double time_between_patterns,time_to_next_pattern
-    cdef public seed
+    #cdef public seed
     
     cpdef _reset(self):
         cdef int L,k
 
         neuron._reset(self)
 
-        if self.seed<0:
-            pn.init_by_entropy()
-        else:
-            pn.init_by_int(self.seed)
+        # if self.seed<0:
+        #     pn.init_by_entropy()
+        # else:
+        #     pn.init_by_int(self.seed)
 
         self.pneuron._reset()
         self.time_to_next_pattern=0.0 
@@ -152,9 +157,23 @@ cdef class poisson_plasticnet(neuron):
         self.pneuron.time_between_patterns=time_between_patterns
 
         self.verbose=verbose
+        
         self.name='Poisson Plasticnet'
         
         self._reset()
+
+        self.save_attrs.extend(['time_between_patterns'])
+
+    def save(self,g):
+
+        group.save(self,g)
+
+        g2=g.create_group("pneuron")
+        self.pneuron.save(g2)
+
+        if not self.psim is None:
+            g2=g.create_group("psim")
+            self.psim(g2)
 
     def plot_spikes(self,count=False):
         spikes=self.saved_spikes
@@ -194,16 +213,16 @@ cdef class poisson_plasticnet(neuron):
             self.rate[i]=self.pneuron.output[i]
 
         if self.verbose:
-            print "New pattern" 
+            print("New pattern")
             self.print_pattern()
-            print "Time to next pattern: %f" % self.time_to_next_pattern
+            print("Time to next pattern: %f" % self.time_to_next_pattern)
         
 
     def print_pattern(self):
         cdef int i
         cdef double *pattern=<double *>self.rate.data
         for i in range(self.N):
-            print pattern[i]
+            print(pattern[i])
 
 
     @cython.cdivision(True)

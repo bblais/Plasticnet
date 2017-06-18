@@ -223,7 +223,8 @@ cdef class Triplet_BCM_LawCooper(Triplet_BCM):
             y_fast[__i]+=sim.dt*(-y_fast[__i]/tau_y_fast+post[__i]/sim.dt)
 
         for __i in range(self.post.N):
-            y2_val=(y_slow[__i]/tau_y_slow)*(y_slow[__i]/tau_y_slow)
+            #y2_val=(y_slow[__i]/tau_y_slow)*(y_slow[__i]/tau_y_slow)
+            y2_val=y_fast[__i]*y_fast[__i]
             y2[__i]+=sim.dt*(y2_val-y2[__i])/tau_y2
 
         for __i in range(self.post.N):
@@ -241,3 +242,103 @@ cdef class Triplet_BCM_LawCooper(Triplet_BCM):
         
         self.apply_weight_limits()
     
+
+cdef class Triplet_BCM_LawCooper2(Triplet_BCM):
+    cdef public np.ndarray beta
+    cdef public double gamma,tau_beta
+
+    def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):
+        Triplet_BCM.__init__(self,pre,post,initial_weight_range,state)
+        self.y2_o=19.2
+        self.tau_beta=-1  # no beta
+        self.gamma=0.0  # no decay
+        self.name='Triplet BCM LawCooper with Decay and Beta'
+
+    cpdef _reset(self):
+        self.beta=np.zeros(self.post.N,dtype=np.float)
+        Triplet_BCM._reset(self)
+    
+    
+    @cython.cdivision(True)
+    @cython.boundscheck(False) # turn of bounds-checking for entire function
+    cpdef update(self,double t,simulation sim):
+        cdef int __i,__j
+    
+        cdef double *y2=<double *>self.y2.data
+        cdef double *theta=<double *>self.theta.data
+        cdef double *beta=<double *>self.beta.data
+        cdef double y2_val
+        cdef double *y_fast=<double *>self.y_fast.data
+        cdef double *x_fast=<double *>self.x_fast.data
+        cdef double *y_slow=<double *>self.y_slow.data
+        cdef double *x_slow=<double *>self.x_slow.data
+        cdef double tau_x_slow=self.tau_x_slow
+        cdef double tau_y_slow=self.tau_y_slow
+        cdef double A3_minus=self.A3_minus
+        cdef double A2_minus=self.A2_minus
+        cdef double A3_plus_eff
+        cdef double tau_y2=self.tau_y2
+        cdef double y2_o=self.y2_o
+        cdef double tau_y_fast=self.tau_y_fast
+        cdef double tau_x_fast=self.tau_x_fast
+        cdef double A3_plus=self.A3_plus
+        cdef double A2_plus=self.A2_plus
+        cdef double eta=self.eta
+        cdef double gamma=self.gamma
+        cdef double tau_beta=self.tau_beta
+        cdef double y_tmp
+        cdef double *W=self.W
+        cdef double *post_rate=<double *>self.post.rate.data
+        cdef double *pre_rate=<double *>self.pre.rate.data
+        cdef int *pre,*post   # spikes for pre and post
+        cdef int __wi
+        
+        
+        pre=<int *>self.pre.spiking.data
+        post=<int *>self.post.spiking.data
+    
+        for __j in range(self.pre.N):
+            x_fast[__j]+=sim.dt*(-x_fast[__j]/tau_x_fast+pre[__j]/sim.dt)
+        for __i in range(self.post.N):
+            y_fast[__i]+=sim.dt*(-y_fast[__i]/tau_y_fast+post[__i]/sim.dt)
+
+        if tau_beta>0:
+            for __i in range(self.post.N):
+                beta[__i]+=sim.dt*(y_fast[__i]-beta[__i])/tau_beta
+
+        for __i in range(self.post.N):
+            y_tmp=y_fast[__i]-beta[__i]  # apply beta trick
+            if y_tmp<0.0:
+                y_tmp=0.0
+
+            #y2_val=(y_slow[__i]/tau_y_slow)*(y_slow[__i]/tau_y_slow)
+            y2_val=y_tmp*y_tmp
+            y2[__i]+=sim.dt*(y2_val-y2[__i])/tau_y2
+
+        for __i in range(self.post.N):
+            A3_plus_eff=A3_plus/(y2[__i]/y2_o+1e-4)
+            theta[__i]=A2_minus*tau_y_fast/A3_plus_eff/tau_x_fast/tau_y_slow
+            
+            for __j in range(self.pre.N):
+                __wi=__i*self.pre.N+__j
+                y_tmp=y_fast[__i]-beta[__i]  # apply beta trick
+                if y_tmp<0.0:
+                    y_tmp=0.0
+
+                W[__wi]+=sim.dt*eta*(-pre[__j]/sim.dt*y_tmp*(A2_minus+A3_minus*x_slow[__j]))
+
+                y_tmp=y_slow[__i]-beta[__i]  # apply beta trick
+                if y_tmp<0.0:
+                    y_tmp=0.0
+
+                W[__wi]+=sim.dt*eta*(+post[__i]/sim.dt*x_fast[__j]*(A2_plus+A3_plus_eff*y_tmp))
+
+                W[__wi]+=sim.dt*eta*(-gamma*W[__i])
+
+                
+        for __j in range(self.pre.N):
+            x_slow[__j]+=sim.dt*(-x_slow[__j]/tau_x_slow+pre[__j]/sim.dt)
+        for __i in range(self.post.N):
+            y_slow[__i]+=sim.dt*(-y_slow[__i]/tau_y_slow+post[__i]/sim.dt)
+        
+        self.apply_weight_limits()

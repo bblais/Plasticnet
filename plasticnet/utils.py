@@ -1,12 +1,75 @@
 import matplotlib as mpl
 import pylab as pl
 
+import h5py
+import plasticnet as pn
+import splikes as sp
+
+def save(fname,sim,neurons=[],connections=[]):
+    f=h5py.File(fname,'w')
+    
+    try:
+
+        f.attrs['plasticnet version']=pn.version
+        f.attrs['splikes version']=sp.version
+        
+        group=f.create_group("simulation")
+        sim.save(group)
+
+        for n,neuron in enumerate(neurons):
+            group=f.create_group("neuron %d" % n)
+            if neuron.verbose:
+                print("<<<<  group   neuron %d >>>>" % n)
+                sys.stdout.flush()
+            neuron.save(group)
+
+            for monitor_name in sim.monitors:
+                m=sim.monitors[monitor_name]
+                if m.container==neuron:
+                    mgroup=group.create_group("monitor %s" % m.name)
+                    m.save(mgroup)
+            
+            
+            
+        for c,connection in enumerate(connections):
+            group=f.create_group("connection %d" % c)
+            
+            if connection.verbose:
+                print("<<<<  group   connection %d >>>>" % c)
+                sys.stdout.flush()
+            connection.save(group)
+    
+            try:
+                idx=neurons.index(connection.pre)
+            except ValueError:
+                idx=None
+            group.attrs['pre number']=idx
+
+            try:
+                idx=neurons.index(connection.post)
+            except ValueError:
+                idx=None
+            group.attrs['post number']=idx
+            
+            for monitor_name in sim.monitors:
+                m=sim.monitors[monitor_name]
+                if m.container==connection:
+                    mgroup=group.create_group("monitor %s" % m.name)
+                    m.save(mgroup)
+            
+    finally:
+        f.close()
+
+
+
+
+
 def hdf5_load_images(fname):
     import h5py,os
     import numpy as np
     
     if not os.path.exists(fname):
-        raise ValueError,"File does not exist: %s" % fname
+        raise ValueError("File does not exist: %s" % fname)
     f=h5py.File(fname,'r')
     var={}
     var['im_scale_shift']=list(f.attrs['im_scale_shift'])
@@ -81,12 +144,12 @@ def timeit(reset=False):
         # is defined
     except NameError:
         _timeit_time=time()
-        print "Time Reset"
+        print("Time Reset")
         return
     
     if reset:
         _timeit_time=time()
-        print "Time Reset"
+        print("Time Reset")
         return
 
     return time2str(time()-_timeit_time)
@@ -97,10 +160,28 @@ def test_stim(sim,neurons,connections,numang=24,k=4.4/13.0*3.141592653589793235)
     pre,post=neurons
     c=connections[0]
 
-    try:
-        rf_diameter=pre.rf_size
+    try:  # check for channel
+        neurons=pre.neuron_list
     except AttributeError:
-        rf_diameter=pre.neuron_list[0].rf_size
+        neurons=[pre]
+
+    num_channels=len(neurons)
+
+    ## only works for all the same size, for right now
+    all_sizes=[]
+    for c,ch in enumerate(neurons):   
+        try:
+            rf_size=ch.rf_size
+        except AttributeError:
+            rf_size=pl.sqrt(ch.N)
+            assert rf_size==int(rf_size)
+            rf_size=int(rf_size)
+
+        all_sizes.append(rf_size)
+
+    assert all([x==all_sizes[0] for x in all_sizes])
+
+    rf_diameter=rf_size
 
     theta=linspace(0.0,pi,numang)+pi/2
     x=linspace(0.0,pi,numang)*180.0/pi
@@ -126,8 +207,8 @@ def test_stim(sim,neurons,connections,numang=24,k=4.4/13.0*3.141592653589793235)
 
 
     m=sim.monitors['weights']
-    time_mat=m.saved_results['t']
-    weights_mat=m.saved_results['weights']
+    time_mat=m.t
+    weights_mat=m.values
     
     num_neurons=len(weights_mat[0])
 
@@ -137,18 +218,9 @@ def test_stim(sim,neurons,connections,numang=24,k=4.4/13.0*3.141592653589793235)
     for t,weights in zip(time_mat,weights_mat): #loop over time
         for i,w in enumerate(weights):  #loop over neurons
 
-            try:
-                rf_size=pre.rf_size
-                neurons=[pre]
-            except AttributeError:
-                neurons=pre.neuron_list
-
-            num_channels=len(neurons)
-
             one_result=[]
             count=0
             for c,ch in enumerate(neurons):   
-                rf_size=ch.rf_size
                 N=ch.N
                 weights_1channel_1neuron=w[count:(count+rf_size*rf_size)]
 
@@ -205,24 +277,31 @@ def plot_rfs_and_theta(sim,neurons,connections):
 
     pre,post=neurons
     c=connections[0]
-    
+
     weights=c.weights
     
+
     num_neurons=len(weights)
     fig=pl.figure(figsize=(16,4*num_neurons))
     for i,w in enumerate(weights):
-        try:
-            rf_size=pre.rf_size
-            neurons=[pre]
-        except AttributeError:
+        try:  # check for channel
             neurons=pre.neuron_list
+        except AttributeError:
+            neurons=[pre]
 
         num_channels=len(neurons)
 
         count=0
         vmin,vmax=w.min(),w.max()
         for c,ch in enumerate(neurons):   
-            rf_size=ch.rf_size
+            try:
+                rf_size=ch.rf_size
+            except AttributeError:
+                rf_size=pl.sqrt(ch.N)
+                assert rf_size==int(rf_size)
+                rf_size=int(rf_size)
+
+
             pl.subplot2grid((num_neurons,num_channels+1),(i, c),aspect='equal')
             subw=w[count:(count+rf_size*rf_size)]
             #pl.pcolor(subw.reshape((rf_size,rf_size)),cmap=pl.cm.gray)
@@ -248,17 +327,25 @@ def plot_rfs(sim,neurons,connections):
     num_neurons=len(weights)
     fig=pl.figure(figsize=(16,4*num_neurons))
     for i,w in enumerate(weights):
-        try:
-            rf_size=pre.rf_size
-            neurons=[pre]
-        except AttributeError:
+        try:  # check for channel
             neurons=pre.neuron_list
+        except AttributeError:
+            neurons=[pre]
 
         num_channels=len(neurons)
 
         count=0
         vmin,vmax=w.min(),w.max()
         for c,ch in enumerate(neurons):   
+
+            try:
+                rf_size=ch.rf_size
+            except AttributeError:
+                rf_size=pl.sqrt(ch.N)
+                assert rf_size==int(rf_size)
+                rf_size=int(rf_size)
+
+
             rf_size=ch.rf_size
             pl.subplot2grid((num_neurons,num_channels),(i, c),aspect='equal')
             subw=w[count:(count+rf_size*rf_size)]

@@ -43,6 +43,13 @@ cdef class pattern_neuron(neuron):
 
         self._reset()
         self.new_buffer(-1)
+
+        self.save_attrs.extend(['sequential','pattern_number','rf_size',
+                    'number_of_patterns','time_between_patterns',
+                    'time_to_next_pattern',])
+        self.save_data.extend(['patterns','pattern'])
+
+
         
     cpdef new_buffer(self,double t):
         pass
@@ -75,10 +82,10 @@ cdef class pattern_neuron(neuron):
     def print_pattern(self):
         cdef int i
         cdef double *pattern=<double *>self.pattern.data
-        print "[",
+        print("[")
         for i in range(self.N):
-            print pattern[i],
-        print "]"
+            print(pattern[i])
+        print("]")
         sys.stdout.flush()
             
 
@@ -135,7 +142,7 @@ cdef class natural_images(pattern_neuron):
     cdef public object filename
     cdef int number_of_pics
     cdef int p,r,c
-    cdef int use_other_channel
+    cdef public int use_other_channel
     cdef natural_images other_channel
     
     cpdef _reset(self):
@@ -173,6 +180,11 @@ cdef class natural_images(pattern_neuron):
                 print "[%d,%d]" % (im.shape[0],im.shape[1]),
             sys.stdout.flush()
     
+        self.save_attrs.extend(['buffer_size','use_other_channel','filename'])
+        #self.save_data.extend(['',])
+
+
+
     cpdef new_pattern(self,double t):
         cdef int i,j,k,num_rows,num_cols,r,c,p,offset,count
         cdef np.ndarray pic

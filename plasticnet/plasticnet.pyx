@@ -1,5 +1,3 @@
-version='0.0.7'
-
 cimport cython
 
 import numpy as np
@@ -8,6 +6,7 @@ cimport numpy as np
 import h5py
 
 inf=1e500
+import sys
 
 from copy import deepcopy
 import pylab
@@ -85,16 +84,39 @@ def time2str(tm):
 cdef class group:
 
     def save(self,g):
+        if self.verbose:
+            print(str(type(self)),":",str(self.__getattribute__('name')))
+            sys.stdout.flush()
+
+
         g.attrs['type']=str(type(self))
-        g.attrs['name']=self.__getattribute__('name')
+        g.attrs['name']=str(self.__getattribute__('name'))
 
 
         for attr in self.save_attrs:
+            if self.verbose:
+                print("\t",attr)
+                sys.stdout.flush()
             g.attrs[attr]=self.__getattribute__(attr)
 
         for dataname in self.save_data:
+            if self.verbose:
+                print("\t",dataname)
+                sys.stdout.flush()
             data=self.__getattribute__(dataname)
+
+            if self.verbose:
+                print(data)
+                sys.stdout.flush()
+
+            if data is None:
+                if self.verbose:
+                    print("(skipping)")
+                    sys.stdout.flush()
+                continue
+
             g.create_dataset(dataname,data=data)
+
 
 
 cdef class monitor(group):
@@ -112,6 +134,17 @@ cdef class monitor(group):
     def _reset(self):
         self.t=[]
         self.values=[]
+
+    def save(self,g):
+        # to save the values, we need to make them arrays
+        # if we want to continue a simulation, we need them to stay as lists
+        self.t_tmp,self.values_tmp=self.t,self.values
+
+        self.t=np.array(self.t)
+        self.values=np.array(self.values).squeeze()
+
+        group.save(self,g)
+        self.t,self.values=self.t_tmp,self.values_tmp
 
     cpdef update(self,double t):
         if t<=self.time_to_next_save:
@@ -176,6 +209,7 @@ cdef class simulation(group):
         self.save_attrs=['seed','total_time','dt','time_to_next_save','time_to_next_filter',
                     'verbose',]
         self.save_data=[]
+        self.name='simulation'
         
     cpdef _reset(self):
         if self.seed<0:
@@ -240,7 +274,14 @@ cdef class neuron(group):
         self.save_data=['output','linear_output']
 
         self.name=None
-        
+
+    def save(self,g):
+        group.save(self,g)
+
+        for i,p in enumerate(self.post_process):
+            g2=g.create_group("process %d" % i)
+            p.save(g2)
+
     cpdef _reset(self):
         self.linear_output=np.zeros(self.N,dtype=np.float)
         self.output=np.zeros(self.N,dtype=np.float)    
@@ -368,11 +409,11 @@ cdef class post_process_channel(group):
         num_neurons=len(self.ch.neuron_list)
     
         for i in range(num_neurons):
-            if sim.verbose:
+            if self.ch.verbose:
                 dot()
             L=len(self.ch.neuron_list[i].post_process)
             for k in range(L):
-                if sim.verbose:
+                if self.ch.verbose:
                     dot('X')
                 self.ch.neuron_list[i].post_process[k].update(t,sim)
             
@@ -419,17 +460,6 @@ cdef class connection(group):
         other.c=self
         return self
 
-    def save(self,group):
-        group.attrs['type']=str(type(self))
-        group.attrs['name']=self.__getattribute__('name')
-
-
-        for attr in self.save_attrs:
-            group.attrs[attr]=self.__getattribute__(attr)
-
-        for dataname in self.save_data:
-            data=self.__getattribute__(dataname)
-            group.create_dataset(dataname,data=data)
 
 
 cdef class post_process_connection(group):
@@ -571,6 +601,6 @@ def run_sim(simulation sim,object neurons,object connections,
             next_hash+=hash_step
 
     if print_time:
-        print "Time Elapsed...",time2str(time.time()-t1)
+        print("Time Elapsed...",time2str(time.time()-t1))
         
  

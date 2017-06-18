@@ -22,16 +22,16 @@ for lines,fname in found:
     base,ext=os.path.splitext(fname)
     for line in lines:
         obj=line.split('cdef class')[1].split('(')[0].strip()
-        file_lines.append("from %s import %s" % (base,obj))
+        file_lines.append("from .%s import %s" % (base,obj))
         
 
-file_lines.append("import process")
+file_lines.append("from . import process")
 
 if os.path.exists("__init__.py"):
     os.rename("__init__.py","backup__init__.py")
     
 s="\n".join(file_lines)
-print s
+print(s)
 
 with open("__init__.py","w") as fid:
     fid.write(s)

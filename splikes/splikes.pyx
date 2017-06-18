@@ -1,5 +1,3 @@
-version='0.0.6'
-
 cimport cython
 
 import numpy as np
@@ -74,7 +72,7 @@ def time2str(tm):
 
     return s
 
-
+import sys
 
 from copy import deepcopy
 import pylab
@@ -87,7 +85,47 @@ day=24*hour
 year=365.25*day
 Hz=1.0
 
-cdef class monitor:
+cdef class group:
+
+    def save(self,g):
+        if self.verbose:
+            print(str(type(self)),":",str(self.__getattribute__('name')))
+            sys.stdout.flush()
+
+
+        g.attrs['type']=str(type(self))
+        g.attrs['name']=str(self.__getattribute__('name'))
+
+
+        for attr in self.save_attrs:
+            if self.verbose:
+                print("\t",attr)
+                sys.stdout.flush()
+            g.attrs[attr]=self.__getattribute__(attr)
+
+        for dataname in self.save_data:
+            if self.verbose:
+                print("\t",dataname)
+                sys.stdout.flush()
+            data=self.__getattribute__(dataname)
+
+            if self.verbose:
+                print(data)
+                sys.stdout.flush()
+
+            if data is None:
+                if self.verbose:
+                    print("(skipping)")
+                    sys.stdout.flush()
+                continue
+
+            g.create_dataset(dataname,data=data)
+
+
+
+
+
+cdef class monitor(group):
     
     def __init__(self,container,name,save_interval,start_time=0.0):
         self.name=name
@@ -95,25 +133,44 @@ cdef class monitor:
         self.time_to_next_save=start_time
         self.save_interval=save_interval
         self._reset()
+
+        self.save_attrs=['time_to_next_save','save_interval']
+        self.save_data=['t','values']
+
+    def save(self,g):
+        # to save the values, we need to make them arrays
+        # if we want to continue a simulation, we need them to stay as lists
+        self.t_tmp,self.values_tmp=self.t,self.values
+
+        self.t=np.array(self.t)
+        self.values=np.array(self.values).squeeze()
+
+        group.save(self,g)
+        self.t,self.values=self.t_tmp,self.values_tmp
+
     def _reset(self):
-        self.saved_results={'t':[],self.name:[]}
+        self.t=[]
+        self.values=[]
         
     cpdef update(self,double t):
         if t<=self.time_to_next_save:
             return
-        self.saved_results['t'].append(t)
+        self.t.append(t)
         variable=self.container.__getattribute__(self.name)
-        self.saved_results[self.name].append(deepcopy(variable))
+        self.values.append(deepcopy(variable))
         self.time_to_next_save+=self.save_interval
+
+
+
 
     def arrays(self):
         return self.time_array(),self.array()
         
     def array(self):
-        return np.array(self.saved_results[self.name]).squeeze()
+        return np.array(self.values).squeeze()
         
     def time_array(self):
-        return np.array(self.saved_results['t'])
+        return np.array(self.t)
         
     def plot(self,*args,**kwargs):
         import matplotlib.pyplot as plt 
@@ -145,7 +202,7 @@ cdef class monitor:
         pylab.ylabel(self.name)
 
 
-cdef class simulation:
+cdef class simulation(group):
     
     def __init__(self,total_time,dt=0.00025,start_time=0.0):
         self.dt=dt
@@ -156,8 +213,12 @@ cdef class simulation:
         self.seed=-1
         self.monitors={}
         self.filters=[]  # functions for processing
-        
-        
+        self.save_attrs=['seed','total_time','dt','time_to_next_save','time_to_next_filter',
+                    'verbose',]
+        self.save_data=[]
+        self.verbose=False
+        self.name='simulation'
+
     cpdef _reset(self):
         if self.seed<0:
             init_by_entropy()
@@ -192,7 +253,7 @@ cdef class simulation:
         self.time_to_next_save=min([self.monitors[name].time_to_next_save for name in self.monitors])
         
         
-cdef class neuron:
+cdef class neuron(group):
     
     def __init__(self,N):
         self.N=N
@@ -207,6 +268,12 @@ cdef class neuron:
         self.connections_post=[]
         self.name=None
     
+        self.save_attrs=['num_pre','num_post','N','verbose',
+                            'save_spikes_begin','save_spikes_end','post_count']
+        self.save_data=['spiking','last_spike_time','rate','saved_spikes']
+
+
+
     cpdef _reset(self):
         self.spiking=np.zeros(self.N,dtype=np.int32)            
         self.last_spike_time=-np.ones(self.N,dtype=np.float)    
@@ -239,7 +306,7 @@ cdef class neuron:
 
 
         
-cdef class connection:
+cdef class connection(group):
     
     cpdef _reset(self):
         if self.reset_to_initial:
@@ -254,6 +321,9 @@ cdef class connection:
         if self.use_state:
             self.state=self.post.__getattribute__(self.state_variable)
     
+
+
+
     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):
         cdef np.ndarray arr
     
@@ -265,19 +335,23 @@ cdef class connection:
         self.post=post
         self.post.connections_pre.append(self)
         self.pre.connections_post.append(self)
-        self.w_max=3000
-        self.w_min=0.0
+        self.w_max=1e500
+        self.w_min=-1e500
         self.spike_scale=1.0
         self.reset_to_initial=False
         self.name=None
         
         if state is None:
             self.use_state=False
-            self.state_variable=''
+            self.state_variable=None
         else:
             self.use_state=True
             self.state_variable=state
             
+        self.save_attrs=['verbose','reset_to_initial','w_min','w_max',
+                    'spike_scale','use_state']
+        self.save_data=['initial_weight_range','initial_weights','weights','state_variable']
+
         self._reset()
     
     cpdef apply_weight_limits(self):
@@ -301,6 +375,7 @@ cdef class connection:
     cpdef update(self,double t,simulation sim):
         pass
     
+
 
 def run_sim(simulation sim,object neurons,object connections,
                     int display_hash=False,int print_time=True,
@@ -373,6 +448,6 @@ def run_sim(simulation sim,object neurons,object connections,
             next_hash+=hash_step
 
     if print_time:
-        print "Time Elapsed...",time2str(time.time()-t1)
+        print("Time Elapsed...",time2str(time.time()-t1))
         
  
