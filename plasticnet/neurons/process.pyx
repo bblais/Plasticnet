@@ -8,6 +8,28 @@ import pylab
 import numpy as np
 cimport numpy as np
 
+
+cdef class zero_fraction(post_process_neuron):
+
+    cdef public fraction
+    def __init__(self,double fraction=0.0):
+        self.fraction=fraction
+        post_process_neuron.__init__(self)
+        self._reset()
+
+        self.save_attrs+=['fraction']
+
+    @cython.cdivision(True)
+    @cython.boundscheck(False) # turn of bounds-checking for entire function
+    cpdef update(self,double t,simulation sim):
+        cdef int i
+        cdef double *z=<double *>self.n.output.data
+        
+        for i in range(self.n.N):
+            if randu()<=self.fraction:
+                z[i]=0.0
+
+
 cdef class add_noise_normal(post_process_neuron):
     cdef public double mean,std
 

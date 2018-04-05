@@ -296,6 +296,11 @@ def plot_rfs_and_theta(sim,neurons,connections):
         for c,ch in enumerate(neurons):   
             try:
                 rf_size=ch.rf_size
+                if rf_size<0:
+                    rf_size=pl.sqrt(ch.N)
+                    assert rf_size==int(rf_size)
+                    rf_size=int(rf_size)
+
             except AttributeError:
                 rf_size=pl.sqrt(ch.N)
                 assert rf_size==int(rf_size)

@@ -660,7 +660,7 @@ static const char *__pyx_f[] = {
   "plasticnet/plasticnet.pxd",
 };
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":725
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":725
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -669,7 +669,7 @@ static const char *__pyx_f[] = {
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":726
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":726
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -678,7 +678,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":727
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":727
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -687,7 +687,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":728
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":728
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -696,7 +696,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":732
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":732
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -705,7 +705,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":733
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":733
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -714,7 +714,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":734
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":734
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -723,7 +723,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":735
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":735
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -732,7 +732,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":739
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":739
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -741,7 +741,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":740
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":740
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -750,7 +750,7 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":749
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":749
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
@@ -759,7 +759,7 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":750
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":750
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t             # <<<<<<<<<<<<<<
@@ -768,7 +768,7 @@ typedef npy_long __pyx_t_5numpy_int_t;
  */
 typedef npy_longlong __pyx_t_5numpy_long_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":751
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":751
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -777,7 +777,7 @@ typedef npy_longlong __pyx_t_5numpy_long_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":753
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":753
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
@@ -786,7 +786,7 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":754
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":754
  * 
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t             # <<<<<<<<<<<<<<
@@ -795,7 +795,7 @@ typedef npy_ulong __pyx_t_5numpy_uint_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":755
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":755
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -804,7 +804,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":757
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":757
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -813,7 +813,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":758
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":758
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -822,7 +822,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":760
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":760
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -831,7 +831,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":761
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":761
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -840,7 +840,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":762
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":762
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -883,6 +883,7 @@ struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel;
 struct __pyx_obj_10plasticnet_10plasticnet_channel;
 struct __pyx_obj_10plasticnet_10plasticnet_connection;
 struct __pyx_obj_10plasticnet_10plasticnet_post_process_connection;
+struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction;
 struct __pyx_obj_10plasticnet_7neurons_7process_add_noise_normal;
 struct __pyx_obj_10plasticnet_7neurons_7process_add_noise_multiplicative;
 struct __pyx_obj_10plasticnet_7neurons_7process_add_noise_uniform;
@@ -893,7 +894,7 @@ struct __pyx_obj_10plasticnet_7neurons_7process_scale_shift;
 struct __pyx_obj_10plasticnet_7neurons_7process_sigmoid;
 struct __pyx_obj_10plasticnet_7neurons_7process_log_transform;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":764
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":764
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -902,7 +903,7 @@ struct __pyx_obj_10plasticnet_7neurons_7process_log_transform;
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":765
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":765
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -911,7 +912,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":766
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":766
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -920,7 +921,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":768
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":768
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -1086,8 +1087,21 @@ struct __pyx_obj_10plasticnet_10plasticnet_post_process_connection {
 };
 
 
-/* "plasticnet/neurons/process.pyx":11
- * cimport numpy as np
+/* "plasticnet/neurons/process.pyx":12
+ * 
+ * 
+ * cdef class zero_fraction(post_process_neuron):             # <<<<<<<<<<<<<<
+ * 
+ *     cdef public fraction
+ */
+struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction {
+  struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron __pyx_base;
+  PyObject *fraction;
+};
+
+
+/* "plasticnet/neurons/process.pyx":33
+ * 
  * 
  * cdef class add_noise_normal(post_process_neuron):             # <<<<<<<<<<<<<<
  *     cdef public double mean,std
@@ -1100,7 +1114,7 @@ struct __pyx_obj_10plasticnet_7neurons_7process_add_noise_normal {
 };
 
 
-/* "plasticnet/neurons/process.pyx":33
+/* "plasticnet/neurons/process.pyx":55
  * 
  * 
  * cdef class add_noise_multiplicative(post_process_neuron):             # <<<<<<<<<<<<<<
@@ -1113,7 +1127,7 @@ struct __pyx_obj_10plasticnet_7neurons_7process_add_noise_multiplicative {
 };
 
 
-/* "plasticnet/neurons/process.pyx":60
+/* "plasticnet/neurons/process.pyx":82
  * 
  * 
  * cdef class add_noise_uniform(post_process_neuron):             # <<<<<<<<<<<<<<
@@ -1127,7 +1141,7 @@ struct __pyx_obj_10plasticnet_7neurons_7process_add_noise_uniform {
 };
 
 
-/* "plasticnet/neurons/process.pyx":79
+/* "plasticnet/neurons/process.pyx":101
  *             z[i]=z[i]+(randu()-0.5)*2.0*1.732050807569*self.std+self.mean
  * 
  * cdef class relative_to_spontaneous(post_process_neuron):             # <<<<<<<<<<<<<<
@@ -1140,7 +1154,7 @@ struct __pyx_obj_10plasticnet_7neurons_7process_relative_to_spontaneous {
 };
 
 
-/* "plasticnet/neurons/process.pyx":103
+/* "plasticnet/neurons/process.pyx":125
  * ## if it occurs after the non-linearity, then it might be weird
  * 
  * cdef class subtract_beta(post_process_neuron):             # <<<<<<<<<<<<<<
@@ -1156,7 +1170,7 @@ struct __pyx_obj_10plasticnet_7neurons_7process_subtract_beta {
 };
 
 
-/* "plasticnet/neurons/process.pyx":134
+/* "plasticnet/neurons/process.pyx":156
  * 
  * 
  * cdef class min_max(post_process_neuron):             # <<<<<<<<<<<<<<
@@ -1170,7 +1184,7 @@ struct __pyx_obj_10plasticnet_7neurons_7process_min_max {
 };
 
 
-/* "plasticnet/neurons/process.pyx":157
+/* "plasticnet/neurons/process.pyx":179
  *                 pass
  * 
  * cdef class scale_shift(post_process_neuron):             # <<<<<<<<<<<<<<
@@ -1184,7 +1198,7 @@ struct __pyx_obj_10plasticnet_7neurons_7process_scale_shift {
 };
 
 
-/* "plasticnet/neurons/process.pyx":176
+/* "plasticnet/neurons/process.pyx":198
  * 
  * 
  * cdef class sigmoid(post_process_neuron):             # <<<<<<<<<<<<<<
@@ -1198,7 +1212,7 @@ struct __pyx_obj_10plasticnet_7neurons_7process_sigmoid {
 };
 
 
-/* "plasticnet/neurons/process.pyx":199
+/* "plasticnet/neurons/process.pyx":221
  * from libc.math cimport log
  * 
  * cdef class log_transform(post_process_neuron):             # <<<<<<<<<<<<<<
@@ -1330,8 +1344,22 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_connection {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_connection *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_connection;
 
 
-/* "plasticnet/neurons/process.pyx":11
- * cimport numpy as np
+/* "plasticnet/neurons/process.pyx":12
+ * 
+ * 
+ * cdef class zero_fraction(post_process_neuron):             # <<<<<<<<<<<<<<
+ * 
+ *     cdef public fraction
+ */
+
+struct __pyx_vtabstruct_10plasticnet_7neurons_7process_zero_fraction {
+  struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron __pyx_base;
+};
+static struct __pyx_vtabstruct_10plasticnet_7neurons_7process_zero_fraction *__pyx_vtabptr_10plasticnet_7neurons_7process_zero_fraction;
+
+
+/* "plasticnet/neurons/process.pyx":33
+ * 
  * 
  * cdef class add_noise_normal(post_process_neuron):             # <<<<<<<<<<<<<<
  *     cdef public double mean,std
@@ -1344,7 +1372,7 @@ struct __pyx_vtabstruct_10plasticnet_7neurons_7process_add_noise_normal {
 static struct __pyx_vtabstruct_10plasticnet_7neurons_7process_add_noise_normal *__pyx_vtabptr_10plasticnet_7neurons_7process_add_noise_normal;
 
 
-/* "plasticnet/neurons/process.pyx":33
+/* "plasticnet/neurons/process.pyx":55
  * 
  * 
  * cdef class add_noise_multiplicative(post_process_neuron):             # <<<<<<<<<<<<<<
@@ -1358,7 +1386,7 @@ struct __pyx_vtabstruct_10plasticnet_7neurons_7process_add_noise_multiplicative 
 static struct __pyx_vtabstruct_10plasticnet_7neurons_7process_add_noise_multiplicative *__pyx_vtabptr_10plasticnet_7neurons_7process_add_noise_multiplicative;
 
 
-/* "plasticnet/neurons/process.pyx":60
+/* "plasticnet/neurons/process.pyx":82
  * 
  * 
  * cdef class add_noise_uniform(post_process_neuron):             # <<<<<<<<<<<<<<
@@ -1372,7 +1400,7 @@ struct __pyx_vtabstruct_10plasticnet_7neurons_7process_add_noise_uniform {
 static struct __pyx_vtabstruct_10plasticnet_7neurons_7process_add_noise_uniform *__pyx_vtabptr_10plasticnet_7neurons_7process_add_noise_uniform;
 
 
-/* "plasticnet/neurons/process.pyx":79
+/* "plasticnet/neurons/process.pyx":101
  *             z[i]=z[i]+(randu()-0.5)*2.0*1.732050807569*self.std+self.mean
  * 
  * cdef class relative_to_spontaneous(post_process_neuron):             # <<<<<<<<<<<<<<
@@ -1386,7 +1414,7 @@ struct __pyx_vtabstruct_10plasticnet_7neurons_7process_relative_to_spontaneous {
 static struct __pyx_vtabstruct_10plasticnet_7neurons_7process_relative_to_spontaneous *__pyx_vtabptr_10plasticnet_7neurons_7process_relative_to_spontaneous;
 
 
-/* "plasticnet/neurons/process.pyx":103
+/* "plasticnet/neurons/process.pyx":125
  * ## if it occurs after the non-linearity, then it might be weird
  * 
  * cdef class subtract_beta(post_process_neuron):             # <<<<<<<<<<<<<<
@@ -1400,7 +1428,7 @@ struct __pyx_vtabstruct_10plasticnet_7neurons_7process_subtract_beta {
 static struct __pyx_vtabstruct_10plasticnet_7neurons_7process_subtract_beta *__pyx_vtabptr_10plasticnet_7neurons_7process_subtract_beta;
 
 
-/* "plasticnet/neurons/process.pyx":134
+/* "plasticnet/neurons/process.pyx":156
  * 
  * 
  * cdef class min_max(post_process_neuron):             # <<<<<<<<<<<<<<
@@ -1414,7 +1442,7 @@ struct __pyx_vtabstruct_10plasticnet_7neurons_7process_min_max {
 static struct __pyx_vtabstruct_10plasticnet_7neurons_7process_min_max *__pyx_vtabptr_10plasticnet_7neurons_7process_min_max;
 
 
-/* "plasticnet/neurons/process.pyx":157
+/* "plasticnet/neurons/process.pyx":179
  *                 pass
  * 
  * cdef class scale_shift(post_process_neuron):             # <<<<<<<<<<<<<<
@@ -1428,7 +1456,7 @@ struct __pyx_vtabstruct_10plasticnet_7neurons_7process_scale_shift {
 static struct __pyx_vtabstruct_10plasticnet_7neurons_7process_scale_shift *__pyx_vtabptr_10plasticnet_7neurons_7process_scale_shift;
 
 
-/* "plasticnet/neurons/process.pyx":176
+/* "plasticnet/neurons/process.pyx":198
  * 
  * 
  * cdef class sigmoid(post_process_neuron):             # <<<<<<<<<<<<<<
@@ -1442,7 +1470,7 @@ struct __pyx_vtabstruct_10plasticnet_7neurons_7process_sigmoid {
 static struct __pyx_vtabstruct_10plasticnet_7neurons_7process_sigmoid *__pyx_vtabptr_10plasticnet_7neurons_7process_sigmoid;
 
 
-/* "plasticnet/neurons/process.pyx":199
+/* "plasticnet/neurons/process.pyx":221
  * from libc.math cimport log
  * 
  * cdef class log_transform(post_process_neuron):             # <<<<<<<<<<<<<<
@@ -1858,6 +1886,7 @@ static int __Pyx_ImportFunction(PyObject *module, const char *funcname, void (**
 /* InitStrings.proto */
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
+static PyObject *__pyx_f_10plasticnet_7neurons_7process_13zero_fraction_update(struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, CYTHON_UNUSED struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim, int __pyx_skip_dispatch); /* proto*/
 static PyObject *__pyx_f_10plasticnet_7neurons_7process_16add_noise_normal_update(struct __pyx_obj_10plasticnet_7neurons_7process_add_noise_normal *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, CYTHON_UNUSED struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim, int __pyx_skip_dispatch); /* proto*/
 static PyObject *__pyx_f_10plasticnet_7neurons_7process_24add_noise_multiplicative_update(struct __pyx_obj_10plasticnet_7neurons_7process_add_noise_multiplicative *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, CYTHON_UNUSED struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim, int __pyx_skip_dispatch); /* proto*/
 static PyObject *__pyx_f_10plasticnet_7neurons_7process_17add_noise_uniform_update(struct __pyx_obj_10plasticnet_7neurons_7process_add_noise_uniform *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, CYTHON_UNUSED struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim, int __pyx_skip_dispatch); /* proto*/
@@ -1916,6 +1945,7 @@ static double (*__pyx_f_10plasticnet_10plasticnet_randn)(void); /*proto*/
 /* Module declarations from 'libc.math' */
 
 /* Module declarations from 'plasticnet.neurons.process' */
+static PyTypeObject *__pyx_ptype_10plasticnet_7neurons_7process_zero_fraction = 0;
 static PyTypeObject *__pyx_ptype_10plasticnet_7neurons_7process_add_noise_normal = 0;
 static PyTypeObject *__pyx_ptype_10plasticnet_7neurons_7process_add_noise_multiplicative = 0;
 static PyTypeObject *__pyx_ptype_10plasticnet_7neurons_7process_add_noise_uniform = 0;
@@ -1958,6 +1988,7 @@ static const char __pyx_k_zeros[] = "zeros";
 static const char __pyx_k_bottom[] = "bottom";
 static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_update[] = "update";
+static const char __pyx_k_fraction[] = "fraction";
 static const char __pyx_k_ValueError[] = "ValueError";
 static const char __pyx_k_pyx_vtable[] = "__pyx_vtable__";
 static const char __pyx_k_ImportError[] = "ImportError";
@@ -1983,6 +2014,7 @@ static PyObject *__pyx_n_s_beta;
 static PyObject *__pyx_n_s_bottom;
 static PyObject *__pyx_n_s_dtype;
 static PyObject *__pyx_n_s_float;
+static PyObject *__pyx_n_s_fraction;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_init;
 static PyObject *__pyx_n_s_main;
@@ -2011,6 +2043,11 @@ static PyObject *__pyx_kp_u_unknown_dtype_code_in_numpy_pxd;
 static PyObject *__pyx_n_s_update;
 static PyObject *__pyx_n_s_y0;
 static PyObject *__pyx_n_s_zeros;
+static int __pyx_pf_10plasticnet_7neurons_7process_13zero_fraction___init__(struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *__pyx_v_self, double __pyx_v_fraction); /* proto */
+static PyObject *__pyx_pf_10plasticnet_7neurons_7process_13zero_fraction_2update(struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim); /* proto */
+static PyObject *__pyx_pf_10plasticnet_7neurons_7process_13zero_fraction_8fraction___get__(struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *__pyx_v_self); /* proto */
+static int __pyx_pf_10plasticnet_7neurons_7process_13zero_fraction_8fraction_2__set__(struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static int __pyx_pf_10plasticnet_7neurons_7process_13zero_fraction_8fraction_4__del__(struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *__pyx_v_self); /* proto */
 static int __pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal___init__(struct __pyx_obj_10plasticnet_7neurons_7process_add_noise_normal *__pyx_v_self, double __pyx_v_mean, PyObject *__pyx_v_std); /* proto */
 static PyObject *__pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal_2update(struct __pyx_obj_10plasticnet_7neurons_7process_add_noise_normal *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim); /* proto */
 static PyObject *__pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal_4mean___get__(struct __pyx_obj_10plasticnet_7neurons_7process_add_noise_normal *__pyx_v_self); /* proto */
@@ -2070,6 +2107,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_13log_transform_5shift_
 static int __pyx_pf_10plasticnet_7neurons_7process_13log_transform_5shift_2__set__(struct __pyx_obj_10plasticnet_7neurons_7process_log_transform *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
+static PyObject *__pyx_tp_new_10plasticnet_7neurons_7process_zero_fraction(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_10plasticnet_7neurons_7process_add_noise_normal(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_10plasticnet_7neurons_7process_add_noise_multiplicative(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_10plasticnet_7neurons_7process_add_noise_uniform(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
@@ -2090,7 +2128,556 @@ static PyObject *__pyx_tuple__7;
 static PyObject *__pyx_tuple__8;
 static PyObject *__pyx_tuple__9;
 
+/* "plasticnet/neurons/process.pyx":15
+ * 
+ *     cdef public fraction
+ *     def __init__(self,double fraction=0.0):             # <<<<<<<<<<<<<<
+ *         self.fraction=fraction
+ *         post_process_neuron.__init__(self)
+ */
+
+/* Python wrapper */
+static int __pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  double __pyx_v_fraction;
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__init__ (wrapper)", 0);
+  {
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_fraction,0};
+    PyObject* values[1] = {0};
+    if (unlikely(__pyx_kwds)) {
+      Py_ssize_t kw_args;
+      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
+      switch (pos_args) {
+        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = PyDict_Size(__pyx_kwds);
+      switch (pos_args) {
+        case  0:
+        if (kw_args > 0) {
+          PyObject* value = PyDict_GetItem(__pyx_kwds, __pyx_n_s_fraction);
+          if (value) { values[0] = value; kw_args--; }
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 15, __pyx_L3_error)
+      }
+    } else {
+      switch (PyTuple_GET_SIZE(__pyx_args)) {
+        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+    }
+    if (values[0]) {
+      __pyx_v_fraction = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_fraction == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 15, __pyx_L3_error)
+    } else {
+      __pyx_v_fraction = ((double)0.0);
+    }
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 15, __pyx_L3_error)
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("plasticnet.neurons.process.zero_fraction.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return -1;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_10plasticnet_7neurons_7process_13zero_fraction___init__(((struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *)__pyx_v_self), __pyx_v_fraction);
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_7neurons_7process_13zero_fraction___init__(struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *__pyx_v_self, double __pyx_v_fraction) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  __Pyx_RefNannySetupContext("__init__", 0);
+
+  /* "plasticnet/neurons/process.pyx":16
+ *     cdef public fraction
+ *     def __init__(self,double fraction=0.0):
+ *         self.fraction=fraction             # <<<<<<<<<<<<<<
+ *         post_process_neuron.__init__(self)
+ *         self._reset()
+ */
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_fraction); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_1);
+  __Pyx_GOTREF(__pyx_v_self->fraction);
+  __Pyx_DECREF(__pyx_v_self->fraction);
+  __pyx_v_self->fraction = __pyx_t_1;
+  __pyx_t_1 = 0;
+
+  /* "plasticnet/neurons/process.pyx":17
+ *     def __init__(self,double fraction=0.0):
+ *         self.fraction=fraction
+ *         post_process_neuron.__init__(self)             # <<<<<<<<<<<<<<
+ *         self._reset()
+ * 
+ */
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_3)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+    }
+  }
+  if (!__pyx_t_3) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 17, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+  } else {
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_2)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_3, ((PyObject *)__pyx_v_self)};
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 17, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_3, ((PyObject *)__pyx_v_self)};
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 17, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+    } else
+    #endif
+    {
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 17, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __pyx_t_3 = NULL;
+      __Pyx_INCREF(((PyObject *)__pyx_v_self));
+      __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
+      PyTuple_SET_ITEM(__pyx_t_4, 0+1, ((PyObject *)__pyx_v_self));
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 17, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    }
+  }
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "plasticnet/neurons/process.pyx":18
+ *         self.fraction=fraction
+ *         post_process_neuron.__init__(self)
+ *         self._reset()             # <<<<<<<<<<<<<<
+ * 
+ *         self.save_attrs+=['fraction']
+ */
+  __pyx_t_1 = ((struct __pyx_vtabstruct_10plasticnet_7neurons_7process_zero_fraction *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "plasticnet/neurons/process.pyx":20
+ *         self._reset()
+ * 
+ *         self.save_attrs+=['fraction']             # <<<<<<<<<<<<<<
+ * 
+ *     @cython.cdivision(True)
+ */
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_INCREF(__pyx_n_s_fraction);
+  __Pyx_GIVEREF(__pyx_n_s_fraction);
+  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_fraction);
+  __pyx_t_2 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __Pyx_GIVEREF(__pyx_t_2);
+  __Pyx_GOTREF(__pyx_v_self->__pyx_base.__pyx_base.save_attrs);
+  __Pyx_DECREF(__pyx_v_self->__pyx_base.__pyx_base.save_attrs);
+  __pyx_v_self->__pyx_base.__pyx_base.save_attrs = __pyx_t_2;
+  __pyx_t_2 = 0;
+
+  /* "plasticnet/neurons/process.pyx":15
+ * 
+ *     cdef public fraction
+ *     def __init__(self,double fraction=0.0):             # <<<<<<<<<<<<<<
+ *         self.fraction=fraction
+ *         post_process_neuron.__init__(self)
+ */
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_AddTraceback("plasticnet.neurons.process.zero_fraction.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "plasticnet/neurons/process.pyx":24
+ *     @cython.cdivision(True)
+ *     @cython.boundscheck(False) # turn of bounds-checking for entire function
+ *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
+ *         cdef int i
+ *         cdef double *z=<double *>self.n.output.data
+ */
+
+static PyObject *__pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_3update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_10plasticnet_7neurons_7process_13zero_fraction_update(struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *__pyx_v_self, CYTHON_UNUSED double __pyx_v_t, CYTHON_UNUSED struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim, int __pyx_skip_dispatch) {
+  int __pyx_v_i;
+  double *__pyx_v_z;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  PyObject *__pyx_t_5 = NULL;
+  int __pyx_t_6;
+  PyObject *__pyx_t_7 = NULL;
+  int __pyx_t_8;
+  int __pyx_t_9;
+  __Pyx_RefNannySetupContext("update", 0);
+  /* Check if called by wrapper */
+  if (unlikely(__pyx_skip_dispatch)) ;
+  /* Check if overridden in Python */
+  else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_3update)) {
+      __Pyx_XDECREF(__pyx_r);
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 24, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_1);
+      __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
+      __pyx_t_6 = 0;
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
+        __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
+        if (likely(__pyx_t_5)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+          __Pyx_INCREF(__pyx_t_5);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_4, function);
+          __pyx_t_6 = 1;
+        }
+      }
+      #if CYTHON_FAST_PYCALL
+      if (PyFunction_Check(__pyx_t_4)) {
+        PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 24, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      } else
+      #endif
+      #if CYTHON_FAST_PYCCALL
+      if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
+        PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 24, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      } else
+      #endif
+      {
+        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 24, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_7);
+        if (__pyx_t_5) {
+          __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
+        }
+        __Pyx_GIVEREF(__pyx_t_3);
+        PyTuple_SET_ITEM(__pyx_t_7, 0+__pyx_t_6, __pyx_t_3);
+        __Pyx_INCREF(((PyObject *)__pyx_v_sim));
+        __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
+        PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
+        __pyx_t_3 = 0;
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 24, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      }
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __pyx_r = __pyx_t_2;
+      __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      goto __pyx_L0;
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  }
+
+  /* "plasticnet/neurons/process.pyx":26
+ *     cpdef update(self,double t,simulation sim):
+ *         cdef int i
+ *         cdef double *z=<double *>self.n.output.data             # <<<<<<<<<<<<<<
+ * 
+ *         for i in range(self.n.N):
+ */
+  __pyx_v_z = ((double *)__pyx_v_self->__pyx_base.n->output->data);
+
+  /* "plasticnet/neurons/process.pyx":28
+ *         cdef double *z=<double *>self.n.output.data
+ * 
+ *         for i in range(self.n.N):             # <<<<<<<<<<<<<<
+ *             if randu()<=self.fraction:
+ *                 z[i]=0.0
+ */
+  __pyx_t_6 = __pyx_v_self->__pyx_base.n->N;
+  for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_6; __pyx_t_8+=1) {
+    __pyx_v_i = __pyx_t_8;
+
+    /* "plasticnet/neurons/process.pyx":29
+ * 
+ *         for i in range(self.n.N):
+ *             if randu()<=self.fraction:             # <<<<<<<<<<<<<<
+ *                 z[i]=0.0
+ * 
+ */
+    __pyx_t_1 = PyFloat_FromDouble(__pyx_f_10plasticnet_10plasticnet_randu()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 29, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, __pyx_v_self->fraction, Py_LE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 29, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 29, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (__pyx_t_9) {
+
+      /* "plasticnet/neurons/process.pyx":30
+ *         for i in range(self.n.N):
+ *             if randu()<=self.fraction:
+ *                 z[i]=0.0             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+      (__pyx_v_z[__pyx_v_i]) = 0.0;
+
+      /* "plasticnet/neurons/process.pyx":29
+ * 
+ *         for i in range(self.n.N):
+ *             if randu()<=self.fraction:             # <<<<<<<<<<<<<<
+ *                 z[i]=0.0
+ * 
+ */
+    }
+  }
+
+  /* "plasticnet/neurons/process.pyx":24
+ *     @cython.cdivision(True)
+ *     @cython.boundscheck(False) # turn of bounds-checking for entire function
+ *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
+ *         cdef int i
+ *         cdef double *z=<double *>self.n.output.data
+ */
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_7);
+  __Pyx_AddTraceback("plasticnet.neurons.process.zero_fraction.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_3update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_3update(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  double __pyx_v_t;
+  struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("update (wrapper)", 0);
+  {
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_t,&__pyx_n_s_sim,0};
+    PyObject* values[2] = {0,0};
+    if (unlikely(__pyx_kwds)) {
+      Py_ssize_t kw_args;
+      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
+      switch (pos_args) {
+        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = PyDict_Size(__pyx_kwds);
+      switch (pos_args) {
+        case  0:
+        if (likely((values[0] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_t)) != 0)) kw_args--;
+        else goto __pyx_L5_argtuple_error;
+        case  1:
+        if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 24, __pyx_L3_error)
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 24, __pyx_L3_error)
+      }
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+      values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+    }
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 24, __pyx_L3_error)
+    __pyx_v_sim = ((struct __pyx_obj_10plasticnet_10plasticnet_simulation *)values[1]);
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 24, __pyx_L3_error)
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("plasticnet.neurons.process.zero_fraction.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_r = __pyx_pf_10plasticnet_7neurons_7process_13zero_fraction_2update(((struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
+
+  /* function exit code */
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10plasticnet_7neurons_7process_13zero_fraction_2update(struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *__pyx_v_self, double __pyx_v_t, struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  __Pyx_RefNannySetupContext("update", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_13zero_fraction_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("plasticnet.neurons.process.zero_fraction.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
 /* "plasticnet/neurons/process.pyx":14
+ * cdef class zero_fraction(post_process_neuron):
+ * 
+ *     cdef public fraction             # <<<<<<<<<<<<<<
+ *     def __init__(self,double fraction=0.0):
+ *         self.fraction=fraction
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_8fraction_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_8fraction_1__get__(PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_7neurons_7process_13zero_fraction_8fraction___get__(((struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10plasticnet_7neurons_7process_13zero_fraction_8fraction___get__(struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __Pyx_INCREF(__pyx_v_self->fraction);
+  __pyx_r = __pyx_v_self->fraction;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_8fraction_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_8fraction_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_7neurons_7process_13zero_fraction_8fraction_2__set__(((struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_7neurons_7process_13zero_fraction_8fraction_2__set__(struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__", 0);
+  __Pyx_INCREF(__pyx_v_value);
+  __Pyx_GIVEREF(__pyx_v_value);
+  __Pyx_GOTREF(__pyx_v_self->fraction);
+  __Pyx_DECREF(__pyx_v_self->fraction);
+  __pyx_v_self->fraction = __pyx_v_value;
+
+  /* function exit code */
+  __pyx_r = 0;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_8fraction_5__del__(PyObject *__pyx_v_self); /*proto*/
+static int __pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_8fraction_5__del__(PyObject *__pyx_v_self) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__del__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_7neurons_7process_13zero_fraction_8fraction_4__del__(((struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_10plasticnet_7neurons_7process_13zero_fraction_8fraction_4__del__(struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *__pyx_v_self) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__del__", 0);
+  __Pyx_INCREF(Py_None);
+  __Pyx_GIVEREF(Py_None);
+  __Pyx_GOTREF(__pyx_v_self->fraction);
+  __Pyx_DECREF(__pyx_v_self->fraction);
+  __pyx_v_self->fraction = Py_None;
+
+  /* function exit code */
+  __pyx_r = 0;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "plasticnet/neurons/process.pyx":36
  *     cdef public double mean,std
  * 
  *     def __init__(self,double mean=0.0,std=1.0):             # <<<<<<<<<<<<<<
@@ -2133,7 +2720,7 @@ static int __pyx_pw_10plasticnet_7neurons_7process_16add_noise_normal_1__init__(
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 14, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 36, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -2144,7 +2731,7 @@ static int __pyx_pw_10plasticnet_7neurons_7process_16add_noise_normal_1__init__(
       }
     }
     if (values[0]) {
-      __pyx_v_mean = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_mean == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
+      __pyx_v_mean = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_mean == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L3_error)
     } else {
       __pyx_v_mean = ((double)0.0);
     }
@@ -2152,7 +2739,7 @@ static int __pyx_pw_10plasticnet_7neurons_7process_16add_noise_normal_1__init__(
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 14, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 36, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.add_noise_normal.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -2175,7 +2762,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal___init__(s
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "plasticnet/neurons/process.pyx":15
+  /* "plasticnet/neurons/process.pyx":37
  * 
  *     def __init__(self,double mean=0.0,std=1.0):
  *         self.mean=mean             # <<<<<<<<<<<<<<
@@ -2184,24 +2771,24 @@ static int __pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal___init__(s
  */
   __pyx_v_self->mean = __pyx_v_mean;
 
-  /* "plasticnet/neurons/process.pyx":16
+  /* "plasticnet/neurons/process.pyx":38
  *     def __init__(self,double mean=0.0,std=1.0):
  *         self.mean=mean
  *         self.std=std             # <<<<<<<<<<<<<<
  *         post_process_neuron.__init__(self)
  *         self._reset()
  */
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_std); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_std); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 38, __pyx_L1_error)
   __pyx_v_self->std = __pyx_t_1;
 
-  /* "plasticnet/neurons/process.pyx":17
+  /* "plasticnet/neurons/process.pyx":39
  *         self.mean=mean
  *         self.std=std
  *         post_process_neuron.__init__(self)             # <<<<<<<<<<<<<<
  *         self._reset()
  * 
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -2214,13 +2801,13 @@ static int __pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal___init__(s
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 39, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, ((PyObject *)__pyx_v_self)};
-      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 39, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_2);
     } else
@@ -2228,19 +2815,19 @@ static int __pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal___init__(s
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, ((PyObject *)__pyx_v_self)};
-      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 39, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_2);
     } else
     #endif
     {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 17, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 39, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_self));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, ((PyObject *)__pyx_v_self));
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 39, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
@@ -2248,25 +2835,25 @@ static int __pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal___init__(s
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "plasticnet/neurons/process.pyx":18
+  /* "plasticnet/neurons/process.pyx":40
  *         self.std=std
  *         post_process_neuron.__init__(self)
  *         self._reset()             # <<<<<<<<<<<<<<
  * 
  *         self.save_attrs+=['mean','std']
  */
-  __pyx_t_2 = ((struct __pyx_vtabstruct_10plasticnet_7neurons_7process_add_noise_normal *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *)__pyx_v_self), 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_10plasticnet_7neurons_7process_add_noise_normal *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *)__pyx_v_self), 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "plasticnet/neurons/process.pyx":20
+  /* "plasticnet/neurons/process.pyx":42
  *         self._reset()
  * 
  *         self.save_attrs+=['mean','std']             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_mean);
   __Pyx_GIVEREF(__pyx_n_s_mean);
@@ -2274,7 +2861,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal___init__(s
   __Pyx_INCREF(__pyx_n_s_std);
   __Pyx_GIVEREF(__pyx_n_s_std);
   PyList_SET_ITEM(__pyx_t_2, 1, __pyx_n_s_std);
-  __pyx_t_3 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_GIVEREF(__pyx_t_3);
@@ -2283,7 +2870,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal___init__(s
   __pyx_v_self->__pyx_base.__pyx_base.save_attrs = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "plasticnet/neurons/process.pyx":14
+  /* "plasticnet/neurons/process.pyx":36
  *     cdef public double mean,std
  * 
  *     def __init__(self,double mean=0.0,std=1.0):             # <<<<<<<<<<<<<<
@@ -2306,7 +2893,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal___init__(s
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":25
+/* "plasticnet/neurons/process.pyx":47
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -2333,11 +2920,11 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_16add_noise_normal_updat
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 47, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_7neurons_7process_16add_noise_normal_3update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 25, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 47, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -2355,7 +2942,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_16add_noise_normal_updat
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 25, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 47, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -2364,14 +2951,14 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_16add_noise_normal_updat
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 25, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 47, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else
       #endif
       {
-        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 25, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 47, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         if (__pyx_t_5) {
           __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -2382,7 +2969,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_16add_noise_normal_updat
         __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
         PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
         __pyx_t_3 = 0;
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 25, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 47, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
@@ -2395,7 +2982,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_16add_noise_normal_updat
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "plasticnet/neurons/process.pyx":27
+  /* "plasticnet/neurons/process.pyx":49
  *     cpdef update(self,double t,simulation sim):
  *         cdef int i
  *         cdef double *z=<double *>self.n.output.data             # <<<<<<<<<<<<<<
@@ -2404,7 +2991,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_16add_noise_normal_updat
  */
   __pyx_v_z = ((double *)__pyx_v_self->__pyx_base.n->output->data);
 
-  /* "plasticnet/neurons/process.pyx":29
+  /* "plasticnet/neurons/process.pyx":51
  *         cdef double *z=<double *>self.n.output.data
  * 
  *         for i in range(self.n.N):             # <<<<<<<<<<<<<<
@@ -2415,7 +3002,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_16add_noise_normal_updat
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_6; __pyx_t_8+=1) {
     __pyx_v_i = __pyx_t_8;
 
-    /* "plasticnet/neurons/process.pyx":30
+    /* "plasticnet/neurons/process.pyx":52
  * 
  *         for i in range(self.n.N):
  *             z[i]=z[i]+self.std*randn()+self.mean             # <<<<<<<<<<<<<<
@@ -2425,7 +3012,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_16add_noise_normal_updat
     (__pyx_v_z[__pyx_v_i]) = (((__pyx_v_z[__pyx_v_i]) + (__pyx_v_self->std * __pyx_f_10plasticnet_10plasticnet_randn())) + __pyx_v_self->mean);
   }
 
-  /* "plasticnet/neurons/process.pyx":25
+  /* "plasticnet/neurons/process.pyx":47
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -2479,11 +3066,11 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_16add_noise_normal_3upd
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 25, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 47, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 25, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 47, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -2491,18 +3078,18 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_16add_noise_normal_3upd
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 25, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L3_error)
     __pyx_v_sim = ((struct __pyx_obj_10plasticnet_10plasticnet_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 25, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 47, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.add_noise_normal.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 25, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 47, __pyx_L1_error)
   __pyx_r = __pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal_2update(((struct __pyx_obj_10plasticnet_7neurons_7process_add_noise_normal *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -2520,7 +3107,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal_2upd
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_16add_noise_normal_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_16add_noise_normal_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 47, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2537,7 +3124,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal_2upd
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":12
+/* "plasticnet/neurons/process.pyx":34
  * 
  * cdef class add_noise_normal(post_process_neuron):
  *     cdef public double mean,std             # <<<<<<<<<<<<<<
@@ -2564,7 +3151,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal_4mea
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->mean); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->mean); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2599,7 +3186,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal_4mean_2__s
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 34, __pyx_L1_error)
   __pyx_v_self->mean = __pyx_t_1;
 
   /* function exit code */
@@ -2632,7 +3219,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal_3std
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->std); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->std); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2667,7 +3254,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal_3std_2__se
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 34, __pyx_L1_error)
   __pyx_v_self->std = __pyx_t_1;
 
   /* function exit code */
@@ -2681,7 +3268,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_16add_noise_normal_3std_2__se
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":36
+/* "plasticnet/neurons/process.pyx":58
  *     cdef public double std
  * 
  *     def __init__(self,double std=-1,double tau=-1):             # <<<<<<<<<<<<<<
@@ -2723,7 +3310,7 @@ static int __pyx_pw_10plasticnet_7neurons_7process_24add_noise_multiplicative_1_
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 36, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 58, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -2734,19 +3321,19 @@ static int __pyx_pw_10plasticnet_7neurons_7process_24add_noise_multiplicative_1_
       }
     }
     if (values[0]) {
-      __pyx_v_std = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_std == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L3_error)
+      __pyx_v_std = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_std == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 58, __pyx_L3_error)
     } else {
       __pyx_v_std = ((double)-1.0);
     }
     if (values[1]) {
-      __pyx_v_tau = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_tau == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L3_error)
+      __pyx_v_tau = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_tau == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 58, __pyx_L3_error)
     } else {
       __pyx_v_tau = ((double)-1.0);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 36, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 58, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.add_noise_multiplicative.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -2771,7 +3358,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative___
   PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "plasticnet/neurons/process.pyx":37
+  /* "plasticnet/neurons/process.pyx":59
  * 
  *     def __init__(self,double std=-1,double tau=-1):
  *         if std<0 and tau<0:             # <<<<<<<<<<<<<<
@@ -2789,7 +3376,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative___
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "plasticnet/neurons/process.pyx":38
+    /* "plasticnet/neurons/process.pyx":60
  *     def __init__(self,double std=-1,double tau=-1):
  *         if std<0 and tau<0:
  *             self.std=1.0             # <<<<<<<<<<<<<<
@@ -2798,7 +3385,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative___
  */
     __pyx_v_self->std = 1.0;
 
-    /* "plasticnet/neurons/process.pyx":37
+    /* "plasticnet/neurons/process.pyx":59
  * 
  *     def __init__(self,double std=-1,double tau=-1):
  *         if std<0 and tau<0:             # <<<<<<<<<<<<<<
@@ -2808,7 +3395,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative___
     goto __pyx_L3;
   }
 
-  /* "plasticnet/neurons/process.pyx":39
+  /* "plasticnet/neurons/process.pyx":61
  *         if std<0 and tau<0:
  *             self.std=1.0
  *         elif std>=0 and tau<0:             # <<<<<<<<<<<<<<
@@ -2826,7 +3413,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative___
   __pyx_L6_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "plasticnet/neurons/process.pyx":40
+    /* "plasticnet/neurons/process.pyx":62
  *             self.std=1.0
  *         elif std>=0 and tau<0:
  *             self.std=std             # <<<<<<<<<<<<<<
@@ -2835,7 +3422,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative___
  */
     __pyx_v_self->std = __pyx_v_std;
 
-    /* "plasticnet/neurons/process.pyx":39
+    /* "plasticnet/neurons/process.pyx":61
  *         if std<0 and tau<0:
  *             self.std=1.0
  *         elif std>=0 and tau<0:             # <<<<<<<<<<<<<<
@@ -2845,7 +3432,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative___
     goto __pyx_L3;
   }
 
-  /* "plasticnet/neurons/process.pyx":41
+  /* "plasticnet/neurons/process.pyx":63
  *         elif std>=0 and tau<0:
  *             self.std=std
  *         elif std<0 and tau>0:             # <<<<<<<<<<<<<<
@@ -2863,7 +3450,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative___
   __pyx_L8_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "plasticnet/neurons/process.pyx":42
+    /* "plasticnet/neurons/process.pyx":64
  *             self.std=std
  *         elif std<0 and tau>0:
  *             self.std=sqrt(1.0/2.0/tau)             # <<<<<<<<<<<<<<
@@ -2873,11 +3460,11 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative___
     __pyx_t_3 = (1.0 / 2.0);
     if (unlikely(__pyx_v_tau == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 42, __pyx_L1_error)
+      __PYX_ERR(0, 64, __pyx_L1_error)
     }
     __pyx_v_self->std = sqrt((__pyx_t_3 / __pyx_v_tau));
 
-    /* "plasticnet/neurons/process.pyx":41
+    /* "plasticnet/neurons/process.pyx":63
  *         elif std>=0 and tau<0:
  *             self.std=std
  *         elif std<0 and tau>0:             # <<<<<<<<<<<<<<
@@ -2887,7 +3474,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative___
     goto __pyx_L3;
   }
 
-  /* "plasticnet/neurons/process.pyx":44
+  /* "plasticnet/neurons/process.pyx":66
  *             self.std=sqrt(1.0/2.0/tau)
  *         else:
  *             raise ValueError,"std and tau both undefined"             # <<<<<<<<<<<<<<
@@ -2896,18 +3483,18 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative___
  */
   /*else*/ {
     __Pyx_Raise(__pyx_builtin_ValueError, __pyx_kp_s_std_and_tau_both_undefined, 0, 0);
-    __PYX_ERR(0, 44, __pyx_L1_error)
+    __PYX_ERR(0, 66, __pyx_L1_error)
   }
   __pyx_L3:;
 
-  /* "plasticnet/neurons/process.pyx":46
+  /* "plasticnet/neurons/process.pyx":68
  *             raise ValueError,"std and tau both undefined"
  * 
  *         post_process_neuron.__init__(self)             # <<<<<<<<<<<<<<
  *         self._reset()
  *         self.save_attrs+=['std']
  */
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 68, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_6 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
@@ -2920,13 +3507,13 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative___
     }
   }
   if (!__pyx_t_6) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_5, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 46, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_5, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 68, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_5)) {
       PyObject *__pyx_temp[2] = {__pyx_t_6, ((PyObject *)__pyx_v_self)};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 46, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 68, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_4);
     } else
@@ -2934,19 +3521,19 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative___
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
       PyObject *__pyx_temp[2] = {__pyx_t_6, ((PyObject *)__pyx_v_self)};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 46, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 68, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_4);
     } else
     #endif
     {
-      __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 46, __pyx_L1_error)
+      __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 68, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_6); __pyx_t_6 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_self));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
       PyTuple_SET_ITEM(__pyx_t_7, 0+1, ((PyObject *)__pyx_v_self));
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_7, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 46, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_7, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 68, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     }
@@ -2954,30 +3541,30 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative___
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "plasticnet/neurons/process.pyx":47
+  /* "plasticnet/neurons/process.pyx":69
  * 
  *         post_process_neuron.__init__(self)
  *         self._reset()             # <<<<<<<<<<<<<<
  *         self.save_attrs+=['std']
  * 
  */
-  __pyx_t_4 = ((struct __pyx_vtabstruct_10plasticnet_7neurons_7process_add_noise_multiplicative *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *)__pyx_v_self), 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 47, __pyx_L1_error)
+  __pyx_t_4 = ((struct __pyx_vtabstruct_10plasticnet_7neurons_7process_add_noise_multiplicative *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *)__pyx_v_self), 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "plasticnet/neurons/process.pyx":48
+  /* "plasticnet/neurons/process.pyx":70
  *         post_process_neuron.__init__(self)
  *         self._reset()
  *         self.save_attrs+=['std']             # <<<<<<<<<<<<<<
  * 
  *     @cython.cdivision(True)
  */
-  __pyx_t_4 = PyList_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_n_s_std);
   __Pyx_GIVEREF(__pyx_n_s_std);
   PyList_SET_ITEM(__pyx_t_4, 0, __pyx_n_s_std);
-  __pyx_t_5 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_GIVEREF(__pyx_t_5);
@@ -2986,7 +3573,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative___
   __pyx_v_self->__pyx_base.__pyx_base.save_attrs = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "plasticnet/neurons/process.pyx":36
+  /* "plasticnet/neurons/process.pyx":58
  *     cdef public double std
  * 
  *     def __init__(self,double std=-1,double tau=-1):             # <<<<<<<<<<<<<<
@@ -3009,7 +3596,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative___
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":52
+/* "plasticnet/neurons/process.pyx":74
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -3036,11 +3623,11 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_24add_noise_multiplicati
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 52, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 74, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_7neurons_7process_24add_noise_multiplicative_3update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 52, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 74, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -3058,7 +3645,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_24add_noise_multiplicati
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 52, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 74, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -3067,14 +3654,14 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_24add_noise_multiplicati
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 52, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 74, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else
       #endif
       {
-        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 52, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 74, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         if (__pyx_t_5) {
           __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -3085,7 +3672,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_24add_noise_multiplicati
         __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
         PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
         __pyx_t_3 = 0;
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 52, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 74, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
@@ -3098,7 +3685,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_24add_noise_multiplicati
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "plasticnet/neurons/process.pyx":54
+  /* "plasticnet/neurons/process.pyx":76
  *     cpdef update(self,double t,simulation sim):
  *         cdef int i
  *         cdef double *z=<double *>self.n.output.data             # <<<<<<<<<<<<<<
@@ -3107,7 +3694,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_24add_noise_multiplicati
  */
   __pyx_v_z = ((double *)__pyx_v_self->__pyx_base.n->output->data);
 
-  /* "plasticnet/neurons/process.pyx":56
+  /* "plasticnet/neurons/process.pyx":78
  *         cdef double *z=<double *>self.n.output.data
  * 
  *         for i in range(self.n.N):             # <<<<<<<<<<<<<<
@@ -3118,7 +3705,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_24add_noise_multiplicati
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_6; __pyx_t_8+=1) {
     __pyx_v_i = __pyx_t_8;
 
-    /* "plasticnet/neurons/process.pyx":57
+    /* "plasticnet/neurons/process.pyx":79
  * 
  *         for i in range(self.n.N):
  *             z[i]=z[i]+self.std*randn()*sqrt(abs(z[i]))             # <<<<<<<<<<<<<<
@@ -3128,7 +3715,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_24add_noise_multiplicati
     (__pyx_v_z[__pyx_v_i]) = ((__pyx_v_z[__pyx_v_i]) + ((__pyx_v_self->std * __pyx_f_10plasticnet_10plasticnet_randn()) * sqrt(fabs((__pyx_v_z[__pyx_v_i])))));
   }
 
-  /* "plasticnet/neurons/process.pyx":52
+  /* "plasticnet/neurons/process.pyx":74
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -3182,11 +3769,11 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_24add_noise_multiplicat
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 52, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 74, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 52, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 74, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -3194,18 +3781,18 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_24add_noise_multiplicat
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 74, __pyx_L3_error)
     __pyx_v_sim = ((struct __pyx_obj_10plasticnet_10plasticnet_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 52, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 74, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.add_noise_multiplicative.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 52, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 74, __pyx_L1_error)
   __pyx_r = __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative_2update(((struct __pyx_obj_10plasticnet_7neurons_7process_add_noise_multiplicative *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -3223,7 +3810,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicat
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_24add_noise_multiplicative_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_24add_noise_multiplicative_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 74, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3240,7 +3827,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicat
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":34
+/* "plasticnet/neurons/process.pyx":56
  * 
  * cdef class add_noise_multiplicative(post_process_neuron):
  *     cdef public double std             # <<<<<<<<<<<<<<
@@ -3267,7 +3854,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicat
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->std); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->std); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3302,7 +3889,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative_3s
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 34, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 56, __pyx_L1_error)
   __pyx_v_self->std = __pyx_t_1;
 
   /* function exit code */
@@ -3316,7 +3903,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_24add_noise_multiplicative_3s
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":63
+/* "plasticnet/neurons/process.pyx":85
  *     cdef public double mean,std
  * 
  *     def __init__(self,double mean=0.0,std=1.0):             # <<<<<<<<<<<<<<
@@ -3359,7 +3946,7 @@ static int __pyx_pw_10plasticnet_7neurons_7process_17add_noise_uniform_1__init__
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 63, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 85, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -3370,7 +3957,7 @@ static int __pyx_pw_10plasticnet_7neurons_7process_17add_noise_uniform_1__init__
       }
     }
     if (values[0]) {
-      __pyx_v_mean = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_mean == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 63, __pyx_L3_error)
+      __pyx_v_mean = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_mean == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L3_error)
     } else {
       __pyx_v_mean = ((double)0.0);
     }
@@ -3378,7 +3965,7 @@ static int __pyx_pw_10plasticnet_7neurons_7process_17add_noise_uniform_1__init__
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 63, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 85, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.add_noise_uniform.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3401,7 +3988,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_17add_noise_uniform___init__(
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "plasticnet/neurons/process.pyx":64
+  /* "plasticnet/neurons/process.pyx":86
  * 
  *     def __init__(self,double mean=0.0,std=1.0):
  *         self.mean=mean             # <<<<<<<<<<<<<<
@@ -3410,24 +3997,24 @@ static int __pyx_pf_10plasticnet_7neurons_7process_17add_noise_uniform___init__(
  */
   __pyx_v_self->mean = __pyx_v_mean;
 
-  /* "plasticnet/neurons/process.pyx":65
+  /* "plasticnet/neurons/process.pyx":87
  *     def __init__(self,double mean=0.0,std=1.0):
  *         self.mean=mean
  *         self.std=std             # <<<<<<<<<<<<<<
  *         post_process_neuron.__init__(self)
  *         self._reset()
  */
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_std); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 65, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_std); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L1_error)
   __pyx_v_self->std = __pyx_t_1;
 
-  /* "plasticnet/neurons/process.pyx":66
+  /* "plasticnet/neurons/process.pyx":88
  *         self.mean=mean
  *         self.std=std
  *         post_process_neuron.__init__(self)             # <<<<<<<<<<<<<<
  *         self._reset()
  *         self.save_attrs+=['mean','std']
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 66, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -3440,13 +4027,13 @@ static int __pyx_pf_10plasticnet_7neurons_7process_17add_noise_uniform___init__(
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 88, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, ((PyObject *)__pyx_v_self)};
-      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 88, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_2);
     } else
@@ -3454,19 +4041,19 @@ static int __pyx_pf_10plasticnet_7neurons_7process_17add_noise_uniform___init__(
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, ((PyObject *)__pyx_v_self)};
-      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 88, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_2);
     } else
     #endif
     {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 66, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 88, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_self));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, ((PyObject *)__pyx_v_self));
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 88, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
@@ -3474,25 +4061,25 @@ static int __pyx_pf_10plasticnet_7neurons_7process_17add_noise_uniform___init__(
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "plasticnet/neurons/process.pyx":67
+  /* "plasticnet/neurons/process.pyx":89
  *         self.std=std
  *         post_process_neuron.__init__(self)
  *         self._reset()             # <<<<<<<<<<<<<<
  *         self.save_attrs+=['mean','std']
  * 
  */
-  __pyx_t_2 = ((struct __pyx_vtabstruct_10plasticnet_7neurons_7process_add_noise_uniform *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *)__pyx_v_self), 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 67, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_10plasticnet_7neurons_7process_add_noise_uniform *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *)__pyx_v_self), 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 89, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "plasticnet/neurons/process.pyx":68
+  /* "plasticnet/neurons/process.pyx":90
  *         post_process_neuron.__init__(self)
  *         self._reset()
  *         self.save_attrs+=['mean','std']             # <<<<<<<<<<<<<<
  * 
  *     @cython.cdivision(True)
  */
-  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 90, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_mean);
   __Pyx_GIVEREF(__pyx_n_s_mean);
@@ -3500,7 +4087,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_17add_noise_uniform___init__(
   __Pyx_INCREF(__pyx_n_s_std);
   __Pyx_GIVEREF(__pyx_n_s_std);
   PyList_SET_ITEM(__pyx_t_2, 1, __pyx_n_s_std);
-  __pyx_t_3 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 90, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_GIVEREF(__pyx_t_3);
@@ -3509,7 +4096,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_17add_noise_uniform___init__(
   __pyx_v_self->__pyx_base.__pyx_base.save_attrs = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "plasticnet/neurons/process.pyx":63
+  /* "plasticnet/neurons/process.pyx":85
  *     cdef public double mean,std
  * 
  *     def __init__(self,double mean=0.0,std=1.0):             # <<<<<<<<<<<<<<
@@ -3532,7 +4119,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_17add_noise_uniform___init__(
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":72
+/* "plasticnet/neurons/process.pyx":94
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -3559,11 +4146,11 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_17add_noise_uniform_upda
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 94, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_7neurons_7process_17add_noise_uniform_3update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 72, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 94, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -3581,7 +4168,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_17add_noise_uniform_upda
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 72, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -3590,14 +4177,14 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_17add_noise_uniform_upda
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 72, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else
       #endif
       {
-        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 72, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 94, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         if (__pyx_t_5) {
           __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -3608,7 +4195,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_17add_noise_uniform_upda
         __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
         PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
         __pyx_t_3 = 0;
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 72, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
@@ -3621,7 +4208,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_17add_noise_uniform_upda
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "plasticnet/neurons/process.pyx":74
+  /* "plasticnet/neurons/process.pyx":96
  *     cpdef update(self,double t,simulation sim):
  *         cdef int i
  *         cdef double *z=<double *>self.n.output.data             # <<<<<<<<<<<<<<
@@ -3630,7 +4217,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_17add_noise_uniform_upda
  */
   __pyx_v_z = ((double *)__pyx_v_self->__pyx_base.n->output->data);
 
-  /* "plasticnet/neurons/process.pyx":76
+  /* "plasticnet/neurons/process.pyx":98
  *         cdef double *z=<double *>self.n.output.data
  * 
  *         for i in range(self.n.N):             # <<<<<<<<<<<<<<
@@ -3641,7 +4228,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_17add_noise_uniform_upda
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_6; __pyx_t_8+=1) {
     __pyx_v_i = __pyx_t_8;
 
-    /* "plasticnet/neurons/process.pyx":77
+    /* "plasticnet/neurons/process.pyx":99
  * 
  *         for i in range(self.n.N):
  *             z[i]=z[i]+(randu()-0.5)*2.0*1.732050807569*self.std+self.mean             # <<<<<<<<<<<<<<
@@ -3651,7 +4238,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_17add_noise_uniform_upda
     (__pyx_v_z[__pyx_v_i]) = (((__pyx_v_z[__pyx_v_i]) + ((((__pyx_f_10plasticnet_10plasticnet_randu() - 0.5) * 2.0) * 1.732050807569) * __pyx_v_self->std)) + __pyx_v_self->mean);
   }
 
-  /* "plasticnet/neurons/process.pyx":72
+  /* "plasticnet/neurons/process.pyx":94
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -3705,11 +4292,11 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_17add_noise_uniform_3up
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 72, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 94, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 72, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 94, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -3717,18 +4304,18 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_17add_noise_uniform_3up
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 72, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 94, __pyx_L3_error)
     __pyx_v_sim = ((struct __pyx_obj_10plasticnet_10plasticnet_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 72, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 94, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.add_noise_uniform.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 72, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 94, __pyx_L1_error)
   __pyx_r = __pyx_pf_10plasticnet_7neurons_7process_17add_noise_uniform_2update(((struct __pyx_obj_10plasticnet_7neurons_7process_add_noise_uniform *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -3746,7 +4333,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_17add_noise_uniform_2up
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_17add_noise_uniform_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_17add_noise_uniform_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3763,7 +4350,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_17add_noise_uniform_2up
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":61
+/* "plasticnet/neurons/process.pyx":83
  * 
  * cdef class add_noise_uniform(post_process_neuron):
  *     cdef public double mean,std             # <<<<<<<<<<<<<<
@@ -3790,7 +4377,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_17add_noise_uniform_4me
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->mean); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->mean); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3825,7 +4412,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_17add_noise_uniform_4mean_2__
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L1_error)
   __pyx_v_self->mean = __pyx_t_1;
 
   /* function exit code */
@@ -3858,7 +4445,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_17add_noise_uniform_3st
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->std); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->std); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3893,7 +4480,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_17add_noise_uniform_3std_2__s
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L1_error)
   __pyx_v_self->std = __pyx_t_1;
 
   /* function exit code */
@@ -3907,7 +4494,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_17add_noise_uniform_3std_2__s
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":82
+/* "plasticnet/neurons/process.pyx":104
  *     cdef public double y0
  * 
  *     def __init__(self,double y0):             # <<<<<<<<<<<<<<
@@ -3940,18 +4527,18 @@ static int __pyx_pw_10plasticnet_7neurons_7process_23relative_to_spontaneous_1__
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 82, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 104, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 1) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
     }
-    __pyx_v_y0 = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_y0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_y0 = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_y0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 104, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 82, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 104, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.relative_to_spontaneous.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3973,7 +4560,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_23relative_to_spontaneous___i
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "plasticnet/neurons/process.pyx":83
+  /* "plasticnet/neurons/process.pyx":105
  * 
  *     def __init__(self,double y0):
  *         self.y0=y0             # <<<<<<<<<<<<<<
@@ -3982,14 +4569,14 @@ static int __pyx_pf_10plasticnet_7neurons_7process_23relative_to_spontaneous___i
  */
   __pyx_v_self->y0 = __pyx_v_y0;
 
-  /* "plasticnet/neurons/process.pyx":84
+  /* "plasticnet/neurons/process.pyx":106
  *     def __init__(self,double y0):
  *         self.y0=y0
  *         post_process_neuron.__init__(self)             # <<<<<<<<<<<<<<
  *         self._reset()
  *         self.save_attrs+=['y0']
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -4002,13 +4589,13 @@ static int __pyx_pf_10plasticnet_7neurons_7process_23relative_to_spontaneous___i
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
@@ -4016,19 +4603,19 @@ static int __pyx_pf_10plasticnet_7neurons_7process_23relative_to_spontaneous___i
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
     #endif
     {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 84, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 106, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __pyx_t_3 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_self));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, ((PyObject *)__pyx_v_self));
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
@@ -4036,30 +4623,30 @@ static int __pyx_pf_10plasticnet_7neurons_7process_23relative_to_spontaneous___i
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "plasticnet/neurons/process.pyx":85
+  /* "plasticnet/neurons/process.pyx":107
  *         self.y0=y0
  *         post_process_neuron.__init__(self)
  *         self._reset()             # <<<<<<<<<<<<<<
  *         self.save_attrs+=['y0']
  * 
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_10plasticnet_7neurons_7process_relative_to_spontaneous *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 85, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_10plasticnet_7neurons_7process_relative_to_spontaneous *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "plasticnet/neurons/process.pyx":86
+  /* "plasticnet/neurons/process.pyx":108
  *         post_process_neuron.__init__(self)
  *         self._reset()
  *         self.save_attrs+=['y0']             # <<<<<<<<<<<<<<
  * 
  *     @cython.cdivision(True)
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 86, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_y0);
   __Pyx_GIVEREF(__pyx_n_s_y0);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_y0);
-  __pyx_t_2 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 86, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_GIVEREF(__pyx_t_2);
@@ -4068,7 +4655,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_23relative_to_spontaneous___i
   __pyx_v_self->__pyx_base.__pyx_base.save_attrs = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "plasticnet/neurons/process.pyx":82
+  /* "plasticnet/neurons/process.pyx":104
  *     cdef public double y0
  * 
  *     def __init__(self,double y0):             # <<<<<<<<<<<<<<
@@ -4091,7 +4678,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_23relative_to_spontaneous___i
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":90
+/* "plasticnet/neurons/process.pyx":112
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -4119,11 +4706,11 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_23relative_to_spontaneou
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 90, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_7neurons_7process_23relative_to_spontaneous_3update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 90, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 112, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -4141,7 +4728,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_23relative_to_spontaneou
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 90, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -4150,14 +4737,14 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_23relative_to_spontaneou
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 90, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else
       #endif
       {
-        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 90, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         if (__pyx_t_5) {
           __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -4168,7 +4755,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_23relative_to_spontaneou
         __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
         PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
         __pyx_t_3 = 0;
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 90, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
@@ -4181,7 +4768,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_23relative_to_spontaneou
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "plasticnet/neurons/process.pyx":92
+  /* "plasticnet/neurons/process.pyx":114
  *     cpdef update(self,double t,simulation sim):
  *         cdef int i
  *         cdef double *z=<double *>self.n.output.data             # <<<<<<<<<<<<<<
@@ -4190,7 +4777,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_23relative_to_spontaneou
  */
   __pyx_v_z = ((double *)__pyx_v_self->__pyx_base.n->output->data);
 
-  /* "plasticnet/neurons/process.pyx":94
+  /* "plasticnet/neurons/process.pyx":116
  *         cdef double *z=<double *>self.n.output.data
  * 
  *         for i in range(self.n.N):             # <<<<<<<<<<<<<<
@@ -4201,7 +4788,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_23relative_to_spontaneou
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_6; __pyx_t_8+=1) {
     __pyx_v_i = __pyx_t_8;
 
-    /* "plasticnet/neurons/process.pyx":95
+    /* "plasticnet/neurons/process.pyx":117
  * 
  *         for i in range(self.n.N):
  *             if z[i]<0.0:             # <<<<<<<<<<<<<<
@@ -4211,7 +4798,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_23relative_to_spontaneou
     __pyx_t_9 = (((__pyx_v_z[__pyx_v_i]) < 0.0) != 0);
     if (__pyx_t_9) {
 
-      /* "plasticnet/neurons/process.pyx":96
+      /* "plasticnet/neurons/process.pyx":118
  *         for i in range(self.n.N):
  *             if z[i]<0.0:
  *                 z[i]=0.0             # <<<<<<<<<<<<<<
@@ -4220,7 +4807,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_23relative_to_spontaneou
  */
       (__pyx_v_z[__pyx_v_i]) = 0.0;
 
-      /* "plasticnet/neurons/process.pyx":95
+      /* "plasticnet/neurons/process.pyx":117
  * 
  *         for i in range(self.n.N):
  *             if z[i]<0.0:             # <<<<<<<<<<<<<<
@@ -4229,7 +4816,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_23relative_to_spontaneou
  */
     }
 
-    /* "plasticnet/neurons/process.pyx":97
+    /* "plasticnet/neurons/process.pyx":119
  *             if z[i]<0.0:
  *                 z[i]=0.0
  *             z[i]=z[i]-self.y0             # <<<<<<<<<<<<<<
@@ -4239,7 +4826,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_23relative_to_spontaneou
     (__pyx_v_z[__pyx_v_i]) = ((__pyx_v_z[__pyx_v_i]) - __pyx_v_self->y0);
   }
 
-  /* "plasticnet/neurons/process.pyx":90
+  /* "plasticnet/neurons/process.pyx":112
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -4293,11 +4880,11 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_23relative_to_spontaneo
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 90, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 112, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 90, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 112, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -4305,18 +4892,18 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_23relative_to_spontaneo
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 90, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 112, __pyx_L3_error)
     __pyx_v_sim = ((struct __pyx_obj_10plasticnet_10plasticnet_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 90, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 112, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.relative_to_spontaneous.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 90, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 112, __pyx_L1_error)
   __pyx_r = __pyx_pf_10plasticnet_7neurons_7process_23relative_to_spontaneous_2update(((struct __pyx_obj_10plasticnet_7neurons_7process_relative_to_spontaneous *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -4334,7 +4921,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_23relative_to_spontaneo
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_23relative_to_spontaneous_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 90, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_23relative_to_spontaneous_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4351,7 +4938,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_23relative_to_spontaneo
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":80
+/* "plasticnet/neurons/process.pyx":102
  * 
  * cdef class relative_to_spontaneous(post_process_neuron):
  *     cdef public double y0             # <<<<<<<<<<<<<<
@@ -4378,7 +4965,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_23relative_to_spontaneo
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->y0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->y0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4413,7 +5000,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_23relative_to_spontaneous_2y0
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 102, __pyx_L1_error)
   __pyx_v_self->y0 = __pyx_t_1;
 
   /* function exit code */
@@ -4427,7 +5014,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_23relative_to_spontaneous_2y0
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":107
+/* "plasticnet/neurons/process.pyx":129
  *     cdef public np.ndarray beta,original_output
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -4449,7 +5036,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13subtract_beta__reset(s
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 107, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 129, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_7neurons_7process_13subtract_beta_1_reset)) {
       __Pyx_XDECREF(__pyx_r);
@@ -4465,10 +5052,10 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13subtract_beta__reset(s
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 107, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 129, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 107, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 129, __pyx_L1_error)
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -4480,87 +5067,87 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13subtract_beta__reset(s
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "plasticnet/neurons/process.pyx":108
+  /* "plasticnet/neurons/process.pyx":130
  * 
  *     cpdef _reset(self):
  *         self.beta=np.zeros(self.n.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.original_output=np.zeros(self.n.N,dtype=np.float)
  * 
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.n->N); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.n->N); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 108, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 108, __pyx_L1_error)
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_5);
   __Pyx_GOTREF(__pyx_v_self->beta);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->beta));
   __pyx_v_self->beta = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "plasticnet/neurons/process.pyx":109
+  /* "plasticnet/neurons/process.pyx":131
  *     cpdef _reset(self):
  *         self.beta=np.zeros(self.n.N,dtype=np.float)
  *         self.original_output=np.zeros(self.n.N,dtype=np.float)             # <<<<<<<<<<<<<<
  * 
  *     def __init__(self,double tau=100.0,double a=1.0):
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 131, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 131, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.n->N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.n->N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 131, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 131, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_5);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 131, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 131, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 131, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 109, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 131, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 131, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 109, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 131, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_4);
   __Pyx_GOTREF(__pyx_v_self->original_output);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->original_output));
   __pyx_v_self->original_output = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "plasticnet/neurons/process.pyx":107
+  /* "plasticnet/neurons/process.pyx":129
  *     cdef public np.ndarray beta,original_output
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -4604,7 +5191,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_13subtract_beta__reset(
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("_reset", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_13subtract_beta__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 107, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_13subtract_beta__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 129, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4621,7 +5208,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_13subtract_beta__reset(
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":111
+/* "plasticnet/neurons/process.pyx":133
  *         self.original_output=np.zeros(self.n.N,dtype=np.float)
  * 
  *     def __init__(self,double tau=100.0,double a=1.0):             # <<<<<<<<<<<<<<
@@ -4663,7 +5250,7 @@ static int __pyx_pw_10plasticnet_7neurons_7process_13subtract_beta_3__init__(PyO
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 111, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 133, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -4674,19 +5261,19 @@ static int __pyx_pw_10plasticnet_7neurons_7process_13subtract_beta_3__init__(PyO
       }
     }
     if (values[0]) {
-      __pyx_v_tau = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_tau == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 111, __pyx_L3_error)
+      __pyx_v_tau = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_tau == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 133, __pyx_L3_error)
     } else {
       __pyx_v_tau = ((double)100.0);
     }
     if (values[1]) {
-      __pyx_v_a = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_a == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 111, __pyx_L3_error)
+      __pyx_v_a = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_a == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 133, __pyx_L3_error)
     } else {
       __pyx_v_a = ((double)1.0);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 111, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 133, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.subtract_beta.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -4708,7 +5295,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_2__init__(str
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "plasticnet/neurons/process.pyx":112
+  /* "plasticnet/neurons/process.pyx":134
  * 
  *     def __init__(self,double tau=100.0,double a=1.0):
  *         self.tau=tau             # <<<<<<<<<<<<<<
@@ -4717,7 +5304,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_2__init__(str
  */
   __pyx_v_self->tau = __pyx_v_tau;
 
-  /* "plasticnet/neurons/process.pyx":113
+  /* "plasticnet/neurons/process.pyx":135
  *     def __init__(self,double tau=100.0,double a=1.0):
  *         self.tau=tau
  *         self.a=a             # <<<<<<<<<<<<<<
@@ -4726,14 +5313,14 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_2__init__(str
  */
   __pyx_v_self->a = __pyx_v_a;
 
-  /* "plasticnet/neurons/process.pyx":114
+  /* "plasticnet/neurons/process.pyx":136
  *         self.tau=tau
  *         self.a=a
  *         post_process_neuron.__init__(self)             # <<<<<<<<<<<<<<
  *         self._reset()
  *         self.save_attrs+=['tau','a']
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 114, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -4746,13 +5333,13 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_2__init__(str
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 136, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 136, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
@@ -4760,19 +5347,19 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_2__init__(str
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 136, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
     #endif
     {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 114, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 136, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __pyx_t_3 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_self));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, ((PyObject *)__pyx_v_self));
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 136, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
@@ -4780,25 +5367,25 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_2__init__(str
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "plasticnet/neurons/process.pyx":115
+  /* "plasticnet/neurons/process.pyx":137
  *         self.a=a
  *         post_process_neuron.__init__(self)
  *         self._reset()             # <<<<<<<<<<<<<<
  *         self.save_attrs+=['tau','a']
  *         self.save_data+=['beta','original_output']
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_10plasticnet_7neurons_7process_subtract_beta *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_10plasticnet_7neurons_7process_subtract_beta *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "plasticnet/neurons/process.pyx":116
+  /* "plasticnet/neurons/process.pyx":138
  *         post_process_neuron.__init__(self)
  *         self._reset()
  *         self.save_attrs+=['tau','a']             # <<<<<<<<<<<<<<
  *         self.save_data+=['beta','original_output']
  * 
  */
-  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 116, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_tau);
   __Pyx_GIVEREF(__pyx_n_s_tau);
@@ -4806,7 +5393,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_2__init__(str
   __Pyx_INCREF(__pyx_n_s_a);
   __Pyx_GIVEREF(__pyx_n_s_a);
   PyList_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_a);
-  __pyx_t_2 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 116, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_GIVEREF(__pyx_t_2);
@@ -4815,14 +5402,14 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_2__init__(str
   __pyx_v_self->__pyx_base.__pyx_base.save_attrs = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "plasticnet/neurons/process.pyx":117
+  /* "plasticnet/neurons/process.pyx":139
  *         self._reset()
  *         self.save_attrs+=['tau','a']
  *         self.save_data+=['beta','original_output']             # <<<<<<<<<<<<<<
  * 
  *     @cython.cdivision(True)
  */
-  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 139, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_beta);
   __Pyx_GIVEREF(__pyx_n_s_beta);
@@ -4830,7 +5417,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_2__init__(str
   __Pyx_INCREF(__pyx_n_s_original_output);
   __Pyx_GIVEREF(__pyx_n_s_original_output);
   PyList_SET_ITEM(__pyx_t_2, 1, __pyx_n_s_original_output);
-  __pyx_t_1 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_data, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_data, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_GIVEREF(__pyx_t_1);
@@ -4839,7 +5426,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_2__init__(str
   __pyx_v_self->__pyx_base.__pyx_base.save_data = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "plasticnet/neurons/process.pyx":111
+  /* "plasticnet/neurons/process.pyx":133
  *         self.original_output=np.zeros(self.n.N,dtype=np.float)
  * 
  *     def __init__(self,double tau=100.0,double a=1.0):             # <<<<<<<<<<<<<<
@@ -4862,7 +5449,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_2__init__(str
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":121
+/* "plasticnet/neurons/process.pyx":143
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -4893,11 +5480,11 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13subtract_beta_update(s
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 121, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_7neurons_7process_13subtract_beta_5update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 121, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -4915,7 +5502,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13subtract_beta_update(s
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 121, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 143, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -4924,14 +5511,14 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13subtract_beta_update(s
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 121, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 143, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else
       #endif
       {
-        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 121, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 143, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         if (__pyx_t_5) {
           __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -4942,7 +5529,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13subtract_beta_update(s
         __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
         PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
         __pyx_t_3 = 0;
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 121, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 143, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
@@ -4955,7 +5542,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13subtract_beta_update(s
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "plasticnet/neurons/process.pyx":123
+  /* "plasticnet/neurons/process.pyx":145
  *     cpdef update(self,double t,simulation sim):
  *         cdef int i
  *         cdef double *y=<double *>self.n.linear_output.data             # <<<<<<<<<<<<<<
@@ -4964,7 +5551,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13subtract_beta_update(s
  */
   __pyx_v_y = ((double *)__pyx_v_self->__pyx_base.n->linear_output->data);
 
-  /* "plasticnet/neurons/process.pyx":124
+  /* "plasticnet/neurons/process.pyx":146
  *         cdef int i
  *         cdef double *y=<double *>self.n.linear_output.data
  *         cdef double *z=<double *>self.n.output.data             # <<<<<<<<<<<<<<
@@ -4973,7 +5560,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13subtract_beta_update(s
  */
   __pyx_v_z = ((double *)__pyx_v_self->__pyx_base.n->output->data);
 
-  /* "plasticnet/neurons/process.pyx":125
+  /* "plasticnet/neurons/process.pyx":147
  *         cdef double *y=<double *>self.n.linear_output.data
  *         cdef double *z=<double *>self.n.output.data
  *         cdef double *beta=<double *>self.beta.data             # <<<<<<<<<<<<<<
@@ -4982,7 +5569,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13subtract_beta_update(s
  */
   __pyx_v_beta = ((double *)__pyx_v_self->beta->data);
 
-  /* "plasticnet/neurons/process.pyx":126
+  /* "plasticnet/neurons/process.pyx":148
  *         cdef double *z=<double *>self.n.output.data
  *         cdef double *beta=<double *>self.beta.data
  *         cdef double *zo=<double *>self.original_output.data             # <<<<<<<<<<<<<<
@@ -4991,7 +5578,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13subtract_beta_update(s
  */
   __pyx_v_zo = ((double *)__pyx_v_self->original_output->data);
 
-  /* "plasticnet/neurons/process.pyx":128
+  /* "plasticnet/neurons/process.pyx":150
  *         cdef double *zo=<double *>self.original_output.data
  * 
  *         for i in range(self.n.N):             # <<<<<<<<<<<<<<
@@ -5002,7 +5589,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13subtract_beta_update(s
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_6; __pyx_t_8+=1) {
     __pyx_v_i = __pyx_t_8;
 
-    /* "plasticnet/neurons/process.pyx":129
+    /* "plasticnet/neurons/process.pyx":151
  * 
  *         for i in range(self.n.N):
  *             zo[i]=z[i]             # <<<<<<<<<<<<<<
@@ -5011,7 +5598,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13subtract_beta_update(s
  */
     (__pyx_v_zo[__pyx_v_i]) = (__pyx_v_z[__pyx_v_i]);
 
-    /* "plasticnet/neurons/process.pyx":130
+    /* "plasticnet/neurons/process.pyx":152
  *         for i in range(self.n.N):
  *             zo[i]=z[i]
  *             beta[i]+=sim.dt*(z[i]-beta[i])/self.tau             # <<<<<<<<<<<<<<
@@ -5021,7 +5608,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13subtract_beta_update(s
     __pyx_t_9 = __pyx_v_i;
     (__pyx_v_beta[__pyx_t_9]) = ((__pyx_v_beta[__pyx_t_9]) + ((__pyx_v_sim->dt * ((__pyx_v_z[__pyx_v_i]) - (__pyx_v_beta[__pyx_v_i]))) / __pyx_v_self->tau));
 
-    /* "plasticnet/neurons/process.pyx":131
+    /* "plasticnet/neurons/process.pyx":153
  *             zo[i]=z[i]
  *             beta[i]+=sim.dt*(z[i]-beta[i])/self.tau
  *             z[i]-=self.a*beta[i]             # <<<<<<<<<<<<<<
@@ -5032,7 +5619,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13subtract_beta_update(s
     (__pyx_v_z[__pyx_t_9]) = ((__pyx_v_z[__pyx_t_9]) - (__pyx_v_self->a * (__pyx_v_beta[__pyx_v_i])));
   }
 
-  /* "plasticnet/neurons/process.pyx":121
+  /* "plasticnet/neurons/process.pyx":143
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -5086,11 +5673,11 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_13subtract_beta_5update
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 121, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 143, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 121, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 143, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -5098,18 +5685,18 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_13subtract_beta_5update
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 121, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 143, __pyx_L3_error)
     __pyx_v_sim = ((struct __pyx_obj_10plasticnet_10plasticnet_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 121, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 143, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.subtract_beta.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 121, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 143, __pyx_L1_error)
   __pyx_r = __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_4update(((struct __pyx_obj_10plasticnet_7neurons_7process_subtract_beta *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -5127,7 +5714,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_4update
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_13subtract_beta_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_13subtract_beta_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 143, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5144,7 +5731,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_4update
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":104
+/* "plasticnet/neurons/process.pyx":126
  * 
  * cdef class subtract_beta(post_process_neuron):
  *     cdef public double tau,a             # <<<<<<<<<<<<<<
@@ -5171,7 +5758,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_3tau___
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5206,7 +5793,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_3tau_2__set__
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 126, __pyx_L1_error)
   __pyx_v_self->tau = __pyx_t_1;
 
   /* function exit code */
@@ -5239,7 +5826,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_1a___ge
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->a); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->a); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5274,7 +5861,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_1a_2__set__(s
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 126, __pyx_L1_error)
   __pyx_v_self->a = __pyx_t_1;
 
   /* function exit code */
@@ -5288,7 +5875,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_1a_2__set__(s
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":105
+/* "plasticnet/neurons/process.pyx":127
  * cdef class subtract_beta(post_process_neuron):
  *     cdef public double tau,a
  *     cdef public np.ndarray beta,original_output             # <<<<<<<<<<<<<<
@@ -5343,7 +5930,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_4beta_2__set_
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 105, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 127, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -5440,7 +6027,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_15original_ou
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 105, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 127, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -5490,7 +6077,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13subtract_beta_15original_ou
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":136
+/* "plasticnet/neurons/process.pyx":158
  * cdef class min_max(post_process_neuron):
  *     cdef public double bottom,top
  *     def __init__(self,double bottom,double top):             # <<<<<<<<<<<<<<
@@ -5526,11 +6113,11 @@ static int __pyx_pw_10plasticnet_7neurons_7process_7min_max_1__init__(PyObject *
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_top)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 136, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 158, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 136, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 158, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -5538,12 +6125,12 @@ static int __pyx_pw_10plasticnet_7neurons_7process_7min_max_1__init__(PyObject *
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_bottom = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_bottom == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 136, __pyx_L3_error)
-    __pyx_v_top = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_top == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 136, __pyx_L3_error)
+    __pyx_v_bottom = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_bottom == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 158, __pyx_L3_error)
+    __pyx_v_top = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_top == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 158, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 136, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 158, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.min_max.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -5565,7 +6152,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7min_max___init__(struct __py
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "plasticnet/neurons/process.pyx":137
+  /* "plasticnet/neurons/process.pyx":159
  *     cdef public double bottom,top
  *     def __init__(self,double bottom,double top):
  *         self.bottom=bottom             # <<<<<<<<<<<<<<
@@ -5574,7 +6161,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7min_max___init__(struct __py
  */
   __pyx_v_self->bottom = __pyx_v_bottom;
 
-  /* "plasticnet/neurons/process.pyx":138
+  /* "plasticnet/neurons/process.pyx":160
  *     def __init__(self,double bottom,double top):
  *         self.bottom=bottom
  *         self.top=top             # <<<<<<<<<<<<<<
@@ -5583,14 +6170,14 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7min_max___init__(struct __py
  */
   __pyx_v_self->top = __pyx_v_top;
 
-  /* "plasticnet/neurons/process.pyx":139
+  /* "plasticnet/neurons/process.pyx":161
  *         self.bottom=bottom
  *         self.top=top
  *         post_process_neuron.__init__(self)             # <<<<<<<<<<<<<<
  *         self.save_attrs+=['bottom','top']
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 161, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -5603,13 +6190,13 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7min_max___init__(struct __py
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 161, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 161, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
@@ -5617,19 +6204,19 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7min_max___init__(struct __py
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 161, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
     #endif
     {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 139, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 161, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __pyx_t_3 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_self));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, ((PyObject *)__pyx_v_self));
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 161, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
@@ -5637,14 +6224,14 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7min_max___init__(struct __py
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "plasticnet/neurons/process.pyx":140
+  /* "plasticnet/neurons/process.pyx":162
  *         self.top=top
  *         post_process_neuron.__init__(self)
  *         self.save_attrs+=['bottom','top']             # <<<<<<<<<<<<<<
  * 
  *     @cython.cdivision(True)
  */
-  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_bottom);
   __Pyx_GIVEREF(__pyx_n_s_bottom);
@@ -5652,7 +6239,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7min_max___init__(struct __py
   __Pyx_INCREF(__pyx_n_s_top);
   __Pyx_GIVEREF(__pyx_n_s_top);
   PyList_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_top);
-  __pyx_t_2 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_GIVEREF(__pyx_t_2);
@@ -5661,7 +6248,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7min_max___init__(struct __py
   __pyx_v_self->__pyx_base.__pyx_base.save_attrs = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "plasticnet/neurons/process.pyx":136
+  /* "plasticnet/neurons/process.pyx":158
  * cdef class min_max(post_process_neuron):
  *     cdef public double bottom,top
  *     def __init__(self,double bottom,double top):             # <<<<<<<<<<<<<<
@@ -5684,7 +6271,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7min_max___init__(struct __py
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":144
+/* "plasticnet/neurons/process.pyx":166
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -5714,11 +6301,11 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7min_max_update(struct _
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 144, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_7neurons_7process_7min_max_3update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 144, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 166, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -5736,7 +6323,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7min_max_update(struct _
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 144, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 166, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -5745,14 +6332,14 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7min_max_update(struct _
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 144, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 166, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else
       #endif
       {
-        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 144, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 166, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         if (__pyx_t_5) {
           __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -5763,7 +6350,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7min_max_update(struct _
         __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
         PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
         __pyx_t_3 = 0;
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 144, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 166, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
@@ -5776,7 +6363,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7min_max_update(struct _
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "plasticnet/neurons/process.pyx":146
+  /* "plasticnet/neurons/process.pyx":168
  *     cpdef update(self,double t,simulation sim):
  *         cdef int i
  *         cdef double *y=<double *>self.n.linear_output.data             # <<<<<<<<<<<<<<
@@ -5785,7 +6372,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7min_max_update(struct _
  */
   __pyx_v_y = ((double *)__pyx_v_self->__pyx_base.n->linear_output->data);
 
-  /* "plasticnet/neurons/process.pyx":147
+  /* "plasticnet/neurons/process.pyx":169
  *         cdef int i
  *         cdef double *y=<double *>self.n.linear_output.data
  *         cdef double *z=<double *>self.n.output.data             # <<<<<<<<<<<<<<
@@ -5794,7 +6381,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7min_max_update(struct _
  */
   __pyx_v_z = ((double *)__pyx_v_self->__pyx_base.n->output->data);
 
-  /* "plasticnet/neurons/process.pyx":149
+  /* "plasticnet/neurons/process.pyx":171
  *         cdef double *z=<double *>self.n.output.data
  * 
  *         for i in range(self.n.N):             # <<<<<<<<<<<<<<
@@ -5805,7 +6392,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7min_max_update(struct _
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_6; __pyx_t_8+=1) {
     __pyx_v_i = __pyx_t_8;
 
-    /* "plasticnet/neurons/process.pyx":150
+    /* "plasticnet/neurons/process.pyx":172
  * 
  *         for i in range(self.n.N):
  *             if z[i]<self.bottom:             # <<<<<<<<<<<<<<
@@ -5815,7 +6402,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7min_max_update(struct _
     __pyx_t_9 = (((__pyx_v_z[__pyx_v_i]) < __pyx_v_self->bottom) != 0);
     if (__pyx_t_9) {
 
-      /* "plasticnet/neurons/process.pyx":151
+      /* "plasticnet/neurons/process.pyx":173
  *         for i in range(self.n.N):
  *             if z[i]<self.bottom:
  *                 z[i]=self.bottom             # <<<<<<<<<<<<<<
@@ -5825,7 +6412,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7min_max_update(struct _
       __pyx_t_10 = __pyx_v_self->bottom;
       (__pyx_v_z[__pyx_v_i]) = __pyx_t_10;
 
-      /* "plasticnet/neurons/process.pyx":150
+      /* "plasticnet/neurons/process.pyx":172
  * 
  *         for i in range(self.n.N):
  *             if z[i]<self.bottom:             # <<<<<<<<<<<<<<
@@ -5835,7 +6422,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7min_max_update(struct _
       goto __pyx_L5;
     }
 
-    /* "plasticnet/neurons/process.pyx":152
+    /* "plasticnet/neurons/process.pyx":174
  *             if z[i]<self.bottom:
  *                 z[i]=self.bottom
  *             elif z[i]>self.top:             # <<<<<<<<<<<<<<
@@ -5845,7 +6432,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7min_max_update(struct _
     __pyx_t_9 = (((__pyx_v_z[__pyx_v_i]) > __pyx_v_self->top) != 0);
     if (__pyx_t_9) {
 
-      /* "plasticnet/neurons/process.pyx":153
+      /* "plasticnet/neurons/process.pyx":175
  *                 z[i]=self.bottom
  *             elif z[i]>self.top:
  *                 z[i]=self.top             # <<<<<<<<<<<<<<
@@ -5855,7 +6442,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7min_max_update(struct _
       __pyx_t_10 = __pyx_v_self->top;
       (__pyx_v_z[__pyx_v_i]) = __pyx_t_10;
 
-      /* "plasticnet/neurons/process.pyx":152
+      /* "plasticnet/neurons/process.pyx":174
  *             if z[i]<self.bottom:
  *                 z[i]=self.bottom
  *             elif z[i]>self.top:             # <<<<<<<<<<<<<<
@@ -5865,7 +6452,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7min_max_update(struct _
       goto __pyx_L5;
     }
 
-    /* "plasticnet/neurons/process.pyx":155
+    /* "plasticnet/neurons/process.pyx":177
  *                 z[i]=self.top
  *             else:
  *                 pass             # <<<<<<<<<<<<<<
@@ -5877,7 +6464,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7min_max_update(struct _
     __pyx_L5:;
   }
 
-  /* "plasticnet/neurons/process.pyx":144
+  /* "plasticnet/neurons/process.pyx":166
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -5931,11 +6518,11 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_7min_max_3update(PyObje
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 144, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 166, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 144, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 166, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -5943,18 +6530,18 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_7min_max_3update(PyObje
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 144, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 166, __pyx_L3_error)
     __pyx_v_sim = ((struct __pyx_obj_10plasticnet_10plasticnet_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 144, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 166, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.min_max.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 144, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 166, __pyx_L1_error)
   __pyx_r = __pyx_pf_10plasticnet_7neurons_7process_7min_max_2update(((struct __pyx_obj_10plasticnet_7neurons_7process_min_max *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -5972,7 +6559,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_7min_max_2update(struct
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_7min_max_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 144, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_7min_max_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5989,7 +6576,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_7min_max_2update(struct
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":135
+/* "plasticnet/neurons/process.pyx":157
  * 
  * cdef class min_max(post_process_neuron):
  *     cdef public double bottom,top             # <<<<<<<<<<<<<<
@@ -6016,7 +6603,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_7min_max_6bottom___get_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->bottom); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->bottom); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6051,7 +6638,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7min_max_6bottom_2__set__(str
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 135, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 157, __pyx_L1_error)
   __pyx_v_self->bottom = __pyx_t_1;
 
   /* function exit code */
@@ -6084,7 +6671,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_7min_max_3top___get__(s
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->top); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->top); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6119,7 +6706,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7min_max_3top_2__set__(struct
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 135, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 157, __pyx_L1_error)
   __pyx_v_self->top = __pyx_t_1;
 
   /* function exit code */
@@ -6133,7 +6720,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7min_max_3top_2__set__(struct
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":159
+/* "plasticnet/neurons/process.pyx":181
  * cdef class scale_shift(post_process_neuron):
  *     cdef public double scale,shift
  *     def __init__(self,double scale,double shift):             # <<<<<<<<<<<<<<
@@ -6169,11 +6756,11 @@ static int __pyx_pw_10plasticnet_7neurons_7process_11scale_shift_1__init__(PyObj
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_shift)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 159, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 181, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 159, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 181, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -6181,12 +6768,12 @@ static int __pyx_pw_10plasticnet_7neurons_7process_11scale_shift_1__init__(PyObj
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_scale = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_scale == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 159, __pyx_L3_error)
-    __pyx_v_shift = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_shift == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 159, __pyx_L3_error)
+    __pyx_v_scale = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_scale == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 181, __pyx_L3_error)
+    __pyx_v_shift = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_shift == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 181, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 159, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 181, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.scale_shift.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -6208,7 +6795,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_11scale_shift___init__(struct
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "plasticnet/neurons/process.pyx":160
+  /* "plasticnet/neurons/process.pyx":182
  *     cdef public double scale,shift
  *     def __init__(self,double scale,double shift):
  *         self.scale=scale             # <<<<<<<<<<<<<<
@@ -6217,7 +6804,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_11scale_shift___init__(struct
  */
   __pyx_v_self->scale = __pyx_v_scale;
 
-  /* "plasticnet/neurons/process.pyx":161
+  /* "plasticnet/neurons/process.pyx":183
  *     def __init__(self,double scale,double shift):
  *         self.scale=scale
  *         self.shift=shift             # <<<<<<<<<<<<<<
@@ -6226,14 +6813,14 @@ static int __pyx_pf_10plasticnet_7neurons_7process_11scale_shift___init__(struct
  */
   __pyx_v_self->shift = __pyx_v_shift;
 
-  /* "plasticnet/neurons/process.pyx":162
+  /* "plasticnet/neurons/process.pyx":184
  *         self.scale=scale
  *         self.shift=shift
  *         post_process_neuron.__init__(self)             # <<<<<<<<<<<<<<
  *         self.save_attrs+=['scale','shift']
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 184, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -6246,13 +6833,13 @@ static int __pyx_pf_10plasticnet_7neurons_7process_11scale_shift___init__(struct
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 184, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 184, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
@@ -6260,19 +6847,19 @@ static int __pyx_pf_10plasticnet_7neurons_7process_11scale_shift___init__(struct
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 184, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
     #endif
     {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 162, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 184, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __pyx_t_3 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_self));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, ((PyObject *)__pyx_v_self));
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 184, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
@@ -6280,14 +6867,14 @@ static int __pyx_pf_10plasticnet_7neurons_7process_11scale_shift___init__(struct
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "plasticnet/neurons/process.pyx":163
+  /* "plasticnet/neurons/process.pyx":185
  *         self.shift=shift
  *         post_process_neuron.__init__(self)
  *         self.save_attrs+=['scale','shift']             # <<<<<<<<<<<<<<
  * 
  *     @cython.cdivision(True)
  */
-  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_scale);
   __Pyx_GIVEREF(__pyx_n_s_scale);
@@ -6295,7 +6882,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_11scale_shift___init__(struct
   __Pyx_INCREF(__pyx_n_s_shift);
   __Pyx_GIVEREF(__pyx_n_s_shift);
   PyList_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_shift);
-  __pyx_t_2 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_GIVEREF(__pyx_t_2);
@@ -6304,7 +6891,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_11scale_shift___init__(struct
   __pyx_v_self->__pyx_base.__pyx_base.save_attrs = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "plasticnet/neurons/process.pyx":159
+  /* "plasticnet/neurons/process.pyx":181
  * cdef class scale_shift(post_process_neuron):
  *     cdef public double scale,shift
  *     def __init__(self,double scale,double shift):             # <<<<<<<<<<<<<<
@@ -6327,7 +6914,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_11scale_shift___init__(struct
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":167
+/* "plasticnet/neurons/process.pyx":189
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -6355,11 +6942,11 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_11scale_shift_update(str
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 189, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_7neurons_7process_11scale_shift_3update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 167, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 189, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -6377,7 +6964,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_11scale_shift_update(str
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 167, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 189, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -6386,14 +6973,14 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_11scale_shift_update(str
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 167, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 189, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else
       #endif
       {
-        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 167, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 189, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         if (__pyx_t_5) {
           __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -6404,7 +6991,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_11scale_shift_update(str
         __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
         PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
         __pyx_t_3 = 0;
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 167, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 189, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
@@ -6417,7 +7004,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_11scale_shift_update(str
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "plasticnet/neurons/process.pyx":169
+  /* "plasticnet/neurons/process.pyx":191
  *     cpdef update(self,double t,simulation sim):
  *         cdef int i
  *         cdef double *y=<double *>self.n.linear_output.data             # <<<<<<<<<<<<<<
@@ -6426,7 +7013,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_11scale_shift_update(str
  */
   __pyx_v_y = ((double *)__pyx_v_self->__pyx_base.n->linear_output->data);
 
-  /* "plasticnet/neurons/process.pyx":170
+  /* "plasticnet/neurons/process.pyx":192
  *         cdef int i
  *         cdef double *y=<double *>self.n.linear_output.data
  *         cdef double *z=<double *>self.n.output.data             # <<<<<<<<<<<<<<
@@ -6435,7 +7022,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_11scale_shift_update(str
  */
   __pyx_v_z = ((double *)__pyx_v_self->__pyx_base.n->output->data);
 
-  /* "plasticnet/neurons/process.pyx":172
+  /* "plasticnet/neurons/process.pyx":194
  *         cdef double *z=<double *>self.n.output.data
  * 
  *         for i in range(self.n.N):             # <<<<<<<<<<<<<<
@@ -6446,7 +7033,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_11scale_shift_update(str
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_6; __pyx_t_8+=1) {
     __pyx_v_i = __pyx_t_8;
 
-    /* "plasticnet/neurons/process.pyx":173
+    /* "plasticnet/neurons/process.pyx":195
  * 
  *         for i in range(self.n.N):
  *             z[i]=z[i]*self.scale+self.shift             # <<<<<<<<<<<<<<
@@ -6456,7 +7043,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_11scale_shift_update(str
     (__pyx_v_z[__pyx_v_i]) = (((__pyx_v_z[__pyx_v_i]) * __pyx_v_self->scale) + __pyx_v_self->shift);
   }
 
-  /* "plasticnet/neurons/process.pyx":167
+  /* "plasticnet/neurons/process.pyx":189
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -6510,11 +7097,11 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_11scale_shift_3update(P
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 167, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 189, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 167, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 189, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -6522,18 +7109,18 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_11scale_shift_3update(P
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 167, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 189, __pyx_L3_error)
     __pyx_v_sim = ((struct __pyx_obj_10plasticnet_10plasticnet_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 167, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 189, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.scale_shift.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 167, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 189, __pyx_L1_error)
   __pyx_r = __pyx_pf_10plasticnet_7neurons_7process_11scale_shift_2update(((struct __pyx_obj_10plasticnet_7neurons_7process_scale_shift *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -6551,7 +7138,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_11scale_shift_2update(s
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_11scale_shift_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_11scale_shift_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6568,7 +7155,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_11scale_shift_2update(s
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":158
+/* "plasticnet/neurons/process.pyx":180
  * 
  * cdef class scale_shift(post_process_neuron):
  *     cdef public double scale,shift             # <<<<<<<<<<<<<<
@@ -6595,7 +7182,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_11scale_shift_5scale___
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->scale); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->scale); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6630,7 +7217,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_11scale_shift_5scale_2__set__
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 180, __pyx_L1_error)
   __pyx_v_self->scale = __pyx_t_1;
 
   /* function exit code */
@@ -6663,7 +7250,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_11scale_shift_5shift___
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->shift); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->shift); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6698,7 +7285,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_11scale_shift_5shift_2__set__
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 180, __pyx_L1_error)
   __pyx_v_self->shift = __pyx_t_1;
 
   /* function exit code */
@@ -6712,7 +7299,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_11scale_shift_5shift_2__set__
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":178
+/* "plasticnet/neurons/process.pyx":200
  * cdef class sigmoid(post_process_neuron):
  *     cdef public double bottom,top
  *     def __init__(self,double bottom,double top):             # <<<<<<<<<<<<<<
@@ -6748,11 +7335,11 @@ static int __pyx_pw_10plasticnet_7neurons_7process_7sigmoid_1__init__(PyObject *
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_top)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 178, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 200, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 178, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 200, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -6760,12 +7347,12 @@ static int __pyx_pw_10plasticnet_7neurons_7process_7sigmoid_1__init__(PyObject *
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_bottom = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_bottom == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 178, __pyx_L3_error)
-    __pyx_v_top = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_top == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 178, __pyx_L3_error)
+    __pyx_v_bottom = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_bottom == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L3_error)
+    __pyx_v_top = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_top == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 178, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 200, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.sigmoid.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -6787,7 +7374,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7sigmoid___init__(struct __py
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "plasticnet/neurons/process.pyx":179
+  /* "plasticnet/neurons/process.pyx":201
  *     cdef public double bottom,top
  *     def __init__(self,double bottom,double top):
  *         self.bottom=bottom             # <<<<<<<<<<<<<<
@@ -6796,7 +7383,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7sigmoid___init__(struct __py
  */
   __pyx_v_self->bottom = __pyx_v_bottom;
 
-  /* "plasticnet/neurons/process.pyx":180
+  /* "plasticnet/neurons/process.pyx":202
  *     def __init__(self,double bottom,double top):
  *         self.bottom=bottom
  *         self.top=top             # <<<<<<<<<<<<<<
@@ -6805,14 +7392,14 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7sigmoid___init__(struct __py
  */
   __pyx_v_self->top = __pyx_v_top;
 
-  /* "plasticnet/neurons/process.pyx":181
+  /* "plasticnet/neurons/process.pyx":203
  *         self.bottom=bottom
  *         self.top=top
  *         post_process_neuron.__init__(self)             # <<<<<<<<<<<<<<
  *         self.save_attrs+=['bottom','top']
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 181, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 203, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -6825,13 +7412,13 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7sigmoid___init__(struct __py
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 181, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 181, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
@@ -6839,19 +7426,19 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7sigmoid___init__(struct __py
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 181, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
     #endif
     {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 181, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 203, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __pyx_t_3 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_self));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, ((PyObject *)__pyx_v_self));
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 181, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
@@ -6859,14 +7446,14 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7sigmoid___init__(struct __py
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "plasticnet/neurons/process.pyx":182
+  /* "plasticnet/neurons/process.pyx":204
  *         self.top=top
  *         post_process_neuron.__init__(self)
  *         self.save_attrs+=['bottom','top']             # <<<<<<<<<<<<<<
  * 
  *     @cython.cdivision(True)
  */
-  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 182, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_bottom);
   __Pyx_GIVEREF(__pyx_n_s_bottom);
@@ -6874,7 +7461,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7sigmoid___init__(struct __py
   __Pyx_INCREF(__pyx_n_s_top);
   __Pyx_GIVEREF(__pyx_n_s_top);
   PyList_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_top);
-  __pyx_t_2 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 182, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_GIVEREF(__pyx_t_2);
@@ -6883,7 +7470,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7sigmoid___init__(struct __py
   __pyx_v_self->__pyx_base.__pyx_base.save_attrs = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "plasticnet/neurons/process.pyx":178
+  /* "plasticnet/neurons/process.pyx":200
  * cdef class sigmoid(post_process_neuron):
  *     cdef public double bottom,top
  *     def __init__(self,double bottom,double top):             # <<<<<<<<<<<<<<
@@ -6906,7 +7493,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7sigmoid___init__(struct __py
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":186
+/* "plasticnet/neurons/process.pyx":208
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -6935,11 +7522,11 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7sigmoid_update(struct _
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 186, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 208, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_7neurons_7process_7sigmoid_3update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 186, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 208, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -6957,7 +7544,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7sigmoid_update(struct _
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 186, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 208, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -6966,14 +7553,14 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7sigmoid_update(struct _
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 186, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 208, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else
       #endif
       {
-        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 186, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 208, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         if (__pyx_t_5) {
           __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -6984,7 +7571,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7sigmoid_update(struct _
         __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
         PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
         __pyx_t_3 = 0;
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 186, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 208, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
@@ -6997,7 +7584,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7sigmoid_update(struct _
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "plasticnet/neurons/process.pyx":188
+  /* "plasticnet/neurons/process.pyx":210
  *     cpdef update(self,double t,simulation sim):
  *         cdef int i
  *         cdef double *y=<double *>self.n.linear_output.data             # <<<<<<<<<<<<<<
@@ -7006,7 +7593,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7sigmoid_update(struct _
  */
   __pyx_v_y = ((double *)__pyx_v_self->__pyx_base.n->linear_output->data);
 
-  /* "plasticnet/neurons/process.pyx":189
+  /* "plasticnet/neurons/process.pyx":211
  *         cdef int i
  *         cdef double *y=<double *>self.n.linear_output.data
  *         cdef double *z=<double *>self.n.output.data             # <<<<<<<<<<<<<<
@@ -7015,7 +7602,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7sigmoid_update(struct _
  */
   __pyx_v_z = ((double *)__pyx_v_self->__pyx_base.n->output->data);
 
-  /* "plasticnet/neurons/process.pyx":191
+  /* "plasticnet/neurons/process.pyx":213
  *         cdef double *z=<double *>self.n.output.data
  * 
  *         for i in range(self.n.N):             # <<<<<<<<<<<<<<
@@ -7026,7 +7613,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7sigmoid_update(struct _
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_6; __pyx_t_8+=1) {
     __pyx_v_i = __pyx_t_8;
 
-    /* "plasticnet/neurons/process.pyx":192
+    /* "plasticnet/neurons/process.pyx":214
  * 
  *         for i in range(self.n.N):
  *             if z[i]<0:             # <<<<<<<<<<<<<<
@@ -7036,7 +7623,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7sigmoid_update(struct _
     __pyx_t_9 = (((__pyx_v_z[__pyx_v_i]) < 0.0) != 0);
     if (__pyx_t_9) {
 
-      /* "plasticnet/neurons/process.pyx":193
+      /* "plasticnet/neurons/process.pyx":215
  *         for i in range(self.n.N):
  *             if z[i]<0:
  *                 z[i]=self.bottom*(2.0/(1.0+exp(-2.0*(z[i]/self.bottom)))-1.0)             # <<<<<<<<<<<<<<
@@ -7045,7 +7632,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7sigmoid_update(struct _
  */
       (__pyx_v_z[__pyx_v_i]) = (__pyx_v_self->bottom * ((2.0 / (1.0 + exp((-2.0 * ((__pyx_v_z[__pyx_v_i]) / __pyx_v_self->bottom))))) - 1.0));
 
-      /* "plasticnet/neurons/process.pyx":192
+      /* "plasticnet/neurons/process.pyx":214
  * 
  *         for i in range(self.n.N):
  *             if z[i]<0:             # <<<<<<<<<<<<<<
@@ -7055,7 +7642,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7sigmoid_update(struct _
       goto __pyx_L5;
     }
 
-    /* "plasticnet/neurons/process.pyx":195
+    /* "plasticnet/neurons/process.pyx":217
  *                 z[i]=self.bottom*(2.0/(1.0+exp(-2.0*(z[i]/self.bottom)))-1.0)
  *             else:
  *                 z[i]=self.top*(2.0/(1.0+exp(-2.0*(z[i]/self.top)))-1.0)             # <<<<<<<<<<<<<<
@@ -7068,7 +7655,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_7sigmoid_update(struct _
     __pyx_L5:;
   }
 
-  /* "plasticnet/neurons/process.pyx":186
+  /* "plasticnet/neurons/process.pyx":208
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -7122,11 +7709,11 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_7sigmoid_3update(PyObje
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 186, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 208, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 186, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 208, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -7134,18 +7721,18 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_7sigmoid_3update(PyObje
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 186, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 208, __pyx_L3_error)
     __pyx_v_sim = ((struct __pyx_obj_10plasticnet_10plasticnet_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 186, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 208, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.sigmoid.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 186, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 208, __pyx_L1_error)
   __pyx_r = __pyx_pf_10plasticnet_7neurons_7process_7sigmoid_2update(((struct __pyx_obj_10plasticnet_7neurons_7process_sigmoid *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -7163,7 +7750,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_7sigmoid_2update(struct
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_7sigmoid_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 186, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_7sigmoid_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 208, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7180,7 +7767,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_7sigmoid_2update(struct
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":177
+/* "plasticnet/neurons/process.pyx":199
  * 
  * cdef class sigmoid(post_process_neuron):
  *     cdef public double bottom,top             # <<<<<<<<<<<<<<
@@ -7207,7 +7794,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_7sigmoid_6bottom___get_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->bottom); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->bottom); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7242,7 +7829,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7sigmoid_6bottom_2__set__(str
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 199, __pyx_L1_error)
   __pyx_v_self->bottom = __pyx_t_1;
 
   /* function exit code */
@@ -7275,7 +7862,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_7sigmoid_3top___get__(s
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->top); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->top); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7310,7 +7897,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7sigmoid_3top_2__set__(struct
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 199, __pyx_L1_error)
   __pyx_v_self->top = __pyx_t_1;
 
   /* function exit code */
@@ -7324,7 +7911,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_7sigmoid_3top_2__set__(struct
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":201
+/* "plasticnet/neurons/process.pyx":223
  * cdef class log_transform(post_process_neuron):
  *     cdef public double scale,shift
  *     def __init__(self,double scale,double shift):             # <<<<<<<<<<<<<<
@@ -7360,11 +7947,11 @@ static int __pyx_pw_10plasticnet_7neurons_7process_13log_transform_1__init__(PyO
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_shift)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 201, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 223, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 201, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 223, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -7372,12 +7959,12 @@ static int __pyx_pw_10plasticnet_7neurons_7process_13log_transform_1__init__(PyO
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_scale = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_scale == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
-    __pyx_v_shift = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_shift == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L3_error)
+    __pyx_v_scale = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_scale == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 223, __pyx_L3_error)
+    __pyx_v_shift = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_shift == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 223, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 201, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 223, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.log_transform.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -7399,7 +7986,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13log_transform___init__(stru
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "plasticnet/neurons/process.pyx":202
+  /* "plasticnet/neurons/process.pyx":224
  *     cdef public double scale,shift
  *     def __init__(self,double scale,double shift):
  *         self.scale=scale             # <<<<<<<<<<<<<<
@@ -7408,7 +7995,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13log_transform___init__(stru
  */
   __pyx_v_self->scale = __pyx_v_scale;
 
-  /* "plasticnet/neurons/process.pyx":203
+  /* "plasticnet/neurons/process.pyx":225
  *     def __init__(self,double scale,double shift):
  *         self.scale=scale
  *         self.shift=shift             # <<<<<<<<<<<<<<
@@ -7417,14 +8004,14 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13log_transform___init__(stru
  */
   __pyx_v_self->shift = __pyx_v_shift;
 
-  /* "plasticnet/neurons/process.pyx":204
+  /* "plasticnet/neurons/process.pyx":226
  *         self.scale=scale
  *         self.shift=shift
  *         post_process_neuron.__init__(self)             # <<<<<<<<<<<<<<
  *         self.save_attrs+=['scale','shift']
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -7437,13 +8024,13 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13log_transform___init__(stru
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
@@ -7451,19 +8038,19 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13log_transform___init__(stru
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
     #endif
     {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 204, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 226, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __pyx_t_3 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_self));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, ((PyObject *)__pyx_v_self));
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
@@ -7471,14 +8058,14 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13log_transform___init__(stru
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "plasticnet/neurons/process.pyx":205
+  /* "plasticnet/neurons/process.pyx":227
  *         self.shift=shift
  *         post_process_neuron.__init__(self)
  *         self.save_attrs+=['scale','shift']             # <<<<<<<<<<<<<<
  * 
  *     @cython.cdivision(True)
  */
-  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 227, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_scale);
   __Pyx_GIVEREF(__pyx_n_s_scale);
@@ -7486,7 +8073,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13log_transform___init__(stru
   __Pyx_INCREF(__pyx_n_s_shift);
   __Pyx_GIVEREF(__pyx_n_s_shift);
   PyList_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_shift);
-  __pyx_t_2 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 205, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_InPlaceAdd(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 227, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_GIVEREF(__pyx_t_2);
@@ -7495,7 +8082,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13log_transform___init__(stru
   __pyx_v_self->__pyx_base.__pyx_base.save_attrs = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "plasticnet/neurons/process.pyx":201
+  /* "plasticnet/neurons/process.pyx":223
  * cdef class log_transform(post_process_neuron):
  *     cdef public double scale,shift
  *     def __init__(self,double scale,double shift):             # <<<<<<<<<<<<<<
@@ -7518,7 +8105,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13log_transform___init__(stru
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":209
+/* "plasticnet/neurons/process.pyx":231
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -7548,11 +8135,11 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13log_transform_update(s
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_7neurons_7process_13log_transform_3update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 209, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 231, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -7570,7 +8157,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13log_transform_update(s
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 209, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 231, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -7579,14 +8166,14 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13log_transform_update(s
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 209, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 231, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else
       #endif
       {
-        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 209, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 231, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         if (__pyx_t_5) {
           __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -7597,7 +8184,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13log_transform_update(s
         __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
         PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
         __pyx_t_3 = 0;
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 209, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 231, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
@@ -7610,7 +8197,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13log_transform_update(s
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "plasticnet/neurons/process.pyx":212
+  /* "plasticnet/neurons/process.pyx":234
  *         cdef int i
  *         cdef double value
  *         cdef double *y=<double *>self.n.linear_output.data             # <<<<<<<<<<<<<<
@@ -7619,7 +8206,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13log_transform_update(s
  */
   __pyx_v_y = ((double *)__pyx_v_self->__pyx_base.n->linear_output->data);
 
-  /* "plasticnet/neurons/process.pyx":213
+  /* "plasticnet/neurons/process.pyx":235
  *         cdef double value
  *         cdef double *y=<double *>self.n.linear_output.data
  *         cdef double *z=<double *>self.n.output.data             # <<<<<<<<<<<<<<
@@ -7628,7 +8215,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13log_transform_update(s
  */
   __pyx_v_z = ((double *)__pyx_v_self->__pyx_base.n->output->data);
 
-  /* "plasticnet/neurons/process.pyx":215
+  /* "plasticnet/neurons/process.pyx":237
  *         cdef double *z=<double *>self.n.output.data
  * 
  *         for i in range(self.n.N):             # <<<<<<<<<<<<<<
@@ -7639,7 +8226,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13log_transform_update(s
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_6; __pyx_t_8+=1) {
     __pyx_v_i = __pyx_t_8;
 
-    /* "plasticnet/neurons/process.pyx":216
+    /* "plasticnet/neurons/process.pyx":238
  * 
  *         for i in range(self.n.N):
  *             value=z[i]*self.scale + self.shift             # <<<<<<<<<<<<<<
@@ -7648,7 +8235,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13log_transform_update(s
  */
     __pyx_v_value = (((__pyx_v_z[__pyx_v_i]) * __pyx_v_self->scale) + __pyx_v_self->shift);
 
-    /* "plasticnet/neurons/process.pyx":217
+    /* "plasticnet/neurons/process.pyx":239
  *         for i in range(self.n.N):
  *             value=z[i]*self.scale + self.shift
  *             if value<0.0:             # <<<<<<<<<<<<<<
@@ -7658,7 +8245,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13log_transform_update(s
     __pyx_t_9 = ((__pyx_v_value < 0.0) != 0);
     if (__pyx_t_9) {
 
-      /* "plasticnet/neurons/process.pyx":218
+      /* "plasticnet/neurons/process.pyx":240
  *             value=z[i]*self.scale + self.shift
  *             if value<0.0:
  *                 value=0.0             # <<<<<<<<<<<<<<
@@ -7667,7 +8254,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13log_transform_update(s
  */
       __pyx_v_value = 0.0;
 
-      /* "plasticnet/neurons/process.pyx":217
+      /* "plasticnet/neurons/process.pyx":239
  *         for i in range(self.n.N):
  *             value=z[i]*self.scale + self.shift
  *             if value<0.0:             # <<<<<<<<<<<<<<
@@ -7676,7 +8263,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13log_transform_update(s
  */
     }
 
-    /* "plasticnet/neurons/process.pyx":220
+    /* "plasticnet/neurons/process.pyx":242
  *                 value=0.0
  * 
  *             z[i]= log(value+1)             # <<<<<<<<<<<<<<
@@ -7686,7 +8273,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_7process_13log_transform_update(s
     (__pyx_v_z[__pyx_v_i]) = log((__pyx_v_value + 1.0));
   }
 
-  /* "plasticnet/neurons/process.pyx":209
+  /* "plasticnet/neurons/process.pyx":231
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -7740,11 +8327,11 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_13log_transform_3update
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 209, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 231, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 209, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 231, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -7752,18 +8339,18 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_7process_13log_transform_3update
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 209, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 231, __pyx_L3_error)
     __pyx_v_sim = ((struct __pyx_obj_10plasticnet_10plasticnet_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 209, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 231, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.process.log_transform.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 209, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_10plasticnet_10plasticnet_simulation, 1, "sim", 0))) __PYX_ERR(0, 231, __pyx_L1_error)
   __pyx_r = __pyx_pf_10plasticnet_7neurons_7process_13log_transform_2update(((struct __pyx_obj_10plasticnet_7neurons_7process_log_transform *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -7781,7 +8368,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_13log_transform_2update
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_13log_transform_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_7process_13log_transform_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7798,7 +8385,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_13log_transform_2update
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/process.pyx":200
+/* "plasticnet/neurons/process.pyx":222
  * 
  * cdef class log_transform(post_process_neuron):
  *     cdef public double scale,shift             # <<<<<<<<<<<<<<
@@ -7825,7 +8412,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_13log_transform_5scale_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->scale); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->scale); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 222, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7860,7 +8447,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13log_transform_5scale_2__set
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 222, __pyx_L1_error)
   __pyx_v_self->scale = __pyx_t_1;
 
   /* function exit code */
@@ -7893,7 +8480,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_7process_13log_transform_5shift_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->shift); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->shift); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 222, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7928,7 +8515,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13log_transform_5shift_2__set
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 200, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 222, __pyx_L1_error)
   __pyx_v_self->shift = __pyx_t_1;
 
   /* function exit code */
@@ -7942,7 +8529,7 @@ static int __pyx_pf_10plasticnet_7neurons_7process_13log_transform_5shift_2__set
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":197
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":197
  *         # experimental exception made for __getbuffer__ and __releasebuffer__
  *         # -- the details of this may change.
  *         def __getbuffer__(ndarray self, Py_buffer* info, int flags):             # <<<<<<<<<<<<<<
@@ -7989,7 +8576,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_GIVEREF(__pyx_v_info->obj);
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":203
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":203
  *             # of flags
  * 
  *             if info == NULL: return             # <<<<<<<<<<<<<<
@@ -8002,7 +8589,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L0;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":206
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":206
  * 
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1             # <<<<<<<<<<<<<<
@@ -8011,7 +8598,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_endian_detector = 1;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":207
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":207
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
@@ -8020,7 +8607,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":209
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":209
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
  * 
  *             ndim = PyArray_NDIM(self)             # <<<<<<<<<<<<<<
@@ -8029,7 +8616,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_ndim = PyArray_NDIM(__pyx_v_self);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":211
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":211
  *             ndim = PyArray_NDIM(self)
  * 
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -8039,7 +8626,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = (((sizeof(npy_intp)) != (sizeof(Py_ssize_t))) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":212
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":212
  * 
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 copy_shape = 1             # <<<<<<<<<<<<<<
@@ -8048,7 +8635,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_copy_shape = 1;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":211
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":211
  *             ndim = PyArray_NDIM(self)
  * 
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -8058,7 +8645,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L4;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":214
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":214
  *                 copy_shape = 1
  *             else:
  *                 copy_shape = 0             # <<<<<<<<<<<<<<
@@ -8070,7 +8657,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L4:;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":216
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":216
  *                 copy_shape = 0
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -8084,7 +8671,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L6_bool_binop_done;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":217
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":217
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):             # <<<<<<<<<<<<<<
@@ -8095,7 +8682,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = __pyx_t_2;
   __pyx_L6_bool_binop_done:;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":216
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":216
  *                 copy_shape = 0
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -8104,7 +8691,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":218
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":218
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
@@ -8117,7 +8704,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(1, 218, __pyx_L1_error)
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":216
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":216
  *                 copy_shape = 0
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -8126,7 +8713,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":220
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":220
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -8140,7 +8727,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L9_bool_binop_done;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":221
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":221
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):             # <<<<<<<<<<<<<<
@@ -8151,7 +8738,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = __pyx_t_2;
   __pyx_L9_bool_binop_done:;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":220
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":220
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -8160,7 +8747,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":222
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":222
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
@@ -8173,7 +8760,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(1, 222, __pyx_L1_error)
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":220
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":220
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -8182,7 +8769,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":224
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":224
  *                 raise ValueError(u"ndarray is not Fortran contiguous")
  * 
  *             info.buf = PyArray_DATA(self)             # <<<<<<<<<<<<<<
@@ -8191,7 +8778,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->buf = PyArray_DATA(__pyx_v_self);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":225
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":225
  * 
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim             # <<<<<<<<<<<<<<
@@ -8200,7 +8787,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->ndim = __pyx_v_ndim;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":226
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":226
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim
  *             if copy_shape:             # <<<<<<<<<<<<<<
@@ -8210,7 +8797,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = (__pyx_v_copy_shape != 0);
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":229
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":229
  *                 # Allocate new buffer for strides and shape info.
  *                 # This is allocated as one block, strides first.
  *                 info.strides = <Py_ssize_t*>stdlib.malloc(sizeof(Py_ssize_t) * <size_t>ndim * 2)             # <<<<<<<<<<<<<<
@@ -8219,7 +8806,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->strides = ((Py_ssize_t *)malloc((((sizeof(Py_ssize_t)) * ((size_t)__pyx_v_ndim)) * 2)));
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":230
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":230
  *                 # This is allocated as one block, strides first.
  *                 info.strides = <Py_ssize_t*>stdlib.malloc(sizeof(Py_ssize_t) * <size_t>ndim * 2)
  *                 info.shape = info.strides + ndim             # <<<<<<<<<<<<<<
@@ -8228,7 +8815,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->shape = (__pyx_v_info->strides + __pyx_v_ndim);
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":231
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":231
  *                 info.strides = <Py_ssize_t*>stdlib.malloc(sizeof(Py_ssize_t) * <size_t>ndim * 2)
  *                 info.shape = info.strides + ndim
  *                 for i in range(ndim):             # <<<<<<<<<<<<<<
@@ -8239,7 +8826,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
       __pyx_v_i = __pyx_t_5;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":232
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":232
  *                 info.shape = info.strides + ndim
  *                 for i in range(ndim):
  *                     info.strides[i] = PyArray_STRIDES(self)[i]             # <<<<<<<<<<<<<<
@@ -8248,7 +8835,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
       (__pyx_v_info->strides[__pyx_v_i]) = (PyArray_STRIDES(__pyx_v_self)[__pyx_v_i]);
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":233
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":233
  *                 for i in range(ndim):
  *                     info.strides[i] = PyArray_STRIDES(self)[i]
  *                     info.shape[i] = PyArray_DIMS(self)[i]             # <<<<<<<<<<<<<<
@@ -8258,7 +8845,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       (__pyx_v_info->shape[__pyx_v_i]) = (PyArray_DIMS(__pyx_v_self)[__pyx_v_i]);
     }
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":226
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":226
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim
  *             if copy_shape:             # <<<<<<<<<<<<<<
@@ -8268,7 +8855,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L11;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":235
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":235
  *                     info.shape[i] = PyArray_DIMS(self)[i]
  *             else:
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)             # <<<<<<<<<<<<<<
@@ -8278,7 +8865,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   /*else*/ {
     __pyx_v_info->strides = ((Py_ssize_t *)PyArray_STRIDES(__pyx_v_self));
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":236
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":236
  *             else:
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)             # <<<<<<<<<<<<<<
@@ -8289,7 +8876,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L11:;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":237
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":237
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)
  *             info.suboffsets = NULL             # <<<<<<<<<<<<<<
@@ -8298,7 +8885,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->suboffsets = NULL;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":238
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":238
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)             # <<<<<<<<<<<<<<
@@ -8307,7 +8894,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->itemsize = PyArray_ITEMSIZE(__pyx_v_self);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":239
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":239
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)
  *             info.readonly = not PyArray_ISWRITEABLE(self)             # <<<<<<<<<<<<<<
@@ -8316,7 +8903,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->readonly = (!(PyArray_ISWRITEABLE(__pyx_v_self) != 0));
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":242
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":242
  * 
  *             cdef int t
  *             cdef char* f = NULL             # <<<<<<<<<<<<<<
@@ -8325,7 +8912,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_f = NULL;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":243
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":243
  *             cdef int t
  *             cdef char* f = NULL
  *             cdef dtype descr = self.descr             # <<<<<<<<<<<<<<
@@ -8337,7 +8924,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_v_descr = ((PyArray_Descr *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":246
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":246
  *             cdef int offset
  * 
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)             # <<<<<<<<<<<<<<
@@ -8346,7 +8933,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_hasfields = PyDataType_HASFIELDS(__pyx_v_descr);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":248
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":248
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)
  * 
  *             if not hasfields and not copy_shape:             # <<<<<<<<<<<<<<
@@ -8364,7 +8951,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_L15_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":250
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":250
  *             if not hasfields and not copy_shape:
  *                 # do not call releasebuffer
  *                 info.obj = None             # <<<<<<<<<<<<<<
@@ -8377,7 +8964,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_DECREF(__pyx_v_info->obj);
     __pyx_v_info->obj = Py_None;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":248
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":248
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)
  * 
  *             if not hasfields and not copy_shape:             # <<<<<<<<<<<<<<
@@ -8387,7 +8974,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L14;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":253
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":253
  *             else:
  *                 # need to call releasebuffer
  *                 info.obj = self             # <<<<<<<<<<<<<<
@@ -8403,7 +8990,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L14:;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":255
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":255
  *                 info.obj = self
  * 
  *             if not hasfields:             # <<<<<<<<<<<<<<
@@ -8413,7 +9000,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = ((!(__pyx_v_hasfields != 0)) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":256
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":256
  * 
  *             if not hasfields:
  *                 t = descr.type_num             # <<<<<<<<<<<<<<
@@ -8423,7 +9010,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_4 = __pyx_v_descr->type_num;
     __pyx_v_t = __pyx_t_4;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":257
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":257
  *             if not hasfields:
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -8443,7 +9030,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     }
     __pyx_L20_next_or:;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":258
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":258
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):             # <<<<<<<<<<<<<<
@@ -8460,7 +9047,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_1 = __pyx_t_2;
     __pyx_L19_bool_binop_done:;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":257
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":257
  *             if not hasfields:
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -8469,7 +9056,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     if (__pyx_t_1) {
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":259
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":259
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -8482,7 +9069,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __PYX_ERR(1, 259, __pyx_L1_error)
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":257
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":257
  *             if not hasfields:
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -8491,7 +9078,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     }
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":260
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":260
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")
  *                 if   t == NPY_BYTE:        f = "b"             # <<<<<<<<<<<<<<
@@ -8503,7 +9090,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"b");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":261
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":261
  *                     raise ValueError(u"Non-native byte order not supported")
  *                 if   t == NPY_BYTE:        f = "b"
  *                 elif t == NPY_UBYTE:       f = "B"             # <<<<<<<<<<<<<<
@@ -8514,7 +9101,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"B");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":262
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":262
  *                 if   t == NPY_BYTE:        f = "b"
  *                 elif t == NPY_UBYTE:       f = "B"
  *                 elif t == NPY_SHORT:       f = "h"             # <<<<<<<<<<<<<<
@@ -8525,7 +9112,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"h");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":263
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":263
  *                 elif t == NPY_UBYTE:       f = "B"
  *                 elif t == NPY_SHORT:       f = "h"
  *                 elif t == NPY_USHORT:      f = "H"             # <<<<<<<<<<<<<<
@@ -8536,7 +9123,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"H");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":264
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":264
  *                 elif t == NPY_SHORT:       f = "h"
  *                 elif t == NPY_USHORT:      f = "H"
  *                 elif t == NPY_INT:         f = "i"             # <<<<<<<<<<<<<<
@@ -8547,7 +9134,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"i");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":265
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":265
  *                 elif t == NPY_USHORT:      f = "H"
  *                 elif t == NPY_INT:         f = "i"
  *                 elif t == NPY_UINT:        f = "I"             # <<<<<<<<<<<<<<
@@ -8558,7 +9145,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"I");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":266
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":266
  *                 elif t == NPY_INT:         f = "i"
  *                 elif t == NPY_UINT:        f = "I"
  *                 elif t == NPY_LONG:        f = "l"             # <<<<<<<<<<<<<<
@@ -8569,7 +9156,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"l");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":267
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":267
  *                 elif t == NPY_UINT:        f = "I"
  *                 elif t == NPY_LONG:        f = "l"
  *                 elif t == NPY_ULONG:       f = "L"             # <<<<<<<<<<<<<<
@@ -8580,7 +9167,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"L");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":268
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":268
  *                 elif t == NPY_LONG:        f = "l"
  *                 elif t == NPY_ULONG:       f = "L"
  *                 elif t == NPY_LONGLONG:    f = "q"             # <<<<<<<<<<<<<<
@@ -8591,7 +9178,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"q");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":269
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":269
  *                 elif t == NPY_ULONG:       f = "L"
  *                 elif t == NPY_LONGLONG:    f = "q"
  *                 elif t == NPY_ULONGLONG:   f = "Q"             # <<<<<<<<<<<<<<
@@ -8602,7 +9189,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"Q");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":270
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":270
  *                 elif t == NPY_LONGLONG:    f = "q"
  *                 elif t == NPY_ULONGLONG:   f = "Q"
  *                 elif t == NPY_FLOAT:       f = "f"             # <<<<<<<<<<<<<<
@@ -8613,7 +9200,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"f");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":271
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":271
  *                 elif t == NPY_ULONGLONG:   f = "Q"
  *                 elif t == NPY_FLOAT:       f = "f"
  *                 elif t == NPY_DOUBLE:      f = "d"             # <<<<<<<<<<<<<<
@@ -8624,7 +9211,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"d");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":272
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":272
  *                 elif t == NPY_FLOAT:       f = "f"
  *                 elif t == NPY_DOUBLE:      f = "d"
  *                 elif t == NPY_LONGDOUBLE:  f = "g"             # <<<<<<<<<<<<<<
@@ -8635,7 +9222,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"g");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":273
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":273
  *                 elif t == NPY_DOUBLE:      f = "d"
  *                 elif t == NPY_LONGDOUBLE:  f = "g"
  *                 elif t == NPY_CFLOAT:      f = "Zf"             # <<<<<<<<<<<<<<
@@ -8646,7 +9233,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"Zf");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":274
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":274
  *                 elif t == NPY_LONGDOUBLE:  f = "g"
  *                 elif t == NPY_CFLOAT:      f = "Zf"
  *                 elif t == NPY_CDOUBLE:     f = "Zd"             # <<<<<<<<<<<<<<
@@ -8657,7 +9244,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"Zd");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":275
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":275
  *                 elif t == NPY_CFLOAT:      f = "Zf"
  *                 elif t == NPY_CDOUBLE:     f = "Zd"
  *                 elif t == NPY_CLONGDOUBLE: f = "Zg"             # <<<<<<<<<<<<<<
@@ -8668,7 +9255,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"Zg");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":276
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":276
  *                 elif t == NPY_CDOUBLE:     f = "Zd"
  *                 elif t == NPY_CLONGDOUBLE: f = "Zg"
  *                 elif t == NPY_OBJECT:      f = "O"             # <<<<<<<<<<<<<<
@@ -8680,7 +9267,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       default:
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":278
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":278
  *                 elif t == NPY_OBJECT:      f = "O"
  *                 else:
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)             # <<<<<<<<<<<<<<
@@ -8706,7 +9293,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
     }
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":279
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":279
  *                 else:
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *                 info.format = f             # <<<<<<<<<<<<<<
@@ -8715,7 +9302,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->format = __pyx_v_f;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":280
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":280
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *                 info.format = f
  *                 return             # <<<<<<<<<<<<<<
@@ -8725,7 +9312,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_r = 0;
     goto __pyx_L0;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":255
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":255
  *                 info.obj = self
  * 
  *             if not hasfields:             # <<<<<<<<<<<<<<
@@ -8734,7 +9321,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":282
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":282
  *                 return
  *             else:
  *                 info.format = <char*>stdlib.malloc(_buffer_format_string_len)             # <<<<<<<<<<<<<<
@@ -8744,7 +9331,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   /*else*/ {
     __pyx_v_info->format = ((char *)malloc(0xFF));
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":283
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":283
  *             else:
  *                 info.format = <char*>stdlib.malloc(_buffer_format_string_len)
  *                 info.format[0] = c'^' # Native data types, manual alignment             # <<<<<<<<<<<<<<
@@ -8753,7 +9340,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     (__pyx_v_info->format[0]) = '^';
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":284
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":284
  *                 info.format = <char*>stdlib.malloc(_buffer_format_string_len)
  *                 info.format[0] = c'^' # Native data types, manual alignment
  *                 offset = 0             # <<<<<<<<<<<<<<
@@ -8762,7 +9349,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_offset = 0;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":285
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":285
  *                 info.format[0] = c'^' # Native data types, manual alignment
  *                 offset = 0
  *                 f = _util_dtypestring(descr, info.format + 1,             # <<<<<<<<<<<<<<
@@ -8772,7 +9359,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_7 = __pyx_f_5numpy__util_dtypestring(__pyx_v_descr, (__pyx_v_info->format + 1), (__pyx_v_info->format + 0xFF), (&__pyx_v_offset)); if (unlikely(__pyx_t_7 == NULL)) __PYX_ERR(1, 285, __pyx_L1_error)
     __pyx_v_f = __pyx_t_7;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":288
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":288
  *                                       info.format + _buffer_format_string_len,
  *                                       &offset)
  *                 f[0] = c'\0' # Terminate format string             # <<<<<<<<<<<<<<
@@ -8782,7 +9369,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     (__pyx_v_f[0]) = '\x00';
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":197
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":197
  *         # experimental exception made for __getbuffer__ and __releasebuffer__
  *         # -- the details of this may change.
  *         def __getbuffer__(ndarray self, Py_buffer* info, int flags):             # <<<<<<<<<<<<<<
@@ -8814,7 +9401,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":290
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":290
  *                 f[0] = c'\0' # Terminate format string
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
@@ -8838,7 +9425,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("__releasebuffer__", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":291
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":291
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):             # <<<<<<<<<<<<<<
@@ -8848,7 +9435,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __pyx_t_1 = (PyArray_HASFIELDS(__pyx_v_self) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":292
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":292
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)             # <<<<<<<<<<<<<<
@@ -8857,7 +9444,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
     free(__pyx_v_info->format);
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":291
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":291
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):             # <<<<<<<<<<<<<<
@@ -8866,7 +9453,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":293
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":293
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -8876,7 +9463,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __pyx_t_1 = (((sizeof(npy_intp)) != (sizeof(Py_ssize_t))) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":294
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":294
  *                 stdlib.free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 stdlib.free(info.strides)             # <<<<<<<<<<<<<<
@@ -8885,7 +9472,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
     free(__pyx_v_info->strides);
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":293
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":293
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -8894,7 +9481,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":290
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":290
  *                 f[0] = c'\0' # Terminate format string
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
@@ -8906,7 +9493,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __Pyx_RefNannyFinishContext();
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":770
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":770
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -8920,7 +9507,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":771
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":771
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -8934,7 +9521,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":770
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":770
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -8953,7 +9540,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":773
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":773
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -8967,7 +9554,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":774
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":774
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -8981,7 +9568,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":773
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":773
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -9000,7 +9587,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":776
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":776
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -9014,7 +9601,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":777
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":777
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -9028,7 +9615,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":776
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":776
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -9047,7 +9634,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":779
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":779
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -9061,7 +9648,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":780
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":780
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -9075,7 +9662,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":779
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":779
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -9094,7 +9681,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":782
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":782
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -9108,7 +9695,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":783
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":783
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -9122,7 +9709,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":782
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":782
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -9141,7 +9728,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":785
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":785
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
@@ -9170,7 +9757,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   char *__pyx_t_9;
   __Pyx_RefNannySetupContext("_util_dtypestring", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":790
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":790
  * 
  *     cdef dtype child
  *     cdef int endian_detector = 1             # <<<<<<<<<<<<<<
@@ -9179,7 +9766,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
   __pyx_v_endian_detector = 1;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":791
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":791
  *     cdef dtype child
  *     cdef int endian_detector = 1
  *     cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
@@ -9188,7 +9775,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":794
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":794
  *     cdef tuple fields
  * 
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
@@ -9211,7 +9798,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_childname, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":795
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":795
  * 
  *     for childname in descr.names:
  *         fields = descr.fields[childname]             # <<<<<<<<<<<<<<
@@ -9228,7 +9815,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_fields, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":796
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":796
  *     for childname in descr.names:
  *         fields = descr.fields[childname]
  *         child, new_offset = fields             # <<<<<<<<<<<<<<
@@ -9267,7 +9854,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_new_offset, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":798
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":798
  *         child, new_offset = fields
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:             # <<<<<<<<<<<<<<
@@ -9284,7 +9871,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = ((((__pyx_v_end - __pyx_v_f) - ((int)__pyx_t_5)) < 15) != 0);
     if (__pyx_t_6) {
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":799
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":799
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
@@ -9297,7 +9884,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __PYX_ERR(1, 799, __pyx_L1_error)
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":798
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":798
  *         child, new_offset = fields
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:             # <<<<<<<<<<<<<<
@@ -9306,7 +9893,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
     }
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":801
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":801
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -9326,7 +9913,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     }
     __pyx_L8_next_or:;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":802
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":802
  * 
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):             # <<<<<<<<<<<<<<
@@ -9343,7 +9930,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = __pyx_t_7;
     __pyx_L7_bool_binop_done:;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":801
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":801
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -9352,7 +9939,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
     if (__pyx_t_6) {
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":803
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":803
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):
  *             raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -9365,7 +9952,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __PYX_ERR(1, 803, __pyx_L1_error)
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":801
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":801
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -9374,7 +9961,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
     }
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":813
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":813
  * 
  *         # Output padding bytes
  *         while offset[0] < new_offset:             # <<<<<<<<<<<<<<
@@ -9390,7 +9977,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       if (!__pyx_t_6) break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":814
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":814
  *         # Output padding bytes
  *         while offset[0] < new_offset:
  *             f[0] = 120 # "x"; pad byte             # <<<<<<<<<<<<<<
@@ -9399,7 +9986,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       (__pyx_v_f[0]) = 0x78;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":815
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":815
  *         while offset[0] < new_offset:
  *             f[0] = 120 # "x"; pad byte
  *             f += 1             # <<<<<<<<<<<<<<
@@ -9408,7 +9995,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       __pyx_v_f = (__pyx_v_f + 1);
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":816
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":816
  *             f[0] = 120 # "x"; pad byte
  *             f += 1
  *             offset[0] += 1             # <<<<<<<<<<<<<<
@@ -9419,7 +10006,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       (__pyx_v_offset[__pyx_t_8]) = ((__pyx_v_offset[__pyx_t_8]) + 1);
     }
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":818
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":818
  *             offset[0] += 1
  * 
  *         offset[0] += child.itemsize             # <<<<<<<<<<<<<<
@@ -9429,7 +10016,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_8 = 0;
     (__pyx_v_offset[__pyx_t_8]) = ((__pyx_v_offset[__pyx_t_8]) + __pyx_v_child->elsize);
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":820
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":820
  *         offset[0] += child.itemsize
  * 
  *         if not PyDataType_HASFIELDS(child):             # <<<<<<<<<<<<<<
@@ -9439,7 +10026,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = ((!(PyDataType_HASFIELDS(__pyx_v_child) != 0)) != 0);
     if (__pyx_t_6) {
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":821
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":821
  * 
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num             # <<<<<<<<<<<<<<
@@ -9451,7 +10038,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_XDECREF_SET(__pyx_v_t, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":822
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":822
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num
  *             if end - f < 5:             # <<<<<<<<<<<<<<
@@ -9461,7 +10048,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __pyx_t_6 = (((__pyx_v_end - __pyx_v_f) < 5) != 0);
       if (__pyx_t_6) {
 
-        /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":823
+        /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":823
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
@@ -9474,7 +10061,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __PYX_ERR(1, 823, __pyx_L1_error)
 
-        /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":822
+        /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":822
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num
  *             if end - f < 5:             # <<<<<<<<<<<<<<
@@ -9483,7 +10070,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":826
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":826
  * 
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"             # <<<<<<<<<<<<<<
@@ -9501,7 +10088,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":827
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":827
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"             # <<<<<<<<<<<<<<
@@ -9519,7 +10106,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":828
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":828
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"             # <<<<<<<<<<<<<<
@@ -9537,7 +10124,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":829
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":829
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"             # <<<<<<<<<<<<<<
@@ -9555,7 +10142,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":830
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":830
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"
  *             elif t == NPY_INT:         f[0] = 105 #"i"             # <<<<<<<<<<<<<<
@@ -9573,7 +10160,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":831
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":831
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"
  *             elif t == NPY_INT:         f[0] = 105 #"i"
  *             elif t == NPY_UINT:        f[0] =  73 #"I"             # <<<<<<<<<<<<<<
@@ -9591,7 +10178,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":832
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":832
  *             elif t == NPY_INT:         f[0] = 105 #"i"
  *             elif t == NPY_UINT:        f[0] =  73 #"I"
  *             elif t == NPY_LONG:        f[0] = 108 #"l"             # <<<<<<<<<<<<<<
@@ -9609,7 +10196,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":833
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":833
  *             elif t == NPY_UINT:        f[0] =  73 #"I"
  *             elif t == NPY_LONG:        f[0] = 108 #"l"
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"             # <<<<<<<<<<<<<<
@@ -9627,7 +10214,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":834
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":834
  *             elif t == NPY_LONG:        f[0] = 108 #"l"
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"             # <<<<<<<<<<<<<<
@@ -9645,7 +10232,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":835
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":835
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"             # <<<<<<<<<<<<<<
@@ -9663,7 +10250,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":836
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":836
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"             # <<<<<<<<<<<<<<
@@ -9681,7 +10268,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":837
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":837
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"             # <<<<<<<<<<<<<<
@@ -9699,7 +10286,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":838
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":838
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"             # <<<<<<<<<<<<<<
@@ -9717,7 +10304,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":839
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":839
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf             # <<<<<<<<<<<<<<
@@ -9737,7 +10324,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":840
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":840
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd             # <<<<<<<<<<<<<<
@@ -9757,7 +10344,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":841
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":841
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd
  *             elif t == NPY_CLONGDOUBLE: f[0] = 90; f[1] = 103; f += 1 # Zg             # <<<<<<<<<<<<<<
@@ -9777,7 +10364,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":842
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":842
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd
  *             elif t == NPY_CLONGDOUBLE: f[0] = 90; f[1] = 103; f += 1 # Zg
  *             elif t == NPY_OBJECT:      f[0] = 79 #"O"             # <<<<<<<<<<<<<<
@@ -9795,7 +10382,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":844
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":844
  *             elif t == NPY_OBJECT:      f[0] = 79 #"O"
  *             else:
  *                 raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)             # <<<<<<<<<<<<<<
@@ -9819,7 +10406,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       }
       __pyx_L15:;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":845
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":845
  *             else:
  *                 raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *             f += 1             # <<<<<<<<<<<<<<
@@ -9828,7 +10415,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       __pyx_v_f = (__pyx_v_f + 1);
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":820
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":820
  *         offset[0] += child.itemsize
  * 
  *         if not PyDataType_HASFIELDS(child):             # <<<<<<<<<<<<<<
@@ -9838,7 +10425,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       goto __pyx_L13;
     }
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":849
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":849
  *             # Cython ignores struct boundary information ("T{...}"),
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)             # <<<<<<<<<<<<<<
@@ -9851,7 +10438,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     }
     __pyx_L13:;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":794
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":794
  *     cdef tuple fields
  * 
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
@@ -9861,7 +10448,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":850
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":850
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)
  *     return f             # <<<<<<<<<<<<<<
@@ -9871,7 +10458,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   __pyx_r = __pyx_v_f;
   goto __pyx_L0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":785
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":785
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
@@ -9896,7 +10483,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":966
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":966
  * 
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -9911,7 +10498,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   int __pyx_t_2;
   __Pyx_RefNannySetupContext("set_array_base", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":968
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":968
  * cdef inline void set_array_base(ndarray arr, object base):
  *      cdef PyObject* baseptr
  *      if base is None:             # <<<<<<<<<<<<<<
@@ -9922,7 +10509,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":969
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":969
  *      cdef PyObject* baseptr
  *      if base is None:
  *          baseptr = NULL             # <<<<<<<<<<<<<<
@@ -9931,7 +10518,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
     __pyx_v_baseptr = NULL;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":968
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":968
  * cdef inline void set_array_base(ndarray arr, object base):
  *      cdef PyObject* baseptr
  *      if base is None:             # <<<<<<<<<<<<<<
@@ -9941,7 +10528,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
     goto __pyx_L3;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":971
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":971
  *          baseptr = NULL
  *      else:
  *          Py_INCREF(base) # important to do this before decref below!             # <<<<<<<<<<<<<<
@@ -9951,7 +10538,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   /*else*/ {
     Py_INCREF(__pyx_v_base);
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":972
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":972
  *      else:
  *          Py_INCREF(base) # important to do this before decref below!
  *          baseptr = <PyObject*>base             # <<<<<<<<<<<<<<
@@ -9962,7 +10549,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   }
   __pyx_L3:;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":973
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":973
  *          Py_INCREF(base) # important to do this before decref below!
  *          baseptr = <PyObject*>base
  *      Py_XDECREF(arr.base)             # <<<<<<<<<<<<<<
@@ -9971,7 +10558,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_XDECREF(__pyx_v_arr->base);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":974
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":974
  *          baseptr = <PyObject*>base
  *      Py_XDECREF(arr.base)
  *      arr.base = baseptr             # <<<<<<<<<<<<<<
@@ -9980,7 +10567,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   __pyx_v_arr->base = __pyx_v_baseptr;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":966
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":966
  * 
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -9992,7 +10579,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyFinishContext();
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":976
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":976
  *      arr.base = baseptr
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -10006,7 +10593,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":977
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":977
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     if arr.base is NULL:             # <<<<<<<<<<<<<<
@@ -10016,7 +10603,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = ((__pyx_v_arr->base == NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":978
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":978
  * cdef inline object get_array_base(ndarray arr):
  *     if arr.base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -10028,7 +10615,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     __pyx_r = Py_None;
     goto __pyx_L0;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":977
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":977
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     if arr.base is NULL:             # <<<<<<<<<<<<<<
@@ -10037,7 +10624,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":980
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":980
  *         return None
  *     else:
  *         return <object>arr.base             # <<<<<<<<<<<<<<
@@ -10051,7 +10638,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     goto __pyx_L0;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":976
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":976
  *      arr.base = baseptr
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -10066,7 +10653,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":985
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":985
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -10087,7 +10674,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("import_array", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":986
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":986
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -10103,7 +10690,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":987
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":987
  * cdef inline int import_array() except -1:
  *     try:
  *         _import_array()             # <<<<<<<<<<<<<<
@@ -10112,7 +10699,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
  */
       __pyx_t_4 = _import_array(); if (unlikely(__pyx_t_4 == -1)) __PYX_ERR(1, 987, __pyx_L3_error)
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":986
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":986
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -10127,7 +10714,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L3_error:;
     __Pyx_PyThreadState_assign
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":988
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":988
  *     try:
  *         _import_array()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -10142,7 +10729,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":989
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":989
  *         _import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -10158,7 +10745,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":986
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":986
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -10174,7 +10761,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L10_try_end:;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":985
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":985
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -10197,7 +10784,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":991
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":991
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -10218,7 +10805,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("import_umath", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":992
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":992
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -10234,7 +10821,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":993
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":993
  * cdef inline int import_umath() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -10243,7 +10830,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == -1)) __PYX_ERR(1, 993, __pyx_L3_error)
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":992
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":992
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -10258,7 +10845,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L3_error:;
     __Pyx_PyThreadState_assign
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":994
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":994
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -10273,7 +10860,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":995
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":995
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -10289,7 +10876,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":992
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":992
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -10305,7 +10892,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L10_try_end:;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":991
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":991
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -10328,7 +10915,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":997
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":997
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -10349,7 +10936,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("import_ufunc", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":998
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":998
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -10365,7 +10952,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":999
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":999
  * cdef inline int import_ufunc() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -10374,7 +10961,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == -1)) __PYX_ERR(1, 999, __pyx_L3_error)
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":998
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":998
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -10389,7 +10976,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L3_error:;
     __Pyx_PyThreadState_assign
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":1000
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":1000
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -10403,7 +10990,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":1001
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":1001
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -10417,7 +11004,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":998
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":998
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -10433,7 +11020,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L10_try_end:;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":997
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":997
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -10455,6 +11042,131 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
+static struct __pyx_vtabstruct_10plasticnet_7neurons_7process_zero_fraction __pyx_vtable_10plasticnet_7neurons_7process_zero_fraction;
+
+static PyObject *__pyx_tp_new_10plasticnet_7neurons_7process_zero_fraction(PyTypeObject *t, PyObject *a, PyObject *k) {
+  struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *p;
+  PyObject *o = __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron->tp_new(t, a, k);
+  if (unlikely(!o)) return 0;
+  p = ((struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *)o);
+  p->__pyx_base.__pyx_vtab = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron*)__pyx_vtabptr_10plasticnet_7neurons_7process_zero_fraction;
+  p->fraction = Py_None; Py_INCREF(Py_None);
+  return o;
+}
+
+static void __pyx_tp_dealloc_10plasticnet_7neurons_7process_zero_fraction(PyObject *o) {
+  struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *p = (struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *)o;
+  #if PY_VERSION_HEX >= 0x030400a1
+  if (unlikely(Py_TYPE(o)->tp_finalize) && !_PyGC_FINALIZED(o)) {
+    if (PyObject_CallFinalizerFromDealloc(o)) return;
+  }
+  #endif
+  PyObject_GC_UnTrack(o);
+  Py_CLEAR(p->fraction);
+  PyObject_GC_Track(o);
+  if (likely(__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron)) __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron->tp_dealloc(o); else __Pyx_call_next_tp_dealloc(o, __pyx_tp_dealloc_10plasticnet_7neurons_7process_zero_fraction);
+}
+
+static int __pyx_tp_traverse_10plasticnet_7neurons_7process_zero_fraction(PyObject *o, visitproc v, void *a) {
+  int e;
+  struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *p = (struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *)o;
+  e = ((likely(__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron)) ? ((__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron->tp_traverse) ? __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron->tp_traverse(o, v, a) : 0) : __Pyx_call_next_tp_traverse(o, v, a, __pyx_tp_traverse_10plasticnet_7neurons_7process_zero_fraction)); if (e) return e;
+  if (p->fraction) {
+    e = (*v)(p->fraction, a); if (e) return e;
+  }
+  return 0;
+}
+
+static int __pyx_tp_clear_10plasticnet_7neurons_7process_zero_fraction(PyObject *o) {
+  PyObject* tmp;
+  struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *p = (struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction *)o;
+  if (likely(__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron)) { if (__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron->tp_clear) __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron->tp_clear(o); } else __Pyx_call_next_tp_clear(o, __pyx_tp_clear_10plasticnet_7neurons_7process_zero_fraction);
+  tmp = ((PyObject*)p->fraction);
+  p->fraction = Py_None; Py_INCREF(Py_None);
+  Py_XDECREF(tmp);
+  return 0;
+}
+
+static PyObject *__pyx_getprop_10plasticnet_7neurons_7process_13zero_fraction_fraction(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_8fraction_1__get__(o);
+}
+
+static int __pyx_setprop_10plasticnet_7neurons_7process_13zero_fraction_fraction(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_8fraction_3__set__(o, v);
+  }
+  else {
+    return __pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_8fraction_5__del__(o);
+  }
+}
+
+static PyMethodDef __pyx_methods_10plasticnet_7neurons_7process_zero_fraction[] = {
+  {"update", (PyCFunction)__pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_3update, METH_VARARGS|METH_KEYWORDS, 0},
+  {0, 0, 0, 0}
+};
+
+static struct PyGetSetDef __pyx_getsets_10plasticnet_7neurons_7process_zero_fraction[] = {
+  {(char *)"fraction", __pyx_getprop_10plasticnet_7neurons_7process_13zero_fraction_fraction, __pyx_setprop_10plasticnet_7neurons_7process_13zero_fraction_fraction, (char *)0, 0},
+  {0, 0, 0, 0, 0}
+};
+
+static PyTypeObject __pyx_type_10plasticnet_7neurons_7process_zero_fraction = {
+  PyVarObject_HEAD_INIT(0, 0)
+  "plasticnet.neurons.process.zero_fraction", /*tp_name*/
+  sizeof(struct __pyx_obj_10plasticnet_7neurons_7process_zero_fraction), /*tp_basicsize*/
+  0, /*tp_itemsize*/
+  __pyx_tp_dealloc_10plasticnet_7neurons_7process_zero_fraction, /*tp_dealloc*/
+  0, /*tp_print*/
+  0, /*tp_getattr*/
+  0, /*tp_setattr*/
+  #if PY_MAJOR_VERSION < 3
+  0, /*tp_compare*/
+  #endif
+  #if PY_MAJOR_VERSION >= 3
+  0, /*tp_as_async*/
+  #endif
+  0, /*tp_repr*/
+  0, /*tp_as_number*/
+  0, /*tp_as_sequence*/
+  0, /*tp_as_mapping*/
+  0, /*tp_hash*/
+  0, /*tp_call*/
+  0, /*tp_str*/
+  0, /*tp_getattro*/
+  0, /*tp_setattro*/
+  0, /*tp_as_buffer*/
+  Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
+  0, /*tp_doc*/
+  __pyx_tp_traverse_10plasticnet_7neurons_7process_zero_fraction, /*tp_traverse*/
+  __pyx_tp_clear_10plasticnet_7neurons_7process_zero_fraction, /*tp_clear*/
+  0, /*tp_richcompare*/
+  0, /*tp_weaklistoffset*/
+  0, /*tp_iter*/
+  0, /*tp_iternext*/
+  __pyx_methods_10plasticnet_7neurons_7process_zero_fraction, /*tp_methods*/
+  0, /*tp_members*/
+  __pyx_getsets_10plasticnet_7neurons_7process_zero_fraction, /*tp_getset*/
+  0, /*tp_base*/
+  0, /*tp_dict*/
+  0, /*tp_descr_get*/
+  0, /*tp_descr_set*/
+  0, /*tp_dictoffset*/
+  __pyx_pw_10plasticnet_7neurons_7process_13zero_fraction_1__init__, /*tp_init*/
+  0, /*tp_alloc*/
+  __pyx_tp_new_10plasticnet_7neurons_7process_zero_fraction, /*tp_new*/
+  0, /*tp_free*/
+  0, /*tp_is_gc*/
+  0, /*tp_bases*/
+  0, /*tp_mro*/
+  0, /*tp_cache*/
+  0, /*tp_subclasses*/
+  0, /*tp_weaklist*/
+  0, /*tp_del*/
+  0, /*tp_version_tag*/
+  #if PY_VERSION_HEX >= 0x030400a1
+  0, /*tp_finalize*/
+  #endif
+};
 static struct __pyx_vtabstruct_10plasticnet_7neurons_7process_add_noise_normal __pyx_vtable_10plasticnet_7neurons_7process_add_noise_normal;
 
 static PyObject *__pyx_tp_new_10plasticnet_7neurons_7process_add_noise_normal(PyTypeObject *t, PyObject *a, PyObject *k) {
@@ -11670,6 +12382,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_bottom, __pyx_k_bottom, sizeof(__pyx_k_bottom), 0, 0, 1, 1},
   {&__pyx_n_s_dtype, __pyx_k_dtype, sizeof(__pyx_k_dtype), 0, 0, 1, 1},
   {&__pyx_n_s_float, __pyx_k_float, sizeof(__pyx_k_float), 0, 0, 1, 1},
+  {&__pyx_n_s_fraction, __pyx_k_fraction, sizeof(__pyx_k_fraction), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_init, __pyx_k_init, sizeof(__pyx_k_init), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
@@ -11701,8 +12414,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 29, __pyx_L1_error)
-  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 66, __pyx_L1_error)
   __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) __PYX_ERR(1, 799, __pyx_L1_error)
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(1, 989, __pyx_L1_error)
   return 0;
@@ -11714,7 +12427,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":218
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":218
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
@@ -11725,7 +12438,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":222
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":222
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
@@ -11736,7 +12449,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":259
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":259
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -11747,7 +12460,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":799
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":799
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
@@ -11758,7 +12471,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":803
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":803
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):
  *             raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -11769,7 +12482,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":823
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":823
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
@@ -11780,7 +12493,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":989
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":989
  *         _import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -11791,7 +12504,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":995
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":995
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -11802,7 +12515,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":1001
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":1001
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -11912,87 +12625,96 @@ PyMODINIT_FUNC PyInit_process(void)
   /*--- Type init code ---*/
   __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron = __Pyx_ImportType("plasticnet.plasticnet", "post_process_neuron", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_vtabptr_10plasticnet_7neurons_7process_zero_fraction = &__pyx_vtable_10plasticnet_7neurons_7process_zero_fraction;
+  __pyx_vtable_10plasticnet_7neurons_7process_zero_fraction.__pyx_base = *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron;
+  __pyx_vtable_10plasticnet_7neurons_7process_zero_fraction.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_7neurons_7process_13zero_fraction_update;
+  __pyx_type_10plasticnet_7neurons_7process_zero_fraction.tp_base = __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron;
+  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_zero_fraction) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
+  __pyx_type_10plasticnet_7neurons_7process_zero_fraction.tp_print = 0;
+  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_zero_fraction.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_zero_fraction) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
+  if (PyObject_SetAttrString(__pyx_m, "zero_fraction", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_zero_fraction) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
+  __pyx_ptype_10plasticnet_7neurons_7process_zero_fraction = &__pyx_type_10plasticnet_7neurons_7process_zero_fraction;
   __pyx_vtabptr_10plasticnet_7neurons_7process_add_noise_normal = &__pyx_vtable_10plasticnet_7neurons_7process_add_noise_normal;
   __pyx_vtable_10plasticnet_7neurons_7process_add_noise_normal.__pyx_base = *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron;
   __pyx_vtable_10plasticnet_7neurons_7process_add_noise_normal.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_7neurons_7process_16add_noise_normal_update;
   __pyx_type_10plasticnet_7neurons_7process_add_noise_normal.tp_base = __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron;
-  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_add_noise_normal) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_add_noise_normal) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
   __pyx_type_10plasticnet_7neurons_7process_add_noise_normal.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_add_noise_normal.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_add_noise_normal) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
-  if (PyObject_SetAttrString(__pyx_m, "add_noise_normal", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_add_noise_normal) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_add_noise_normal.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_add_noise_normal) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
+  if (PyObject_SetAttrString(__pyx_m, "add_noise_normal", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_add_noise_normal) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
   __pyx_ptype_10plasticnet_7neurons_7process_add_noise_normal = &__pyx_type_10plasticnet_7neurons_7process_add_noise_normal;
   __pyx_vtabptr_10plasticnet_7neurons_7process_add_noise_multiplicative = &__pyx_vtable_10plasticnet_7neurons_7process_add_noise_multiplicative;
   __pyx_vtable_10plasticnet_7neurons_7process_add_noise_multiplicative.__pyx_base = *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron;
   __pyx_vtable_10plasticnet_7neurons_7process_add_noise_multiplicative.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_7neurons_7process_24add_noise_multiplicative_update;
   __pyx_type_10plasticnet_7neurons_7process_add_noise_multiplicative.tp_base = __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron;
-  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_add_noise_multiplicative) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_add_noise_multiplicative) < 0) __PYX_ERR(0, 55, __pyx_L1_error)
   __pyx_type_10plasticnet_7neurons_7process_add_noise_multiplicative.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_add_noise_multiplicative.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_add_noise_multiplicative) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
-  if (PyObject_SetAttrString(__pyx_m, "add_noise_multiplicative", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_add_noise_multiplicative) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_add_noise_multiplicative.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_add_noise_multiplicative) < 0) __PYX_ERR(0, 55, __pyx_L1_error)
+  if (PyObject_SetAttrString(__pyx_m, "add_noise_multiplicative", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_add_noise_multiplicative) < 0) __PYX_ERR(0, 55, __pyx_L1_error)
   __pyx_ptype_10plasticnet_7neurons_7process_add_noise_multiplicative = &__pyx_type_10plasticnet_7neurons_7process_add_noise_multiplicative;
   __pyx_vtabptr_10plasticnet_7neurons_7process_add_noise_uniform = &__pyx_vtable_10plasticnet_7neurons_7process_add_noise_uniform;
   __pyx_vtable_10plasticnet_7neurons_7process_add_noise_uniform.__pyx_base = *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron;
   __pyx_vtable_10plasticnet_7neurons_7process_add_noise_uniform.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_7neurons_7process_17add_noise_uniform_update;
   __pyx_type_10plasticnet_7neurons_7process_add_noise_uniform.tp_base = __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron;
-  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_add_noise_uniform) < 0) __PYX_ERR(0, 60, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_add_noise_uniform) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
   __pyx_type_10plasticnet_7neurons_7process_add_noise_uniform.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_add_noise_uniform.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_add_noise_uniform) < 0) __PYX_ERR(0, 60, __pyx_L1_error)
-  if (PyObject_SetAttrString(__pyx_m, "add_noise_uniform", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_add_noise_uniform) < 0) __PYX_ERR(0, 60, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_add_noise_uniform.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_add_noise_uniform) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
+  if (PyObject_SetAttrString(__pyx_m, "add_noise_uniform", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_add_noise_uniform) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
   __pyx_ptype_10plasticnet_7neurons_7process_add_noise_uniform = &__pyx_type_10plasticnet_7neurons_7process_add_noise_uniform;
   __pyx_vtabptr_10plasticnet_7neurons_7process_relative_to_spontaneous = &__pyx_vtable_10plasticnet_7neurons_7process_relative_to_spontaneous;
   __pyx_vtable_10plasticnet_7neurons_7process_relative_to_spontaneous.__pyx_base = *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron;
   __pyx_vtable_10plasticnet_7neurons_7process_relative_to_spontaneous.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_7neurons_7process_23relative_to_spontaneous_update;
   __pyx_type_10plasticnet_7neurons_7process_relative_to_spontaneous.tp_base = __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron;
-  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_relative_to_spontaneous) < 0) __PYX_ERR(0, 79, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_relative_to_spontaneous) < 0) __PYX_ERR(0, 101, __pyx_L1_error)
   __pyx_type_10plasticnet_7neurons_7process_relative_to_spontaneous.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_relative_to_spontaneous.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_relative_to_spontaneous) < 0) __PYX_ERR(0, 79, __pyx_L1_error)
-  if (PyObject_SetAttrString(__pyx_m, "relative_to_spontaneous", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_relative_to_spontaneous) < 0) __PYX_ERR(0, 79, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_relative_to_spontaneous.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_relative_to_spontaneous) < 0) __PYX_ERR(0, 101, __pyx_L1_error)
+  if (PyObject_SetAttrString(__pyx_m, "relative_to_spontaneous", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_relative_to_spontaneous) < 0) __PYX_ERR(0, 101, __pyx_L1_error)
   __pyx_ptype_10plasticnet_7neurons_7process_relative_to_spontaneous = &__pyx_type_10plasticnet_7neurons_7process_relative_to_spontaneous;
   __pyx_vtabptr_10plasticnet_7neurons_7process_subtract_beta = &__pyx_vtable_10plasticnet_7neurons_7process_subtract_beta;
   __pyx_vtable_10plasticnet_7neurons_7process_subtract_beta.__pyx_base = *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron;
   __pyx_vtable_10plasticnet_7neurons_7process_subtract_beta.__pyx_base._reset = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_7neurons_7process_13subtract_beta__reset;
   __pyx_vtable_10plasticnet_7neurons_7process_subtract_beta.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_7neurons_7process_13subtract_beta_update;
   __pyx_type_10plasticnet_7neurons_7process_subtract_beta.tp_base = __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron;
-  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_subtract_beta) < 0) __PYX_ERR(0, 103, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_subtract_beta) < 0) __PYX_ERR(0, 125, __pyx_L1_error)
   __pyx_type_10plasticnet_7neurons_7process_subtract_beta.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_subtract_beta.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_subtract_beta) < 0) __PYX_ERR(0, 103, __pyx_L1_error)
-  if (PyObject_SetAttrString(__pyx_m, "subtract_beta", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_subtract_beta) < 0) __PYX_ERR(0, 103, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_subtract_beta.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_subtract_beta) < 0) __PYX_ERR(0, 125, __pyx_L1_error)
+  if (PyObject_SetAttrString(__pyx_m, "subtract_beta", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_subtract_beta) < 0) __PYX_ERR(0, 125, __pyx_L1_error)
   __pyx_ptype_10plasticnet_7neurons_7process_subtract_beta = &__pyx_type_10plasticnet_7neurons_7process_subtract_beta;
   __pyx_vtabptr_10plasticnet_7neurons_7process_min_max = &__pyx_vtable_10plasticnet_7neurons_7process_min_max;
   __pyx_vtable_10plasticnet_7neurons_7process_min_max.__pyx_base = *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron;
   __pyx_vtable_10plasticnet_7neurons_7process_min_max.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_7neurons_7process_7min_max_update;
   __pyx_type_10plasticnet_7neurons_7process_min_max.tp_base = __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron;
-  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_min_max) < 0) __PYX_ERR(0, 134, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_min_max) < 0) __PYX_ERR(0, 156, __pyx_L1_error)
   __pyx_type_10plasticnet_7neurons_7process_min_max.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_min_max.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_min_max) < 0) __PYX_ERR(0, 134, __pyx_L1_error)
-  if (PyObject_SetAttrString(__pyx_m, "min_max", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_min_max) < 0) __PYX_ERR(0, 134, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_min_max.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_min_max) < 0) __PYX_ERR(0, 156, __pyx_L1_error)
+  if (PyObject_SetAttrString(__pyx_m, "min_max", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_min_max) < 0) __PYX_ERR(0, 156, __pyx_L1_error)
   __pyx_ptype_10plasticnet_7neurons_7process_min_max = &__pyx_type_10plasticnet_7neurons_7process_min_max;
   __pyx_vtabptr_10plasticnet_7neurons_7process_scale_shift = &__pyx_vtable_10plasticnet_7neurons_7process_scale_shift;
   __pyx_vtable_10plasticnet_7neurons_7process_scale_shift.__pyx_base = *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron;
   __pyx_vtable_10plasticnet_7neurons_7process_scale_shift.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_7neurons_7process_11scale_shift_update;
   __pyx_type_10plasticnet_7neurons_7process_scale_shift.tp_base = __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron;
-  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_scale_shift) < 0) __PYX_ERR(0, 157, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_scale_shift) < 0) __PYX_ERR(0, 179, __pyx_L1_error)
   __pyx_type_10plasticnet_7neurons_7process_scale_shift.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_scale_shift.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_scale_shift) < 0) __PYX_ERR(0, 157, __pyx_L1_error)
-  if (PyObject_SetAttrString(__pyx_m, "scale_shift", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_scale_shift) < 0) __PYX_ERR(0, 157, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_scale_shift.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_scale_shift) < 0) __PYX_ERR(0, 179, __pyx_L1_error)
+  if (PyObject_SetAttrString(__pyx_m, "scale_shift", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_scale_shift) < 0) __PYX_ERR(0, 179, __pyx_L1_error)
   __pyx_ptype_10plasticnet_7neurons_7process_scale_shift = &__pyx_type_10plasticnet_7neurons_7process_scale_shift;
   __pyx_vtabptr_10plasticnet_7neurons_7process_sigmoid = &__pyx_vtable_10plasticnet_7neurons_7process_sigmoid;
   __pyx_vtable_10plasticnet_7neurons_7process_sigmoid.__pyx_base = *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron;
   __pyx_vtable_10plasticnet_7neurons_7process_sigmoid.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_7neurons_7process_7sigmoid_update;
   __pyx_type_10plasticnet_7neurons_7process_sigmoid.tp_base = __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron;
-  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_sigmoid) < 0) __PYX_ERR(0, 176, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_sigmoid) < 0) __PYX_ERR(0, 198, __pyx_L1_error)
   __pyx_type_10plasticnet_7neurons_7process_sigmoid.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_sigmoid.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_sigmoid) < 0) __PYX_ERR(0, 176, __pyx_L1_error)
-  if (PyObject_SetAttrString(__pyx_m, "sigmoid", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_sigmoid) < 0) __PYX_ERR(0, 176, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_sigmoid.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_sigmoid) < 0) __PYX_ERR(0, 198, __pyx_L1_error)
+  if (PyObject_SetAttrString(__pyx_m, "sigmoid", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_sigmoid) < 0) __PYX_ERR(0, 198, __pyx_L1_error)
   __pyx_ptype_10plasticnet_7neurons_7process_sigmoid = &__pyx_type_10plasticnet_7neurons_7process_sigmoid;
   __pyx_vtabptr_10plasticnet_7neurons_7process_log_transform = &__pyx_vtable_10plasticnet_7neurons_7process_log_transform;
   __pyx_vtable_10plasticnet_7neurons_7process_log_transform.__pyx_base = *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron;
   __pyx_vtable_10plasticnet_7neurons_7process_log_transform.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_7neurons_7process_13log_transform_update;
   __pyx_type_10plasticnet_7neurons_7process_log_transform.tp_base = __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron;
-  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_log_transform) < 0) __PYX_ERR(0, 199, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_7process_log_transform) < 0) __PYX_ERR(0, 221, __pyx_L1_error)
   __pyx_type_10plasticnet_7neurons_7process_log_transform.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_log_transform.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_log_transform) < 0) __PYX_ERR(0, 199, __pyx_L1_error)
-  if (PyObject_SetAttrString(__pyx_m, "log_transform", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_log_transform) < 0) __PYX_ERR(0, 199, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_10plasticnet_7neurons_7process_log_transform.tp_dict, __pyx_vtabptr_10plasticnet_7neurons_7process_log_transform) < 0) __PYX_ERR(0, 221, __pyx_L1_error)
+  if (PyObject_SetAttrString(__pyx_m, "log_transform", (PyObject *)&__pyx_type_10plasticnet_7neurons_7process_log_transform) < 0) __PYX_ERR(0, 221, __pyx_L1_error)
   __pyx_ptype_10plasticnet_7neurons_7process_log_transform = &__pyx_type_10plasticnet_7neurons_7process_log_transform;
   /*--- Type import code ---*/
   __pyx_ptype_7cpython_4type_type = __Pyx_ImportType(__Pyx_BUILTIN_MODULE_NAME, "type", 
@@ -12067,7 +12789,7 @@ PyMODINIT_FUNC PyInit_process(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_2) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":997
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":997
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
