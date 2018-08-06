@@ -24,9 +24,9 @@ cdef class BCM(connection):
     
     def __init__(self,neuron pre,neuron post,initial_weight_range=None,initial_theta_range=None):
         if initial_theta_range is None:
-            self.initial_theta_range=[0,.1]
+            self.initial_theta_range=pylab.array([0,.1])
         else:
-            self.initial_theta_range=initial_theta_range
+            self.initial_theta_range=pylab.array(initial_theta_range)
             
         connection.__init__(self,pre,post,initial_weight_range)
         

@@ -17,7 +17,7 @@ def save(fname,sim,neurons=[],connections=[]):
         sim.save(group)
 
         for n,neuron in enumerate(neurons):
-            group=f.create_group("neuron %d" % n)
+            group=f.create_group("neuron_%d" % n)
             if neuron.verbose:
                 print("<<<<  group   neuron %d >>>>" % n)
                 sys.stdout.flush()
@@ -26,7 +26,7 @@ def save(fname,sim,neurons=[],connections=[]):
             for monitor_name in sim.monitors:
                 m=sim.monitors[monitor_name]
                 if m.container==neuron:
-                    mgroup=group.create_group("monitor %s" % m.name)
+                    mgroup=group.create_group("monitor_%s" % m.name)
                     m.save(mgroup)
             
             
@@ -35,7 +35,7 @@ def save(fname,sim,neurons=[],connections=[]):
             group=f.create_group("connection %d" % c)
             
             if connection.verbose:
-                print("<<<<  group   connection %d >>>>" % c)
+                print("<<<<  group   connection_%d >>>>" % c)
                 sys.stdout.flush()
             connection.save(group)
     
@@ -54,7 +54,7 @@ def save(fname,sim,neurons=[],connections=[]):
             for monitor_name in sim.monitors:
                 m=sim.monitors[monitor_name]
                 if m.container==connection:
-                    mgroup=group.create_group("monitor %s" % m.name)
+                    mgroup=group.create_group("monitor_%s" % m.name)
                     m.save(mgroup)
             
     finally:
