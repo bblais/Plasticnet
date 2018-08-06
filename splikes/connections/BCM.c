@@ -659,7 +659,7 @@ static const char *__pyx_f[] = {
   "splikes/splikes.pxd",
 };
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":725
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":725
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -668,7 +668,7 @@ static const char *__pyx_f[] = {
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":726
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":726
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -677,7 +677,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":727
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":727
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -686,7 +686,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":728
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":728
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -695,7 +695,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":732
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":732
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -704,7 +704,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":733
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":733
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -713,7 +713,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":734
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":734
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -722,7 +722,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":735
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":735
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -731,7 +731,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":739
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":739
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -740,7 +740,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":740
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":740
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -749,7 +749,7 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":749
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":749
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
@@ -758,7 +758,7 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":750
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":750
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t             # <<<<<<<<<<<<<<
@@ -767,7 +767,7 @@ typedef npy_long __pyx_t_5numpy_int_t;
  */
 typedef npy_longlong __pyx_t_5numpy_long_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":751
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":751
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -776,7 +776,7 @@ typedef npy_longlong __pyx_t_5numpy_long_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":753
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":753
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
@@ -785,7 +785,7 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":754
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":754
  * 
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t             # <<<<<<<<<<<<<<
@@ -794,7 +794,7 @@ typedef npy_ulong __pyx_t_5numpy_uint_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":755
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":755
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -803,7 +803,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":757
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":757
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -812,7 +812,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":758
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":758
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -821,7 +821,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":760
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":760
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -830,7 +830,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":761
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":761
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -839,7 +839,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":762
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":762
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -883,7 +883,7 @@ struct __pyx_obj_7splikes_11connections_3BCM_BCM;
 struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper_Offset;
 struct __pyx_obj_7splikes_11connections_3BCM_BCM_TwoThreshold;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":764
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":764
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -892,7 +892,7 @@ struct __pyx_obj_7splikes_11connections_3BCM_BCM_TwoThreshold;
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":765
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":765
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -901,7 +901,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":766
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":766
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -910,7 +910,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":768
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":768
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -1049,6 +1049,8 @@ struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper {
   PyObject *tau_beta;
   double ax;
   double ay;
+  double scale_x;
+  double scale_y;
   int smoothed_x;
   int smoothed_y;
   PyArrayObject *theta;
@@ -1069,7 +1071,7 @@ struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper {
 };
 
 
-/* "splikes/connections/BCM.pyx":225
+/* "splikes/connections/BCM.pyx":230
  *         self.apply_weight_limits()
  * 
  * cdef class BCM(connection):             # <<<<<<<<<<<<<<
@@ -1101,7 +1103,7 @@ struct __pyx_obj_7splikes_11connections_3BCM_BCM {
 };
 
 
-/* "splikes/connections/BCM.pyx":340
+/* "splikes/connections/BCM.pyx":345
  * 
  * 
  * cdef class BCM_LawCooper_Offset(connection):             # <<<<<<<<<<<<<<
@@ -1129,7 +1131,7 @@ struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper_Offset {
 };
 
 
-/* "splikes/connections/BCM.pyx":453
+/* "splikes/connections/BCM.pyx":458
  * 
  * 
  * cdef class BCM_TwoThreshold(connection):             # <<<<<<<<<<<<<<
@@ -1246,7 +1248,7 @@ struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper {
 static struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_vtabptr_7splikes_11connections_3BCM_BCM_LawCooper;
 
 
-/* "splikes/connections/BCM.pyx":225
+/* "splikes/connections/BCM.pyx":230
  *         self.apply_weight_limits()
  * 
  * cdef class BCM(connection):             # <<<<<<<<<<<<<<
@@ -1260,7 +1262,7 @@ struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM {
 static struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM *__pyx_vtabptr_7splikes_11connections_3BCM_BCM;
 
 
-/* "splikes/connections/BCM.pyx":340
+/* "splikes/connections/BCM.pyx":345
  * 
  * 
  * cdef class BCM_LawCooper_Offset(connection):             # <<<<<<<<<<<<<<
@@ -1274,7 +1276,7 @@ struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper_Offset {
 static struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper_Offset *__pyx_vtabptr_7splikes_11connections_3BCM_BCM_LawCooper_Offset;
 
 
-/* "splikes/connections/BCM.pyx":453
+/* "splikes/connections/BCM.pyx":458
  * 
  * 
  * cdef class BCM_TwoThreshold(connection):             # <<<<<<<<<<<<<<
@@ -1833,6 +1835,8 @@ static const char __pyx_k_append[] = "append";
 static const char __pyx_k_extend[] = "extend";
 static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_update[] = "update";
+static const char __pyx_k_scale_x[] = "scale_x";
+static const char __pyx_k_scale_y[] = "scale_y";
 static const char __pyx_k_theta_L[] = "theta_L";
 static const char __pyx_k_theta_o[] = "theta_o";
 static const char __pyx_k_mod_beta[] = "mod_beta";
@@ -1904,6 +1908,8 @@ static PyObject *__pyx_n_s_pyx_vtable;
 static PyObject *__pyx_n_s_rand;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_reset;
+static PyObject *__pyx_n_s_scale_x;
+static PyObject *__pyx_n_s_scale_y;
 static PyObject *__pyx_n_s_sim;
 static PyObject *__pyx_n_s_smoothed_x;
 static PyObject *__pyx_n_s_smoothed_y;
@@ -1957,6 +1963,10 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2ax___get_
 static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2ax_2__set__(struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
 static PyObject *__pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2ay___get__(struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_v_self); /* proto */
 static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2ay_2__set__(struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_x___get__(struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_v_self); /* proto */
+static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_x_2__set__(struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_y___get__(struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_v_self); /* proto */
+static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_y_2__set__(struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
 static PyObject *__pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_10smoothed_x___get__(struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_v_self); /* proto */
 static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_10smoothed_x_2__set__(struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
 static PyObject *__pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_10smoothed_y___get__(struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_v_self); /* proto */
@@ -3233,7 +3243,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  *         self.name='Spiking BCM LawCooper'
  *         self.tau_x=0.01             # <<<<<<<<<<<<<<
  *         self.tau_y=0.01
- *         self.ax=1.0/self.tau_x
+ *         self.scale_x=1.0
  */
   __pyx_v_self->tau_x = 0.01;
 
@@ -3241,26 +3251,44 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  *         self.name='Spiking BCM LawCooper'
  *         self.tau_x=0.01
  *         self.tau_y=0.01             # <<<<<<<<<<<<<<
- *         self.ax=1.0/self.tau_x
- *         self.ay=1.0/self.tau_y
+ *         self.scale_x=1.0
+ *         self.scale_y=1.0
  */
   __pyx_v_self->tau_y = 0.01;
 
   /* "splikes/connections/BCM.pyx":82
  *         self.tau_x=0.01
  *         self.tau_y=0.01
+ *         self.scale_x=1.0             # <<<<<<<<<<<<<<
+ *         self.scale_y=1.0
+ *         self.ax=1.0/self.tau_x
+ */
+  __pyx_v_self->scale_x = 1.0;
+
+  /* "splikes/connections/BCM.pyx":83
+ *         self.tau_y=0.01
+ *         self.scale_x=1.0
+ *         self.scale_y=1.0             # <<<<<<<<<<<<<<
+ *         self.ax=1.0/self.tau_x
+ *         self.ay=1.0/self.tau_y
+ */
+  __pyx_v_self->scale_y = 1.0;
+
+  /* "splikes/connections/BCM.pyx":84
+ *         self.scale_x=1.0
+ *         self.scale_y=1.0
  *         self.ax=1.0/self.tau_x             # <<<<<<<<<<<<<<
  *         self.ay=1.0/self.tau_y
  *         self.smoothed_x=False
  */
   if (unlikely(__pyx_v_self->tau_x == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 82, __pyx_L1_error)
+    __PYX_ERR(0, 84, __pyx_L1_error)
   }
   __pyx_v_self->ax = (1.0 / __pyx_v_self->tau_x);
 
-  /* "splikes/connections/BCM.pyx":83
- *         self.tau_y=0.01
+  /* "splikes/connections/BCM.pyx":85
+ *         self.scale_y=1.0
  *         self.ax=1.0/self.tau_x
  *         self.ay=1.0/self.tau_y             # <<<<<<<<<<<<<<
  *         self.smoothed_x=False
@@ -3268,11 +3296,11 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   if (unlikely(__pyx_v_self->tau_y == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 83, __pyx_L1_error)
+    __PYX_ERR(0, 85, __pyx_L1_error)
   }
   __pyx_v_self->ay = (1.0 / __pyx_v_self->tau_y);
 
-  /* "splikes/connections/BCM.pyx":84
+  /* "splikes/connections/BCM.pyx":86
  *         self.ax=1.0/self.tau_x
  *         self.ay=1.0/self.tau_y
  *         self.smoothed_x=False             # <<<<<<<<<<<<<<
@@ -3281,7 +3309,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->smoothed_x = 0;
 
-  /* "splikes/connections/BCM.pyx":85
+  /* "splikes/connections/BCM.pyx":87
  *         self.ay=1.0/self.tau_y
  *         self.smoothed_x=False
  *         self.smoothed_y=False             # <<<<<<<<<<<<<<
@@ -3290,7 +3318,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->smoothed_y = 0;
 
-  /* "splikes/connections/BCM.pyx":87
+  /* "splikes/connections/BCM.pyx":89
  *         self.smoothed_y=False
  * 
  *         self.xo=0             # <<<<<<<<<<<<<<
@@ -3299,7 +3327,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->xo = 0.0;
 
-  /* "splikes/connections/BCM.pyx":88
+  /* "splikes/connections/BCM.pyx":90
  * 
  *         self.xo=0
  *         self.yo=0             # <<<<<<<<<<<<<<
@@ -3308,7 +3336,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->yo = 0.0;
 
-  /* "splikes/connections/BCM.pyx":89
+  /* "splikes/connections/BCM.pyx":91
  *         self.xo=0
  *         self.yo=0
  *         self.theta_o=1             # <<<<<<<<<<<<<<
@@ -3317,7 +3345,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->theta_o = 1.0;
 
-  /* "splikes/connections/BCM.pyx":90
+  /* "splikes/connections/BCM.pyx":92
  *         self.yo=0
  *         self.theta_o=1
  *         self.gamma=0             # <<<<<<<<<<<<<<
@@ -3326,7 +3354,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->gamma = 0.0;
 
-  /* "splikes/connections/BCM.pyx":91
+  /* "splikes/connections/BCM.pyx":93
  *         self.theta_o=1
  *         self.gamma=0
  *         self.eta=4e-06             # <<<<<<<<<<<<<<
@@ -3335,7 +3363,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->eta = 4e-06;
 
-  /* "splikes/connections/BCM.pyx":92
+  /* "splikes/connections/BCM.pyx":94
  *         self.gamma=0
  *         self.eta=4e-06
  *         self.tau_theta=10             # <<<<<<<<<<<<<<
@@ -3348,7 +3376,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_DECREF(__pyx_v_self->tau_theta);
   __pyx_v_self->tau_theta = __pyx_int_10;
 
-  /* "splikes/connections/BCM.pyx":93
+  /* "splikes/connections/BCM.pyx":95
  *         self.eta=4e-06
  *         self.tau_theta=10
  *         self.tau_beta=-1             # <<<<<<<<<<<<<<
@@ -3361,7 +3389,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_DECREF(__pyx_v_self->tau_beta);
   __pyx_v_self->tau_beta = __pyx_int_neg_1;
 
-  /* "splikes/connections/BCM.pyx":94
+  /* "splikes/connections/BCM.pyx":96
  *         self.tau_theta=10
  *         self.tau_beta=-1
  *         self.time_between_modification=-1.0             # <<<<<<<<<<<<<<
@@ -3370,7 +3398,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->time_between_modification = -1.0;
 
-  /* "splikes/connections/BCM.pyx":95
+  /* "splikes/connections/BCM.pyx":97
  *         self.tau_beta=-1
  *         self.time_between_modification=-1.0
  *         self.theta_squares_the_average=False             # <<<<<<<<<<<<<<
@@ -3379,27 +3407,27 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
  */
   __pyx_v_self->theta_squares_the_average = 0;
 
-  /* "splikes/connections/BCM.pyx":96
+  /* "splikes/connections/BCM.pyx":98
  *         self.time_between_modification=-1.0
  *         self.theta_squares_the_average=False
  *         self._reset()             # <<<<<<<<<<<<<<
  * 
  *         self.save_attrs.extend(['tau_x','tau_y','xo','yo','theta_o',
  */
-  __pyx_t_3 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 96, __pyx_L1_error)
+  __pyx_t_3 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 98, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":98
+  /* "splikes/connections/BCM.pyx":100
  *         self._reset()
  * 
  *         self.save_attrs.extend(['tau_x','tau_y','xo','yo','theta_o',             # <<<<<<<<<<<<<<
- *             'gamma','eta','tau_theta','tau_beta','ax',
+ *             'gamma','eta','tau_theta','tau_beta','ax','scale_x','scale_y',
  *             'ay','smoothed_x','smoothed_y','time_between_modification',
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_n_s_extend); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 98, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_n_s_extend); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_7 = PyList_New(16); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 98, __pyx_L1_error)
+  __pyx_t_7 = PyList_New(18); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_INCREF(__pyx_n_s_tau_x);
   __Pyx_GIVEREF(__pyx_n_s_tau_x);
@@ -3431,24 +3459,30 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_INCREF(__pyx_n_s_ax);
   __Pyx_GIVEREF(__pyx_n_s_ax);
   PyList_SET_ITEM(__pyx_t_7, 9, __pyx_n_s_ax);
+  __Pyx_INCREF(__pyx_n_s_scale_x);
+  __Pyx_GIVEREF(__pyx_n_s_scale_x);
+  PyList_SET_ITEM(__pyx_t_7, 10, __pyx_n_s_scale_x);
+  __Pyx_INCREF(__pyx_n_s_scale_y);
+  __Pyx_GIVEREF(__pyx_n_s_scale_y);
+  PyList_SET_ITEM(__pyx_t_7, 11, __pyx_n_s_scale_y);
   __Pyx_INCREF(__pyx_n_s_ay);
   __Pyx_GIVEREF(__pyx_n_s_ay);
-  PyList_SET_ITEM(__pyx_t_7, 10, __pyx_n_s_ay);
+  PyList_SET_ITEM(__pyx_t_7, 12, __pyx_n_s_ay);
   __Pyx_INCREF(__pyx_n_s_smoothed_x);
   __Pyx_GIVEREF(__pyx_n_s_smoothed_x);
-  PyList_SET_ITEM(__pyx_t_7, 11, __pyx_n_s_smoothed_x);
+  PyList_SET_ITEM(__pyx_t_7, 13, __pyx_n_s_smoothed_x);
   __Pyx_INCREF(__pyx_n_s_smoothed_y);
   __Pyx_GIVEREF(__pyx_n_s_smoothed_y);
-  PyList_SET_ITEM(__pyx_t_7, 12, __pyx_n_s_smoothed_y);
+  PyList_SET_ITEM(__pyx_t_7, 14, __pyx_n_s_smoothed_y);
   __Pyx_INCREF(__pyx_n_s_time_between_modification);
   __Pyx_GIVEREF(__pyx_n_s_time_between_modification);
-  PyList_SET_ITEM(__pyx_t_7, 13, __pyx_n_s_time_between_modification);
+  PyList_SET_ITEM(__pyx_t_7, 15, __pyx_n_s_time_between_modification);
   __Pyx_INCREF(__pyx_n_s_time_to_next_modification);
   __Pyx_GIVEREF(__pyx_n_s_time_to_next_modification);
-  PyList_SET_ITEM(__pyx_t_7, 14, __pyx_n_s_time_to_next_modification);
+  PyList_SET_ITEM(__pyx_t_7, 16, __pyx_n_s_time_to_next_modification);
   __Pyx_INCREF(__pyx_n_s_theta_squares_the_average);
   __Pyx_GIVEREF(__pyx_n_s_theta_squares_the_average);
-  PyList_SET_ITEM(__pyx_t_7, 15, __pyx_n_s_theta_squares_the_average);
+  PyList_SET_ITEM(__pyx_t_7, 17, __pyx_n_s_theta_squares_the_average);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
     __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
@@ -3460,14 +3494,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 98, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 100, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_7};
-      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 98, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 100, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -3476,20 +3510,20 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_7};
-      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 98, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 100, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     } else
     #endif
     {
-      __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 98, __pyx_L1_error)
+      __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 100, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_5); __pyx_t_5 = NULL;
       __Pyx_GIVEREF(__pyx_t_7);
       PyTuple_SET_ITEM(__pyx_t_8, 0+1, __pyx_t_7);
       __pyx_t_7 = 0;
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 98, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 100, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     }
@@ -3497,16 +3531,16 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":102
+  /* "splikes/connections/BCM.pyx":104
  *             'ay','smoothed_x','smoothed_y','time_between_modification',
  *             'time_to_next_modification','theta_squares_the_average',])
  *         self.save_data.extend(['theta','beta','x','y',             # <<<<<<<<<<<<<<
  *             'y_avg','X','Y','mod_X','mod_Y','mod_theta','mod_beta',
  *             'initial_theta_range'])
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->__pyx_base.__pyx_base.save_data, __pyx_n_s_extend); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->__pyx_base.__pyx_base.save_data, __pyx_n_s_extend); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 104, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_8 = PyList_New(12); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_t_8 = PyList_New(12); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 104, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_INCREF(__pyx_n_s_theta);
   __Pyx_GIVEREF(__pyx_n_s_theta);
@@ -3555,14 +3589,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
     }
   }
   if (!__pyx_t_7) {
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 104, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_7, __pyx_t_8};
-      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 104, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -3571,20 +3605,20 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_7, __pyx_t_8};
-      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 104, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     } else
     #endif
     {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 102, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 104, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_7); __pyx_t_7 = NULL;
       __Pyx_GIVEREF(__pyx_t_8);
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_8);
       __pyx_t_8 = 0;
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 104, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
@@ -3617,7 +3651,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2__init__(struct
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":110
+/* "splikes/connections/BCM.pyx":112
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -3645,6 +3679,8 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   double __pyx_v_tau_y;
   double __pyx_v_ax;
   double __pyx_v_ay;
+  double __pyx_v_scale_x;
+  double __pyx_v_scale_y;
   double __pyx_v_xo;
   double __pyx_v_yo;
   double __pyx_v_theta_o;
@@ -3655,6 +3691,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   double __pyx_v_dt;
   double __pyx_v_dw;
   double __pyx_v_YY;
+  double __pyx_v_XX;
   int __pyx_v_modify_now;
   int __pyx_v_use_beta;
   int *__pyx_v_pre;
@@ -3681,11 +3718,11 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 110, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_5update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 110, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 112, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -3703,7 +3740,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 110, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -3712,14 +3749,14 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 110, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else
       #endif
       {
-        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 110, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         if (__pyx_t_5) {
           __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -3730,7 +3767,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
         __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
         PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
         __pyx_t_3 = 0;
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 110, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 112, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
@@ -3743,7 +3780,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes/connections/BCM.pyx":113
+  /* "splikes/connections/BCM.pyx":115
  *         cdef int __i,__j
  * 
  *         cdef double *W=self.W             # <<<<<<<<<<<<<<
@@ -3753,7 +3790,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_8 = __pyx_v_self->__pyx_base.W;
   __pyx_v_W = __pyx_t_8;
 
-  /* "splikes/connections/BCM.pyx":114
+  /* "splikes/connections/BCM.pyx":116
  * 
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data             # <<<<<<<<<<<<<<
@@ -3762,7 +3799,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_theta = ((double *)__pyx_v_self->theta->data);
 
-  /* "splikes/connections/BCM.pyx":115
+  /* "splikes/connections/BCM.pyx":117
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *beta=<double *>self.beta.data             # <<<<<<<<<<<<<<
@@ -3771,7 +3808,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_beta = ((double *)__pyx_v_self->beta->data);
 
-  /* "splikes/connections/BCM.pyx":116
+  /* "splikes/connections/BCM.pyx":118
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *beta=<double *>self.beta.data
  *         cdef double *y=<double *>self.y.data             # <<<<<<<<<<<<<<
@@ -3780,7 +3817,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_y = ((double *)__pyx_v_self->y->data);
 
-  /* "splikes/connections/BCM.pyx":117
+  /* "splikes/connections/BCM.pyx":119
  *         cdef double *beta=<double *>self.beta.data
  *         cdef double *y=<double *>self.y.data
  *         cdef double *x=<double *>self.x.data             # <<<<<<<<<<<<<<
@@ -3789,7 +3826,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_x = ((double *)__pyx_v_self->x->data);
 
-  /* "splikes/connections/BCM.pyx":118
+  /* "splikes/connections/BCM.pyx":120
  *         cdef double *y=<double *>self.y.data
  *         cdef double *x=<double *>self.x.data
  *         cdef double *Y=<double *>self.Y.data             # <<<<<<<<<<<<<<
@@ -3798,7 +3835,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_Y = ((double *)__pyx_v_self->Y->data);
 
-  /* "splikes/connections/BCM.pyx":119
+  /* "splikes/connections/BCM.pyx":121
  *         cdef double *x=<double *>self.x.data
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *X=<double *>self.X.data             # <<<<<<<<<<<<<<
@@ -3807,7 +3844,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_X = ((double *)__pyx_v_self->X->data);
 
-  /* "splikes/connections/BCM.pyx":120
+  /* "splikes/connections/BCM.pyx":122
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *X=<double *>self.X.data
  *         cdef double *y_avg=<double *>self.y_avg.data             # <<<<<<<<<<<<<<
@@ -3816,7 +3853,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_y_avg = ((double *)__pyx_v_self->y_avg->data);
 
-  /* "splikes/connections/BCM.pyx":122
+  /* "splikes/connections/BCM.pyx":124
  *         cdef double *y_avg=<double *>self.y_avg.data
  * 
  *         cdef double *mod_X=<double *>self.mod_X.data             # <<<<<<<<<<<<<<
@@ -3825,7 +3862,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_mod_X = ((double *)__pyx_v_self->mod_X->data);
 
-  /* "splikes/connections/BCM.pyx":123
+  /* "splikes/connections/BCM.pyx":125
  * 
  *         cdef double *mod_X=<double *>self.mod_X.data
  *         cdef double *mod_Y=<double *>self.mod_Y.data             # <<<<<<<<<<<<<<
@@ -3834,7 +3871,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_mod_Y = ((double *)__pyx_v_self->mod_Y->data);
 
-  /* "splikes/connections/BCM.pyx":124
+  /* "splikes/connections/BCM.pyx":126
  *         cdef double *mod_X=<double *>self.mod_X.data
  *         cdef double *mod_Y=<double *>self.mod_Y.data
  *         cdef double *mod_theta=<double *>self.mod_theta.data             # <<<<<<<<<<<<<<
@@ -3843,7 +3880,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_mod_theta = ((double *)__pyx_v_self->mod_theta->data);
 
-  /* "splikes/connections/BCM.pyx":125
+  /* "splikes/connections/BCM.pyx":127
  *         cdef double *mod_Y=<double *>self.mod_Y.data
  *         cdef double *mod_theta=<double *>self.mod_theta.data
  *         cdef double *mod_beta=<double *>self.mod_beta.data             # <<<<<<<<<<<<<<
@@ -3852,7 +3889,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_mod_beta = ((double *)__pyx_v_self->mod_beta->data);
 
-  /* "splikes/connections/BCM.pyx":127
+  /* "splikes/connections/BCM.pyx":129
  *         cdef double *mod_beta=<double *>self.mod_beta.data
  * 
  *         cdef double tau_x=self.tau_x             # <<<<<<<<<<<<<<
@@ -3862,7 +3899,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->tau_x;
   __pyx_v_tau_x = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":128
+  /* "splikes/connections/BCM.pyx":130
  * 
  *         cdef double tau_x=self.tau_x
  *         cdef double tau_y=self.tau_y             # <<<<<<<<<<<<<<
@@ -3872,29 +3909,49 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->tau_y;
   __pyx_v_tau_y = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":129
+  /* "splikes/connections/BCM.pyx":131
  *         cdef double tau_x=self.tau_x
  *         cdef double tau_y=self.tau_y
  *         cdef double ax=self.ax             # <<<<<<<<<<<<<<
  *         cdef double ay=self.ay
- *         cdef double xo=self.xo
+ *         cdef double scale_x=self.scale_x
  */
   __pyx_t_9 = __pyx_v_self->ax;
   __pyx_v_ax = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":130
+  /* "splikes/connections/BCM.pyx":132
  *         cdef double tau_y=self.tau_y
  *         cdef double ax=self.ax
  *         cdef double ay=self.ay             # <<<<<<<<<<<<<<
- *         cdef double xo=self.xo
- *         cdef double yo=self.yo
+ *         cdef double scale_x=self.scale_x
+ *         cdef double scale_y=self.scale_y
  */
   __pyx_t_9 = __pyx_v_self->ay;
   __pyx_v_ay = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":131
+  /* "splikes/connections/BCM.pyx":133
  *         cdef double ax=self.ax
  *         cdef double ay=self.ay
+ *         cdef double scale_x=self.scale_x             # <<<<<<<<<<<<<<
+ *         cdef double scale_y=self.scale_y
+ *         cdef double xo=self.xo
+ */
+  __pyx_t_9 = __pyx_v_self->scale_x;
+  __pyx_v_scale_x = __pyx_t_9;
+
+  /* "splikes/connections/BCM.pyx":134
+ *         cdef double ay=self.ay
+ *         cdef double scale_x=self.scale_x
+ *         cdef double scale_y=self.scale_y             # <<<<<<<<<<<<<<
+ *         cdef double xo=self.xo
+ *         cdef double yo=self.yo
+ */
+  __pyx_t_9 = __pyx_v_self->scale_y;
+  __pyx_v_scale_y = __pyx_t_9;
+
+  /* "splikes/connections/BCM.pyx":135
+ *         cdef double scale_x=self.scale_x
+ *         cdef double scale_y=self.scale_y
  *         cdef double xo=self.xo             # <<<<<<<<<<<<<<
  *         cdef double yo=self.yo
  *         cdef double theta_o=self.theta_o
@@ -3902,8 +3959,8 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->xo;
   __pyx_v_xo = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":132
- *         cdef double ay=self.ay
+  /* "splikes/connections/BCM.pyx":136
+ *         cdef double scale_y=self.scale_y
  *         cdef double xo=self.xo
  *         cdef double yo=self.yo             # <<<<<<<<<<<<<<
  *         cdef double theta_o=self.theta_o
@@ -3912,7 +3969,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->yo;
   __pyx_v_yo = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":133
+  /* "splikes/connections/BCM.pyx":137
  *         cdef double xo=self.xo
  *         cdef double yo=self.yo
  *         cdef double theta_o=self.theta_o             # <<<<<<<<<<<<<<
@@ -3922,7 +3979,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->theta_o;
   __pyx_v_theta_o = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":134
+  /* "splikes/connections/BCM.pyx":138
  *         cdef double yo=self.yo
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma             # <<<<<<<<<<<<<<
@@ -3932,7 +3989,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->gamma;
   __pyx_v_gamma = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":135
+  /* "splikes/connections/BCM.pyx":139
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta             # <<<<<<<<<<<<<<
@@ -3942,39 +3999,39 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_9 = __pyx_v_self->eta;
   __pyx_v_eta = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":136
+  /* "splikes/connections/BCM.pyx":140
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta
  *         cdef double tau_theta=self.tau_theta             # <<<<<<<<<<<<<<
  *         cdef double tau_beta=self.tau_beta
  *         cdef double dt,dw
  */
-  __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_self->tau_theta); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_self->tau_theta); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 140, __pyx_L1_error)
   __pyx_v_tau_theta = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":137
+  /* "splikes/connections/BCM.pyx":141
  *         cdef double eta=self.eta
  *         cdef double tau_theta=self.tau_theta
  *         cdef double tau_beta=self.tau_beta             # <<<<<<<<<<<<<<
  *         cdef double dt,dw
- *         cdef double YY
+ *         cdef double YY,XX
  */
-  __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_self->tau_beta); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 137, __pyx_L1_error)
+  __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_self->tau_beta); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 141, __pyx_L1_error)
   __pyx_v_tau_beta = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":146
+  /* "splikes/connections/BCM.pyx":150
  *         cdef int __wi
  * 
  *         use_beta=self.tau_beta>0             # <<<<<<<<<<<<<<
  * 
  *         pre=<int *>self.pre.spiking.data
  */
-  __pyx_t_1 = PyObject_RichCompare(__pyx_v_self->tau_beta, __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 146, __pyx_L1_error)
-  __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 146, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(__pyx_v_self->tau_beta, __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 150, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 150, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_use_beta = __pyx_t_6;
 
-  /* "splikes/connections/BCM.pyx":148
+  /* "splikes/connections/BCM.pyx":152
  *         use_beta=self.tau_beta>0
  * 
  *         pre=<int *>self.pre.spiking.data             # <<<<<<<<<<<<<<
@@ -3983,7 +4040,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_pre = ((int *)__pyx_v_self->__pyx_base.pre->spiking->data);
 
-  /* "splikes/connections/BCM.pyx":149
+  /* "splikes/connections/BCM.pyx":153
  * 
  *         pre=<int *>self.pre.spiking.data
  *         post=<int *>self.post.spiking.data             # <<<<<<<<<<<<<<
@@ -3992,7 +4049,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_post = ((int *)__pyx_v_self->__pyx_base.post->spiking->data);
 
-  /* "splikes/connections/BCM.pyx":152
+  /* "splikes/connections/BCM.pyx":156
  * 
  * 
  *         for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -4003,7 +4060,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
     __pyx_v___j = __pyx_t_10;
 
-    /* "splikes/connections/BCM.pyx":153
+    /* "splikes/connections/BCM.pyx":157
  * 
  *         for __j in range(self.pre.N):
  *             x[__j]+=sim.dt*(-x[__j]/tau_x+ax*pre[__j]/sim.dt)             # <<<<<<<<<<<<<<
@@ -4014,7 +4071,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     (__pyx_v_x[__pyx_t_11]) = ((__pyx_v_x[__pyx_t_11]) + (__pyx_v_sim->dt * (((-(__pyx_v_x[__pyx_v___j])) / __pyx_v_tau_x) + ((__pyx_v_ax * (__pyx_v_pre[__pyx_v___j])) / __pyx_v_sim->dt))));
   }
 
-  /* "splikes/connections/BCM.pyx":155
+  /* "splikes/connections/BCM.pyx":159
  *             x[__j]+=sim.dt*(-x[__j]/tau_x+ax*pre[__j]/sim.dt)
  * 
  *         if self.smoothed_x:             # <<<<<<<<<<<<<<
@@ -4024,7 +4081,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_12 = (__pyx_v_self->smoothed_x != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":156
+    /* "splikes/connections/BCM.pyx":160
  * 
  *         if self.smoothed_x:
  *             for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -4035,7 +4092,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___j = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":157
+      /* "splikes/connections/BCM.pyx":161
  *         if self.smoothed_x:
  *             for __j in range(self.pre.N):
  *                 X[__j]+=sim.dt*(x[__j]-X[__j])/tau_x             # <<<<<<<<<<<<<<
@@ -4046,7 +4103,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       (__pyx_v_X[__pyx_t_11]) = ((__pyx_v_X[__pyx_t_11]) + ((__pyx_v_sim->dt * ((__pyx_v_x[__pyx_v___j]) - (__pyx_v_X[__pyx_v___j]))) / __pyx_v_tau_x));
     }
 
-    /* "splikes/connections/BCM.pyx":155
+    /* "splikes/connections/BCM.pyx":159
  *             x[__j]+=sim.dt*(-x[__j]/tau_x+ax*pre[__j]/sim.dt)
  * 
  *         if self.smoothed_x:             # <<<<<<<<<<<<<<
@@ -4056,7 +4113,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     goto __pyx_L5;
   }
 
-  /* "splikes/connections/BCM.pyx":159
+  /* "splikes/connections/BCM.pyx":163
  *                 X[__j]+=sim.dt*(x[__j]-X[__j])/tau_x
  *         else:
  *             for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -4068,7 +4125,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___j = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":160
+      /* "splikes/connections/BCM.pyx":164
  *         else:
  *             for __j in range(self.pre.N):
  *                 X[__j]=x[__j]             # <<<<<<<<<<<<<<
@@ -4080,7 +4137,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   __pyx_L5:;
 
-  /* "splikes/connections/BCM.pyx":162
+  /* "splikes/connections/BCM.pyx":166
  *                 X[__j]=x[__j]
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -4091,7 +4148,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
     __pyx_v___i = __pyx_t_10;
 
-    /* "splikes/connections/BCM.pyx":163
+    /* "splikes/connections/BCM.pyx":167
  * 
  *         for __i in range(self.post.N):
  *             y[__i]+=sim.dt*(-y[__i]/tau_y+ay*post[__i]/sim.dt)             # <<<<<<<<<<<<<<
@@ -4102,7 +4159,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     (__pyx_v_y[__pyx_t_11]) = ((__pyx_v_y[__pyx_t_11]) + (__pyx_v_sim->dt * (((-(__pyx_v_y[__pyx_v___i])) / __pyx_v_tau_y) + ((__pyx_v_ay * (__pyx_v_post[__pyx_v___i])) / __pyx_v_sim->dt))));
   }
 
-  /* "splikes/connections/BCM.pyx":165
+  /* "splikes/connections/BCM.pyx":169
  *             y[__i]+=sim.dt*(-y[__i]/tau_y+ay*post[__i]/sim.dt)
  * 
  *         if self.smoothed_y:             # <<<<<<<<<<<<<<
@@ -4112,7 +4169,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_12 = (__pyx_v_self->smoothed_y != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":166
+    /* "splikes/connections/BCM.pyx":170
  * 
  *         if self.smoothed_y:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -4123,7 +4180,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___i = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":167
+      /* "splikes/connections/BCM.pyx":171
  *         if self.smoothed_y:
  *             for __i in range(self.post.N):
  *                 Y[__i]+=sim.dt*(y[__i]-Y[__i])/tau_y             # <<<<<<<<<<<<<<
@@ -4134,7 +4191,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       (__pyx_v_Y[__pyx_t_11]) = ((__pyx_v_Y[__pyx_t_11]) + ((__pyx_v_sim->dt * ((__pyx_v_y[__pyx_v___i]) - (__pyx_v_Y[__pyx_v___i]))) / __pyx_v_tau_y));
     }
 
-    /* "splikes/connections/BCM.pyx":165
+    /* "splikes/connections/BCM.pyx":169
  *             y[__i]+=sim.dt*(-y[__i]/tau_y+ay*post[__i]/sim.dt)
  * 
  *         if self.smoothed_y:             # <<<<<<<<<<<<<<
@@ -4144,7 +4201,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     goto __pyx_L12;
   }
 
-  /* "splikes/connections/BCM.pyx":169
+  /* "splikes/connections/BCM.pyx":173
  *                 Y[__i]+=sim.dt*(y[__i]-Y[__i])/tau_y
  *         else:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -4156,7 +4213,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___i = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":170
+      /* "splikes/connections/BCM.pyx":174
  *         else:
  *             for __i in range(self.post.N):
  *                 Y[__i]=y[__i]             # <<<<<<<<<<<<<<
@@ -4168,71 +4225,71 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   __pyx_L12:;
 
-  /* "splikes/connections/BCM.pyx":173
+  /* "splikes/connections/BCM.pyx":177
  * 
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
- *             y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/tau_y-yo)-y_avg[__i]))
+ *             y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/scale_y/tau_y-yo)-y_avg[__i]))
  * 
  */
   __pyx_t_6 = __pyx_v_self->__pyx_base.post->N;
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
     __pyx_v___i = __pyx_t_10;
 
-    /* "splikes/connections/BCM.pyx":174
+    /* "splikes/connections/BCM.pyx":178
  * 
  *         for __i in range(self.post.N):
- *             y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/tau_y-yo)-y_avg[__i]))             # <<<<<<<<<<<<<<
+ *             y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/scale_y/tau_y-yo)-y_avg[__i]))             # <<<<<<<<<<<<<<
  * 
  *         if use_beta:
  */
     __pyx_t_11 = __pyx_v___i;
-    (__pyx_v_y_avg[__pyx_t_11]) = ((__pyx_v_y_avg[__pyx_t_11]) + (__pyx_v_sim->dt * ((1.0 / __pyx_v_tau_theta) * ((((__pyx_v_Y[__pyx_v___i]) / __pyx_v_tau_y) - __pyx_v_yo) - (__pyx_v_y_avg[__pyx_v___i])))));
+    (__pyx_v_y_avg[__pyx_t_11]) = ((__pyx_v_y_avg[__pyx_t_11]) + (__pyx_v_sim->dt * ((1.0 / __pyx_v_tau_theta) * (((((__pyx_v_Y[__pyx_v___i]) / __pyx_v_scale_y) / __pyx_v_tau_y) - __pyx_v_yo) - (__pyx_v_y_avg[__pyx_v___i])))));
   }
 
-  /* "splikes/connections/BCM.pyx":176
- *             y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/tau_y-yo)-y_avg[__i]))
+  /* "splikes/connections/BCM.pyx":180
+ *             y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/scale_y/tau_y-yo)-y_avg[__i]))
  * 
  *         if use_beta:             # <<<<<<<<<<<<<<
  *             for __i in range(self.post.N):
- *                 beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]-beta[__i])
+ *                 beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]/scale_y-beta[__i])
  */
   __pyx_t_12 = (__pyx_v_use_beta != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":177
+    /* "splikes/connections/BCM.pyx":181
  * 
  *         if use_beta:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
- *                 beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]-beta[__i])
+ *                 beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]/scale_y-beta[__i])
  * 
  */
     __pyx_t_6 = __pyx_v_self->__pyx_base.post->N;
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___i = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":178
+      /* "splikes/connections/BCM.pyx":182
  *         if use_beta:
  *             for __i in range(self.post.N):
- *                 beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]-beta[__i])             # <<<<<<<<<<<<<<
+ *                 beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]/scale_y-beta[__i])             # <<<<<<<<<<<<<<
  * 
  *         modify_now=False
  */
       __pyx_t_11 = __pyx_v___i;
-      (__pyx_v_beta[__pyx_t_11]) = ((__pyx_v_beta[__pyx_t_11]) + ((__pyx_v_sim->dt * (1.0 / __pyx_v_tau_beta)) * ((__pyx_v_Y[__pyx_v___i]) - (__pyx_v_beta[__pyx_v___i]))));
+      (__pyx_v_beta[__pyx_t_11]) = ((__pyx_v_beta[__pyx_t_11]) + ((__pyx_v_sim->dt * (1.0 / __pyx_v_tau_beta)) * (((__pyx_v_Y[__pyx_v___i]) / __pyx_v_scale_y) - (__pyx_v_beta[__pyx_v___i]))));
     }
 
-    /* "splikes/connections/BCM.pyx":176
- *             y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/tau_y-yo)-y_avg[__i]))
+    /* "splikes/connections/BCM.pyx":180
+ *             y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/scale_y/tau_y-yo)-y_avg[__i]))
  * 
  *         if use_beta:             # <<<<<<<<<<<<<<
  *             for __i in range(self.post.N):
- *                 beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]-beta[__i])
+ *                 beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]/scale_y-beta[__i])
  */
   }
 
-  /* "splikes/connections/BCM.pyx":180
- *                 beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]-beta[__i])
+  /* "splikes/connections/BCM.pyx":184
+ *                 beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]/scale_y-beta[__i])
  * 
  *         modify_now=False             # <<<<<<<<<<<<<<
  *         if self.time_between_modification<0.0:
@@ -4240,7 +4297,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   __pyx_v_modify_now = 0;
 
-  /* "splikes/connections/BCM.pyx":181
+  /* "splikes/connections/BCM.pyx":185
  * 
  *         modify_now=False
  *         if self.time_between_modification<0.0:             # <<<<<<<<<<<<<<
@@ -4250,7 +4307,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_12 = ((__pyx_v_self->time_between_modification < 0.0) != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":182
+    /* "splikes/connections/BCM.pyx":186
  *         modify_now=False
  *         if self.time_between_modification<0.0:
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -4259,7 +4316,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes/connections/BCM.pyx":183
+    /* "splikes/connections/BCM.pyx":187
  *         if self.time_between_modification<0.0:
  *             modify_now=True
  *             dt=sim.dt             # <<<<<<<<<<<<<<
@@ -4269,7 +4326,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     __pyx_t_9 = __pyx_v_sim->dt;
     __pyx_v_dt = __pyx_t_9;
 
-    /* "splikes/connections/BCM.pyx":181
+    /* "splikes/connections/BCM.pyx":185
  * 
  *         modify_now=False
  *         if self.time_between_modification<0.0:             # <<<<<<<<<<<<<<
@@ -4279,7 +4336,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     goto __pyx_L22;
   }
 
-  /* "splikes/connections/BCM.pyx":184
+  /* "splikes/connections/BCM.pyx":188
  *             modify_now=True
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):             # <<<<<<<<<<<<<<
@@ -4289,7 +4346,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_12 = ((__pyx_v_t > (__pyx_v_self->time_to_next_modification - 1e-6)) != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":185
+    /* "splikes/connections/BCM.pyx":189
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -4298,7 +4355,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes/connections/BCM.pyx":186
+    /* "splikes/connections/BCM.pyx":190
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -4307,7 +4364,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
     __pyx_v_self->time_to_next_modification = (__pyx_v_self->time_to_next_modification + __pyx_v_self->time_between_modification);
 
-    /* "splikes/connections/BCM.pyx":187
+    /* "splikes/connections/BCM.pyx":191
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification
  *             dt=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -4317,7 +4374,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     __pyx_t_9 = __pyx_v_self->time_between_modification;
     __pyx_v_dt = __pyx_t_9;
 
-    /* "splikes/connections/BCM.pyx":184
+    /* "splikes/connections/BCM.pyx":188
  *             modify_now=True
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):             # <<<<<<<<<<<<<<
@@ -4327,7 +4384,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   __pyx_L22:;
 
-  /* "splikes/connections/BCM.pyx":189
+  /* "splikes/connections/BCM.pyx":193
  *             dt=self.time_between_modification
  * 
  *         if modify_now:             # <<<<<<<<<<<<<<
@@ -4337,39 +4394,39 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_12 = (__pyx_v_modify_now != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":190
+    /* "splikes/connections/BCM.pyx":194
  * 
  *         if modify_now:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
  *                 if use_beta:
- *                     YY=Y[__i]-beta[__i]
+ *                     YY=Y[__i]/scale_y-beta[__i]
  */
     __pyx_t_6 = __pyx_v_self->__pyx_base.post->N;
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___i = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":191
+      /* "splikes/connections/BCM.pyx":195
  *         if modify_now:
  *             for __i in range(self.post.N):
  *                 if use_beta:             # <<<<<<<<<<<<<<
- *                     YY=Y[__i]-beta[__i]
+ *                     YY=Y[__i]/scale_y-beta[__i]
  *                     if YY<0.0:
  */
       __pyx_t_12 = (__pyx_v_use_beta != 0);
       if (__pyx_t_12) {
 
-        /* "splikes/connections/BCM.pyx":192
+        /* "splikes/connections/BCM.pyx":196
  *             for __i in range(self.post.N):
  *                 if use_beta:
- *                     YY=Y[__i]-beta[__i]             # <<<<<<<<<<<<<<
+ *                     YY=Y[__i]/scale_y-beta[__i]             # <<<<<<<<<<<<<<
  *                     if YY<0.0:
  *                         YY=0.0
  */
-        __pyx_v_YY = ((__pyx_v_Y[__pyx_v___i]) - (__pyx_v_beta[__pyx_v___i]));
+        __pyx_v_YY = (((__pyx_v_Y[__pyx_v___i]) / __pyx_v_scale_y) - (__pyx_v_beta[__pyx_v___i]));
 
-        /* "splikes/connections/BCM.pyx":193
+        /* "splikes/connections/BCM.pyx":197
  *                 if use_beta:
- *                     YY=Y[__i]-beta[__i]
+ *                     YY=Y[__i]/scale_y-beta[__i]
  *                     if YY<0.0:             # <<<<<<<<<<<<<<
  *                         YY=0.0
  *                 else:
@@ -4377,48 +4434,48 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
         __pyx_t_12 = ((__pyx_v_YY < 0.0) != 0);
         if (__pyx_t_12) {
 
-          /* "splikes/connections/BCM.pyx":194
- *                     YY=Y[__i]-beta[__i]
+          /* "splikes/connections/BCM.pyx":198
+ *                     YY=Y[__i]/scale_y-beta[__i]
  *                     if YY<0.0:
  *                         YY=0.0             # <<<<<<<<<<<<<<
  *                 else:
- *                     YY=Y[__i]
+ *                     YY=Y[__i]/scale_y
  */
           __pyx_v_YY = 0.0;
 
-          /* "splikes/connections/BCM.pyx":193
+          /* "splikes/connections/BCM.pyx":197
  *                 if use_beta:
- *                     YY=Y[__i]-beta[__i]
+ *                     YY=Y[__i]/scale_y-beta[__i]
  *                     if YY<0.0:             # <<<<<<<<<<<<<<
  *                         YY=0.0
  *                 else:
  */
         }
 
-        /* "splikes/connections/BCM.pyx":191
+        /* "splikes/connections/BCM.pyx":195
  *         if modify_now:
  *             for __i in range(self.post.N):
  *                 if use_beta:             # <<<<<<<<<<<<<<
- *                     YY=Y[__i]-beta[__i]
+ *                     YY=Y[__i]/scale_y-beta[__i]
  *                     if YY<0.0:
  */
         goto __pyx_L26;
       }
 
-      /* "splikes/connections/BCM.pyx":196
+      /* "splikes/connections/BCM.pyx":200
  *                         YY=0.0
  *                 else:
- *                     YY=Y[__i]             # <<<<<<<<<<<<<<
+ *                     YY=Y[__i]/scale_y             # <<<<<<<<<<<<<<
  * 
  *                 mod_Y[__i]=YY
  */
       /*else*/ {
-        __pyx_v_YY = (__pyx_v_Y[__pyx_v___i]);
+        __pyx_v_YY = ((__pyx_v_Y[__pyx_v___i]) / __pyx_v_scale_y);
       }
       __pyx_L26:;
 
-      /* "splikes/connections/BCM.pyx":198
- *                     YY=Y[__i]
+      /* "splikes/connections/BCM.pyx":202
+ *                     YY=Y[__i]/scale_y
  * 
  *                 mod_Y[__i]=YY             # <<<<<<<<<<<<<<
  *                 mod_theta[__i]=theta[__i]
@@ -4426,7 +4483,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
       (__pyx_v_mod_Y[__pyx_v___i]) = __pyx_v_YY;
 
-      /* "splikes/connections/BCM.pyx":199
+      /* "splikes/connections/BCM.pyx":203
  * 
  *                 mod_Y[__i]=YY
  *                 mod_theta[__i]=theta[__i]             # <<<<<<<<<<<<<<
@@ -4435,7 +4492,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
       (__pyx_v_mod_theta[__pyx_v___i]) = (__pyx_v_theta[__pyx_v___i]);
 
-      /* "splikes/connections/BCM.pyx":200
+      /* "splikes/connections/BCM.pyx":204
  *                 mod_Y[__i]=YY
  *                 mod_theta[__i]=theta[__i]
  *                 mod_beta[__i]=beta[__i]             # <<<<<<<<<<<<<<
@@ -4444,47 +4501,56 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
       (__pyx_v_mod_beta[__pyx_v___i]) = (__pyx_v_beta[__pyx_v___i]);
 
-      /* "splikes/connections/BCM.pyx":203
+      /* "splikes/connections/BCM.pyx":207
  * 
  * 
  *                 for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
- *                     mod_X[__j]=X[__j]
- *                     __wi=__i*self.pre.N+__j
+ *                     XX=X[__j]/scale_x
+ *                     mod_X[__j]=XX
  */
       __pyx_t_11 = __pyx_v_self->__pyx_base.pre->N;
       for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_11; __pyx_t_13+=1) {
         __pyx_v___j = __pyx_t_13;
 
-        /* "splikes/connections/BCM.pyx":204
+        /* "splikes/connections/BCM.pyx":208
  * 
  *                 for __j in range(self.pre.N):
- *                     mod_X[__j]=X[__j]             # <<<<<<<<<<<<<<
+ *                     XX=X[__j]/scale_x             # <<<<<<<<<<<<<<
+ *                     mod_X[__j]=XX
  *                     __wi=__i*self.pre.N+__j
- *                     dw=(eta*(X[__j]-xo)*((YY-yo)*((YY-yo)-theta[__i])/theta[__i])-eta*gamma*W[__wi])
  */
-        (__pyx_v_mod_X[__pyx_v___j]) = (__pyx_v_X[__pyx_v___j]);
+        __pyx_v_XX = ((__pyx_v_X[__pyx_v___j]) / __pyx_v_scale_x);
 
-        /* "splikes/connections/BCM.pyx":205
+        /* "splikes/connections/BCM.pyx":209
  *                 for __j in range(self.pre.N):
- *                     mod_X[__j]=X[__j]
+ *                     XX=X[__j]/scale_x
+ *                     mod_X[__j]=XX             # <<<<<<<<<<<<<<
+ *                     __wi=__i*self.pre.N+__j
+ *                     dw=(eta*(XX-xo)*((YY-yo)*((YY-yo)-theta[__i])/theta[__i])-eta*gamma*W[__wi])
+ */
+        (__pyx_v_mod_X[__pyx_v___j]) = __pyx_v_XX;
+
+        /* "splikes/connections/BCM.pyx":210
+ *                     XX=X[__j]/scale_x
+ *                     mod_X[__j]=XX
  *                     __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
- *                     dw=(eta*(X[__j]-xo)*((YY-yo)*((YY-yo)-theta[__i])/theta[__i])-eta*gamma*W[__wi])
+ *                     dw=(eta*(XX-xo)*((YY-yo)*((YY-yo)-theta[__i])/theta[__i])-eta*gamma*W[__wi])
  *                     W[__wi]+=dt*dw
  */
         __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-        /* "splikes/connections/BCM.pyx":206
- *                     mod_X[__j]=X[__j]
+        /* "splikes/connections/BCM.pyx":211
+ *                     mod_X[__j]=XX
  *                     __wi=__i*self.pre.N+__j
- *                     dw=(eta*(X[__j]-xo)*((YY-yo)*((YY-yo)-theta[__i])/theta[__i])-eta*gamma*W[__wi])             # <<<<<<<<<<<<<<
+ *                     dw=(eta*(XX-xo)*((YY-yo)*((YY-yo)-theta[__i])/theta[__i])-eta*gamma*W[__wi])             # <<<<<<<<<<<<<<
  *                     W[__wi]+=dt*dw
  * 
  */
-        __pyx_v_dw = (((__pyx_v_eta * ((__pyx_v_X[__pyx_v___j]) - __pyx_v_xo)) * (((__pyx_v_YY - __pyx_v_yo) * ((__pyx_v_YY - __pyx_v_yo) - (__pyx_v_theta[__pyx_v___i]))) / (__pyx_v_theta[__pyx_v___i]))) - ((__pyx_v_eta * __pyx_v_gamma) * (__pyx_v_W[__pyx_v___wi])));
+        __pyx_v_dw = (((__pyx_v_eta * (__pyx_v_XX - __pyx_v_xo)) * (((__pyx_v_YY - __pyx_v_yo) * ((__pyx_v_YY - __pyx_v_yo) - (__pyx_v_theta[__pyx_v___i]))) / (__pyx_v_theta[__pyx_v___i]))) - ((__pyx_v_eta * __pyx_v_gamma) * (__pyx_v_W[__pyx_v___wi])));
 
-        /* "splikes/connections/BCM.pyx":207
+        /* "splikes/connections/BCM.pyx":212
  *                     __wi=__i*self.pre.N+__j
- *                     dw=(eta*(X[__j]-xo)*((YY-yo)*((YY-yo)-theta[__i])/theta[__i])-eta*gamma*W[__wi])
+ *                     dw=(eta*(XX-xo)*((YY-yo)*((YY-yo)-theta[__i])/theta[__i])-eta*gamma*W[__wi])
  *                     W[__wi]+=dt*dw             # <<<<<<<<<<<<<<
  * 
  * 
@@ -4494,7 +4560,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       }
     }
 
-    /* "splikes/connections/BCM.pyx":189
+    /* "splikes/connections/BCM.pyx":193
  *             dt=self.time_between_modification
  * 
  *         if modify_now:             # <<<<<<<<<<<<<<
@@ -4503,7 +4569,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
  */
   }
 
-  /* "splikes/connections/BCM.pyx":210
+  /* "splikes/connections/BCM.pyx":215
  * 
  * 
  *         if self.theta_squares_the_average:             # <<<<<<<<<<<<<<
@@ -4513,7 +4579,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   __pyx_t_12 = (__pyx_v_self->theta_squares_the_average != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":211
+    /* "splikes/connections/BCM.pyx":216
  * 
  *         if self.theta_squares_the_average:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -4524,7 +4590,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___i = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":212
+      /* "splikes/connections/BCM.pyx":217
  *         if self.theta_squares_the_average:
  *             for __i in range(self.post.N):
  *                 theta[__i]=y_avg[__i]*y_avg[__i]/theta_o             # <<<<<<<<<<<<<<
@@ -4534,7 +4600,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
       (__pyx_v_theta[__pyx_v___i]) = (((__pyx_v_y_avg[__pyx_v___i]) * (__pyx_v_y_avg[__pyx_v___i])) / __pyx_v_theta_o);
     }
 
-    /* "splikes/connections/BCM.pyx":210
+    /* "splikes/connections/BCM.pyx":215
  * 
  * 
  *         if self.theta_squares_the_average:             # <<<<<<<<<<<<<<
@@ -4544,40 +4610,40 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
     goto __pyx_L30;
   }
 
-  /* "splikes/connections/BCM.pyx":214
+  /* "splikes/connections/BCM.pyx":219
  *                 theta[__i]=y_avg[__i]*y_avg[__i]/theta_o
  *         else:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
  *                 if use_beta:
- *                     YY=Y[__i]-beta[__i]
+ *                     YY=Y[__i]/scale_y-beta[__i]
  */
   /*else*/ {
     __pyx_t_6 = __pyx_v_self->__pyx_base.post->N;
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___i = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":215
+      /* "splikes/connections/BCM.pyx":220
  *         else:
  *             for __i in range(self.post.N):
  *                 if use_beta:             # <<<<<<<<<<<<<<
- *                     YY=Y[__i]-beta[__i]
+ *                     YY=Y[__i]/scale_y-beta[__i]
  *                     if YY<0.0:
  */
       __pyx_t_12 = (__pyx_v_use_beta != 0);
       if (__pyx_t_12) {
 
-        /* "splikes/connections/BCM.pyx":216
+        /* "splikes/connections/BCM.pyx":221
  *             for __i in range(self.post.N):
  *                 if use_beta:
- *                     YY=Y[__i]-beta[__i]             # <<<<<<<<<<<<<<
+ *                     YY=Y[__i]/scale_y-beta[__i]             # <<<<<<<<<<<<<<
  *                     if YY<0.0:
  *                         YY=0.0
  */
-        __pyx_v_YY = ((__pyx_v_Y[__pyx_v___i]) - (__pyx_v_beta[__pyx_v___i]));
+        __pyx_v_YY = (((__pyx_v_Y[__pyx_v___i]) / __pyx_v_scale_y) - (__pyx_v_beta[__pyx_v___i]));
 
-        /* "splikes/connections/BCM.pyx":217
+        /* "splikes/connections/BCM.pyx":222
  *                 if use_beta:
- *                     YY=Y[__i]-beta[__i]
+ *                     YY=Y[__i]/scale_y-beta[__i]
  *                     if YY<0.0:             # <<<<<<<<<<<<<<
  *                         YY=0.0
  *                 else:
@@ -4585,49 +4651,49 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
         __pyx_t_12 = ((__pyx_v_YY < 0.0) != 0);
         if (__pyx_t_12) {
 
-          /* "splikes/connections/BCM.pyx":218
- *                     YY=Y[__i]-beta[__i]
+          /* "splikes/connections/BCM.pyx":223
+ *                     YY=Y[__i]/scale_y-beta[__i]
  *                     if YY<0.0:
  *                         YY=0.0             # <<<<<<<<<<<<<<
  *                 else:
- *                     YY=Y[__i]
+ *                     YY=Y[__i]/scale_y
  */
           __pyx_v_YY = 0.0;
 
-          /* "splikes/connections/BCM.pyx":217
+          /* "splikes/connections/BCM.pyx":222
  *                 if use_beta:
- *                     YY=Y[__i]-beta[__i]
+ *                     YY=Y[__i]/scale_y-beta[__i]
  *                     if YY<0.0:             # <<<<<<<<<<<<<<
  *                         YY=0.0
  *                 else:
  */
         }
 
-        /* "splikes/connections/BCM.pyx":215
+        /* "splikes/connections/BCM.pyx":220
  *         else:
  *             for __i in range(self.post.N):
  *                 if use_beta:             # <<<<<<<<<<<<<<
- *                     YY=Y[__i]-beta[__i]
+ *                     YY=Y[__i]/scale_y-beta[__i]
  *                     if YY<0.0:
  */
         goto __pyx_L35;
       }
 
-      /* "splikes/connections/BCM.pyx":220
+      /* "splikes/connections/BCM.pyx":225
  *                         YY=0.0
  *                 else:
- *                     YY=Y[__i]             # <<<<<<<<<<<<<<
+ *                     YY=Y[__i]/scale_y             # <<<<<<<<<<<<<<
  *                 theta[__i]+=sim.dt*((1.0/tau_theta)*(YY*YY/theta_o-theta[__i]))
  * 
  */
       /*else*/ {
-        __pyx_v_YY = (__pyx_v_Y[__pyx_v___i]);
+        __pyx_v_YY = ((__pyx_v_Y[__pyx_v___i]) / __pyx_v_scale_y);
       }
       __pyx_L35:;
 
-      /* "splikes/connections/BCM.pyx":221
+      /* "splikes/connections/BCM.pyx":226
  *                 else:
- *                     YY=Y[__i]
+ *                     YY=Y[__i]/scale_y
  *                 theta[__i]+=sim.dt*((1.0/tau_theta)*(YY*YY/theta_o-theta[__i]))             # <<<<<<<<<<<<<<
  * 
  *         self.apply_weight_limits()
@@ -4638,18 +4704,18 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(stru
   }
   __pyx_L30:;
 
-  /* "splikes/connections/BCM.pyx":223
+  /* "splikes/connections/BCM.pyx":228
  *                 theta[__i]+=sim.dt*((1.0/tau_theta)*(YY*YY/theta_o-theta[__i]))
  * 
  *         self.apply_weight_limits()             # <<<<<<<<<<<<<<
  * 
  * cdef class BCM(connection):
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 223, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 228, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes/connections/BCM.pyx":110
+  /* "splikes/connections/BCM.pyx":112
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -4703,11 +4769,11 @@ static PyObject *__pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_5update(Py
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 110, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 112, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 110, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 112, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -4715,18 +4781,18 @@ static PyObject *__pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_5update(Py
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 110, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 112, __pyx_L3_error)
     __pyx_v_sim = ((struct __pyx_obj_7splikes_7splikes_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 110, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 112, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("splikes.connections.BCM.BCM_LawCooper.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) __PYX_ERR(0, 110, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) __PYX_ERR(0, 112, __pyx_L1_error)
   __pyx_r = __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_4update(((struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -4744,7 +4810,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_4update(st
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 110, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_13BCM_LawCooper_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4766,7 +4832,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_4update(st
  * cdef class BCM_LawCooper(connection):
  *     cdef public double tau_x,tau_y,xo,yo,theta_o,gamma,eta,             # <<<<<<<<<<<<<<
  *     cdef public tau_theta,tau_beta
- *     cdef public double ax,ay
+ *     cdef public double ax,ay,scale_x,scale_y
  */
 
 /* Python wrapper */
@@ -5249,7 +5315,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_3eta_2__set__(st
  * cdef class BCM_LawCooper(connection):
  *     cdef public double tau_x,tau_y,xo,yo,theta_o,gamma,eta,
  *     cdef public tau_theta,tau_beta             # <<<<<<<<<<<<<<
- *     cdef public double ax,ay
+ *     cdef public double ax,ay,scale_x,scale_y
  *     cdef public bint smoothed_x,smoothed_y
  */
 
@@ -5430,7 +5496,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_8tau_beta_4__del
 /* "splikes/connections/BCM.pyx":33
  *     cdef public double tau_x,tau_y,xo,yo,theta_o,gamma,eta,
  *     cdef public tau_theta,tau_beta
- *     cdef public double ax,ay             # <<<<<<<<<<<<<<
+ *     cdef public double ax,ay,scale_x,scale_y             # <<<<<<<<<<<<<<
  *     cdef public bint smoothed_x,smoothed_y
  *     cdef public np.ndarray theta,beta,y,x,y_avg,X,Y,mod_X,mod_Y,mod_theta,mod_beta
  */
@@ -5571,9 +5637,145 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_2ay_2__set__(str
   return __pyx_r;
 }
 
+/* Python wrapper */
+static PyObject *__pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_x_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_x_1__get__(PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_x___get__(((struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_x___get__(struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  __Pyx_RefNannySetupContext("__get__", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->scale_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("splikes.connections.BCM.BCM_LawCooper.scale_x.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_x_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_x_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_x_2__set__(((struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_x_2__set__(struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  double __pyx_t_1;
+  __Pyx_RefNannySetupContext("__set__", 0);
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_v_self->scale_x = __pyx_t_1;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_AddTraceback("splikes.connections.BCM.BCM_LawCooper.scale_x.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_y_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_y_1__get__(PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_y___get__(((struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_y___get__(struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  __Pyx_RefNannySetupContext("__get__", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->scale_y); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("splikes.connections.BCM.BCM_LawCooper.scale_y.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static int __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_y_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_y_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_y_2__set__(((struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_y_2__set__(struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper *__pyx_v_self, PyObject *__pyx_v_value) {
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  double __pyx_t_1;
+  __Pyx_RefNannySetupContext("__set__", 0);
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_v_self->scale_y = __pyx_t_1;
+
+  /* function exit code */
+  __pyx_r = 0;
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_AddTraceback("splikes.connections.BCM.BCM_LawCooper.scale_y.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = -1;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
 /* "splikes/connections/BCM.pyx":34
  *     cdef public tau_theta,tau_beta
- *     cdef public double ax,ay
+ *     cdef public double ax,ay,scale_x,scale_y
  *     cdef public bint smoothed_x,smoothed_y             # <<<<<<<<<<<<<<
  *     cdef public np.ndarray theta,beta,y,x,y_avg,X,Y,mod_X,mod_Y,mod_theta,mod_beta
  *     cdef public object initial_theta_range
@@ -5716,7 +5918,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_10smoothed_y_2__
 }
 
 /* "splikes/connections/BCM.pyx":35
- *     cdef public double ax,ay
+ *     cdef public double ax,ay,scale_x,scale_y
  *     cdef public bint smoothed_x,smoothed_y
  *     cdef public np.ndarray theta,beta,y,x,y_avg,X,Y,mod_X,mod_Y,mod_theta,mod_beta             # <<<<<<<<<<<<<<
  *     cdef public object initial_theta_range
@@ -7105,7 +7307,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_13BCM_LawCooper_25theta_squares_
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":233
+/* "splikes/connections/BCM.pyx":238
  *     cdef public int save_inputs
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -7128,7 +7330,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 233, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 238, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_3BCM_3BCM_1_reset)) {
       __Pyx_XDECREF(__pyx_r);
@@ -7144,10 +7346,10 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 233, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 238, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 233, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 238, __pyx_L1_error)
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -7159,99 +7361,99 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes/connections/BCM.pyx":234
+  /* "splikes/connections/BCM.pyx":239
  * 
  *     cpdef _reset(self):
  *         self.X=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 239, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 239, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 239, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 239, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 234, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 239, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 239, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 234, __pyx_L1_error)
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 239, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_5);
   __Pyx_GOTREF(__pyx_v_self->X);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->X));
   __pyx_v_self->X = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "splikes/connections/BCM.pyx":235
+  /* "splikes/connections/BCM.pyx":240
  *     cpdef _reset(self):
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 240, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 240, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 240, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 240, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_5);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 240, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 240, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 240, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 235, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 240, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 240, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 235, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 240, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_4);
   __Pyx_GOTREF(__pyx_v_self->Y);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->Y));
   __pyx_v_self->Y = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "splikes/connections/BCM.pyx":236
+  /* "splikes/connections/BCM.pyx":241
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 241, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_rand); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_rand); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 241, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 241, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_1 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -7264,14 +7466,14 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
     }
   }
   if (!__pyx_t_1) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 236, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 241, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_4);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_1, __pyx_t_5};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 236, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 241, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -7280,70 +7482,70 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_1, __pyx_t_5};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 236, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 241, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     } else
     #endif
     {
-      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 236, __pyx_L1_error)
+      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 241, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1); __pyx_t_1 = NULL;
       __Pyx_GIVEREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 236, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 241, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 241, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "splikes/connections/BCM.pyx":237
+  /* "splikes/connections/BCM.pyx":242
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  */
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 237, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "splikes/connections/BCM.pyx":236
+  /* "splikes/connections/BCM.pyx":241
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  */
-  __pyx_t_5 = PyNumber_Subtract(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Subtract(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 241, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Multiply(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Multiply(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 241, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "splikes/connections/BCM.pyx":237
+  /* "splikes/connections/BCM.pyx":242
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  */
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 237, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = PyNumber_Add(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 237, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Add(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 237, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 242, __pyx_L1_error)
 
-  /* "splikes/connections/BCM.pyx":236
+  /* "splikes/connections/BCM.pyx":241
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -7356,87 +7558,87 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   __pyx_v_self->theta = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "splikes/connections/BCM.pyx":238
+  /* "splikes/connections/BCM.pyx":243
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.time_to_next_modification=self.time_between_modification
  */
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 238, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 238, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 238, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 238, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 238, __pyx_L1_error)
+  __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 238, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 238, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 238, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 238, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 238, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->y);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->y));
   __pyx_v_self->y = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes/connections/BCM.pyx":239
+  /* "splikes/connections/BCM.pyx":244
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.time_to_next_modification=self.time_between_modification
  *         connection._reset(self)
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 239, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 239, __pyx_L1_error)
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_v_self->x);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->x));
   __pyx_v_self->x = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":240
+  /* "splikes/connections/BCM.pyx":245
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.time_to_next_modification=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -7446,18 +7648,18 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_ob
   __pyx_t_6 = __pyx_v_self->time_between_modification;
   __pyx_v_self->time_to_next_modification = __pyx_t_6;
 
-  /* "splikes/connections/BCM.pyx":241
+  /* "splikes/connections/BCM.pyx":246
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.time_to_next_modification=self.time_between_modification
  *         connection._reset(self)             # <<<<<<<<<<<<<<
  * 
  *     def __init__(self,neuron pre,neuron post,
  */
-  __pyx_t_3 = __pyx_vtabptr_7splikes_7splikes_connection->_reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 241, __pyx_L1_error)
+  __pyx_t_3 = __pyx_vtabptr_7splikes_7splikes_connection->_reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 246, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":233
+  /* "splikes/connections/BCM.pyx":238
  *     cdef public int save_inputs
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -7501,7 +7703,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_o
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("_reset", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_3BCM__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_3BCM__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 238, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7518,7 +7720,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM__reset(struct __pyx_o
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":243
+/* "splikes/connections/BCM.pyx":248
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -7541,7 +7743,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_3BCM_3__init__(PyObject *__pyx_v
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_pre,&__pyx_n_s_post,&__pyx_n_s_initial_weight_range,&__pyx_n_s_state,&__pyx_n_s_initial_theta_range,0};
     PyObject* values[5] = {0,0,0,0,0};
 
-    /* "splikes/connections/BCM.pyx":244
+    /* "splikes/connections/BCM.pyx":249
  * 
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,             # <<<<<<<<<<<<<<
@@ -7550,7 +7752,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_3BCM_3__init__(PyObject *__pyx_v
  */
     values[2] = ((PyObject *)Py_None);
 
-    /* "splikes/connections/BCM.pyx":245
+    /* "splikes/connections/BCM.pyx":250
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,
  *                         state=None,             # <<<<<<<<<<<<<<
@@ -7559,7 +7761,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_3BCM_3__init__(PyObject *__pyx_v
  */
     values[3] = ((PyObject *)Py_None);
 
-    /* "splikes/connections/BCM.pyx":246
+    /* "splikes/connections/BCM.pyx":251
  *                         initial_weight_range=None,
  *                         state=None,
  *                         initial_theta_range=None,):             # <<<<<<<<<<<<<<
@@ -7587,7 +7789,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_3BCM_3__init__(PyObject *__pyx_v
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_post)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, 1); __PYX_ERR(0, 243, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, 1); __PYX_ERR(0, 248, __pyx_L3_error)
         }
         case  2:
         if (kw_args > 0) {
@@ -7606,7 +7808,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_3BCM_3__init__(PyObject *__pyx_v
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 243, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 248, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -7627,17 +7829,17 @@ static int __pyx_pw_7splikes_11connections_3BCM_3BCM_3__init__(PyObject *__pyx_v
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 243, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 248, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("splikes.connections.BCM.BCM.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_7splikes_7splikes_neuron, 1, "pre", 0))) __PYX_ERR(0, 243, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) __PYX_ERR(0, 243, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_7splikes_7splikes_neuron, 1, "pre", 0))) __PYX_ERR(0, 248, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) __PYX_ERR(0, 248, __pyx_L1_error)
   __pyx_r = __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(((struct __pyx_obj_7splikes_11connections_3BCM_BCM *)__pyx_v_self), __pyx_v_pre, __pyx_v_post, __pyx_v_initial_weight_range, __pyx_v_state, __pyx_v_initial_theta_range);
 
-  /* "splikes/connections/BCM.pyx":243
+  /* "splikes/connections/BCM.pyx":248
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -7667,7 +7869,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __Pyx_RefNannySetupContext("__init__", 0);
   __Pyx_INCREF(__pyx_v_initial_theta_range);
 
-  /* "splikes/connections/BCM.pyx":249
+  /* "splikes/connections/BCM.pyx":254
  * 
  *         # initial theta range needs to be defined before connection init
  *         if initial_theta_range is None:             # <<<<<<<<<<<<<<
@@ -7678,14 +7880,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "splikes/connections/BCM.pyx":250
+    /* "splikes/connections/BCM.pyx":255
  *         # initial theta range needs to be defined before connection init
  *         if initial_theta_range is None:
  *             initial_theta_range=[0.0,0.1]             # <<<<<<<<<<<<<<
  * 
  *         self.initial_theta_range=initial_theta_range
  */
-    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 250, __pyx_L1_error)
+    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 255, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_float_0_0);
     __Pyx_GIVEREF(__pyx_float_0_0);
@@ -7696,7 +7898,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
     __Pyx_DECREF_SET(__pyx_v_initial_theta_range, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "splikes/connections/BCM.pyx":249
+    /* "splikes/connections/BCM.pyx":254
  * 
  *         # initial theta range needs to be defined before connection init
  *         if initial_theta_range is None:             # <<<<<<<<<<<<<<
@@ -7705,7 +7907,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   }
 
-  /* "splikes/connections/BCM.pyx":252
+  /* "splikes/connections/BCM.pyx":257
  *             initial_theta_range=[0.0,0.1]
  * 
  *         self.initial_theta_range=initial_theta_range             # <<<<<<<<<<<<<<
@@ -7718,14 +7920,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __Pyx_DECREF(__pyx_v_self->initial_theta_range);
   __pyx_v_self->initial_theta_range = __pyx_v_initial_theta_range;
 
-  /* "splikes/connections/BCM.pyx":254
+  /* "splikes/connections/BCM.pyx":259
  *         self.initial_theta_range=initial_theta_range
  * 
  *         connection.__init__(self,pre,post,initial_weight_range,state)             # <<<<<<<<<<<<<<
  * 
  *         self.name='Spiking BCM'
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_7splikes_7splikes_connection), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 254, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_7splikes_7splikes_connection), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 259, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -7742,7 +7944,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[6] = {__pyx_t_5, ((PyObject *)__pyx_v_self), ((PyObject *)__pyx_v_pre), ((PyObject *)__pyx_v_post), __pyx_v_initial_weight_range, __pyx_v_state};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 5+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 254, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 5+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 259, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
@@ -7750,13 +7952,13 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[6] = {__pyx_t_5, ((PyObject *)__pyx_v_self), ((PyObject *)__pyx_v_pre), ((PyObject *)__pyx_v_post), __pyx_v_initial_weight_range, __pyx_v_state};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 5+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 254, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 5+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 259, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   {
-    __pyx_t_7 = PyTuple_New(5+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 254, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(5+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 259, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     if (__pyx_t_5) {
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -7776,14 +7978,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
     __Pyx_INCREF(__pyx_v_state);
     __Pyx_GIVEREF(__pyx_v_state);
     PyTuple_SET_ITEM(__pyx_t_7, 4+__pyx_t_6, __pyx_v_state);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 254, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 259, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":256
+  /* "splikes/connections/BCM.pyx":261
  *         connection.__init__(self,pre,post,initial_weight_range,state)
  * 
  *         self.name='Spiking BCM'             # <<<<<<<<<<<<<<
@@ -7796,7 +7998,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __Pyx_DECREF(__pyx_v_self->__pyx_base.__pyx_base.name);
   __pyx_v_self->__pyx_base.__pyx_base.name = __pyx_kp_s_Spiking_BCM;
 
-  /* "splikes/connections/BCM.pyx":257
+  /* "splikes/connections/BCM.pyx":262
  * 
  *         self.name='Spiking BCM'
  *         self.save_inputs=False             # <<<<<<<<<<<<<<
@@ -7805,14 +8007,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->save_inputs = 0;
 
-  /* "splikes/connections/BCM.pyx":258
+  /* "splikes/connections/BCM.pyx":263
  *         self.name='Spiking BCM'
  *         self.save_inputs=False
  *         self.saved_inputs=[]             # <<<<<<<<<<<<<<
  *         self.saved_weights=[]
  *         self.saved_outputs=[]
  */
-  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 258, __pyx_L1_error)
+  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 263, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_v_self->saved_inputs);
@@ -7820,14 +8022,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __pyx_v_self->saved_inputs = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":259
+  /* "splikes/connections/BCM.pyx":264
  *         self.save_inputs=False
  *         self.saved_inputs=[]
  *         self.saved_weights=[]             # <<<<<<<<<<<<<<
  *         self.saved_outputs=[]
  * 
  */
-  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 259, __pyx_L1_error)
+  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_v_self->saved_weights);
@@ -7835,14 +8037,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __pyx_v_self->saved_weights = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":260
+  /* "splikes/connections/BCM.pyx":265
  *         self.saved_inputs=[]
  *         self.saved_weights=[]
  *         self.saved_outputs=[]             # <<<<<<<<<<<<<<
  * 
  *         self.a=1
  */
-  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 260, __pyx_L1_error)
+  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 265, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_v_self->saved_outputs);
@@ -7850,7 +8052,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   __pyx_v_self->saved_outputs = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":262
+  /* "splikes/connections/BCM.pyx":267
  *         self.saved_outputs=[]
  * 
  *         self.a=1             # <<<<<<<<<<<<<<
@@ -7859,7 +8061,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->a = 1.0;
 
-  /* "splikes/connections/BCM.pyx":263
+  /* "splikes/connections/BCM.pyx":268
  * 
  *         self.a=1
  *         self.tau=100             # <<<<<<<<<<<<<<
@@ -7868,7 +8070,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->tau = 100.0;
 
-  /* "splikes/connections/BCM.pyx":264
+  /* "splikes/connections/BCM.pyx":269
  *         self.a=1
  *         self.tau=100
  *         self.xo=0             # <<<<<<<<<<<<<<
@@ -7877,7 +8079,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->xo = 0.0;
 
-  /* "splikes/connections/BCM.pyx":265
+  /* "splikes/connections/BCM.pyx":270
  *         self.tau=100
  *         self.xo=0
  *         self.yo=0             # <<<<<<<<<<<<<<
@@ -7886,7 +8088,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->yo = 0.0;
 
-  /* "splikes/connections/BCM.pyx":266
+  /* "splikes/connections/BCM.pyx":271
  *         self.xo=0
  *         self.yo=0
  *         self.theta_o=1             # <<<<<<<<<<<<<<
@@ -7895,7 +8097,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->theta_o = 1.0;
 
-  /* "splikes/connections/BCM.pyx":267
+  /* "splikes/connections/BCM.pyx":272
  *         self.yo=0
  *         self.theta_o=1
  *         self.gamma=0             # <<<<<<<<<<<<<<
@@ -7904,7 +8106,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->gamma = 0.0;
 
-  /* "splikes/connections/BCM.pyx":268
+  /* "splikes/connections/BCM.pyx":273
  *         self.theta_o=1
  *         self.gamma=0
  *         self.eta=4e-06             # <<<<<<<<<<<<<<
@@ -7913,7 +8115,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->eta = 4e-06;
 
-  /* "splikes/connections/BCM.pyx":269
+  /* "splikes/connections/BCM.pyx":274
  *         self.gamma=0
  *         self.eta=4e-06
  *         self.tau_theta=10000             # <<<<<<<<<<<<<<
@@ -7922,7 +8124,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->tau_theta = 10000.0;
 
-  /* "splikes/connections/BCM.pyx":270
+  /* "splikes/connections/BCM.pyx":275
  *         self.eta=4e-06
  *         self.tau_theta=10000
  *         self.time_between_modification=-1.0             # <<<<<<<<<<<<<<
@@ -7931,18 +8133,18 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
  */
   __pyx_v_self->time_between_modification = -1.0;
 
-  /* "splikes/connections/BCM.pyx":272
+  /* "splikes/connections/BCM.pyx":277
  *         self.time_between_modification=-1.0
  * 
  *         self._reset()             # <<<<<<<<<<<<<<
  * 
  *     @cython.cdivision(True)
  */
-  __pyx_t_3 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 272, __pyx_L1_error)
+  __pyx_t_3 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 277, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":243
+  /* "splikes/connections/BCM.pyx":248
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -7966,7 +8168,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2__init__(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":276
+/* "splikes/connections/BCM.pyx":281
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -8019,11 +8221,11 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 276, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_3BCM_3BCM_5update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 276, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -8041,7 +8243,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 276, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -8050,14 +8252,14 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 276, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else
       #endif
       {
-        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 276, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 281, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         if (__pyx_t_5) {
           __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -8068,7 +8270,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
         __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
         PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
         __pyx_t_3 = 0;
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 276, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
@@ -8081,7 +8283,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes/connections/BCM.pyx":279
+  /* "splikes/connections/BCM.pyx":284
  *         cdef int __i,__j
  * 
  *         cdef double *X=<double *>self.X.data             # <<<<<<<<<<<<<<
@@ -8090,7 +8292,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_X = ((double *)__pyx_v_self->X->data);
 
-  /* "splikes/connections/BCM.pyx":280
+  /* "splikes/connections/BCM.pyx":285
  * 
  *         cdef double *X=<double *>self.X.data
  *         cdef double *Y=<double *>self.Y.data             # <<<<<<<<<<<<<<
@@ -8099,7 +8301,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_Y = ((double *)__pyx_v_self->Y->data);
 
-  /* "splikes/connections/BCM.pyx":281
+  /* "splikes/connections/BCM.pyx":286
  *         cdef double *X=<double *>self.X.data
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *W=self.W             # <<<<<<<<<<<<<<
@@ -8109,7 +8311,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_8 = __pyx_v_self->__pyx_base.W;
   __pyx_v_W = __pyx_t_8;
 
-  /* "splikes/connections/BCM.pyx":282
+  /* "splikes/connections/BCM.pyx":287
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data             # <<<<<<<<<<<<<<
@@ -8118,7 +8320,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_theta = ((double *)__pyx_v_self->theta->data);
 
-  /* "splikes/connections/BCM.pyx":283
+  /* "splikes/connections/BCM.pyx":288
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *y=<double *>self.y.data             # <<<<<<<<<<<<<<
@@ -8127,7 +8329,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_y = ((double *)__pyx_v_self->y->data);
 
-  /* "splikes/connections/BCM.pyx":284
+  /* "splikes/connections/BCM.pyx":289
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *y=<double *>self.y.data
  *         cdef double *x=<double *>self.x.data             # <<<<<<<<<<<<<<
@@ -8136,7 +8338,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_x = ((double *)__pyx_v_self->x->data);
 
-  /* "splikes/connections/BCM.pyx":285
+  /* "splikes/connections/BCM.pyx":290
  *         cdef double *y=<double *>self.y.data
  *         cdef double *x=<double *>self.x.data
  *         cdef double a=self.a             # <<<<<<<<<<<<<<
@@ -8146,7 +8348,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->a;
   __pyx_v_a = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":286
+  /* "splikes/connections/BCM.pyx":291
  *         cdef double *x=<double *>self.x.data
  *         cdef double a=self.a
  *         cdef double tau=self.tau             # <<<<<<<<<<<<<<
@@ -8156,7 +8358,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->tau;
   __pyx_v_tau = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":287
+  /* "splikes/connections/BCM.pyx":292
  *         cdef double a=self.a
  *         cdef double tau=self.tau
  *         cdef double xo=self.xo             # <<<<<<<<<<<<<<
@@ -8166,7 +8368,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->xo;
   __pyx_v_xo = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":288
+  /* "splikes/connections/BCM.pyx":293
  *         cdef double tau=self.tau
  *         cdef double xo=self.xo
  *         cdef double yo=self.yo             # <<<<<<<<<<<<<<
@@ -8176,7 +8378,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->yo;
   __pyx_v_yo = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":289
+  /* "splikes/connections/BCM.pyx":294
  *         cdef double xo=self.xo
  *         cdef double yo=self.yo
  *         cdef double theta_o=self.theta_o             # <<<<<<<<<<<<<<
@@ -8186,7 +8388,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->theta_o;
   __pyx_v_theta_o = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":290
+  /* "splikes/connections/BCM.pyx":295
  *         cdef double yo=self.yo
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma             # <<<<<<<<<<<<<<
@@ -8196,7 +8398,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->gamma;
   __pyx_v_gamma = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":291
+  /* "splikes/connections/BCM.pyx":296
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta             # <<<<<<<<<<<<<<
@@ -8206,7 +8408,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->eta;
   __pyx_v_eta = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":292
+  /* "splikes/connections/BCM.pyx":297
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta
  *         cdef double tau_theta=self.tau_theta             # <<<<<<<<<<<<<<
@@ -8216,7 +8418,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_9 = __pyx_v_self->tau_theta;
   __pyx_v_tau_theta = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":302
+  /* "splikes/connections/BCM.pyx":307
  * 
  * 
  *         pre=<int *>self.pre.spiking.data             # <<<<<<<<<<<<<<
@@ -8225,7 +8427,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_pre = ((int *)__pyx_v_self->__pyx_base.pre->spiking->data);
 
-  /* "splikes/connections/BCM.pyx":303
+  /* "splikes/connections/BCM.pyx":308
  * 
  *         pre=<int *>self.pre.spiking.data
  *         post=<int *>self.post.spiking.data             # <<<<<<<<<<<<<<
@@ -8234,7 +8436,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_post = ((int *)__pyx_v_self->__pyx_base.post->spiking->data);
 
-  /* "splikes/connections/BCM.pyx":305
+  /* "splikes/connections/BCM.pyx":310
  *         post=<int *>self.post.spiking.data
  * 
  *         for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -8245,7 +8447,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
     __pyx_v___j = __pyx_t_10;
 
-    /* "splikes/connections/BCM.pyx":306
+    /* "splikes/connections/BCM.pyx":311
  * 
  *         for __j in range(self.pre.N):
  *             x[__j]+=sim.dt*(-x[__j]/tau+a*pre[__j]/sim.dt)             # <<<<<<<<<<<<<<
@@ -8255,7 +8457,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     __pyx_t_11 = __pyx_v___j;
     (__pyx_v_x[__pyx_t_11]) = ((__pyx_v_x[__pyx_t_11]) + (__pyx_v_sim->dt * (((-(__pyx_v_x[__pyx_v___j])) / __pyx_v_tau) + ((__pyx_v_a * (__pyx_v_pre[__pyx_v___j])) / __pyx_v_sim->dt))));
 
-    /* "splikes/connections/BCM.pyx":307
+    /* "splikes/connections/BCM.pyx":312
  *         for __j in range(self.pre.N):
  *             x[__j]+=sim.dt*(-x[__j]/tau+a*pre[__j]/sim.dt)
  *             X[__j]+=sim.dt*((x[__j]-X[__j])/tau)             # <<<<<<<<<<<<<<
@@ -8266,7 +8468,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     (__pyx_v_X[__pyx_t_11]) = ((__pyx_v_X[__pyx_t_11]) + (__pyx_v_sim->dt * (((__pyx_v_x[__pyx_v___j]) - (__pyx_v_X[__pyx_v___j])) / __pyx_v_tau)));
   }
 
-  /* "splikes/connections/BCM.pyx":308
+  /* "splikes/connections/BCM.pyx":313
  *             x[__j]+=sim.dt*(-x[__j]/tau+a*pre[__j]/sim.dt)
  *             X[__j]+=sim.dt*((x[__j]-X[__j])/tau)
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -8277,7 +8479,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
     __pyx_v___i = __pyx_t_10;
 
-    /* "splikes/connections/BCM.pyx":309
+    /* "splikes/connections/BCM.pyx":314
  *             X[__j]+=sim.dt*((x[__j]-X[__j])/tau)
  *         for __i in range(self.post.N):
  *             y[__i]+=sim.dt*(-y[__i]/tau+a*post[__i]/sim.dt)             # <<<<<<<<<<<<<<
@@ -8287,7 +8489,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     __pyx_t_11 = __pyx_v___i;
     (__pyx_v_y[__pyx_t_11]) = ((__pyx_v_y[__pyx_t_11]) + (__pyx_v_sim->dt * (((-(__pyx_v_y[__pyx_v___i])) / __pyx_v_tau) + ((__pyx_v_a * (__pyx_v_post[__pyx_v___i])) / __pyx_v_sim->dt))));
 
-    /* "splikes/connections/BCM.pyx":310
+    /* "splikes/connections/BCM.pyx":315
  *         for __i in range(self.post.N):
  *             y[__i]+=sim.dt*(-y[__i]/tau+a*post[__i]/sim.dt)
  *             Y[__i]+=sim.dt*((y[__i]-Y[__i])/tau)             # <<<<<<<<<<<<<<
@@ -8298,7 +8500,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     (__pyx_v_Y[__pyx_t_11]) = ((__pyx_v_Y[__pyx_t_11]) + (__pyx_v_sim->dt * (((__pyx_v_y[__pyx_v___i]) - (__pyx_v_Y[__pyx_v___i])) / __pyx_v_tau)));
   }
 
-  /* "splikes/connections/BCM.pyx":312
+  /* "splikes/connections/BCM.pyx":317
  *             Y[__i]+=sim.dt*((y[__i]-Y[__i])/tau)
  * 
  *         modify_now=False             # <<<<<<<<<<<<<<
@@ -8307,7 +8509,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   __pyx_v_modify_now = 0;
 
-  /* "splikes/connections/BCM.pyx":313
+  /* "splikes/connections/BCM.pyx":318
  * 
  *         modify_now=False
  *         if self.time_between_modification<0.0:             # <<<<<<<<<<<<<<
@@ -8317,7 +8519,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_12 = ((__pyx_v_self->time_between_modification < 0.0) != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":314
+    /* "splikes/connections/BCM.pyx":319
  *         modify_now=False
  *         if self.time_between_modification<0.0:
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -8326,7 +8528,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes/connections/BCM.pyx":315
+    /* "splikes/connections/BCM.pyx":320
  *         if self.time_between_modification<0.0:
  *             modify_now=True
  *             dt=sim.dt             # <<<<<<<<<<<<<<
@@ -8336,7 +8538,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     __pyx_t_9 = __pyx_v_sim->dt;
     __pyx_v_dt = __pyx_t_9;
 
-    /* "splikes/connections/BCM.pyx":313
+    /* "splikes/connections/BCM.pyx":318
  * 
  *         modify_now=False
  *         if self.time_between_modification<0.0:             # <<<<<<<<<<<<<<
@@ -8346,7 +8548,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     goto __pyx_L7;
   }
 
-  /* "splikes/connections/BCM.pyx":316
+  /* "splikes/connections/BCM.pyx":321
  *             modify_now=True
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):             # <<<<<<<<<<<<<<
@@ -8356,7 +8558,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_12 = ((__pyx_v_t > (__pyx_v_self->time_to_next_modification - 1e-6)) != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":317
+    /* "splikes/connections/BCM.pyx":322
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -8365,7 +8567,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes/connections/BCM.pyx":318
+    /* "splikes/connections/BCM.pyx":323
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -8374,7 +8576,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
     __pyx_v_self->time_to_next_modification = (__pyx_v_self->time_to_next_modification + __pyx_v_self->time_between_modification);
 
-    /* "splikes/connections/BCM.pyx":319
+    /* "splikes/connections/BCM.pyx":324
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification
  *             dt=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -8384,7 +8586,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     __pyx_t_9 = __pyx_v_self->time_between_modification;
     __pyx_v_dt = __pyx_t_9;
 
-    /* "splikes/connections/BCM.pyx":316
+    /* "splikes/connections/BCM.pyx":321
  *             modify_now=True
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):             # <<<<<<<<<<<<<<
@@ -8394,7 +8596,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   }
   __pyx_L7:;
 
-  /* "splikes/connections/BCM.pyx":322
+  /* "splikes/connections/BCM.pyx":327
  * 
  * 
  *         if modify_now:             # <<<<<<<<<<<<<<
@@ -8404,7 +8606,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   __pyx_t_12 = (__pyx_v_modify_now != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":323
+    /* "splikes/connections/BCM.pyx":328
  * 
  *         if modify_now:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -8415,7 +8617,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___i = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":324
+      /* "splikes/connections/BCM.pyx":329
  *         if modify_now:
  *             for __i in range(self.post.N):
  *                 for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -8426,7 +8628,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
       for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_11; __pyx_t_13+=1) {
         __pyx_v___j = __pyx_t_13;
 
-        /* "splikes/connections/BCM.pyx":325
+        /* "splikes/connections/BCM.pyx":330
  *             for __i in range(self.post.N):
  *                 for __j in range(self.pre.N):
  *                     __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
@@ -8435,7 +8637,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
         __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-        /* "splikes/connections/BCM.pyx":326
+        /* "splikes/connections/BCM.pyx":331
  *                 for __j in range(self.pre.N):
  *                     __wi=__i*self.pre.N+__j
  *                     W[__wi]+=dt*(eta*(X[__j]-xo)*((Y[__i]-yo)*((Y[__i]-yo)-theta[__i]))-eta*gamma*W[__wi])             # <<<<<<<<<<<<<<
@@ -8447,18 +8649,18 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
       }
     }
 
-    /* "splikes/connections/BCM.pyx":328
+    /* "splikes/connections/BCM.pyx":333
  *                     W[__wi]+=dt*(eta*(X[__j]-xo)*((Y[__i]-yo)*((Y[__i]-yo)-theta[__i]))-eta*gamma*W[__wi])
  * 
  *             self.apply_weight_limits()             # <<<<<<<<<<<<<<
  * 
  *             if self.save_inputs:
  */
-    __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 328, __pyx_L1_error)
+    __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 333, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "splikes/connections/BCM.pyx":330
+    /* "splikes/connections/BCM.pyx":335
  *             self.apply_weight_limits()
  * 
  *             if self.save_inputs:             # <<<<<<<<<<<<<<
@@ -8468,14 +8670,14 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     __pyx_t_12 = (__pyx_v_self->save_inputs != 0);
     if (__pyx_t_12) {
 
-      /* "splikes/connections/BCM.pyx":331
+      /* "splikes/connections/BCM.pyx":336
  * 
  *             if self.save_inputs:
  *                 self.saved_inputs.append(self.X.copy())             # <<<<<<<<<<<<<<
  *                 self.saved_outputs.append(self.Y.copy())
  *                 self.saved_weights.append(self.weights.copy())
  */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->X), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 331, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->X), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 336, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_4 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -8488,24 +8690,24 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 331, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 336, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 331, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 336, __pyx_L1_error)
       }
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_15 = __Pyx_PyObject_Append(__pyx_v_self->saved_inputs, __pyx_t_1); if (unlikely(__pyx_t_15 == -1)) __PYX_ERR(0, 331, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyObject_Append(__pyx_v_self->saved_inputs, __pyx_t_1); if (unlikely(__pyx_t_15 == -1)) __PYX_ERR(0, 336, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "splikes/connections/BCM.pyx":332
+      /* "splikes/connections/BCM.pyx":337
  *             if self.save_inputs:
  *                 self.saved_inputs.append(self.X.copy())
  *                 self.saved_outputs.append(self.Y.copy())             # <<<<<<<<<<<<<<
  *                 self.saved_weights.append(self.weights.copy())
  * 
  */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->Y), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 332, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->Y), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 337, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_4 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -8518,24 +8720,24 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 332, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 337, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 332, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 337, __pyx_L1_error)
       }
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_15 = __Pyx_PyObject_Append(__pyx_v_self->saved_outputs, __pyx_t_1); if (unlikely(__pyx_t_15 == -1)) __PYX_ERR(0, 332, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyObject_Append(__pyx_v_self->saved_outputs, __pyx_t_1); if (unlikely(__pyx_t_15 == -1)) __PYX_ERR(0, 337, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "splikes/connections/BCM.pyx":333
+      /* "splikes/connections/BCM.pyx":338
  *                 self.saved_inputs.append(self.X.copy())
  *                 self.saved_outputs.append(self.Y.copy())
  *                 self.saved_weights.append(self.weights.copy())             # <<<<<<<<<<<<<<
  * 
  *         for __i in range(self.post.N):
  */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->__pyx_base.weights), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 333, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->__pyx_base.weights), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 338, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_4 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -8548,17 +8750,17 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 333, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 338, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 333, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 338, __pyx_L1_error)
       }
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_15 = __Pyx_PyObject_Append(__pyx_v_self->saved_weights, __pyx_t_1); if (unlikely(__pyx_t_15 == -1)) __PYX_ERR(0, 333, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyObject_Append(__pyx_v_self->saved_weights, __pyx_t_1); if (unlikely(__pyx_t_15 == -1)) __PYX_ERR(0, 338, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "splikes/connections/BCM.pyx":330
+      /* "splikes/connections/BCM.pyx":335
  *             self.apply_weight_limits()
  * 
  *             if self.save_inputs:             # <<<<<<<<<<<<<<
@@ -8567,7 +8769,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
     }
 
-    /* "splikes/connections/BCM.pyx":322
+    /* "splikes/connections/BCM.pyx":327
  * 
  * 
  *         if modify_now:             # <<<<<<<<<<<<<<
@@ -8576,7 +8778,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
  */
   }
 
-  /* "splikes/connections/BCM.pyx":335
+  /* "splikes/connections/BCM.pyx":340
  *                 self.saved_weights.append(self.weights.copy())
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -8587,7 +8789,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
     __pyx_v___i = __pyx_t_10;
 
-    /* "splikes/connections/BCM.pyx":336
+    /* "splikes/connections/BCM.pyx":341
  * 
  *         for __i in range(self.post.N):
  *             theta[__i]+=sim.dt*((1.0/tau_theta)*(Y[__i]*Y[__i]/theta_o-theta[__i]))             # <<<<<<<<<<<<<<
@@ -8598,7 +8800,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_3BCM_update(struct __pyx_ob
     (__pyx_v_theta[__pyx_t_11]) = ((__pyx_v_theta[__pyx_t_11]) + (__pyx_v_sim->dt * ((1.0 / __pyx_v_tau_theta) * ((((__pyx_v_Y[__pyx_v___i]) * (__pyx_v_Y[__pyx_v___i])) / __pyx_v_theta_o) - (__pyx_v_theta[__pyx_v___i])))));
   }
 
-  /* "splikes/connections/BCM.pyx":276
+  /* "splikes/connections/BCM.pyx":281
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -8652,11 +8854,11 @@ static PyObject *__pyx_pw_7splikes_11connections_3BCM_3BCM_5update(PyObject *__p
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 276, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 281, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 276, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 281, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -8664,18 +8866,18 @@ static PyObject *__pyx_pw_7splikes_11connections_3BCM_3BCM_5update(PyObject *__p
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 276, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 281, __pyx_L3_error)
     __pyx_v_sim = ((struct __pyx_obj_7splikes_7splikes_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 276, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 281, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("splikes.connections.BCM.BCM.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) __PYX_ERR(0, 276, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) __PYX_ERR(0, 281, __pyx_L1_error)
   __pyx_r = __pyx_pf_7splikes_11connections_3BCM_3BCM_4update(((struct __pyx_obj_7splikes_11connections_3BCM_BCM *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -8693,7 +8895,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_4update(struct __pyx_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_3BCM_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 276, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_3BCM_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8710,7 +8912,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_4update(struct __pyx_
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":226
+/* "splikes/connections/BCM.pyx":231
  * 
  * cdef class BCM(connection):
  *     cdef public double a,tau,xo,yo,theta_o,gamma,eta,tau_theta             # <<<<<<<<<<<<<<
@@ -8737,7 +8939,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_1a___get__(struct __p
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->a); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->a); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8772,7 +8974,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_1a_2__set__(struct __pyx_ob
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 231, __pyx_L1_error)
   __pyx_v_self->a = __pyx_t_1;
 
   /* function exit code */
@@ -8805,7 +9007,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_3tau___get__(struct _
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8840,7 +9042,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_3tau_2__set__(struct __pyx_
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 231, __pyx_L1_error)
   __pyx_v_self->tau = __pyx_t_1;
 
   /* function exit code */
@@ -8873,7 +9075,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_2xo___get__(struct __
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->xo); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->xo); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8908,7 +9110,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2xo_2__set__(struct __pyx_o
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 231, __pyx_L1_error)
   __pyx_v_self->xo = __pyx_t_1;
 
   /* function exit code */
@@ -8941,7 +9143,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_2yo___get__(struct __
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->yo); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->yo); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8976,7 +9178,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_2yo_2__set__(struct __pyx_o
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 231, __pyx_L1_error)
   __pyx_v_self->yo = __pyx_t_1;
 
   /* function exit code */
@@ -9009,7 +9211,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_7theta_o___get__(stru
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->theta_o); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->theta_o); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9044,7 +9246,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_7theta_o_2__set__(struct __
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 231, __pyx_L1_error)
   __pyx_v_self->theta_o = __pyx_t_1;
 
   /* function exit code */
@@ -9077,7 +9279,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_5gamma___get__(struct
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->gamma); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->gamma); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9112,7 +9314,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_5gamma_2__set__(struct __py
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 231, __pyx_L1_error)
   __pyx_v_self->gamma = __pyx_t_1;
 
   /* function exit code */
@@ -9145,7 +9347,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_3eta___get__(struct _
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->eta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->eta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9180,7 +9382,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_3eta_2__set__(struct __pyx_
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 231, __pyx_L1_error)
   __pyx_v_self->eta = __pyx_t_1;
 
   /* function exit code */
@@ -9213,7 +9415,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_9tau_theta___get__(st
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_theta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_theta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9248,7 +9450,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_9tau_theta_2__set__(struct 
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 226, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 231, __pyx_L1_error)
   __pyx_v_self->tau_theta = __pyx_t_1;
 
   /* function exit code */
@@ -9262,7 +9464,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_9tau_theta_2__set__(struct 
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":227
+/* "splikes/connections/BCM.pyx":232
  * cdef class BCM(connection):
  *     cdef public double a,tau,xo,yo,theta_o,gamma,eta,tau_theta
  *     cdef public np.ndarray X,Y,theta,y,x             # <<<<<<<<<<<<<<
@@ -9317,7 +9519,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_1X_2__set__(struct __pyx_ob
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 227, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 232, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -9414,7 +9616,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_1Y_2__set__(struct __pyx_ob
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 227, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 232, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -9511,7 +9713,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_5theta_2__set__(struct __py
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 227, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 232, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -9608,7 +9810,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_1y_2__set__(struct __pyx_ob
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 227, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 232, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -9705,7 +9907,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_1x_2__set__(struct __pyx_ob
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 227, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 232, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -9755,7 +9957,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_1x_4__del__(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":228
+/* "splikes/connections/BCM.pyx":233
  *     cdef public double a,tau,xo,yo,theta_o,gamma,eta,tau_theta
  *     cdef public np.ndarray X,Y,theta,y,x
  *     cdef public object initial_theta_range             # <<<<<<<<<<<<<<
@@ -9850,7 +10052,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_19initial_theta_range_4__de
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":229
+/* "splikes/connections/BCM.pyx":234
  *     cdef public np.ndarray X,Y,theta,y,x
  *     cdef public object initial_theta_range
  *     cdef public double time_between_modification,time_to_next_modification             # <<<<<<<<<<<<<<
@@ -9877,7 +10079,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_25time_between_modifi
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_between_modification); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 229, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_between_modification); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 234, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9912,7 +10114,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_25time_between_modification
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 229, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 234, __pyx_L1_error)
   __pyx_v_self->time_between_modification = __pyx_t_1;
 
   /* function exit code */
@@ -9945,7 +10147,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_25time_to_next_modifi
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_to_next_modification); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 229, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_to_next_modification); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 234, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9980,7 +10182,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_25time_to_next_modification
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 229, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 234, __pyx_L1_error)
   __pyx_v_self->time_to_next_modification = __pyx_t_1;
 
   /* function exit code */
@@ -9994,7 +10196,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_25time_to_next_modification
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":230
+/* "splikes/connections/BCM.pyx":235
  *     cdef public object initial_theta_range
  *     cdef public double time_between_modification,time_to_next_modification
  *     cdef public object saved_inputs,saved_weights,saved_outputs             # <<<<<<<<<<<<<<
@@ -10263,7 +10465,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_13saved_outputs_4__del__(st
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":231
+/* "splikes/connections/BCM.pyx":236
  *     cdef public double time_between_modification,time_to_next_modification
  *     cdef public object saved_inputs,saved_weights,saved_outputs
  *     cdef public int save_inputs             # <<<<<<<<<<<<<<
@@ -10290,7 +10492,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_3BCM_11save_inputs___get__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->save_inputs); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->save_inputs); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 236, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10325,7 +10527,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_11save_inputs_2__set__(stru
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 231, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 236, __pyx_L1_error)
   __pyx_v_self->save_inputs = __pyx_t_1;
 
   /* function exit code */
@@ -10339,7 +10541,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_3BCM_11save_inputs_2__set__(stru
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":346
+/* "splikes/connections/BCM.pyx":351
  *     cdef public double time_between_modification,time_to_next_modification
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -10362,7 +10564,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 351, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_1_reset)) {
       __Pyx_XDECREF(__pyx_r);
@@ -10378,10 +10580,10 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 346, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 351, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 346, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 351, __pyx_L1_error)
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -10393,99 +10595,99 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes/connections/BCM.pyx":347
+  /* "splikes/connections/BCM.pyx":352
  * 
  *     cpdef _reset(self):
  *         self.X=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 347, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 347, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 347, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 347, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 347, __pyx_L1_error)
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 347, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 347, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 347, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 347, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 347, __pyx_L1_error)
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_5);
   __Pyx_GOTREF(__pyx_v_self->X);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->X));
   __pyx_v_self->X = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "splikes/connections/BCM.pyx":348
+  /* "splikes/connections/BCM.pyx":353
  *     cpdef _reset(self):
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_5);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 348, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 348, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_4);
   __Pyx_GOTREF(__pyx_v_self->Y);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->Y));
   __pyx_v_self->Y = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "splikes/connections/BCM.pyx":349
+  /* "splikes/connections/BCM.pyx":354
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  * 
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_rand); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_rand); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_1 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -10498,14 +10700,14 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
     }
   }
   if (!__pyx_t_1) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 349, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 354, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_4);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_1, __pyx_t_5};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 349, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 354, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -10514,70 +10716,70 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_1, __pyx_t_5};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 349, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 354, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     } else
     #endif
     {
-      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 349, __pyx_L1_error)
+      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 354, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1); __pyx_t_1 = NULL;
       __Pyx_GIVEREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 349, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 354, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "splikes/connections/BCM.pyx":350
+  /* "splikes/connections/BCM.pyx":355
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  * 
  *         self.yo=np.zeros(self.post.N,dtype=np.float)
  */
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 350, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 355, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "splikes/connections/BCM.pyx":349
+  /* "splikes/connections/BCM.pyx":354
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  * 
  */
-  __pyx_t_5 = PyNumber_Subtract(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Subtract(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Multiply(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Multiply(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "splikes/connections/BCM.pyx":350
+  /* "splikes/connections/BCM.pyx":355
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  * 
  *         self.yo=np.zeros(self.post.N,dtype=np.float)
  */
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 350, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 355, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = PyNumber_Add(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 350, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Add(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 355, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 350, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 355, __pyx_L1_error)
 
-  /* "splikes/connections/BCM.pyx":349
+  /* "splikes/connections/BCM.pyx":354
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -10590,127 +10792,127 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   __pyx_v_self->theta = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "splikes/connections/BCM.pyx":352
+  /* "splikes/connections/BCM.pyx":357
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  * 
  *         self.yo=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  */
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 352, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 352, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->yo);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->yo));
   __pyx_v_self->yo = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes/connections/BCM.pyx":353
+  /* "splikes/connections/BCM.pyx":358
  * 
  *         self.yo=np.zeros(self.post.N,dtype=np.float)
  *         self.y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.time_to_next_modification=self.time_between_modification
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 353, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 358, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 353, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 358, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 353, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 358, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 353, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 358, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 353, __pyx_L1_error)
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 358, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 353, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 358, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 353, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 358, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 353, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 358, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 353, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 358, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 353, __pyx_L1_error)
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 358, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_v_self->y);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->y));
   __pyx_v_self->y = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":354
+  /* "splikes/connections/BCM.pyx":359
  *         self.yo=np.zeros(self.post.N,dtype=np.float)
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.time_to_next_modification=self.time_between_modification
  * 
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 354, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 359, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 354, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 359, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 354, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 359, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 354, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 359, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 354, __pyx_L1_error)
+  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 359, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 354, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 359, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 354, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 359, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 354, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 359, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 354, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 359, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 354, __pyx_L1_error)
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 359, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_5);
   __Pyx_GOTREF(__pyx_v_self->x);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->x));
   __pyx_v_self->x = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "splikes/connections/BCM.pyx":355
+  /* "splikes/connections/BCM.pyx":360
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.time_to_next_modification=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -10720,18 +10922,18 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__res
   __pyx_t_6 = __pyx_v_self->time_between_modification;
   __pyx_v_self->time_to_next_modification = __pyx_t_6;
 
-  /* "splikes/connections/BCM.pyx":357
+  /* "splikes/connections/BCM.pyx":362
  *         self.time_to_next_modification=self.time_between_modification
  * 
  *         connection._reset(self)             # <<<<<<<<<<<<<<
  * 
  *     def __init__(self,neuron pre,neuron post,
  */
-  __pyx_t_5 = __pyx_vtabptr_7splikes_7splikes_connection->_reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 357, __pyx_L1_error)
+  __pyx_t_5 = __pyx_vtabptr_7splikes_7splikes_connection->_reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 362, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "splikes/connections/BCM.pyx":346
+  /* "splikes/connections/BCM.pyx":351
  *     cdef public double time_between_modification,time_to_next_modification
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -10775,7 +10977,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__re
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("_reset", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 351, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10792,7 +10994,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__re
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":359
+/* "splikes/connections/BCM.pyx":364
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -10815,7 +11017,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3__init__
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_pre,&__pyx_n_s_post,&__pyx_n_s_initial_weight_range,&__pyx_n_s_state,&__pyx_n_s_initial_theta_range,0};
     PyObject* values[5] = {0,0,0,0,0};
 
-    /* "splikes/connections/BCM.pyx":360
+    /* "splikes/connections/BCM.pyx":365
  * 
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,             # <<<<<<<<<<<<<<
@@ -10824,7 +11026,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3__init__
  */
     values[2] = ((PyObject *)Py_None);
 
-    /* "splikes/connections/BCM.pyx":361
+    /* "splikes/connections/BCM.pyx":366
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,
  *                         state=None,             # <<<<<<<<<<<<<<
@@ -10833,7 +11035,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3__init__
  */
     values[3] = ((PyObject *)Py_None);
 
-    /* "splikes/connections/BCM.pyx":362
+    /* "splikes/connections/BCM.pyx":367
  *                         initial_weight_range=None,
  *                         state=None,
  *                         initial_theta_range=None,):             # <<<<<<<<<<<<<<
@@ -10861,7 +11063,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3__init__
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_post)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, 1); __PYX_ERR(0, 359, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, 1); __PYX_ERR(0, 364, __pyx_L3_error)
         }
         case  2:
         if (kw_args > 0) {
@@ -10880,7 +11082,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3__init__
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 359, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 364, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -10901,17 +11103,17 @@ static int __pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3__init__
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 359, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 364, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("splikes.connections.BCM.BCM_LawCooper_Offset.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_7splikes_7splikes_neuron, 1, "pre", 0))) __PYX_ERR(0, 359, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) __PYX_ERR(0, 359, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_7splikes_7splikes_neuron, 1, "pre", 0))) __PYX_ERR(0, 364, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) __PYX_ERR(0, 364, __pyx_L1_error)
   __pyx_r = __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__(((struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper_Offset *)__pyx_v_self), __pyx_v_pre, __pyx_v_post, __pyx_v_initial_weight_range, __pyx_v_state, __pyx_v_initial_theta_range);
 
-  /* "splikes/connections/BCM.pyx":359
+  /* "splikes/connections/BCM.pyx":364
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -10941,7 +11143,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   __Pyx_RefNannySetupContext("__init__", 0);
   __Pyx_INCREF(__pyx_v_initial_theta_range);
 
-  /* "splikes/connections/BCM.pyx":365
+  /* "splikes/connections/BCM.pyx":370
  * 
  * 
  *         if initial_theta_range is None:             # <<<<<<<<<<<<<<
@@ -10952,14 +11154,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "splikes/connections/BCM.pyx":366
+    /* "splikes/connections/BCM.pyx":371
  * 
  *         if initial_theta_range is None:
  *             initial_theta_range=[0.0,0.1]             # <<<<<<<<<<<<<<
  * 
  *         self.initial_theta_range=initial_theta_range
  */
-    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 366, __pyx_L1_error)
+    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 371, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_float_0_0);
     __Pyx_GIVEREF(__pyx_float_0_0);
@@ -10970,7 +11172,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
     __Pyx_DECREF_SET(__pyx_v_initial_theta_range, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "splikes/connections/BCM.pyx":365
+    /* "splikes/connections/BCM.pyx":370
  * 
  * 
  *         if initial_theta_range is None:             # <<<<<<<<<<<<<<
@@ -10979,7 +11181,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   }
 
-  /* "splikes/connections/BCM.pyx":368
+  /* "splikes/connections/BCM.pyx":373
  *             initial_theta_range=[0.0,0.1]
  * 
  *         self.initial_theta_range=initial_theta_range             # <<<<<<<<<<<<<<
@@ -10992,14 +11194,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   __Pyx_DECREF(__pyx_v_self->initial_theta_range);
   __pyx_v_self->initial_theta_range = __pyx_v_initial_theta_range;
 
-  /* "splikes/connections/BCM.pyx":370
+  /* "splikes/connections/BCM.pyx":375
  *         self.initial_theta_range=initial_theta_range
  * 
  *         connection.__init__(self,pre,post,initial_weight_range,state)             # <<<<<<<<<<<<<<
  * 
  *         self.name='Spiking BCM LawCooper'
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_7splikes_7splikes_connection), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 370, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_7splikes_7splikes_connection), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 375, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -11016,7 +11218,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[6] = {__pyx_t_5, ((PyObject *)__pyx_v_self), ((PyObject *)__pyx_v_pre), ((PyObject *)__pyx_v_post), __pyx_v_initial_weight_range, __pyx_v_state};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 5+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 370, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 5+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 375, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
@@ -11024,13 +11226,13 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[6] = {__pyx_t_5, ((PyObject *)__pyx_v_self), ((PyObject *)__pyx_v_pre), ((PyObject *)__pyx_v_post), __pyx_v_initial_weight_range, __pyx_v_state};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 5+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 370, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 5+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 375, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   {
-    __pyx_t_7 = PyTuple_New(5+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 370, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(5+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 375, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     if (__pyx_t_5) {
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -11050,14 +11252,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
     __Pyx_INCREF(__pyx_v_state);
     __Pyx_GIVEREF(__pyx_v_state);
     PyTuple_SET_ITEM(__pyx_t_7, 4+__pyx_t_6, __pyx_v_state);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 370, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 375, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":372
+  /* "splikes/connections/BCM.pyx":377
  *         connection.__init__(self,pre,post,initial_weight_range,state)
  * 
  *         self.name='Spiking BCM LawCooper'             # <<<<<<<<<<<<<<
@@ -11070,7 +11272,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   __Pyx_DECREF(__pyx_v_self->__pyx_base.__pyx_base.name);
   __pyx_v_self->__pyx_base.__pyx_base.name = __pyx_kp_s_Spiking_BCM_LawCooper;
 
-  /* "splikes/connections/BCM.pyx":373
+  /* "splikes/connections/BCM.pyx":378
  * 
  *         self.name='Spiking BCM LawCooper'
  *         self.a=1             # <<<<<<<<<<<<<<
@@ -11079,7 +11281,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->a = 1.0;
 
-  /* "splikes/connections/BCM.pyx":374
+  /* "splikes/connections/BCM.pyx":379
  *         self.name='Spiking BCM LawCooper'
  *         self.a=1
  *         self.tau=100             # <<<<<<<<<<<<<<
@@ -11088,7 +11290,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->tau = 100.0;
 
-  /* "splikes/connections/BCM.pyx":375
+  /* "splikes/connections/BCM.pyx":380
  *         self.a=1
  *         self.tau=100
  *         self.xo=0             # <<<<<<<<<<<<<<
@@ -11097,7 +11299,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->xo = 0.0;
 
-  /* "splikes/connections/BCM.pyx":376
+  /* "splikes/connections/BCM.pyx":381
  *         self.tau=100
  *         self.xo=0
  *         self.theta_o=1             # <<<<<<<<<<<<<<
@@ -11106,7 +11308,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->theta_o = 1.0;
 
-  /* "splikes/connections/BCM.pyx":377
+  /* "splikes/connections/BCM.pyx":382
  *         self.xo=0
  *         self.theta_o=1
  *         self.gamma=0             # <<<<<<<<<<<<<<
@@ -11115,7 +11317,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->gamma = 0.0;
 
-  /* "splikes/connections/BCM.pyx":378
+  /* "splikes/connections/BCM.pyx":383
  *         self.theta_o=1
  *         self.gamma=0
  *         self.eta=4e-06             # <<<<<<<<<<<<<<
@@ -11124,7 +11326,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->eta = 4e-06;
 
-  /* "splikes/connections/BCM.pyx":379
+  /* "splikes/connections/BCM.pyx":384
  *         self.gamma=0
  *         self.eta=4e-06
  *         self.tau_thresh=10000             # <<<<<<<<<<<<<<
@@ -11133,7 +11335,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->tau_thresh = 10000.0;
 
-  /* "splikes/connections/BCM.pyx":380
+  /* "splikes/connections/BCM.pyx":385
  *         self.eta=4e-06
  *         self.tau_thresh=10000
  *         self.time_between_modification=-1.0             # <<<<<<<<<<<<<<
@@ -11142,18 +11344,18 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
  */
   __pyx_v_self->time_between_modification = -1.0;
 
-  /* "splikes/connections/BCM.pyx":381
+  /* "splikes/connections/BCM.pyx":386
  *         self.tau_thresh=10000
  *         self.time_between_modification=-1.0
  *         self._reset()             # <<<<<<<<<<<<<<
  * 
  *     @cython.cdivision(True)
  */
-  __pyx_t_3 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper_Offset *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __pyx_t_3 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper_Offset *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 386, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":359
+  /* "splikes/connections/BCM.pyx":364
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -11177,7 +11379,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2__init__
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":385
+/* "splikes/connections/BCM.pyx":390
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -11230,11 +11432,11 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 385, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 390, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_5update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 385, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 390, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -11252,7 +11454,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 385, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 390, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -11261,14 +11463,14 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 385, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 390, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else
       #endif
       {
-        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 385, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 390, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         if (__pyx_t_5) {
           __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -11279,7 +11481,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
         __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
         PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
         __pyx_t_3 = 0;
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 385, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 390, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
@@ -11292,7 +11494,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes/connections/BCM.pyx":388
+  /* "splikes/connections/BCM.pyx":393
  *         cdef int __i,__j
  * 
  *         cdef double *X=<double *>self.X.data             # <<<<<<<<<<<<<<
@@ -11301,7 +11503,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_X = ((double *)__pyx_v_self->X->data);
 
-  /* "splikes/connections/BCM.pyx":389
+  /* "splikes/connections/BCM.pyx":394
  * 
  *         cdef double *X=<double *>self.X.data
  *         cdef double *Y=<double *>self.Y.data             # <<<<<<<<<<<<<<
@@ -11310,7 +11512,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_Y = ((double *)__pyx_v_self->Y->data);
 
-  /* "splikes/connections/BCM.pyx":390
+  /* "splikes/connections/BCM.pyx":395
  *         cdef double *X=<double *>self.X.data
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *W=self.W             # <<<<<<<<<<<<<<
@@ -11320,7 +11522,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_8 = __pyx_v_self->__pyx_base.W;
   __pyx_v_W = __pyx_t_8;
 
-  /* "splikes/connections/BCM.pyx":391
+  /* "splikes/connections/BCM.pyx":396
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data             # <<<<<<<<<<<<<<
@@ -11329,7 +11531,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_theta = ((double *)__pyx_v_self->theta->data);
 
-  /* "splikes/connections/BCM.pyx":392
+  /* "splikes/connections/BCM.pyx":397
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *y=<double *>self.y.data             # <<<<<<<<<<<<<<
@@ -11338,7 +11540,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_y = ((double *)__pyx_v_self->y->data);
 
-  /* "splikes/connections/BCM.pyx":393
+  /* "splikes/connections/BCM.pyx":398
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *y=<double *>self.y.data
  *         cdef double *yo=<double *>self.yo.data             # <<<<<<<<<<<<<<
@@ -11347,7 +11549,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_yo = ((double *)__pyx_v_self->yo->data);
 
-  /* "splikes/connections/BCM.pyx":394
+  /* "splikes/connections/BCM.pyx":399
  *         cdef double *y=<double *>self.y.data
  *         cdef double *yo=<double *>self.yo.data
  *         cdef double *x=<double *>self.x.data             # <<<<<<<<<<<<<<
@@ -11356,7 +11558,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_x = ((double *)__pyx_v_self->x->data);
 
-  /* "splikes/connections/BCM.pyx":395
+  /* "splikes/connections/BCM.pyx":400
  *         cdef double *yo=<double *>self.yo.data
  *         cdef double *x=<double *>self.x.data
  *         cdef double a=self.a             # <<<<<<<<<<<<<<
@@ -11366,7 +11568,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->a;
   __pyx_v_a = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":396
+  /* "splikes/connections/BCM.pyx":401
  *         cdef double *x=<double *>self.x.data
  *         cdef double a=self.a
  *         cdef double tau=self.tau             # <<<<<<<<<<<<<<
@@ -11376,7 +11578,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->tau;
   __pyx_v_tau = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":397
+  /* "splikes/connections/BCM.pyx":402
  *         cdef double a=self.a
  *         cdef double tau=self.tau
  *         cdef double xo=self.xo             # <<<<<<<<<<<<<<
@@ -11386,7 +11588,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->xo;
   __pyx_v_xo = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":398
+  /* "splikes/connections/BCM.pyx":403
  *         cdef double tau=self.tau
  *         cdef double xo=self.xo
  *         cdef double theta_o=self.theta_o             # <<<<<<<<<<<<<<
@@ -11396,7 +11598,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->theta_o;
   __pyx_v_theta_o = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":399
+  /* "splikes/connections/BCM.pyx":404
  *         cdef double xo=self.xo
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma             # <<<<<<<<<<<<<<
@@ -11406,7 +11608,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->gamma;
   __pyx_v_gamma = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":400
+  /* "splikes/connections/BCM.pyx":405
  *         cdef double theta_o=self.theta_o
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta             # <<<<<<<<<<<<<<
@@ -11416,7 +11618,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->eta;
   __pyx_v_eta = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":401
+  /* "splikes/connections/BCM.pyx":406
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta
  *         cdef double tau_thresh=self.tau_thresh             # <<<<<<<<<<<<<<
@@ -11426,7 +11628,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_9 = __pyx_v_self->tau_thresh;
   __pyx_v_tau_thresh = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":411
+  /* "splikes/connections/BCM.pyx":416
  * 
  * 
  *         pre=<int *>self.pre.spiking.data             # <<<<<<<<<<<<<<
@@ -11435,7 +11637,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_pre = ((int *)__pyx_v_self->__pyx_base.pre->spiking->data);
 
-  /* "splikes/connections/BCM.pyx":412
+  /* "splikes/connections/BCM.pyx":417
  * 
  *         pre=<int *>self.pre.spiking.data
  *         post=<int *>self.post.spiking.data             # <<<<<<<<<<<<<<
@@ -11444,7 +11646,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_post = ((int *)__pyx_v_self->__pyx_base.post->spiking->data);
 
-  /* "splikes/connections/BCM.pyx":414
+  /* "splikes/connections/BCM.pyx":419
  *         post=<int *>self.post.spiking.data
  * 
  *         for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -11455,7 +11657,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
     __pyx_v___j = __pyx_t_10;
 
-    /* "splikes/connections/BCM.pyx":415
+    /* "splikes/connections/BCM.pyx":420
  * 
  *         for __j in range(self.pre.N):
  *             x[__j]+=sim.dt*(-x[__j]/tau+a*pre[__j]/sim.dt)             # <<<<<<<<<<<<<<
@@ -11465,7 +11667,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __pyx_t_11 = __pyx_v___j;
     (__pyx_v_x[__pyx_t_11]) = ((__pyx_v_x[__pyx_t_11]) + (__pyx_v_sim->dt * (((-(__pyx_v_x[__pyx_v___j])) / __pyx_v_tau) + ((__pyx_v_a * (__pyx_v_pre[__pyx_v___j])) / __pyx_v_sim->dt))));
 
-    /* "splikes/connections/BCM.pyx":416
+    /* "splikes/connections/BCM.pyx":421
  *         for __j in range(self.pre.N):
  *             x[__j]+=sim.dt*(-x[__j]/tau+a*pre[__j]/sim.dt)
  *             X[__j]+=x[__j]-xo             # <<<<<<<<<<<<<<
@@ -11476,7 +11678,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     (__pyx_v_X[__pyx_t_11]) = ((__pyx_v_X[__pyx_t_11]) + ((__pyx_v_x[__pyx_v___j]) - __pyx_v_xo));
   }
 
-  /* "splikes/connections/BCM.pyx":418
+  /* "splikes/connections/BCM.pyx":423
  *             X[__j]+=x[__j]-xo
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -11487,7 +11689,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
     __pyx_v___i = __pyx_t_10;
 
-    /* "splikes/connections/BCM.pyx":419
+    /* "splikes/connections/BCM.pyx":424
  * 
  *         for __i in range(self.post.N):
  *             y[__i]+=sim.dt*(-y[__i]/tau+a*post[__i]/sim.dt)             # <<<<<<<<<<<<<<
@@ -11497,7 +11699,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __pyx_t_11 = __pyx_v___i;
     (__pyx_v_y[__pyx_t_11]) = ((__pyx_v_y[__pyx_t_11]) + (__pyx_v_sim->dt * (((-(__pyx_v_y[__pyx_v___i])) / __pyx_v_tau) + ((__pyx_v_a * (__pyx_v_post[__pyx_v___i])) / __pyx_v_sim->dt))));
 
-    /* "splikes/connections/BCM.pyx":421
+    /* "splikes/connections/BCM.pyx":426
  *             y[__i]+=sim.dt*(-y[__i]/tau+a*post[__i]/sim.dt)
  * 
  *             sum_w=0.0             # <<<<<<<<<<<<<<
@@ -11506,7 +11708,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
     __pyx_v_sum_w = 0.0;
 
-    /* "splikes/connections/BCM.pyx":422
+    /* "splikes/connections/BCM.pyx":427
  * 
  *             sum_w=0.0
  *             for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -11517,7 +11719,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
       __pyx_v___j = __pyx_t_12;
 
-      /* "splikes/connections/BCM.pyx":423
+      /* "splikes/connections/BCM.pyx":428
  *             sum_w=0.0
  *             for __j in range(self.pre.N):
  *                 __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
@@ -11526,7 +11728,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
       __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-      /* "splikes/connections/BCM.pyx":424
+      /* "splikes/connections/BCM.pyx":429
  *             for __j in range(self.pre.N):
  *                 __wi=__i*self.pre.N+__j
  *                 sum_w+=W[__wi]             # <<<<<<<<<<<<<<
@@ -11536,7 +11738,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
       __pyx_v_sum_w = (__pyx_v_sum_w + (__pyx_v_W[__pyx_v___wi]));
     }
 
-    /* "splikes/connections/BCM.pyx":426
+    /* "splikes/connections/BCM.pyx":431
  *                 sum_w+=W[__wi]
  * 
  *             yo[__i]=xo*sum_w             # <<<<<<<<<<<<<<
@@ -11545,7 +11747,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
     (__pyx_v_yo[__pyx_v___i]) = (__pyx_v_xo * __pyx_v_sum_w);
 
-    /* "splikes/connections/BCM.pyx":427
+    /* "splikes/connections/BCM.pyx":432
  * 
  *             yo[__i]=xo*sum_w
  *             Y[__i]+=y[__i]-yo[__i]             # <<<<<<<<<<<<<<
@@ -11555,7 +11757,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __pyx_t_11 = __pyx_v___i;
     (__pyx_v_Y[__pyx_t_11]) = ((__pyx_v_Y[__pyx_t_11]) + ((__pyx_v_y[__pyx_v___i]) - (__pyx_v_yo[__pyx_v___i])));
 
-    /* "splikes/connections/BCM.pyx":428
+    /* "splikes/connections/BCM.pyx":433
  *             yo[__i]=xo*sum_w
  *             Y[__i]+=y[__i]-yo[__i]
  *             if Y[__i]<0.0:             # <<<<<<<<<<<<<<
@@ -11565,7 +11767,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __pyx_t_13 = (((__pyx_v_Y[__pyx_v___i]) < 0.0) != 0);
     if (__pyx_t_13) {
 
-      /* "splikes/connections/BCM.pyx":429
+      /* "splikes/connections/BCM.pyx":434
  *             Y[__i]+=y[__i]-yo[__i]
  *             if Y[__i]<0.0:
  *                 Y[__i]=0.0             # <<<<<<<<<<<<<<
@@ -11574,7 +11776,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
       (__pyx_v_Y[__pyx_v___i]) = 0.0;
 
-      /* "splikes/connections/BCM.pyx":428
+      /* "splikes/connections/BCM.pyx":433
  *             yo[__i]=xo*sum_w
  *             Y[__i]+=y[__i]-yo[__i]
  *             if Y[__i]<0.0:             # <<<<<<<<<<<<<<
@@ -11583,7 +11785,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
     }
 
-    /* "splikes/connections/BCM.pyx":431
+    /* "splikes/connections/BCM.pyx":436
  *                 Y[__i]=0.0
  * 
  *             theta[__i]+=sim.dt*((1.0/tau_thresh)*(Y[__i]*Y[__i]/theta_o-theta[__i]))             # <<<<<<<<<<<<<<
@@ -11594,7 +11796,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     (__pyx_v_theta[__pyx_t_11]) = ((__pyx_v_theta[__pyx_t_11]) + (__pyx_v_sim->dt * ((1.0 / __pyx_v_tau_thresh) * ((((__pyx_v_Y[__pyx_v___i]) * (__pyx_v_Y[__pyx_v___i])) / __pyx_v_theta_o) - (__pyx_v_theta[__pyx_v___i])))));
   }
 
-  /* "splikes/connections/BCM.pyx":434
+  /* "splikes/connections/BCM.pyx":439
  * 
  * 
  *         modify_now=False             # <<<<<<<<<<<<<<
@@ -11603,7 +11805,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   __pyx_v_modify_now = 0;
 
-  /* "splikes/connections/BCM.pyx":435
+  /* "splikes/connections/BCM.pyx":440
  * 
  *         modify_now=False
  *         if self.time_between_modification<0.0:             # <<<<<<<<<<<<<<
@@ -11613,7 +11815,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_13 = ((__pyx_v_self->time_between_modification < 0.0) != 0);
   if (__pyx_t_13) {
 
-    /* "splikes/connections/BCM.pyx":436
+    /* "splikes/connections/BCM.pyx":441
  *         modify_now=False
  *         if self.time_between_modification<0.0:
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -11622,7 +11824,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes/connections/BCM.pyx":437
+    /* "splikes/connections/BCM.pyx":442
  *         if self.time_between_modification<0.0:
  *             modify_now=True
  *             dt=sim.dt             # <<<<<<<<<<<<<<
@@ -11632,7 +11834,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __pyx_t_9 = __pyx_v_sim->dt;
     __pyx_v_dt = __pyx_t_9;
 
-    /* "splikes/connections/BCM.pyx":435
+    /* "splikes/connections/BCM.pyx":440
  * 
  *         modify_now=False
  *         if self.time_between_modification<0.0:             # <<<<<<<<<<<<<<
@@ -11642,7 +11844,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     goto __pyx_L10;
   }
 
-  /* "splikes/connections/BCM.pyx":438
+  /* "splikes/connections/BCM.pyx":443
  *             modify_now=True
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):             # <<<<<<<<<<<<<<
@@ -11652,7 +11854,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_13 = ((__pyx_v_t > (__pyx_v_self->time_to_next_modification - 1e-6)) != 0);
   if (__pyx_t_13) {
 
-    /* "splikes/connections/BCM.pyx":439
+    /* "splikes/connections/BCM.pyx":444
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -11661,7 +11863,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes/connections/BCM.pyx":440
+    /* "splikes/connections/BCM.pyx":445
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -11670,7 +11872,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
     __pyx_v_self->time_to_next_modification = (__pyx_v_self->time_to_next_modification + __pyx_v_self->time_between_modification);
 
-    /* "splikes/connections/BCM.pyx":441
+    /* "splikes/connections/BCM.pyx":446
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification
  *             dt=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -11680,7 +11882,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     __pyx_t_9 = __pyx_v_self->time_between_modification;
     __pyx_v_dt = __pyx_t_9;
 
-    /* "splikes/connections/BCM.pyx":438
+    /* "splikes/connections/BCM.pyx":443
  *             modify_now=True
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):             # <<<<<<<<<<<<<<
@@ -11690,7 +11892,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   }
   __pyx_L10:;
 
-  /* "splikes/connections/BCM.pyx":443
+  /* "splikes/connections/BCM.pyx":448
  *             dt=self.time_between_modification
  * 
  *         if modify_now:             # <<<<<<<<<<<<<<
@@ -11700,7 +11902,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
   __pyx_t_13 = (__pyx_v_modify_now != 0);
   if (__pyx_t_13) {
 
-    /* "splikes/connections/BCM.pyx":444
+    /* "splikes/connections/BCM.pyx":449
  * 
  *         if modify_now:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -11711,7 +11913,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___i = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":445
+      /* "splikes/connections/BCM.pyx":450
  *         if modify_now:
  *             for __i in range(self.post.N):
  *                 for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -11722,7 +11924,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
       for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
         __pyx_v___j = __pyx_t_12;
 
-        /* "splikes/connections/BCM.pyx":446
+        /* "splikes/connections/BCM.pyx":451
  *             for __i in range(self.post.N):
  *                 for __j in range(self.pre.N):
  *                     __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
@@ -11731,7 +11933,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
         __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-        /* "splikes/connections/BCM.pyx":447
+        /* "splikes/connections/BCM.pyx":452
  *                 for __j in range(self.pre.N):
  *                     __wi=__i*self.pre.N+__j
  *                     W[__wi]+=dt*(eta*X[__j]*(Y[__i]*(Y[__i]-theta[__i])/theta[__i])-eta*gamma*W[__wi])             # <<<<<<<<<<<<<<
@@ -11743,18 +11945,18 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
       }
     }
 
-    /* "splikes/connections/BCM.pyx":449
+    /* "splikes/connections/BCM.pyx":454
  *                     W[__wi]+=dt*(eta*X[__j]*(Y[__i]*(Y[__i]-theta[__i])/theta[__i])-eta*gamma*W[__wi])
  * 
  *             self.apply_weight_limits()             # <<<<<<<<<<<<<<
  * 
  * 
  */
-    __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper_Offset *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 449, __pyx_L1_error)
+    __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_LawCooper_Offset *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 454, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "splikes/connections/BCM.pyx":443
+    /* "splikes/connections/BCM.pyx":448
  *             dt=self.time_between_modification
  * 
  *         if modify_now:             # <<<<<<<<<<<<<<
@@ -11763,7 +11965,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_upda
  */
   }
 
-  /* "splikes/connections/BCM.pyx":385
+  /* "splikes/connections/BCM.pyx":390
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -11817,11 +12019,11 @@ static PyObject *__pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_5up
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 385, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 390, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 385, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 390, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -11829,18 +12031,18 @@ static PyObject *__pyx_pw_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_5up
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 385, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 390, __pyx_L3_error)
     __pyx_v_sim = ((struct __pyx_obj_7splikes_7splikes_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 385, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 390, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("splikes.connections.BCM.BCM_LawCooper_Offset.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) __PYX_ERR(0, 385, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) __PYX_ERR(0, 390, __pyx_L1_error)
   __pyx_r = __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_4update(((struct __pyx_obj_7splikes_11connections_3BCM_BCM_LawCooper_Offset *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -11858,7 +12060,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_4up
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 385, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 390, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11875,7 +12077,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_4up
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":341
+/* "splikes/connections/BCM.pyx":346
  * 
  * cdef class BCM_LawCooper_Offset(connection):
  *     cdef public double a,tau,xo,theta_o,gamma,eta,tau_thresh             # <<<<<<<<<<<<<<
@@ -11902,7 +12104,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_1a_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->a); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->a); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11937,7 +12139,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_1a_2__set
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 346, __pyx_L1_error)
   __pyx_v_self->a = __pyx_t_1;
 
   /* function exit code */
@@ -11970,7 +12172,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3ta
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -12005,7 +12207,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3tau_2__s
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 346, __pyx_L1_error)
   __pyx_v_self->tau = __pyx_t_1;
 
   /* function exit code */
@@ -12038,7 +12240,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2xo
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->xo); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->xo); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -12073,7 +12275,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2xo_2__se
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 346, __pyx_L1_error)
   __pyx_v_self->xo = __pyx_t_1;
 
   /* function exit code */
@@ -12106,7 +12308,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_7th
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->theta_o); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->theta_o); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -12141,7 +12343,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_7theta_o_
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 346, __pyx_L1_error)
   __pyx_v_self->theta_o = __pyx_t_1;
 
   /* function exit code */
@@ -12174,7 +12376,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_5ga
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->gamma); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->gamma); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -12209,7 +12411,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_5gamma_2_
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 346, __pyx_L1_error)
   __pyx_v_self->gamma = __pyx_t_1;
 
   /* function exit code */
@@ -12242,7 +12444,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3et
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->eta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->eta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -12277,7 +12479,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_3eta_2__s
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 346, __pyx_L1_error)
   __pyx_v_self->eta = __pyx_t_1;
 
   /* function exit code */
@@ -12310,7 +12512,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_10t
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_thresh); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_thresh); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -12345,7 +12547,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_10tau_thr
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 346, __pyx_L1_error)
   __pyx_v_self->tau_thresh = __pyx_t_1;
 
   /* function exit code */
@@ -12359,7 +12561,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_10tau_thr
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":342
+/* "splikes/connections/BCM.pyx":347
  * cdef class BCM_LawCooper_Offset(connection):
  *     cdef public double a,tau,xo,theta_o,gamma,eta,tau_thresh
  *     cdef public np.ndarray X,Y,theta,y,x,yo  # offset for y depends on w             # <<<<<<<<<<<<<<
@@ -12414,7 +12616,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_1X_2__set
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 342, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 347, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -12511,7 +12713,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_1Y_2__set
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 342, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 347, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -12608,7 +12810,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_5theta_2_
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 342, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 347, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -12705,7 +12907,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_1y_2__set
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 342, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 347, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -12802,7 +13004,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_1x_2__set
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 342, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 347, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -12899,7 +13101,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2yo_2__se
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 342, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 347, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -12949,7 +13151,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_2yo_4__de
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":343
+/* "splikes/connections/BCM.pyx":348
  *     cdef public double a,tau,xo,theta_o,gamma,eta,tau_thresh
  *     cdef public np.ndarray X,Y,theta,y,x,yo  # offset for y depends on w
  *     cdef public object initial_theta_range             # <<<<<<<<<<<<<<
@@ -13044,7 +13246,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_19initial
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":344
+/* "splikes/connections/BCM.pyx":349
  *     cdef public np.ndarray X,Y,theta,y,x,yo  # offset for y depends on w
  *     cdef public object initial_theta_range
  *     cdef public double time_between_modification,time_to_next_modification             # <<<<<<<<<<<<<<
@@ -13071,7 +13273,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_25t
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_between_modification); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_between_modification); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 349, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -13106,7 +13308,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_25time_be
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 349, __pyx_L1_error)
   __pyx_v_self->time_between_modification = __pyx_t_1;
 
   /* function exit code */
@@ -13139,7 +13341,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_25t
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_to_next_modification); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_to_next_modification); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 349, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -13174,7 +13376,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_25time_to
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 349, __pyx_L1_error)
   __pyx_v_self->time_to_next_modification = __pyx_t_1;
 
   /* function exit code */
@@ -13188,7 +13390,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_25time_to
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":467
+/* "splikes/connections/BCM.pyx":472
  * 
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -13211,7 +13413,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset(s
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 467, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 472, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_3BCM_16BCM_TwoThreshold_1_reset)) {
       __Pyx_XDECREF(__pyx_r);
@@ -13227,10 +13429,10 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset(s
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 467, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 472, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 467, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 472, __pyx_L1_error)
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -13242,19 +13444,19 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset(s
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes/connections/BCM.pyx":468
+  /* "splikes/connections/BCM.pyx":473
  * 
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 468, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 473, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_rand); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 468, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_rand); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 473, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 468, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 473, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -13267,14 +13469,14 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset(s
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 468, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 473, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 468, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 473, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -13283,70 +13485,70 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset(s
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 468, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 473, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     } else
     #endif
     {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 468, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 473, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
       __Pyx_GIVEREF(__pyx_t_2);
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_2);
       __pyx_t_2 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 468, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 473, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 468, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 473, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "splikes/connections/BCM.pyx":469
+  /* "splikes/connections/BCM.pyx":474
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  */
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 469, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 474, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "splikes/connections/BCM.pyx":468
+  /* "splikes/connections/BCM.pyx":473
  * 
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  */
-  __pyx_t_2 = PyNumber_Subtract(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 468, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Subtract(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 473, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 468, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 473, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "splikes/connections/BCM.pyx":469
+  /* "splikes/connections/BCM.pyx":474
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  */
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 469, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 474, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyNumber_Add(__pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 469, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Add(__pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 474, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 469, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 474, __pyx_L1_error)
 
-  /* "splikes/connections/BCM.pyx":468
+  /* "splikes/connections/BCM.pyx":473
  * 
  *     cpdef _reset(self):
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -13359,19 +13561,19 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset(s
   __pyx_v_self->theta = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes/connections/BCM.pyx":470
+  /* "splikes/connections/BCM.pyx":475
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  * 
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pylab); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 475, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_rand); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_rand); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 475, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 475, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_5))) {
@@ -13384,14 +13586,14 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset(s
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 470, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 475, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_5)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 470, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 475, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -13400,70 +13602,70 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset(s
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 470, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 475, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     } else
     #endif
     {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 470, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 475, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __pyx_t_3 = NULL;
       __Pyx_GIVEREF(__pyx_t_2);
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_2);
       __pyx_t_2 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 470, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 475, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 475, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "splikes/connections/BCM.pyx":471
+  /* "splikes/connections/BCM.pyx":476
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  * 
  *         self.mod_theta=np.zeros(self.post.N,dtype=np.float)
  */
-  __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 471, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 476, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "splikes/connections/BCM.pyx":470
+  /* "splikes/connections/BCM.pyx":475
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  * 
  */
-  __pyx_t_2 = PyNumber_Subtract(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Subtract(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 475, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 475, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "splikes/connections/BCM.pyx":471
+  /* "splikes/connections/BCM.pyx":476
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]             # <<<<<<<<<<<<<<
  * 
  *         self.mod_theta=np.zeros(self.post.N,dtype=np.float)
  */
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 471, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_self->initial_theta_range, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 476, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyNumber_Add(__pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 471, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Add(__pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 476, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 471, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 476, __pyx_L1_error)
 
-  /* "splikes/connections/BCM.pyx":470
+  /* "splikes/connections/BCM.pyx":475
  *         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  *         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-             # <<<<<<<<<<<<<<
@@ -13476,216 +13678,216 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset(s
   __pyx_v_self->beta = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes/connections/BCM.pyx":473
+  /* "splikes/connections/BCM.pyx":478
  *                                    self.initial_theta_range[0])+self.initial_theta_range[0]
  * 
  *         self.mod_theta=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.mod_beta=np.zeros(self.post.N,dtype=np.float)
  * 
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 473, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 473, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 473, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 473, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 473, __pyx_L1_error)
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 473, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 473, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 473, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 473, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 473, __pyx_L1_error)
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_v_self->mod_theta);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->mod_theta));
   __pyx_v_self->mod_theta = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":474
+  /* "splikes/connections/BCM.pyx":479
  * 
  *         self.mod_theta=np.zeros(self.post.N,dtype=np.float)
  *         self.mod_beta=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 474, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 479, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 474, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 479, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 474, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 479, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 474, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 479, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 474, __pyx_L1_error)
+  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 479, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 474, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 479, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 474, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 479, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 474, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 479, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 474, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 479, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 474, __pyx_L1_error)
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 479, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_5);
   __Pyx_GOTREF(__pyx_v_self->mod_beta);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->mod_beta));
   __pyx_v_self->mod_beta = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "splikes/connections/BCM.pyx":477
+  /* "splikes/connections/BCM.pyx":482
  * 
  * 
  *         self.y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.mod_Y=np.zeros(self.post.N,dtype=np.float)
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 477, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 482, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 477, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 482, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 477, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 482, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 477, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 482, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_5);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 477, __pyx_L1_error)
+  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 482, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 477, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 482, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 477, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 482, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 477, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 482, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 477, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 482, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 477, __pyx_L1_error)
+  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 482, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_2);
   __Pyx_GOTREF(__pyx_v_self->y);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->y));
   __pyx_v_self->y = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "splikes/connections/BCM.pyx":478
+  /* "splikes/connections/BCM.pyx":483
  * 
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.mod_Y=np.zeros(self.post.N,dtype=np.float)
  * 
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 478, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 483, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 478, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 483, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 478, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 483, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 478, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 483, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2);
   __pyx_t_2 = 0;
-  __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 478, __pyx_L1_error)
+  __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 483, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 478, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 483, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 478, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 483, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 478, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 483, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 478, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 483, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 478, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 483, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->Y);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->Y));
   __pyx_v_self->Y = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes/connections/BCM.pyx":479
+  /* "splikes/connections/BCM.pyx":484
  *         self.y=np.zeros(self.post.N,dtype=np.float)
  *         self.Y=np.zeros(self.post.N,dtype=np.float)
  *         self.mod_Y=np.zeros(self.post.N,dtype=np.float)             # <<<<<<<<<<<<<<
  * 
  *         self.y_avg=np.sqrt(self.theta)
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 479, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 484, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 479, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 484, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 479, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.post->N); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 484, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 479, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 484, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 479, __pyx_L1_error)
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 484, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 479, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 484, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 479, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 484, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 479, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 484, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 479, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 484, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 479, __pyx_L1_error)
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 484, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_v_self->mod_Y);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->mod_Y));
   __pyx_v_self->mod_Y = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":481
+  /* "splikes/connections/BCM.pyx":486
  *         self.mod_Y=np.zeros(self.post.N,dtype=np.float)
  * 
  *         self.y_avg=np.sqrt(self.theta)             # <<<<<<<<<<<<<<
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 481, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 486, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 481, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 486, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = NULL;
@@ -13699,13 +13901,13 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset(s
     }
   }
   if (!__pyx_t_1) {
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_self->theta)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 481, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_self->theta)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 486, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_1, ((PyObject *)__pyx_v_self->theta)};
-      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 481, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 486, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_GOTREF(__pyx_t_3);
     } else
@@ -13713,152 +13915,152 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset(s
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_1, ((PyObject *)__pyx_v_self->theta)};
-      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 481, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 486, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_GOTREF(__pyx_t_3);
     } else
     #endif
     {
-      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 481, __pyx_L1_error)
+      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 486, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1); __pyx_t_1 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_self->theta));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_self->theta));
       PyTuple_SET_ITEM(__pyx_t_2, 0+1, ((PyObject *)__pyx_v_self->theta));
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 481, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 486, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 481, __pyx_L1_error)
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 486, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_v_self->y_avg);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->y_avg));
   __pyx_v_self->y_avg = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":482
+  /* "splikes/connections/BCM.pyx":487
  * 
  *         self.y_avg=np.sqrt(self.theta)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.mod_X=np.zeros(self.pre.N,dtype=np.float)
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 482, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 482, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 482, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 482, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 482, __pyx_L1_error)
+  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 482, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 482, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 482, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 482, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 482, __pyx_L1_error)
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_5);
   __Pyx_GOTREF(__pyx_v_self->x);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->x));
   __pyx_v_self->x = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "splikes/connections/BCM.pyx":483
+  /* "splikes/connections/BCM.pyx":488
  *         self.y_avg=np.sqrt(self.theta)
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.X=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
  *         self.mod_X=np.zeros(self.pre.N,dtype=np.float)
  * 
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 483, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 483, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 483, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 483, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_5);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 483, __pyx_L1_error)
+  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 483, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 483, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 483, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 483, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 483, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->X);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->X));
   __pyx_v_self->X = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "splikes/connections/BCM.pyx":484
+  /* "splikes/connections/BCM.pyx":489
  *         self.x=np.zeros(self.pre.N,dtype=np.float)
  *         self.X=np.zeros(self.pre.N,dtype=np.float)
  *         self.mod_X=np.zeros(self.pre.N,dtype=np.float)             # <<<<<<<<<<<<<<
  * 
  *         self.time_to_next_modification=self.time_between_modification
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pre->N); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 484, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 484, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_4);
   __Pyx_GOTREF(__pyx_v_self->mod_X);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->mod_X));
   __pyx_v_self->mod_X = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "splikes/connections/BCM.pyx":486
+  /* "splikes/connections/BCM.pyx":491
  *         self.mod_X=np.zeros(self.pre.N,dtype=np.float)
  * 
  *         self.time_to_next_modification=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -13868,18 +14070,18 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset(s
   __pyx_t_6 = __pyx_v_self->time_between_modification;
   __pyx_v_self->time_to_next_modification = __pyx_t_6;
 
-  /* "splikes/connections/BCM.pyx":488
+  /* "splikes/connections/BCM.pyx":493
  *         self.time_to_next_modification=self.time_between_modification
  * 
  *         connection._reset(self)             # <<<<<<<<<<<<<<
  * 
  *     def __init__(self,neuron pre,neuron post,
  */
-  __pyx_t_4 = __pyx_vtabptr_7splikes_7splikes_connection->_reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 488, __pyx_L1_error)
+  __pyx_t_4 = __pyx_vtabptr_7splikes_7splikes_connection->_reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 493, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "splikes/connections/BCM.pyx":467
+  /* "splikes/connections/BCM.pyx":472
  * 
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -13923,7 +14125,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset(
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("_reset", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 472, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -13940,7 +14142,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset(
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":490
+/* "splikes/connections/BCM.pyx":495
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -13963,7 +14165,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_16BCM_TwoThreshold_3__init__(PyO
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_pre,&__pyx_n_s_post,&__pyx_n_s_initial_weight_range,&__pyx_n_s_state,&__pyx_n_s_initial_theta_range,0};
     PyObject* values[5] = {0,0,0,0,0};
 
-    /* "splikes/connections/BCM.pyx":491
+    /* "splikes/connections/BCM.pyx":496
  * 
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,             # <<<<<<<<<<<<<<
@@ -13972,7 +14174,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_16BCM_TwoThreshold_3__init__(PyO
  */
     values[2] = ((PyObject *)Py_None);
 
-    /* "splikes/connections/BCM.pyx":492
+    /* "splikes/connections/BCM.pyx":497
  *     def __init__(self,neuron pre,neuron post,
  *                         initial_weight_range=None,
  *                         state=None,             # <<<<<<<<<<<<<<
@@ -13981,7 +14183,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_16BCM_TwoThreshold_3__init__(PyO
  */
     values[3] = ((PyObject *)Py_None);
 
-    /* "splikes/connections/BCM.pyx":493
+    /* "splikes/connections/BCM.pyx":498
  *                         initial_weight_range=None,
  *                         state=None,
  *                         initial_theta_range=None,):             # <<<<<<<<<<<<<<
@@ -14009,7 +14211,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_16BCM_TwoThreshold_3__init__(PyO
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_post)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, 1); __PYX_ERR(0, 490, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, 1); __PYX_ERR(0, 495, __pyx_L3_error)
         }
         case  2:
         if (kw_args > 0) {
@@ -14028,7 +14230,7 @@ static int __pyx_pw_7splikes_11connections_3BCM_16BCM_TwoThreshold_3__init__(PyO
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 490, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 495, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -14049,17 +14251,17 @@ static int __pyx_pw_7splikes_11connections_3BCM_16BCM_TwoThreshold_3__init__(PyO
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 490, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 495, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("splikes.connections.BCM.BCM_TwoThreshold.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_7splikes_7splikes_neuron, 1, "pre", 0))) __PYX_ERR(0, 490, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) __PYX_ERR(0, 490, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pre), __pyx_ptype_7splikes_7splikes_neuron, 1, "pre", 0))) __PYX_ERR(0, 495, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_post), __pyx_ptype_7splikes_7splikes_neuron, 1, "post", 0))) __PYX_ERR(0, 495, __pyx_L1_error)
   __pyx_r = __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(((struct __pyx_obj_7splikes_11connections_3BCM_BCM_TwoThreshold *)__pyx_v_self), __pyx_v_pre, __pyx_v_post, __pyx_v_initial_weight_range, __pyx_v_state, __pyx_v_initial_theta_range);
 
-  /* "splikes/connections/BCM.pyx":490
+  /* "splikes/connections/BCM.pyx":495
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -14090,7 +14292,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
   __Pyx_RefNannySetupContext("__init__", 0);
   __Pyx_INCREF(__pyx_v_initial_theta_range);
 
-  /* "splikes/connections/BCM.pyx":496
+  /* "splikes/connections/BCM.pyx":501
  * 
  * 
  *         if initial_theta_range is None:             # <<<<<<<<<<<<<<
@@ -14101,14 +14303,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "splikes/connections/BCM.pyx":497
+    /* "splikes/connections/BCM.pyx":502
  * 
  *         if initial_theta_range is None:
  *             initial_theta_range=[0.0,0.1]             # <<<<<<<<<<<<<<
  * 
  *         self.initial_theta_range=initial_theta_range
  */
-    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 497, __pyx_L1_error)
+    __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 502, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_float_0_0);
     __Pyx_GIVEREF(__pyx_float_0_0);
@@ -14119,7 +14321,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
     __Pyx_DECREF_SET(__pyx_v_initial_theta_range, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "splikes/connections/BCM.pyx":496
+    /* "splikes/connections/BCM.pyx":501
  * 
  * 
  *         if initial_theta_range is None:             # <<<<<<<<<<<<<<
@@ -14128,7 +14330,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   }
 
-  /* "splikes/connections/BCM.pyx":499
+  /* "splikes/connections/BCM.pyx":504
  *             initial_theta_range=[0.0,0.1]
  * 
  *         self.initial_theta_range=initial_theta_range             # <<<<<<<<<<<<<<
@@ -14141,14 +14343,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
   __Pyx_DECREF(__pyx_v_self->initial_theta_range);
   __pyx_v_self->initial_theta_range = __pyx_v_initial_theta_range;
 
-  /* "splikes/connections/BCM.pyx":501
+  /* "splikes/connections/BCM.pyx":506
  *         self.initial_theta_range=initial_theta_range
  * 
  *         connection.__init__(self,pre,post,initial_weight_range,state)             # <<<<<<<<<<<<<<
  * 
  *         self.name='Spiking BCM TwoThreshold'
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_7splikes_7splikes_connection), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 501, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_7splikes_7splikes_connection), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 506, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -14165,7 +14367,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[6] = {__pyx_t_5, ((PyObject *)__pyx_v_self), ((PyObject *)__pyx_v_pre), ((PyObject *)__pyx_v_post), __pyx_v_initial_weight_range, __pyx_v_state};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 5+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 501, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 5+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 506, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
@@ -14173,13 +14375,13 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[6] = {__pyx_t_5, ((PyObject *)__pyx_v_self), ((PyObject *)__pyx_v_pre), ((PyObject *)__pyx_v_post), __pyx_v_initial_weight_range, __pyx_v_state};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 5+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 501, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 5+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 506, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   {
-    __pyx_t_7 = PyTuple_New(5+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 501, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(5+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 506, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     if (__pyx_t_5) {
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -14199,14 +14401,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
     __Pyx_INCREF(__pyx_v_state);
     __Pyx_GIVEREF(__pyx_v_state);
     PyTuple_SET_ITEM(__pyx_t_7, 4+__pyx_t_6, __pyx_v_state);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 501, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 506, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":503
+  /* "splikes/connections/BCM.pyx":508
  *         connection.__init__(self,pre,post,initial_weight_range,state)
  * 
  *         self.name='Spiking BCM TwoThreshold'             # <<<<<<<<<<<<<<
@@ -14219,7 +14421,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
   __Pyx_DECREF(__pyx_v_self->__pyx_base.__pyx_base.name);
   __pyx_v_self->__pyx_base.__pyx_base.name = __pyx_kp_s_Spiking_BCM_TwoThreshold;
 
-  /* "splikes/connections/BCM.pyx":504
+  /* "splikes/connections/BCM.pyx":509
  * 
  *         self.name='Spiking BCM TwoThreshold'
  *         self.tau_x=0.01             # <<<<<<<<<<<<<<
@@ -14228,7 +14430,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   __pyx_v_self->tau_x = 0.01;
 
-  /* "splikes/connections/BCM.pyx":505
+  /* "splikes/connections/BCM.pyx":510
  *         self.name='Spiking BCM TwoThreshold'
  *         self.tau_x=0.01
  *         self.tau_y=0.01             # <<<<<<<<<<<<<<
@@ -14237,7 +14439,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   __pyx_v_self->tau_y = 0.01;
 
-  /* "splikes/connections/BCM.pyx":506
+  /* "splikes/connections/BCM.pyx":511
  *         self.tau_x=0.01
  *         self.tau_y=0.01
  *         self.ax=1.0/self.tau_x             # <<<<<<<<<<<<<<
@@ -14246,11 +14448,11 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   if (unlikely(__pyx_v_self->tau_x == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 506, __pyx_L1_error)
+    __PYX_ERR(0, 511, __pyx_L1_error)
   }
   __pyx_v_self->ax = (1.0 / __pyx_v_self->tau_x);
 
-  /* "splikes/connections/BCM.pyx":507
+  /* "splikes/connections/BCM.pyx":512
  *         self.tau_y=0.01
  *         self.ax=1.0/self.tau_x
  *         self.ay=1.0/self.tau_y             # <<<<<<<<<<<<<<
@@ -14259,11 +14461,11 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   if (unlikely(__pyx_v_self->tau_y == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 507, __pyx_L1_error)
+    __PYX_ERR(0, 512, __pyx_L1_error)
   }
   __pyx_v_self->ay = (1.0 / __pyx_v_self->tau_y);
 
-  /* "splikes/connections/BCM.pyx":508
+  /* "splikes/connections/BCM.pyx":513
  *         self.ax=1.0/self.tau_x
  *         self.ay=1.0/self.tau_y
  *         self.smoothed_x=False             # <<<<<<<<<<<<<<
@@ -14272,7 +14474,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   __pyx_v_self->smoothed_x = 0;
 
-  /* "splikes/connections/BCM.pyx":509
+  /* "splikes/connections/BCM.pyx":514
  *         self.ay=1.0/self.tau_y
  *         self.smoothed_x=False
  *         self.smoothed_y=False             # <<<<<<<<<<<<<<
@@ -14281,7 +14483,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   __pyx_v_self->smoothed_y = 0;
 
-  /* "splikes/connections/BCM.pyx":511
+  /* "splikes/connections/BCM.pyx":516
  *         self.smoothed_y=False
  * 
  *         self.xo=0             # <<<<<<<<<<<<<<
@@ -14290,7 +14492,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   __pyx_v_self->xo = 0.0;
 
-  /* "splikes/connections/BCM.pyx":512
+  /* "splikes/connections/BCM.pyx":517
  * 
  *         self.xo=0
  *         self.yo=0             # <<<<<<<<<<<<<<
@@ -14299,7 +14501,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   __pyx_v_self->yo = 0.0;
 
-  /* "splikes/connections/BCM.pyx":513
+  /* "splikes/connections/BCM.pyx":518
  *         self.xo=0
  *         self.yo=0
  *         self.y_min=-1e500             # <<<<<<<<<<<<<<
@@ -14308,7 +14510,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   __pyx_v_self->y_min = (-Py_HUGE_VAL);
 
-  /* "splikes/connections/BCM.pyx":514
+  /* "splikes/connections/BCM.pyx":519
  *         self.yo=0
  *         self.y_min=-1e500
  *         self.y_max=1e500             # <<<<<<<<<<<<<<
@@ -14317,7 +14519,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   __pyx_v_self->y_max = Py_HUGE_VAL;
 
-  /* "splikes/connections/BCM.pyx":515
+  /* "splikes/connections/BCM.pyx":520
  *         self.y_min=-1e500
  *         self.y_max=1e500
  *         self.theta_o=1             # <<<<<<<<<<<<<<
@@ -14326,7 +14528,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   __pyx_v_self->theta_o = 1.0;
 
-  /* "splikes/connections/BCM.pyx":516
+  /* "splikes/connections/BCM.pyx":521
  *         self.y_max=1e500
  *         self.theta_o=1
  *         self.theta_L=0.0             # <<<<<<<<<<<<<<
@@ -14335,7 +14537,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   __pyx_v_self->theta_L = 0.0;
 
-  /* "splikes/connections/BCM.pyx":517
+  /* "splikes/connections/BCM.pyx":522
  *         self.theta_o=1
  *         self.theta_L=0.0
  *         self.gamma=0             # <<<<<<<<<<<<<<
@@ -14344,7 +14546,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   __pyx_v_self->gamma = 0.0;
 
-  /* "splikes/connections/BCM.pyx":518
+  /* "splikes/connections/BCM.pyx":523
  *         self.theta_L=0.0
  *         self.gamma=0
  *         self.eta=4e-06             # <<<<<<<<<<<<<<
@@ -14353,7 +14555,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   __pyx_v_self->eta = 4e-06;
 
-  /* "splikes/connections/BCM.pyx":519
+  /* "splikes/connections/BCM.pyx":524
  *         self.gamma=0
  *         self.eta=4e-06
  *         self.tau_theta=10             # <<<<<<<<<<<<<<
@@ -14366,7 +14568,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
   __Pyx_DECREF(__pyx_v_self->tau_theta);
   __pyx_v_self->tau_theta = __pyx_int_10;
 
-  /* "splikes/connections/BCM.pyx":520
+  /* "splikes/connections/BCM.pyx":525
  *         self.eta=4e-06
  *         self.tau_theta=10
  *         self.tau_beta=-1             # <<<<<<<<<<<<<<
@@ -14379,7 +14581,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
   __Pyx_DECREF(__pyx_v_self->tau_beta);
   __pyx_v_self->tau_beta = __pyx_int_neg_1;
 
-  /* "splikes/connections/BCM.pyx":521
+  /* "splikes/connections/BCM.pyx":526
  *         self.tau_theta=10
  *         self.tau_beta=-1
  *         self.time_between_modification=-1.0             # <<<<<<<<<<<<<<
@@ -14388,7 +14590,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   __pyx_v_self->time_between_modification = -1.0;
 
-  /* "splikes/connections/BCM.pyx":522
+  /* "splikes/connections/BCM.pyx":527
  *         self.tau_beta=-1
  *         self.time_between_modification=-1.0
  *         self.theta_squares_the_average=False             # <<<<<<<<<<<<<<
@@ -14397,27 +14599,27 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
  */
   __pyx_v_self->theta_squares_the_average = 0;
 
-  /* "splikes/connections/BCM.pyx":523
+  /* "splikes/connections/BCM.pyx":528
  *         self.time_between_modification=-1.0
  *         self.theta_squares_the_average=False
  *         self._reset()             # <<<<<<<<<<<<<<
  * 
  *         self.save_attrs.extend(['tau_x','tau_y','xo','yo','theta_o',
  */
-  __pyx_t_3 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_TwoThreshold *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 523, __pyx_L1_error)
+  __pyx_t_3 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_TwoThreshold *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._reset(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":525
+  /* "splikes/connections/BCM.pyx":530
  *         self._reset()
  * 
  *         self.save_attrs.extend(['tau_x','tau_y','xo','yo','theta_o',             # <<<<<<<<<<<<<<
  *             'gamma','eta','tau_theta','tau_beta','ax',
  *             'ay','smoothed_x','smoothed_y','time_between_modification',
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_n_s_extend); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 525, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->__pyx_base.__pyx_base.save_attrs, __pyx_n_s_extend); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 530, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_7 = PyList_New(17); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 525, __pyx_L1_error)
+  __pyx_t_7 = PyList_New(17); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 530, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_INCREF(__pyx_n_s_tau_x);
   __Pyx_GIVEREF(__pyx_n_s_tau_x);
@@ -14481,14 +14683,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 525, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 530, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_7};
-      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 525, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 530, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -14497,20 +14699,20 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_7};
-      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 525, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 530, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     } else
     #endif
     {
-      __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 525, __pyx_L1_error)
+      __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 530, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_5); __pyx_t_5 = NULL;
       __Pyx_GIVEREF(__pyx_t_7);
       PyTuple_SET_ITEM(__pyx_t_8, 0+1, __pyx_t_7);
       __pyx_t_7 = 0;
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 525, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 530, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     }
@@ -14518,16 +14720,16 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":529
+  /* "splikes/connections/BCM.pyx":534
  *             'ay','smoothed_x','smoothed_y','time_between_modification',
  *             'time_to_next_modification','theta_squares_the_average','theta_L'])
  *         self.save_data.extend(['theta','beta','x','y',             # <<<<<<<<<<<<<<
  *             'y_avg','X','Y','mod_X','mod_Y','mod_theta','mod_beta',
  *             'initial_theta_range'])
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->__pyx_base.__pyx_base.save_data, __pyx_n_s_extend); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 529, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->__pyx_base.__pyx_base.save_data, __pyx_n_s_extend); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 534, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_8 = PyList_New(12); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 529, __pyx_L1_error)
+  __pyx_t_8 = PyList_New(12); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 534, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_INCREF(__pyx_n_s_theta);
   __Pyx_GIVEREF(__pyx_n_s_theta);
@@ -14576,14 +14778,14 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
     }
   }
   if (!__pyx_t_7) {
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 529, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 534, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_7, __pyx_t_8};
-      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 529, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 534, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -14592,20 +14794,20 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_7, __pyx_t_8};
-      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 529, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 534, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     } else
     #endif
     {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 529, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 534, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_7); __pyx_t_7 = NULL;
       __Pyx_GIVEREF(__pyx_t_8);
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_8);
       __pyx_t_8 = 0;
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 529, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 534, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
@@ -14613,7 +14815,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "splikes/connections/BCM.pyx":490
+  /* "splikes/connections/BCM.pyx":495
  *         connection._reset(self)
  * 
  *     def __init__(self,neuron pre,neuron post,             # <<<<<<<<<<<<<<
@@ -14638,7 +14840,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2__init__(str
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":537
+/* "splikes/connections/BCM.pyx":542
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -14703,11 +14905,11 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 537, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 542, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_7splikes_11connections_3BCM_16BCM_TwoThreshold_5update)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 537, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 542, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -14725,7 +14927,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 537, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 542, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -14734,14 +14936,14 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, ((PyObject *)__pyx_v_sim)};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 537, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 542, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else
       #endif
       {
-        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 537, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 542, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         if (__pyx_t_5) {
           __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -14752,7 +14954,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
         __Pyx_GIVEREF(((PyObject *)__pyx_v_sim));
         PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, ((PyObject *)__pyx_v_sim));
         __pyx_t_3 = 0;
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 537, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 542, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
@@ -14765,7 +14967,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "splikes/connections/BCM.pyx":540
+  /* "splikes/connections/BCM.pyx":545
  *         cdef int __i,__j
  * 
  *         cdef double *W=self.W             # <<<<<<<<<<<<<<
@@ -14775,7 +14977,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_8 = __pyx_v_self->__pyx_base.W;
   __pyx_v_W = __pyx_t_8;
 
-  /* "splikes/connections/BCM.pyx":541
+  /* "splikes/connections/BCM.pyx":546
  * 
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data             # <<<<<<<<<<<<<<
@@ -14784,7 +14986,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
   __pyx_v_theta = ((double *)__pyx_v_self->theta->data);
 
-  /* "splikes/connections/BCM.pyx":542
+  /* "splikes/connections/BCM.pyx":547
  *         cdef double *W=self.W
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *beta=<double *>self.beta.data             # <<<<<<<<<<<<<<
@@ -14793,7 +14995,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
   __pyx_v_beta = ((double *)__pyx_v_self->beta->data);
 
-  /* "splikes/connections/BCM.pyx":543
+  /* "splikes/connections/BCM.pyx":548
  *         cdef double *theta=<double *>self.theta.data
  *         cdef double *beta=<double *>self.beta.data
  *         cdef double *y=<double *>self.y.data             # <<<<<<<<<<<<<<
@@ -14802,7 +15004,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
   __pyx_v_y = ((double *)__pyx_v_self->y->data);
 
-  /* "splikes/connections/BCM.pyx":544
+  /* "splikes/connections/BCM.pyx":549
  *         cdef double *beta=<double *>self.beta.data
  *         cdef double *y=<double *>self.y.data
  *         cdef double *x=<double *>self.x.data             # <<<<<<<<<<<<<<
@@ -14811,7 +15013,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
   __pyx_v_x = ((double *)__pyx_v_self->x->data);
 
-  /* "splikes/connections/BCM.pyx":545
+  /* "splikes/connections/BCM.pyx":550
  *         cdef double *y=<double *>self.y.data
  *         cdef double *x=<double *>self.x.data
  *         cdef double *Y=<double *>self.Y.data             # <<<<<<<<<<<<<<
@@ -14820,7 +15022,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
   __pyx_v_Y = ((double *)__pyx_v_self->Y->data);
 
-  /* "splikes/connections/BCM.pyx":546
+  /* "splikes/connections/BCM.pyx":551
  *         cdef double *x=<double *>self.x.data
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *X=<double *>self.X.data             # <<<<<<<<<<<<<<
@@ -14829,7 +15031,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
   __pyx_v_X = ((double *)__pyx_v_self->X->data);
 
-  /* "splikes/connections/BCM.pyx":547
+  /* "splikes/connections/BCM.pyx":552
  *         cdef double *Y=<double *>self.Y.data
  *         cdef double *X=<double *>self.X.data
  *         cdef double *y_avg=<double *>self.y_avg.data             # <<<<<<<<<<<<<<
@@ -14838,7 +15040,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
   __pyx_v_y_avg = ((double *)__pyx_v_self->y_avg->data);
 
-  /* "splikes/connections/BCM.pyx":549
+  /* "splikes/connections/BCM.pyx":554
  *         cdef double *y_avg=<double *>self.y_avg.data
  * 
  *         cdef double *mod_X=<double *>self.mod_X.data             # <<<<<<<<<<<<<<
@@ -14847,7 +15049,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
   __pyx_v_mod_X = ((double *)__pyx_v_self->mod_X->data);
 
-  /* "splikes/connections/BCM.pyx":550
+  /* "splikes/connections/BCM.pyx":555
  * 
  *         cdef double *mod_X=<double *>self.mod_X.data
  *         cdef double *mod_Y=<double *>self.mod_Y.data             # <<<<<<<<<<<<<<
@@ -14856,7 +15058,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
   __pyx_v_mod_Y = ((double *)__pyx_v_self->mod_Y->data);
 
-  /* "splikes/connections/BCM.pyx":551
+  /* "splikes/connections/BCM.pyx":556
  *         cdef double *mod_X=<double *>self.mod_X.data
  *         cdef double *mod_Y=<double *>self.mod_Y.data
  *         cdef double *mod_theta=<double *>self.mod_theta.data             # <<<<<<<<<<<<<<
@@ -14865,7 +15067,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
   __pyx_v_mod_theta = ((double *)__pyx_v_self->mod_theta->data);
 
-  /* "splikes/connections/BCM.pyx":552
+  /* "splikes/connections/BCM.pyx":557
  *         cdef double *mod_Y=<double *>self.mod_Y.data
  *         cdef double *mod_theta=<double *>self.mod_theta.data
  *         cdef double *mod_beta=<double *>self.mod_beta.data             # <<<<<<<<<<<<<<
@@ -14874,7 +15076,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
   __pyx_v_mod_beta = ((double *)__pyx_v_self->mod_beta->data);
 
-  /* "splikes/connections/BCM.pyx":554
+  /* "splikes/connections/BCM.pyx":559
  *         cdef double *mod_beta=<double *>self.mod_beta.data
  * 
  *         cdef double tau_x=self.tau_x             # <<<<<<<<<<<<<<
@@ -14884,7 +15086,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_9 = __pyx_v_self->tau_x;
   __pyx_v_tau_x = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":555
+  /* "splikes/connections/BCM.pyx":560
  * 
  *         cdef double tau_x=self.tau_x
  *         cdef double tau_y=self.tau_y             # <<<<<<<<<<<<<<
@@ -14894,7 +15096,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_9 = __pyx_v_self->tau_y;
   __pyx_v_tau_y = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":556
+  /* "splikes/connections/BCM.pyx":561
  *         cdef double tau_x=self.tau_x
  *         cdef double tau_y=self.tau_y
  *         cdef double ax=self.ax             # <<<<<<<<<<<<<<
@@ -14904,7 +15106,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_9 = __pyx_v_self->ax;
   __pyx_v_ax = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":557
+  /* "splikes/connections/BCM.pyx":562
  *         cdef double tau_y=self.tau_y
  *         cdef double ax=self.ax
  *         cdef double ay=self.ay             # <<<<<<<<<<<<<<
@@ -14914,7 +15116,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_9 = __pyx_v_self->ay;
   __pyx_v_ay = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":558
+  /* "splikes/connections/BCM.pyx":563
  *         cdef double ax=self.ax
  *         cdef double ay=self.ay
  *         cdef double xo=self.xo             # <<<<<<<<<<<<<<
@@ -14924,7 +15126,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_9 = __pyx_v_self->xo;
   __pyx_v_xo = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":559
+  /* "splikes/connections/BCM.pyx":564
  *         cdef double ay=self.ay
  *         cdef double xo=self.xo
  *         cdef double yo=self.yo             # <<<<<<<<<<<<<<
@@ -14934,7 +15136,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_9 = __pyx_v_self->yo;
   __pyx_v_yo = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":560
+  /* "splikes/connections/BCM.pyx":565
  *         cdef double xo=self.xo
  *         cdef double yo=self.yo
  *         cdef double theta_o=self.theta_o             # <<<<<<<<<<<<<<
@@ -14944,7 +15146,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_9 = __pyx_v_self->theta_o;
   __pyx_v_theta_o = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":561
+  /* "splikes/connections/BCM.pyx":566
  *         cdef double yo=self.yo
  *         cdef double theta_o=self.theta_o
  *         cdef double theta_L=self.theta_L             # <<<<<<<<<<<<<<
@@ -14954,7 +15156,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_9 = __pyx_v_self->theta_L;
   __pyx_v_theta_L = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":562
+  /* "splikes/connections/BCM.pyx":567
  *         cdef double theta_o=self.theta_o
  *         cdef double theta_L=self.theta_L
  *         cdef double gamma=self.gamma             # <<<<<<<<<<<<<<
@@ -14964,7 +15166,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_9 = __pyx_v_self->gamma;
   __pyx_v_gamma = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":563
+  /* "splikes/connections/BCM.pyx":568
  *         cdef double theta_L=self.theta_L
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta             # <<<<<<<<<<<<<<
@@ -14974,39 +15176,39 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_9 = __pyx_v_self->eta;
   __pyx_v_eta = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":564
+  /* "splikes/connections/BCM.pyx":569
  *         cdef double gamma=self.gamma
  *         cdef double eta=self.eta
  *         cdef double tau_theta=self.tau_theta             # <<<<<<<<<<<<<<
  *         cdef double tau_beta=self.tau_beta
  *         cdef double dt,dw
  */
-  __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_self->tau_theta); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 564, __pyx_L1_error)
+  __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_self->tau_theta); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 569, __pyx_L1_error)
   __pyx_v_tau_theta = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":565
+  /* "splikes/connections/BCM.pyx":570
  *         cdef double eta=self.eta
  *         cdef double tau_theta=self.tau_theta
  *         cdef double tau_beta=self.tau_beta             # <<<<<<<<<<<<<<
  *         cdef double dt,dw
  *         cdef double YY
  */
-  __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_self->tau_beta); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 565, __pyx_L1_error)
+  __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_self->tau_beta); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 570, __pyx_L1_error)
   __pyx_v_tau_beta = __pyx_t_9;
 
-  /* "splikes/connections/BCM.pyx":574
+  /* "splikes/connections/BCM.pyx":579
  *         cdef int __wi
  * 
  *         use_beta=self.tau_beta>0             # <<<<<<<<<<<<<<
  * 
  *         pre=<int *>self.pre.spiking.data
  */
-  __pyx_t_1 = PyObject_RichCompare(__pyx_v_self->tau_beta, __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 574, __pyx_L1_error)
-  __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 574, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(__pyx_v_self->tau_beta, __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 579, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 579, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_use_beta = __pyx_t_6;
 
-  /* "splikes/connections/BCM.pyx":576
+  /* "splikes/connections/BCM.pyx":581
  *         use_beta=self.tau_beta>0
  * 
  *         pre=<int *>self.pre.spiking.data             # <<<<<<<<<<<<<<
@@ -15015,7 +15217,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
   __pyx_v_pre = ((int *)__pyx_v_self->__pyx_base.pre->spiking->data);
 
-  /* "splikes/connections/BCM.pyx":577
+  /* "splikes/connections/BCM.pyx":582
  * 
  *         pre=<int *>self.pre.spiking.data
  *         post=<int *>self.post.spiking.data             # <<<<<<<<<<<<<<
@@ -15024,7 +15226,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
   __pyx_v_post = ((int *)__pyx_v_self->__pyx_base.post->spiking->data);
 
-  /* "splikes/connections/BCM.pyx":580
+  /* "splikes/connections/BCM.pyx":585
  * 
  * 
  *         for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -15035,7 +15237,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
     __pyx_v___j = __pyx_t_10;
 
-    /* "splikes/connections/BCM.pyx":581
+    /* "splikes/connections/BCM.pyx":586
  * 
  *         for __j in range(self.pre.N):
  *             x[__j]+=sim.dt*(-x[__j]/tau_x+ax*pre[__j]/sim.dt)             # <<<<<<<<<<<<<<
@@ -15046,7 +15248,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     (__pyx_v_x[__pyx_t_11]) = ((__pyx_v_x[__pyx_t_11]) + (__pyx_v_sim->dt * (((-(__pyx_v_x[__pyx_v___j])) / __pyx_v_tau_x) + ((__pyx_v_ax * (__pyx_v_pre[__pyx_v___j])) / __pyx_v_sim->dt))));
   }
 
-  /* "splikes/connections/BCM.pyx":583
+  /* "splikes/connections/BCM.pyx":588
  *             x[__j]+=sim.dt*(-x[__j]/tau_x+ax*pre[__j]/sim.dt)
  * 
  *         if self.smoothed_x:             # <<<<<<<<<<<<<<
@@ -15056,7 +15258,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_12 = (__pyx_v_self->smoothed_x != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":584
+    /* "splikes/connections/BCM.pyx":589
  * 
  *         if self.smoothed_x:
  *             for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -15067,7 +15269,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___j = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":585
+      /* "splikes/connections/BCM.pyx":590
  *         if self.smoothed_x:
  *             for __j in range(self.pre.N):
  *                 X[__j]+=sim.dt*(x[__j]-X[__j])/tau_x             # <<<<<<<<<<<<<<
@@ -15078,7 +15280,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
       (__pyx_v_X[__pyx_t_11]) = ((__pyx_v_X[__pyx_t_11]) + ((__pyx_v_sim->dt * ((__pyx_v_x[__pyx_v___j]) - (__pyx_v_X[__pyx_v___j]))) / __pyx_v_tau_x));
     }
 
-    /* "splikes/connections/BCM.pyx":583
+    /* "splikes/connections/BCM.pyx":588
  *             x[__j]+=sim.dt*(-x[__j]/tau_x+ax*pre[__j]/sim.dt)
  * 
  *         if self.smoothed_x:             # <<<<<<<<<<<<<<
@@ -15088,7 +15290,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     goto __pyx_L5;
   }
 
-  /* "splikes/connections/BCM.pyx":587
+  /* "splikes/connections/BCM.pyx":592
  *                 X[__j]+=sim.dt*(x[__j]-X[__j])/tau_x
  *         else:
  *             for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -15100,7 +15302,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___j = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":588
+      /* "splikes/connections/BCM.pyx":593
  *         else:
  *             for __j in range(self.pre.N):
  *                 X[__j]=x[__j]             # <<<<<<<<<<<<<<
@@ -15112,7 +15314,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   }
   __pyx_L5:;
 
-  /* "splikes/connections/BCM.pyx":590
+  /* "splikes/connections/BCM.pyx":595
  *                 X[__j]=x[__j]
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -15123,7 +15325,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
     __pyx_v___i = __pyx_t_10;
 
-    /* "splikes/connections/BCM.pyx":591
+    /* "splikes/connections/BCM.pyx":596
  * 
  *         for __i in range(self.post.N):
  *             y[__i]+=sim.dt*(-y[__i]/tau_y+ay*post[__i]/sim.dt)             # <<<<<<<<<<<<<<
@@ -15134,7 +15336,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     (__pyx_v_y[__pyx_t_11]) = ((__pyx_v_y[__pyx_t_11]) + (__pyx_v_sim->dt * (((-(__pyx_v_y[__pyx_v___i])) / __pyx_v_tau_y) + ((__pyx_v_ay * (__pyx_v_post[__pyx_v___i])) / __pyx_v_sim->dt))));
   }
 
-  /* "splikes/connections/BCM.pyx":593
+  /* "splikes/connections/BCM.pyx":598
  *             y[__i]+=sim.dt*(-y[__i]/tau_y+ay*post[__i]/sim.dt)
  * 
  *         if self.smoothed_y:             # <<<<<<<<<<<<<<
@@ -15144,7 +15346,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_12 = (__pyx_v_self->smoothed_y != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":594
+    /* "splikes/connections/BCM.pyx":599
  * 
  *         if self.smoothed_y:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -15155,7 +15357,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___i = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":595
+      /* "splikes/connections/BCM.pyx":600
  *         if self.smoothed_y:
  *             for __i in range(self.post.N):
  *                 Y[__i]+=sim.dt*(y[__i]-Y[__i])/tau_y             # <<<<<<<<<<<<<<
@@ -15166,7 +15368,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
       (__pyx_v_Y[__pyx_t_11]) = ((__pyx_v_Y[__pyx_t_11]) + ((__pyx_v_sim->dt * ((__pyx_v_y[__pyx_v___i]) - (__pyx_v_Y[__pyx_v___i]))) / __pyx_v_tau_y));
     }
 
-    /* "splikes/connections/BCM.pyx":593
+    /* "splikes/connections/BCM.pyx":598
  *             y[__i]+=sim.dt*(-y[__i]/tau_y+ay*post[__i]/sim.dt)
  * 
  *         if self.smoothed_y:             # <<<<<<<<<<<<<<
@@ -15176,7 +15378,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     goto __pyx_L12;
   }
 
-  /* "splikes/connections/BCM.pyx":597
+  /* "splikes/connections/BCM.pyx":602
  *                 Y[__i]+=sim.dt*(y[__i]-Y[__i])/tau_y
  *         else:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -15188,7 +15390,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___i = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":598
+      /* "splikes/connections/BCM.pyx":603
  *         else:
  *             for __i in range(self.post.N):
  *                 Y[__i]=y[__i]             # <<<<<<<<<<<<<<
@@ -15200,7 +15402,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   }
   __pyx_L12:;
 
-  /* "splikes/connections/BCM.pyx":601
+  /* "splikes/connections/BCM.pyx":606
  * 
  * 
  *         for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -15211,7 +15413,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
     __pyx_v___i = __pyx_t_10;
 
-    /* "splikes/connections/BCM.pyx":602
+    /* "splikes/connections/BCM.pyx":607
  * 
  *         for __i in range(self.post.N):
  *             y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/tau_y-yo)-y_avg[__i]))             # <<<<<<<<<<<<<<
@@ -15222,7 +15424,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     (__pyx_v_y_avg[__pyx_t_11]) = ((__pyx_v_y_avg[__pyx_t_11]) + (__pyx_v_sim->dt * ((1.0 / __pyx_v_tau_theta) * ((((__pyx_v_Y[__pyx_v___i]) / __pyx_v_tau_y) - __pyx_v_yo) - (__pyx_v_y_avg[__pyx_v___i])))));
   }
 
-  /* "splikes/connections/BCM.pyx":604
+  /* "splikes/connections/BCM.pyx":609
  *             y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/tau_y-yo)-y_avg[__i]))
  * 
  *         if use_beta:             # <<<<<<<<<<<<<<
@@ -15232,7 +15434,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_12 = (__pyx_v_use_beta != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":605
+    /* "splikes/connections/BCM.pyx":610
  * 
  *         if use_beta:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -15243,7 +15445,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___i = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":606
+      /* "splikes/connections/BCM.pyx":611
  *         if use_beta:
  *             for __i in range(self.post.N):
  *                 beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]-beta[__i])             # <<<<<<<<<<<<<<
@@ -15254,7 +15456,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
       (__pyx_v_beta[__pyx_t_11]) = ((__pyx_v_beta[__pyx_t_11]) + ((__pyx_v_sim->dt * (1.0 / __pyx_v_tau_beta)) * ((__pyx_v_Y[__pyx_v___i]) - (__pyx_v_beta[__pyx_v___i]))));
     }
 
-    /* "splikes/connections/BCM.pyx":604
+    /* "splikes/connections/BCM.pyx":609
  *             y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/tau_y-yo)-y_avg[__i]))
  * 
  *         if use_beta:             # <<<<<<<<<<<<<<
@@ -15263,7 +15465,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
   }
 
-  /* "splikes/connections/BCM.pyx":608
+  /* "splikes/connections/BCM.pyx":613
  *                 beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]-beta[__i])
  * 
  *         modify_now=False             # <<<<<<<<<<<<<<
@@ -15272,7 +15474,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
   __pyx_v_modify_now = 0;
 
-  /* "splikes/connections/BCM.pyx":609
+  /* "splikes/connections/BCM.pyx":614
  * 
  *         modify_now=False
  *         if self.time_between_modification<0.0:             # <<<<<<<<<<<<<<
@@ -15282,7 +15484,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_12 = ((__pyx_v_self->time_between_modification < 0.0) != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":610
+    /* "splikes/connections/BCM.pyx":615
  *         modify_now=False
  *         if self.time_between_modification<0.0:
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -15291,7 +15493,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes/connections/BCM.pyx":611
+    /* "splikes/connections/BCM.pyx":616
  *         if self.time_between_modification<0.0:
  *             modify_now=True
  *             dt=sim.dt             # <<<<<<<<<<<<<<
@@ -15301,7 +15503,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     __pyx_t_9 = __pyx_v_sim->dt;
     __pyx_v_dt = __pyx_t_9;
 
-    /* "splikes/connections/BCM.pyx":609
+    /* "splikes/connections/BCM.pyx":614
  * 
  *         modify_now=False
  *         if self.time_between_modification<0.0:             # <<<<<<<<<<<<<<
@@ -15311,7 +15513,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     goto __pyx_L22;
   }
 
-  /* "splikes/connections/BCM.pyx":612
+  /* "splikes/connections/BCM.pyx":617
  *             modify_now=True
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):             # <<<<<<<<<<<<<<
@@ -15321,7 +15523,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_12 = ((__pyx_v_t > (__pyx_v_self->time_to_next_modification - 1e-6)) != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":613
+    /* "splikes/connections/BCM.pyx":618
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True             # <<<<<<<<<<<<<<
@@ -15330,7 +15532,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
     __pyx_v_modify_now = 1;
 
-    /* "splikes/connections/BCM.pyx":614
+    /* "splikes/connections/BCM.pyx":619
  *         elif t>(self.time_to_next_modification-1e-6):
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -15339,7 +15541,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
     __pyx_v_self->time_to_next_modification = (__pyx_v_self->time_to_next_modification + __pyx_v_self->time_between_modification);
 
-    /* "splikes/connections/BCM.pyx":615
+    /* "splikes/connections/BCM.pyx":620
  *             modify_now=True
  *             self.time_to_next_modification+=self.time_between_modification
  *             dt=self.time_between_modification             # <<<<<<<<<<<<<<
@@ -15349,7 +15551,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     __pyx_t_9 = __pyx_v_self->time_between_modification;
     __pyx_v_dt = __pyx_t_9;
 
-    /* "splikes/connections/BCM.pyx":612
+    /* "splikes/connections/BCM.pyx":617
  *             modify_now=True
  *             dt=sim.dt
  *         elif t>(self.time_to_next_modification-1e-6):             # <<<<<<<<<<<<<<
@@ -15359,7 +15561,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   }
   __pyx_L22:;
 
-  /* "splikes/connections/BCM.pyx":617
+  /* "splikes/connections/BCM.pyx":622
  *             dt=self.time_between_modification
  * 
  *         if modify_now:             # <<<<<<<<<<<<<<
@@ -15369,7 +15571,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_12 = (__pyx_v_modify_now != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":618
+    /* "splikes/connections/BCM.pyx":623
  * 
  *         if modify_now:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -15380,7 +15582,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___i = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":619
+      /* "splikes/connections/BCM.pyx":624
  *         if modify_now:
  *             for __i in range(self.post.N):
  *                 if use_beta:             # <<<<<<<<<<<<<<
@@ -15390,7 +15592,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
       __pyx_t_12 = (__pyx_v_use_beta != 0);
       if (__pyx_t_12) {
 
-        /* "splikes/connections/BCM.pyx":620
+        /* "splikes/connections/BCM.pyx":625
  *             for __i in range(self.post.N):
  *                 if use_beta:
  *                     YY=Y[__i]-beta[__i]             # <<<<<<<<<<<<<<
@@ -15399,7 +15601,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
         __pyx_v_YY = ((__pyx_v_Y[__pyx_v___i]) - (__pyx_v_beta[__pyx_v___i]));
 
-        /* "splikes/connections/BCM.pyx":621
+        /* "splikes/connections/BCM.pyx":626
  *                 if use_beta:
  *                     YY=Y[__i]-beta[__i]
  *                     if YY<0:             # <<<<<<<<<<<<<<
@@ -15409,7 +15611,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
         __pyx_t_12 = ((__pyx_v_YY < 0.0) != 0);
         if (__pyx_t_12) {
 
-          /* "splikes/connections/BCM.pyx":622
+          /* "splikes/connections/BCM.pyx":627
  *                     YY=Y[__i]-beta[__i]
  *                     if YY<0:
  *                         YY=0             # <<<<<<<<<<<<<<
@@ -15418,7 +15620,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
           __pyx_v_YY = 0.0;
 
-          /* "splikes/connections/BCM.pyx":621
+          /* "splikes/connections/BCM.pyx":626
  *                 if use_beta:
  *                     YY=Y[__i]-beta[__i]
  *                     if YY<0:             # <<<<<<<<<<<<<<
@@ -15427,7 +15629,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
         }
 
-        /* "splikes/connections/BCM.pyx":619
+        /* "splikes/connections/BCM.pyx":624
  *         if modify_now:
  *             for __i in range(self.post.N):
  *                 if use_beta:             # <<<<<<<<<<<<<<
@@ -15437,7 +15639,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
         goto __pyx_L26;
       }
 
-      /* "splikes/connections/BCM.pyx":625
+      /* "splikes/connections/BCM.pyx":630
  * 
  *                 else:
  *                     YY=Y[__i]             # <<<<<<<<<<<<<<
@@ -15449,7 +15651,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
       }
       __pyx_L26:;
 
-      /* "splikes/connections/BCM.pyx":627
+      /* "splikes/connections/BCM.pyx":632
  *                     YY=Y[__i]
  * 
  *                 if YY<self.y_min:             # <<<<<<<<<<<<<<
@@ -15459,7 +15661,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
       __pyx_t_12 = ((__pyx_v_YY < __pyx_v_self->y_min) != 0);
       if (__pyx_t_12) {
 
-        /* "splikes/connections/BCM.pyx":628
+        /* "splikes/connections/BCM.pyx":633
  * 
  *                 if YY<self.y_min:
  *                     YY=self.y_min             # <<<<<<<<<<<<<<
@@ -15469,7 +15671,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
         __pyx_t_9 = __pyx_v_self->y_min;
         __pyx_v_YY = __pyx_t_9;
 
-        /* "splikes/connections/BCM.pyx":627
+        /* "splikes/connections/BCM.pyx":632
  *                     YY=Y[__i]
  * 
  *                 if YY<self.y_min:             # <<<<<<<<<<<<<<
@@ -15479,7 +15681,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
         goto __pyx_L28;
       }
 
-      /* "splikes/connections/BCM.pyx":629
+      /* "splikes/connections/BCM.pyx":634
  *                 if YY<self.y_min:
  *                     YY=self.y_min
  *                 elif YY>self.y_max:             # <<<<<<<<<<<<<<
@@ -15489,7 +15691,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
       __pyx_t_12 = ((__pyx_v_YY > __pyx_v_self->y_max) != 0);
       if (__pyx_t_12) {
 
-        /* "splikes/connections/BCM.pyx":630
+        /* "splikes/connections/BCM.pyx":635
  *                     YY=self.y_min
  *                 elif YY>self.y_max:
  *                     YY=self.y_max             # <<<<<<<<<<<<<<
@@ -15499,7 +15701,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
         __pyx_t_9 = __pyx_v_self->y_max;
         __pyx_v_YY = __pyx_t_9;
 
-        /* "splikes/connections/BCM.pyx":629
+        /* "splikes/connections/BCM.pyx":634
  *                 if YY<self.y_min:
  *                     YY=self.y_min
  *                 elif YY>self.y_max:             # <<<<<<<<<<<<<<
@@ -15509,7 +15711,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
       }
       __pyx_L28:;
 
-      /* "splikes/connections/BCM.pyx":632
+      /* "splikes/connections/BCM.pyx":637
  *                     YY=self.y_max
  * 
  *                 mod_Y[__i]=YY             # <<<<<<<<<<<<<<
@@ -15518,7 +15720,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
       (__pyx_v_mod_Y[__pyx_v___i]) = __pyx_v_YY;
 
-      /* "splikes/connections/BCM.pyx":633
+      /* "splikes/connections/BCM.pyx":638
  * 
  *                 mod_Y[__i]=YY
  *                 mod_theta[__i]=theta[__i]             # <<<<<<<<<<<<<<
@@ -15527,7 +15729,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
       (__pyx_v_mod_theta[__pyx_v___i]) = (__pyx_v_theta[__pyx_v___i]);
 
-      /* "splikes/connections/BCM.pyx":634
+      /* "splikes/connections/BCM.pyx":639
  *                 mod_Y[__i]=YY
  *                 mod_theta[__i]=theta[__i]
  *                 mod_beta[__i]=beta[__i]             # <<<<<<<<<<<<<<
@@ -15536,7 +15738,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
       (__pyx_v_mod_beta[__pyx_v___i]) = (__pyx_v_beta[__pyx_v___i]);
 
-      /* "splikes/connections/BCM.pyx":637
+      /* "splikes/connections/BCM.pyx":642
  * 
  * 
  *                 for __j in range(self.pre.N):             # <<<<<<<<<<<<<<
@@ -15547,7 +15749,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
       for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_11; __pyx_t_13+=1) {
         __pyx_v___j = __pyx_t_13;
 
-        /* "splikes/connections/BCM.pyx":638
+        /* "splikes/connections/BCM.pyx":643
  * 
  *                 for __j in range(self.pre.N):
  *                     mod_X[__j]=X[__j]             # <<<<<<<<<<<<<<
@@ -15556,7 +15758,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
         (__pyx_v_mod_X[__pyx_v___j]) = (__pyx_v_X[__pyx_v___j]);
 
-        /* "splikes/connections/BCM.pyx":639
+        /* "splikes/connections/BCM.pyx":644
  *                 for __j in range(self.pre.N):
  *                     mod_X[__j]=X[__j]
  *                     __wi=__i*self.pre.N+__j             # <<<<<<<<<<<<<<
@@ -15565,7 +15767,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
         __pyx_v___wi = ((__pyx_v___i * __pyx_v_self->__pyx_base.pre->N) + __pyx_v___j);
 
-        /* "splikes/connections/BCM.pyx":640
+        /* "splikes/connections/BCM.pyx":645
  *                     mod_X[__j]=X[__j]
  *                     __wi=__i*self.pre.N+__j
  *                     dw=(eta*(X[__j]-xo)*((YY-yo)*((YY-yo)-theta[__i])/theta[__i])-eta*gamma*W[__wi])             # <<<<<<<<<<<<<<
@@ -15574,7 +15776,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
         __pyx_v_dw = (((__pyx_v_eta * ((__pyx_v_X[__pyx_v___j]) - __pyx_v_xo)) * (((__pyx_v_YY - __pyx_v_yo) * ((__pyx_v_YY - __pyx_v_yo) - (__pyx_v_theta[__pyx_v___i]))) / (__pyx_v_theta[__pyx_v___i]))) - ((__pyx_v_eta * __pyx_v_gamma) * (__pyx_v_W[__pyx_v___wi])));
 
-        /* "splikes/connections/BCM.pyx":641
+        /* "splikes/connections/BCM.pyx":646
  *                     __wi=__i*self.pre.N+__j
  *                     dw=(eta*(X[__j]-xo)*((YY-yo)*((YY-yo)-theta[__i])/theta[__i])-eta*gamma*W[__wi])
  *                     W[__wi]+=dt*dw             # <<<<<<<<<<<<<<
@@ -15586,7 +15788,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
       }
     }
 
-    /* "splikes/connections/BCM.pyx":617
+    /* "splikes/connections/BCM.pyx":622
  *             dt=self.time_between_modification
  * 
  *         if modify_now:             # <<<<<<<<<<<<<<
@@ -15595,7 +15797,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
   }
 
-  /* "splikes/connections/BCM.pyx":644
+  /* "splikes/connections/BCM.pyx":649
  * 
  * 
  *         if self.theta_squares_the_average:             # <<<<<<<<<<<<<<
@@ -15605,7 +15807,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   __pyx_t_12 = (__pyx_v_self->theta_squares_the_average != 0);
   if (__pyx_t_12) {
 
-    /* "splikes/connections/BCM.pyx":645
+    /* "splikes/connections/BCM.pyx":650
  * 
  *         if self.theta_squares_the_average:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -15616,7 +15818,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___i = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":646
+      /* "splikes/connections/BCM.pyx":651
  *         if self.theta_squares_the_average:
  *             for __i in range(self.post.N):
  *                 theta[__i]=y_avg[__i]*y_avg[__i]/theta_o             # <<<<<<<<<<<<<<
@@ -15626,7 +15828,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
       (__pyx_v_theta[__pyx_v___i]) = (((__pyx_v_y_avg[__pyx_v___i]) * (__pyx_v_y_avg[__pyx_v___i])) / __pyx_v_theta_o);
     }
 
-    /* "splikes/connections/BCM.pyx":644
+    /* "splikes/connections/BCM.pyx":649
  * 
  * 
  *         if self.theta_squares_the_average:             # <<<<<<<<<<<<<<
@@ -15636,7 +15838,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     goto __pyx_L31;
   }
 
-  /* "splikes/connections/BCM.pyx":648
+  /* "splikes/connections/BCM.pyx":653
  *                 theta[__i]=y_avg[__i]*y_avg[__i]/theta_o
  *         else:
  *             for __i in range(self.post.N):             # <<<<<<<<<<<<<<
@@ -15648,7 +15850,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_6; __pyx_t_10+=1) {
       __pyx_v___i = __pyx_t_10;
 
-      /* "splikes/connections/BCM.pyx":649
+      /* "splikes/connections/BCM.pyx":654
  *         else:
  *             for __i in range(self.post.N):
  *                 if use_beta:             # <<<<<<<<<<<<<<
@@ -15658,7 +15860,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
       __pyx_t_12 = (__pyx_v_use_beta != 0);
       if (__pyx_t_12) {
 
-        /* "splikes/connections/BCM.pyx":650
+        /* "splikes/connections/BCM.pyx":655
  *             for __i in range(self.post.N):
  *                 if use_beta:
  *                     YY=Y[__i]-beta[__i]             # <<<<<<<<<<<<<<
@@ -15667,7 +15869,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
         __pyx_v_YY = ((__pyx_v_Y[__pyx_v___i]) - (__pyx_v_beta[__pyx_v___i]));
 
-        /* "splikes/connections/BCM.pyx":651
+        /* "splikes/connections/BCM.pyx":656
  *                 if use_beta:
  *                     YY=Y[__i]-beta[__i]
  *                     if YY<0.0:             # <<<<<<<<<<<<<<
@@ -15677,7 +15879,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
         __pyx_t_12 = ((__pyx_v_YY < 0.0) != 0);
         if (__pyx_t_12) {
 
-          /* "splikes/connections/BCM.pyx":652
+          /* "splikes/connections/BCM.pyx":657
  *                     YY=Y[__i]-beta[__i]
  *                     if YY<0.0:
  *                         YY=0.0             # <<<<<<<<<<<<<<
@@ -15686,7 +15888,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
           __pyx_v_YY = 0.0;
 
-          /* "splikes/connections/BCM.pyx":651
+          /* "splikes/connections/BCM.pyx":656
  *                 if use_beta:
  *                     YY=Y[__i]-beta[__i]
  *                     if YY<0.0:             # <<<<<<<<<<<<<<
@@ -15695,7 +15897,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
  */
         }
 
-        /* "splikes/connections/BCM.pyx":649
+        /* "splikes/connections/BCM.pyx":654
  *         else:
  *             for __i in range(self.post.N):
  *                 if use_beta:             # <<<<<<<<<<<<<<
@@ -15705,7 +15907,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
         goto __pyx_L36;
       }
 
-      /* "splikes/connections/BCM.pyx":654
+      /* "splikes/connections/BCM.pyx":659
  *                         YY=0.0
  *                 else:
  *                     YY=Y[__i]             # <<<<<<<<<<<<<<
@@ -15717,7 +15919,7 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
       }
       __pyx_L36:;
 
-      /* "splikes/connections/BCM.pyx":655
+      /* "splikes/connections/BCM.pyx":660
  *                 else:
  *                     YY=Y[__i]
  *                 theta[__i]+=sim.dt*((1.0/tau_theta)*(YY*YY/theta_o-theta[__i]))             # <<<<<<<<<<<<<<
@@ -15730,16 +15932,16 @@ static PyObject *__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(s
   }
   __pyx_L31:;
 
-  /* "splikes/connections/BCM.pyx":657
+  /* "splikes/connections/BCM.pyx":662
  *                 theta[__i]+=sim.dt*((1.0/tau_theta)*(YY*YY/theta_o-theta[__i]))
  * 
  *         self.apply_weight_limits()             # <<<<<<<<<<<<<<
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_TwoThreshold *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 657, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_7splikes_11connections_3BCM_BCM_TwoThreshold *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.apply_weight_limits(((struct __pyx_obj_7splikes_7splikes_connection *)__pyx_v_self), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 662, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "splikes/connections/BCM.pyx":537
+  /* "splikes/connections/BCM.pyx":542
  *     @cython.cdivision(True)
  *     @cython.boundscheck(False) # turn of bounds-checking for entire function
  *     cpdef update(self,double t,simulation sim):             # <<<<<<<<<<<<<<
@@ -15793,11 +15995,11 @@ static PyObject *__pyx_pw_7splikes_11connections_3BCM_16BCM_TwoThreshold_5update
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sim)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 537, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, 1); __PYX_ERR(0, 542, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 537, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "update") < 0)) __PYX_ERR(0, 542, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -15805,18 +16007,18 @@ static PyObject *__pyx_pw_7splikes_11connections_3BCM_16BCM_TwoThreshold_5update
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 537, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 542, __pyx_L3_error)
     __pyx_v_sim = ((struct __pyx_obj_7splikes_7splikes_simulation *)values[1]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 537, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("update", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 542, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("splikes.connections.BCM.BCM_TwoThreshold.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) __PYX_ERR(0, 537, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sim), __pyx_ptype_7splikes_7splikes_simulation, 1, "sim", 0))) __PYX_ERR(0, 542, __pyx_L1_error)
   __pyx_r = __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_4update(((struct __pyx_obj_7splikes_11connections_3BCM_BCM_TwoThreshold *)__pyx_v_self), __pyx_v_t, __pyx_v_sim);
 
   /* function exit code */
@@ -15834,7 +16036,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_4update
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("update", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 537, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update(__pyx_v_self, __pyx_v_t, __pyx_v_sim, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -15851,7 +16053,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_4update
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":454
+/* "splikes/connections/BCM.pyx":459
  * 
  * cdef class BCM_TwoThreshold(connection):
  *     cdef public double tau_x,tau_y,xo,yo,theta_o,gamma,eta,theta_L             # <<<<<<<<<<<<<<
@@ -15878,7 +16080,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_5tau_x_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -15913,7 +16115,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_5tau_x_2__set
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 459, __pyx_L1_error)
   __pyx_v_self->tau_x = __pyx_t_1;
 
   /* function exit code */
@@ -15946,7 +16148,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_5tau_y_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_y); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->tau_y); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -15981,7 +16183,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_5tau_y_2__set
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 459, __pyx_L1_error)
   __pyx_v_self->tau_y = __pyx_t_1;
 
   /* function exit code */
@@ -16014,7 +16216,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2xo___g
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->xo); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->xo); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -16049,7 +16251,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2xo_2__set__(
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 459, __pyx_L1_error)
   __pyx_v_self->xo = __pyx_t_1;
 
   /* function exit code */
@@ -16082,7 +16284,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2yo___g
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->yo); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->yo); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -16117,7 +16319,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2yo_2__set__(
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 459, __pyx_L1_error)
   __pyx_v_self->yo = __pyx_t_1;
 
   /* function exit code */
@@ -16150,7 +16352,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_7theta_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->theta_o); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->theta_o); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -16185,7 +16387,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_7theta_o_2__s
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 459, __pyx_L1_error)
   __pyx_v_self->theta_o = __pyx_t_1;
 
   /* function exit code */
@@ -16218,7 +16420,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_5gamma_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->gamma); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->gamma); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -16253,7 +16455,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_5gamma_2__set
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 459, __pyx_L1_error)
   __pyx_v_self->gamma = __pyx_t_1;
 
   /* function exit code */
@@ -16286,7 +16488,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_3eta___
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->eta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->eta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -16321,7 +16523,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_3eta_2__set__
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 459, __pyx_L1_error)
   __pyx_v_self->eta = __pyx_t_1;
 
   /* function exit code */
@@ -16354,7 +16556,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_7theta_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->theta_L); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->theta_L); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -16389,7 +16591,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_7theta_L_2__s
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 459, __pyx_L1_error)
   __pyx_v_self->theta_L = __pyx_t_1;
 
   /* function exit code */
@@ -16403,7 +16605,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_7theta_L_2__s
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":455
+/* "splikes/connections/BCM.pyx":460
  * cdef class BCM_TwoThreshold(connection):
  *     cdef public double tau_x,tau_y,xo,yo,theta_o,gamma,eta,theta_L
  *     cdef public double y_min,y_max             # <<<<<<<<<<<<<<
@@ -16430,7 +16632,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_5y_min_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->y_min); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 455, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->y_min); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 460, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -16465,7 +16667,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_5y_min_2__set
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 455, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 460, __pyx_L1_error)
   __pyx_v_self->y_min = __pyx_t_1;
 
   /* function exit code */
@@ -16498,7 +16700,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_5y_max_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->y_max); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 455, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->y_max); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 460, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -16533,7 +16735,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_5y_max_2__set
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 455, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 460, __pyx_L1_error)
   __pyx_v_self->y_max = __pyx_t_1;
 
   /* function exit code */
@@ -16547,7 +16749,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_5y_max_2__set
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":456
+/* "splikes/connections/BCM.pyx":461
  *     cdef public double tau_x,tau_y,xo,yo,theta_o,gamma,eta,theta_L
  *     cdef public double y_min,y_max
  *     cdef public tau_theta,tau_beta             # <<<<<<<<<<<<<<
@@ -16729,7 +16931,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_8tau_beta_4__
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":457
+/* "splikes/connections/BCM.pyx":462
  *     cdef public double y_min,y_max
  *     cdef public tau_theta,tau_beta
  *     cdef public double ax,ay             # <<<<<<<<<<<<<<
@@ -16756,7 +16958,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2ax___g
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->ax); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 457, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->ax); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 462, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -16791,7 +16993,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2ax_2__set__(
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 457, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 462, __pyx_L1_error)
   __pyx_v_self->ax = __pyx_t_1;
 
   /* function exit code */
@@ -16824,7 +17026,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2ay___g
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->ay); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 457, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->ay); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 462, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -16859,7 +17061,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2ay_2__set__(
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 457, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 462, __pyx_L1_error)
   __pyx_v_self->ay = __pyx_t_1;
 
   /* function exit code */
@@ -16873,7 +17075,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_2ay_2__set__(
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":458
+/* "splikes/connections/BCM.pyx":463
  *     cdef public tau_theta,tau_beta
  *     cdef public double ax,ay
  *     cdef public bint smoothed_x,smoothed_y             # <<<<<<<<<<<<<<
@@ -16900,7 +17102,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_10smoot
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->smoothed_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 458, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->smoothed_x); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 463, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -16935,7 +17137,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_10smoothed_x_
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 458, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 463, __pyx_L1_error)
   __pyx_v_self->smoothed_x = __pyx_t_1;
 
   /* function exit code */
@@ -16968,7 +17170,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_10smoot
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->smoothed_y); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 458, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->smoothed_y); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 463, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -17003,7 +17205,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_10smoothed_y_
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 458, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 463, __pyx_L1_error)
   __pyx_v_self->smoothed_y = __pyx_t_1;
 
   /* function exit code */
@@ -17017,7 +17219,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_10smoothed_y_
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":459
+/* "splikes/connections/BCM.pyx":464
  *     cdef public double ax,ay
  *     cdef public bint smoothed_x,smoothed_y
  *     cdef public np.ndarray theta,beta,y,x,y_avg,X,Y,mod_X,mod_Y,mod_theta,mod_beta             # <<<<<<<<<<<<<<
@@ -17072,7 +17274,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_5theta_2__set
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 459, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 464, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -17169,7 +17371,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_4beta_2__set_
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 459, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 464, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -17266,7 +17468,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_1y_2__set__(s
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 459, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 464, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -17363,7 +17565,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_1x_2__set__(s
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 459, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 464, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -17460,7 +17662,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_5y_avg_2__set
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 459, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 464, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -17557,7 +17759,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_1X_2__set__(s
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 459, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 464, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -17654,7 +17856,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_1Y_2__set__(s
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 459, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 464, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -17751,7 +17953,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_5mod_X_2__set
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 459, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 464, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -17848,7 +18050,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_5mod_Y_2__set
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 459, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 464, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -17945,7 +18147,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_9mod_theta_2_
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 459, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 464, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -18042,7 +18244,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_8mod_beta_2__
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 459, __pyx_L1_error)
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 464, __pyx_L1_error)
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -18092,7 +18294,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_8mod_beta_4__
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":460
+/* "splikes/connections/BCM.pyx":465
  *     cdef public bint smoothed_x,smoothed_y
  *     cdef public np.ndarray theta,beta,y,x,y_avg,X,Y,mod_X,mod_Y,mod_theta,mod_beta
  *     cdef public object initial_theta_range             # <<<<<<<<<<<<<<
@@ -18187,7 +18389,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_19initial_the
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":461
+/* "splikes/connections/BCM.pyx":466
  *     cdef public np.ndarray theta,beta,y,x,y_avg,X,Y,mod_X,mod_Y,mod_theta,mod_beta
  *     cdef public object initial_theta_range
  *     cdef public double time_between_modification,time_to_next_modification             # <<<<<<<<<<<<<<
@@ -18214,7 +18416,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_25time_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_between_modification); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 461, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_between_modification); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -18249,7 +18451,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_25time_betwee
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 461, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 466, __pyx_L1_error)
   __pyx_v_self->time_between_modification = __pyx_t_1;
 
   /* function exit code */
@@ -18282,7 +18484,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_25time_
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_to_next_modification); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 461, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->time_to_next_modification); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -18317,7 +18519,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_25time_to_nex
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 461, __pyx_L1_error)
+  __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_value); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 466, __pyx_L1_error)
   __pyx_v_self->time_to_next_modification = __pyx_t_1;
 
   /* function exit code */
@@ -18331,7 +18533,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_25time_to_nex
   return __pyx_r;
 }
 
-/* "splikes/connections/BCM.pyx":462
+/* "splikes/connections/BCM.pyx":467
  *     cdef public object initial_theta_range
  *     cdef public double time_between_modification,time_to_next_modification
  *     cdef public int theta_squares_the_average             # <<<<<<<<<<<<<<
@@ -18358,7 +18560,7 @@ static PyObject *__pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_25theta
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->theta_squares_the_average); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 462, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->theta_squares_the_average); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 467, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -18393,7 +18595,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_25theta_squar
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 462, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 467, __pyx_L1_error)
   __pyx_v_self->theta_squares_the_average = __pyx_t_1;
 
   /* function exit code */
@@ -18407,7 +18609,7 @@ static int __pyx_pf_7splikes_11connections_3BCM_16BCM_TwoThreshold_25theta_squar
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":197
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":197
  *         # experimental exception made for __getbuffer__ and __releasebuffer__
  *         # -- the details of this may change.
  *         def __getbuffer__(ndarray self, Py_buffer* info, int flags):             # <<<<<<<<<<<<<<
@@ -18454,7 +18656,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_GIVEREF(__pyx_v_info->obj);
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":203
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":203
  *             # of flags
  * 
  *             if info == NULL: return             # <<<<<<<<<<<<<<
@@ -18467,7 +18669,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L0;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":206
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":206
  * 
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1             # <<<<<<<<<<<<<<
@@ -18476,7 +18678,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_endian_detector = 1;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":207
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":207
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
@@ -18485,7 +18687,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":209
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":209
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
  * 
  *             ndim = PyArray_NDIM(self)             # <<<<<<<<<<<<<<
@@ -18494,7 +18696,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_ndim = PyArray_NDIM(__pyx_v_self);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":211
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":211
  *             ndim = PyArray_NDIM(self)
  * 
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -18504,7 +18706,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = (((sizeof(npy_intp)) != (sizeof(Py_ssize_t))) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":212
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":212
  * 
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 copy_shape = 1             # <<<<<<<<<<<<<<
@@ -18513,7 +18715,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_copy_shape = 1;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":211
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":211
  *             ndim = PyArray_NDIM(self)
  * 
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -18523,7 +18725,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L4;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":214
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":214
  *                 copy_shape = 1
  *             else:
  *                 copy_shape = 0             # <<<<<<<<<<<<<<
@@ -18535,7 +18737,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L4:;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":216
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":216
  *                 copy_shape = 0
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -18549,7 +18751,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L6_bool_binop_done;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":217
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":217
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):             # <<<<<<<<<<<<<<
@@ -18560,7 +18762,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = __pyx_t_2;
   __pyx_L6_bool_binop_done:;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":216
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":216
  *                 copy_shape = 0
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -18569,7 +18771,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":218
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":218
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
@@ -18582,7 +18784,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(1, 218, __pyx_L1_error)
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":216
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":216
  *                 copy_shape = 0
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -18591,7 +18793,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":220
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":220
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -18605,7 +18807,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L9_bool_binop_done;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":221
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":221
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):             # <<<<<<<<<<<<<<
@@ -18616,7 +18818,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = __pyx_t_2;
   __pyx_L9_bool_binop_done:;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":220
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":220
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -18625,7 +18827,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":222
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":222
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
@@ -18638,7 +18840,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(1, 222, __pyx_L1_error)
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":220
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":220
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -18647,7 +18849,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":224
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":224
  *                 raise ValueError(u"ndarray is not Fortran contiguous")
  * 
  *             info.buf = PyArray_DATA(self)             # <<<<<<<<<<<<<<
@@ -18656,7 +18858,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->buf = PyArray_DATA(__pyx_v_self);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":225
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":225
  * 
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim             # <<<<<<<<<<<<<<
@@ -18665,7 +18867,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->ndim = __pyx_v_ndim;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":226
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":226
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim
  *             if copy_shape:             # <<<<<<<<<<<<<<
@@ -18675,7 +18877,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = (__pyx_v_copy_shape != 0);
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":229
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":229
  *                 # Allocate new buffer for strides and shape info.
  *                 # This is allocated as one block, strides first.
  *                 info.strides = <Py_ssize_t*>stdlib.malloc(sizeof(Py_ssize_t) * <size_t>ndim * 2)             # <<<<<<<<<<<<<<
@@ -18684,7 +18886,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->strides = ((Py_ssize_t *)malloc((((sizeof(Py_ssize_t)) * ((size_t)__pyx_v_ndim)) * 2)));
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":230
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":230
  *                 # This is allocated as one block, strides first.
  *                 info.strides = <Py_ssize_t*>stdlib.malloc(sizeof(Py_ssize_t) * <size_t>ndim * 2)
  *                 info.shape = info.strides + ndim             # <<<<<<<<<<<<<<
@@ -18693,7 +18895,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->shape = (__pyx_v_info->strides + __pyx_v_ndim);
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":231
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":231
  *                 info.strides = <Py_ssize_t*>stdlib.malloc(sizeof(Py_ssize_t) * <size_t>ndim * 2)
  *                 info.shape = info.strides + ndim
  *                 for i in range(ndim):             # <<<<<<<<<<<<<<
@@ -18704,7 +18906,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
       __pyx_v_i = __pyx_t_5;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":232
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":232
  *                 info.shape = info.strides + ndim
  *                 for i in range(ndim):
  *                     info.strides[i] = PyArray_STRIDES(self)[i]             # <<<<<<<<<<<<<<
@@ -18713,7 +18915,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
       (__pyx_v_info->strides[__pyx_v_i]) = (PyArray_STRIDES(__pyx_v_self)[__pyx_v_i]);
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":233
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":233
  *                 for i in range(ndim):
  *                     info.strides[i] = PyArray_STRIDES(self)[i]
  *                     info.shape[i] = PyArray_DIMS(self)[i]             # <<<<<<<<<<<<<<
@@ -18723,7 +18925,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       (__pyx_v_info->shape[__pyx_v_i]) = (PyArray_DIMS(__pyx_v_self)[__pyx_v_i]);
     }
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":226
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":226
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim
  *             if copy_shape:             # <<<<<<<<<<<<<<
@@ -18733,7 +18935,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L11;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":235
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":235
  *                     info.shape[i] = PyArray_DIMS(self)[i]
  *             else:
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)             # <<<<<<<<<<<<<<
@@ -18743,7 +18945,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   /*else*/ {
     __pyx_v_info->strides = ((Py_ssize_t *)PyArray_STRIDES(__pyx_v_self));
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":236
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":236
  *             else:
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)             # <<<<<<<<<<<<<<
@@ -18754,7 +18956,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L11:;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":237
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":237
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)
  *             info.suboffsets = NULL             # <<<<<<<<<<<<<<
@@ -18763,7 +18965,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->suboffsets = NULL;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":238
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":238
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)             # <<<<<<<<<<<<<<
@@ -18772,7 +18974,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->itemsize = PyArray_ITEMSIZE(__pyx_v_self);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":239
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":239
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)
  *             info.readonly = not PyArray_ISWRITEABLE(self)             # <<<<<<<<<<<<<<
@@ -18781,7 +18983,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->readonly = (!(PyArray_ISWRITEABLE(__pyx_v_self) != 0));
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":242
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":242
  * 
  *             cdef int t
  *             cdef char* f = NULL             # <<<<<<<<<<<<<<
@@ -18790,7 +18992,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_f = NULL;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":243
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":243
  *             cdef int t
  *             cdef char* f = NULL
  *             cdef dtype descr = self.descr             # <<<<<<<<<<<<<<
@@ -18802,7 +19004,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_v_descr = ((PyArray_Descr *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":246
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":246
  *             cdef int offset
  * 
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)             # <<<<<<<<<<<<<<
@@ -18811,7 +19013,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_hasfields = PyDataType_HASFIELDS(__pyx_v_descr);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":248
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":248
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)
  * 
  *             if not hasfields and not copy_shape:             # <<<<<<<<<<<<<<
@@ -18829,7 +19031,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_L15_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":250
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":250
  *             if not hasfields and not copy_shape:
  *                 # do not call releasebuffer
  *                 info.obj = None             # <<<<<<<<<<<<<<
@@ -18842,7 +19044,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_DECREF(__pyx_v_info->obj);
     __pyx_v_info->obj = Py_None;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":248
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":248
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)
  * 
  *             if not hasfields and not copy_shape:             # <<<<<<<<<<<<<<
@@ -18852,7 +19054,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L14;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":253
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":253
  *             else:
  *                 # need to call releasebuffer
  *                 info.obj = self             # <<<<<<<<<<<<<<
@@ -18868,7 +19070,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L14:;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":255
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":255
  *                 info.obj = self
  * 
  *             if not hasfields:             # <<<<<<<<<<<<<<
@@ -18878,7 +19080,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = ((!(__pyx_v_hasfields != 0)) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":256
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":256
  * 
  *             if not hasfields:
  *                 t = descr.type_num             # <<<<<<<<<<<<<<
@@ -18888,7 +19090,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_4 = __pyx_v_descr->type_num;
     __pyx_v_t = __pyx_t_4;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":257
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":257
  *             if not hasfields:
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -18908,7 +19110,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     }
     __pyx_L20_next_or:;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":258
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":258
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):             # <<<<<<<<<<<<<<
@@ -18925,7 +19127,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_1 = __pyx_t_2;
     __pyx_L19_bool_binop_done:;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":257
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":257
  *             if not hasfields:
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -18934,7 +19136,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     if (__pyx_t_1) {
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":259
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":259
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -18947,7 +19149,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __PYX_ERR(1, 259, __pyx_L1_error)
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":257
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":257
  *             if not hasfields:
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -18956,7 +19158,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     }
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":260
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":260
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")
  *                 if   t == NPY_BYTE:        f = "b"             # <<<<<<<<<<<<<<
@@ -18968,7 +19170,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"b");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":261
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":261
  *                     raise ValueError(u"Non-native byte order not supported")
  *                 if   t == NPY_BYTE:        f = "b"
  *                 elif t == NPY_UBYTE:       f = "B"             # <<<<<<<<<<<<<<
@@ -18979,7 +19181,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"B");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":262
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":262
  *                 if   t == NPY_BYTE:        f = "b"
  *                 elif t == NPY_UBYTE:       f = "B"
  *                 elif t == NPY_SHORT:       f = "h"             # <<<<<<<<<<<<<<
@@ -18990,7 +19192,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"h");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":263
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":263
  *                 elif t == NPY_UBYTE:       f = "B"
  *                 elif t == NPY_SHORT:       f = "h"
  *                 elif t == NPY_USHORT:      f = "H"             # <<<<<<<<<<<<<<
@@ -19001,7 +19203,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"H");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":264
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":264
  *                 elif t == NPY_SHORT:       f = "h"
  *                 elif t == NPY_USHORT:      f = "H"
  *                 elif t == NPY_INT:         f = "i"             # <<<<<<<<<<<<<<
@@ -19012,7 +19214,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"i");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":265
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":265
  *                 elif t == NPY_USHORT:      f = "H"
  *                 elif t == NPY_INT:         f = "i"
  *                 elif t == NPY_UINT:        f = "I"             # <<<<<<<<<<<<<<
@@ -19023,7 +19225,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"I");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":266
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":266
  *                 elif t == NPY_INT:         f = "i"
  *                 elif t == NPY_UINT:        f = "I"
  *                 elif t == NPY_LONG:        f = "l"             # <<<<<<<<<<<<<<
@@ -19034,7 +19236,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"l");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":267
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":267
  *                 elif t == NPY_UINT:        f = "I"
  *                 elif t == NPY_LONG:        f = "l"
  *                 elif t == NPY_ULONG:       f = "L"             # <<<<<<<<<<<<<<
@@ -19045,7 +19247,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"L");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":268
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":268
  *                 elif t == NPY_LONG:        f = "l"
  *                 elif t == NPY_ULONG:       f = "L"
  *                 elif t == NPY_LONGLONG:    f = "q"             # <<<<<<<<<<<<<<
@@ -19056,7 +19258,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"q");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":269
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":269
  *                 elif t == NPY_ULONG:       f = "L"
  *                 elif t == NPY_LONGLONG:    f = "q"
  *                 elif t == NPY_ULONGLONG:   f = "Q"             # <<<<<<<<<<<<<<
@@ -19067,7 +19269,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"Q");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":270
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":270
  *                 elif t == NPY_LONGLONG:    f = "q"
  *                 elif t == NPY_ULONGLONG:   f = "Q"
  *                 elif t == NPY_FLOAT:       f = "f"             # <<<<<<<<<<<<<<
@@ -19078,7 +19280,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"f");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":271
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":271
  *                 elif t == NPY_ULONGLONG:   f = "Q"
  *                 elif t == NPY_FLOAT:       f = "f"
  *                 elif t == NPY_DOUBLE:      f = "d"             # <<<<<<<<<<<<<<
@@ -19089,7 +19291,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"d");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":272
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":272
  *                 elif t == NPY_FLOAT:       f = "f"
  *                 elif t == NPY_DOUBLE:      f = "d"
  *                 elif t == NPY_LONGDOUBLE:  f = "g"             # <<<<<<<<<<<<<<
@@ -19100,7 +19302,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"g");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":273
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":273
  *                 elif t == NPY_DOUBLE:      f = "d"
  *                 elif t == NPY_LONGDOUBLE:  f = "g"
  *                 elif t == NPY_CFLOAT:      f = "Zf"             # <<<<<<<<<<<<<<
@@ -19111,7 +19313,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"Zf");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":274
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":274
  *                 elif t == NPY_LONGDOUBLE:  f = "g"
  *                 elif t == NPY_CFLOAT:      f = "Zf"
  *                 elif t == NPY_CDOUBLE:     f = "Zd"             # <<<<<<<<<<<<<<
@@ -19122,7 +19324,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"Zd");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":275
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":275
  *                 elif t == NPY_CFLOAT:      f = "Zf"
  *                 elif t == NPY_CDOUBLE:     f = "Zd"
  *                 elif t == NPY_CLONGDOUBLE: f = "Zg"             # <<<<<<<<<<<<<<
@@ -19133,7 +19335,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"Zg");
       break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":276
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":276
  *                 elif t == NPY_CDOUBLE:     f = "Zd"
  *                 elif t == NPY_CLONGDOUBLE: f = "Zg"
  *                 elif t == NPY_OBJECT:      f = "O"             # <<<<<<<<<<<<<<
@@ -19145,7 +19347,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       default:
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":278
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":278
  *                 elif t == NPY_OBJECT:      f = "O"
  *                 else:
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)             # <<<<<<<<<<<<<<
@@ -19171,7 +19373,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
     }
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":279
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":279
  *                 else:
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *                 info.format = f             # <<<<<<<<<<<<<<
@@ -19180,7 +19382,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->format = __pyx_v_f;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":280
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":280
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *                 info.format = f
  *                 return             # <<<<<<<<<<<<<<
@@ -19190,7 +19392,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_r = 0;
     goto __pyx_L0;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":255
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":255
  *                 info.obj = self
  * 
  *             if not hasfields:             # <<<<<<<<<<<<<<
@@ -19199,7 +19401,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":282
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":282
  *                 return
  *             else:
  *                 info.format = <char*>stdlib.malloc(_buffer_format_string_len)             # <<<<<<<<<<<<<<
@@ -19209,7 +19411,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   /*else*/ {
     __pyx_v_info->format = ((char *)malloc(0xFF));
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":283
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":283
  *             else:
  *                 info.format = <char*>stdlib.malloc(_buffer_format_string_len)
  *                 info.format[0] = c'^' # Native data types, manual alignment             # <<<<<<<<<<<<<<
@@ -19218,7 +19420,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     (__pyx_v_info->format[0]) = '^';
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":284
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":284
  *                 info.format = <char*>stdlib.malloc(_buffer_format_string_len)
  *                 info.format[0] = c'^' # Native data types, manual alignment
  *                 offset = 0             # <<<<<<<<<<<<<<
@@ -19227,7 +19429,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_offset = 0;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":285
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":285
  *                 info.format[0] = c'^' # Native data types, manual alignment
  *                 offset = 0
  *                 f = _util_dtypestring(descr, info.format + 1,             # <<<<<<<<<<<<<<
@@ -19237,7 +19439,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_7 = __pyx_f_5numpy__util_dtypestring(__pyx_v_descr, (__pyx_v_info->format + 1), (__pyx_v_info->format + 0xFF), (&__pyx_v_offset)); if (unlikely(__pyx_t_7 == NULL)) __PYX_ERR(1, 285, __pyx_L1_error)
     __pyx_v_f = __pyx_t_7;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":288
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":288
  *                                       info.format + _buffer_format_string_len,
  *                                       &offset)
  *                 f[0] = c'\0' # Terminate format string             # <<<<<<<<<<<<<<
@@ -19247,7 +19449,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     (__pyx_v_f[0]) = '\x00';
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":197
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":197
  *         # experimental exception made for __getbuffer__ and __releasebuffer__
  *         # -- the details of this may change.
  *         def __getbuffer__(ndarray self, Py_buffer* info, int flags):             # <<<<<<<<<<<<<<
@@ -19279,7 +19481,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":290
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":290
  *                 f[0] = c'\0' # Terminate format string
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
@@ -19303,7 +19505,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("__releasebuffer__", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":291
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":291
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):             # <<<<<<<<<<<<<<
@@ -19313,7 +19515,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __pyx_t_1 = (PyArray_HASFIELDS(__pyx_v_self) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":292
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":292
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)             # <<<<<<<<<<<<<<
@@ -19322,7 +19524,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
     free(__pyx_v_info->format);
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":291
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":291
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):             # <<<<<<<<<<<<<<
@@ -19331,7 +19533,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":293
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":293
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -19341,7 +19543,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __pyx_t_1 = (((sizeof(npy_intp)) != (sizeof(Py_ssize_t))) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":294
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":294
  *                 stdlib.free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 stdlib.free(info.strides)             # <<<<<<<<<<<<<<
@@ -19350,7 +19552,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
     free(__pyx_v_info->strides);
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":293
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":293
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -19359,7 +19561,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":290
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":290
  *                 f[0] = c'\0' # Terminate format string
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
@@ -19371,7 +19573,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __Pyx_RefNannyFinishContext();
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":770
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":770
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -19385,7 +19587,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":771
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":771
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -19399,7 +19601,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":770
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":770
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -19418,7 +19620,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":773
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":773
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -19432,7 +19634,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":774
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":774
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -19446,7 +19648,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":773
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":773
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -19465,7 +19667,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":776
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":776
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -19479,7 +19681,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":777
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":777
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -19493,7 +19695,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":776
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":776
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -19512,7 +19714,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":779
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":779
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -19526,7 +19728,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":780
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":780
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -19540,7 +19742,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":779
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":779
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -19559,7 +19761,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":782
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":782
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -19573,7 +19775,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":783
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":783
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -19587,7 +19789,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":782
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":782
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -19606,7 +19808,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":785
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":785
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
@@ -19635,7 +19837,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   char *__pyx_t_9;
   __Pyx_RefNannySetupContext("_util_dtypestring", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":790
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":790
  * 
  *     cdef dtype child
  *     cdef int endian_detector = 1             # <<<<<<<<<<<<<<
@@ -19644,7 +19846,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
   __pyx_v_endian_detector = 1;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":791
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":791
  *     cdef dtype child
  *     cdef int endian_detector = 1
  *     cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
@@ -19653,7 +19855,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":794
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":794
  *     cdef tuple fields
  * 
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
@@ -19676,7 +19878,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_childname, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":795
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":795
  * 
  *     for childname in descr.names:
  *         fields = descr.fields[childname]             # <<<<<<<<<<<<<<
@@ -19693,7 +19895,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_fields, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":796
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":796
  *     for childname in descr.names:
  *         fields = descr.fields[childname]
  *         child, new_offset = fields             # <<<<<<<<<<<<<<
@@ -19732,7 +19934,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_new_offset, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":798
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":798
  *         child, new_offset = fields
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:             # <<<<<<<<<<<<<<
@@ -19749,7 +19951,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = ((((__pyx_v_end - __pyx_v_f) - ((int)__pyx_t_5)) < 15) != 0);
     if (__pyx_t_6) {
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":799
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":799
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
@@ -19762,7 +19964,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __PYX_ERR(1, 799, __pyx_L1_error)
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":798
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":798
  *         child, new_offset = fields
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:             # <<<<<<<<<<<<<<
@@ -19771,7 +19973,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
     }
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":801
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":801
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -19791,7 +19993,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     }
     __pyx_L8_next_or:;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":802
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":802
  * 
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):             # <<<<<<<<<<<<<<
@@ -19808,7 +20010,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = __pyx_t_7;
     __pyx_L7_bool_binop_done:;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":801
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":801
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -19817,7 +20019,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
     if (__pyx_t_6) {
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":803
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":803
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):
  *             raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -19830,7 +20032,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __PYX_ERR(1, 803, __pyx_L1_error)
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":801
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":801
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -19839,7 +20041,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
     }
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":813
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":813
  * 
  *         # Output padding bytes
  *         while offset[0] < new_offset:             # <<<<<<<<<<<<<<
@@ -19855,7 +20057,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       if (!__pyx_t_6) break;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":814
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":814
  *         # Output padding bytes
  *         while offset[0] < new_offset:
  *             f[0] = 120 # "x"; pad byte             # <<<<<<<<<<<<<<
@@ -19864,7 +20066,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       (__pyx_v_f[0]) = 0x78;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":815
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":815
  *         while offset[0] < new_offset:
  *             f[0] = 120 # "x"; pad byte
  *             f += 1             # <<<<<<<<<<<<<<
@@ -19873,7 +20075,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       __pyx_v_f = (__pyx_v_f + 1);
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":816
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":816
  *             f[0] = 120 # "x"; pad byte
  *             f += 1
  *             offset[0] += 1             # <<<<<<<<<<<<<<
@@ -19884,7 +20086,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       (__pyx_v_offset[__pyx_t_8]) = ((__pyx_v_offset[__pyx_t_8]) + 1);
     }
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":818
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":818
  *             offset[0] += 1
  * 
  *         offset[0] += child.itemsize             # <<<<<<<<<<<<<<
@@ -19894,7 +20096,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_8 = 0;
     (__pyx_v_offset[__pyx_t_8]) = ((__pyx_v_offset[__pyx_t_8]) + __pyx_v_child->elsize);
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":820
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":820
  *         offset[0] += child.itemsize
  * 
  *         if not PyDataType_HASFIELDS(child):             # <<<<<<<<<<<<<<
@@ -19904,7 +20106,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = ((!(PyDataType_HASFIELDS(__pyx_v_child) != 0)) != 0);
     if (__pyx_t_6) {
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":821
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":821
  * 
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num             # <<<<<<<<<<<<<<
@@ -19916,7 +20118,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_XDECREF_SET(__pyx_v_t, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":822
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":822
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num
  *             if end - f < 5:             # <<<<<<<<<<<<<<
@@ -19926,7 +20128,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __pyx_t_6 = (((__pyx_v_end - __pyx_v_f) < 5) != 0);
       if (__pyx_t_6) {
 
-        /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":823
+        /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":823
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
@@ -19939,7 +20141,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __PYX_ERR(1, 823, __pyx_L1_error)
 
-        /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":822
+        /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":822
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num
  *             if end - f < 5:             # <<<<<<<<<<<<<<
@@ -19948,7 +20150,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":826
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":826
  * 
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"             # <<<<<<<<<<<<<<
@@ -19966,7 +20168,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":827
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":827
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"             # <<<<<<<<<<<<<<
@@ -19984,7 +20186,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":828
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":828
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"             # <<<<<<<<<<<<<<
@@ -20002,7 +20204,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":829
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":829
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"             # <<<<<<<<<<<<<<
@@ -20020,7 +20222,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":830
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":830
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"
  *             elif t == NPY_INT:         f[0] = 105 #"i"             # <<<<<<<<<<<<<<
@@ -20038,7 +20240,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":831
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":831
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"
  *             elif t == NPY_INT:         f[0] = 105 #"i"
  *             elif t == NPY_UINT:        f[0] =  73 #"I"             # <<<<<<<<<<<<<<
@@ -20056,7 +20258,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":832
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":832
  *             elif t == NPY_INT:         f[0] = 105 #"i"
  *             elif t == NPY_UINT:        f[0] =  73 #"I"
  *             elif t == NPY_LONG:        f[0] = 108 #"l"             # <<<<<<<<<<<<<<
@@ -20074,7 +20276,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":833
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":833
  *             elif t == NPY_UINT:        f[0] =  73 #"I"
  *             elif t == NPY_LONG:        f[0] = 108 #"l"
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"             # <<<<<<<<<<<<<<
@@ -20092,7 +20294,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":834
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":834
  *             elif t == NPY_LONG:        f[0] = 108 #"l"
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"             # <<<<<<<<<<<<<<
@@ -20110,7 +20312,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":835
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":835
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"             # <<<<<<<<<<<<<<
@@ -20128,7 +20330,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":836
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":836
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"             # <<<<<<<<<<<<<<
@@ -20146,7 +20348,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":837
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":837
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"             # <<<<<<<<<<<<<<
@@ -20164,7 +20366,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":838
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":838
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"             # <<<<<<<<<<<<<<
@@ -20182,7 +20384,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":839
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":839
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf             # <<<<<<<<<<<<<<
@@ -20202,7 +20404,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":840
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":840
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd             # <<<<<<<<<<<<<<
@@ -20222,7 +20424,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":841
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":841
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd
  *             elif t == NPY_CLONGDOUBLE: f[0] = 90; f[1] = 103; f += 1 # Zg             # <<<<<<<<<<<<<<
@@ -20242,7 +20444,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":842
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":842
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd
  *             elif t == NPY_CLONGDOUBLE: f[0] = 90; f[1] = 103; f += 1 # Zg
  *             elif t == NPY_OBJECT:      f[0] = 79 #"O"             # <<<<<<<<<<<<<<
@@ -20260,7 +20462,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":844
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":844
  *             elif t == NPY_OBJECT:      f[0] = 79 #"O"
  *             else:
  *                 raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)             # <<<<<<<<<<<<<<
@@ -20284,7 +20486,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       }
       __pyx_L15:;
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":845
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":845
  *             else:
  *                 raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *             f += 1             # <<<<<<<<<<<<<<
@@ -20293,7 +20495,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       __pyx_v_f = (__pyx_v_f + 1);
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":820
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":820
  *         offset[0] += child.itemsize
  * 
  *         if not PyDataType_HASFIELDS(child):             # <<<<<<<<<<<<<<
@@ -20303,7 +20505,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       goto __pyx_L13;
     }
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":849
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":849
  *             # Cython ignores struct boundary information ("T{...}"),
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)             # <<<<<<<<<<<<<<
@@ -20316,7 +20518,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     }
     __pyx_L13:;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":794
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":794
  *     cdef tuple fields
  * 
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
@@ -20326,7 +20528,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":850
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":850
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)
  *     return f             # <<<<<<<<<<<<<<
@@ -20336,7 +20538,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   __pyx_r = __pyx_v_f;
   goto __pyx_L0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":785
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":785
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
@@ -20361,7 +20563,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":966
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":966
  * 
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -20376,7 +20578,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   int __pyx_t_2;
   __Pyx_RefNannySetupContext("set_array_base", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":968
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":968
  * cdef inline void set_array_base(ndarray arr, object base):
  *      cdef PyObject* baseptr
  *      if base is None:             # <<<<<<<<<<<<<<
@@ -20387,7 +20589,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":969
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":969
  *      cdef PyObject* baseptr
  *      if base is None:
  *          baseptr = NULL             # <<<<<<<<<<<<<<
@@ -20396,7 +20598,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
     __pyx_v_baseptr = NULL;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":968
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":968
  * cdef inline void set_array_base(ndarray arr, object base):
  *      cdef PyObject* baseptr
  *      if base is None:             # <<<<<<<<<<<<<<
@@ -20406,7 +20608,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
     goto __pyx_L3;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":971
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":971
  *          baseptr = NULL
  *      else:
  *          Py_INCREF(base) # important to do this before decref below!             # <<<<<<<<<<<<<<
@@ -20416,7 +20618,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   /*else*/ {
     Py_INCREF(__pyx_v_base);
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":972
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":972
  *      else:
  *          Py_INCREF(base) # important to do this before decref below!
  *          baseptr = <PyObject*>base             # <<<<<<<<<<<<<<
@@ -20427,7 +20629,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   }
   __pyx_L3:;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":973
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":973
  *          Py_INCREF(base) # important to do this before decref below!
  *          baseptr = <PyObject*>base
  *      Py_XDECREF(arr.base)             # <<<<<<<<<<<<<<
@@ -20436,7 +20638,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_XDECREF(__pyx_v_arr->base);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":974
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":974
  *          baseptr = <PyObject*>base
  *      Py_XDECREF(arr.base)
  *      arr.base = baseptr             # <<<<<<<<<<<<<<
@@ -20445,7 +20647,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   __pyx_v_arr->base = __pyx_v_baseptr;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":966
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":966
  * 
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -20457,7 +20659,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyFinishContext();
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":976
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":976
  *      arr.base = baseptr
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -20471,7 +20673,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":977
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":977
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     if arr.base is NULL:             # <<<<<<<<<<<<<<
@@ -20481,7 +20683,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = ((__pyx_v_arr->base == NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":978
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":978
  * cdef inline object get_array_base(ndarray arr):
  *     if arr.base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -20493,7 +20695,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     __pyx_r = Py_None;
     goto __pyx_L0;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":977
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":977
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     if arr.base is NULL:             # <<<<<<<<<<<<<<
@@ -20502,7 +20704,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":980
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":980
  *         return None
  *     else:
  *         return <object>arr.base             # <<<<<<<<<<<<<<
@@ -20516,7 +20718,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     goto __pyx_L0;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":976
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":976
  *      arr.base = baseptr
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -20531,7 +20733,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":985
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":985
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -20552,7 +20754,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("import_array", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":986
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":986
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20568,7 +20770,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":987
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":987
  * cdef inline int import_array() except -1:
  *     try:
  *         _import_array()             # <<<<<<<<<<<<<<
@@ -20577,7 +20779,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
  */
       __pyx_t_4 = _import_array(); if (unlikely(__pyx_t_4 == -1)) __PYX_ERR(1, 987, __pyx_L3_error)
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":986
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":986
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20592,7 +20794,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L3_error:;
     __Pyx_PyThreadState_assign
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":988
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":988
  *     try:
  *         _import_array()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -20607,7 +20809,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":989
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":989
  *         _import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -20623,7 +20825,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":986
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":986
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20639,7 +20841,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L10_try_end:;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":985
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":985
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -20662,7 +20864,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":991
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":991
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -20683,7 +20885,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("import_umath", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":992
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":992
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20699,7 +20901,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":993
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":993
  * cdef inline int import_umath() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -20708,7 +20910,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == -1)) __PYX_ERR(1, 993, __pyx_L3_error)
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":992
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":992
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20723,7 +20925,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L3_error:;
     __Pyx_PyThreadState_assign
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":994
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":994
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -20738,7 +20940,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":995
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":995
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -20754,7 +20956,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":992
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":992
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20770,7 +20972,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L10_try_end:;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":991
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":991
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -20793,7 +20995,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   return __pyx_r;
 }
 
-/* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":997
+/* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":997
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -20814,7 +21016,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("import_ufunc", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":998
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":998
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20830,7 +21032,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":999
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":999
  * cdef inline int import_ufunc() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -20839,7 +21041,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == -1)) __PYX_ERR(1, 999, __pyx_L3_error)
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":998
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":998
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20854,7 +21056,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L3_error:;
     __Pyx_PyThreadState_assign
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":1000
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":1000
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -20868,7 +21070,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":1001
+      /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":1001
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -20882,7 +21084,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":998
+    /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":998
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20898,7 +21100,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L10_try_end:;
   }
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":997
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":997
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -21221,6 +21423,34 @@ static int __pyx_setprop_7splikes_11connections_3BCM_13BCM_LawCooper_ay(PyObject
   }
 }
 
+static PyObject *__pyx_getprop_7splikes_11connections_3BCM_13BCM_LawCooper_scale_x(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_x_1__get__(o);
+}
+
+static int __pyx_setprop_7splikes_11connections_3BCM_13BCM_LawCooper_scale_x(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_x_3__set__(o, v);
+  }
+  else {
+    PyErr_SetString(PyExc_NotImplementedError, "__del__");
+    return -1;
+  }
+}
+
+static PyObject *__pyx_getprop_7splikes_11connections_3BCM_13BCM_LawCooper_scale_y(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_y_1__get__(o);
+}
+
+static int __pyx_setprop_7splikes_11connections_3BCM_13BCM_LawCooper_scale_y(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+  if (v) {
+    return __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_7scale_y_3__set__(o, v);
+  }
+  else {
+    PyErr_SetString(PyExc_NotImplementedError, "__del__");
+    return -1;
+  }
+}
+
 static PyObject *__pyx_getprop_7splikes_11connections_3BCM_13BCM_LawCooper_smoothed_x(PyObject *o, CYTHON_UNUSED void *x) {
   return __pyx_pw_7splikes_11connections_3BCM_13BCM_LawCooper_10smoothed_x_1__get__(o);
 }
@@ -21465,6 +21695,8 @@ static struct PyGetSetDef __pyx_getsets_7splikes_11connections_3BCM_BCM_LawCoope
   {(char *)"tau_beta", __pyx_getprop_7splikes_11connections_3BCM_13BCM_LawCooper_tau_beta, __pyx_setprop_7splikes_11connections_3BCM_13BCM_LawCooper_tau_beta, (char *)0, 0},
   {(char *)"ax", __pyx_getprop_7splikes_11connections_3BCM_13BCM_LawCooper_ax, __pyx_setprop_7splikes_11connections_3BCM_13BCM_LawCooper_ax, (char *)0, 0},
   {(char *)"ay", __pyx_getprop_7splikes_11connections_3BCM_13BCM_LawCooper_ay, __pyx_setprop_7splikes_11connections_3BCM_13BCM_LawCooper_ay, (char *)0, 0},
+  {(char *)"scale_x", __pyx_getprop_7splikes_11connections_3BCM_13BCM_LawCooper_scale_x, __pyx_setprop_7splikes_11connections_3BCM_13BCM_LawCooper_scale_x, (char *)0, 0},
+  {(char *)"scale_y", __pyx_getprop_7splikes_11connections_3BCM_13BCM_LawCooper_scale_y, __pyx_setprop_7splikes_11connections_3BCM_13BCM_LawCooper_scale_y, (char *)0, 0},
   {(char *)"smoothed_x", __pyx_getprop_7splikes_11connections_3BCM_13BCM_LawCooper_smoothed_x, __pyx_setprop_7splikes_11connections_3BCM_13BCM_LawCooper_smoothed_x, (char *)0, 0},
   {(char *)"smoothed_y", __pyx_getprop_7splikes_11connections_3BCM_13BCM_LawCooper_smoothed_y, __pyx_setprop_7splikes_11connections_3BCM_13BCM_LawCooper_smoothed_y, (char *)0, 0},
   {(char *)"theta", __pyx_getprop_7splikes_11connections_3BCM_13BCM_LawCooper_theta, __pyx_setprop_7splikes_11connections_3BCM_13BCM_LawCooper_theta, (char *)0, 0},
@@ -23136,6 +23368,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_rand, __pyx_k_rand, sizeof(__pyx_k_rand), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_n_s_reset, __pyx_k_reset, sizeof(__pyx_k_reset), 0, 0, 1, 1},
+  {&__pyx_n_s_scale_x, __pyx_k_scale_x, sizeof(__pyx_k_scale_x), 0, 0, 1, 1},
+  {&__pyx_n_s_scale_y, __pyx_k_scale_y, sizeof(__pyx_k_scale_y), 0, 0, 1, 1},
   {&__pyx_n_s_sim, __pyx_k_sim, sizeof(__pyx_k_sim), 0, 0, 1, 1},
   {&__pyx_n_s_smoothed_x, __pyx_k_smoothed_x, sizeof(__pyx_k_smoothed_x), 0, 0, 1, 1},
   {&__pyx_n_s_smoothed_y, __pyx_k_smoothed_y, sizeof(__pyx_k_smoothed_y), 0, 0, 1, 1},
@@ -23165,7 +23399,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 152, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 156, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 218, __pyx_L1_error)
   __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) __PYX_ERR(1, 799, __pyx_L1_error)
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(1, 989, __pyx_L1_error)
@@ -23178,7 +23412,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":218
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":218
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
@@ -23189,7 +23423,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":222
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":222
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
@@ -23200,7 +23434,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":259
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":259
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -23211,7 +23445,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":799
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":799
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
@@ -23222,7 +23456,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":803
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":803
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):
  *             raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -23233,7 +23467,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":823
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":823
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
@@ -23244,7 +23478,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":989
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":989
  *         _import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -23255,7 +23489,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":995
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":995
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -23266,7 +23500,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":1001
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":1001
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -23394,30 +23628,30 @@ PyMODINIT_FUNC PyInit_BCM(void)
   __pyx_vtable_7splikes_11connections_3BCM_BCM.__pyx_base._reset = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_connection *, int __pyx_skip_dispatch))__pyx_f_7splikes_11connections_3BCM_3BCM__reset;
   __pyx_vtable_7splikes_11connections_3BCM_BCM.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_connection *, double, struct __pyx_obj_7splikes_7splikes_simulation *, int __pyx_skip_dispatch))__pyx_f_7splikes_11connections_3BCM_3BCM_update;
   __pyx_type_7splikes_11connections_3BCM_BCM.tp_base = __pyx_ptype_7splikes_7splikes_connection;
-  if (PyType_Ready(&__pyx_type_7splikes_11connections_3BCM_BCM) < 0) __PYX_ERR(0, 225, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_7splikes_11connections_3BCM_BCM) < 0) __PYX_ERR(0, 230, __pyx_L1_error)
   __pyx_type_7splikes_11connections_3BCM_BCM.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_7splikes_11connections_3BCM_BCM.tp_dict, __pyx_vtabptr_7splikes_11connections_3BCM_BCM) < 0) __PYX_ERR(0, 225, __pyx_L1_error)
-  if (PyObject_SetAttrString(__pyx_m, "BCM", (PyObject *)&__pyx_type_7splikes_11connections_3BCM_BCM) < 0) __PYX_ERR(0, 225, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_7splikes_11connections_3BCM_BCM.tp_dict, __pyx_vtabptr_7splikes_11connections_3BCM_BCM) < 0) __PYX_ERR(0, 230, __pyx_L1_error)
+  if (PyObject_SetAttrString(__pyx_m, "BCM", (PyObject *)&__pyx_type_7splikes_11connections_3BCM_BCM) < 0) __PYX_ERR(0, 230, __pyx_L1_error)
   __pyx_ptype_7splikes_11connections_3BCM_BCM = &__pyx_type_7splikes_11connections_3BCM_BCM;
   __pyx_vtabptr_7splikes_11connections_3BCM_BCM_LawCooper_Offset = &__pyx_vtable_7splikes_11connections_3BCM_BCM_LawCooper_Offset;
   __pyx_vtable_7splikes_11connections_3BCM_BCM_LawCooper_Offset.__pyx_base = *__pyx_vtabptr_7splikes_7splikes_connection;
   __pyx_vtable_7splikes_11connections_3BCM_BCM_LawCooper_Offset.__pyx_base._reset = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_connection *, int __pyx_skip_dispatch))__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset__reset;
   __pyx_vtable_7splikes_11connections_3BCM_BCM_LawCooper_Offset.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_connection *, double, struct __pyx_obj_7splikes_7splikes_simulation *, int __pyx_skip_dispatch))__pyx_f_7splikes_11connections_3BCM_20BCM_LawCooper_Offset_update;
   __pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset.tp_base = __pyx_ptype_7splikes_7splikes_connection;
-  if (PyType_Ready(&__pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset) < 0) __PYX_ERR(0, 340, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset) < 0) __PYX_ERR(0, 345, __pyx_L1_error)
   __pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset.tp_dict, __pyx_vtabptr_7splikes_11connections_3BCM_BCM_LawCooper_Offset) < 0) __PYX_ERR(0, 340, __pyx_L1_error)
-  if (PyObject_SetAttrString(__pyx_m, "BCM_LawCooper_Offset", (PyObject *)&__pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset) < 0) __PYX_ERR(0, 340, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset.tp_dict, __pyx_vtabptr_7splikes_11connections_3BCM_BCM_LawCooper_Offset) < 0) __PYX_ERR(0, 345, __pyx_L1_error)
+  if (PyObject_SetAttrString(__pyx_m, "BCM_LawCooper_Offset", (PyObject *)&__pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset) < 0) __PYX_ERR(0, 345, __pyx_L1_error)
   __pyx_ptype_7splikes_11connections_3BCM_BCM_LawCooper_Offset = &__pyx_type_7splikes_11connections_3BCM_BCM_LawCooper_Offset;
   __pyx_vtabptr_7splikes_11connections_3BCM_BCM_TwoThreshold = &__pyx_vtable_7splikes_11connections_3BCM_BCM_TwoThreshold;
   __pyx_vtable_7splikes_11connections_3BCM_BCM_TwoThreshold.__pyx_base = *__pyx_vtabptr_7splikes_7splikes_connection;
   __pyx_vtable_7splikes_11connections_3BCM_BCM_TwoThreshold.__pyx_base._reset = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_connection *, int __pyx_skip_dispatch))__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold__reset;
   __pyx_vtable_7splikes_11connections_3BCM_BCM_TwoThreshold.__pyx_base.update = (PyObject *(*)(struct __pyx_obj_7splikes_7splikes_connection *, double, struct __pyx_obj_7splikes_7splikes_simulation *, int __pyx_skip_dispatch))__pyx_f_7splikes_11connections_3BCM_16BCM_TwoThreshold_update;
   __pyx_type_7splikes_11connections_3BCM_BCM_TwoThreshold.tp_base = __pyx_ptype_7splikes_7splikes_connection;
-  if (PyType_Ready(&__pyx_type_7splikes_11connections_3BCM_BCM_TwoThreshold) < 0) __PYX_ERR(0, 453, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_7splikes_11connections_3BCM_BCM_TwoThreshold) < 0) __PYX_ERR(0, 458, __pyx_L1_error)
   __pyx_type_7splikes_11connections_3BCM_BCM_TwoThreshold.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_7splikes_11connections_3BCM_BCM_TwoThreshold.tp_dict, __pyx_vtabptr_7splikes_11connections_3BCM_BCM_TwoThreshold) < 0) __PYX_ERR(0, 453, __pyx_L1_error)
-  if (PyObject_SetAttrString(__pyx_m, "BCM_TwoThreshold", (PyObject *)&__pyx_type_7splikes_11connections_3BCM_BCM_TwoThreshold) < 0) __PYX_ERR(0, 453, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_7splikes_11connections_3BCM_BCM_TwoThreshold.tp_dict, __pyx_vtabptr_7splikes_11connections_3BCM_BCM_TwoThreshold) < 0) __PYX_ERR(0, 458, __pyx_L1_error)
+  if (PyObject_SetAttrString(__pyx_m, "BCM_TwoThreshold", (PyObject *)&__pyx_type_7splikes_11connections_3BCM_BCM_TwoThreshold) < 0) __PYX_ERR(0, 458, __pyx_L1_error)
   __pyx_ptype_7splikes_11connections_3BCM_BCM_TwoThreshold = &__pyx_type_7splikes_11connections_3BCM_BCM_TwoThreshold;
   /*--- Type import code ---*/
   __pyx_ptype_7cpython_4type_type = __Pyx_ImportType(__Pyx_BUILTIN_MODULE_NAME, "type", 
@@ -23493,7 +23727,7 @@ PyMODINIT_FUNC PyInit_BCM(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "../../../anaconda/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":997
+  /* "../../../anaconda/lib/python3.6/site-packages/Cython/Includes/numpy/__init__.pxd":997
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<

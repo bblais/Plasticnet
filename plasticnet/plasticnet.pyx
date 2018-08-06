@@ -279,7 +279,7 @@ cdef class neuron(group):
         group.save(self,g)
 
         for i,p in enumerate(self.post_process):
-            g2=g.create_group("process %d" % i)
+            g2=g.create_group("process_%d" % i)
             p.save(g2)
 
     cpdef _reset(self):
@@ -434,8 +434,10 @@ cdef class connection(group):
         cdef np.ndarray arr
     
         if initial_weight_range is None:
-            initial_weight_range=[.00095,.00105]
-        
+            initial_weight_range=pylab.array([.00095,.00105])
+        else:
+            initial_weight_range=pylab.array(initial_weight_range)
+            
         self.reset_to_initial=False    
         self.initial_weight_range=initial_weight_range
         self.pre=pre

@@ -30,7 +30,7 @@ import sys
 cdef class BCM_LawCooper(connection):
     cdef public double tau_x,tau_y,xo,yo,theta_o,gamma,eta,
     cdef public tau_theta,tau_beta
-    cdef public double ax,ay
+    cdef public double ax,ay,scale_x,scale_y
     cdef public bint smoothed_x,smoothed_y
     cdef public np.ndarray theta,beta,y,x,y_avg,X,Y,mod_X,mod_Y,mod_theta,mod_beta
     cdef public object initial_theta_range
@@ -79,6 +79,8 @@ cdef class BCM_LawCooper(connection):
         self.name='Spiking BCM LawCooper'
         self.tau_x=0.01
         self.tau_y=0.01
+        self.scale_x=1.0
+        self.scale_y=1.0
         self.ax=1.0/self.tau_x
         self.ay=1.0/self.tau_y
         self.smoothed_x=False
@@ -96,7 +98,7 @@ cdef class BCM_LawCooper(connection):
         self._reset()
 
         self.save_attrs.extend(['tau_x','tau_y','xo','yo','theta_o',
-            'gamma','eta','tau_theta','tau_beta','ax',
+            'gamma','eta','tau_theta','tau_beta','ax','scale_x','scale_y',
             'ay','smoothed_x','smoothed_y','time_between_modification',
             'time_to_next_modification','theta_squares_the_average',])
         self.save_data.extend(['theta','beta','x','y',
@@ -128,6 +130,8 @@ cdef class BCM_LawCooper(connection):
         cdef double tau_y=self.tau_y
         cdef double ax=self.ax
         cdef double ay=self.ay
+        cdef double scale_x=self.scale_x
+        cdef double scale_y=self.scale_y
         cdef double xo=self.xo
         cdef double yo=self.yo
         cdef double theta_o=self.theta_o
@@ -136,7 +140,7 @@ cdef class BCM_LawCooper(connection):
         cdef double tau_theta=self.tau_theta
         cdef double tau_beta=self.tau_beta
         cdef double dt,dw
-        cdef double YY
+        cdef double YY,XX
         cdef int modify_now,use_beta
 
         cdef int *pre
@@ -171,11 +175,11 @@ cdef class BCM_LawCooper(connection):
 
 
         for __i in range(self.post.N):
-            y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/tau_y-yo)-y_avg[__i]))            
+            y_avg[__i]+=sim.dt*((1.0/tau_theta)*((Y[__i]/scale_y/tau_y-yo)-y_avg[__i]))            
 
         if use_beta:
             for __i in range(self.post.N):
-                beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]-beta[__i])
+                beta[__i]+=sim.dt*(1.0/tau_beta)*(Y[__i]/scale_y-beta[__i])
 
         modify_now=False
         if self.time_between_modification<0.0:
@@ -189,11 +193,11 @@ cdef class BCM_LawCooper(connection):
         if modify_now:
             for __i in range(self.post.N):
                 if use_beta:
-                    YY=Y[__i]-beta[__i]
+                    YY=Y[__i]/scale_y-beta[__i]
                     if YY<0.0:
                         YY=0.0
                 else:
-                    YY=Y[__i]
+                    YY=Y[__i]/scale_y
 
                 mod_Y[__i]=YY
                 mod_theta[__i]=theta[__i]
@@ -201,9 +205,10 @@ cdef class BCM_LawCooper(connection):
 
 
                 for __j in range(self.pre.N):
-                    mod_X[__j]=X[__j]
+                    XX=X[__j]/scale_x
+                    mod_X[__j]=XX
                     __wi=__i*self.pre.N+__j
-                    dw=(eta*(X[__j]-xo)*((YY-yo)*((YY-yo)-theta[__i])/theta[__i])-eta*gamma*W[__wi])
+                    dw=(eta*(XX-xo)*((YY-yo)*((YY-yo)-theta[__i])/theta[__i])-eta*gamma*W[__wi])
                     W[__wi]+=dt*dw
 
 
@@ -213,11 +218,11 @@ cdef class BCM_LawCooper(connection):
         else:
             for __i in range(self.post.N):
                 if use_beta:
-                    YY=Y[__i]-beta[__i]
+                    YY=Y[__i]/scale_y-beta[__i]
                     if YY<0.0:
                         YY=0.0
                 else:
-                    YY=Y[__i]
+                    YY=Y[__i]/scale_y
                 theta[__i]+=sim.dt*((1.0/tau_theta)*(YY*YY/theta_o-theta[__i]))
             
         self.apply_weight_limits()

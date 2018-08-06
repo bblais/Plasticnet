@@ -176,6 +176,7 @@ cdef class Triplet_BCM(Gerstner2006):
 
 
 cdef class Triplet_BCM_LawCooper(Triplet_BCM):
+
     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):
         Triplet_BCM.__init__(self,pre,post,initial_weight_range,state)
         self.y2_o=19.2

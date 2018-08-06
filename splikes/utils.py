@@ -406,11 +406,12 @@ def make_gaussian(N=10,sz=100,rates=[5,55],sigma=10,display=False):
         min_sigma,max_sigma=sigma,sigma
     
     centers=(r_[0:N]+0.5)*sz/N
+    centers=centers.astype(int)
 
     # reverse, so the shift works easier down below
     centers=sz-centers
     
-    mid=sz/2
+    mid=sz//2
     idx=r_[0:sz]-mid
     
     
