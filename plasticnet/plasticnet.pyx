@@ -3,6 +3,8 @@ cimport cython
 import numpy as np
 cimport numpy as np
 
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 import h5py
 
 inf=1e500
@@ -117,7 +119,7 @@ cdef class group:
 
             g.create_dataset(dataname,data=data)
 
-
+            
 
 cdef class monitor(group):
     
@@ -171,7 +173,13 @@ cdef class monitor(group):
             h = value // 3600 
             m = (value - h * 3600) // 60 
             s = value % 60 
-            return "%02d:%02d:%02d" % (h,m,s) 
+
+            d=h//24
+            h=h%24
+            if d==0:
+                return "%02d:%02d:%02d" % (h,m,s) 
+            else:
+                return "%dd %02d:%02d:%02d" % (d,h,m,s) 
     
         def HMSFormatter2(value, loc): 
             h = value // 3600 
@@ -200,10 +208,12 @@ cdef class simulation(group):
         self.dt=dt
         self.total_time=total_time
         self.start_time=start_time
+        self.current_time=start_time
         self.time_to_next_save=1e500
         self.time_to_next_filter=1e500
         self.seed=-1
         self.monitors={}
+        self.post_process=[]
         self.verbose=False
         self.filters=[]  # functions for processing
         self.save_attrs=['seed','total_time','dt','time_to_next_save','time_to_next_filter',
@@ -246,15 +256,17 @@ cdef class simulation(group):
             
         self.time_to_next_save=min([self.monitors[name].time_to_next_save for name in self.monitors])
         
-    def save(self,group):
-        group.attrs['type']=str(type(self))
+    def save(self,g):
+        group.save(self,g)
 
-        for attr in self.save_attrs:
-            group.attrs[attr]=self.__getattribute__(attr)
+        for i,p in enumerate(self.post_process):
+            g2=g.create_group("process %d" % i)
+            p.save(g2)
 
-        for dataname in self.save_data:
-            data=self.__getattribute__(dataname)
-            group.create_dataset(dataname,data=data)
+    def __iadd__(self,other): # add some post-processing
+        self.post_process.append(other)
+        other.sim=self
+        return self
 
         
 cdef class neuron(group):
@@ -279,7 +291,7 @@ cdef class neuron(group):
         group.save(self,g)
 
         for i,p in enumerate(self.post_process):
-            g2=g.create_group("process_%d" % i)
+            g2=g.create_group("process %d" % i)
             p.save(g2)
 
     cpdef _reset(self):
@@ -366,8 +378,11 @@ cdef class channel(neuron):
                 dot("o")
             self.neuron_list[k].update(t,sim)
         
-            
-    
+    def __getitem__(self,index):
+        return self.neuron_list[index]    
+        
+    def __len__(self):
+         return len(self.neuron_list)    
     
 cdef class post_process_neuron(group):
     cpdef _reset(self):
@@ -486,7 +501,9 @@ def run_sim(simulation sim,object neurons,object connections,
     cdef double next_display=sim.start_time+time_between_display    
     cdef int _debug=debug
     cdef double hash_step,next_hash
-    cdef double duration=sim.total_time-sim.start_time
+    cdef double t1,t2,next_hash_time
+    cdef double duration=sim.total_time
+    cdef double end_time=sim.start_time+sim.total_time
     cdef int i,j,num_neurons,num_connections
     cdef int use_display
 
@@ -542,13 +559,15 @@ def run_sim(simulation sim,object neurons,object connections,
     if print_time:
         t1=time.time()
         
+    next_hash_time=time.time()+1
+
     for name in sim.monitors:
         if _debug:
             dot("[init monitor %s]" % name)    
 
         sim.monitors[name].update(t)
 
-    while t<=sim.total_time:
+    while t<=end_time:
         if _debug:
             dot("[t %f]" % t)    
 
@@ -599,8 +618,19 @@ def run_sim(simulation sim,object neurons,object connections,
 
 
         if display_hash and t>next_hash:
-            wb.updated((t-sim.start_time)/duration)
+            t2=time.time()
+            if t2>next_hash_time:
+                wb.updated((t-sim.start_time)/duration)
+                next_hash_time=t2+1
+                
             next_hash+=hash_step
+
+        sim.current_time=t
+
+
+    L=len(sim.post_process)
+    for k in range(L):
+        sim.post_process[k].apply()
 
     if print_time:
         print("Time Elapsed...",time2str(time.time()-t1))

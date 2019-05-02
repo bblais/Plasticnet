@@ -8,6 +8,9 @@ mpl.rcParams['lines.linewidth'] = 3
 mpl.rcParams['figure.figsize'] = (10,8)
 mpl.rcParams['axes.grid']=True
 
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
 import h5py
 import plasticnet as pn
 import splikes as sp

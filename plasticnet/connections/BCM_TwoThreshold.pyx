@@ -48,7 +48,8 @@ cdef class BCM_TwoThreshold(connection):
     
         cdef double *W=<double *>self.weights.data
         cdef double *theta=<double *>self.theta.data
-        cdef double *X,*Y   # outputs for pre and post
+        cdef double *X
+        cdef double *Y   # outputs for pre and post
         cdef double y
         cdef int __wi
         cdef double eta=self.eta

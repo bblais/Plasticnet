@@ -59,8 +59,9 @@ cdef class BCM_TwoThreshold_OLD(connection):
         cdef double *W=<double *>self.weights.data
         cdef double *theta=<double *>self.theta.data
         cdef double *theta_L=<double *>self.theta_L.data
-        cdef double *X,*Y   # outputs for pre and post
-        cdef double y_offset,y
+        cdef double *X
+        cdef double *Y   # outputs for pre and post
+        cdef double y_offset=0.0,y
         cdef int __wi
         cdef double eta=self.eta
         cdef double tau=self.tau

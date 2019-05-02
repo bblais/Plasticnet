@@ -1,23 +1,225 @@
 import matplotlib as mpl
-import pylab as pl
+import pylab as py
 
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 import h5py
+
+second=1
+ms=0.001*second
+minute=60*second
+hour=60*minute
+day=24*hour
+
+
 import plasticnet as pn
 import splikes as sp
 
-def save(fname,sim,neurons=[],connections=[]):
-    f=h5py.File(fname,'w')
+import asdf
+import warnings
+warnings.filterwarnings("ignore",category=asdf.exceptions.AsdfDeprecationWarning)
+
+def asdf_load_images(fname):
+    var={}
+    with asdf.open(fname) as af:
+        var['im_scale_shift']=af.tree['im_scale_shift']
+        var['im']=[array(_) for _ in af.tree['im']]
+
+    return var
+
+
+class Tree(dict):
+
+    def __init__(self, *args):
+        dict.__init__(self, args)
+        self['attrs']={}
+        self.attrs=self['attrs']
+
+    def create_group(self,name):
+        self[name]=Tree()
+        return self[name]
+
+    def create_dataset(self,name,data):
+        self[name]=data
+
+
+    def todict(self):
+        for key in self:
+            if isinstance(self[key],Tree):
+                self[key]=self[key].todict()
+        return(dict(self))
+
+class Sequence(object):
+    
+    def __init__(self):
+        self.sims=[]
+        self.neurons=[]
+        self.connections=[]
+        self.length=0
+        self.save_attrs=['length']
+        self.save_data=[]
+
+    def __len__(self):
+        return len(self.sims)
+    
+    def __iadd__(self,other):
+        s,n,c=other
+        self.sims.append(s)
+        self.neurons.append(n)
+        self.connections.append(c)
+        self.length=len(self.sims)
+        
+        return self
+    
+    def run(self,**kwargs):
+
+        for i in range(len(self.sims)):
+            s,ns,cs=self.sims[i],self.neurons[i],self.connections[i]
+            
+            if i>0: # load from previous
+                s0,ns0,cs0=self.sims[i-1],self.neurons[i-1],self.connections[i-1]
+                
+                for c,c0 in zip(cs,cs0):
+                    c.initial_weights=c0.weights.copy()
+                    c.reset_to_initial=True
+
+                    try:
+                        c.initial_theta=c0.theta.copy()
+                    except AttributeError:
+                        pass
+
+                    c._reset()
+                
+                start_time=s0.start_time+s0.total_time+s0.dt
+                s.start_time=start_time
+                s.current_time=start_time
+
+                for key in s.monitors:
+                    s.monitors[key].time_to_next_save=start_time
+                
+            pn.run_sim(s,ns,cs,**kwargs)
+
+    def arrays(self,name):
+        return self.time_array(name),self.array(name)
+        
+    def array(self,name):
+        import numpy as np
+        from itertools import chain
+        v=[s.monitors[name].values for s in self.sims]
+        v=list(chain(*v))        
+        return np.array(v).squeeze()
+        
+    def time_array(self,name):
+        import numpy as np
+        from itertools import chain
+        v=[s.monitors[name].t for s in self.sims]
+        v=list(chain(*v))        
+        return np.array(v)
+            
+    def plot(self,name):
+        for i in range(len(self.sims)):
+            s,ns,cs=self.sims[i],self.neurons[i],self.connections[i]
+            s.monitors[name].plot()
+            
+    def __getitem__(self, index):
+        result = self.sims[index],self.neurons[index],self.connections[index]
+        return result
+            
+
+def saveold(fname,seq,neurons=[],connections=[]):
+    import sys
+    assert '.asdf' in fname
+
+    f=Tree()
+    
+    f.attrs['plasticnet version']=pn.version
+    f.attrs['splikes version']=sp.version
     
     try:
+        first_sim=seq[0] 
+        # sequence
+    except TypeError:
+        sim=seq
+        seq=Sequence()
+        seq+=seq,neurons,connections
 
-        f.attrs['plasticnet version']=pn.version
-        f.attrs['splikes version']=sp.version
+    seqgroup=f.create_group("sequence")
+
+    group=f.create_group("simulation")
+    sim.save(group)
+
+    for n,neuron in enumerate(neurons):
+        group=f.create_group("neuron_%d" % n)
+        if neuron.verbose:
+            print("<<<<  group   neuron %d >>>>" % n)
+            sys.stdout.flush()
+        neuron.save(group)
+
+        for monitor_name in sim.monitors:
+            m=sim.monitors[monitor_name]
+            if m.container==neuron:
+                mgroup=group.create_group("monitor_%s" % m.name)
+                m.save(mgroup)
         
+        
+        
+    for c,connection in enumerate(connections):
+        group=f.create_group("connection %d" % c)
+        
+        if connection.verbose:
+            print("<<<<  group   connection_%d >>>>" % c)
+            sys.stdout.flush()
+        connection.save(group)
+
+        try:
+            idx=neurons.index(connection.pre)
+        except ValueError:
+            idx=None
+        group.attrs['pre number']=idx
+
+        try:
+            idx=neurons.index(connection.post)
+        except ValueError:
+            idx=None
+        group.attrs['post number']=idx
+        
+        for monitor_name in sim.monitors:
+            m=sim.monitors[monitor_name]
+            if m.container==connection:
+                mgroup=group.create_group("monitor_%s" % m.name)
+                m.save(mgroup)
+        
+    if sim.verbose:
+        print("Saving %s" % fname)
+
+    af = asdf.AsdfFile(f.todict())
+    af.write_to(fname, all_array_compression='zlib')
+
+
+def save(fname,seq,neurons=[],connections=[]):
+    import sys,os
+    assert '.asdf' in fname
+
+    top=Tree()
+    
+    top.attrs['plasticnet version']=pn.version
+    top.attrs['splikes version']=sp.version
+    
+    if not isinstance(seq,Sequence):
+        sim=seq
+        seq=Sequence()
+        seq+=sim,neurons,connections
+
+    top.attrs['sequence length']=len(seq)
+
+    for ns, (sim, neurons, connections) in enumerate(seq):
+        f=top.create_group("sequence %d" % ns)
+
         group=f.create_group("simulation")
         sim.save(group)
 
         for n,neuron in enumerate(neurons):
-            group=f.create_group("neuron_%d" % n)
+            group=f.create_group("neuron %d" % n)
             if neuron.verbose:
                 print("<<<<  group   neuron %d >>>>" % n)
                 sys.stdout.flush()
@@ -26,19 +228,17 @@ def save(fname,sim,neurons=[],connections=[]):
             for monitor_name in sim.monitors:
                 m=sim.monitors[monitor_name]
                 if m.container==neuron:
-                    mgroup=group.create_group("monitor_%s" % m.name)
+                    mgroup=group.create_group("monitor %s" % m.name)
                     m.save(mgroup)
-            
-            
             
         for c,connection in enumerate(connections):
             group=f.create_group("connection %d" % c)
             
             if connection.verbose:
-                print("<<<<  group   connection_%d >>>>" % c)
+                print("<<<<  group   connection %d >>>>" % c)
                 sys.stdout.flush()
             connection.save(group)
-    
+
             try:
                 idx=neurons.index(connection.pre)
             except ValueError:
@@ -54,14 +254,21 @@ def save(fname,sim,neurons=[],connections=[]):
             for monitor_name in sim.monitors:
                 m=sim.monitors[monitor_name]
                 if m.container==connection:
-                    mgroup=group.create_group("monitor_%s" % m.name)
+                    mgroup=group.create_group("monitor %s" % m.name)
                     m.save(mgroup)
             
-    finally:
-        f.close()
+    if sim.verbose:
+        print("Saving %s" % fname)
+
+    af = asdf.AsdfFile(top.todict())
+
+    base,name=os.path.split(fname)
+    if not(os.path.exists(base)):
+        print("Making %s" % base)
+        os.makedirs(base)
 
 
-
+    af.write_to(fname, all_array_compression='zlib')
 
 
 def hdf5_load_images(fname):
@@ -99,39 +306,36 @@ def bigfonts(size=20,family='sans-serif'):
 
 bigfonts()
 
-def time2str(t):
-
-    minutes=60
-    hours=60*minutes
-    days=24*hours
-    years=365*days
+def time2str(tm):
     
-    yr=int(t/years)
-    t-=yr*years
-
-    dy=int(t/days)
-    t-=dy*days
+    frac=tm-int(tm)
+    tm=int(tm)
     
-    hr=int(t/hours)
-    t-=hr*hours
+    s=''
+    sc=tm % 60
+    tm=tm//60
+    
+    mn=tm % 60
+    tm=tm//60
+    
+    hr=tm % 24
+    tm=tm//24
+    dy=tm
 
-    mn=int(t/minutes)
-    t-=mn*minutes
+    if (dy>0):
+        s=s+"%d d, " % dy
 
-    sec=t
+    if (hr>0):
+        s=s+"%d h, " % hr
 
-    s=""
-    if yr>0:
-        s+=str(yr)+" years "
-    if hr>0:
-        s+=str(hr)+" hours "
-    if mn>0:
-        s+=str(mn)+" minutes "        
-        
-    s+=str(sec)+" seconds "
+    if (mn>0):
+        s=s+"%d m, " % mn
 
+
+    s=s+"%.2f s" % (sc+frac)
 
     return s
+
 
 def timeit(reset=False):
     from time import time
@@ -144,12 +348,12 @@ def timeit(reset=False):
         # is defined
     except NameError:
         _timeit_time=time()
-        print("Time Reset")
+        #print("Time Reset")
         return
     
     if reset:
         _timeit_time=time()
-        print("Time Reset")
+        #print("Time Reset")
         return
 
     return time2str(time()-_timeit_time)
@@ -173,7 +377,7 @@ def test_stim(sim,neurons,connections,numang=24,k=4.4/13.0*3.141592653589793235)
         try:
             rf_size=ch.rf_size
         except AttributeError:
-            rf_size=pl.sqrt(ch.N)
+            rf_size=py.sqrt(ch.N)
             assert rf_size==int(rf_size)
             rf_size=int(rf_size)
 
@@ -282,7 +486,8 @@ def plot_rfs_and_theta(sim,neurons,connections):
     
 
     num_neurons=len(weights)
-    fig=pl.figure(figsize=(16,4*num_neurons))
+    fig=py.figure(figsize=(16,4*num_neurons))
+
     for i,w in enumerate(weights):
         try:  # check for channel
             neurons=pre.neuron_list
@@ -297,28 +502,28 @@ def plot_rfs_and_theta(sim,neurons,connections):
             try:
                 rf_size=ch.rf_size
                 if rf_size<0:
-                    rf_size=pl.sqrt(ch.N)
+                    rf_size=py.sqrt(ch.N)
                     assert rf_size==int(rf_size)
                     rf_size=int(rf_size)
 
             except AttributeError:
-                rf_size=pl.sqrt(ch.N)
+                rf_size=py.sqrt(ch.N)
                 assert rf_size==int(rf_size)
                 rf_size=int(rf_size)
 
 
-            pl.subplot2grid((num_neurons,num_channels+1),(i, c),aspect='equal')
+            py.subplot2grid((num_neurons,num_channels+1),(i, c),aspect='equal')
             subw=w[count:(count+rf_size*rf_size)]
-            #pl.pcolor(subw.reshape((rf_size,rf_size)),cmap=pl.cm.gray)
-            pl.pcolormesh(subw.reshape((rf_size,rf_size)),cmap=pl.cm.gray,
+            #py.pcolor(subw.reshape((rf_size,rf_size)),cmap=py.cm.gray)
+            py.pcolormesh(subw.reshape((rf_size,rf_size)),cmap=py.cm.gray,
                 vmin=vmin,vmax=vmax)
-            pl.xlim([0,rf_size]); 
-            pl.ylim([0,rf_size])
-            pl.axis('off')
+            py.xlim([0,rf_size]); 
+            py.ylim([0,rf_size])
+            py.axis('off')
             count+=rf_size*rf_size
 
-        pl.subplot2grid((num_neurons,num_channels+1),(i, num_channels))
-        sim.monitors['theta'].plot()
+    py.subplot2grid((num_neurons,num_channels+1),(0, num_channels))
+    sim.monitors['theta'].plot()
 
     return fig
 
@@ -330,14 +535,18 @@ def plot_rfs(sim,neurons,connections):
     weights=c.weights
     
     num_neurons=len(weights)
-    fig=pl.figure(figsize=(16,4*num_neurons))
-    for i,w in enumerate(weights):
-        try:  # check for channel
-            neurons=pre.neuron_list
-        except AttributeError:
-            neurons=[pre]
 
-        num_channels=len(neurons)
+    try:  # check for channel
+        neurons=pre.neuron_list
+    except AttributeError:
+        neurons=[pre]
+
+    num_channels=len(neurons)
+
+
+
+    fig=py.figure(figsize=(16,4*num_neurons))
+    for i,w in enumerate(weights):
 
         count=0
         vmin,vmax=w.min(),w.max()
@@ -346,20 +555,20 @@ def plot_rfs(sim,neurons,connections):
             try:
                 rf_size=ch.rf_size
             except AttributeError:
-                rf_size=pl.sqrt(ch.N)
+                rf_size=py.sqrt(ch.N)
                 assert rf_size==int(rf_size)
                 rf_size=int(rf_size)
 
 
             rf_size=ch.rf_size
-            pl.subplot2grid((num_neurons,num_channels),(i, c),aspect='equal')
+            py.subplot2grid((num_neurons,num_channels),(i, c),aspect='equal')
             subw=w[count:(count+rf_size*rf_size)]
-            #pl.pcolor(subw.reshape((rf_size,rf_size)),cmap=pl.cm.gray)
-            pl.pcolormesh(subw.reshape((rf_size,rf_size)),cmap=pl.cm.gray,
+            #py.pcolor(subw.reshape((rf_size,rf_size)),cmap=py.cm.gray)
+            py.pcolormesh(subw.reshape((rf_size,rf_size)),cmap=py.cm.gray,
                 vmin=vmin,vmax=vmax)
-            pl.xlim([0,rf_size]); 
-            pl.ylim([0,rf_size])
-            pl.axis('off')
+            py.xlim([0,rf_size]); 
+            py.ylim([0,rf_size])
+            py.axis('off')
             count+=rf_size*rf_size
 
     return fig
@@ -388,14 +597,208 @@ def plot_output_distribution(out,title):
     out=out.ravel()
     out_full=out
 
-    result=pl.hist(out,200)
+    result=py.hist(out,200)
     paramtext(1.2,0.95,
               'min %f' % min(out_full),
               'max %f' % max(out_full),
-              'mean %f' % pl.mean(out_full),
-              'median %f' % pl.median(out_full),
-              'std %f' % pl.std(out_full),
+              'mean %f' % py.mean(out_full),
+              'median %f' % py.median(out_full),
+              'std %f' % py.std(out_full),
               )
-    pl.title(title)
+    py.title(title)
+    
+from numba import njit,jit
+import numpy
+from math import sin,cos,atan2
+
+
+@njit
+def get_gratings(rf_diameter,theta,k_mat):
+
+    numang=len(theta)
+    num_k=len(k_mat)
+    rf_area=rf_diameter*rf_diameter
+    rf_radius=rf_diameter//2
+    
+    gratings=numpy.zeros((num_k,numang,rf_diameter,rf_diameter))
+
+    for ki,k in enumerate(k_mat):
+        for ai,th in enumerate(theta):
+            a=3.14159265-th/180.0*3.14159265
+            kx=k*cos(a)
+            ky=k*sin(a)
+
+            for i in range(rf_diameter):
+                for j in range(rf_diameter):
+
+                    ds=sin(kx*(i-rf_radius)+ ky*(j-rf_radius))
+                    dc=cos(kx*(i-rf_radius)+ ky*(j-rf_radius))
+
+                    gratings[ki,ai,i,j]=ds
+                   
+                
+    return gratings
+
     
     
+@njit
+def get_responses(t,w,number_of_channels,rf_diameter,theta,k_mat):
+
+    # weights.shape must be = (501, 3, 338)  t, neurons, inputs
+    
+    numang=len(theta)
+    num_k=len(k_mat)
+    L=len(t)
+    num_neurons=w.shape[1]
+    
+    responses=numpy.zeros((num_k,numang,number_of_channels,num_neurons,L))
+
+    rf_area=rf_diameter*rf_diameter
+    rf_radius=rf_diameter//2
+    
+    for ti in range(L):
+        for ni in range(num_neurons):
+            for ch in range(number_of_channels):
+                for ki,k in enumerate(k_mat):
+                    for ai,th in enumerate(theta):
+                        a=3.14159265-th/180.0*3.14159265
+                        kx=k*cos(a)
+                        ky=k*sin(a)
+
+                        cs=0.0
+                        cc=0.0
+                        wi=0
+                        for i in range(rf_diameter):
+                            for j in range(rf_diameter):
+
+                                ds=sin(kx*(i-rf_radius)+ ky*(j-rf_radius))
+                                dc=cos(kx*(i-rf_radius)+ ky*(j-rf_radius))
+
+                                w1=w[ti,ni,wi+rf_area*ch]
+                                    
+                                cs+=w1*ds # response to sin/cos grating input
+                                cc+=w1*dc
+
+                                phi=atan2(cc,cs)  # phase to give max response
+
+                                wi+=1
+
+                        c=cs*cos(phi)+cc*sin(phi)     # max response
+
+                        responses[ki,ai,ch,ni,ti]=c
+    
+    return responses
+
+class pygroup(object):
+
+    def save(self,g):
+        import sys
+
+        if self.verbose:
+            print(str(type(self)),":",str(self.__getattribute__('name')))
+            sys.stdout.flush()
+
+
+        g.attrs['type']=str(type(self))
+        g.attrs['name']=str(self.__getattribute__('name'))
+
+
+        for attr in self.save_attrs:
+            if self.verbose:
+                print("\t",attr)
+                sys.stdout.flush()
+            g.attrs[attr]=self.__getattribute__(attr)
+
+        for dataname in self.save_data:
+            if self.verbose:
+                print("\t",dataname)
+                sys.stdout.flush()
+            data=self.__getattribute__(dataname)
+
+            if self.verbose:
+                print(data)
+                sys.stdout.flush()
+
+            if data is None:
+                if self.verbose:
+                    print("(skipping)")
+                    sys.stdout.flush()
+                continue
+
+            g.create_dataset(dataname,data=data)
+
+   
+
+
+class post_process_simulation(pygroup):
+    def __init__(self,):
+        self.save_attrs=[]
+        self.save_data=[]
+        self.name='post process simulation'
+        self.sim=None
+        self.neurons=None
+        self.connections=None
+
+    def apply(self):
+        pass
+        
+
+
+
+class grating_response(post_process_simulation):
+    
+    def __init__(self,theta_mat=None,k_mat=None,print_time=True,verbose=False):
+
+        self.verbose=verbose
+        self.print_time=print_time
+        self.name='grating response'
+        
+        if theta_mat is None:
+            self.theta_mat=py.linspace(0.0,180,24)
+        else:
+            self.theta_mat=theta_mat
+            
+        if k_mat is None:
+            self.k_mat=py.linspace(1,10,20)/13.0*py.pi            
+        else:
+            self.k_mat=k_mat
+            
+        self.save_attrs=['num_channels','rf_diameter']
+        self.save_data=['k_mat','theta_mat','t','responses']
+
+
+
+    def apply(self):
+        self.monitor=self.sim.monitors['weights']
+
+        t,weights=self.monitor.arrays()
+        if len(weights.shape)==2:  # need to add another dimension
+            weights.shape=(weights.shape[0],1,weights.shape[1])        
+            
+            
+        num_neurons=weights.shape[1]
+        c=self.monitor.container
+        
+        try:  # check for channel
+            neurons=c.pre.neuron_list
+        except AttributeError:
+            neurons=[pre]
+
+        self.num_channels=len(neurons)
+        self.rf_diameter=neurons[0].rf_size
+            
+        if self.print_time:
+            pn.utils.timeit(reset=True)
+        self.responses=get_responses(t,weights,self.num_channels,self.rf_diameter,
+                                     self.theta_mat,self.k_mat)
+        self.t=t
+        
+        if self.print_time:
+            print(pn.utils.timeit())
+            
+    @property
+    def gratings(self):
+        return get_gratings(self.rf_diameter,self.theta_mat,self.k_mat)
+
+
+

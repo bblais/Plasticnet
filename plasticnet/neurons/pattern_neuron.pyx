@@ -117,6 +117,17 @@ cdef class pattern_neuron(neuron):
             y[i]=pattern[i]
             z[i]=pattern[i]
  
+def asdf_load_images(fname):
+    import asdf
+    import warnings
+    warnings.filterwarnings("ignore",category=asdf.exceptions.AsdfDeprecationWarning)
+
+    var={}
+    with asdf.open(fname) as af:
+        var['im_scale_shift']=af.tree['im_scale_shift']
+        var['im']=[np.array(_) for _ in af.tree['im']]
+
+    return var
 
 
 def hdf5_load_images(fname):
@@ -150,7 +161,8 @@ cdef class natural_images(pattern_neuron):
         self.p=self.r=self.c=-1
         
     def __init__(self,fname='hdf5/bbsk081604_norm.hdf5',rf_size=13,
-                     time_between_patterns=1.0,other_channel=None,verbose=False,
+                     time_between_patterns=1.0,other_channel=None,
+                     verbose=False,
                      ):
 
         self.sequential=True
@@ -161,7 +173,13 @@ cdef class natural_images(pattern_neuron):
         else:
             self.use_other_channel=False
 
-        image_data=hdf5_load_images(fname)
+        if any([fname.endswith(ext) for ext in ['.hdf5','h5','hd5']]):
+            image_data=hdf5_load_images(fname)
+        elif fname.endswith('.asdf'):
+            image_data=asdf_load_images(fname)
+        else:
+            raise ValueError('Image type not implemented '+fname)
+        
         self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1] 
                                 for arr in image_data['im']]
         del image_data

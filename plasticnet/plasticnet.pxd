@@ -53,8 +53,10 @@ cdef class simulation(group):
     cdef public double dt
     cdef public double total_time
     cdef public double start_time
+    cdef public double current_time
     cdef public double time_to_next_save,time_to_next_filter
     cdef public object monitors,filters
+    cdef public post_process
     cdef public int seed
 
     cpdef _reset(self)
@@ -82,7 +84,7 @@ cdef class channel(neuron):
     cdef public object neuron_list
     cdef public int number_of_neurons
     cdef public double time_between_patterns,time_to_next_pattern
-
+ 
 cdef class connection(group):
     cdef public np.ndarray weights
     cdef public np.ndarray initial_weights

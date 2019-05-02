@@ -55,7 +55,8 @@ cdef class Miller2014_Eq3(connection):
     
         cdef double *W=<double *>self.weights.data
         cdef double *y_bar=<double *>self.y_bar.data
-        cdef double *X,*Y   # outputs for pre and post
+        cdef double *X
+        cdef double *Y   # outputs for pre and post
 
         cdef int __wi
         X=<double *>self.pre.output.data
@@ -129,7 +130,8 @@ cdef class Miller2014_Eq5(connection):
         cdef double *W=<double *>self.weights.data
         cdef double *rho=<double *>self.rho.data
         cdef double *H=<double *>self.H.data
-        cdef double *X,*Y   # outputs for pre and post
+        cdef double *X
+        cdef double *Y   # outputs for pre and post
 
         cdef int __wi
         X=<double *>self.pre.output.data

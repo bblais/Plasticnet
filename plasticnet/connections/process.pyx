@@ -117,7 +117,6 @@ cdef class tuning_curve(post_process_connection):
         self.y=array(full_y)
 
 
-
 cdef class weight_decay(post_process_connection):
     cdef public double gamma
 
@@ -170,7 +169,7 @@ cdef class weight_limits(post_process_connection):
    
 cdef class zero_diagonal(post_process_connection):
 
-    def _reset(self):
+    cpdef _reset(self):
         if self.c.post.N!=self.c.pre.N:
             raise ValueError,"Zero diagonal can only work for square connections"
 
