@@ -206,3 +206,38 @@ cdef class normalization(post_process_connection):
             for __j in range(self.c.pre.N):
                 __wi=__i*self.c.pre.N+__j            
                 W[__wi]=W[__wi]/sum
+
+# cdef class orthogonalization(post_process_connection):
+#     @cython.cdivision(True)
+#     @cython.boundscheck(False) # turn of bounds-checking for entire function
+#     cpdef update(self,double t,simulation sim):
+#         cdef int __i
+#         cdef int __j
+#         cdef int __wi
+#         cdef int count
+#         cdef double *W=<double *>self.c.weights.data
+#         cdef c_numpy.ndarray W2arr
+#         cdef double *W2p=<double *>W2arr.data
+#         cdef object W2
+#         cdef object Wp
+#         cdef object norms
+
+#         W2=np.matrix(self.c.weights)
+        
+#         for __i in range(1,self.c.post.N): #  "1" is on purpose here: from second neuron on
+#             Wp=np.array(W2[0:__i,:])
+#             norms=np.sqrt(np.sum(Wp**2,axis=1))
+#             norms.shape=(__i,1)
+#             Wp/=norms  # normalize
+#             Wp=np.matrix(Wp)
+#             W2[__i,:]-= W2[__i,:]*Wp.T*Wp
+
+#         count=0
+#         W2arr=W2
+#         W2p=<double *>c_numpy.PyArray_DATA(W2arr)
+#         #W2p=<double *>W2.data
+#         for __i in range(self.c.post.N):
+#             for __j in range(self.c.pre.N):
+#                 __wi=__i*self.c.pre.N+__j            
+#                 W[__wi]=W2p[__wi]
+

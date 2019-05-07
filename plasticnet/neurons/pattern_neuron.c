@@ -1141,8 +1141,8 @@ struct __pyx_obj_10plasticnet_10plasticnet_neuron {
 };
 
 
-/* "plasticnet/plasticnet.pxd":73
- *     cpdef update(self,double t,simulation sim)
+/* "plasticnet/plasticnet.pxd":74
+ *     cpdef _clean(self)
  * 
  * cdef class post_process_neuron(group):             # <<<<<<<<<<<<<<
  *     cpdef _reset(self)
@@ -1155,7 +1155,7 @@ struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron {
 };
 
 
-/* "plasticnet/plasticnet.pxd":78
+/* "plasticnet/plasticnet.pxd":79
  *     cdef public neuron n
  * 
  * cdef class post_process_channel(group):             # <<<<<<<<<<<<<<
@@ -1169,7 +1169,7 @@ struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel {
 };
 
 
-/* "plasticnet/plasticnet.pxd":83
+/* "plasticnet/plasticnet.pxd":84
  *     cpdef update(self,double t,simulation sim)
  * 
  * cdef class channel(neuron):             # <<<<<<<<<<<<<<
@@ -1185,7 +1185,7 @@ struct __pyx_obj_10plasticnet_10plasticnet_channel {
 };
 
 
-/* "plasticnet/plasticnet.pxd":88
+/* "plasticnet/plasticnet.pxd":89
  *     cdef public double time_between_patterns,time_to_next_pattern
  * 
  * cdef class connection(group):             # <<<<<<<<<<<<<<
@@ -1206,8 +1206,8 @@ struct __pyx_obj_10plasticnet_10plasticnet_connection {
 };
 
 
-/* "plasticnet/plasticnet.pxd":100
- *     cpdef update(self,double t,simulation sim)
+/* "plasticnet/plasticnet.pxd":102
+ *     cpdef _clean(self)
  * 
  * cdef class post_process_connection(group):             # <<<<<<<<<<<<<<
  *     cpdef _reset(self)
@@ -1253,6 +1253,7 @@ struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images {
   PyObject *im;
   PyObject *filename;
   int number_of_pics;
+  int images_loaded;
   int p;
   int r;
   int c;
@@ -1301,12 +1302,13 @@ static struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation *__pyx_vtabp
 struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron {
   PyObject *(*_reset)(struct __pyx_obj_10plasticnet_10plasticnet_neuron *, int __pyx_skip_dispatch);
   PyObject *(*update)(struct __pyx_obj_10plasticnet_10plasticnet_neuron *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch);
+  PyObject *(*_clean)(struct __pyx_obj_10plasticnet_10plasticnet_neuron *, int __pyx_skip_dispatch);
 };
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_neuron *__pyx_vtabptr_10plasticnet_10plasticnet_neuron;
 
 
-/* "plasticnet/plasticnet.pxd":73
- *     cpdef update(self,double t,simulation sim)
+/* "plasticnet/plasticnet.pxd":74
+ *     cpdef _clean(self)
  * 
  * cdef class post_process_neuron(group):             # <<<<<<<<<<<<<<
  *     cpdef _reset(self)
@@ -1320,7 +1322,7 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron;
 
 
-/* "plasticnet/plasticnet.pxd":78
+/* "plasticnet/plasticnet.pxd":79
  *     cdef public neuron n
  * 
  * cdef class post_process_channel(group):             # <<<<<<<<<<<<<<
@@ -1335,7 +1337,7 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel *__pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel;
 
 
-/* "plasticnet/plasticnet.pxd":83
+/* "plasticnet/plasticnet.pxd":84
  *     cpdef update(self,double t,simulation sim)
  * 
  * cdef class channel(neuron):             # <<<<<<<<<<<<<<
@@ -1349,7 +1351,7 @@ struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel {
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel *__pyx_vtabptr_10plasticnet_10plasticnet_channel;
 
 
-/* "plasticnet/plasticnet.pxd":88
+/* "plasticnet/plasticnet.pxd":89
  *     cdef public double time_between_patterns,time_to_next_pattern
  * 
  * cdef class connection(group):             # <<<<<<<<<<<<<<
@@ -1360,12 +1362,13 @@ static struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel *__pyx_vtabptr_
 struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection {
   PyObject *(*_reset)(struct __pyx_obj_10plasticnet_10plasticnet_connection *, int __pyx_skip_dispatch);
   PyObject *(*update)(struct __pyx_obj_10plasticnet_10plasticnet_connection *, double, struct __pyx_obj_10plasticnet_10plasticnet_simulation *, int __pyx_skip_dispatch);
+  PyObject *(*_clean)(struct __pyx_obj_10plasticnet_10plasticnet_connection *, int __pyx_skip_dispatch);
 };
 static struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection *__pyx_vtabptr_10plasticnet_10plasticnet_connection;
 
 
-/* "plasticnet/plasticnet.pxd":100
- *     cpdef update(self,double t,simulation sim)
+/* "plasticnet/plasticnet.pxd":102
+ *     cpdef _clean(self)
  * 
  * cdef class post_process_connection(group):             # <<<<<<<<<<<<<<
  *     cpdef _reset(self)
@@ -1405,6 +1408,7 @@ static struct __pyx_vtabstruct_10plasticnet_7neurons_14pattern_neuron_pattern_ne
 
 struct __pyx_vtabstruct_10plasticnet_7neurons_14pattern_neuron_natural_images {
   struct __pyx_vtabstruct_10plasticnet_7neurons_14pattern_neuron_pattern_neuron __pyx_base;
+  PyObject *(*load_images)(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *);
 };
 static struct __pyx_vtabstruct_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_vtabptr_10plasticnet_7neurons_14pattern_neuron_natural_images;
 
@@ -1721,6 +1725,15 @@ static PyObject* __Pyx__PyObject_CallMethod1(PyObject* method, PyObject* arg);
 /* append.proto */
 static CYTHON_INLINE int __Pyx_PyObject_Append(PyObject* L, PyObject* x);
 
+/* PyObjectSetAttrStr.proto */
+#if CYTHON_USE_TYPE_SLOTS
+#define __Pyx_PyObject_DelAttrStr(o,n) __Pyx_PyObject_SetAttrStr(o, n, NULL)
+static CYTHON_INLINE int __Pyx_PyObject_SetAttrStr(PyObject* obj, PyObject* attr_name, PyObject* value);
+#else
+#define __Pyx_PyObject_DelAttrStr(o,n)   PyObject_DelAttr(o,n)
+#define __Pyx_PyObject_SetAttrStr(o,n,v) PyObject_SetAttr(o,n,v)
+#endif
+
 /* None.proto */
 static CYTHON_INLINE int __Pyx_mod_int(int, int);
 
@@ -1965,6 +1978,8 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14pattern_neuron
 static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14pattern_neuron_new_pattern(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_pattern_neuron *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch); /* proto*/
 static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14pattern_neuron_update(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_pattern_neuron *__pyx_v_self, double __pyx_v_t, CYTHON_UNUSED struct __pyx_obj_10plasticnet_10plasticnet_simulation *__pyx_v_sim, int __pyx_skip_dispatch); /* proto*/
 static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images__reset(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images_load_images(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self); /* proto*/
+static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images__clean(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
 static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images_new_pattern(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch); /* proto*/
 
 /* Module declarations from 'cython' */
@@ -2069,6 +2084,7 @@ static const char __pyx_k_tree[] = "tree";
 static const char __pyx_k_what[] = "what";
 static const char __pyx_k_array[] = "array";
 static const char __pyx_k_attrs[] = "attrs";
+static const char __pyx_k_clean[] = "_clean";
 static const char __pyx_k_close[] = "close";
 static const char __pyx_k_enter[] = "__enter__";
 static const char __pyx_k_float[] = "float";
@@ -2158,7 +2174,7 @@ static const char __pyx_k_numpy_core_multiarray_failed_to[] = "numpy.core.multia
 static const char __pyx_k_unknown_dtype_code_in_numpy_pxd[] = "unknown dtype code in numpy.pxd (%d)";
 static const char __pyx_k_Format_string_allocated_too_shor[] = "Format string allocated too short, see comment in numpy.pxd";
 static const char __pyx_k_Incompatible_checksums_s_vs_0x02[] = "Incompatible checksums (%s vs 0x02fb227 = (N, connections_post, connections_pre, linear_output, name, num_post, num_pre, number_of_patterns, output, pattern, pattern_number, patterns, post_process, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, verbose))";
-static const char __pyx_k_Incompatible_checksums_s_vs_0x05[] = "Incompatible checksums (%s vs 0x0572a7d = (N, buffer_size, c, connections_post, connections_pre, filename, im, linear_output, name, num_post, num_pre, number_of_patterns, number_of_pics, other_channel, output, p, pattern, pattern_number, patterns, post_process, r, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, use_other_channel, verbose))";
+static const char __pyx_k_Incompatible_checksums_s_vs_0x76[] = "Incompatible checksums (%s vs 0x769784b = (N, buffer_size, c, connections_post, connections_pre, filename, im, images_loaded, linear_output, name, num_post, num_pre, number_of_patterns, number_of_pics, other_channel, output, p, pattern, pattern_number, patterns, post_process, r, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, use_other_channel, verbose))";
 static const char __pyx_k_Non_native_byte_order_not_suppor[] = "Non-native byte order not supported";
 static const char __pyx_k_ndarray_is_not_Fortran_contiguou[] = "ndarray is not Fortran contiguous";
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
@@ -2177,7 +2193,7 @@ static PyObject *__pyx_n_s_ImportError;
 static PyObject *__pyx_kp_s_In_Update_pattern_neuron;
 static PyObject *__pyx_kp_s_In_new_pattern;
 static PyObject *__pyx_kp_s_Incompatible_checksums_s_vs_0x02;
-static PyObject *__pyx_kp_s_Incompatible_checksums_s_vs_0x05;
+static PyObject *__pyx_kp_s_Incompatible_checksums_s_vs_0x76;
 static PyObject *__pyx_n_s_N;
 static PyObject *__pyx_kp_s_Natural_Images;
 static PyObject *__pyx_kp_s_New_pattern_d;
@@ -2206,6 +2222,7 @@ static PyObject *__pyx_n_s_atleast_2d;
 static PyObject *__pyx_n_s_attrs;
 static PyObject *__pyx_n_s_buffer_size;
 static PyObject *__pyx_n_s_category;
+static PyObject *__pyx_n_s_clean;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_close;
 static PyObject *__pyx_kp_s_d_d;
@@ -2335,7 +2352,8 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_2asdf_load_imag
 static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_4hdf5_load_images(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_fname); /* proto */
 static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images__reset(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self); /* proto */
 static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_2__init__(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, PyObject *__pyx_v_fname, PyObject *__pyx_v_rf_size, PyObject *__pyx_v_time_between_patterns, PyObject *__pyx_v_other_channel, PyObject *__pyx_v_verbose); /* proto */
-static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_4new_pattern(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, double __pyx_v_t); /* proto */
+static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_4_clean(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_6new_pattern(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, double __pyx_v_t); /* proto */
 static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_11buffer_size___get__(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self); /* proto */
 static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_11buffer_size_2__set__(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
 static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_2im___get__(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self); /* proto */
@@ -2346,8 +2364,8 @@ static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_8fil
 static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_8filename_4__del__(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_17use_other_channel___get__(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self); /* proto */
 static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_17use_other_channel_2__set__(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_6__reduce_cython__(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_8__setstate_cython__(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_8__reduce_cython__(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_10__setstate_cython__(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_6__pyx_unpickle_pattern_neuron(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_8__pyx_unpickle_natural_images(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
@@ -2358,7 +2376,7 @@ static PyObject *__pyx_float_1_0;
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_int_13;
 static PyObject *__pyx_int_3125799;
-static PyObject *__pyx_int_5712509;
+static PyObject *__pyx_int_124352587;
 static PyObject *__pyx_tuple__2;
 static PyObject *__pyx_tuple__3;
 static PyObject *__pyx_tuple__4;
@@ -6802,7 +6820,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_4hdf5_load_imag
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/pattern_neuron.pyx":159
+/* "plasticnet/neurons/pattern_neuron.pyx":160
  *     cdef natural_images other_channel
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -6823,7 +6841,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_1_reset)) {
       __Pyx_XDECREF(__pyx_r);
@@ -6839,10 +6857,10 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 159, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 159, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -6854,18 +6872,18 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":160
+  /* "plasticnet/neurons/pattern_neuron.pyx":161
  * 
  *     cpdef _reset(self):
  *         pattern_neuron._reset(self)             # <<<<<<<<<<<<<<
  *         self.p=self.r=self.c=-1
  * 
  */
-  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_14pattern_neuron_14pattern_neuron__reset(((struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_pattern_neuron *)__pyx_v_self), 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_14pattern_neuron_14pattern_neuron__reset(((struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_pattern_neuron *)__pyx_v_self), 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 161, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":161
+  /* "plasticnet/neurons/pattern_neuron.pyx":162
  *     cpdef _reset(self):
  *         pattern_neuron._reset(self)
  *         self.p=self.r=self.c=-1             # <<<<<<<<<<<<<<
@@ -6876,7 +6894,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
   __pyx_v_self->r = -1;
   __pyx_v_self->c = -1;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":159
+  /* "plasticnet/neurons/pattern_neuron.pyx":160
  *     cdef natural_images other_channel
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
@@ -6919,7 +6937,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_image
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("_reset", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images__reset(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6936,7 +6954,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_image
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/pattern_neuron.pyx":163
+/* "plasticnet/neurons/pattern_neuron.pyx":164
  *         self.p=self.r=self.c=-1
  * 
  *     def __init__(self,fname='hdf5/bbsk081604_norm.hdf5',rf_size=13,             # <<<<<<<<<<<<<<
@@ -6962,7 +6980,7 @@ static int __pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_3__i
     values[1] = ((PyObject *)__pyx_int_13);
     values[2] = ((PyObject *)__pyx_float_1_0);
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":164
+    /* "plasticnet/neurons/pattern_neuron.pyx":165
  * 
  *     def __init__(self,fname='hdf5/bbsk081604_norm.hdf5',rf_size=13,
  *                      time_between_patterns=1.0,other_channel=None,             # <<<<<<<<<<<<<<
@@ -6971,7 +6989,7 @@ static int __pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_3__i
  */
     values[3] = ((PyObject *)Py_None);
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":165
+    /* "plasticnet/neurons/pattern_neuron.pyx":166
  *     def __init__(self,fname='hdf5/bbsk081604_norm.hdf5',rf_size=13,
  *                      time_between_patterns=1.0,other_channel=None,
  *                      verbose=False,             # <<<<<<<<<<<<<<
@@ -7029,7 +7047,7 @@ static int __pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_3__i
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 163, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 164, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -7055,7 +7073,7 @@ static int __pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_3__i
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 163, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 164, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("plasticnet.neurons.pattern_neuron.natural_images.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -7063,7 +7081,7 @@ static int __pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_3__i
   __pyx_L4_argument_unpacking_done:;
   __pyx_r = __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_2__init__(((struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *)__pyx_v_self), __pyx_v_fname, __pyx_v_rf_size, __pyx_v_time_between_patterns, __pyx_v_other_channel, __pyx_v_verbose);
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":163
+  /* "plasticnet/neurons/pattern_neuron.pyx":164
  *         self.p=self.r=self.c=-1
  * 
  *     def __init__(self,fname='hdf5/bbsk081604_norm.hdf5',rf_size=13,             # <<<<<<<<<<<<<<
@@ -7077,27 +7095,24 @@ static int __pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_3__i
 }
 
 static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_2__init__(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, PyObject *__pyx_v_fname, PyObject *__pyx_v_rf_size, PyObject *__pyx_v_time_between_patterns, PyObject *__pyx_v_other_channel, PyObject *__pyx_v_verbose) {
-  PyObject *__pyx_v_image_data = NULL;
   PyObject *__pyx_v_im = NULL;
-  PyObject *__pyx_v_ext = NULL;
-  PyObject *__pyx_v_arr = NULL;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   int __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
-  Py_ssize_t __pyx_t_5;
+  PyObject *__pyx_t_5 = NULL;
   PyObject *__pyx_t_6 = NULL;
   PyObject *__pyx_t_7 = NULL;
   PyObject *__pyx_t_8 = NULL;
-  PyObject *__pyx_t_9 = NULL;
-  PyObject *(*__pyx_t_10)(PyObject *);
-  int __pyx_t_11;
-  PyObject *__pyx_t_12 = NULL;
+  int __pyx_t_9;
+  PyObject *__pyx_t_10 = NULL;
+  Py_ssize_t __pyx_t_11;
+  PyObject *(*__pyx_t_12)(PyObject *);
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":168
+  /* "plasticnet/neurons/pattern_neuron.pyx":169
  *                      ):
  * 
  *         self.sequential=True             # <<<<<<<<<<<<<<
@@ -7106,7 +7121,7 @@ static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_2__i
  */
   __pyx_v_self->__pyx_base.sequential = 1;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":169
+  /* "plasticnet/neurons/pattern_neuron.pyx":170
  * 
  *         self.sequential=True
  *         self.filename=fname             # <<<<<<<<<<<<<<
@@ -7119,7 +7134,7 @@ static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_2__i
   __Pyx_DECREF(__pyx_v_self->filename);
   __pyx_v_self->filename = __pyx_v_fname;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":170
+  /* "plasticnet/neurons/pattern_neuron.pyx":171
  *         self.sequential=True
  *         self.filename=fname
  *         if not other_channel is None:             # <<<<<<<<<<<<<<
@@ -7130,7 +7145,7 @@ static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_2__i
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":171
+    /* "plasticnet/neurons/pattern_neuron.pyx":172
  *         self.filename=fname
  *         if not other_channel is None:
  *             self.other_channel=<natural_images>other_channel             # <<<<<<<<<<<<<<
@@ -7145,7 +7160,7 @@ static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_2__i
     __pyx_v_self->other_channel = ((struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *)__pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":172
+    /* "plasticnet/neurons/pattern_neuron.pyx":173
  *         if not other_channel is None:
  *             self.other_channel=<natural_images>other_channel
  *             self.use_other_channel=True             # <<<<<<<<<<<<<<
@@ -7154,7 +7169,7 @@ static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_2__i
  */
     __pyx_v_self->use_other_channel = 1;
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":170
+    /* "plasticnet/neurons/pattern_neuron.pyx":171
  *         self.sequential=True
  *         self.filename=fname
  *         if not other_channel is None:             # <<<<<<<<<<<<<<
@@ -7164,568 +7179,168 @@ static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_2__i
     goto __pyx_L3;
   }
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":174
+  /* "plasticnet/neurons/pattern_neuron.pyx":175
  *             self.use_other_channel=True
  *         else:
  *             self.use_other_channel=False             # <<<<<<<<<<<<<<
  * 
- *         if any([fname.endswith(ext) for ext in ['.hdf5','h5','hd5']]):
+ *         self.images_loaded=False
  */
   /*else*/ {
     __pyx_v_self->use_other_channel = 0;
   }
   __pyx_L3:;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":176
+  /* "plasticnet/neurons/pattern_neuron.pyx":177
  *             self.use_other_channel=False
  * 
- *         if any([fname.endswith(ext) for ext in ['.hdf5','h5','hd5']]):             # <<<<<<<<<<<<<<
- *             image_data=hdf5_load_images(fname)
- *         elif fname.endswith('.asdf'):
- */
-  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 176, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __pyx_tuple__14; __Pyx_INCREF(__pyx_t_4); __pyx_t_5 = 0;
-  for (;;) {
-    if (__pyx_t_5 >= 3) break;
-    #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_6 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_5); __Pyx_INCREF(__pyx_t_6); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 176, __pyx_L1_error)
-    #else
-    __pyx_t_6 = PySequence_ITEM(__pyx_t_4, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 176, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    #endif
-    __Pyx_XDECREF_SET(__pyx_v_ext, __pyx_t_6);
-    __pyx_t_6 = 0;
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_fname, __pyx_n_s_endswith); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 176, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_8 = NULL;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_7))) {
-      __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_7);
-      if (likely(__pyx_t_8)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_7);
-        __Pyx_INCREF(__pyx_t_8);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_7, function);
-      }
-    }
-    if (!__pyx_t_8) {
-      __pyx_t_6 = __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_v_ext); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 176, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-    } else {
-      #if CYTHON_FAST_PYCALL
-      if (PyFunction_Check(__pyx_t_7)) {
-        PyObject *__pyx_temp[2] = {__pyx_t_8, __pyx_v_ext};
-        __pyx_t_6 = __Pyx_PyFunction_FastCall(__pyx_t_7, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 176, __pyx_L1_error)
-        __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-        __Pyx_GOTREF(__pyx_t_6);
-      } else
-      #endif
-      #if CYTHON_FAST_PYCCALL
-      if (__Pyx_PyFastCFunction_Check(__pyx_t_7)) {
-        PyObject *__pyx_temp[2] = {__pyx_t_8, __pyx_v_ext};
-        __pyx_t_6 = __Pyx_PyCFunction_FastCall(__pyx_t_7, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 176, __pyx_L1_error)
-        __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-        __Pyx_GOTREF(__pyx_t_6);
-      } else
-      #endif
-      {
-        __pyx_t_9 = PyTuple_New(1+1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 176, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_9);
-        __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_8); __pyx_t_8 = NULL;
-        __Pyx_INCREF(__pyx_v_ext);
-        __Pyx_GIVEREF(__pyx_v_ext);
-        PyTuple_SET_ITEM(__pyx_t_9, 0+1, __pyx_v_ext);
-        __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_9, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 176, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_6);
-        __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      }
-    }
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(__Pyx_ListComp_Append(__pyx_t_3, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 176, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  }
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_builtin_any, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 176, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 176, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (__pyx_t_2) {
-
-    /* "plasticnet/neurons/pattern_neuron.pyx":177
+ *         self.images_loaded=False             # <<<<<<<<<<<<<<
  * 
- *         if any([fname.endswith(ext) for ext in ['.hdf5','h5','hd5']]):
- *             image_data=hdf5_load_images(fname)             # <<<<<<<<<<<<<<
- *         elif fname.endswith('.asdf'):
- *             image_data=asdf_load_images(fname)
- */
-    __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_hdf5_load_images); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 177, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_6 = NULL;
-    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
-      __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_3);
-      if (likely(__pyx_t_6)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-        __Pyx_INCREF(__pyx_t_6);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_3, function);
-      }
-    }
-    if (!__pyx_t_6) {
-      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_fname); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 177, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-    } else {
-      #if CYTHON_FAST_PYCALL
-      if (PyFunction_Check(__pyx_t_3)) {
-        PyObject *__pyx_temp[2] = {__pyx_t_6, __pyx_v_fname};
-        __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 177, __pyx_L1_error)
-        __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __Pyx_GOTREF(__pyx_t_4);
-      } else
-      #endif
-      #if CYTHON_FAST_PYCCALL
-      if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
-        PyObject *__pyx_temp[2] = {__pyx_t_6, __pyx_v_fname};
-        __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 177, __pyx_L1_error)
-        __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __Pyx_GOTREF(__pyx_t_4);
-      } else
-      #endif
-      {
-        __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 177, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_7);
-        __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_6); __pyx_t_6 = NULL;
-        __Pyx_INCREF(__pyx_v_fname);
-        __Pyx_GIVEREF(__pyx_v_fname);
-        PyTuple_SET_ITEM(__pyx_t_7, 0+1, __pyx_v_fname);
-        __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_7, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 177, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_4);
-        __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      }
-    }
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_v_image_data = __pyx_t_4;
-    __pyx_t_4 = 0;
-
-    /* "plasticnet/neurons/pattern_neuron.pyx":176
- *             self.use_other_channel=False
- * 
- *         if any([fname.endswith(ext) for ext in ['.hdf5','h5','hd5']]):             # <<<<<<<<<<<<<<
- *             image_data=hdf5_load_images(fname)
- *         elif fname.endswith('.asdf'):
- */
-    goto __pyx_L4;
-  }
-
-  /* "plasticnet/neurons/pattern_neuron.pyx":178
- *         if any([fname.endswith(ext) for ext in ['.hdf5','h5','hd5']]):
- *             image_data=hdf5_load_images(fname)
- *         elif fname.endswith('.asdf'):             # <<<<<<<<<<<<<<
- *             image_data=asdf_load_images(fname)
- *         else:
- */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_fname, __pyx_n_s_endswith); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 178, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple__15, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 178, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (likely(__pyx_t_2)) {
-
-    /* "plasticnet/neurons/pattern_neuron.pyx":179
- *             image_data=hdf5_load_images(fname)
- *         elif fname.endswith('.asdf'):
- *             image_data=asdf_load_images(fname)             # <<<<<<<<<<<<<<
- *         else:
- *             raise ValueError('Image type not implemented '+fname)
- */
-    __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_asdf_load_images); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 179, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_7 = NULL;
-    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
-      __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_4);
-      if (likely(__pyx_t_7)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-        __Pyx_INCREF(__pyx_t_7);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_4, function);
-      }
-    }
-    if (!__pyx_t_7) {
-      __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_v_fname); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 179, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-    } else {
-      #if CYTHON_FAST_PYCALL
-      if (PyFunction_Check(__pyx_t_4)) {
-        PyObject *__pyx_temp[2] = {__pyx_t_7, __pyx_v_fname};
-        __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 179, __pyx_L1_error)
-        __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-        __Pyx_GOTREF(__pyx_t_3);
-      } else
-      #endif
-      #if CYTHON_FAST_PYCCALL
-      if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
-        PyObject *__pyx_temp[2] = {__pyx_t_7, __pyx_v_fname};
-        __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 179, __pyx_L1_error)
-        __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-        __Pyx_GOTREF(__pyx_t_3);
-      } else
-      #endif
-      {
-        __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 179, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_6);
-        __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_7); __pyx_t_7 = NULL;
-        __Pyx_INCREF(__pyx_v_fname);
-        __Pyx_GIVEREF(__pyx_v_fname);
-        PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_v_fname);
-        __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 179, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_3);
-        __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      }
-    }
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_v_image_data = __pyx_t_3;
-    __pyx_t_3 = 0;
-
-    /* "plasticnet/neurons/pattern_neuron.pyx":178
- *         if any([fname.endswith(ext) for ext in ['.hdf5','h5','hd5']]):
- *             image_data=hdf5_load_images(fname)
- *         elif fname.endswith('.asdf'):             # <<<<<<<<<<<<<<
- *             image_data=asdf_load_images(fname)
- *         else:
- */
-    goto __pyx_L4;
-  }
-
-  /* "plasticnet/neurons/pattern_neuron.pyx":181
- *             image_data=asdf_load_images(fname)
- *         else:
- *             raise ValueError('Image type not implemented '+fname)             # <<<<<<<<<<<<<<
- * 
- *         self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1]
- */
-  /*else*/ {
-    __pyx_t_3 = PyNumber_Add(__pyx_kp_s_Image_type_not_implemented, __pyx_v_fname); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 181, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_builtin_ValueError, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 181, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_Raise(__pyx_t_4, 0, 0, 0);
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __PYX_ERR(0, 181, __pyx_L1_error)
-  }
-  __pyx_L4:;
-
-  /* "plasticnet/neurons/pattern_neuron.pyx":183
- *             raise ValueError('Image type not implemented '+fname)
- * 
- *         self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1]             # <<<<<<<<<<<<<<
- *                                 for arr in image_data['im']]
- *         del image_data
- */
-  __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 183, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-
-  /* "plasticnet/neurons/pattern_neuron.pyx":184
- * 
- *         self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1]
- *                                 for arr in image_data['im']]             # <<<<<<<<<<<<<<
- *         del image_data
  * 
  */
-  __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_v_image_data, __pyx_n_s_im); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 184, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  if (likely(PyList_CheckExact(__pyx_t_3)) || PyTuple_CheckExact(__pyx_t_3)) {
-    __pyx_t_6 = __pyx_t_3; __Pyx_INCREF(__pyx_t_6); __pyx_t_5 = 0;
-    __pyx_t_10 = NULL;
-  } else {
-    __pyx_t_5 = -1; __pyx_t_6 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 184, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_10 = Py_TYPE(__pyx_t_6)->tp_iternext; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 184, __pyx_L1_error)
-  }
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  for (;;) {
-    if (likely(!__pyx_t_10)) {
-      if (likely(PyList_CheckExact(__pyx_t_6))) {
-        if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_6)) break;
-        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_6, __pyx_t_5); __Pyx_INCREF(__pyx_t_3); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 184, __pyx_L1_error)
-        #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_6, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 184, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_3);
-        #endif
-      } else {
-        if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_6)) break;
-        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_6, __pyx_t_5); __Pyx_INCREF(__pyx_t_3); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 184, __pyx_L1_error)
-        #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_6, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 184, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_3);
-        #endif
-      }
-    } else {
-      __pyx_t_3 = __pyx_t_10(__pyx_t_6);
-      if (unlikely(!__pyx_t_3)) {
-        PyObject* exc_type = PyErr_Occurred();
-        if (exc_type) {
-          if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 184, __pyx_L1_error)
-        }
-        break;
-      }
-      __Pyx_GOTREF(__pyx_t_3);
-    }
-    __Pyx_XDECREF_SET(__pyx_v_arr, __pyx_t_3);
-    __pyx_t_3 = 0;
+  __pyx_v_self->images_loaded = 0;
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":183
- *             raise ValueError('Image type not implemented '+fname)
+  /* "plasticnet/neurons/pattern_neuron.pyx":180
  * 
- *         self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1]             # <<<<<<<<<<<<<<
- *                                 for arr in image_data['im']]
- *         del image_data
- */
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_arr, __pyx_n_s_astype); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 183, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_9 = NULL;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_7))) {
-      __pyx_t_9 = PyMethod_GET_SELF(__pyx_t_7);
-      if (likely(__pyx_t_9)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_7);
-        __Pyx_INCREF(__pyx_t_9);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_7, function);
-      }
-    }
-    if (!__pyx_t_9) {
-      __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_7, ((PyObject *)(&PyFloat_Type))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 183, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-    } else {
-      #if CYTHON_FAST_PYCALL
-      if (PyFunction_Check(__pyx_t_7)) {
-        PyObject *__pyx_temp[2] = {__pyx_t_9, ((PyObject *)(&PyFloat_Type))};
-        __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_7, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 183, __pyx_L1_error)
-        __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
-        __Pyx_GOTREF(__pyx_t_3);
-      } else
-      #endif
-      #if CYTHON_FAST_PYCCALL
-      if (__Pyx_PyFastCFunction_Check(__pyx_t_7)) {
-        PyObject *__pyx_temp[2] = {__pyx_t_9, ((PyObject *)(&PyFloat_Type))};
-        __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_7, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 183, __pyx_L1_error)
-        __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
-        __Pyx_GOTREF(__pyx_t_3);
-      } else
-      #endif
-      {
-        __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 183, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_8);
-        __Pyx_GIVEREF(__pyx_t_9); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_9); __pyx_t_9 = NULL;
-        __Pyx_INCREF(((PyObject *)(&PyFloat_Type)));
-        __Pyx_GIVEREF(((PyObject *)(&PyFloat_Type)));
-        PyTuple_SET_ITEM(__pyx_t_8, 0+1, ((PyObject *)(&PyFloat_Type)));
-        __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 183, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_3);
-        __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      }
-    }
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyObject_Dict_GetItem(__pyx_v_image_data, __pyx_n_s_im_scale_shift); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 183, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_8 = __Pyx_GetItemInt(__pyx_t_7, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 183, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_8);
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = PyNumber_Multiply(__pyx_t_3, __pyx_t_8); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 183, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __pyx_t_8 = __Pyx_PyObject_Dict_GetItem(__pyx_v_image_data, __pyx_n_s_im_scale_shift); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 183, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_8);
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_8, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 183, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __pyx_t_8 = PyNumber_Add(__pyx_t_7, __pyx_t_3); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 183, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_8);
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(__Pyx_ListComp_Append(__pyx_t_4, (PyObject*)__pyx_t_8))) __PYX_ERR(0, 183, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-
-    /* "plasticnet/neurons/pattern_neuron.pyx":184
- * 
- *         self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1]
- *                                 for arr in image_data['im']]             # <<<<<<<<<<<<<<
- *         del image_data
- * 
- */
-  }
-  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-
-  /* "plasticnet/neurons/pattern_neuron.pyx":183
- *             raise ValueError('Image type not implemented '+fname)
- * 
- *         self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1]             # <<<<<<<<<<<<<<
- *                                 for arr in image_data['im']]
- *         del image_data
- */
-  __Pyx_GIVEREF(__pyx_t_4);
-  __Pyx_GOTREF(__pyx_v_self->im);
-  __Pyx_DECREF(__pyx_v_self->im);
-  __pyx_v_self->im = __pyx_t_4;
-  __pyx_t_4 = 0;
-
-  /* "plasticnet/neurons/pattern_neuron.pyx":185
- *         self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1]
- *                                 for arr in image_data['im']]
- *         del image_data             # <<<<<<<<<<<<<<
- * 
- *         pattern_neuron.__init__(self,np.zeros((1,rf_size*rf_size),np.float),
- */
-  __Pyx_DECREF(__pyx_v_image_data);
-  __pyx_v_image_data = NULL;
-
-  /* "plasticnet/neurons/pattern_neuron.pyx":187
- *         del image_data
  * 
  *         pattern_neuron.__init__(self,np.zeros((1,rf_size*rf_size),np.float),             # <<<<<<<<<<<<<<
  *                             time_between_patterns=time_between_patterns,sequential=True,verbose=verbose)
  * 
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_7neurons_14pattern_neuron_pattern_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 187, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 187, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 187, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_10plasticnet_7neurons_14pattern_neuron_pattern_neuron), __pyx_n_s_init); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_8 = PyNumber_Multiply(__pyx_v_rf_size, __pyx_v_rf_size); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 187, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 187, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 180, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 180, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = PyNumber_Multiply(__pyx_v_rf_size, __pyx_v_rf_size); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 180, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_INCREF(__pyx_int_1);
   __Pyx_GIVEREF(__pyx_int_1);
   PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_int_1);
-  __Pyx_GIVEREF(__pyx_t_8);
-  PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_t_8);
-  __pyx_t_8 = 0;
-  __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 187, __pyx_L1_error)
+  __Pyx_GIVEREF(__pyx_t_5);
+  PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_t_5);
+  __pyx_t_5 = 0;
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 180, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_float); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 187, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_9);
-  __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_8 = NULL;
-  __pyx_t_11 = 0;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
-    __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_3);
-    if (likely(__pyx_t_8)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_8);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = NULL;
+  __pyx_t_9 = 0;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_6))) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_6);
+    if (likely(__pyx_t_5)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
+      __Pyx_INCREF(__pyx_t_5);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_3, function);
-      __pyx_t_11 = 1;
+      __Pyx_DECREF_SET(__pyx_t_6, function);
+      __pyx_t_9 = 1;
     }
   }
   #if CYTHON_FAST_PYCALL
-  if (PyFunction_Check(__pyx_t_3)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_8, __pyx_t_7, __pyx_t_9};
-    __pyx_t_6 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 187, __pyx_L1_error)
-    __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __Pyx_GOTREF(__pyx_t_6);
+  if (PyFunction_Check(__pyx_t_6)) {
+    PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_7, __pyx_t_8};
+    __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 180, __pyx_L1_error)
+    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   } else
   #endif
   #if CYTHON_FAST_PYCCALL
-  if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_8, __pyx_t_7, __pyx_t_9};
-    __pyx_t_6 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 187, __pyx_L1_error)
-    __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __Pyx_GOTREF(__pyx_t_6);
+  if (__Pyx_PyFastCFunction_Check(__pyx_t_6)) {
+    PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_7, __pyx_t_8};
+    __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 180, __pyx_L1_error)
+    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   } else
   #endif
   {
-    __pyx_t_12 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 187, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_12);
-    if (__pyx_t_8) {
-      __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_8); __pyx_t_8 = NULL;
+    __pyx_t_10 = PyTuple_New(2+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 180, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
+    if (__pyx_t_5) {
+      __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_5); __pyx_t_5 = NULL;
     }
     __Pyx_GIVEREF(__pyx_t_7);
-    PyTuple_SET_ITEM(__pyx_t_12, 0+__pyx_t_11, __pyx_t_7);
-    __Pyx_GIVEREF(__pyx_t_9);
-    PyTuple_SET_ITEM(__pyx_t_12, 1+__pyx_t_11, __pyx_t_9);
+    PyTuple_SET_ITEM(__pyx_t_10, 0+__pyx_t_9, __pyx_t_7);
+    __Pyx_GIVEREF(__pyx_t_8);
+    PyTuple_SET_ITEM(__pyx_t_10, 1+__pyx_t_9, __pyx_t_8);
     __pyx_t_7 = 0;
-    __pyx_t_9 = 0;
-    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_12, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 187, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+    __pyx_t_8 = 0;
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_10, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 180, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
   }
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 187, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 180, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
   __Pyx_INCREF(((PyObject *)__pyx_v_self));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
-  PyTuple_SET_ITEM(__pyx_t_3, 0, ((PyObject *)__pyx_v_self));
-  __Pyx_GIVEREF(__pyx_t_6);
-  PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_6);
-  __pyx_t_6 = 0;
+  PyTuple_SET_ITEM(__pyx_t_6, 0, ((PyObject *)__pyx_v_self));
+  __Pyx_GIVEREF(__pyx_t_4);
+  PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_4);
+  __pyx_t_4 = 0;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":188
+  /* "plasticnet/neurons/pattern_neuron.pyx":181
  * 
  *         pattern_neuron.__init__(self,np.zeros((1,rf_size*rf_size),np.float),
  *                             time_between_patterns=time_between_patterns,sequential=True,verbose=verbose)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_6 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 188, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_6);
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_time_between_patterns, __pyx_v_time_between_patterns) < 0) __PYX_ERR(0, 188, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_sequential, Py_True) < 0) __PYX_ERR(0, 188, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_verbose, __pyx_v_verbose) < 0) __PYX_ERR(0, 188, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 181, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_time_between_patterns, __pyx_v_time_between_patterns) < 0) __PYX_ERR(0, 181, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_sequential, Py_True) < 0) __PYX_ERR(0, 181, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_verbose, __pyx_v_verbose) < 0) __PYX_ERR(0, 181, __pyx_L1_error)
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":187
- *         del image_data
+  /* "plasticnet/neurons/pattern_neuron.pyx":180
+ * 
  * 
  *         pattern_neuron.__init__(self,np.zeros((1,rf_size*rf_size),np.float),             # <<<<<<<<<<<<<<
  *                             time_between_patterns=time_between_patterns,sequential=True,verbose=verbose)
  * 
  */
-  __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 187, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_12);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __pyx_t_10 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, __pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 180, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":191
+  /* "plasticnet/neurons/pattern_neuron.pyx":184
  * 
  * 
  *         self.rf_size=rf_size             # <<<<<<<<<<<<<<
  *         self.pattern=self.patterns[0]
  *         self.name='Natural Images'
  */
-  __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_v_rf_size); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L1_error)
-  __pyx_v_self->__pyx_base.rf_size = __pyx_t_11;
+  __pyx_t_9 = __Pyx_PyInt_As_int(__pyx_v_rf_size); if (unlikely((__pyx_t_9 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 184, __pyx_L1_error)
+  __pyx_v_self->__pyx_base.rf_size = __pyx_t_9;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":192
+  /* "plasticnet/neurons/pattern_neuron.pyx":185
  * 
  *         self.rf_size=rf_size
  *         self.pattern=self.patterns[0]             # <<<<<<<<<<<<<<
  *         self.name='Natural Images'
  * 
  */
-  __pyx_t_12 = __Pyx_GetItemInt(((PyObject *)__pyx_v_self->__pyx_base.patterns), 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 192, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_12);
-  if (!(likely(((__pyx_t_12) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_12, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 192, __pyx_L1_error)
-  __Pyx_GIVEREF(__pyx_t_12);
+  __pyx_t_10 = __Pyx_GetItemInt(((PyObject *)__pyx_v_self->__pyx_base.patterns), 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 185, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  if (!(likely(((__pyx_t_10) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_10, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 185, __pyx_L1_error)
+  __Pyx_GIVEREF(__pyx_t_10);
   __Pyx_GOTREF(__pyx_v_self->__pyx_base.pattern);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->__pyx_base.pattern));
-  __pyx_v_self->__pyx_base.pattern = ((PyArrayObject *)__pyx_t_12);
-  __pyx_t_12 = 0;
+  __pyx_v_self->__pyx_base.pattern = ((PyArrayObject *)__pyx_t_10);
+  __pyx_t_10 = 0;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":193
+  /* "plasticnet/neurons/pattern_neuron.pyx":186
  *         self.rf_size=rf_size
  *         self.pattern=self.patterns[0]
  *         self.name='Natural Images'             # <<<<<<<<<<<<<<
@@ -7738,44 +7353,44 @@ static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_2__i
   __Pyx_DECREF(__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.name);
   __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.name = __pyx_kp_s_Natural_Images;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":195
+  /* "plasticnet/neurons/pattern_neuron.pyx":188
  *         self.name='Natural Images'
  * 
  *         if verbose:             # <<<<<<<<<<<<<<
  *             print "Read %d images from %s" % (len(self.im),fname)
  *             for im in self.im:
  */
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_verbose); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 195, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_verbose); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 188, __pyx_L1_error)
   if (__pyx_t_2) {
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":196
+    /* "plasticnet/neurons/pattern_neuron.pyx":189
  * 
  *         if verbose:
  *             print "Read %d images from %s" % (len(self.im),fname)             # <<<<<<<<<<<<<<
  *             for im in self.im:
  *                 print "[%d,%d]" % (im.shape[0],im.shape[1]),
  */
-    __pyx_t_12 = __pyx_v_self->im;
-    __Pyx_INCREF(__pyx_t_12);
-    __pyx_t_5 = PyObject_Length(__pyx_t_12); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 196, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    __pyx_t_12 = PyInt_FromSsize_t(__pyx_t_5); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 196, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 196, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __Pyx_GIVEREF(__pyx_t_12);
-    PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_12);
+    __pyx_t_10 = __pyx_v_self->im;
+    __Pyx_INCREF(__pyx_t_10);
+    __pyx_t_11 = PyObject_Length(__pyx_t_10); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 189, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+    __pyx_t_10 = PyInt_FromSsize_t(__pyx_t_11); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 189, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
+    __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 189, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __Pyx_GIVEREF(__pyx_t_10);
+    PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_10);
     __Pyx_INCREF(__pyx_v_fname);
     __Pyx_GIVEREF(__pyx_v_fname);
-    PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_v_fname);
-    __pyx_t_12 = 0;
-    __pyx_t_12 = __Pyx_PyString_Format(__pyx_kp_s_Read_d_images_from_s, __pyx_t_6); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 196, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_12);
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (__Pyx_PrintOne(0, __pyx_t_12) < 0) __PYX_ERR(0, 196, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+    PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_v_fname);
+    __pyx_t_10 = 0;
+    __pyx_t_10 = __Pyx_PyString_Format(__pyx_kp_s_Read_d_images_from_s, __pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 189, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    if (__Pyx_PrintOne(0, __pyx_t_10) < 0) __PYX_ERR(0, 189, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":197
+    /* "plasticnet/neurons/pattern_neuron.pyx":190
  *         if verbose:
  *             print "Read %d images from %s" % (len(self.im),fname)
  *             for im in self.im:             # <<<<<<<<<<<<<<
@@ -7783,84 +7398,84 @@ static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_2__i
  *             sys.stdout.flush()
  */
     if (likely(PyList_CheckExact(__pyx_v_self->im)) || PyTuple_CheckExact(__pyx_v_self->im)) {
-      __pyx_t_12 = __pyx_v_self->im; __Pyx_INCREF(__pyx_t_12); __pyx_t_5 = 0;
-      __pyx_t_10 = NULL;
+      __pyx_t_10 = __pyx_v_self->im; __Pyx_INCREF(__pyx_t_10); __pyx_t_11 = 0;
+      __pyx_t_12 = NULL;
     } else {
-      __pyx_t_5 = -1; __pyx_t_12 = PyObject_GetIter(__pyx_v_self->im); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 197, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_12);
-      __pyx_t_10 = Py_TYPE(__pyx_t_12)->tp_iternext; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 197, __pyx_L1_error)
+      __pyx_t_11 = -1; __pyx_t_10 = PyObject_GetIter(__pyx_v_self->im); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 190, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      __pyx_t_12 = Py_TYPE(__pyx_t_10)->tp_iternext; if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 190, __pyx_L1_error)
     }
     for (;;) {
-      if (likely(!__pyx_t_10)) {
-        if (likely(PyList_CheckExact(__pyx_t_12))) {
-          if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_12)) break;
+      if (likely(!__pyx_t_12)) {
+        if (likely(PyList_CheckExact(__pyx_t_10))) {
+          if (__pyx_t_11 >= PyList_GET_SIZE(__pyx_t_10)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_6 = PyList_GET_ITEM(__pyx_t_12, __pyx_t_5); __Pyx_INCREF(__pyx_t_6); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 197, __pyx_L1_error)
+          __pyx_t_4 = PyList_GET_ITEM(__pyx_t_10, __pyx_t_11); __Pyx_INCREF(__pyx_t_4); __pyx_t_11++; if (unlikely(0 < 0)) __PYX_ERR(0, 190, __pyx_L1_error)
           #else
-          __pyx_t_6 = PySequence_ITEM(__pyx_t_12, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 197, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_6);
+          __pyx_t_4 = PySequence_ITEM(__pyx_t_10, __pyx_t_11); __pyx_t_11++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 190, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_4);
           #endif
         } else {
-          if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_12)) break;
+          if (__pyx_t_11 >= PyTuple_GET_SIZE(__pyx_t_10)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_6 = PyTuple_GET_ITEM(__pyx_t_12, __pyx_t_5); __Pyx_INCREF(__pyx_t_6); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 197, __pyx_L1_error)
+          __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_10, __pyx_t_11); __Pyx_INCREF(__pyx_t_4); __pyx_t_11++; if (unlikely(0 < 0)) __PYX_ERR(0, 190, __pyx_L1_error)
           #else
-          __pyx_t_6 = PySequence_ITEM(__pyx_t_12, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 197, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_6);
+          __pyx_t_4 = PySequence_ITEM(__pyx_t_10, __pyx_t_11); __pyx_t_11++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 190, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_4);
           #endif
         }
       } else {
-        __pyx_t_6 = __pyx_t_10(__pyx_t_12);
-        if (unlikely(!__pyx_t_6)) {
+        __pyx_t_4 = __pyx_t_12(__pyx_t_10);
+        if (unlikely(!__pyx_t_4)) {
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 197, __pyx_L1_error)
+            else __PYX_ERR(0, 190, __pyx_L1_error)
           }
           break;
         }
-        __Pyx_GOTREF(__pyx_t_6);
+        __Pyx_GOTREF(__pyx_t_4);
       }
-      __Pyx_XDECREF_SET(__pyx_v_im, __pyx_t_6);
-      __pyx_t_6 = 0;
+      __Pyx_XDECREF_SET(__pyx_v_im, __pyx_t_4);
+      __pyx_t_4 = 0;
 
-      /* "plasticnet/neurons/pattern_neuron.pyx":198
+      /* "plasticnet/neurons/pattern_neuron.pyx":191
  *             print "Read %d images from %s" % (len(self.im),fname)
  *             for im in self.im:
  *                 print "[%d,%d]" % (im.shape[0],im.shape[1]),             # <<<<<<<<<<<<<<
  *             sys.stdout.flush()
  * 
  */
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_im, __pyx_n_s_shape); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 198, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_im, __pyx_n_s_shape); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 191, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __pyx_t_6 = __Pyx_GetItemInt(__pyx_t_4, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 191, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_6, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 198, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_im, __pyx_n_s_shape); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 191, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_4, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 191, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_im, __pyx_n_s_shape); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 198, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_6, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 198, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 191, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 198, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_GIVEREF(__pyx_t_6);
+      PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_6);
       __Pyx_GIVEREF(__pyx_t_3);
-      PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3);
-      __Pyx_GIVEREF(__pyx_t_4);
-      PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_4);
+      PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_3);
+      __pyx_t_6 = 0;
       __pyx_t_3 = 0;
-      __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_PyString_Format(__pyx_kp_s_d_d, __pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 198, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyString_Format(__pyx_kp_s_d_d, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 191, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 191, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 198, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_GIVEREF(__pyx_t_4);
-      PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4);
-      __pyx_t_4 = 0;
-      if (__Pyx_Print(0, __pyx_t_6, 0) < 0) __PYX_ERR(0, 198, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      __Pyx_GIVEREF(__pyx_t_3);
+      PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3);
+      __pyx_t_3 = 0;
+      if (__Pyx_Print(0, __pyx_t_4, 0) < 0) __PYX_ERR(0, 191, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "plasticnet/neurons/pattern_neuron.pyx":197
+      /* "plasticnet/neurons/pattern_neuron.pyx":190
  *         if verbose:
  *             print "Read %d images from %s" % (len(self.im),fname)
  *             for im in self.im:             # <<<<<<<<<<<<<<
@@ -7868,44 +7483,44 @@ static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_2__i
  *             sys.stdout.flush()
  */
     }
-    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":199
+    /* "plasticnet/neurons/pattern_neuron.pyx":192
  *             for im in self.im:
  *                 print "[%d,%d]" % (im.shape[0],im.shape[1]),
  *             sys.stdout.flush()             # <<<<<<<<<<<<<<
  * 
  *         self.save_attrs.extend(['buffer_size','use_other_channel','filename'])
  */
-    __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_sys); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 199, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_stdout); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 199, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_sys); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 192, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_flush); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 199, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_stdout); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 192, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = NULL;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_6))) {
-      __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_6);
-      if (likely(__pyx_t_4)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
-        __Pyx_INCREF(__pyx_t_4);
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_flush); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 192, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = NULL;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_4);
+      if (likely(__pyx_t_3)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+        __Pyx_INCREF(__pyx_t_3);
         __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_6, function);
+        __Pyx_DECREF_SET(__pyx_t_4, function);
       }
     }
-    if (__pyx_t_4) {
-      __pyx_t_12 = __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_4); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 199, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    if (__pyx_t_3) {
+      __pyx_t_10 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 192, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else {
-      __pyx_t_12 = __Pyx_PyObject_CallNoArg(__pyx_t_6); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 199, __pyx_L1_error)
+      __pyx_t_10 = __Pyx_PyObject_CallNoArg(__pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 192, __pyx_L1_error)
     }
-    __Pyx_GOTREF(__pyx_t_12);
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+    __Pyx_GOTREF(__pyx_t_10);
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":195
+    /* "plasticnet/neurons/pattern_neuron.pyx":188
  *         self.name='Natural Images'
  * 
  *         if verbose:             # <<<<<<<<<<<<<<
@@ -7914,75 +7529,75 @@ static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_2__i
  */
   }
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":201
+  /* "plasticnet/neurons/pattern_neuron.pyx":194
  *             sys.stdout.flush()
  * 
  *         self.save_attrs.extend(['buffer_size','use_other_channel','filename'])             # <<<<<<<<<<<<<<
  *         #self.save_data.extend(['',])
  * 
  */
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.save_attrs, __pyx_n_s_extend); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 201, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_4 = PyList_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.save_attrs, __pyx_n_s_extend); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 194, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_3 = PyList_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 194, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_n_s_buffer_size);
   __Pyx_GIVEREF(__pyx_n_s_buffer_size);
-  PyList_SET_ITEM(__pyx_t_4, 0, __pyx_n_s_buffer_size);
+  PyList_SET_ITEM(__pyx_t_3, 0, __pyx_n_s_buffer_size);
   __Pyx_INCREF(__pyx_n_s_use_other_channel);
   __Pyx_GIVEREF(__pyx_n_s_use_other_channel);
-  PyList_SET_ITEM(__pyx_t_4, 1, __pyx_n_s_use_other_channel);
+  PyList_SET_ITEM(__pyx_t_3, 1, __pyx_n_s_use_other_channel);
   __Pyx_INCREF(__pyx_n_s_filename);
   __Pyx_GIVEREF(__pyx_n_s_filename);
-  PyList_SET_ITEM(__pyx_t_4, 2, __pyx_n_s_filename);
-  __pyx_t_3 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_6))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_6);
-    if (likely(__pyx_t_3)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
-      __Pyx_INCREF(__pyx_t_3);
+  PyList_SET_ITEM(__pyx_t_3, 2, __pyx_n_s_filename);
+  __pyx_t_6 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
+    __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_4);
+    if (likely(__pyx_t_6)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+      __Pyx_INCREF(__pyx_t_6);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_6, function);
+      __Pyx_DECREF_SET(__pyx_t_4, function);
     }
   }
-  if (!__pyx_t_3) {
-    __pyx_t_12 = __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_4); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 201, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __Pyx_GOTREF(__pyx_t_12);
+  if (!__pyx_t_6) {
+    __pyx_t_10 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 194, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_GOTREF(__pyx_t_10);
   } else {
     #if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(__pyx_t_6)) {
-      PyObject *__pyx_temp[2] = {__pyx_t_3, __pyx_t_4};
-      __pyx_t_12 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 201, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __Pyx_GOTREF(__pyx_t_12);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    if (PyFunction_Check(__pyx_t_4)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_6, __pyx_t_3};
+      __pyx_t_10 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 194, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
+      __Pyx_GOTREF(__pyx_t_10);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else
     #endif
     #if CYTHON_FAST_PYCCALL
-    if (__Pyx_PyFastCFunction_Check(__pyx_t_6)) {
-      PyObject *__pyx_temp[2] = {__pyx_t_3, __pyx_t_4};
-      __pyx_t_12 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 201, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __Pyx_GOTREF(__pyx_t_12);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_6, __pyx_t_3};
+      __pyx_t_10 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 194, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
+      __Pyx_GOTREF(__pyx_t_10);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else
     #endif
     {
-      __pyx_t_9 = PyTuple_New(1+1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 201, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_9);
-      __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_3); __pyx_t_3 = NULL;
-      __Pyx_GIVEREF(__pyx_t_4);
-      PyTuple_SET_ITEM(__pyx_t_9, 0+1, __pyx_t_4);
-      __pyx_t_4 = 0;
-      __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_9, NULL); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 201, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_12);
-      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+      __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 194, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_8);
+      __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_6); __pyx_t_6 = NULL;
+      __Pyx_GIVEREF(__pyx_t_3);
+      PyTuple_SET_ITEM(__pyx_t_8, 0+1, __pyx_t_3);
+      __pyx_t_3 = 0;
+      __pyx_t_10 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_8, NULL); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 194, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     }
   }
-  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":163
+  /* "plasticnet/neurons/pattern_neuron.pyx":164
  *         self.p=self.r=self.c=-1
  * 
  *     def __init__(self,fname='hdf5/bbsk081604_norm.hdf5',rf_size=13,             # <<<<<<<<<<<<<<
@@ -7996,31 +7611,630 @@ static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_2__i
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_XDECREF(__pyx_t_12);
+  __Pyx_XDECREF(__pyx_t_10);
   __Pyx_AddTraceback("plasticnet.neurons.pattern_neuron.natural_images.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
-  __Pyx_XDECREF(__pyx_v_image_data);
   __Pyx_XDECREF(__pyx_v_im);
-  __Pyx_XDECREF(__pyx_v_ext);
-  __Pyx_XDECREF(__pyx_v_arr);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/pattern_neuron.pyx":206
+/* "plasticnet/neurons/pattern_neuron.pyx":197
+ *         #self.save_data.extend(['',])
  * 
+ *     cdef load_images(self):             # <<<<<<<<<<<<<<
+ *         if any([self.filename.endswith(ext) for ext in ['.hdf5','h5','hd5']]):
+ *             image_data=hdf5_load_images(self.filename)
+ */
+
+static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images_load_images(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self) {
+  PyObject *__pyx_v_image_data = NULL;
+  PyObject *__pyx_v_ext = NULL;
+  PyObject *__pyx_v_arr = NULL;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  Py_ssize_t __pyx_t_3;
+  PyObject *__pyx_t_4 = NULL;
+  PyObject *__pyx_t_5 = NULL;
+  PyObject *__pyx_t_6 = NULL;
+  PyObject *__pyx_t_7 = NULL;
+  int __pyx_t_8;
+  PyObject *(*__pyx_t_9)(PyObject *);
+  __Pyx_RefNannySetupContext("load_images", 0);
+
+  /* "plasticnet/neurons/pattern_neuron.pyx":198
+ * 
+ *     cdef load_images(self):
+ *         if any([self.filename.endswith(ext) for ext in ['.hdf5','h5','hd5']]):             # <<<<<<<<<<<<<<
+ *             image_data=hdf5_load_images(self.filename)
+ *         elif self.filename.endswith('.asdf'):
+ */
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __pyx_tuple__14; __Pyx_INCREF(__pyx_t_2); __pyx_t_3 = 0;
+  for (;;) {
+    if (__pyx_t_3 >= 3) break;
+    #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+    __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_4); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 198, __pyx_L1_error)
+    #else
+    __pyx_t_4 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 198, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    #endif
+    __Pyx_XDECREF_SET(__pyx_v_ext, __pyx_t_4);
+    __pyx_t_4 = 0;
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->filename, __pyx_n_s_endswith); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 198, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __pyx_t_6 = NULL;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
+      __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_5);
+      if (likely(__pyx_t_6)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_5);
+        __Pyx_INCREF(__pyx_t_6);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_5, function);
+      }
+    }
+    if (!__pyx_t_6) {
+      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_v_ext); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 198, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+    } else {
+      #if CYTHON_FAST_PYCALL
+      if (PyFunction_Check(__pyx_t_5)) {
+        PyObject *__pyx_temp[2] = {__pyx_t_6, __pyx_v_ext};
+        __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 198, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
+        __Pyx_GOTREF(__pyx_t_4);
+      } else
+      #endif
+      #if CYTHON_FAST_PYCCALL
+      if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
+        PyObject *__pyx_temp[2] = {__pyx_t_6, __pyx_v_ext};
+        __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 198, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
+        __Pyx_GOTREF(__pyx_t_4);
+      } else
+      #endif
+      {
+        __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 198, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_7);
+        __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_6); __pyx_t_6 = NULL;
+        __Pyx_INCREF(__pyx_v_ext);
+        __Pyx_GIVEREF(__pyx_v_ext);
+        PyTuple_SET_ITEM(__pyx_t_7, 0+1, __pyx_v_ext);
+        __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_7, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 198, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_4);
+        __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      }
+    }
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_4))) __PYX_ERR(0, 198, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  }
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_any, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  if (__pyx_t_8) {
+
+    /* "plasticnet/neurons/pattern_neuron.pyx":199
+ *     cdef load_images(self):
+ *         if any([self.filename.endswith(ext) for ext in ['.hdf5','h5','hd5']]):
+ *             image_data=hdf5_load_images(self.filename)             # <<<<<<<<<<<<<<
+ *         elif self.filename.endswith('.asdf'):
+ *             image_data=asdf_load_images(self.filename)
+ */
+    __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_hdf5_load_images); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_4 = NULL;
+    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_1))) {
+      __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_1);
+      if (likely(__pyx_t_4)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+        __Pyx_INCREF(__pyx_t_4);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_1, function);
+      }
+    }
+    if (!__pyx_t_4) {
+      __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_self->filename); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+    } else {
+      #if CYTHON_FAST_PYCALL
+      if (PyFunction_Check(__pyx_t_1)) {
+        PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_v_self->filename};
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+        __Pyx_GOTREF(__pyx_t_2);
+      } else
+      #endif
+      #if CYTHON_FAST_PYCCALL
+      if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
+        PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_v_self->filename};
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+        __Pyx_GOTREF(__pyx_t_2);
+      } else
+      #endif
+      {
+        __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 199, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_5);
+        __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
+        __Pyx_INCREF(__pyx_v_self->filename);
+        __Pyx_GIVEREF(__pyx_v_self->filename);
+        PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_v_self->filename);
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+      }
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_v_image_data = __pyx_t_2;
+    __pyx_t_2 = 0;
+
+    /* "plasticnet/neurons/pattern_neuron.pyx":198
+ * 
+ *     cdef load_images(self):
+ *         if any([self.filename.endswith(ext) for ext in ['.hdf5','h5','hd5']]):             # <<<<<<<<<<<<<<
+ *             image_data=hdf5_load_images(self.filename)
+ *         elif self.filename.endswith('.asdf'):
+ */
+    goto __pyx_L3;
+  }
+
+  /* "plasticnet/neurons/pattern_neuron.pyx":200
+ *         if any([self.filename.endswith(ext) for ext in ['.hdf5','h5','hd5']]):
+ *             image_data=hdf5_load_images(self.filename)
+ *         elif self.filename.endswith('.asdf'):             # <<<<<<<<<<<<<<
+ *             image_data=asdf_load_images(self.filename)
+ *         else:
+ */
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->filename, __pyx_n_s_endswith); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__15, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (likely(__pyx_t_8)) {
+
+    /* "plasticnet/neurons/pattern_neuron.pyx":201
+ *             image_data=hdf5_load_images(self.filename)
+ *         elif self.filename.endswith('.asdf'):
+ *             image_data=asdf_load_images(self.filename)             # <<<<<<<<<<<<<<
+ *         else:
+ *             raise ValueError('Image type not implemented '+self.filename)
+ */
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_asdf_load_images); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 201, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_5 = NULL;
+    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
+      __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_2);
+      if (likely(__pyx_t_5)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_5);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_2, function);
+      }
+    }
+    if (!__pyx_t_5) {
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_self->filename); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+    } else {
+      #if CYTHON_FAST_PYCALL
+      if (PyFunction_Check(__pyx_t_2)) {
+        PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_v_self->filename};
+        __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+        __Pyx_GOTREF(__pyx_t_1);
+      } else
+      #endif
+      #if CYTHON_FAST_PYCCALL
+      if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
+        PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_v_self->filename};
+        __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+        __Pyx_GOTREF(__pyx_t_1);
+      } else
+      #endif
+      {
+        __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 201, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_4);
+        __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5); __pyx_t_5 = NULL;
+        __Pyx_INCREF(__pyx_v_self->filename);
+        __Pyx_GIVEREF(__pyx_v_self->filename);
+        PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_v_self->filename);
+        __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      }
+    }
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_v_image_data = __pyx_t_1;
+    __pyx_t_1 = 0;
+
+    /* "plasticnet/neurons/pattern_neuron.pyx":200
+ *         if any([self.filename.endswith(ext) for ext in ['.hdf5','h5','hd5']]):
+ *             image_data=hdf5_load_images(self.filename)
+ *         elif self.filename.endswith('.asdf'):             # <<<<<<<<<<<<<<
+ *             image_data=asdf_load_images(self.filename)
+ *         else:
+ */
+    goto __pyx_L3;
+  }
+
+  /* "plasticnet/neurons/pattern_neuron.pyx":203
+ *             image_data=asdf_load_images(self.filename)
+ *         else:
+ *             raise ValueError('Image type not implemented '+self.filename)             # <<<<<<<<<<<<<<
+ * 
+ *         self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1]
+ */
+  /*else*/ {
+    __pyx_t_1 = PyNumber_Add(__pyx_kp_s_Image_type_not_implemented, __pyx_v_self->filename); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_ValueError, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 203, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_Raise(__pyx_t_2, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __PYX_ERR(0, 203, __pyx_L1_error)
+  }
+  __pyx_L3:;
+
+  /* "plasticnet/neurons/pattern_neuron.pyx":205
+ *             raise ValueError('Image type not implemented '+self.filename)
+ * 
+ *         self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1]             # <<<<<<<<<<<<<<
+ *                                 for arr in image_data['im']]
+ *         del image_data
+ */
+  __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 205, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+
+  /* "plasticnet/neurons/pattern_neuron.pyx":206
+ * 
+ *         self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1]
+ *                                 for arr in image_data['im']]             # <<<<<<<<<<<<<<
+ *         del image_data
+ *         self.images_loaded=True
+ */
+  __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_image_data, __pyx_n_s_im); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 206, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
+    __pyx_t_4 = __pyx_t_1; __Pyx_INCREF(__pyx_t_4); __pyx_t_3 = 0;
+    __pyx_t_9 = NULL;
+  } else {
+    __pyx_t_3 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 206, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_t_9 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 206, __pyx_L1_error)
+  }
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  for (;;) {
+    if (likely(!__pyx_t_9)) {
+      if (likely(PyList_CheckExact(__pyx_t_4))) {
+        if (__pyx_t_3 >= PyList_GET_SIZE(__pyx_t_4)) break;
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_3); __Pyx_INCREF(__pyx_t_1); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 206, __pyx_L1_error)
+        #else
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_4, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 206, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        #endif
+      } else {
+        if (__pyx_t_3 >= PyTuple_GET_SIZE(__pyx_t_4)) break;
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_3); __Pyx_INCREF(__pyx_t_1); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 206, __pyx_L1_error)
+        #else
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_4, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 206, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        #endif
+      }
+    } else {
+      __pyx_t_1 = __pyx_t_9(__pyx_t_4);
+      if (unlikely(!__pyx_t_1)) {
+        PyObject* exc_type = PyErr_Occurred();
+        if (exc_type) {
+          if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
+          else __PYX_ERR(0, 206, __pyx_L1_error)
+        }
+        break;
+      }
+      __Pyx_GOTREF(__pyx_t_1);
+    }
+    __Pyx_XDECREF_SET(__pyx_v_arr, __pyx_t_1);
+    __pyx_t_1 = 0;
+
+    /* "plasticnet/neurons/pattern_neuron.pyx":205
+ *             raise ValueError('Image type not implemented '+self.filename)
+ * 
+ *         self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1]             # <<<<<<<<<<<<<<
+ *                                 for arr in image_data['im']]
+ *         del image_data
+ */
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_arr, __pyx_n_s_astype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 205, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __pyx_t_7 = NULL;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
+      __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_5);
+      if (likely(__pyx_t_7)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_5);
+        __Pyx_INCREF(__pyx_t_7);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_5, function);
+      }
+    }
+    if (!__pyx_t_7) {
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_5, ((PyObject *)(&PyFloat_Type))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+    } else {
+      #if CYTHON_FAST_PYCALL
+      if (PyFunction_Check(__pyx_t_5)) {
+        PyObject *__pyx_temp[2] = {__pyx_t_7, ((PyObject *)(&PyFloat_Type))};
+        __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+        __Pyx_GOTREF(__pyx_t_1);
+      } else
+      #endif
+      #if CYTHON_FAST_PYCCALL
+      if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
+        PyObject *__pyx_temp[2] = {__pyx_t_7, ((PyObject *)(&PyFloat_Type))};
+        __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+        __Pyx_GOTREF(__pyx_t_1);
+      } else
+      #endif
+      {
+        __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 205, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_6);
+        __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_7); __pyx_t_7 = NULL;
+        __Pyx_INCREF(((PyObject *)(&PyFloat_Type)));
+        __Pyx_GIVEREF(((PyObject *)(&PyFloat_Type)));
+        PyTuple_SET_ITEM(__pyx_t_6, 0+1, ((PyObject *)(&PyFloat_Type)));
+        __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      }
+    }
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_v_image_data, __pyx_n_s_im_scale_shift); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 205, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __pyx_t_6 = __Pyx_GetItemInt(__pyx_t_5, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 205, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_t_5 = PyNumber_Multiply(__pyx_t_1, __pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 205, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __pyx_t_6 = __Pyx_PyObject_Dict_GetItem(__pyx_v_image_data, __pyx_n_s_im_scale_shift); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 205, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_6, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __pyx_t_6 = PyNumber_Add(__pyx_t_5, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 205, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 205, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+
+    /* "plasticnet/neurons/pattern_neuron.pyx":206
+ * 
+ *         self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1]
+ *                                 for arr in image_data['im']]             # <<<<<<<<<<<<<<
+ *         del image_data
+ *         self.images_loaded=True
+ */
+  }
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+
+  /* "plasticnet/neurons/pattern_neuron.pyx":205
+ *             raise ValueError('Image type not implemented '+self.filename)
+ * 
+ *         self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1]             # <<<<<<<<<<<<<<
+ *                                 for arr in image_data['im']]
+ *         del image_data
+ */
+  __Pyx_GIVEREF(__pyx_t_2);
+  __Pyx_GOTREF(__pyx_v_self->im);
+  __Pyx_DECREF(__pyx_v_self->im);
+  __pyx_v_self->im = __pyx_t_2;
+  __pyx_t_2 = 0;
+
+  /* "plasticnet/neurons/pattern_neuron.pyx":207
+ *         self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1]
+ *                                 for arr in image_data['im']]
+ *         del image_data             # <<<<<<<<<<<<<<
+ *         self.images_loaded=True
+ * 
+ */
+  __Pyx_DECREF(__pyx_v_image_data);
+  __pyx_v_image_data = NULL;
+
+  /* "plasticnet/neurons/pattern_neuron.pyx":208
+ *                                 for arr in image_data['im']]
+ *         del image_data
+ *         self.images_loaded=True             # <<<<<<<<<<<<<<
+ * 
+ *     cpdef _clean(self):
+ */
+  __pyx_v_self->images_loaded = 1;
+
+  /* "plasticnet/neurons/pattern_neuron.pyx":197
+ *         #self.save_data.extend(['',])
+ * 
+ *     cdef load_images(self):             # <<<<<<<<<<<<<<
+ *         if any([self.filename.endswith(ext) for ext in ['.hdf5','h5','hd5']]):
+ *             image_data=hdf5_load_images(self.filename)
+ */
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_6);
+  __Pyx_XDECREF(__pyx_t_7);
+  __Pyx_AddTraceback("plasticnet.neurons.pattern_neuron.natural_images.load_images", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  __pyx_L0:;
+  __Pyx_XDECREF(__pyx_v_image_data);
+  __Pyx_XDECREF(__pyx_v_ext);
+  __Pyx_XDECREF(__pyx_v_arr);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "plasticnet/neurons/pattern_neuron.pyx":210
+ *         self.images_loaded=True
+ * 
+ *     cpdef _clean(self):             # <<<<<<<<<<<<<<
+ *         del self.im
+ *         self.images_loaded=False
+ */
+
+static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_5_clean(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images__clean(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, int __pyx_skip_dispatch) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  __Pyx_RefNannySetupContext("_clean", 0);
+  /* Check if called by wrapper */
+  if (unlikely(__pyx_skip_dispatch)) ;
+  /* Check if overridden in Python */
+  else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_clean); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 210, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_5_clean)) {
+      __Pyx_XDECREF(__pyx_r);
+      __Pyx_INCREF(__pyx_t_1);
+      __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
+        if (likely(__pyx_t_4)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+          __Pyx_INCREF(__pyx_t_4);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_3, function);
+        }
+      }
+      if (__pyx_t_4) {
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      } else {
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
+      }
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_r = __pyx_t_2;
+      __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      goto __pyx_L0;
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  }
+
+  /* "plasticnet/neurons/pattern_neuron.pyx":211
+ * 
+ *     cpdef _clean(self):
+ *         del self.im             # <<<<<<<<<<<<<<
+ *         self.images_loaded=False
+ * 
+ */
+  if (__Pyx_PyObject_DelAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_im) < 0) __PYX_ERR(0, 211, __pyx_L1_error)
+
+  /* "plasticnet/neurons/pattern_neuron.pyx":212
+ *     cpdef _clean(self):
+ *         del self.im
+ *         self.images_loaded=False             # <<<<<<<<<<<<<<
+ * 
+ *     cpdef new_pattern(self,double t):
+ */
+  __pyx_v_self->images_loaded = 0;
+
+  /* "plasticnet/neurons/pattern_neuron.pyx":210
+ *         self.images_loaded=True
+ * 
+ *     cpdef _clean(self):             # <<<<<<<<<<<<<<
+ *         del self.im
+ *         self.images_loaded=False
+ */
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_AddTraceback("plasticnet.neurons.pattern_neuron.natural_images._clean", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_5_clean(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_5_clean(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("_clean (wrapper)", 0);
+  __pyx_r = __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_4_clean(((struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_4_clean(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  __Pyx_RefNannySetupContext("_clean", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images__clean(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 210, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("plasticnet.neurons.pattern_neuron.natural_images._clean", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "plasticnet/neurons/pattern_neuron.pyx":214
+ *         self.images_loaded=False
  * 
  *     cpdef new_pattern(self,double t):             # <<<<<<<<<<<<<<
  *         cdef int i,j,k,num_rows,num_cols,r,c,p,offset,count
  *         cdef np.ndarray pic
  */
 
-static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_5new_pattern(PyObject *__pyx_v_self, PyObject *__pyx_arg_t); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_7new_pattern(PyObject *__pyx_v_self, PyObject *__pyx_arg_t); /*proto*/
 static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images_new_pattern(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, double __pyx_v_t, int __pyx_skip_dispatch) {
   int __pyx_v_i;
   int __pyx_v_j;
@@ -8043,8 +8257,8 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
   PyObject *__pyx_t_6 = NULL;
-  Py_ssize_t __pyx_t_7;
-  int __pyx_t_8;
+  int __pyx_t_7;
+  Py_ssize_t __pyx_t_8;
   npy_intp __pyx_t_9;
   npy_intp __pyx_t_10;
   int __pyx_t_11;
@@ -8058,11 +8272,11 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new_pattern); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 206, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new_pattern); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 214, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_5new_pattern)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_7new_pattern)) {
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 206, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 214, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -8076,14 +8290,14 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
         }
       }
       if (!__pyx_t_5) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 206, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 214, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_GOTREF(__pyx_t_2);
       } else {
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_4)) {
           PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_3};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 206, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 214, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -8092,20 +8306,20 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
           PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_3};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 206, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 214, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         } else
         #endif
         {
-          __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 206, __pyx_L1_error)
+          __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 214, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_5); __pyx_t_5 = NULL;
           __Pyx_GIVEREF(__pyx_t_3);
           PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_t_3);
           __pyx_t_3 = 0;
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 206, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 214, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         }
@@ -8119,8 +8333,38 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":212
+  /* "plasticnet/neurons/pattern_neuron.pyx":220
  *         cdef double *pattern
+ * 
+ *         if not self.images_loaded:             # <<<<<<<<<<<<<<
+ *             self.load_images()
+ * 
+ */
+  __pyx_t_7 = ((!(__pyx_v_self->images_loaded != 0)) != 0);
+  if (__pyx_t_7) {
+
+    /* "plasticnet/neurons/pattern_neuron.pyx":221
+ * 
+ *         if not self.images_loaded:
+ *             self.load_images()             # <<<<<<<<<<<<<<
+ * 
+ *         pattern=<double *>self.pattern.data
+ */
+    __pyx_t_1 = ((struct __pyx_vtabstruct_10plasticnet_7neurons_14pattern_neuron_natural_images *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_vtab)->load_images(__pyx_v_self); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 221, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "plasticnet/neurons/pattern_neuron.pyx":220
+ *         cdef double *pattern
+ * 
+ *         if not self.images_loaded:             # <<<<<<<<<<<<<<
+ *             self.load_images()
+ * 
+ */
+  }
+
+  /* "plasticnet/neurons/pattern_neuron.pyx":223
+ *             self.load_images()
  * 
  *         pattern=<double *>self.pattern.data             # <<<<<<<<<<<<<<
  * 
@@ -8128,7 +8372,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
  */
   __pyx_v_pattern = ((double *)__pyx_v_self->__pyx_base.pattern->data);
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":214
+  /* "plasticnet/neurons/pattern_neuron.pyx":225
  *         pattern=<double *>self.pattern.data
  * 
  *         cdef int number_of_pictures=len(self.im)             # <<<<<<<<<<<<<<
@@ -8137,21 +8381,21 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
  */
   __pyx_t_1 = __pyx_v_self->im;
   __Pyx_INCREF(__pyx_t_1);
-  __pyx_t_7 = PyObject_Length(__pyx_t_1); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_8 = PyObject_Length(__pyx_t_1); if (unlikely(__pyx_t_8 == ((Py_ssize_t)-1))) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_number_of_pictures = __pyx_t_7;
+  __pyx_v_number_of_pictures = __pyx_t_8;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":216
+  /* "plasticnet/neurons/pattern_neuron.pyx":227
  *         cdef int number_of_pictures=len(self.im)
  * 
  *         if not self.use_other_channel:             # <<<<<<<<<<<<<<
  *             p=randint(number_of_pictures)
  *         else:
  */
-  __pyx_t_8 = ((!(__pyx_v_self->use_other_channel != 0)) != 0);
-  if (__pyx_t_8) {
+  __pyx_t_7 = ((!(__pyx_v_self->use_other_channel != 0)) != 0);
+  if (__pyx_t_7) {
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":217
+    /* "plasticnet/neurons/pattern_neuron.pyx":228
  * 
  *         if not self.use_other_channel:
  *             p=randint(number_of_pictures)             # <<<<<<<<<<<<<<
@@ -8160,17 +8404,17 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
  */
     __pyx_v_p = __pyx_f_10plasticnet_7neurons_14pattern_neuron_randint(__pyx_v_number_of_pictures);
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":216
+    /* "plasticnet/neurons/pattern_neuron.pyx":227
  *         cdef int number_of_pictures=len(self.im)
  * 
  *         if not self.use_other_channel:             # <<<<<<<<<<<<<<
  *             p=randint(number_of_pictures)
  *         else:
  */
-    goto __pyx_L3;
+    goto __pyx_L4;
   }
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":219
+  /* "plasticnet/neurons/pattern_neuron.pyx":230
  *             p=randint(number_of_pictures)
  *         else:
  *             p=self.other_channel.p % number_of_pictures             # <<<<<<<<<<<<<<
@@ -8180,26 +8424,26 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
   /*else*/ {
     if (unlikely(__pyx_v_number_of_pictures == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
-      __PYX_ERR(0, 219, __pyx_L1_error)
+      __PYX_ERR(0, 230, __pyx_L1_error)
     }
     __pyx_v_p = __Pyx_mod_int(__pyx_v_self->other_channel->p, __pyx_v_number_of_pictures);
   }
-  __pyx_L3:;
+  __pyx_L4:;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":221
+  /* "plasticnet/neurons/pattern_neuron.pyx":232
  *             p=self.other_channel.p % number_of_pictures
  * 
  *         pic=self.im[p]             # <<<<<<<<<<<<<<
  *         pic_ptr=<double *> pic.data
  * 
  */
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_self->im, __pyx_v_p, int, 1, __Pyx_PyInt_From_int, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 221, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_self->im, __pyx_v_p, int, 1, __Pyx_PyInt_From_int, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 221, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 232, __pyx_L1_error)
   __pyx_v_pic = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":222
+  /* "plasticnet/neurons/pattern_neuron.pyx":233
  * 
  *         pic=self.im[p]
  *         pic_ptr=<double *> pic.data             # <<<<<<<<<<<<<<
@@ -8208,7 +8452,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
  */
   __pyx_v_pic_ptr = ((double *)__pyx_v_pic->data);
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":224
+  /* "plasticnet/neurons/pattern_neuron.pyx":235
  *         pic_ptr=<double *> pic.data
  * 
  *         num_rows,num_cols=pic.shape[0],pic.shape[1]             # <<<<<<<<<<<<<<
@@ -8220,17 +8464,17 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
   __pyx_v_num_rows = __pyx_t_9;
   __pyx_v_num_cols = __pyx_t_10;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":226
+  /* "plasticnet/neurons/pattern_neuron.pyx":237
  *         num_rows,num_cols=pic.shape[0],pic.shape[1]
  * 
  *         if not self.use_other_channel:             # <<<<<<<<<<<<<<
  *             r,c=randint(num_rows-self.rf_size),randint(num_cols-self.rf_size)
  *         else:
  */
-  __pyx_t_8 = ((!(__pyx_v_self->use_other_channel != 0)) != 0);
-  if (__pyx_t_8) {
+  __pyx_t_7 = ((!(__pyx_v_self->use_other_channel != 0)) != 0);
+  if (__pyx_t_7) {
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":227
+    /* "plasticnet/neurons/pattern_neuron.pyx":238
  * 
  *         if not self.use_other_channel:
  *             r,c=randint(num_rows-self.rf_size),randint(num_cols-self.rf_size)             # <<<<<<<<<<<<<<
@@ -8242,17 +8486,17 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
     __pyx_v_r = __pyx_t_11;
     __pyx_v_c = __pyx_t_12;
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":226
+    /* "plasticnet/neurons/pattern_neuron.pyx":237
  *         num_rows,num_cols=pic.shape[0],pic.shape[1]
  * 
  *         if not self.use_other_channel:             # <<<<<<<<<<<<<<
  *             r,c=randint(num_rows-self.rf_size),randint(num_cols-self.rf_size)
  *         else:
  */
-    goto __pyx_L4;
+    goto __pyx_L5;
   }
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":229
+  /* "plasticnet/neurons/pattern_neuron.pyx":240
  *             r,c=randint(num_rows-self.rf_size),randint(num_cols-self.rf_size)
  *         else:
  *             r,c=self.other_channel.r,self.other_channel.c             # <<<<<<<<<<<<<<
@@ -8265,32 +8509,32 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
     __pyx_v_r = __pyx_t_12;
     __pyx_v_c = __pyx_t_11;
   }
-  __pyx_L4:;
+  __pyx_L5:;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":231
+  /* "plasticnet/neurons/pattern_neuron.pyx":242
  *             r,c=self.other_channel.r,self.other_channel.c
  * 
  *         if self.verbose:             # <<<<<<<<<<<<<<
  *             print p,r,c
  * 
  */
-  __pyx_t_8 = (__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.verbose != 0);
-  if (__pyx_t_8) {
+  __pyx_t_7 = (__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.verbose != 0);
+  if (__pyx_t_7) {
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":232
+    /* "plasticnet/neurons/pattern_neuron.pyx":243
  * 
  *         if self.verbose:
  *             print p,r,c             # <<<<<<<<<<<<<<
  * 
  *         self.p=p
  */
-    __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_p); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 232, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_p); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 243, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_r); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 232, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_r); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 243, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_c); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 232, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_c); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 243, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_6 = PyTuple_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 232, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 243, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_1);
@@ -8301,10 +8545,10 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
     __pyx_t_1 = 0;
     __pyx_t_2 = 0;
     __pyx_t_4 = 0;
-    if (__Pyx_Print(0, __pyx_t_6, 1) < 0) __PYX_ERR(0, 232, __pyx_L1_error)
+    if (__Pyx_Print(0, __pyx_t_6, 1) < 0) __PYX_ERR(0, 243, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":231
+    /* "plasticnet/neurons/pattern_neuron.pyx":242
  *             r,c=self.other_channel.r,self.other_channel.c
  * 
  *         if self.verbose:             # <<<<<<<<<<<<<<
@@ -8313,7 +8557,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
  */
   }
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":234
+  /* "plasticnet/neurons/pattern_neuron.pyx":245
  *             print p,r,c
  * 
  *         self.p=p             # <<<<<<<<<<<<<<
@@ -8322,7 +8566,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
  */
   __pyx_v_self->p = __pyx_v_p;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":235
+  /* "plasticnet/neurons/pattern_neuron.pyx":246
  * 
  *         self.p=p
  *         self.c=c             # <<<<<<<<<<<<<<
@@ -8331,7 +8575,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
  */
   __pyx_v_self->c = __pyx_v_c;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":236
+  /* "plasticnet/neurons/pattern_neuron.pyx":247
  *         self.p=p
  *         self.c=c
  *         self.r=r             # <<<<<<<<<<<<<<
@@ -8340,7 +8584,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
  */
   __pyx_v_self->r = __pyx_v_r;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":238
+  /* "plasticnet/neurons/pattern_neuron.pyx":249
  *         self.r=r
  * 
  *         count=0             # <<<<<<<<<<<<<<
@@ -8349,7 +8593,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
  */
   __pyx_v_count = 0;
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":239
+  /* "plasticnet/neurons/pattern_neuron.pyx":250
  * 
  *         count=0
  *         for i in range(self.rf_size):             # <<<<<<<<<<<<<<
@@ -8361,7 +8605,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
   for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
     __pyx_v_i = __pyx_t_13;
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":240
+    /* "plasticnet/neurons/pattern_neuron.pyx":251
  *         count=0
  *         for i in range(self.rf_size):
  *             for j in range(self.rf_size):             # <<<<<<<<<<<<<<
@@ -8373,7 +8617,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
     for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
       __pyx_v_j = __pyx_t_16;
 
-      /* "plasticnet/neurons/pattern_neuron.pyx":241
+      /* "plasticnet/neurons/pattern_neuron.pyx":252
  *         for i in range(self.rf_size):
  *             for j in range(self.rf_size):
  *                 offset=(r+i)*num_cols+(c+j)             # <<<<<<<<<<<<<<
@@ -8382,7 +8626,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
  */
       __pyx_v_offset = (((__pyx_v_r + __pyx_v_i) * __pyx_v_num_cols) + (__pyx_v_c + __pyx_v_j));
 
-      /* "plasticnet/neurons/pattern_neuron.pyx":243
+      /* "plasticnet/neurons/pattern_neuron.pyx":254
  *                 offset=(r+i)*num_cols+(c+j)
  * 
  *                 pattern[count]=pic_ptr[offset]             # <<<<<<<<<<<<<<
@@ -8391,7 +8635,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
  */
       (__pyx_v_pattern[__pyx_v_count]) = (__pyx_v_pic_ptr[__pyx_v_offset]);
 
-      /* "plasticnet/neurons/pattern_neuron.pyx":244
+      /* "plasticnet/neurons/pattern_neuron.pyx":255
  * 
  *                 pattern[count]=pic_ptr[offset]
  *                 count+=1             # <<<<<<<<<<<<<<
@@ -8400,28 +8644,28 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
  */
       __pyx_v_count = (__pyx_v_count + 1);
 
-      /* "plasticnet/neurons/pattern_neuron.pyx":245
+      /* "plasticnet/neurons/pattern_neuron.pyx":256
  *                 pattern[count]=pic_ptr[offset]
  *                 count+=1
  *                 if self.verbose:             # <<<<<<<<<<<<<<
  *                     print "[%d,%d]" % (offset,count),
  *                     sys.stdout.flush()
  */
-      __pyx_t_8 = (__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.verbose != 0);
-      if (__pyx_t_8) {
+      __pyx_t_7 = (__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.verbose != 0);
+      if (__pyx_t_7) {
 
-        /* "plasticnet/neurons/pattern_neuron.pyx":246
+        /* "plasticnet/neurons/pattern_neuron.pyx":257
  *                 count+=1
  *                 if self.verbose:
  *                     print "[%d,%d]" % (offset,count),             # <<<<<<<<<<<<<<
  *                     sys.stdout.flush()
  * 
  */
-        __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_offset); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 246, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_offset); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 257, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_count); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 246, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_count); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 257, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 246, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 257, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_GIVEREF(__pyx_t_6);
         PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_6);
@@ -8429,30 +8673,30 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
         PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_4);
         __pyx_t_6 = 0;
         __pyx_t_4 = 0;
-        __pyx_t_4 = __Pyx_PyString_Format(__pyx_kp_s_d_d, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 246, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyString_Format(__pyx_kp_s_d_d, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 257, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 246, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 257, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_GIVEREF(__pyx_t_4);
         PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4);
         __pyx_t_4 = 0;
-        if (__Pyx_Print(0, __pyx_t_2, 0) < 0) __PYX_ERR(0, 246, __pyx_L1_error)
+        if (__Pyx_Print(0, __pyx_t_2, 0) < 0) __PYX_ERR(0, 257, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "plasticnet/neurons/pattern_neuron.pyx":247
+        /* "plasticnet/neurons/pattern_neuron.pyx":258
  *                 if self.verbose:
  *                     print "[%d,%d]" % (offset,count),
  *                     sys.stdout.flush()             # <<<<<<<<<<<<<<
  * 
  * 
  */
-        __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_sys); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 247, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_sys); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 258, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_stdout); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 247, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_stdout); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 258, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_flush); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 247, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_flush); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 258, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         __pyx_t_6 = NULL;
@@ -8466,16 +8710,16 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
           }
         }
         if (__pyx_t_6) {
-          __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 247, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 258, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         } else {
-          __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 247, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 258, __pyx_L1_error)
         }
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "plasticnet/neurons/pattern_neuron.pyx":245
+        /* "plasticnet/neurons/pattern_neuron.pyx":256
  *                 pattern[count]=pic_ptr[offset]
  *                 count+=1
  *                 if self.verbose:             # <<<<<<<<<<<<<<
@@ -8486,38 +8730,38 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
     }
   }
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":251
+  /* "plasticnet/neurons/pattern_neuron.pyx":262
  * 
  * 
  *         if self.verbose:             # <<<<<<<<<<<<<<
  *             print
  *             sys.stdout.flush()
  */
-  __pyx_t_8 = (__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.verbose != 0);
-  if (__pyx_t_8) {
+  __pyx_t_7 = (__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.verbose != 0);
+  if (__pyx_t_7) {
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":252
+    /* "plasticnet/neurons/pattern_neuron.pyx":263
  * 
  *         if self.verbose:
  *             print             # <<<<<<<<<<<<<<
  *             sys.stdout.flush()
  * 
  */
-    if (__Pyx_Print(0, __pyx_empty_tuple, 1) < 0) __PYX_ERR(0, 252, __pyx_L1_error)
+    if (__Pyx_Print(0, __pyx_empty_tuple, 1) < 0) __PYX_ERR(0, 263, __pyx_L1_error)
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":253
+    /* "plasticnet/neurons/pattern_neuron.pyx":264
  *         if self.verbose:
  *             print
  *             sys.stdout.flush()             # <<<<<<<<<<<<<<
  * 
  *         self.time_to_next_pattern=t+self.time_between_patterns
  */
-    __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_sys); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 253, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_sys); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 264, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_stdout); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 253, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_stdout); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 264, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_flush); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 253, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_flush); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 264, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_t_6 = NULL;
@@ -8531,16 +8775,16 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
       }
     }
     if (__pyx_t_6) {
-      __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 253, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 264, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     } else {
-      __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 253, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 264, __pyx_L1_error)
     }
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":251
+    /* "plasticnet/neurons/pattern_neuron.pyx":262
  * 
  * 
  *         if self.verbose:             # <<<<<<<<<<<<<<
@@ -8549,7 +8793,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
  */
   }
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":255
+  /* "plasticnet/neurons/pattern_neuron.pyx":266
  *             sys.stdout.flush()
  * 
  *         self.time_to_next_pattern=t+self.time_between_patterns             # <<<<<<<<<<<<<<
@@ -8558,39 +8802,39 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
  */
   __pyx_v_self->__pyx_base.time_to_next_pattern = (__pyx_v_t + __pyx_v_self->__pyx_base.time_between_patterns);
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":256
+  /* "plasticnet/neurons/pattern_neuron.pyx":267
  * 
  *         self.time_to_next_pattern=t+self.time_between_patterns
  *         if self.verbose:             # <<<<<<<<<<<<<<
  *             print "New pattern t=%f" % t
  *             self.print_pattern()
  */
-  __pyx_t_8 = (__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.verbose != 0);
-  if (__pyx_t_8) {
+  __pyx_t_7 = (__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.verbose != 0);
+  if (__pyx_t_7) {
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":257
+    /* "plasticnet/neurons/pattern_neuron.pyx":268
  *         self.time_to_next_pattern=t+self.time_between_patterns
  *         if self.verbose:
  *             print "New pattern t=%f" % t             # <<<<<<<<<<<<<<
  *             self.print_pattern()
  *             print "Time to next pattern: %f" % self.time_to_next_pattern
  */
-    __pyx_t_2 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 257, __pyx_L1_error)
+    __pyx_t_2 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 268, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyString_Format(__pyx_kp_s_New_pattern_t_f, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 257, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyString_Format(__pyx_kp_s_New_pattern_t_f, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 268, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (__Pyx_PrintOne(0, __pyx_t_4) < 0) __PYX_ERR(0, 257, __pyx_L1_error)
+    if (__Pyx_PrintOne(0, __pyx_t_4) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":258
+    /* "plasticnet/neurons/pattern_neuron.pyx":269
  *         if self.verbose:
  *             print "New pattern t=%f" % t
  *             self.print_pattern()             # <<<<<<<<<<<<<<
  *             print "Time to next pattern: %f" % self.time_to_next_pattern
  *             sys.stdout.flush()
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_print_pattern); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 258, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_print_pattern); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 269, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_6 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -8603,43 +8847,43 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
       }
     }
     if (__pyx_t_6) {
-      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 258, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 269, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     } else {
-      __pyx_t_4 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 258, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 269, __pyx_L1_error)
     }
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":259
+    /* "plasticnet/neurons/pattern_neuron.pyx":270
  *             print "New pattern t=%f" % t
  *             self.print_pattern()
  *             print "Time to next pattern: %f" % self.time_to_next_pattern             # <<<<<<<<<<<<<<
  *             sys.stdout.flush()
  * 
  */
-    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_self->__pyx_base.time_to_next_pattern); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 259, __pyx_L1_error)
+    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_self->__pyx_base.time_to_next_pattern); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 270, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_2 = __Pyx_PyString_Format(__pyx_kp_s_Time_to_next_pattern_f, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 259, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyString_Format(__pyx_kp_s_Time_to_next_pattern_f, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 270, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 259, __pyx_L1_error)
+    if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 270, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":260
+    /* "plasticnet/neurons/pattern_neuron.pyx":271
  *             self.print_pattern()
  *             print "Time to next pattern: %f" % self.time_to_next_pattern
  *             sys.stdout.flush()             # <<<<<<<<<<<<<<
  * 
  * 
  */
-    __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_sys); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_sys); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_stdout); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_stdout); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_flush); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_flush); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_t_6 = NULL;
@@ -8653,16 +8897,16 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
       }
     }
     if (__pyx_t_6) {
-      __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     } else {
-      __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
     }
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "plasticnet/neurons/pattern_neuron.pyx":256
+    /* "plasticnet/neurons/pattern_neuron.pyx":267
  * 
  *         self.time_to_next_pattern=t+self.time_between_patterns
  *         if self.verbose:             # <<<<<<<<<<<<<<
@@ -8671,8 +8915,8 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
  */
   }
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":206
- * 
+  /* "plasticnet/neurons/pattern_neuron.pyx":214
+ *         self.images_loaded=False
  * 
  *     cpdef new_pattern(self,double t):             # <<<<<<<<<<<<<<
  *         cdef int i,j,k,num_rows,num_cols,r,c,p,offset,count
@@ -8699,14 +8943,14 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_5new_pattern(PyObject *__pyx_v_self, PyObject *__pyx_arg_t); /*proto*/
-static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_5new_pattern(PyObject *__pyx_v_self, PyObject *__pyx_arg_t) {
+static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_7new_pattern(PyObject *__pyx_v_self, PyObject *__pyx_arg_t); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_7new_pattern(PyObject *__pyx_v_self, PyObject *__pyx_arg_t) {
   double __pyx_v_t;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("new_pattern (wrapper)", 0);
   assert(__pyx_arg_t); {
-    __pyx_v_t = __pyx_PyFloat_AsDouble(__pyx_arg_t); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 206, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsDouble(__pyx_arg_t); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 214, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -8714,20 +8958,20 @@ static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_image
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_4new_pattern(((struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *)__pyx_v_self), ((double)__pyx_v_t));
+  __pyx_r = __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_6new_pattern(((struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *)__pyx_v_self), ((double)__pyx_v_t));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_4new_pattern(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, double __pyx_v_t) {
+static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_6new_pattern(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, double __pyx_v_t) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("new_pattern", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images_new_pattern(__pyx_v_self, __pyx_v_t, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 206, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images_new_pattern(__pyx_v_self, __pyx_v_t, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 214, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8920,7 +9164,7 @@ static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_2im_
  *     cdef public object im
  *     cdef public object filename             # <<<<<<<<<<<<<<
  *     cdef int number_of_pics
- *     cdef int p,r,c
+ *     cdef int images_loaded
  */
 
 /* Python wrapper */
@@ -9010,8 +9254,8 @@ static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_8fil
   return __pyx_r;
 }
 
-/* "plasticnet/neurons/pattern_neuron.pyx":156
- *     cdef int number_of_pics
+/* "plasticnet/neurons/pattern_neuron.pyx":157
+ *     cdef int images_loaded
  *     cdef int p,r,c
  *     cdef public int use_other_channel             # <<<<<<<<<<<<<<
  *     cdef natural_images other_channel
@@ -9037,7 +9281,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_image
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->use_other_channel); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->use_other_channel); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9072,7 +9316,7 @@ static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_17us
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 156, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 157, __pyx_L1_error)
   __pyx_v_self->use_other_channel = __pyx_t_1;
 
   /* function exit code */
@@ -9089,23 +9333,23 @@ static int __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_17us
 /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     cdef bint use_setstate
- *     state = (self.N, self.buffer_size, self.c, self.connections_post, self.connections_pre, self.filename, self.im, self.linear_output, self.name, self.num_post, self.num_pre, self.number_of_patterns, self.number_of_pics, self.other_channel, self.output, self.p, self.pattern, self.pattern_number, self.patterns, self.post_process, self.r, self.rf_size, self.save_attrs, self.save_data, self.sequential, self.time_between_patterns, self.time_to_next_pattern, self.use_other_channel, self.verbose)
+ *     state = (self.N, self.buffer_size, self.c, self.connections_post, self.connections_pre, self.filename, self.im, self.images_loaded, self.linear_output, self.name, self.num_post, self.num_pre, self.number_of_patterns, self.number_of_pics, self.other_channel, self.output, self.p, self.pattern, self.pattern_number, self.patterns, self.post_process, self.r, self.rf_size, self.save_attrs, self.save_data, self.sequential, self.time_between_patterns, self.time_to_next_pattern, self.use_other_channel, self.verbose)
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_7__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_7__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_9__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_9__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__reduce_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_6__reduce_cython__(((struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_8__reduce_cython__(((struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_6__reduce_cython__(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self) {
+static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_8__reduce_cython__(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self) {
   int __pyx_v_use_setstate;
   PyObject *__pyx_v_state = NULL;
   PyObject *__pyx_v__dict = NULL;
@@ -9128,15 +9372,16 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_image
   PyObject *__pyx_t_15 = NULL;
   PyObject *__pyx_t_16 = NULL;
   PyObject *__pyx_t_17 = NULL;
-  int __pyx_t_18;
+  PyObject *__pyx_t_18 = NULL;
   int __pyx_t_19;
   int __pyx_t_20;
+  int __pyx_t_21;
   __Pyx_RefNannySetupContext("__reduce_cython__", 0);
 
   /* "(tree fragment)":3
  * def __reduce_cython__(self):
  *     cdef bint use_setstate
- *     state = (self.N, self.buffer_size, self.c, self.connections_post, self.connections_pre, self.filename, self.im, self.linear_output, self.name, self.num_post, self.num_pre, self.number_of_patterns, self.number_of_pics, self.other_channel, self.output, self.p, self.pattern, self.pattern_number, self.patterns, self.post_process, self.r, self.rf_size, self.save_attrs, self.save_data, self.sequential, self.time_between_patterns, self.time_to_next_pattern, self.use_other_channel, self.verbose)             # <<<<<<<<<<<<<<
+ *     state = (self.N, self.buffer_size, self.c, self.connections_post, self.connections_pre, self.filename, self.im, self.images_loaded, self.linear_output, self.name, self.num_post, self.num_pre, self.number_of_patterns, self.number_of_pics, self.other_channel, self.output, self.p, self.pattern, self.pattern_number, self.patterns, self.post_process, self.r, self.rf_size, self.save_attrs, self.save_data, self.sequential, self.time_between_patterns, self.time_to_next_pattern, self.use_other_channel, self.verbose)             # <<<<<<<<<<<<<<
  *     _dict = getattr(self, '__dict__', None)
  *     if _dict is not None:
  */
@@ -9146,105 +9391,109 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_image
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->c); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.__pyx_base.num_post); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->images_loaded); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.__pyx_base.num_pre); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.__pyx_base.num_post); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.number_of_patterns); if (unlikely(!__pyx_t_6)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.__pyx_base.num_pre); if (unlikely(!__pyx_t_6)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_self->number_of_pics); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.number_of_patterns); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_self->p); if (unlikely(!__pyx_t_8)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_self->number_of_pics); if (unlikely(!__pyx_t_8)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pattern_number); if (unlikely(!__pyx_t_9)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_self->p); if (unlikely(!__pyx_t_9)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_10 = __Pyx_PyInt_From_int(__pyx_v_self->r); if (unlikely(!__pyx_t_10)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.pattern_number); if (unlikely(!__pyx_t_10)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.rf_size); if (unlikely(!__pyx_t_11)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_self->r); if (unlikely(!__pyx_t_11)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_12 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.sequential); if (unlikely(!__pyx_t_12)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.rf_size); if (unlikely(!__pyx_t_12)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_self->__pyx_base.time_between_patterns); if (unlikely(!__pyx_t_13)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_13 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.sequential); if (unlikely(!__pyx_t_13)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
-  __pyx_t_14 = PyFloat_FromDouble(__pyx_v_self->__pyx_base.time_to_next_pattern); if (unlikely(!__pyx_t_14)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_14 = PyFloat_FromDouble(__pyx_v_self->__pyx_base.time_between_patterns); if (unlikely(!__pyx_t_14)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
-  __pyx_t_15 = __Pyx_PyInt_From_int(__pyx_v_self->use_other_channel); if (unlikely(!__pyx_t_15)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_15 = PyFloat_FromDouble(__pyx_v_self->__pyx_base.time_to_next_pattern); if (unlikely(!__pyx_t_15)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
-  __pyx_t_16 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.verbose); if (unlikely(!__pyx_t_16)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_16 = __Pyx_PyInt_From_int(__pyx_v_self->use_other_channel); if (unlikely(!__pyx_t_16)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_16);
-  __pyx_t_17 = PyTuple_New(29); if (unlikely(!__pyx_t_17)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_17 = __Pyx_PyInt_From_int(__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.verbose); if (unlikely(!__pyx_t_17)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_17);
+  __pyx_t_18 = PyTuple_New(30); if (unlikely(!__pyx_t_18)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_18);
   __Pyx_GIVEREF(__pyx_t_1);
-  PyTuple_SET_ITEM(__pyx_t_17, 0, __pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_18, 0, __pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_2);
-  PyTuple_SET_ITEM(__pyx_t_17, 1, __pyx_t_2);
+  PyTuple_SET_ITEM(__pyx_t_18, 1, __pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_17, 2, __pyx_t_3);
+  PyTuple_SET_ITEM(__pyx_t_18, 2, __pyx_t_3);
   __Pyx_INCREF(__pyx_v_self->__pyx_base.__pyx_base.connections_post);
   __Pyx_GIVEREF(__pyx_v_self->__pyx_base.__pyx_base.connections_post);
-  PyTuple_SET_ITEM(__pyx_t_17, 3, __pyx_v_self->__pyx_base.__pyx_base.connections_post);
+  PyTuple_SET_ITEM(__pyx_t_18, 3, __pyx_v_self->__pyx_base.__pyx_base.connections_post);
   __Pyx_INCREF(__pyx_v_self->__pyx_base.__pyx_base.connections_pre);
   __Pyx_GIVEREF(__pyx_v_self->__pyx_base.__pyx_base.connections_pre);
-  PyTuple_SET_ITEM(__pyx_t_17, 4, __pyx_v_self->__pyx_base.__pyx_base.connections_pre);
+  PyTuple_SET_ITEM(__pyx_t_18, 4, __pyx_v_self->__pyx_base.__pyx_base.connections_pre);
   __Pyx_INCREF(__pyx_v_self->filename);
   __Pyx_GIVEREF(__pyx_v_self->filename);
-  PyTuple_SET_ITEM(__pyx_t_17, 5, __pyx_v_self->filename);
+  PyTuple_SET_ITEM(__pyx_t_18, 5, __pyx_v_self->filename);
   __Pyx_INCREF(__pyx_v_self->im);
   __Pyx_GIVEREF(__pyx_v_self->im);
-  PyTuple_SET_ITEM(__pyx_t_17, 6, __pyx_v_self->im);
+  PyTuple_SET_ITEM(__pyx_t_18, 6, __pyx_v_self->im);
+  __Pyx_GIVEREF(__pyx_t_4);
+  PyTuple_SET_ITEM(__pyx_t_18, 7, __pyx_t_4);
   __Pyx_INCREF(((PyObject *)__pyx_v_self->__pyx_base.__pyx_base.linear_output));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self->__pyx_base.__pyx_base.linear_output));
-  PyTuple_SET_ITEM(__pyx_t_17, 7, ((PyObject *)__pyx_v_self->__pyx_base.__pyx_base.linear_output));
+  PyTuple_SET_ITEM(__pyx_t_18, 8, ((PyObject *)__pyx_v_self->__pyx_base.__pyx_base.linear_output));
   __Pyx_INCREF(__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.name);
   __Pyx_GIVEREF(__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.name);
-  PyTuple_SET_ITEM(__pyx_t_17, 8, __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.name);
-  __Pyx_GIVEREF(__pyx_t_4);
-  PyTuple_SET_ITEM(__pyx_t_17, 9, __pyx_t_4);
+  PyTuple_SET_ITEM(__pyx_t_18, 9, __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.name);
   __Pyx_GIVEREF(__pyx_t_5);
-  PyTuple_SET_ITEM(__pyx_t_17, 10, __pyx_t_5);
+  PyTuple_SET_ITEM(__pyx_t_18, 10, __pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_6);
-  PyTuple_SET_ITEM(__pyx_t_17, 11, __pyx_t_6);
+  PyTuple_SET_ITEM(__pyx_t_18, 11, __pyx_t_6);
   __Pyx_GIVEREF(__pyx_t_7);
-  PyTuple_SET_ITEM(__pyx_t_17, 12, __pyx_t_7);
+  PyTuple_SET_ITEM(__pyx_t_18, 12, __pyx_t_7);
+  __Pyx_GIVEREF(__pyx_t_8);
+  PyTuple_SET_ITEM(__pyx_t_18, 13, __pyx_t_8);
   __Pyx_INCREF(((PyObject *)__pyx_v_self->other_channel));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self->other_channel));
-  PyTuple_SET_ITEM(__pyx_t_17, 13, ((PyObject *)__pyx_v_self->other_channel));
+  PyTuple_SET_ITEM(__pyx_t_18, 14, ((PyObject *)__pyx_v_self->other_channel));
   __Pyx_INCREF(((PyObject *)__pyx_v_self->__pyx_base.__pyx_base.output));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self->__pyx_base.__pyx_base.output));
-  PyTuple_SET_ITEM(__pyx_t_17, 14, ((PyObject *)__pyx_v_self->__pyx_base.__pyx_base.output));
-  __Pyx_GIVEREF(__pyx_t_8);
-  PyTuple_SET_ITEM(__pyx_t_17, 15, __pyx_t_8);
+  PyTuple_SET_ITEM(__pyx_t_18, 15, ((PyObject *)__pyx_v_self->__pyx_base.__pyx_base.output));
+  __Pyx_GIVEREF(__pyx_t_9);
+  PyTuple_SET_ITEM(__pyx_t_18, 16, __pyx_t_9);
   __Pyx_INCREF(((PyObject *)__pyx_v_self->__pyx_base.pattern));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self->__pyx_base.pattern));
-  PyTuple_SET_ITEM(__pyx_t_17, 16, ((PyObject *)__pyx_v_self->__pyx_base.pattern));
-  __Pyx_GIVEREF(__pyx_t_9);
-  PyTuple_SET_ITEM(__pyx_t_17, 17, __pyx_t_9);
+  PyTuple_SET_ITEM(__pyx_t_18, 17, ((PyObject *)__pyx_v_self->__pyx_base.pattern));
+  __Pyx_GIVEREF(__pyx_t_10);
+  PyTuple_SET_ITEM(__pyx_t_18, 18, __pyx_t_10);
   __Pyx_INCREF(((PyObject *)__pyx_v_self->__pyx_base.patterns));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self->__pyx_base.patterns));
-  PyTuple_SET_ITEM(__pyx_t_17, 18, ((PyObject *)__pyx_v_self->__pyx_base.patterns));
+  PyTuple_SET_ITEM(__pyx_t_18, 19, ((PyObject *)__pyx_v_self->__pyx_base.patterns));
   __Pyx_INCREF(__pyx_v_self->__pyx_base.__pyx_base.post_process);
   __Pyx_GIVEREF(__pyx_v_self->__pyx_base.__pyx_base.post_process);
-  PyTuple_SET_ITEM(__pyx_t_17, 19, __pyx_v_self->__pyx_base.__pyx_base.post_process);
-  __Pyx_GIVEREF(__pyx_t_10);
-  PyTuple_SET_ITEM(__pyx_t_17, 20, __pyx_t_10);
+  PyTuple_SET_ITEM(__pyx_t_18, 20, __pyx_v_self->__pyx_base.__pyx_base.post_process);
   __Pyx_GIVEREF(__pyx_t_11);
-  PyTuple_SET_ITEM(__pyx_t_17, 21, __pyx_t_11);
+  PyTuple_SET_ITEM(__pyx_t_18, 21, __pyx_t_11);
+  __Pyx_GIVEREF(__pyx_t_12);
+  PyTuple_SET_ITEM(__pyx_t_18, 22, __pyx_t_12);
   __Pyx_INCREF(__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.save_attrs);
   __Pyx_GIVEREF(__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.save_attrs);
-  PyTuple_SET_ITEM(__pyx_t_17, 22, __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.save_attrs);
+  PyTuple_SET_ITEM(__pyx_t_18, 23, __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.save_attrs);
   __Pyx_INCREF(__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.save_data);
   __Pyx_GIVEREF(__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.save_data);
-  PyTuple_SET_ITEM(__pyx_t_17, 23, __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.save_data);
-  __Pyx_GIVEREF(__pyx_t_12);
-  PyTuple_SET_ITEM(__pyx_t_17, 24, __pyx_t_12);
+  PyTuple_SET_ITEM(__pyx_t_18, 24, __pyx_v_self->__pyx_base.__pyx_base.__pyx_base.save_data);
   __Pyx_GIVEREF(__pyx_t_13);
-  PyTuple_SET_ITEM(__pyx_t_17, 25, __pyx_t_13);
+  PyTuple_SET_ITEM(__pyx_t_18, 25, __pyx_t_13);
   __Pyx_GIVEREF(__pyx_t_14);
-  PyTuple_SET_ITEM(__pyx_t_17, 26, __pyx_t_14);
+  PyTuple_SET_ITEM(__pyx_t_18, 26, __pyx_t_14);
   __Pyx_GIVEREF(__pyx_t_15);
-  PyTuple_SET_ITEM(__pyx_t_17, 27, __pyx_t_15);
+  PyTuple_SET_ITEM(__pyx_t_18, 27, __pyx_t_15);
   __Pyx_GIVEREF(__pyx_t_16);
-  PyTuple_SET_ITEM(__pyx_t_17, 28, __pyx_t_16);
+  PyTuple_SET_ITEM(__pyx_t_18, 28, __pyx_t_16);
+  __Pyx_GIVEREF(__pyx_t_17);
+  PyTuple_SET_ITEM(__pyx_t_18, 29, __pyx_t_17);
   __pyx_t_1 = 0;
   __pyx_t_2 = 0;
   __pyx_t_3 = 0;
@@ -9261,31 +9510,32 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_image
   __pyx_t_14 = 0;
   __pyx_t_15 = 0;
   __pyx_t_16 = 0;
-  __pyx_v_state = ((PyObject*)__pyx_t_17);
   __pyx_t_17 = 0;
+  __pyx_v_state = ((PyObject*)__pyx_t_18);
+  __pyx_t_18 = 0;
 
   /* "(tree fragment)":4
  *     cdef bint use_setstate
- *     state = (self.N, self.buffer_size, self.c, self.connections_post, self.connections_pre, self.filename, self.im, self.linear_output, self.name, self.num_post, self.num_pre, self.number_of_patterns, self.number_of_pics, self.other_channel, self.output, self.p, self.pattern, self.pattern_number, self.patterns, self.post_process, self.r, self.rf_size, self.save_attrs, self.save_data, self.sequential, self.time_between_patterns, self.time_to_next_pattern, self.use_other_channel, self.verbose)
+ *     state = (self.N, self.buffer_size, self.c, self.connections_post, self.connections_pre, self.filename, self.im, self.images_loaded, self.linear_output, self.name, self.num_post, self.num_pre, self.number_of_patterns, self.number_of_pics, self.other_channel, self.output, self.p, self.pattern, self.pattern_number, self.patterns, self.post_process, self.r, self.rf_size, self.save_attrs, self.save_data, self.sequential, self.time_between_patterns, self.time_to_next_pattern, self.use_other_channel, self.verbose)
  *     _dict = getattr(self, '__dict__', None)             # <<<<<<<<<<<<<<
  *     if _dict is not None:
  *         state += (_dict,)
  */
-  __pyx_t_17 = __Pyx_GetAttr3(((PyObject *)__pyx_v_self), __pyx_n_s_dict, Py_None); if (unlikely(!__pyx_t_17)) __PYX_ERR(1, 4, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_17);
-  __pyx_v__dict = __pyx_t_17;
-  __pyx_t_17 = 0;
+  __pyx_t_18 = __Pyx_GetAttr3(((PyObject *)__pyx_v_self), __pyx_n_s_dict, Py_None); if (unlikely(!__pyx_t_18)) __PYX_ERR(1, 4, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_18);
+  __pyx_v__dict = __pyx_t_18;
+  __pyx_t_18 = 0;
 
   /* "(tree fragment)":5
- *     state = (self.N, self.buffer_size, self.c, self.connections_post, self.connections_pre, self.filename, self.im, self.linear_output, self.name, self.num_post, self.num_pre, self.number_of_patterns, self.number_of_pics, self.other_channel, self.output, self.p, self.pattern, self.pattern_number, self.patterns, self.post_process, self.r, self.rf_size, self.save_attrs, self.save_data, self.sequential, self.time_between_patterns, self.time_to_next_pattern, self.use_other_channel, self.verbose)
+ *     state = (self.N, self.buffer_size, self.c, self.connections_post, self.connections_pre, self.filename, self.im, self.images_loaded, self.linear_output, self.name, self.num_post, self.num_pre, self.number_of_patterns, self.number_of_pics, self.other_channel, self.output, self.p, self.pattern, self.pattern_number, self.patterns, self.post_process, self.r, self.rf_size, self.save_attrs, self.save_data, self.sequential, self.time_between_patterns, self.time_to_next_pattern, self.use_other_channel, self.verbose)
  *     _dict = getattr(self, '__dict__', None)
  *     if _dict is not None:             # <<<<<<<<<<<<<<
  *         state += (_dict,)
  *         use_setstate = True
  */
-  __pyx_t_18 = (__pyx_v__dict != Py_None);
-  __pyx_t_19 = (__pyx_t_18 != 0);
-  if (__pyx_t_19) {
+  __pyx_t_19 = (__pyx_v__dict != Py_None);
+  __pyx_t_20 = (__pyx_t_19 != 0);
+  if (__pyx_t_20) {
 
     /* "(tree fragment)":6
  *     _dict = getattr(self, '__dict__', None)
@@ -9294,16 +9544,16 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_image
  *         use_setstate = True
  *     else:
  */
-    __pyx_t_17 = PyTuple_New(1); if (unlikely(!__pyx_t_17)) __PYX_ERR(1, 6, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_17);
+    __pyx_t_18 = PyTuple_New(1); if (unlikely(!__pyx_t_18)) __PYX_ERR(1, 6, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
     __Pyx_INCREF(__pyx_v__dict);
     __Pyx_GIVEREF(__pyx_v__dict);
-    PyTuple_SET_ITEM(__pyx_t_17, 0, __pyx_v__dict);
-    __pyx_t_16 = PyNumber_InPlaceAdd(__pyx_v_state, __pyx_t_17); if (unlikely(!__pyx_t_16)) __PYX_ERR(1, 6, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_16);
-    __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
-    __Pyx_DECREF_SET(__pyx_v_state, ((PyObject*)__pyx_t_16));
-    __pyx_t_16 = 0;
+    PyTuple_SET_ITEM(__pyx_t_18, 0, __pyx_v__dict);
+    __pyx_t_17 = PyNumber_InPlaceAdd(__pyx_v_state, __pyx_t_18); if (unlikely(!__pyx_t_17)) __PYX_ERR(1, 6, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_17);
+    __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+    __Pyx_DECREF_SET(__pyx_v_state, ((PyObject*)__pyx_t_17));
+    __pyx_t_17 = 0;
 
     /* "(tree fragment)":7
  *     if _dict is not None:
@@ -9315,7 +9565,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_image
     __pyx_v_use_setstate = 1;
 
     /* "(tree fragment)":5
- *     state = (self.N, self.buffer_size, self.c, self.connections_post, self.connections_pre, self.filename, self.im, self.linear_output, self.name, self.num_post, self.num_pre, self.number_of_patterns, self.number_of_pics, self.other_channel, self.output, self.p, self.pattern, self.pattern_number, self.patterns, self.post_process, self.r, self.rf_size, self.save_attrs, self.save_data, self.sequential, self.time_between_patterns, self.time_to_next_pattern, self.use_other_channel, self.verbose)
+ *     state = (self.N, self.buffer_size, self.c, self.connections_post, self.connections_pre, self.filename, self.im, self.images_loaded, self.linear_output, self.name, self.num_post, self.num_pre, self.number_of_patterns, self.number_of_pics, self.other_channel, self.output, self.p, self.pattern, self.pattern_number, self.patterns, self.post_process, self.r, self.rf_size, self.save_attrs, self.save_data, self.sequential, self.time_between_patterns, self.time_to_next_pattern, self.use_other_channel, self.verbose)
  *     _dict = getattr(self, '__dict__', None)
  *     if _dict is not None:             # <<<<<<<<<<<<<<
  *         state += (_dict,)
@@ -9329,98 +9579,98 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_image
  *     else:
  *         use_setstate = self.connections_post is not None or self.connections_pre is not None or self.filename is not None or self.im is not None or self.linear_output is not None or self.name is not None or self.other_channel is not None or self.output is not None or self.pattern is not None or self.patterns is not None or self.post_process is not None or self.save_attrs is not None or self.save_data is not None             # <<<<<<<<<<<<<<
  *     if use_setstate:
- *         return __pyx_unpickle_natural_images, (type(self), 0x0572a7d, None), state
+ *         return __pyx_unpickle_natural_images, (type(self), 0x769784b, None), state
  */
   /*else*/ {
-    __pyx_t_18 = (__pyx_v_self->__pyx_base.__pyx_base.connections_post != Py_None);
-    __pyx_t_20 = (__pyx_t_18 != 0);
-    if (!__pyx_t_20) {
+    __pyx_t_19 = (__pyx_v_self->__pyx_base.__pyx_base.connections_post != Py_None);
+    __pyx_t_21 = (__pyx_t_19 != 0);
+    if (!__pyx_t_21) {
     } else {
-      __pyx_t_19 = __pyx_t_20;
+      __pyx_t_20 = __pyx_t_21;
       goto __pyx_L4_bool_binop_done;
     }
-    __pyx_t_20 = (__pyx_v_self->__pyx_base.__pyx_base.connections_pre != Py_None);
-    __pyx_t_18 = (__pyx_t_20 != 0);
-    if (!__pyx_t_18) {
+    __pyx_t_21 = (__pyx_v_self->__pyx_base.__pyx_base.connections_pre != Py_None);
+    __pyx_t_19 = (__pyx_t_21 != 0);
+    if (!__pyx_t_19) {
     } else {
-      __pyx_t_19 = __pyx_t_18;
+      __pyx_t_20 = __pyx_t_19;
       goto __pyx_L4_bool_binop_done;
     }
-    __pyx_t_18 = (__pyx_v_self->filename != Py_None);
-    __pyx_t_20 = (__pyx_t_18 != 0);
-    if (!__pyx_t_20) {
+    __pyx_t_19 = (__pyx_v_self->filename != Py_None);
+    __pyx_t_21 = (__pyx_t_19 != 0);
+    if (!__pyx_t_21) {
     } else {
-      __pyx_t_19 = __pyx_t_20;
+      __pyx_t_20 = __pyx_t_21;
       goto __pyx_L4_bool_binop_done;
     }
-    __pyx_t_20 = (__pyx_v_self->im != Py_None);
-    __pyx_t_18 = (__pyx_t_20 != 0);
-    if (!__pyx_t_18) {
+    __pyx_t_21 = (__pyx_v_self->im != Py_None);
+    __pyx_t_19 = (__pyx_t_21 != 0);
+    if (!__pyx_t_19) {
     } else {
-      __pyx_t_19 = __pyx_t_18;
+      __pyx_t_20 = __pyx_t_19;
       goto __pyx_L4_bool_binop_done;
     }
-    __pyx_t_18 = (((PyObject *)__pyx_v_self->__pyx_base.__pyx_base.linear_output) != Py_None);
-    __pyx_t_20 = (__pyx_t_18 != 0);
-    if (!__pyx_t_20) {
+    __pyx_t_19 = (((PyObject *)__pyx_v_self->__pyx_base.__pyx_base.linear_output) != Py_None);
+    __pyx_t_21 = (__pyx_t_19 != 0);
+    if (!__pyx_t_21) {
     } else {
-      __pyx_t_19 = __pyx_t_20;
+      __pyx_t_20 = __pyx_t_21;
       goto __pyx_L4_bool_binop_done;
     }
-    __pyx_t_20 = (__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.name != Py_None);
-    __pyx_t_18 = (__pyx_t_20 != 0);
-    if (!__pyx_t_18) {
+    __pyx_t_21 = (__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.name != Py_None);
+    __pyx_t_19 = (__pyx_t_21 != 0);
+    if (!__pyx_t_19) {
     } else {
-      __pyx_t_19 = __pyx_t_18;
+      __pyx_t_20 = __pyx_t_19;
       goto __pyx_L4_bool_binop_done;
     }
-    __pyx_t_18 = (((PyObject *)__pyx_v_self->other_channel) != Py_None);
-    __pyx_t_20 = (__pyx_t_18 != 0);
-    if (!__pyx_t_20) {
+    __pyx_t_19 = (((PyObject *)__pyx_v_self->other_channel) != Py_None);
+    __pyx_t_21 = (__pyx_t_19 != 0);
+    if (!__pyx_t_21) {
     } else {
-      __pyx_t_19 = __pyx_t_20;
+      __pyx_t_20 = __pyx_t_21;
       goto __pyx_L4_bool_binop_done;
     }
-    __pyx_t_20 = (((PyObject *)__pyx_v_self->__pyx_base.__pyx_base.output) != Py_None);
-    __pyx_t_18 = (__pyx_t_20 != 0);
-    if (!__pyx_t_18) {
+    __pyx_t_21 = (((PyObject *)__pyx_v_self->__pyx_base.__pyx_base.output) != Py_None);
+    __pyx_t_19 = (__pyx_t_21 != 0);
+    if (!__pyx_t_19) {
     } else {
-      __pyx_t_19 = __pyx_t_18;
+      __pyx_t_20 = __pyx_t_19;
       goto __pyx_L4_bool_binop_done;
     }
-    __pyx_t_18 = (((PyObject *)__pyx_v_self->__pyx_base.pattern) != Py_None);
-    __pyx_t_20 = (__pyx_t_18 != 0);
-    if (!__pyx_t_20) {
+    __pyx_t_19 = (((PyObject *)__pyx_v_self->__pyx_base.pattern) != Py_None);
+    __pyx_t_21 = (__pyx_t_19 != 0);
+    if (!__pyx_t_21) {
     } else {
-      __pyx_t_19 = __pyx_t_20;
+      __pyx_t_20 = __pyx_t_21;
       goto __pyx_L4_bool_binop_done;
     }
-    __pyx_t_20 = (((PyObject *)__pyx_v_self->__pyx_base.patterns) != Py_None);
-    __pyx_t_18 = (__pyx_t_20 != 0);
-    if (!__pyx_t_18) {
+    __pyx_t_21 = (((PyObject *)__pyx_v_self->__pyx_base.patterns) != Py_None);
+    __pyx_t_19 = (__pyx_t_21 != 0);
+    if (!__pyx_t_19) {
     } else {
-      __pyx_t_19 = __pyx_t_18;
+      __pyx_t_20 = __pyx_t_19;
       goto __pyx_L4_bool_binop_done;
     }
-    __pyx_t_18 = (__pyx_v_self->__pyx_base.__pyx_base.post_process != Py_None);
-    __pyx_t_20 = (__pyx_t_18 != 0);
-    if (!__pyx_t_20) {
+    __pyx_t_19 = (__pyx_v_self->__pyx_base.__pyx_base.post_process != Py_None);
+    __pyx_t_21 = (__pyx_t_19 != 0);
+    if (!__pyx_t_21) {
     } else {
-      __pyx_t_19 = __pyx_t_20;
+      __pyx_t_20 = __pyx_t_21;
       goto __pyx_L4_bool_binop_done;
     }
-    __pyx_t_20 = (__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.save_attrs != Py_None);
-    __pyx_t_18 = (__pyx_t_20 != 0);
-    if (!__pyx_t_18) {
+    __pyx_t_21 = (__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.save_attrs != Py_None);
+    __pyx_t_19 = (__pyx_t_21 != 0);
+    if (!__pyx_t_19) {
     } else {
-      __pyx_t_19 = __pyx_t_18;
+      __pyx_t_20 = __pyx_t_19;
       goto __pyx_L4_bool_binop_done;
     }
-    __pyx_t_18 = (__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.save_data != Py_None);
-    __pyx_t_20 = (__pyx_t_18 != 0);
-    __pyx_t_19 = __pyx_t_20;
+    __pyx_t_19 = (__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.save_data != Py_None);
+    __pyx_t_21 = (__pyx_t_19 != 0);
+    __pyx_t_20 = __pyx_t_21;
     __pyx_L4_bool_binop_done:;
-    __pyx_v_use_setstate = __pyx_t_19;
+    __pyx_v_use_setstate = __pyx_t_20;
   }
   __pyx_L3:;
 
@@ -9428,96 +9678,96 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_image
  *     else:
  *         use_setstate = self.connections_post is not None or self.connections_pre is not None or self.filename is not None or self.im is not None or self.linear_output is not None or self.name is not None or self.other_channel is not None or self.output is not None or self.pattern is not None or self.patterns is not None or self.post_process is not None or self.save_attrs is not None or self.save_data is not None
  *     if use_setstate:             # <<<<<<<<<<<<<<
- *         return __pyx_unpickle_natural_images, (type(self), 0x0572a7d, None), state
+ *         return __pyx_unpickle_natural_images, (type(self), 0x769784b, None), state
  *     else:
  */
-  __pyx_t_19 = (__pyx_v_use_setstate != 0);
-  if (__pyx_t_19) {
+  __pyx_t_20 = (__pyx_v_use_setstate != 0);
+  if (__pyx_t_20) {
 
     /* "(tree fragment)":11
  *         use_setstate = self.connections_post is not None or self.connections_pre is not None or self.filename is not None or self.im is not None or self.linear_output is not None or self.name is not None or self.other_channel is not None or self.output is not None or self.pattern is not None or self.patterns is not None or self.post_process is not None or self.save_attrs is not None or self.save_data is not None
  *     if use_setstate:
- *         return __pyx_unpickle_natural_images, (type(self), 0x0572a7d, None), state             # <<<<<<<<<<<<<<
+ *         return __pyx_unpickle_natural_images, (type(self), 0x769784b, None), state             # <<<<<<<<<<<<<<
  *     else:
- *         return __pyx_unpickle_natural_images, (type(self), 0x0572a7d, state)
+ *         return __pyx_unpickle_natural_images, (type(self), 0x769784b, state)
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_16 = __Pyx_GetModuleGlobalName(__pyx_n_s_pyx_unpickle_natural_images); if (unlikely(!__pyx_t_16)) __PYX_ERR(1, 11, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_16);
-    __pyx_t_17 = PyTuple_New(3); if (unlikely(!__pyx_t_17)) __PYX_ERR(1, 11, __pyx_L1_error)
+    __pyx_t_17 = __Pyx_GetModuleGlobalName(__pyx_n_s_pyx_unpickle_natural_images); if (unlikely(!__pyx_t_17)) __PYX_ERR(1, 11, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_17);
+    __pyx_t_18 = PyTuple_New(3); if (unlikely(!__pyx_t_18)) __PYX_ERR(1, 11, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
     __Pyx_INCREF(((PyObject *)Py_TYPE(((PyObject *)__pyx_v_self))));
     __Pyx_GIVEREF(((PyObject *)Py_TYPE(((PyObject *)__pyx_v_self))));
-    PyTuple_SET_ITEM(__pyx_t_17, 0, ((PyObject *)Py_TYPE(((PyObject *)__pyx_v_self))));
-    __Pyx_INCREF(__pyx_int_5712509);
-    __Pyx_GIVEREF(__pyx_int_5712509);
-    PyTuple_SET_ITEM(__pyx_t_17, 1, __pyx_int_5712509);
+    PyTuple_SET_ITEM(__pyx_t_18, 0, ((PyObject *)Py_TYPE(((PyObject *)__pyx_v_self))));
+    __Pyx_INCREF(__pyx_int_124352587);
+    __Pyx_GIVEREF(__pyx_int_124352587);
+    PyTuple_SET_ITEM(__pyx_t_18, 1, __pyx_int_124352587);
     __Pyx_INCREF(Py_None);
     __Pyx_GIVEREF(Py_None);
-    PyTuple_SET_ITEM(__pyx_t_17, 2, Py_None);
-    __pyx_t_15 = PyTuple_New(3); if (unlikely(!__pyx_t_15)) __PYX_ERR(1, 11, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_15);
-    __Pyx_GIVEREF(__pyx_t_16);
-    PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_16);
+    PyTuple_SET_ITEM(__pyx_t_18, 2, Py_None);
+    __pyx_t_16 = PyTuple_New(3); if (unlikely(!__pyx_t_16)) __PYX_ERR(1, 11, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_16);
     __Pyx_GIVEREF(__pyx_t_17);
-    PyTuple_SET_ITEM(__pyx_t_15, 1, __pyx_t_17);
+    PyTuple_SET_ITEM(__pyx_t_16, 0, __pyx_t_17);
+    __Pyx_GIVEREF(__pyx_t_18);
+    PyTuple_SET_ITEM(__pyx_t_16, 1, __pyx_t_18);
     __Pyx_INCREF(__pyx_v_state);
     __Pyx_GIVEREF(__pyx_v_state);
-    PyTuple_SET_ITEM(__pyx_t_15, 2, __pyx_v_state);
-    __pyx_t_16 = 0;
+    PyTuple_SET_ITEM(__pyx_t_16, 2, __pyx_v_state);
     __pyx_t_17 = 0;
-    __pyx_r = __pyx_t_15;
-    __pyx_t_15 = 0;
+    __pyx_t_18 = 0;
+    __pyx_r = __pyx_t_16;
+    __pyx_t_16 = 0;
     goto __pyx_L0;
 
     /* "(tree fragment)":10
  *     else:
  *         use_setstate = self.connections_post is not None or self.connections_pre is not None or self.filename is not None or self.im is not None or self.linear_output is not None or self.name is not None or self.other_channel is not None or self.output is not None or self.pattern is not None or self.patterns is not None or self.post_process is not None or self.save_attrs is not None or self.save_data is not None
  *     if use_setstate:             # <<<<<<<<<<<<<<
- *         return __pyx_unpickle_natural_images, (type(self), 0x0572a7d, None), state
+ *         return __pyx_unpickle_natural_images, (type(self), 0x769784b, None), state
  *     else:
  */
   }
 
   /* "(tree fragment)":13
- *         return __pyx_unpickle_natural_images, (type(self), 0x0572a7d, None), state
+ *         return __pyx_unpickle_natural_images, (type(self), 0x769784b, None), state
  *     else:
- *         return __pyx_unpickle_natural_images, (type(self), 0x0572a7d, state)             # <<<<<<<<<<<<<<
+ *         return __pyx_unpickle_natural_images, (type(self), 0x769784b, state)             # <<<<<<<<<<<<<<
  * def __setstate_cython__(self, __pyx_state):
  *     __pyx_unpickle_natural_images__set_state(self, __pyx_state)
  */
   /*else*/ {
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_15 = __Pyx_GetModuleGlobalName(__pyx_n_s_pyx_unpickle_natural_images); if (unlikely(!__pyx_t_15)) __PYX_ERR(1, 13, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_15);
-    __pyx_t_17 = PyTuple_New(3); if (unlikely(!__pyx_t_17)) __PYX_ERR(1, 13, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_17);
+    __pyx_t_16 = __Pyx_GetModuleGlobalName(__pyx_n_s_pyx_unpickle_natural_images); if (unlikely(!__pyx_t_16)) __PYX_ERR(1, 13, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_16);
+    __pyx_t_18 = PyTuple_New(3); if (unlikely(!__pyx_t_18)) __PYX_ERR(1, 13, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
     __Pyx_INCREF(((PyObject *)Py_TYPE(((PyObject *)__pyx_v_self))));
     __Pyx_GIVEREF(((PyObject *)Py_TYPE(((PyObject *)__pyx_v_self))));
-    PyTuple_SET_ITEM(__pyx_t_17, 0, ((PyObject *)Py_TYPE(((PyObject *)__pyx_v_self))));
-    __Pyx_INCREF(__pyx_int_5712509);
-    __Pyx_GIVEREF(__pyx_int_5712509);
-    PyTuple_SET_ITEM(__pyx_t_17, 1, __pyx_int_5712509);
+    PyTuple_SET_ITEM(__pyx_t_18, 0, ((PyObject *)Py_TYPE(((PyObject *)__pyx_v_self))));
+    __Pyx_INCREF(__pyx_int_124352587);
+    __Pyx_GIVEREF(__pyx_int_124352587);
+    PyTuple_SET_ITEM(__pyx_t_18, 1, __pyx_int_124352587);
     __Pyx_INCREF(__pyx_v_state);
     __Pyx_GIVEREF(__pyx_v_state);
-    PyTuple_SET_ITEM(__pyx_t_17, 2, __pyx_v_state);
-    __pyx_t_16 = PyTuple_New(2); if (unlikely(!__pyx_t_16)) __PYX_ERR(1, 13, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_16);
-    __Pyx_GIVEREF(__pyx_t_15);
-    PyTuple_SET_ITEM(__pyx_t_16, 0, __pyx_t_15);
-    __Pyx_GIVEREF(__pyx_t_17);
-    PyTuple_SET_ITEM(__pyx_t_16, 1, __pyx_t_17);
-    __pyx_t_15 = 0;
-    __pyx_t_17 = 0;
-    __pyx_r = __pyx_t_16;
+    PyTuple_SET_ITEM(__pyx_t_18, 2, __pyx_v_state);
+    __pyx_t_17 = PyTuple_New(2); if (unlikely(!__pyx_t_17)) __PYX_ERR(1, 13, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_17);
+    __Pyx_GIVEREF(__pyx_t_16);
+    PyTuple_SET_ITEM(__pyx_t_17, 0, __pyx_t_16);
+    __Pyx_GIVEREF(__pyx_t_18);
+    PyTuple_SET_ITEM(__pyx_t_17, 1, __pyx_t_18);
     __pyx_t_16 = 0;
+    __pyx_t_18 = 0;
+    __pyx_r = __pyx_t_17;
+    __pyx_t_17 = 0;
     goto __pyx_L0;
   }
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     cdef bint use_setstate
- *     state = (self.N, self.buffer_size, self.c, self.connections_post, self.connections_pre, self.filename, self.im, self.linear_output, self.name, self.num_post, self.num_pre, self.number_of_patterns, self.number_of_pics, self.other_channel, self.output, self.p, self.pattern, self.pattern_number, self.patterns, self.post_process, self.r, self.rf_size, self.save_attrs, self.save_data, self.sequential, self.time_between_patterns, self.time_to_next_pattern, self.use_other_channel, self.verbose)
+ *     state = (self.N, self.buffer_size, self.c, self.connections_post, self.connections_pre, self.filename, self.im, self.images_loaded, self.linear_output, self.name, self.num_post, self.num_pre, self.number_of_patterns, self.number_of_pics, self.other_channel, self.output, self.p, self.pattern, self.pattern_number, self.patterns, self.post_process, self.r, self.rf_size, self.save_attrs, self.save_data, self.sequential, self.time_between_patterns, self.time_to_next_pattern, self.use_other_channel, self.verbose)
  */
 
   /* function exit code */
@@ -9539,6 +9789,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_image
   __Pyx_XDECREF(__pyx_t_15);
   __Pyx_XDECREF(__pyx_t_16);
   __Pyx_XDECREF(__pyx_t_17);
+  __Pyx_XDECREF(__pyx_t_18);
   __Pyx_AddTraceback("plasticnet.neurons.pattern_neuron.natural_images.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
@@ -9551,32 +9802,32 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_image
 
 /* "(tree fragment)":14
  *     else:
- *         return __pyx_unpickle_natural_images, (type(self), 0x0572a7d, state)
+ *         return __pyx_unpickle_natural_images, (type(self), 0x769784b, state)
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_natural_images__set_state(self, __pyx_state)
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_9__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
-static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_9__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_11__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
+static PyObject *__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_11__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setstate_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_8__setstate_cython__(((struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
+  __pyx_r = __pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_10__setstate_cython__(((struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_8__setstate_cython__(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_images_10__setstate_cython__(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__setstate_cython__", 0);
 
   /* "(tree fragment)":15
- *         return __pyx_unpickle_natural_images, (type(self), 0x0572a7d, state)
+ *         return __pyx_unpickle_natural_images, (type(self), 0x769784b, state)
  * def __setstate_cython__(self, __pyx_state):
  *     __pyx_unpickle_natural_images__set_state(self, __pyx_state)             # <<<<<<<<<<<<<<
  */
@@ -9587,7 +9838,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_14natural_image
 
   /* "(tree fragment)":14
  *     else:
- *         return __pyx_unpickle_natural_images, (type(self), 0x0572a7d, state)
+ *         return __pyx_unpickle_natural_images, (type(self), 0x769784b, state)
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_natural_images__set_state(self, __pyx_state)
  */
@@ -10280,7 +10531,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_p
 
 /* "(tree fragment)":1
  * def __pyx_unpickle_natural_images(__pyx_type, long __pyx_checksum, __pyx_state):             # <<<<<<<<<<<<<<
- *     if __pyx_checksum != 0x0572a7d:
+ *     if __pyx_checksum != 0x769784b:
  *         from pickle import PickleError as __pyx_PickleError
  */
 
@@ -10373,18 +10624,18 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_8__pyx_unpickle
 
   /* "(tree fragment)":2
  * def __pyx_unpickle_natural_images(__pyx_type, long __pyx_checksum, __pyx_state):
- *     if __pyx_checksum != 0x0572a7d:             # <<<<<<<<<<<<<<
+ *     if __pyx_checksum != 0x769784b:             # <<<<<<<<<<<<<<
  *         from pickle import PickleError as __pyx_PickleError
- *         raise __pyx_PickleError("Incompatible checksums (%s vs 0x0572a7d = (N, buffer_size, c, connections_post, connections_pre, filename, im, linear_output, name, num_post, num_pre, number_of_patterns, number_of_pics, other_channel, output, p, pattern, pattern_number, patterns, post_process, r, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, use_other_channel, verbose))" % __pyx_checksum)
+ *         raise __pyx_PickleError("Incompatible checksums (%s vs 0x769784b = (N, buffer_size, c, connections_post, connections_pre, filename, im, images_loaded, linear_output, name, num_post, num_pre, number_of_patterns, number_of_pics, other_channel, output, p, pattern, pattern_number, patterns, post_process, r, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, use_other_channel, verbose))" % __pyx_checksum)
  */
-  __pyx_t_1 = ((__pyx_v___pyx_checksum != 0x0572a7d) != 0);
+  __pyx_t_1 = ((__pyx_v___pyx_checksum != 0x769784b) != 0);
   if (__pyx_t_1) {
 
     /* "(tree fragment)":3
  * def __pyx_unpickle_natural_images(__pyx_type, long __pyx_checksum, __pyx_state):
- *     if __pyx_checksum != 0x0572a7d:
+ *     if __pyx_checksum != 0x769784b:
  *         from pickle import PickleError as __pyx_PickleError             # <<<<<<<<<<<<<<
- *         raise __pyx_PickleError("Incompatible checksums (%s vs 0x0572a7d = (N, buffer_size, c, connections_post, connections_pre, filename, im, linear_output, name, num_post, num_pre, number_of_patterns, number_of_pics, other_channel, output, p, pattern, pattern_number, patterns, post_process, r, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, use_other_channel, verbose))" % __pyx_checksum)
+ *         raise __pyx_PickleError("Incompatible checksums (%s vs 0x769784b = (N, buffer_size, c, connections_post, connections_pre, filename, im, images_loaded, linear_output, name, num_post, num_pre, number_of_patterns, number_of_pics, other_channel, output, p, pattern, pattern_number, patterns, post_process, r, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, use_other_channel, verbose))" % __pyx_checksum)
  *     __pyx_result = natural_images.__new__(__pyx_type)
  */
     __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 3, __pyx_L1_error)
@@ -10403,15 +10654,15 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_8__pyx_unpickle
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
     /* "(tree fragment)":4
- *     if __pyx_checksum != 0x0572a7d:
+ *     if __pyx_checksum != 0x769784b:
  *         from pickle import PickleError as __pyx_PickleError
- *         raise __pyx_PickleError("Incompatible checksums (%s vs 0x0572a7d = (N, buffer_size, c, connections_post, connections_pre, filename, im, linear_output, name, num_post, num_pre, number_of_patterns, number_of_pics, other_channel, output, p, pattern, pattern_number, patterns, post_process, r, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, use_other_channel, verbose))" % __pyx_checksum)             # <<<<<<<<<<<<<<
+ *         raise __pyx_PickleError("Incompatible checksums (%s vs 0x769784b = (N, buffer_size, c, connections_post, connections_pre, filename, im, images_loaded, linear_output, name, num_post, num_pre, number_of_patterns, number_of_pics, other_channel, output, p, pattern, pattern_number, patterns, post_process, r, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, use_other_channel, verbose))" % __pyx_checksum)             # <<<<<<<<<<<<<<
  *     __pyx_result = natural_images.__new__(__pyx_type)
  *     if __pyx_state is not None:
  */
     __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v___pyx_checksum); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 4, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyString_Format(__pyx_kp_s_Incompatible_checksums_s_vs_0x05, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 4, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyString_Format(__pyx_kp_s_Incompatible_checksums_s_vs_0x76, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 4, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_INCREF(__pyx_v___pyx_PickleError);
@@ -10467,15 +10718,15 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_8__pyx_unpickle
 
     /* "(tree fragment)":2
  * def __pyx_unpickle_natural_images(__pyx_type, long __pyx_checksum, __pyx_state):
- *     if __pyx_checksum != 0x0572a7d:             # <<<<<<<<<<<<<<
+ *     if __pyx_checksum != 0x769784b:             # <<<<<<<<<<<<<<
  *         from pickle import PickleError as __pyx_PickleError
- *         raise __pyx_PickleError("Incompatible checksums (%s vs 0x0572a7d = (N, buffer_size, c, connections_post, connections_pre, filename, im, linear_output, name, num_post, num_pre, number_of_patterns, number_of_pics, other_channel, output, p, pattern, pattern_number, patterns, post_process, r, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, use_other_channel, verbose))" % __pyx_checksum)
+ *         raise __pyx_PickleError("Incompatible checksums (%s vs 0x769784b = (N, buffer_size, c, connections_post, connections_pre, filename, im, images_loaded, linear_output, name, num_post, num_pre, number_of_patterns, number_of_pics, other_channel, output, p, pattern, pattern_number, patterns, post_process, r, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, use_other_channel, verbose))" % __pyx_checksum)
  */
   }
 
   /* "(tree fragment)":5
  *         from pickle import PickleError as __pyx_PickleError
- *         raise __pyx_PickleError("Incompatible checksums (%s vs 0x0572a7d = (N, buffer_size, c, connections_post, connections_pre, filename, im, linear_output, name, num_post, num_pre, number_of_patterns, number_of_pics, other_channel, output, p, pattern, pattern_number, patterns, post_process, r, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, use_other_channel, verbose))" % __pyx_checksum)
+ *         raise __pyx_PickleError("Incompatible checksums (%s vs 0x769784b = (N, buffer_size, c, connections_post, connections_pre, filename, im, images_loaded, linear_output, name, num_post, num_pre, number_of_patterns, number_of_pics, other_channel, output, p, pattern, pattern_number, patterns, post_process, r, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, use_other_channel, verbose))" % __pyx_checksum)
  *     __pyx_result = natural_images.__new__(__pyx_type)             # <<<<<<<<<<<<<<
  *     if __pyx_state is not None:
  *         __pyx_unpickle_natural_images__set_state(<natural_images> __pyx_result, __pyx_state)
@@ -10529,7 +10780,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_8__pyx_unpickle
   __pyx_t_3 = 0;
 
   /* "(tree fragment)":6
- *         raise __pyx_PickleError("Incompatible checksums (%s vs 0x0572a7d = (N, buffer_size, c, connections_post, connections_pre, filename, im, linear_output, name, num_post, num_pre, number_of_patterns, number_of_pics, other_channel, output, p, pattern, pattern_number, patterns, post_process, r, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, use_other_channel, verbose))" % __pyx_checksum)
+ *         raise __pyx_PickleError("Incompatible checksums (%s vs 0x769784b = (N, buffer_size, c, connections_post, connections_pre, filename, im, images_loaded, linear_output, name, num_post, num_pre, number_of_patterns, number_of_pics, other_channel, output, p, pattern, pattern_number, patterns, post_process, r, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, use_other_channel, verbose))" % __pyx_checksum)
  *     __pyx_result = natural_images.__new__(__pyx_type)
  *     if __pyx_state is not None:             # <<<<<<<<<<<<<<
  *         __pyx_unpickle_natural_images__set_state(<natural_images> __pyx_result, __pyx_state)
@@ -10552,7 +10803,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_8__pyx_unpickle
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
     /* "(tree fragment)":6
- *         raise __pyx_PickleError("Incompatible checksums (%s vs 0x0572a7d = (N, buffer_size, c, connections_post, connections_pre, filename, im, linear_output, name, num_post, num_pre, number_of_patterns, number_of_pics, other_channel, output, p, pattern, pattern_number, patterns, post_process, r, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, use_other_channel, verbose))" % __pyx_checksum)
+ *         raise __pyx_PickleError("Incompatible checksums (%s vs 0x769784b = (N, buffer_size, c, connections_post, connections_pre, filename, im, images_loaded, linear_output, name, num_post, num_pre, number_of_patterns, number_of_pics, other_channel, output, p, pattern, pattern_number, patterns, post_process, r, rf_size, save_attrs, save_data, sequential, time_between_patterns, time_to_next_pattern, use_other_channel, verbose))" % __pyx_checksum)
  *     __pyx_result = natural_images.__new__(__pyx_type)
  *     if __pyx_state is not None:             # <<<<<<<<<<<<<<
  *         __pyx_unpickle_natural_images__set_state(<natural_images> __pyx_result, __pyx_state)
@@ -10565,7 +10816,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_8__pyx_unpickle
  *         __pyx_unpickle_natural_images__set_state(<natural_images> __pyx_result, __pyx_state)
  *     return __pyx_result             # <<<<<<<<<<<<<<
  * cdef __pyx_unpickle_natural_images__set_state(natural_images __pyx_result, tuple __pyx_state):
- *     __pyx_result.N = __pyx_state[0]; __pyx_result.buffer_size = __pyx_state[1]; __pyx_result.c = __pyx_state[2]; __pyx_result.connections_post = __pyx_state[3]; __pyx_result.connections_pre = __pyx_state[4]; __pyx_result.filename = __pyx_state[5]; __pyx_result.im = __pyx_state[6]; __pyx_result.linear_output = __pyx_state[7]; __pyx_result.name = __pyx_state[8]; __pyx_result.num_post = __pyx_state[9]; __pyx_result.num_pre = __pyx_state[10]; __pyx_result.number_of_patterns = __pyx_state[11]; __pyx_result.number_of_pics = __pyx_state[12]; __pyx_result.other_channel = __pyx_state[13]; __pyx_result.output = __pyx_state[14]; __pyx_result.p = __pyx_state[15]; __pyx_result.pattern = __pyx_state[16]; __pyx_result.pattern_number = __pyx_state[17]; __pyx_result.patterns = __pyx_state[18]; __pyx_result.post_process = __pyx_state[19]; __pyx_result.r = __pyx_state[20]; __pyx_result.rf_size = __pyx_state[21]; __pyx_result.save_attrs = __pyx_state[22]; __pyx_result.save_data = __pyx_state[23]; __pyx_result.sequential = __pyx_state[24]; __pyx_result.time_between_patterns = __pyx_state[25]; __pyx_result.time_to_next_pattern = __pyx_state[26]; __pyx_result.use_other_channel = __pyx_state[27]; __pyx_result.verbose = __pyx_state[28]
+ *     __pyx_result.N = __pyx_state[0]; __pyx_result.buffer_size = __pyx_state[1]; __pyx_result.c = __pyx_state[2]; __pyx_result.connections_post = __pyx_state[3]; __pyx_result.connections_pre = __pyx_state[4]; __pyx_result.filename = __pyx_state[5]; __pyx_result.im = __pyx_state[6]; __pyx_result.images_loaded = __pyx_state[7]; __pyx_result.linear_output = __pyx_state[8]; __pyx_result.name = __pyx_state[9]; __pyx_result.num_post = __pyx_state[10]; __pyx_result.num_pre = __pyx_state[11]; __pyx_result.number_of_patterns = __pyx_state[12]; __pyx_result.number_of_pics = __pyx_state[13]; __pyx_result.other_channel = __pyx_state[14]; __pyx_result.output = __pyx_state[15]; __pyx_result.p = __pyx_state[16]; __pyx_result.pattern = __pyx_state[17]; __pyx_result.pattern_number = __pyx_state[18]; __pyx_result.patterns = __pyx_state[19]; __pyx_result.post_process = __pyx_state[20]; __pyx_result.r = __pyx_state[21]; __pyx_result.rf_size = __pyx_state[22]; __pyx_result.save_attrs = __pyx_state[23]; __pyx_result.save_data = __pyx_state[24]; __pyx_result.sequential = __pyx_state[25]; __pyx_result.time_between_patterns = __pyx_state[26]; __pyx_result.time_to_next_pattern = __pyx_state[27]; __pyx_result.use_other_channel = __pyx_state[28]; __pyx_result.verbose = __pyx_state[29]
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v___pyx_result);
@@ -10574,7 +10825,7 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_8__pyx_unpickle
 
   /* "(tree fragment)":1
  * def __pyx_unpickle_natural_images(__pyx_type, long __pyx_checksum, __pyx_state):             # <<<<<<<<<<<<<<
- *     if __pyx_checksum != 0x0572a7d:
+ *     if __pyx_checksum != 0x769784b:
  *         from pickle import PickleError as __pyx_PickleError
  */
 
@@ -10599,8 +10850,8 @@ static PyObject *__pyx_pf_10plasticnet_7neurons_14pattern_neuron_8__pyx_unpickle
  *         __pyx_unpickle_natural_images__set_state(<natural_images> __pyx_result, __pyx_state)
  *     return __pyx_result
  * cdef __pyx_unpickle_natural_images__set_state(natural_images __pyx_result, tuple __pyx_state):             # <<<<<<<<<<<<<<
- *     __pyx_result.N = __pyx_state[0]; __pyx_result.buffer_size = __pyx_state[1]; __pyx_result.c = __pyx_state[2]; __pyx_result.connections_post = __pyx_state[3]; __pyx_result.connections_pre = __pyx_state[4]; __pyx_result.filename = __pyx_state[5]; __pyx_result.im = __pyx_state[6]; __pyx_result.linear_output = __pyx_state[7]; __pyx_result.name = __pyx_state[8]; __pyx_result.num_post = __pyx_state[9]; __pyx_result.num_pre = __pyx_state[10]; __pyx_result.number_of_patterns = __pyx_state[11]; __pyx_result.number_of_pics = __pyx_state[12]; __pyx_result.other_channel = __pyx_state[13]; __pyx_result.output = __pyx_state[14]; __pyx_result.p = __pyx_state[15]; __pyx_result.pattern = __pyx_state[16]; __pyx_result.pattern_number = __pyx_state[17]; __pyx_result.patterns = __pyx_state[18]; __pyx_result.post_process = __pyx_state[19]; __pyx_result.r = __pyx_state[20]; __pyx_result.rf_size = __pyx_state[21]; __pyx_result.save_attrs = __pyx_state[22]; __pyx_result.save_data = __pyx_state[23]; __pyx_result.sequential = __pyx_state[24]; __pyx_result.time_between_patterns = __pyx_state[25]; __pyx_result.time_to_next_pattern = __pyx_state[26]; __pyx_result.use_other_channel = __pyx_state[27]; __pyx_result.verbose = __pyx_state[28]
- *     if len(__pyx_state) > 29 and hasattr(__pyx_result, '__dict__'):
+ *     __pyx_result.N = __pyx_state[0]; __pyx_result.buffer_size = __pyx_state[1]; __pyx_result.c = __pyx_state[2]; __pyx_result.connections_post = __pyx_state[3]; __pyx_result.connections_pre = __pyx_state[4]; __pyx_result.filename = __pyx_state[5]; __pyx_result.im = __pyx_state[6]; __pyx_result.images_loaded = __pyx_state[7]; __pyx_result.linear_output = __pyx_state[8]; __pyx_result.name = __pyx_state[9]; __pyx_result.num_post = __pyx_state[10]; __pyx_result.num_pre = __pyx_state[11]; __pyx_result.number_of_patterns = __pyx_state[12]; __pyx_result.number_of_pics = __pyx_state[13]; __pyx_result.other_channel = __pyx_state[14]; __pyx_result.output = __pyx_state[15]; __pyx_result.p = __pyx_state[16]; __pyx_result.pattern = __pyx_state[17]; __pyx_result.pattern_number = __pyx_state[18]; __pyx_result.patterns = __pyx_state[19]; __pyx_result.post_process = __pyx_state[20]; __pyx_result.r = __pyx_state[21]; __pyx_result.rf_size = __pyx_state[22]; __pyx_result.save_attrs = __pyx_state[23]; __pyx_result.save_data = __pyx_state[24]; __pyx_result.sequential = __pyx_state[25]; __pyx_result.time_between_patterns = __pyx_state[26]; __pyx_result.time_to_next_pattern = __pyx_state[27]; __pyx_result.use_other_channel = __pyx_state[28]; __pyx_result.verbose = __pyx_state[29]
+ *     if len(__pyx_state) > 30 and hasattr(__pyx_result, '__dict__'):
  */
 
 static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_natural_images__set_state(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
@@ -10622,9 +10873,9 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
   /* "(tree fragment)":10
  *     return __pyx_result
  * cdef __pyx_unpickle_natural_images__set_state(natural_images __pyx_result, tuple __pyx_state):
- *     __pyx_result.N = __pyx_state[0]; __pyx_result.buffer_size = __pyx_state[1]; __pyx_result.c = __pyx_state[2]; __pyx_result.connections_post = __pyx_state[3]; __pyx_result.connections_pre = __pyx_state[4]; __pyx_result.filename = __pyx_state[5]; __pyx_result.im = __pyx_state[6]; __pyx_result.linear_output = __pyx_state[7]; __pyx_result.name = __pyx_state[8]; __pyx_result.num_post = __pyx_state[9]; __pyx_result.num_pre = __pyx_state[10]; __pyx_result.number_of_patterns = __pyx_state[11]; __pyx_result.number_of_pics = __pyx_state[12]; __pyx_result.other_channel = __pyx_state[13]; __pyx_result.output = __pyx_state[14]; __pyx_result.p = __pyx_state[15]; __pyx_result.pattern = __pyx_state[16]; __pyx_result.pattern_number = __pyx_state[17]; __pyx_result.patterns = __pyx_state[18]; __pyx_result.post_process = __pyx_state[19]; __pyx_result.r = __pyx_state[20]; __pyx_result.rf_size = __pyx_state[21]; __pyx_result.save_attrs = __pyx_state[22]; __pyx_result.save_data = __pyx_state[23]; __pyx_result.sequential = __pyx_state[24]; __pyx_result.time_between_patterns = __pyx_state[25]; __pyx_result.time_to_next_pattern = __pyx_state[26]; __pyx_result.use_other_channel = __pyx_state[27]; __pyx_result.verbose = __pyx_state[28]             # <<<<<<<<<<<<<<
- *     if len(__pyx_state) > 29 and hasattr(__pyx_result, '__dict__'):
- *         __pyx_result.__dict__.update(__pyx_state[29])
+ *     __pyx_result.N = __pyx_state[0]; __pyx_result.buffer_size = __pyx_state[1]; __pyx_result.c = __pyx_state[2]; __pyx_result.connections_post = __pyx_state[3]; __pyx_result.connections_pre = __pyx_state[4]; __pyx_result.filename = __pyx_state[5]; __pyx_result.im = __pyx_state[6]; __pyx_result.images_loaded = __pyx_state[7]; __pyx_result.linear_output = __pyx_state[8]; __pyx_result.name = __pyx_state[9]; __pyx_result.num_post = __pyx_state[10]; __pyx_result.num_pre = __pyx_state[11]; __pyx_result.number_of_patterns = __pyx_state[12]; __pyx_result.number_of_pics = __pyx_state[13]; __pyx_result.other_channel = __pyx_state[14]; __pyx_result.output = __pyx_state[15]; __pyx_result.p = __pyx_state[16]; __pyx_result.pattern = __pyx_state[17]; __pyx_result.pattern_number = __pyx_state[18]; __pyx_result.patterns = __pyx_state[19]; __pyx_result.post_process = __pyx_state[20]; __pyx_result.r = __pyx_state[21]; __pyx_result.rf_size = __pyx_state[22]; __pyx_result.save_attrs = __pyx_state[23]; __pyx_result.save_data = __pyx_state[24]; __pyx_result.sequential = __pyx_state[25]; __pyx_result.time_between_patterns = __pyx_state[26]; __pyx_result.time_to_next_pattern = __pyx_state[27]; __pyx_result.use_other_channel = __pyx_state[28]; __pyx_result.verbose = __pyx_state[29]             # <<<<<<<<<<<<<<
+ *     if len(__pyx_state) > 30 and hasattr(__pyx_result, '__dict__'):
+ *         __pyx_result.__dict__.update(__pyx_state[30])
  */
   if (unlikely(__pyx_v___pyx_state == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -10703,6 +10954,15 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
   }
   __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 7, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(1, 10, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v___pyx_result->images_loaded = __pyx_t_2;
+  if (unlikely(__pyx_v___pyx_state == Py_None)) {
+    PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+    __PYX_ERR(1, 10, __pyx_L1_error)
+  }
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 8, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v___pyx_result->__pyx_base.__pyx_base.linear_output);
@@ -10713,7 +10973,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 8, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 9, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v___pyx_result->__pyx_base.__pyx_base.__pyx_base.name);
@@ -10724,7 +10984,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 9, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 10, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10733,7 +10993,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 10, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 11, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10742,7 +11002,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 11, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 12, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10751,7 +11011,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 12, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 13, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10760,7 +11020,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 13, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 14, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_10plasticnet_7neurons_14pattern_neuron_natural_images))))) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
@@ -10772,7 +11032,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 14, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 15, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
@@ -10784,7 +11044,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 15, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 16, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10793,7 +11053,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 16, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 17, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
@@ -10805,7 +11065,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 17, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 18, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10814,7 +11074,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 18, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 19, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
@@ -10826,7 +11086,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 19, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 20, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v___pyx_result->__pyx_base.__pyx_base.post_process);
@@ -10837,7 +11097,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 20, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 21, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10846,7 +11106,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 21, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 22, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10855,7 +11115,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 22, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 23, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v___pyx_result->__pyx_base.__pyx_base.__pyx_base.save_attrs);
@@ -10866,7 +11126,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 23, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 24, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v___pyx_result->__pyx_base.__pyx_base.__pyx_base.save_data);
@@ -10877,7 +11137,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 24, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 25, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10886,7 +11146,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 25, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 26, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10895,7 +11155,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 26, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 27, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10904,7 +11164,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 27, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 28, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10913,7 +11173,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(1, 10, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 28, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 29, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(1, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10921,16 +11181,16 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
 
   /* "(tree fragment)":11
  * cdef __pyx_unpickle_natural_images__set_state(natural_images __pyx_result, tuple __pyx_state):
- *     __pyx_result.N = __pyx_state[0]; __pyx_result.buffer_size = __pyx_state[1]; __pyx_result.c = __pyx_state[2]; __pyx_result.connections_post = __pyx_state[3]; __pyx_result.connections_pre = __pyx_state[4]; __pyx_result.filename = __pyx_state[5]; __pyx_result.im = __pyx_state[6]; __pyx_result.linear_output = __pyx_state[7]; __pyx_result.name = __pyx_state[8]; __pyx_result.num_post = __pyx_state[9]; __pyx_result.num_pre = __pyx_state[10]; __pyx_result.number_of_patterns = __pyx_state[11]; __pyx_result.number_of_pics = __pyx_state[12]; __pyx_result.other_channel = __pyx_state[13]; __pyx_result.output = __pyx_state[14]; __pyx_result.p = __pyx_state[15]; __pyx_result.pattern = __pyx_state[16]; __pyx_result.pattern_number = __pyx_state[17]; __pyx_result.patterns = __pyx_state[18]; __pyx_result.post_process = __pyx_state[19]; __pyx_result.r = __pyx_state[20]; __pyx_result.rf_size = __pyx_state[21]; __pyx_result.save_attrs = __pyx_state[22]; __pyx_result.save_data = __pyx_state[23]; __pyx_result.sequential = __pyx_state[24]; __pyx_result.time_between_patterns = __pyx_state[25]; __pyx_result.time_to_next_pattern = __pyx_state[26]; __pyx_result.use_other_channel = __pyx_state[27]; __pyx_result.verbose = __pyx_state[28]
- *     if len(__pyx_state) > 29 and hasattr(__pyx_result, '__dict__'):             # <<<<<<<<<<<<<<
- *         __pyx_result.__dict__.update(__pyx_state[29])
+ *     __pyx_result.N = __pyx_state[0]; __pyx_result.buffer_size = __pyx_state[1]; __pyx_result.c = __pyx_state[2]; __pyx_result.connections_post = __pyx_state[3]; __pyx_result.connections_pre = __pyx_state[4]; __pyx_result.filename = __pyx_state[5]; __pyx_result.im = __pyx_state[6]; __pyx_result.images_loaded = __pyx_state[7]; __pyx_result.linear_output = __pyx_state[8]; __pyx_result.name = __pyx_state[9]; __pyx_result.num_post = __pyx_state[10]; __pyx_result.num_pre = __pyx_state[11]; __pyx_result.number_of_patterns = __pyx_state[12]; __pyx_result.number_of_pics = __pyx_state[13]; __pyx_result.other_channel = __pyx_state[14]; __pyx_result.output = __pyx_state[15]; __pyx_result.p = __pyx_state[16]; __pyx_result.pattern = __pyx_state[17]; __pyx_result.pattern_number = __pyx_state[18]; __pyx_result.patterns = __pyx_state[19]; __pyx_result.post_process = __pyx_state[20]; __pyx_result.r = __pyx_state[21]; __pyx_result.rf_size = __pyx_state[22]; __pyx_result.save_attrs = __pyx_state[23]; __pyx_result.save_data = __pyx_state[24]; __pyx_result.sequential = __pyx_state[25]; __pyx_result.time_between_patterns = __pyx_state[26]; __pyx_result.time_to_next_pattern = __pyx_state[27]; __pyx_result.use_other_channel = __pyx_state[28]; __pyx_result.verbose = __pyx_state[29]
+ *     if len(__pyx_state) > 30 and hasattr(__pyx_result, '__dict__'):             # <<<<<<<<<<<<<<
+ *         __pyx_result.__dict__.update(__pyx_state[30])
  */
   if (unlikely(__pyx_v___pyx_state == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(1, 11, __pyx_L1_error)
   }
   __pyx_t_5 = PyTuple_GET_SIZE(__pyx_v___pyx_state); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(1, 11, __pyx_L1_error)
-  __pyx_t_6 = ((__pyx_t_5 > 29) != 0);
+  __pyx_t_6 = ((__pyx_t_5 > 30) != 0);
   if (__pyx_t_6) {
   } else {
     __pyx_t_4 = __pyx_t_6;
@@ -10943,9 +11203,9 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
   if (__pyx_t_4) {
 
     /* "(tree fragment)":12
- *     __pyx_result.N = __pyx_state[0]; __pyx_result.buffer_size = __pyx_state[1]; __pyx_result.c = __pyx_state[2]; __pyx_result.connections_post = __pyx_state[3]; __pyx_result.connections_pre = __pyx_state[4]; __pyx_result.filename = __pyx_state[5]; __pyx_result.im = __pyx_state[6]; __pyx_result.linear_output = __pyx_state[7]; __pyx_result.name = __pyx_state[8]; __pyx_result.num_post = __pyx_state[9]; __pyx_result.num_pre = __pyx_state[10]; __pyx_result.number_of_patterns = __pyx_state[11]; __pyx_result.number_of_pics = __pyx_state[12]; __pyx_result.other_channel = __pyx_state[13]; __pyx_result.output = __pyx_state[14]; __pyx_result.p = __pyx_state[15]; __pyx_result.pattern = __pyx_state[16]; __pyx_result.pattern_number = __pyx_state[17]; __pyx_result.patterns = __pyx_state[18]; __pyx_result.post_process = __pyx_state[19]; __pyx_result.r = __pyx_state[20]; __pyx_result.rf_size = __pyx_state[21]; __pyx_result.save_attrs = __pyx_state[22]; __pyx_result.save_data = __pyx_state[23]; __pyx_result.sequential = __pyx_state[24]; __pyx_result.time_between_patterns = __pyx_state[25]; __pyx_result.time_to_next_pattern = __pyx_state[26]; __pyx_result.use_other_channel = __pyx_state[27]; __pyx_result.verbose = __pyx_state[28]
- *     if len(__pyx_state) > 29 and hasattr(__pyx_result, '__dict__'):
- *         __pyx_result.__dict__.update(__pyx_state[29])             # <<<<<<<<<<<<<<
+ *     __pyx_result.N = __pyx_state[0]; __pyx_result.buffer_size = __pyx_state[1]; __pyx_result.c = __pyx_state[2]; __pyx_result.connections_post = __pyx_state[3]; __pyx_result.connections_pre = __pyx_state[4]; __pyx_result.filename = __pyx_state[5]; __pyx_result.im = __pyx_state[6]; __pyx_result.images_loaded = __pyx_state[7]; __pyx_result.linear_output = __pyx_state[8]; __pyx_result.name = __pyx_state[9]; __pyx_result.num_post = __pyx_state[10]; __pyx_result.num_pre = __pyx_state[11]; __pyx_result.number_of_patterns = __pyx_state[12]; __pyx_result.number_of_pics = __pyx_state[13]; __pyx_result.other_channel = __pyx_state[14]; __pyx_result.output = __pyx_state[15]; __pyx_result.p = __pyx_state[16]; __pyx_result.pattern = __pyx_state[17]; __pyx_result.pattern_number = __pyx_state[18]; __pyx_result.patterns = __pyx_state[19]; __pyx_result.post_process = __pyx_state[20]; __pyx_result.r = __pyx_state[21]; __pyx_result.rf_size = __pyx_state[22]; __pyx_result.save_attrs = __pyx_state[23]; __pyx_result.save_data = __pyx_state[24]; __pyx_result.sequential = __pyx_state[25]; __pyx_result.time_between_patterns = __pyx_state[26]; __pyx_result.time_to_next_pattern = __pyx_state[27]; __pyx_result.use_other_channel = __pyx_state[28]; __pyx_result.verbose = __pyx_state[29]
+ *     if len(__pyx_state) > 30 and hasattr(__pyx_result, '__dict__'):
+ *         __pyx_result.__dict__.update(__pyx_state[30])             # <<<<<<<<<<<<<<
  */
     __pyx_t_8 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v___pyx_result), __pyx_n_s_dict); if (unlikely(!__pyx_t_8)) __PYX_ERR(1, 12, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
@@ -10956,7 +11216,7 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
       __PYX_ERR(1, 12, __pyx_L1_error)
     }
-    __pyx_t_8 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 29, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(1, 12, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 30, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(1, 12, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __pyx_t_10 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_9))) {
@@ -11008,9 +11268,9 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
 
     /* "(tree fragment)":11
  * cdef __pyx_unpickle_natural_images__set_state(natural_images __pyx_result, tuple __pyx_state):
- *     __pyx_result.N = __pyx_state[0]; __pyx_result.buffer_size = __pyx_state[1]; __pyx_result.c = __pyx_state[2]; __pyx_result.connections_post = __pyx_state[3]; __pyx_result.connections_pre = __pyx_state[4]; __pyx_result.filename = __pyx_state[5]; __pyx_result.im = __pyx_state[6]; __pyx_result.linear_output = __pyx_state[7]; __pyx_result.name = __pyx_state[8]; __pyx_result.num_post = __pyx_state[9]; __pyx_result.num_pre = __pyx_state[10]; __pyx_result.number_of_patterns = __pyx_state[11]; __pyx_result.number_of_pics = __pyx_state[12]; __pyx_result.other_channel = __pyx_state[13]; __pyx_result.output = __pyx_state[14]; __pyx_result.p = __pyx_state[15]; __pyx_result.pattern = __pyx_state[16]; __pyx_result.pattern_number = __pyx_state[17]; __pyx_result.patterns = __pyx_state[18]; __pyx_result.post_process = __pyx_state[19]; __pyx_result.r = __pyx_state[20]; __pyx_result.rf_size = __pyx_state[21]; __pyx_result.save_attrs = __pyx_state[22]; __pyx_result.save_data = __pyx_state[23]; __pyx_result.sequential = __pyx_state[24]; __pyx_result.time_between_patterns = __pyx_state[25]; __pyx_result.time_to_next_pattern = __pyx_state[26]; __pyx_result.use_other_channel = __pyx_state[27]; __pyx_result.verbose = __pyx_state[28]
- *     if len(__pyx_state) > 29 and hasattr(__pyx_result, '__dict__'):             # <<<<<<<<<<<<<<
- *         __pyx_result.__dict__.update(__pyx_state[29])
+ *     __pyx_result.N = __pyx_state[0]; __pyx_result.buffer_size = __pyx_state[1]; __pyx_result.c = __pyx_state[2]; __pyx_result.connections_post = __pyx_state[3]; __pyx_result.connections_pre = __pyx_state[4]; __pyx_result.filename = __pyx_state[5]; __pyx_result.im = __pyx_state[6]; __pyx_result.images_loaded = __pyx_state[7]; __pyx_result.linear_output = __pyx_state[8]; __pyx_result.name = __pyx_state[9]; __pyx_result.num_post = __pyx_state[10]; __pyx_result.num_pre = __pyx_state[11]; __pyx_result.number_of_patterns = __pyx_state[12]; __pyx_result.number_of_pics = __pyx_state[13]; __pyx_result.other_channel = __pyx_state[14]; __pyx_result.output = __pyx_state[15]; __pyx_result.p = __pyx_state[16]; __pyx_result.pattern = __pyx_state[17]; __pyx_result.pattern_number = __pyx_state[18]; __pyx_result.patterns = __pyx_state[19]; __pyx_result.post_process = __pyx_state[20]; __pyx_result.r = __pyx_state[21]; __pyx_result.rf_size = __pyx_state[22]; __pyx_result.save_attrs = __pyx_state[23]; __pyx_result.save_data = __pyx_state[24]; __pyx_result.sequential = __pyx_state[25]; __pyx_result.time_between_patterns = __pyx_state[26]; __pyx_result.time_to_next_pattern = __pyx_state[27]; __pyx_result.use_other_channel = __pyx_state[28]; __pyx_result.verbose = __pyx_state[29]
+ *     if len(__pyx_state) > 30 and hasattr(__pyx_result, '__dict__'):             # <<<<<<<<<<<<<<
+ *         __pyx_result.__dict__.update(__pyx_state[30])
  */
   }
 
@@ -11018,8 +11278,8 @@ static PyObject *__pyx_f_10plasticnet_7neurons_14pattern_neuron___pyx_unpickle_n
  *         __pyx_unpickle_natural_images__set_state(<natural_images> __pyx_result, __pyx_state)
  *     return __pyx_result
  * cdef __pyx_unpickle_natural_images__set_state(natural_images __pyx_result, tuple __pyx_state):             # <<<<<<<<<<<<<<
- *     __pyx_result.N = __pyx_state[0]; __pyx_result.buffer_size = __pyx_state[1]; __pyx_result.c = __pyx_state[2]; __pyx_result.connections_post = __pyx_state[3]; __pyx_result.connections_pre = __pyx_state[4]; __pyx_result.filename = __pyx_state[5]; __pyx_result.im = __pyx_state[6]; __pyx_result.linear_output = __pyx_state[7]; __pyx_result.name = __pyx_state[8]; __pyx_result.num_post = __pyx_state[9]; __pyx_result.num_pre = __pyx_state[10]; __pyx_result.number_of_patterns = __pyx_state[11]; __pyx_result.number_of_pics = __pyx_state[12]; __pyx_result.other_channel = __pyx_state[13]; __pyx_result.output = __pyx_state[14]; __pyx_result.p = __pyx_state[15]; __pyx_result.pattern = __pyx_state[16]; __pyx_result.pattern_number = __pyx_state[17]; __pyx_result.patterns = __pyx_state[18]; __pyx_result.post_process = __pyx_state[19]; __pyx_result.r = __pyx_state[20]; __pyx_result.rf_size = __pyx_state[21]; __pyx_result.save_attrs = __pyx_state[22]; __pyx_result.save_data = __pyx_state[23]; __pyx_result.sequential = __pyx_state[24]; __pyx_result.time_between_patterns = __pyx_state[25]; __pyx_result.time_to_next_pattern = __pyx_state[26]; __pyx_result.use_other_channel = __pyx_state[27]; __pyx_result.verbose = __pyx_state[28]
- *     if len(__pyx_state) > 29 and hasattr(__pyx_result, '__dict__'):
+ *     __pyx_result.N = __pyx_state[0]; __pyx_result.buffer_size = __pyx_state[1]; __pyx_result.c = __pyx_state[2]; __pyx_result.connections_post = __pyx_state[3]; __pyx_result.connections_pre = __pyx_state[4]; __pyx_result.filename = __pyx_state[5]; __pyx_result.im = __pyx_state[6]; __pyx_result.images_loaded = __pyx_state[7]; __pyx_result.linear_output = __pyx_state[8]; __pyx_result.name = __pyx_state[9]; __pyx_result.num_post = __pyx_state[10]; __pyx_result.num_pre = __pyx_state[11]; __pyx_result.number_of_patterns = __pyx_state[12]; __pyx_result.number_of_pics = __pyx_state[13]; __pyx_result.other_channel = __pyx_state[14]; __pyx_result.output = __pyx_state[15]; __pyx_result.p = __pyx_state[16]; __pyx_result.pattern = __pyx_state[17]; __pyx_result.pattern_number = __pyx_state[18]; __pyx_result.patterns = __pyx_state[19]; __pyx_result.post_process = __pyx_state[20]; __pyx_result.r = __pyx_state[21]; __pyx_result.rf_size = __pyx_state[22]; __pyx_result.save_attrs = __pyx_state[23]; __pyx_result.save_data = __pyx_state[24]; __pyx_result.sequential = __pyx_state[25]; __pyx_result.time_between_patterns = __pyx_state[26]; __pyx_result.time_to_next_pattern = __pyx_state[27]; __pyx_result.use_other_channel = __pyx_state[28]; __pyx_result.verbose = __pyx_state[29]
+ *     if len(__pyx_state) > 30 and hasattr(__pyx_result, '__dict__'):
  */
 
   /* function exit code */
@@ -13860,9 +14120,10 @@ static int __pyx_setprop_10plasticnet_7neurons_14pattern_neuron_14natural_images
 
 static PyMethodDef __pyx_methods_10plasticnet_7neurons_14pattern_neuron_natural_images[] = {
   {"_reset", (PyCFunction)__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_1_reset, METH_NOARGS, 0},
-  {"new_pattern", (PyCFunction)__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_5new_pattern, METH_O, 0},
-  {"__reduce_cython__", (PyCFunction)__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_7__reduce_cython__, METH_NOARGS, 0},
-  {"__setstate_cython__", (PyCFunction)__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_9__setstate_cython__, METH_O, 0},
+  {"_clean", (PyCFunction)__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_5_clean, METH_NOARGS, 0},
+  {"new_pattern", (PyCFunction)__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_7new_pattern, METH_O, 0},
+  {"__reduce_cython__", (PyCFunction)__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_9__reduce_cython__, METH_NOARGS, 0},
+  {"__setstate_cython__", (PyCFunction)__pyx_pw_10plasticnet_7neurons_14pattern_neuron_14natural_images_11__setstate_cython__, METH_O, 0},
   {0, 0, 0, 0}
 };
 
@@ -13981,7 +14242,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_In_Update_pattern_neuron, __pyx_k_In_Update_pattern_neuron, sizeof(__pyx_k_In_Update_pattern_neuron), 0, 0, 1, 0},
   {&__pyx_kp_s_In_new_pattern, __pyx_k_In_new_pattern, sizeof(__pyx_k_In_new_pattern), 0, 0, 1, 0},
   {&__pyx_kp_s_Incompatible_checksums_s_vs_0x02, __pyx_k_Incompatible_checksums_s_vs_0x02, sizeof(__pyx_k_Incompatible_checksums_s_vs_0x02), 0, 0, 1, 0},
-  {&__pyx_kp_s_Incompatible_checksums_s_vs_0x05, __pyx_k_Incompatible_checksums_s_vs_0x05, sizeof(__pyx_k_Incompatible_checksums_s_vs_0x05), 0, 0, 1, 0},
+  {&__pyx_kp_s_Incompatible_checksums_s_vs_0x76, __pyx_k_Incompatible_checksums_s_vs_0x76, sizeof(__pyx_k_Incompatible_checksums_s_vs_0x76), 0, 0, 1, 0},
   {&__pyx_n_s_N, __pyx_k_N, sizeof(__pyx_k_N), 0, 0, 1, 1},
   {&__pyx_kp_s_Natural_Images, __pyx_k_Natural_Images, sizeof(__pyx_k_Natural_Images), 0, 0, 1, 0},
   {&__pyx_kp_s_New_pattern_d, __pyx_k_New_pattern_d, sizeof(__pyx_k_New_pattern_d), 0, 0, 1, 0},
@@ -14010,6 +14271,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_attrs, __pyx_k_attrs, sizeof(__pyx_k_attrs), 0, 0, 1, 1},
   {&__pyx_n_s_buffer_size, __pyx_k_buffer_size, sizeof(__pyx_k_buffer_size), 0, 0, 1, 1},
   {&__pyx_n_s_category, __pyx_k_category, sizeof(__pyx_k_category), 0, 0, 1, 1},
+  {&__pyx_n_s_clean, __pyx_k_clean, sizeof(__pyx_k_clean), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_close, __pyx_k_close, sizeof(__pyx_k_close), 0, 0, 1, 1},
   {&__pyx_kp_s_d_d, __pyx_k_d_d, sizeof(__pyx_k_d_d), 0, 0, 1, 0},
@@ -14113,7 +14375,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
 static int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 86, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 137, __pyx_L1_error)
-  __pyx_builtin_any = __Pyx_GetBuiltinName(__pyx_n_s_any); if (!__pyx_builtin_any) __PYX_ERR(0, 176, __pyx_L1_error)
+  __pyx_builtin_any = __Pyx_GetBuiltinName(__pyx_n_s_any); if (!__pyx_builtin_any) __PYX_ERR(0, 198, __pyx_L1_error)
   __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) __PYX_ERR(2, 810, __pyx_L1_error)
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(2, 1000, __pyx_L1_error)
   return 0;
@@ -14224,25 +14486,25 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":176
- *             self.use_other_channel=False
+  /* "plasticnet/neurons/pattern_neuron.pyx":198
  * 
- *         if any([fname.endswith(ext) for ext in ['.hdf5','h5','hd5']]):             # <<<<<<<<<<<<<<
- *             image_data=hdf5_load_images(fname)
- *         elif fname.endswith('.asdf'):
+ *     cdef load_images(self):
+ *         if any([self.filename.endswith(ext) for ext in ['.hdf5','h5','hd5']]):             # <<<<<<<<<<<<<<
+ *             image_data=hdf5_load_images(self.filename)
+ *         elif self.filename.endswith('.asdf'):
  */
-  __pyx_tuple__14 = PyTuple_Pack(3, __pyx_kp_s_hdf5, __pyx_n_s_h5, __pyx_n_s_hd5); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 176, __pyx_L1_error)
+  __pyx_tuple__14 = PyTuple_Pack(3, __pyx_kp_s_hdf5, __pyx_n_s_h5, __pyx_n_s_hd5); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
 
-  /* "plasticnet/neurons/pattern_neuron.pyx":178
- *         if any([fname.endswith(ext) for ext in ['.hdf5','h5','hd5']]):
- *             image_data=hdf5_load_images(fname)
- *         elif fname.endswith('.asdf'):             # <<<<<<<<<<<<<<
- *             image_data=asdf_load_images(fname)
+  /* "plasticnet/neurons/pattern_neuron.pyx":200
+ *         if any([self.filename.endswith(ext) for ext in ['.hdf5','h5','hd5']]):
+ *             image_data=hdf5_load_images(self.filename)
+ *         elif self.filename.endswith('.asdf'):             # <<<<<<<<<<<<<<
+ *             image_data=asdf_load_images(self.filename)
  *         else:
  */
-  __pyx_tuple__15 = PyTuple_Pack(1, __pyx_kp_s_asdf_2); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_tuple__15 = PyTuple_Pack(1, __pyx_kp_s_asdf_2); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
 
@@ -14405,7 +14667,7 @@ static int __Pyx_InitGlobals(void) {
   __pyx_int_1 = PyInt_FromLong(1); if (unlikely(!__pyx_int_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_13 = PyInt_FromLong(13); if (unlikely(!__pyx_int_13)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_3125799 = PyInt_FromLong(3125799L); if (unlikely(!__pyx_int_3125799)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_int_5712509 = PyInt_FromLong(5712509L); if (unlikely(!__pyx_int_5712509)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_int_124352587 = PyInt_FromLong(124352587L); if (unlikely(!__pyx_int_124352587)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -14468,7 +14730,9 @@ static int __Pyx_modinit_type_init_code(void) {
   __pyx_vtabptr_10plasticnet_7neurons_14pattern_neuron_natural_images = &__pyx_vtable_10plasticnet_7neurons_14pattern_neuron_natural_images;
   __pyx_vtable_10plasticnet_7neurons_14pattern_neuron_natural_images.__pyx_base = *__pyx_vtabptr_10plasticnet_7neurons_14pattern_neuron_pattern_neuron;
   __pyx_vtable_10plasticnet_7neurons_14pattern_neuron_natural_images.__pyx_base.__pyx_base._reset = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_neuron *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images__reset;
+  __pyx_vtable_10plasticnet_7neurons_14pattern_neuron_natural_images.__pyx_base.__pyx_base._clean = (PyObject *(*)(struct __pyx_obj_10plasticnet_10plasticnet_neuron *, int __pyx_skip_dispatch))__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images__clean;
   __pyx_vtable_10plasticnet_7neurons_14pattern_neuron_natural_images.__pyx_base.new_pattern = (PyObject *(*)(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_pattern_neuron *, double, int __pyx_skip_dispatch))__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images_new_pattern;
+  __pyx_vtable_10plasticnet_7neurons_14pattern_neuron_natural_images.load_images = (PyObject *(*)(struct __pyx_obj_10plasticnet_7neurons_14pattern_neuron_natural_images *))__pyx_f_10plasticnet_7neurons_14pattern_neuron_14natural_images_load_images;
   __pyx_type_10plasticnet_7neurons_14pattern_neuron_natural_images.tp_base = __pyx_ptype_10plasticnet_7neurons_14pattern_neuron_pattern_neuron;
   if (PyType_Ready(&__pyx_type_10plasticnet_7neurons_14pattern_neuron_natural_images) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
   __pyx_type_10plasticnet_7neurons_14pattern_neuron_natural_images.tp_print = 0;
@@ -14507,16 +14771,16 @@ static int __Pyx_modinit_type_import_code(void) {
   __pyx_vtabptr_10plasticnet_10plasticnet_monitor = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_monitor*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_monitor->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_monitor)) __PYX_ERR(4, 44, __pyx_L1_error)
   __pyx_ptype_10plasticnet_10plasticnet_simulation = __Pyx_ImportType("plasticnet.plasticnet", "simulation", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_simulation), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_simulation)) __PYX_ERR(4, 52, __pyx_L1_error)
   __pyx_vtabptr_10plasticnet_10plasticnet_simulation = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_simulation*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_simulation->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_simulation)) __PYX_ERR(4, 52, __pyx_L1_error)
-  __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron = __Pyx_ImportType("plasticnet.plasticnet", "post_process_neuron", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron)) __PYX_ERR(4, 73, __pyx_L1_error)
-  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron)) __PYX_ERR(4, 73, __pyx_L1_error)
-  __pyx_ptype_10plasticnet_10plasticnet_post_process_channel = __Pyx_ImportType("plasticnet.plasticnet", "post_process_channel", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_channel)) __PYX_ERR(4, 78, __pyx_L1_error)
-  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_channel->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel)) __PYX_ERR(4, 78, __pyx_L1_error)
-  __pyx_ptype_10plasticnet_10plasticnet_channel = __Pyx_ImportType("plasticnet.plasticnet", "channel", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_channel), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_channel)) __PYX_ERR(4, 83, __pyx_L1_error)
-  __pyx_vtabptr_10plasticnet_10plasticnet_channel = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_channel->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_channel)) __PYX_ERR(4, 83, __pyx_L1_error)
-  __pyx_ptype_10plasticnet_10plasticnet_connection = __Pyx_ImportType("plasticnet.plasticnet", "connection", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_connection), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_connection)) __PYX_ERR(4, 88, __pyx_L1_error)
-  __pyx_vtabptr_10plasticnet_10plasticnet_connection = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_connection->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_connection)) __PYX_ERR(4, 88, __pyx_L1_error)
-  __pyx_ptype_10plasticnet_10plasticnet_post_process_connection = __Pyx_ImportType("plasticnet.plasticnet", "post_process_connection", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_connection), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_connection)) __PYX_ERR(4, 100, __pyx_L1_error)
-  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_connection = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_connection*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_connection->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_connection)) __PYX_ERR(4, 100, __pyx_L1_error)
+  __pyx_ptype_10plasticnet_10plasticnet_post_process_neuron = __Pyx_ImportType("plasticnet.plasticnet", "post_process_neuron", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_neuron), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron)) __PYX_ERR(4, 74, __pyx_L1_error)
+  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_neuron*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_neuron->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_neuron)) __PYX_ERR(4, 74, __pyx_L1_error)
+  __pyx_ptype_10plasticnet_10plasticnet_post_process_channel = __Pyx_ImportType("plasticnet.plasticnet", "post_process_channel", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_channel), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_channel)) __PYX_ERR(4, 79, __pyx_L1_error)
+  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_channel*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_channel->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_channel)) __PYX_ERR(4, 79, __pyx_L1_error)
+  __pyx_ptype_10plasticnet_10plasticnet_channel = __Pyx_ImportType("plasticnet.plasticnet", "channel", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_channel), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_channel)) __PYX_ERR(4, 84, __pyx_L1_error)
+  __pyx_vtabptr_10plasticnet_10plasticnet_channel = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_channel*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_channel->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_channel)) __PYX_ERR(4, 84, __pyx_L1_error)
+  __pyx_ptype_10plasticnet_10plasticnet_connection = __Pyx_ImportType("plasticnet.plasticnet", "connection", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_connection), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_connection)) __PYX_ERR(4, 89, __pyx_L1_error)
+  __pyx_vtabptr_10plasticnet_10plasticnet_connection = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_connection*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_connection->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_connection)) __PYX_ERR(4, 89, __pyx_L1_error)
+  __pyx_ptype_10plasticnet_10plasticnet_post_process_connection = __Pyx_ImportType("plasticnet.plasticnet", "post_process_connection", sizeof(struct __pyx_obj_10plasticnet_10plasticnet_post_process_connection), 1); if (unlikely(!__pyx_ptype_10plasticnet_10plasticnet_post_process_connection)) __PYX_ERR(4, 102, __pyx_L1_error)
+  __pyx_vtabptr_10plasticnet_10plasticnet_post_process_connection = (struct __pyx_vtabstruct_10plasticnet_10plasticnet_post_process_connection*)__Pyx_GetVtable(__pyx_ptype_10plasticnet_10plasticnet_post_process_connection->tp_dict); if (unlikely(!__pyx_vtabptr_10plasticnet_10plasticnet_post_process_connection)) __PYX_ERR(4, 102, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -15929,6 +16193,20 @@ static PyObject* __Pyx_PyObject_CallMethod1(PyObject* obj, PyObject* method_name
     }
     return 0;
 }
+
+/* PyObjectSetAttrStr */
+        #if CYTHON_USE_TYPE_SLOTS
+static CYTHON_INLINE int __Pyx_PyObject_SetAttrStr(PyObject* obj, PyObject* attr_name, PyObject* value) {
+    PyTypeObject* tp = Py_TYPE(obj);
+    if (likely(tp->tp_setattro))
+        return tp->tp_setattro(obj, attr_name, value);
+#if PY_MAJOR_VERSION < 3
+    if (likely(tp->tp_setattr))
+        return tp->tp_setattr(obj, PyString_AS_STRING(attr_name), value);
+#endif
+    return PyObject_SetAttr(obj, attr_name, value);
+}
+#endif
 
 /* None */
         static CYTHON_INLINE int __Pyx_mod_int(int a, int b) {

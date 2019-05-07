@@ -298,6 +298,9 @@ cdef class neuron(group):
         self.linear_output=np.zeros(self.N,dtype=np.float)
         self.output=np.zeros(self.N,dtype=np.float)    
 
+    cpdef _clean(self):
+        pass
+
     @cython.cdivision(True)
     @cython.boundscheck(False) # turn of bounds-checking for entire function
     cpdef update(self,double t,simulation sim):
@@ -344,6 +347,11 @@ cdef class channel(neuron):
             self.neuron_list[k].output=self.output[N:(N+self.neuron_list[k].N)]
             N+=self.neuron_list[k].N
     
+    cpdef _clean(self):
+        cdef int N,k
+        for k in range(self.number_of_neurons):
+            self.neuron_list[k]._clean()
+
     
     def __init__(self,nlist,verbose=False):
         cdef int k,N
@@ -444,6 +452,10 @@ cdef class connection(group):
 
         self.w=<double *>self.weights.data
         self.initial_weights=self.weights.copy()
+
+    cpdef _clean(self):
+        pass
+
 
     def __init__(self,neuron pre,neuron post,initial_weight_range=None):
         cdef np.ndarray arr
@@ -631,6 +643,12 @@ def run_sim(simulation sim,object neurons,object connections,
     L=len(sim.post_process)
     for k in range(L):
         sim.post_process[k].apply()
+
+
+    for i in range(num_neurons):
+        neurons[i]._clean()
+    for i in range(num_connections):
+        connections[i]._clean()
 
     if print_time:
         print("Sim Time Elapsed...%s" % time2str(time.time()-t1))

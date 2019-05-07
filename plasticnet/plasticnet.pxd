@@ -69,6 +69,7 @@ cdef class neuron(group):
     cdef public int num_pre,num_post
     cpdef _reset(self)
     cpdef update(self,double t,simulation sim)
+    cpdef _clean(self)
 
 cdef class post_process_neuron(group):
     cpdef _reset(self)
@@ -96,6 +97,7 @@ cdef class connection(group):
 
     cpdef _reset(self)
     cpdef update(self,double t,simulation sim)
+    cpdef _clean(self)
 
 cdef class post_process_connection(group):
     cpdef _reset(self)

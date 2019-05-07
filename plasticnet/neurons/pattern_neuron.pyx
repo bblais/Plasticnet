@@ -152,6 +152,7 @@ cdef class natural_images(pattern_neuron):
     cdef public object im
     cdef public object filename
     cdef int number_of_pics
+    cdef int images_loaded
     cdef int p,r,c
     cdef public int use_other_channel
     cdef natural_images other_channel
@@ -173,16 +174,8 @@ cdef class natural_images(pattern_neuron):
         else:
             self.use_other_channel=False
 
-        if any([fname.endswith(ext) for ext in ['.hdf5','h5','hd5']]):
-            image_data=hdf5_load_images(fname)
-        elif fname.endswith('.asdf'):
-            image_data=asdf_load_images(fname)
-        else:
-            raise ValueError('Image type not implemented '+fname)
-        
-        self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1] 
-                                for arr in image_data['im']]
-        del image_data
+        self.images_loaded=False
+
         
         pattern_neuron.__init__(self,np.zeros((1,rf_size*rf_size),np.float),
                             time_between_patterns=time_between_patterns,sequential=True,verbose=verbose)
@@ -201,7 +194,22 @@ cdef class natural_images(pattern_neuron):
         self.save_attrs.extend(['buffer_size','use_other_channel','filename'])
         #self.save_data.extend(['',])
 
+    cdef load_images(self):
+        if any([self.filename.endswith(ext) for ext in ['.hdf5','h5','hd5']]):
+            image_data=hdf5_load_images(self.filename)
+        elif self.filename.endswith('.asdf'):
+            image_data=asdf_load_images(self.filename)
+        else:
+            raise ValueError('Image type not implemented '+self.filename)
+        
+        self.im=[arr.astype(float)*image_data['im_scale_shift'][0]+image_data['im_scale_shift'][1] 
+                                for arr in image_data['im']]
+        del image_data
+        self.images_loaded=True
 
+    cpdef _clean(self):
+        del self.im
+        self.images_loaded=False
 
     cpdef new_pattern(self,double t):
         cdef int i,j,k,num_rows,num_cols,r,c,p,offset,count
@@ -209,6 +217,9 @@ cdef class natural_images(pattern_neuron):
         cdef double *pic_ptr
         cdef double *pattern
                 
+        if not self.images_loaded:
+            self.load_images()
+
         pattern=<double *>self.pattern.data    
                 
         cdef int number_of_pictures=len(self.im)
