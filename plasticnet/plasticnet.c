@@ -2212,7 +2212,6 @@ static const char __pyx_k_num_neurons[] = "num_neurons";
 static const char __pyx_k_use_display[] = "use_display";
 static const char __pyx_k_HMSFormatter[] = "HMSFormatter";
 static const char __pyx_k_RuntimeError[] = "RuntimeError";
-static const char __pyx_k_Time_Elapsed[] = "Time Elapsed...";
 static const char __pyx_k_create_group[] = "create_group";
 static const char __pyx_k_display_hash[] = "display_hash";
 static const char __pyx_k_getattribute[] = "__getattribute__";
@@ -2248,6 +2247,7 @@ static const char __pyx_k_matplotlib_ticker[] = "matplotlib.ticker";
 static const char __pyx_k_neuron_out_update[] = "[neuron out update]";
 static const char __pyx_k_number_of_neurons[] = "number_of_neurons";
 static const char __pyx_k_time_to_next_save[] = "time_to_next_save";
+static const char __pyx_k_Sim_Time_Elapsed_s[] = "Sim Time Elapsed...%s";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_pyx_unpickle_group[] = "__pyx_unpickle_group";
 static const char __pyx_k_channel_d_in_update[] = "[channel %d in update]";
@@ -2309,7 +2309,7 @@ static PyObject *__pyx_n_s_N;
 static PyObject *__pyx_kp_u_Non_native_byte_order_not_suppor;
 static PyObject *__pyx_n_s_PickleError;
 static PyObject *__pyx_n_s_RuntimeError;
-static PyObject *__pyx_kp_s_Time_Elapsed;
+static PyObject *__pyx_kp_s_Sim_Time_Elapsed_s;
 static PyObject *__pyx_n_s_TypeError;
 static PyObject *__pyx_n_s_ValueError;
 static PyObject *__pyx_n_s_Waitbar;
@@ -22961,7 +22961,7 @@ static PyObject *__pyx_pf_10plasticnet_10plasticnet_8run_sim(CYTHON_UNUSED PyObj
  *         sim.post_process[k].apply()
  * 
  *     if print_time:             # <<<<<<<<<<<<<<
- *         print("Time Elapsed...",time2str(time.time()-t1))
+ *         print("Sim Time Elapsed...%s" % time2str(time.time()-t1))
  * 
  */
   __pyx_t_4 = (__pyx_v_print_time != 0);
@@ -22970,7 +22970,7 @@ static PyObject *__pyx_pf_10plasticnet_10plasticnet_8run_sim(CYTHON_UNUSED PyObj
     /* "plasticnet/plasticnet.pyx":636
  * 
  *     if print_time:
- *         print("Time Elapsed...",time2str(time.time()-t1))             # <<<<<<<<<<<<<<
+ *         print("Sim Time Elapsed...%s" % time2str(time.time()-t1))             # <<<<<<<<<<<<<<
  * 
  * 
  */
@@ -23051,14 +23051,9 @@ static PyObject *__pyx_pf_10plasticnet_10plasticnet_8run_sim(CYTHON_UNUSED PyObj
       }
     }
     __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
-    __pyx_t_18 = PyTuple_New(2); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 636, __pyx_L1_error)
+    __pyx_t_18 = __Pyx_PyString_Format(__pyx_kp_s_Sim_Time_Elapsed_s, __pyx_t_12); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 636, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_18);
-    __Pyx_INCREF(__pyx_kp_s_Time_Elapsed);
-    __Pyx_GIVEREF(__pyx_kp_s_Time_Elapsed);
-    PyTuple_SET_ITEM(__pyx_t_18, 0, __pyx_kp_s_Time_Elapsed);
-    __Pyx_GIVEREF(__pyx_t_12);
-    PyTuple_SET_ITEM(__pyx_t_18, 1, __pyx_t_12);
-    __pyx_t_12 = 0;
+    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     if (__Pyx_PrintOne(0, __pyx_t_18) < 0) __PYX_ERR(0, 636, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
@@ -23066,7 +23061,7 @@ static PyObject *__pyx_pf_10plasticnet_10plasticnet_8run_sim(CYTHON_UNUSED PyObj
  *         sim.post_process[k].apply()
  * 
  *     if print_time:             # <<<<<<<<<<<<<<
- *         print("Time Elapsed...",time2str(time.time()-t1))
+ *         print("Sim Time Elapsed...%s" % time2str(time.time()-t1))
  * 
  */
   }
@@ -32094,7 +32089,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_Non_native_byte_order_not_suppor, __pyx_k_Non_native_byte_order_not_suppor, sizeof(__pyx_k_Non_native_byte_order_not_suppor), 0, 1, 0, 0},
   {&__pyx_n_s_PickleError, __pyx_k_PickleError, sizeof(__pyx_k_PickleError), 0, 0, 1, 1},
   {&__pyx_n_s_RuntimeError, __pyx_k_RuntimeError, sizeof(__pyx_k_RuntimeError), 0, 0, 1, 1},
-  {&__pyx_kp_s_Time_Elapsed, __pyx_k_Time_Elapsed, sizeof(__pyx_k_Time_Elapsed), 0, 0, 1, 0},
+  {&__pyx_kp_s_Sim_Time_Elapsed_s, __pyx_k_Sim_Time_Elapsed_s, sizeof(__pyx_k_Sim_Time_Elapsed_s), 0, 0, 1, 0},
   {&__pyx_n_s_TypeError, __pyx_k_TypeError, sizeof(__pyx_k_TypeError), 0, 0, 1, 1},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
   {&__pyx_n_s_Waitbar, __pyx_k_Waitbar, sizeof(__pyx_k_Waitbar), 0, 0, 1, 1},

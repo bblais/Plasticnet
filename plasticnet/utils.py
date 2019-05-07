@@ -15,6 +15,43 @@ day=24*hour
 import plasticnet as pn
 import splikes as sp
 
+def dot(what="."):
+    import sys
+    sys.stdout.write(what)
+    sys.stdout.flush()
+
+import time
+def time2str(tm):
+    
+    frac=tm-int(tm)
+    tm=int(tm)
+    
+    s=''
+    sc=tm % 60
+    tm=tm//60
+    
+    mn=tm % 60
+    tm=tm//60
+    
+    hr=tm % 24
+    tm=tm//24
+    dy=tm
+
+    if (dy>0):
+        s=s+"%d d, " % dy
+
+    if (hr>0):
+        s=s+"%d h, " % hr
+
+    if (mn>0):
+        s=s+"%d m, " % mn
+
+
+    s=s+"%.2f s" % (sc+frac)
+
+    return s
+
+
 import asdf
 import warnings
 warnings.filterwarnings("ignore",category=asdf.exceptions.AsdfDeprecationWarning)
@@ -72,6 +109,14 @@ class Sequence(object):
         return self
     
     def run(self,**kwargs):
+        try:
+            print_time=kwargs.pop('print_time')
+        except KeyError:
+            print_time=True
+
+        if print_time:
+            t1=time.time()
+            dot("[")
 
         for i in range(len(self.sims)):
             s,ns,cs=self.sims[i],self.neurons[i],self.connections[i]
@@ -97,7 +142,14 @@ class Sequence(object):
                 for key in s.monitors:
                     s.monitors[key].time_to_next_save=start_time
                 
-            pn.run_sim(s,ns,cs,**kwargs)
+            pn.run_sim(s,ns,cs,print_time=False,**kwargs)
+
+            if print_time:
+                dot()
+
+        if print_time:
+            dot("] ")
+            print("Sequence Time Elapsed...%s" % time2str(time.time()-t1))
 
     def arrays(self,name):
         return self.time_array(name),self.array(name)
@@ -794,7 +846,7 @@ class grating_response(post_process_simulation):
         self.t=t
         
         if self.print_time:
-            print(pn.utils.timeit())
+            print("Grating time elapsed",pn.utils.timeit())
             
     @property
     def gratings(self):

@@ -633,6 +633,6 @@ def run_sim(simulation sim,object neurons,object connections,
         sim.post_process[k].apply()
 
     if print_time:
-        print("Time Elapsed...",time2str(time.time()-t1))
+        print("Sim Time Elapsed...%s" % time2str(time.time()-t1))
         
  
