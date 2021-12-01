@@ -156,8 +156,8 @@ cdef class BCM_Dynamic_Weight_Limits(connection):
             self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
                                        self.initial_theta_range[0])+self.initial_theta_range[0]
 
-            self.w_max=pylab.ones((self.post.N,self.pre.N),np.float)
-            self.r=pylab.zeros((self.post.N,self.pre.N),np.float)
+            self.w_max=pylab.ones((self.post.N,self.pre.N),float)
+            self.r=pylab.zeros((self.post.N,self.pre.N),float)
 
         self.initial_theta=self.theta.copy()
         self.initial_w_max=self.w_max.copy()

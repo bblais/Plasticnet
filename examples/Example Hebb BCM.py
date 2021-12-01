@@ -1,12 +1,14 @@
-
+#!/usr/bin/env python
 # coding: utf-8
 
 # In[1]:
 
+
 from plasticnet import *
 
 
-# In[3]:
+# In[2]:
+
 
 ls hdf5/*
 
@@ -18,7 +20,8 @@ ls hdf5/*
 # * connections can be both positive and negative
 # 
 
-# In[5]:
+# In[3]:
+
 
 pre=neurons.natural_images('hdf5/bbsk081604_dog.hdf5',rf_size=13,verbose=False)
 post=neurons.linear_neuron(1)
@@ -61,6 +64,7 @@ utils.plot_rfs_and_theta(sim,[pre,post],[c])
 
 # In[6]:
 
+
 pre=neurons.natural_images('hdf5/bbsk081604_dog.hdf5',rf_size=13,verbose=False)
 post=neurons.linear_neuron(1)
 
@@ -86,6 +90,7 @@ utils.plot_rfs_and_theta(sim,[pre,post],[c])
 # 4. what happens if you take out the normalization?
 
 # In[ ]:
+
 
 
 

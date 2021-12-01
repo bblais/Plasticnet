@@ -29,7 +29,7 @@ cdef class pattern_neuron(neuron):
         self.pattern_number=-1      
         
     def __init__(self,patterns,time_between_patterns=1.0,sequential=False,shape=None,verbose=False):
-        self.patterns=np.ascontiguousarray(np.atleast_2d(np.array(patterns,np.float)))
+        self.patterns=np.ascontiguousarray(np.atleast_2d(np.array(patterns,float)))
         if not shape is None:
             self.patterns=self.patterns.reshape(shape)
         
@@ -177,7 +177,7 @@ cdef class natural_images(pattern_neuron):
         self.images_loaded=False
 
         
-        pattern_neuron.__init__(self,np.zeros((1,rf_size*rf_size),np.float),
+        pattern_neuron.__init__(self,np.zeros((1,rf_size*rf_size),float),
                             time_between_patterns=time_between_patterns,sequential=True,verbose=verbose)
     
     

@@ -95,17 +95,32 @@ class Sequence(object):
         self.length=0
         self.save_attrs=['length']
         self.save_data=[]
+        self.run_sims=[]
 
     def __len__(self):
         return len(self.sims)
     
+
+
+    def _check_(self):
+        if len(self.sims)==1:
+            return
+
+        for c1,c2 in zip(self.connections[-1],self.connections[-2]):
+            assert c1.pre.N==c2.pre.N, "Mismatch number of neurons"
+            assert c1.post.N==c2.post.N, "Mismatch number of neurons"
+
+
     def __iadd__(self,other):
         s,n,c=other
         self.sims.append(s)
         self.neurons.append(n)
         self.connections.append(c)
         self.length=len(self.sims)
+        self.run_sims.append(True)
         
+        self._check_()
+
         return self
     
     def run(self,**kwargs):
@@ -119,6 +134,11 @@ class Sequence(object):
             dot("[")
 
         for i in range(len(self.sims)):
+            if not self.run_sims[i]:
+                if print_time:
+                    dot()
+                continue
+
             s,ns,cs=self.sims[i],self.neurons[i],self.connections[i]
             
             if i>0: # load from previous
@@ -625,23 +645,24 @@ def plot_rfs(sim,neurons,connections):
 
     return fig
 
-def get_output_distributions(neurons,total_time=100000,display_hash=False):
+def get_output_distributions(sim,neurons,connections,total_time=10000,display_hash=False,print_time=False):
     import plasticnet as pn
-    total_time=10000
-    sim=pn.simulation(total_time)
-    
-    for neuron in neurons:
-        sim.monitor(neuron,['output'],1)
-        
-    pn.run_sim(sim,neurons,[],display_hash=display_hash)
-    
-    outs=[]
-    for key in sim.monitors:
-        m=sim.monitors[key]
-        t,out=m.arrays()
-        outs.append(out)
-        
-    return outs
+    from numpy import array
+
+    pre,post=neurons
+    c=connections[0]
+
+    c2=pn.connections.Constant_Connection(pre,post)
+    c2.weights=c.weights
+    c2.initial_weights=c.initial_weights
+
+    sim2=pn.simulation(total_time)
+    sim2.monitor(post,['output'],1)
+
+    pn.run_sim(sim2,[pre,post],[c2],display_hash=False,print_time=False)
+    out=array(sim2.monitors['output'].values)
+
+    return out
 
 def plot_output_distribution(out,title):
     from splikes.utils import paramtext
@@ -691,7 +712,41 @@ def get_gratings(rf_diameter,theta,k_mat):
                 
     return gratings
 
+@njit
+def max_channel_response(responses):
+    #resp.shape
+    #(20, 24, 2, 4, 385)    # k, theta, channel, neuron, time
+
+    # find the max of the sum of channel responses across k, theta for each n and t
+    # return the individual channel responses at that maximum
+
     
+    nk,nth,nc,nn,nt=responses.shape
+
+    max_responses=numpy.zeros((nc,nn,nt))
+    
+
+    mx=-1e500
+    for n in range(nn):
+        for t in range(nt):
+            mx=-1e500
+
+            for k in range(nk):
+                for th in range(nth):
+                    sm=0
+                    for c in range(nc):
+                        sm+=responses[k,th,c,n,t]
+
+                    if sm>mx:
+                        mx=sm
+                        kx=k
+                        thx=th
+
+            for c in range(nc):
+                max_responses[c,n,t]=responses[kx,thx,c,n,t]
+
+    return max_responses
+
     
 @njit
 def get_responses(t,w,number_of_channels,rf_diameter,theta,k_mat):

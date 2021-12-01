@@ -127,8 +127,8 @@ cdef class subtract_beta(post_process_neuron):
     cdef public np.ndarray beta,original_output
     
     cpdef _reset(self):
-        self.beta=np.zeros(self.n.N,dtype=np.float)    
-        self.original_output=np.zeros(self.n.N,dtype=np.float)    
+        self.beta=np.zeros(self.n.N,dtype=float)    
+        self.original_output=np.zeros(self.n.N,dtype=float)    
     
     def __init__(self,double tau=100.0,double a=1.0):
         self.tau=tau

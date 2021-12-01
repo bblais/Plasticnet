@@ -279,8 +279,8 @@ cdef class neuron(group):
         self.connections_pre=[]
         self.connections_post=[]
         self.post_process=[]
-        self.output=np.zeros(self.N,dtype=np.float)
-        self.linear_output=np.zeros(self.N,dtype=np.float)
+        self.output=np.zeros(self.N,dtype=float)
+        self.linear_output=np.zeros(self.N,dtype=float)
 
         self.save_attrs=['num_pre','num_post','verbose',]
         self.save_data=['output','linear_output']
@@ -295,8 +295,8 @@ cdef class neuron(group):
             p.save(g2)
 
     cpdef _reset(self):
-        self.linear_output=np.zeros(self.N,dtype=np.float)
-        self.output=np.zeros(self.N,dtype=np.float)    
+        self.linear_output=np.zeros(self.N,dtype=float)
+        self.output=np.zeros(self.N,dtype=float)    
 
     cpdef _clean(self):
         pass

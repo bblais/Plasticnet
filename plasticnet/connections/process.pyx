@@ -100,9 +100,9 @@ cdef class tuning_curve(post_process_connection):
                     
                     phi=arctan2(cc,cs)  # phase to give max response
                     
-                    c=cs*cos(phi)+cc*sin(phi)     # max response
+                    csum=cs*cos(phi)+cc*sin(phi)     # max response
                 
-                    y.append(c)
+                    y.append(csum)
                     
                 one_max_y.append(max(y))
                 one_y.append(y)
@@ -131,11 +131,14 @@ cdef class weight_decay(post_process_connection):
         cdef int __j
         cdef int __wi
         cdef double *W=<double *>self.c.weights.data
+        cdef double value
+
+        value=sim.dt*self.c.eta*self.gamma
         
         for __i in range(self.c.post.N):
             for __j in range(self.c.pre.N):
                 __wi=__i*self.c.pre.N+__j
-                W[__wi]-=sim.dt*self.c.eta*self.gamma*W[__wi]
+                W[__wi]-=value*W[__wi]
 
 
 

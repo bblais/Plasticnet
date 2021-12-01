@@ -19,3 +19,5 @@ def cleanc(dir):
             cleanc(path)
 
 cleanc("plasticnet")
+cleanc("splikes")
+
