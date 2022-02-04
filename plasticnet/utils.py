@@ -3,7 +3,18 @@ import pylab as py
 
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
-import h5py
+
+try:
+    import h5py
+except ImportError:
+    print("No h5py module found. You'll want to conda install h5py or pip install h5py to load hdf5 image files.")
+
+try:
+    import asdf
+except ImportError:
+    print("No asdf module found. You'll want to conda install -c conda-forge asdf or pip install asdf to load asdf image files.")
+
+
 
 second=1
 ms=0.001*second
@@ -54,7 +65,6 @@ def time2str(tm):
 
 import asdf
 import warnings
-warnings.filterwarnings("ignore",category=asdf.exceptions.AsdfDeprecationWarning)
 
 def asdf_load_images(fname):
     var={}

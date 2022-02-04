@@ -99,6 +99,8 @@
 #define _FTIME(x) _ftime((x))
 #endif
 
+#define RK_NO_WINCRYPT True
+
 #ifndef RK_NO_WINCRYPT
 /* Windows crypto */
 #ifndef _WIN32_WINNT
