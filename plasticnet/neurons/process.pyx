@@ -9,6 +9,84 @@ import numpy as np
 cimport numpy as np
 
 
+cdef class temporal_filter(post_process_neuron):
+
+    cdef public list buffer
+    cdef public np.ndarray filter
+    cdef public np.ndarray B
+
+    cpdef _reset(self):
+        self.buffer=[]
+
+    def __init__(self,filter):
+        self.filter=filter
+        
+        post_process_neuron.__init__(self)
+        self._reset()
+
+        self.save_attrs+=['filter']
+
+    @cython.cdivision(True)
+    @cython.boundscheck(False) # turn of bounds-checking for entire function
+    cpdef update(self,double t,simulation sim):
+        cdef int i,k,L,Lb,N,k2
+        cdef double *z=<double *>self.n.output.data
+        cdef double *zb
+        cdef double F
+        
+        self.buffer.append(self.n.output.copy())
+        Lb=len(self.buffer)
+        L=len(self.filter)
+
+        if Lb>L:
+            self.buffer.pop(0)
+        Lb=len(self.buffer)
+
+        assert (Lb<=L),f"buffer {Lb} and filter {L}"
+
+        self.B=np.array(self.buffer)  # inefficient but I'll go with it
+        zb=<double *>self.B.data  # most recent at the end
+
+        N=self.n.N
+        if self.verbose:
+            print("Update")
+
+        for k in range(Lb):
+            F=self.filter[k]  # most recent at the start
+            k2=Lb-1-k
+        
+            if self.verbose:
+                print(f"k={k} k2={k2} F={F}")
+
+            if k==0:
+                for i in range(N):
+                    z[i]=zb[i+k2*N]*F
+
+                    if self.verbose:
+                        if i<5:
+                            print(f"\t {i}: {zb[i+k2*N]} x {F} = {zb[i+k2*N]*F} ")
+
+                if self.verbose:
+                    print("\t...")
+
+            else:
+                for i in range(N):
+                    z[i]+=zb[i+k2*N]*F
+
+                    if self.verbose:
+                        if i<5:
+                            print(f"\t {i}: {zb[i+k2*N]} x {F} = {zb[i+k2*N]*F} ")
+
+                if self.verbose:
+                    print("\t...")
+
+            if self.verbose:
+                print()
+                for i in range(5):
+                    print(f"\t z[{i}]={z[i+k2*N]} ")
+
+                print("...")
+
 cdef class zero_fraction(post_process_neuron):
 
     cdef public fraction

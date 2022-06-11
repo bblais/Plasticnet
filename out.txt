@@ -1,226 +1,36 @@
-~~ plasticnet/connections/BCM.c
-~~ plasticnet/connections/BCM_TwoThreshold.c
-~~ plasticnet/connections/BCM_TwoThreshold_Harel.c
-~~ plasticnet/connections/BCM_TwoThreshold_OLD.c
-~~ plasticnet/connections/constant_connection.c
-~~ plasticnet/connections/Hebb.c
-~~ plasticnet/connections/Miller2014.c
-~~ plasticnet/connections/process.c
-~~ plasticnet/neurons/linear_neuron.c
-~~ plasticnet/neurons/pattern_neuron.c
-~~ plasticnet/neurons/process.c
-~~ plasticnet/plasticnet.c
-version='0.1.0'
+version='0.1.5'
 
 running install
-running build
+running bdist_egg
+running egg_info
+writing manifest file 'plasticnet.egg-info/SOURCES.txt'
+running install_lib
 running build_py
 running build_ext
-cythoning plasticnet/connections/BCM.pyx to plasticnet/connections/BCM.c
-building 'plasticnet.connections.BCM' extension
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c plasticnet/connections/BCM.c -o build/temp.macosx-10.7-x86_64-3.6/plasticnet/connections/BCM.o -O3
-In file included from plasticnet/connections/BCM.c:566:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h:4:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarrayobject.h:18:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarraytypes.h:1818:
-/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: "Using deprecated NumPy API, disable it by "          "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
-#warning "Using deprecated NumPy API, disable it by " \
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/opt/anaconda3/envs/py3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/envs/py3/include -arch x86_64 -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/bblais/opt/anaconda3/envs/py3/include -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/envs/py3/include/python3.8 -c plasticnet/neurons/pattern_neuron.c -o build/temp.macosx-10.9-x86_64-3.8/plasticnet/neurons/pattern_neuron.o -O3
+plasticnet/neurons/pattern_neuron.c:1:2: error: Do not use this file, it is the result of a failed Cython compilation.
+#error Do not use this file, it is the result of a failed Cython compilation.
  ^
-1 warning generated.
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c splikes/randomkit.c -o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -O3
-gcc -bundle -undefined dynamic_lookup -L/Users/bblais/anaconda3/lib -arch x86_64 -L/Users/bblais/anaconda3/lib -arch x86_64 -arch x86_64 build/temp.macosx-10.7-x86_64-3.6/plasticnet/connections/BCM.o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -o build/lib.macosx-10.7-x86_64-3.6/plasticnet/connections/BCM.cpython-36m-darwin.so -g
-cythoning plasticnet/connections/BCM_TwoThreshold.pyx to plasticnet/connections/BCM_TwoThreshold.c
-building 'plasticnet.connections.BCM_TwoThreshold' extension
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c plasticnet/connections/BCM_TwoThreshold.c -o build/temp.macosx-10.7-x86_64-3.6/plasticnet/connections/BCM_TwoThreshold.o -O3
-In file included from plasticnet/connections/BCM_TwoThreshold.c:566:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h:4:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarrayobject.h:18:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarraytypes.h:1818:
-/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: "Using deprecated NumPy API, disable it by "          "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
-#warning "Using deprecated NumPy API, disable it by " \
- ^
-1 warning generated.
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c splikes/randomkit.c -o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -O3
-gcc -bundle -undefined dynamic_lookup -L/Users/bblais/anaconda3/lib -arch x86_64 -L/Users/bblais/anaconda3/lib -arch x86_64 -arch x86_64 build/temp.macosx-10.7-x86_64-3.6/plasticnet/connections/BCM_TwoThreshold.o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -o build/lib.macosx-10.7-x86_64-3.6/plasticnet/connections/BCM_TwoThreshold.cpython-36m-darwin.so -g
-cythoning plasticnet/connections/BCM_TwoThreshold_Harel.pyx to plasticnet/connections/BCM_TwoThreshold_Harel.c
-building 'plasticnet.connections.BCM_TwoThreshold_Harel' extension
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c plasticnet/connections/BCM_TwoThreshold_Harel.c -o build/temp.macosx-10.7-x86_64-3.6/plasticnet/connections/BCM_TwoThreshold_Harel.o -O3
-In file included from plasticnet/connections/BCM_TwoThreshold_Harel.c:566:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h:4:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarrayobject.h:18:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarraytypes.h:1818:
-/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: "Using deprecated NumPy API, disable it by "          "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
-#warning "Using deprecated NumPy API, disable it by " \
- ^
-1 warning generated.
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c splikes/randomkit.c -o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -O3
-gcc -bundle -undefined dynamic_lookup -L/Users/bblais/anaconda3/lib -arch x86_64 -L/Users/bblais/anaconda3/lib -arch x86_64 -arch x86_64 build/temp.macosx-10.7-x86_64-3.6/plasticnet/connections/BCM_TwoThreshold_Harel.o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -o build/lib.macosx-10.7-x86_64-3.6/plasticnet/connections/BCM_TwoThreshold_Harel.cpython-36m-darwin.so -g
-cythoning plasticnet/connections/BCM_TwoThreshold_OLD.pyx to plasticnet/connections/BCM_TwoThreshold_OLD.c
-building 'plasticnet.connections.BCM_TwoThreshold_OLD' extension
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c plasticnet/connections/BCM_TwoThreshold_OLD.c -o build/temp.macosx-10.7-x86_64-3.6/plasticnet/connections/BCM_TwoThreshold_OLD.o -O3
-In file included from plasticnet/connections/BCM_TwoThreshold_OLD.c:566:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h:4:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarrayobject.h:18:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarraytypes.h:1818:
-/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: "Using deprecated NumPy API, disable it by "          "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
-#warning "Using deprecated NumPy API, disable it by " \
- ^
-1 warning generated.
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c splikes/randomkit.c -o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -O3
-gcc -bundle -undefined dynamic_lookup -L/Users/bblais/anaconda3/lib -arch x86_64 -L/Users/bblais/anaconda3/lib -arch x86_64 -arch x86_64 build/temp.macosx-10.7-x86_64-3.6/plasticnet/connections/BCM_TwoThreshold_OLD.o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -o build/lib.macosx-10.7-x86_64-3.6/plasticnet/connections/BCM_TwoThreshold_OLD.cpython-36m-darwin.so -g
-cythoning plasticnet/connections/constant_connection.pyx to plasticnet/connections/constant_connection.c
-building 'plasticnet.connections.constant_connection' extension
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c plasticnet/connections/constant_connection.c -o build/temp.macosx-10.7-x86_64-3.6/plasticnet/connections/constant_connection.o -O3
-In file included from plasticnet/connections/constant_connection.c:566:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h:4:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarrayobject.h:18:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarraytypes.h:1818:
-/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: "Using deprecated NumPy API, disable it by "          "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
-#warning "Using deprecated NumPy API, disable it by " \
- ^
-1 warning generated.
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c splikes/randomkit.c -o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -O3
-gcc -bundle -undefined dynamic_lookup -L/Users/bblais/anaconda3/lib -arch x86_64 -L/Users/bblais/anaconda3/lib -arch x86_64 -arch x86_64 build/temp.macosx-10.7-x86_64-3.6/plasticnet/connections/constant_connection.o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -o build/lib.macosx-10.7-x86_64-3.6/plasticnet/connections/constant_connection.cpython-36m-darwin.so -g
-cythoning plasticnet/connections/Hebb.pyx to plasticnet/connections/Hebb.c
-building 'plasticnet.connections.Hebb' extension
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c plasticnet/connections/Hebb.c -o build/temp.macosx-10.7-x86_64-3.6/plasticnet/connections/Hebb.o -O3
-In file included from plasticnet/connections/Hebb.c:566:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h:4:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarrayobject.h:18:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarraytypes.h:1818:
-/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: "Using deprecated NumPy API, disable it by "          "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
-#warning "Using deprecated NumPy API, disable it by " \
- ^
-1 warning generated.
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c splikes/randomkit.c -o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -O3
-gcc -bundle -undefined dynamic_lookup -L/Users/bblais/anaconda3/lib -arch x86_64 -L/Users/bblais/anaconda3/lib -arch x86_64 -arch x86_64 build/temp.macosx-10.7-x86_64-3.6/plasticnet/connections/Hebb.o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -o build/lib.macosx-10.7-x86_64-3.6/plasticnet/connections/Hebb.cpython-36m-darwin.so -g
-cythoning plasticnet/connections/Miller2014.pyx to plasticnet/connections/Miller2014.c
-building 'plasticnet.connections.Miller2014' extension
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c plasticnet/connections/Miller2014.c -o build/temp.macosx-10.7-x86_64-3.6/plasticnet/connections/Miller2014.o -O3
-In file included from plasticnet/connections/Miller2014.c:566:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h:4:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarrayobject.h:18:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarraytypes.h:1818:
-/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: "Using deprecated NumPy API, disable it by "          "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
-#warning "Using deprecated NumPy API, disable it by " \
- ^
-1 warning generated.
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c splikes/randomkit.c -o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -O3
-gcc -bundle -undefined dynamic_lookup -L/Users/bblais/anaconda3/lib -arch x86_64 -L/Users/bblais/anaconda3/lib -arch x86_64 -arch x86_64 build/temp.macosx-10.7-x86_64-3.6/plasticnet/connections/Miller2014.o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -o build/lib.macosx-10.7-x86_64-3.6/plasticnet/connections/Miller2014.cpython-36m-darwin.so -g
-cythoning plasticnet/connections/process.pyx to plasticnet/connections/process.c
-building 'plasticnet.connections.process' extension
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c plasticnet/connections/process.c -o build/temp.macosx-10.7-x86_64-3.6/plasticnet/connections/process.o -O3
-In file included from plasticnet/connections/process.c:566:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h:4:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarrayobject.h:18:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarraytypes.h:1818:
-/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: "Using deprecated NumPy API, disable it by "          "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
-#warning "Using deprecated NumPy API, disable it by " \
- ^
-1 warning generated.
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c splikes/randomkit.c -o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -O3
-gcc -bundle -undefined dynamic_lookup -L/Users/bblais/anaconda3/lib -arch x86_64 -L/Users/bblais/anaconda3/lib -arch x86_64 -arch x86_64 build/temp.macosx-10.7-x86_64-3.6/plasticnet/connections/process.o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -o build/lib.macosx-10.7-x86_64-3.6/plasticnet/connections/process.cpython-36m-darwin.so -g
-cythoning plasticnet/neurons/linear_neuron.pyx to plasticnet/neurons/linear_neuron.c
-building 'plasticnet.neurons.linear_neuron' extension
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c plasticnet/neurons/linear_neuron.c -o build/temp.macosx-10.7-x86_64-3.6/plasticnet/neurons/linear_neuron.o -O3
-In file included from plasticnet/neurons/linear_neuron.c:566:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h:4:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarrayobject.h:18:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarraytypes.h:1818:
-/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: "Using deprecated NumPy API, disable it by "          "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
-#warning "Using deprecated NumPy API, disable it by " \
- ^
-1 warning generated.
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c splikes/randomkit.c -o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -O3
-gcc -bundle -undefined dynamic_lookup -L/Users/bblais/anaconda3/lib -arch x86_64 -L/Users/bblais/anaconda3/lib -arch x86_64 -arch x86_64 build/temp.macosx-10.7-x86_64-3.6/plasticnet/neurons/linear_neuron.o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -o build/lib.macosx-10.7-x86_64-3.6/plasticnet/neurons/linear_neuron.cpython-36m-darwin.so -g
-cythoning plasticnet/neurons/pattern_neuron.pyx to plasticnet/neurons/pattern_neuron.c
-building 'plasticnet.neurons.pattern_neuron' extension
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c plasticnet/neurons/pattern_neuron.c -o build/temp.macosx-10.7-x86_64-3.6/plasticnet/neurons/pattern_neuron.o -O3
-In file included from plasticnet/neurons/pattern_neuron.c:566:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h:4:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarrayobject.h:18:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarraytypes.h:1818:
-/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: "Using deprecated NumPy API, disable it by "          "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
-#warning "Using deprecated NumPy API, disable it by " \
- ^
-1 warning generated.
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c splikes/randomkit.c -o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -O3
-gcc -bundle -undefined dynamic_lookup -L/Users/bblais/anaconda3/lib -arch x86_64 -L/Users/bblais/anaconda3/lib -arch x86_64 -arch x86_64 build/temp.macosx-10.7-x86_64-3.6/plasticnet/neurons/pattern_neuron.o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -o build/lib.macosx-10.7-x86_64-3.6/plasticnet/neurons/pattern_neuron.cpython-36m-darwin.so -g
-cythoning plasticnet/neurons/process.pyx to plasticnet/neurons/process.c
-building 'plasticnet.neurons.process' extension
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c plasticnet/neurons/process.c -o build/temp.macosx-10.7-x86_64-3.6/plasticnet/neurons/process.o -O3
-In file included from plasticnet/neurons/process.c:566:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h:4:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarrayobject.h:18:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarraytypes.h:1818:
-/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: "Using deprecated NumPy API, disable it by "          "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
-#warning "Using deprecated NumPy API, disable it by " \
- ^
-1 warning generated.
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c splikes/randomkit.c -o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -O3
-gcc -bundle -undefined dynamic_lookup -L/Users/bblais/anaconda3/lib -arch x86_64 -L/Users/bblais/anaconda3/lib -arch x86_64 -arch x86_64 build/temp.macosx-10.7-x86_64-3.6/plasticnet/neurons/process.o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -o build/lib.macosx-10.7-x86_64-3.6/plasticnet/neurons/process.cpython-36m-darwin.so -g
-cythoning plasticnet/plasticnet.pyx to plasticnet/plasticnet.c
-building 'plasticnet.plasticnet' extension
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c plasticnet/plasticnet.c -o build/temp.macosx-10.7-x86_64-3.6/plasticnet/plasticnet.o -O3
-In file included from plasticnet/plasticnet.c:566:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h:4:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarrayobject.h:18:
-In file included from /Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarraytypes.h:1818:
-/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: "Using deprecated NumPy API, disable it by "          "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
-#warning "Using deprecated NumPy API, disable it by " \
- ^
-1 warning generated.
-gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/include -arch x86_64 -I/Users/bblais/anaconda3/lib/python3.6/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/anaconda3/include/python3.6m -c splikes/randomkit.c -o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -O3
-gcc -bundle -undefined dynamic_lookup -L/Users/bblais/anaconda3/lib -arch x86_64 -L/Users/bblais/anaconda3/lib -arch x86_64 -arch x86_64 build/temp.macosx-10.7-x86_64-3.6/plasticnet/plasticnet.o build/temp.macosx-10.7-x86_64-3.6/splikes/randomkit.o -o build/lib.macosx-10.7-x86_64-3.6/plasticnet/plasticnet.cpython-36m-darwin.so -g
-running install_lib
-copying build/lib.macosx-10.7-x86_64-3.6/plasticnet/connections/BCM.cpython-36m-darwin.so -> /Users/bblais/anaconda3/lib/python3.6/site-packages/plasticnet/connections
-copying build/lib.macosx-10.7-x86_64-3.6/plasticnet/connections/BCM_TwoThreshold.cpython-36m-darwin.so -> /Users/bblais/anaconda3/lib/python3.6/site-packages/plasticnet/connections
-copying build/lib.macosx-10.7-x86_64-3.6/plasticnet/connections/BCM_TwoThreshold_Harel.cpython-36m-darwin.so -> /Users/bblais/anaconda3/lib/python3.6/site-packages/plasticnet/connections
-copying build/lib.macosx-10.7-x86_64-3.6/plasticnet/connections/BCM_TwoThreshold_OLD.cpython-36m-darwin.so -> /Users/bblais/anaconda3/lib/python3.6/site-packages/plasticnet/connections
-copying build/lib.macosx-10.7-x86_64-3.6/plasticnet/connections/constant_connection.cpython-36m-darwin.so -> /Users/bblais/anaconda3/lib/python3.6/site-packages/plasticnet/connections
-copying build/lib.macosx-10.7-x86_64-3.6/plasticnet/connections/Hebb.cpython-36m-darwin.so -> /Users/bblais/anaconda3/lib/python3.6/site-packages/plasticnet/connections
-copying build/lib.macosx-10.7-x86_64-3.6/plasticnet/connections/Miller2014.cpython-36m-darwin.so -> /Users/bblais/anaconda3/lib/python3.6/site-packages/plasticnet/connections
-copying build/lib.macosx-10.7-x86_64-3.6/plasticnet/connections/process.cpython-36m-darwin.so -> /Users/bblais/anaconda3/lib/python3.6/site-packages/plasticnet/connections
-copying build/lib.macosx-10.7-x86_64-3.6/plasticnet/neurons/linear_neuron.cpython-36m-darwin.so -> /Users/bblais/anaconda3/lib/python3.6/site-packages/plasticnet/neurons
-copying build/lib.macosx-10.7-x86_64-3.6/plasticnet/neurons/pattern_neuron.cpython-36m-darwin.so -> /Users/bblais/anaconda3/lib/python3.6/site-packages/plasticnet/neurons
-copying build/lib.macosx-10.7-x86_64-3.6/plasticnet/neurons/process.cpython-36m-darwin.so -> /Users/bblais/anaconda3/lib/python3.6/site-packages/plasticnet/neurons
-copying build/lib.macosx-10.7-x86_64-3.6/plasticnet/plasticnet.cpython-36m-darwin.so -> /Users/bblais/anaconda3/lib/python3.6/site-packages/plasticnet
-running install_egg_info
-Removing /Users/bblais/anaconda3/lib/python3.6/site-packages/plasticnet-0.1.0-py3.6.egg-info
-Writing /Users/bblais/anaconda3/lib/python3.6/site-packages/plasticnet-0.1.0-py3.6.egg-info
-version='0.1.0'
+1 error generated.
+/Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+/Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/setuptools/command/easy_install.py:156: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+/Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/plasticnet/neurons/pattern_neuron.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
 
-running install
-running build
-running build_py
-running build_ext
-skipping 'plasticnet/connections/BCM.c' Cython extension (up-to-date)
-skipping 'plasticnet/connections/BCM_TwoThreshold.c' Cython extension (up-to-date)
-skipping 'plasticnet/connections/BCM_TwoThreshold_Harel.c' Cython extension (up-to-date)
-skipping 'plasticnet/connections/BCM_TwoThreshold_OLD.c' Cython extension (up-to-date)
-skipping 'plasticnet/connections/constant_connection.c' Cython extension (up-to-date)
-skipping 'plasticnet/connections/Hebb.c' Cython extension (up-to-date)
-skipping 'plasticnet/connections/Miller2014.c' Cython extension (up-to-date)
-skipping 'plasticnet/connections/process.c' Cython extension (up-to-date)
-skipping 'plasticnet/neurons/linear_neuron.c' Cython extension (up-to-date)
-skipping 'plasticnet/neurons/pattern_neuron.c' Cython extension (up-to-date)
-skipping 'plasticnet/neurons/process.c' Cython extension (up-to-date)
-skipping 'plasticnet/plasticnet.c' Cython extension (up-to-date)
-skipping 'splikes/connections/BCM.c' Cython extension (up-to-date)
-skipping 'splikes/connections/calcium.c' Cython extension (up-to-date)
-skipping 'splikes/connections/STDP.c' Cython extension (up-to-date)
-skipping 'splikes/connections/Triplet.c' Cython extension (up-to-date)
-skipping 'splikes/connections/triplet_julijana.c' Cython extension (up-to-date)
-skipping 'splikes/neurons/IntegrateAndFire.c' Cython extension (up-to-date)
-skipping 'splikes/neurons/isi_distributions.c' Cython extension (up-to-date)
-skipping 'splikes/neurons/poisson_julijana.c' Cython extension (up-to-date)
-skipping 'splikes/neurons/poisson_pattern.c' Cython extension (up-to-date)
-skipping 'splikes/neurons/spike_pattern.c' Cython extension (up-to-date)
-skipping 'splikes/neurons/srm0.c' Cython extension (up-to-date)
-skipping 'splikes/splikes.c' Cython extension (up-to-date)
-running install_lib
-running install_egg_info
-Removing /Users/bblais/anaconda3/lib/python3.6/site-packages/splikes-0.1.0-py3.6.egg-info
-Writing /Users/bblais/anaconda3/lib/python3.6/site-packages/splikes-0.1.0-py3.6.egg-info
-python clean.py
+Error compiling Cython file:
+------------------------------------------------------------
+...
+    cdef int images_loaded
+    cdef public int p,r,c
+    cdef public int pa,ra,ca
+    cdef public int use_other_channel
+    cdef natural_images other_channel
+    cdef float μc,μr
+              ^
+------------------------------------------------------------
+
+plasticnet/neurons/pattern_neuron.pyx:285:15: Unrecognized character
+error: command '/usr/bin/gcc' failed with exit code 1
 python setup.py install

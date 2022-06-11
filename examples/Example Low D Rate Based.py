@@ -1,12 +1,14 @@
-
+#!/usr/bin/env python
 # coding: utf-8
 
 # In[6]:
 
-get_ipython().magic('pylab inline')
+
+get_ipython().run_line_magic('pylab', 'inline')
 
 
 # In[7]:
+
 
 from plasticnet import *
 
@@ -14,6 +16,7 @@ from plasticnet import *
 # ## 1D BCM
 
 # In[8]:
+
 
 from plasticnet import *
 pre=neurons.pattern_neuron([10])
@@ -31,6 +34,7 @@ run_sim(sim,[pre,post],[c],display_hash=False)
 
 # In[9]:
 
+
 w=sim.monitors['weights'].array().squeeze()
 plot(w)
 xlabel('Weights')
@@ -40,6 +44,7 @@ ylabel('Time')
 # ## 2D BCM
 
 # In[10]:
+
 
 pre=neurons.pattern_neuron([[2,3],[3,1]])
 post=neurons.linear_neuron(1)
@@ -56,6 +61,7 @@ run_sim(sim,[pre,post],[c],display_hash=False)
 
 # In[11]:
 
+
 weights=sim.monitors['weights'].array().squeeze()
 plot(weights)
 legend(['Weight 0','Weight 1'])
@@ -70,6 +76,7 @@ xlabel('Time')
 
 
 # In[12]:
+
 
 outputs=[]
 for w in weights:
@@ -86,6 +93,7 @@ legend(['Pattern 0','Pattern 1'])
 # ## 2D Hebb
 
 # In[13]:
+
 
 pre=neurons.pattern_neuron([[2,3],[3,1]])
 post=neurons.linear_neuron(1)
@@ -104,6 +112,7 @@ run_sim(sim,[pre,post],[c],display_hash=False)
 
 # In[14]:
 
+
 weights=sim.monitors['weights'].array().squeeze()
 plot(weights)
 legend(['Weight 0','Weight 1'])
@@ -119,6 +128,7 @@ xlabel('Time')
 
 # In[15]:
 
+
 outputs=[]
 for w in weights:
     output=[sum(x*w) for x in pre.patterns]
@@ -132,6 +142,7 @@ legend(['Pattern 0','Pattern 1'])
 
 
 # In[ ]:
+
 
 
 

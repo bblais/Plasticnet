@@ -899,7 +899,7 @@ class grating_response(post_process_simulation):
         try:  # check for channel
             neurons=c.pre.neuron_list
         except AttributeError:
-            neurons=[pre]
+            neurons=[c.pre]
 
         self.num_channels=len(neurons)
         self.rf_diameter=neurons[0].rf_size
@@ -919,3 +919,276 @@ class grating_response(post_process_simulation):
 
 
 
+
+
+class Results(object):
+    
+    def __init__(self,sfname):
+        import numpy as np
+
+        self.fname=sfname
+    
+        t_mat,y_mat=self.get_max_responses()
+        self.all_responses,self.k_mat,self.theta_mat=get_responses_from_asdf(self.fname)
+
+            
+        self.sequence_index=[]
+        self.sequence_times=[]
+        count=0
+        for t in t_mat:
+            self.sequence_times.append((t.min(),t.max()))
+            self.sequence_index.append((count,count+len(t)-1))
+            count+=len(t)
+            
+        self.t=np.concatenate(t_mat)
+        self.y=np.concatenate(y_mat)
+        
+        self.tuning_curves=np.concatenate([_[1] for _ in self.all_responses],axis=-1)        
+
+        _,self.num_neurons,self.num_channels=self.y.shape
+        
+                                       
+        t2_mat,θ_mat=self.get_theta()
+        assert sum(t2_mat[0]-t_mat[0])==0.0
+        
+        self.θ=np.concatenate(θ_mat)
+        
+        t2_mat,W_mat=self.get_weights()
+        assert sum(t2_mat[0]-t_mat[0])==0.0
+        
+        self.W=np.concatenate(W_mat)
+        
+        
+        self.rf_size=int(np.sqrt(self.W.shape[-1]/self.num_channels))
+                
+    def __getitem__(self,idx):
+        if idx==-1:  # make time the 0th index
+            return [np.stack([_]) for _ in (self.t[-1],self.y[-1,...],self.θ[-1,...],self.W[-1,...])]
+        
+        try:
+            
+            ts=[]
+            ys=[]
+            θs=[]
+            Ws=[]
+            for _t in idx:
+                t,y,θ,W=self[_t]
+                ts.append(t)
+                ys.append(y)
+                θs.append(θ)
+                Ws.append(W)
+                
+                                
+            t=np.concatenate(ts)
+            y=np.concatenate(ys)
+            θ=np.concatenate(θs)
+            W=np.concatenate(Ws)
+            
+            return t,y,θ,W
+            
+        except TypeError:  # a single number, # make time the 0th index
+            _t=idx
+            idx=np.where(self.t>=_t)[0][0]
+            
+            return [np.stack([_]) for _ in (self.t[idx],self.y[idx,...],self.θ[idx,...],self.W[idx,...])]
+            
+    def μσ_at_t(self,t):
+        _t,y,θ,W=self[t]
+        μ=y.mean(axis=1)  # average across neurons, at the end of a seq, for each channel
+        S=y.std(axis=1)
+        N=y.shape[1]
+        K=1+20/N**2
+        σ=K*S/np.sqrt(N)
+
+        return μ,σ
+
+    
+    
+    @property
+    def ORI(self):
+        from numpy import radians,cos,sin,sqrt,hstack,concatenate
+        tt=[]
+        LL=[]
+        for response in self.all_responses:
+
+            t,y=response
+            tt.append(t)
+
+            y=y.max(axis=0)
+            θk=radians(self.theta_mat)
+
+            rk=y.transpose([1,2,3,0])  # make the angle the right-most index, so broadcaasting works
+
+            vx=rk*cos(2*θk)
+            vy=rk*sin(2*θk)
+
+            L=sqrt(vx.sum(axis=3)**2+vy.sum(axis=3)**2)/rk.sum(axis=3)
+            L=L.transpose([0,2,1])
+            LL.append(L)
+            
+        t=hstack(tt)
+        ORI=concatenate(LL,axis=1)
+        return ORI
+    
+    @property
+    def ODI(self):
+        return (self.y[:,:,1]-self.y[:,:,0])/(self.y[:,:,1]+self.y[:,:,0]) 
+
+    
+    @property
+    def ODI_μσ(self):
+        μ_mat=[]
+        σ_mat=[]
+        for index in self.sequence_index:
+            idx=index[-1]
+
+            μ=self.ODI[idx,...].mean(axis=0)  # average across neurons, at the end of a seq, for each channel
+            S=self.ODI[idx,...].std(axis=0)
+            N=self.y.shape[1]
+            K=1+20/N**2
+            σ=K*S/np.sqrt(N)
+            
+            μ_mat.append(μ)
+            σ_mat.append(σ)
+
+        return μ_mat,σ_mat
+        
+    
+    
+    def plot_rf(self):
+        from pylab import GridSpec,subplot,imshow,ylabel,title,gca,xlabel,grid,cm
+        
+        
+        w_im=self.weight_image(self.W[-1,::])
+        number_of_neurons=w_im.shape[0]
+        number_of_channels=w_im.shape[1]
+        
+        spec2 = GridSpec(ncols=w_im.shape[1], nrows=w_im.shape[0])
+        for n in range(number_of_neurons):
+            vmin=w_im[n,:,:,:].min()
+            vmax=w_im[n,:,:,:].max()
+            for c in range(number_of_channels):
+                subplot(spec2[n, c])
+                im=w_im[n,c,:,:]
+                imshow(im,cmap=cm.gray,vmin=vmin,vmax=vmax,interpolation='nearest')
+                grid(False)
+                if c==0:
+                    ylabel(f'Neuron {n}')
+                if n==0:
+                    if c==0:
+                        title("Left")
+                    else:
+                        title("Right")
+                gca().set_xticklabels([])
+                gca().set_yticklabels([])
+
+    @property
+    def μσ(self):
+        import numpy as np
+
+        μ_mat=[]
+        σ_mat=[]
+        for index in self.sequence_index:
+            idx=index[-1]
+
+            μ=self.y[idx,...].mean(axis=0)  # average across neurons, at the end of a seq, for each channel
+            S=self.y[idx,...].std(axis=0)
+            N=self.y.shape[1]
+            K=1+20/N**2
+            σ=K*S/np.sqrt(N)
+            
+            μ_mat.append(μ)
+            σ_mat.append(σ)
+
+        return μ_mat,σ_mat
+
+    def weight_image(self,W):
+        return W.reshape((self.num_neurons,self.num_channels,self.rf_size,self.rf_size))
+    
+    def get_max_responses(self):
+        import numpy as np
+        
+        fname=self.fname
+    
+        t_mat=[]
+        y_mat=[]
+        with asdf.open(fname) as af:
+            L=af.tree['attrs']['sequence length']
+
+            for i in range(L):
+                m=af.tree['sequence %d' % i]['simulation']['process 0']
+                t,responses=m['t'],m['responses']
+                t_mat.append(np.array(t))
+                y=pn.utils.max_channel_response(np.array(responses))
+                y=y.transpose([2,1,0])  # make time the index 0, neurons index 1, and channels index 2
+                y_mat.append(y)
+
+        return t_mat,y_mat
+
+    def get_theta(self):
+        import numpy as np
+
+        fname=self.fname
+
+        t_mat=[]
+        theta_mat=[]
+        with asdf.open(fname) as af:
+            L=af.tree['attrs']['sequence length']
+
+            for i in range(L):
+                m=af.tree['sequence %d' % i]['connection 0']['monitor theta']           
+                t,theta=m['t'],m['values']
+                t_mat.append(np.array(t))
+                theta_mat.append(np.array(theta))
+
+        return t_mat,theta_mat
+      
+
+    def get_weights(self):
+        import numpy as np
+
+        fname=self.fname
+
+        t_mat=[]
+        W_mat=[]
+        with asdf.open(fname) as af:
+            L=af.tree['attrs']['sequence length']
+
+            for i in range(L):
+                m=af.tree['sequence %d' % i]['connection 0']['monitor weights']
+                t,W=m['t'],m['values']
+                t_mat.append(np.array(t))
+                W_mat.append(np.array(W))
+
+        return t_mat,W_mat
+
+def get_responses_from_asdf(fname):
+    import asdf
+    import numpy as np
+    
+    data=[]
+    with asdf.open(fname) as af:
+        L=af.tree['attrs']['sequence length']
+    
+        for i in range(L):
+            m=af.tree['sequence %d' % i]['simulation']['process 0']
+            t,responses=m['t'],m['responses']
+            data.append( (np.array(t),np.array(responses)) )
+        
+        k_mat=np.array(m['k_mat'])
+        theta_mat=np.array(m['theta_mat'])
+            
+    return data,k_mat,theta_mat        
+    
+def μσ(V,axis=None):
+    μ=v.mean(axis=axis)
+    S=v.std(axis=axis)
+    if axis is None:
+        N=len(v.ravel())
+    else:
+        N=V.shape[axis]
+
+    K=1+20/N**2
+    σ=K*S/sqrt(N)    
+    
+    return μ,σ

@@ -147,13 +147,16 @@ def hdf5_load_images(fname):
 
     return var
 
+
+
+
 cdef class natural_images(pattern_neuron):
     cdef public int buffer_size
     cdef public object im
     cdef public object filename
     cdef int number_of_pics
     cdef int images_loaded
-    cdef int p,r,c
+    cdef public int p,r,c
     cdef public int use_other_channel
     cdef natural_images other_channel
     
@@ -180,7 +183,7 @@ cdef class natural_images(pattern_neuron):
         pattern_neuron.__init__(self,np.zeros((1,rf_size*rf_size),float),
                             time_between_patterns=time_between_patterns,sequential=True,verbose=verbose)
     
-    
+        self.pattern_number=0
         self.rf_size=rf_size
         self.pattern=self.patterns[0]
         self.name='Natural Images'
@@ -223,9 +226,17 @@ cdef class natural_images(pattern_neuron):
         pattern=<double *>self.pattern.data    
                 
         cdef int number_of_pictures=len(self.im)
-                
+
+        if not self.sequential:
+            self.pattern_number=randint(number_of_pictures)
+        else:
+            self.pattern_number+=1
+            if self.pattern_number>=number_of_pictures:
+                self.new_buffer(t)
+                self.pattern_number=0
+
         if not self.use_other_channel:
-            p=randint(number_of_pictures)
+            p=self.pattern_number
         else:
             p=self.other_channel.p % number_of_pictures
         
@@ -240,7 +251,7 @@ cdef class natural_images(pattern_neuron):
             r,c=self.other_channel.r,self.other_channel.c
 
         if self.verbose:
-            print p,r,c
+            print(p,r,c)
 
         self.p=p
         self.c=c
@@ -260,14 +271,300 @@ cdef class natural_images(pattern_neuron):
 
 
         if self.verbose:
-            print            
+            print()            
             sys.stdout.flush()
 
         self.time_to_next_pattern=t+self.time_between_patterns
         if self.verbose:
-            print "New pattern t=%f" % t
+            print("New pattern t=%f" % t)
             self.print_pattern()
-            print "Time to next pattern: %f" % self.time_to_next_pattern
+            print("Time to next pattern: %f" % self.time_to_next_pattern)
             sys.stdout.flush()
     
     
+
+cdef class natural_images_with_jitter(natural_images):
+    cdef public int pa,ra,ca
+    cdef float mu_c,mu_r
+    cdef float sigma_c,sigma_r
+    cdef int buffer_r,buffer_c
+    
+    cpdef _reset(self):
+        pattern_neuron._reset(self)
+        self.p=self.r=self.c=-1
+        
+    def __init__(self,fname='hdf5/bbsk081604_norm.hdf5',rf_size=13,
+                     time_between_patterns=1.0,
+                     mu_c=0,mu_r=0,sigma_c=0,sigma_r=0,
+                     buffer_r=0,buffer_c=0,  # extra edge space
+                     other_channel=None,
+                     verbose=False,
+                     ):
+
+        natural_images.__init__(self,fname=fname,rf_size=rf_size,
+                     time_between_patterns=time_between_patterns,
+                     other_channel=other_channel,
+                     verbose=verbose,
+                     )
+
+
+        self.mu_c=mu_c
+        self.mu_r=mu_r
+        self.sigma_c=sigma_c
+        self.sigma_r=sigma_r
+
+        self.buffer_r=buffer_r
+        self.buffer_c=buffer_c
+
+        self.save_attrs.extend(['mu_c','mu_r','sigma_c','sigma_r',])
+        #self.save_data.extend(['patterns','pattern'])
+
+
+
+    cpdef new_pattern(self,double t):
+        cdef int i,j,k,num_rows,num_cols,r,c,p,offset,count
+        cdef np.ndarray pic
+        cdef double *pic_ptr
+        cdef double *pattern
+        
+
+        if not self.images_loaded:
+            self.load_images()
+
+        pattern=<double *>self.pattern.data    
+                
+        cdef int number_of_pictures=len(self.im)
+                
+        if not self.sequential:
+            self.pattern_number=randint(number_of_pictures)
+        else:
+            self.pattern_number+=1
+            if self.pattern_number>=number_of_pictures:
+                self.new_buffer(t)
+                self.pattern_number=0
+
+        if not self.use_other_channel:
+            p=self.pattern_number
+        else:
+            p=self.other_channel.p % number_of_pictures
+
+        pic=self.im[p]
+        pic_ptr=<double *> pic.data
+            
+        num_rows,num_cols=pic.shape[0],pic.shape[1]
+        
+        count=0
+        if not self.use_other_channel:
+            r,c=randint(int(num_rows-self.rf_size-self.buffer_r-3*self.sigma_r)),randint(int(num_cols-self.rf_size-self.buffer_c-3*self.sigma_c))
+
+        else:
+            r,c=self.other_channel.r,self.other_channel.c
+
+        if self.verbose:
+            print(p,r,c)
+
+        self.p=p
+        self.c=c
+        self.r=r
+
+
+        r=int(r+self.mu_r+randn()*self.sigma_r)
+        c=int(c+self.mu_c+randn()*self.sigma_c)
+        
+        if r<0:
+            r=0
+        if r>num_rows-self.rf_size-1:
+            r=num_rows-self.rf_size-1
+
+        if c<0:
+            c=0
+        if c>num_cols-self.rf_size-1:
+            c=num_cols-self.rf_size-1
+
+
+        self.pa=p
+        self.ca=c
+        self.ra=r
+
+
+        count=0
+        for i in range(self.rf_size):
+            for j in range(self.rf_size):
+                offset=(r+i)*num_cols+(c+j)
+                
+                pattern[count]=pic_ptr[offset]
+                count+=1
+                if self.verbose:
+                    print("[%d,%d]" % (offset,count))
+                    sys.stdout.flush()
+
+
+
+        if self.verbose:
+            print()           
+            sys.stdout.flush()
+
+        self.time_to_next_pattern=t+self.time_between_patterns
+        if self.verbose:
+            print("New pattern t=%f" % t)
+            self.print_pattern()
+            print("Time to next pattern: %f" % self.time_to_next_pattern)
+            sys.stdout.flush()
+    
+        
+
+cdef class natural_images_with_motion(natural_images):
+    cdef public np.ndarray velocities,angles,time_between_saccades
+    cdef int current_row,current_col
+    cdef float current_angle,current_velocity
+    cdef float time_to_next_saccade,current_time
+    cdef float sx,sy
+    
+    def __init__(self,fname='hdf5/bbsk081604_norm.hdf5',rf_size=13,
+                     time_between_patterns=1.0,other_channel=None,
+                     verbose=False,
+                     velocities=None,
+                     angles=None,
+                     time_between_saccades=None,
+                     ):
+
+        natural_images.__init__(self,fname=fname,rf_size=rf_size,
+                     time_between_patterns=time_between_patterns,
+                     other_channel=other_channel,
+                     verbose=verbose,)
+
+        if not velocities is None:
+            self.velocities=np.array(velocities,float)
+        else:
+            self.velocities=np.array([0],float)
+
+        if not angles is None:
+            self.angles=np.array(angles,float)
+        else:
+            self.angles=np.linspace(0,360,361)
+
+        if not time_between_saccades is None:
+            self.time_between_saccades=np.array(time_between_saccades,float)
+        else:
+            self.time_between_saccades=np.array([30],float)
+
+
+        self.time_to_next_saccade=-1
+        self.sx=0
+        self.sy=0
+
+        
+    cpdef new_pattern(self,double t):
+        cdef int i,j,k,num_rows,num_cols,r,c,p,offset,count
+        cdef np.ndarray pic
+        cdef double *pic_ptr
+        cdef double *pattern
+        cdef int saccade
+                
+        if not self.images_loaded:
+            self.load_images()
+
+        pattern=<double *>self.pattern.data    
+                
+        cdef int number_of_pictures=len(self.im)
+
+        saccade = (t>self.time_to_next_saccade)
+
+
+        if saccade:  # reset motion
+            if self.verbose:
+                print("Saccade ",t,self.time_to_next_saccade)            
+                sys.stdout.flush()
+
+            if not self.sequential:
+                self.pattern_number=randint(number_of_pictures)
+            else:
+                self.pattern_number+=1
+                if self.pattern_number>=number_of_pictures:
+                    self.new_buffer(t)
+                    self.pattern_number=0
+
+            self.current_velocity=self.velocities[randint(len(self.velocities))]
+            self.current_angle=self.angles[randint(len(self.angles))]
+
+            self.sx=self.current_velocity*np.cos(self.current_angle*3.141592653589/180.0) 
+            self.sy=-self.current_velocity*np.sin(self.current_angle*3.141592653589/180.0)
+
+            self.current_time=t
+            self.time_to_next_saccade=t+self.time_between_saccades[randint(len(self.time_between_saccades))]
+
+            if self.verbose:
+                print("sx,sy ang vel",self.sx,self.sy,self.current_angle,self.current_velocity)            
+                print("time to next saccade ",self.time_to_next_saccade) 
+                sys.stdout.flush()
+
+
+
+        if not self.use_other_channel:
+            p=self.pattern_number
+        else:
+            p=self.other_channel.p % number_of_pictures
+        
+        pic=self.im[p]
+        pic_ptr=<double *> pic.data
+            
+        num_rows,num_cols=pic.shape[0],pic.shape[1]
+              
+        if not self.use_other_channel:
+            if saccade:  # reset motion
+                r,c=randint(num_rows-self.rf_size),randint(num_cols-self.rf_size)
+                self.current_row,self.current_col=r,c
+            else:
+                r=int(self.current_row+self.sy*(t-self.current_time))
+                c=int(self.current_col+self.sx*(t-self.current_time))
+
+                if r>=(num_rows-self.rf_size):
+                    r=num_rows-self.rf_size-1
+                    self.time_to_next_saccade=t
+
+                if c>=(num_cols-self.rf_size):
+                    c=num_cols-self.rf_size-1
+                    self.time_to_next_saccade=t
+
+                if r<0:
+                    r=0
+                    self.time_to_next_saccade=t
+
+                if c<0:
+                    c=0
+                    self.time_to_next_saccade=t
+
+        else:
+            r,c=self.other_channel.r,self.other_channel.c
+
+        if self.verbose:
+            print("new pattern",t,p,r,c)
+
+        self.p=p
+        self.c=c
+        self.r=r
+
+        count=0
+        for i in range(self.rf_size):
+            for j in range(self.rf_size):
+                offset=(r+i)*num_cols+(c+j)
+                
+                pattern[count]=pic_ptr[offset]
+                count+=1
+                if self.verbose:
+                    print "[%d,%d]" % (offset,count),
+                    sys.stdout.flush()
+
+
+
+        if self.verbose:
+            print()            
+            sys.stdout.flush()
+
+        self.time_to_next_pattern=t+self.time_between_patterns
+        if self.verbose:
+            print("New pattern t=%f" % t)
+            self.print_pattern()
+            print("Time to next pattern: %f" % self.time_to_next_pattern)
+            sys.stdout.flush()          
+
