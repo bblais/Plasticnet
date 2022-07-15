@@ -1,12 +1,14 @@
-
+#!/usr/bin/env python
 # coding: utf-8
 
 # In[1]:
+
 
 from splikes import *
 
 
 # In[13]:
+
 
 from pylab import figure,legend,plot,linspace
 
@@ -43,6 +45,7 @@ from pylab import figure,legend,plot,linspace
 
 # In[4]:
 
+
 pre=neurons.poisson_pattern([10])
 
 post=neurons.srm0(1)
@@ -73,6 +76,7 @@ legend(['Smoothed','Unsmoothed'])
 
 # In[6]:
 
+
 pre=neurons.poisson_pattern([20])
 pre.save_spikes_begin=0.0
 pre.save_spikes_end=10
@@ -98,10 +102,12 @@ for t,n in pre.saved_spikes:
 
 # In[7]:
 
+
 pre.saved_spikes
 
 
 # In[8]:
+
 
 pre=neurons.poisson_pattern([10])
 
@@ -144,6 +150,7 @@ paramtext(0.15,0.7,
 # ### try with isi invgauss input
 
 # In[9]:
+
 
 ISI=neurons.isi_distributions.invgauss(0,1.0)
 pre=neurons.isi_pattern([10],ISI)
@@ -199,6 +206,7 @@ post2.plot_spikes(1)
 
 
 # In[10]:
+
 
 ISI=neurons.isi_distributions.invgauss(0,1.0)
 pre=neurons.isi_pattern([10],ISI)
@@ -258,6 +266,7 @@ post2.plot_spikes(1)
 
 # In[11]:
 
+
 c.weights
 
 
@@ -265,10 +274,12 @@ c.weights
 
 # In[15]:
 
+
 from pylab import mean
 
 
 # In[16]:
+
 
 rate_arr=linspace(1,50,100)
 #print rate_arr
@@ -311,6 +322,7 @@ paramtext(.5,.9,
 
 # In[17]:
 
+
 w_arr=linspace(0.01,2,100)
 #print w_arr
 
@@ -350,6 +362,7 @@ paramtext(.5,.9,
 
 
 # In[ ]:
+
 
 
 
