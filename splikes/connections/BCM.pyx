@@ -46,18 +46,18 @@ cdef class BCM_LawCooper(connection):
         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
                                    self.initial_theta_range[0])+self.initial_theta_range[0]
 
-        self.mod_theta=np.zeros(self.post.N,dtype=np.float)
-        self.mod_beta=np.zeros(self.post.N,dtype=np.float)
+        self.mod_theta=np.zeros(self.post.N,dtype=float)
+        self.mod_beta=np.zeros(self.post.N,dtype=float)
 
 
-        self.y=np.zeros(self.post.N,dtype=np.float)
-        self.Y=np.zeros(self.post.N,dtype=np.float)
-        self.mod_Y=np.zeros(self.post.N,dtype=np.float)
+        self.y=np.zeros(self.post.N,dtype=float)
+        self.Y=np.zeros(self.post.N,dtype=float)
+        self.mod_Y=np.zeros(self.post.N,dtype=float)
 
         self.y_avg=np.sqrt(self.theta)
-        self.x=np.zeros(self.pre.N,dtype=np.float)
-        self.X=np.zeros(self.pre.N,dtype=np.float)
-        self.mod_X=np.zeros(self.pre.N,dtype=np.float)
+        self.x=np.zeros(self.pre.N,dtype=float)
+        self.X=np.zeros(self.pre.N,dtype=float)
+        self.mod_X=np.zeros(self.pre.N,dtype=float)
 
         self.time_to_next_modification=self.time_between_modification
 
@@ -236,12 +236,12 @@ cdef class BCM(connection):
     cdef public int save_inputs
     
     cpdef _reset(self):
-        self.X=np.zeros(self.pre.N,dtype=np.float)
-        self.Y=np.zeros(self.post.N,dtype=np.float)
+        self.X=np.zeros(self.pre.N,dtype=float)
+        self.Y=np.zeros(self.post.N,dtype=float)
         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
                                    self.initial_theta_range[0])+self.initial_theta_range[0]
-        self.y=np.zeros(self.post.N,dtype=np.float)
-        self.x=np.zeros(self.pre.N,dtype=np.float)
+        self.y=np.zeros(self.post.N,dtype=float)
+        self.x=np.zeros(self.pre.N,dtype=float)
         self.time_to_next_modification=self.time_between_modification
         connection._reset(self)
 
@@ -349,14 +349,14 @@ cdef class BCM_LawCooper_Offset(connection):
     cdef public double time_between_modification,time_to_next_modification
 
     cpdef _reset(self):
-        self.X=np.zeros(self.pre.N,dtype=np.float)
-        self.Y=np.zeros(self.post.N,dtype=np.float)
+        self.X=np.zeros(self.pre.N,dtype=float)
+        self.Y=np.zeros(self.post.N,dtype=float)
         self.theta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
                                    self.initial_theta_range[0])+self.initial_theta_range[0]
 
-        self.yo=np.zeros(self.post.N,dtype=np.float)
-        self.y=np.zeros(self.post.N,dtype=np.float)
-        self.x=np.zeros(self.pre.N,dtype=np.float)
+        self.yo=np.zeros(self.post.N,dtype=float)
+        self.y=np.zeros(self.post.N,dtype=float)
+        self.x=np.zeros(self.pre.N,dtype=float)
         self.time_to_next_modification=self.time_between_modification
 
         connection._reset(self)
@@ -475,18 +475,18 @@ cdef class BCM_TwoThreshold(connection):
         self.beta=pylab.rand(self.post.N)*(self.initial_theta_range[1]-
                                    self.initial_theta_range[0])+self.initial_theta_range[0]
 
-        self.mod_theta=np.zeros(self.post.N,dtype=np.float)
-        self.mod_beta=np.zeros(self.post.N,dtype=np.float)
+        self.mod_theta=np.zeros(self.post.N,dtype=float)
+        self.mod_beta=np.zeros(self.post.N,dtype=float)
 
 
-        self.y=np.zeros(self.post.N,dtype=np.float)
-        self.Y=np.zeros(self.post.N,dtype=np.float)
-        self.mod_Y=np.zeros(self.post.N,dtype=np.float)
+        self.y=np.zeros(self.post.N,dtype=float)
+        self.Y=np.zeros(self.post.N,dtype=float)
+        self.mod_Y=np.zeros(self.post.N,dtype=float)
 
         self.y_avg=np.sqrt(self.theta)
-        self.x=np.zeros(self.pre.N,dtype=np.float)
-        self.X=np.zeros(self.pre.N,dtype=np.float)
-        self.mod_X=np.zeros(self.pre.N,dtype=np.float)
+        self.x=np.zeros(self.pre.N,dtype=float)
+        self.X=np.zeros(self.pre.N,dtype=float)
+        self.mod_X=np.zeros(self.pre.N,dtype=float)
 
         self.time_to_next_modification=self.time_between_modification
 

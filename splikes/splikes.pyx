@@ -261,7 +261,7 @@ cdef class neuron(group):
         self.num_post=0
         self.verbose=False
         self.spiking=np.zeros(self.N,dtype=np.int32)    
-        self.last_spike_time=-np.ones(self.N,dtype=np.float)    
+        self.last_spike_time=-np.ones(self.N,dtype=float)    
         self.save_spikes_begin=0.0
         self.save_spikes_end=-1.0
         self.connections_pre=[]
@@ -276,8 +276,8 @@ cdef class neuron(group):
 
     cpdef _reset(self):
         self.spiking=np.zeros(self.N,dtype=np.int32)            
-        self.last_spike_time=-np.ones(self.N,dtype=np.float)    
-        self.rate=np.zeros(self.N,dtype=np.float)
+        self.last_spike_time=-np.ones(self.N,dtype=float)    
+        self.rate=np.zeros(self.N,dtype=float)
         self.saved_spikes=[]
         self.is_spike=0
         self.post_count=0
@@ -289,7 +289,10 @@ cdef class neuron(group):
         
         
     def plot_spikes(self,neuron_offset=0):
-        t,n=zip(*self.saved_spikes)
+        try:
+            t,n=zip(*self.saved_spikes)
+        except ValueError:
+            raise ValueError("No spikes saved.")
         t=np.array(t)
         n=np.array(n)
         

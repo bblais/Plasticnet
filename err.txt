@@ -1,0 +1,370 @@
+version='0.1.6'
+
+running install
+running bdist_egg
+running egg_info
+writing manifest file 'plasticnet.egg-info/SOURCES.txt'
+running install_lib
+running build_py
+running build_ext
+creating build/bdist.macosx-10.9-x86_64/egg
+creating build/bdist.macosx-10.9-x86_64/egg/splikes
+creating build/bdist.macosx-10.9-x86_64/egg/splikes/monitors
+creating build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+creating build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+creating build/bdist.macosx-10.9-x86_64/egg/plasticnet
+creating build/bdist.macosx-10.9-x86_64/egg/plasticnet/monitors
+creating build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+creating build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/monitors/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/update_init.py to update_init.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/backup__init__.py to backup__init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/process.py to process.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/utils.py to utils.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/update_init.py to update_init.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/backup__init__.py to backup__init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/process.py to process.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/Waitbar.py to Waitbar.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/monitors/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/update_init.py to update_init.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/backup__init__.py to backup__init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/utils.py to utils.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/update_init.py to update_init.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/backup__init__.py to backup__init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/Waitbar.py to Waitbar.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/plasticnet.py to plasticnet.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold_OLD.py to BCM_TwoThreshold_OLD.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/constant_connection.py to constant_connection.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/Hebb.py to Hebb.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold.py to BCM_TwoThreshold.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/Miller2014.py to Miller2014.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/process.py to process.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold_Harel.py to BCM_TwoThreshold_Harel.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM.py to BCM.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/pattern_neuron.py to pattern_neuron.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/linear_neuron.py to linear_neuron.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/process.py to process.cpython-38.pyc
+creating build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
+copying plasticnet.egg-info/PKG-INFO -> build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
+copying plasticnet.egg-info/SOURCES.txt -> build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
+copying plasticnet.egg-info/dependency_links.txt -> build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
+copying plasticnet.egg-info/top_level.txt -> build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
+/Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+/Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/setuptools/command/easy_install.py:156: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+zip_safe flag not set; analyzing archive contents...
+plasticnet.__pycache__.plasticnet.cpython-38: module references __file__
+plasticnet.connections.__pycache__.BCM.cpython-38: module references __file__
+plasticnet.connections.__pycache__.BCM_TwoThreshold.cpython-38: module references __file__
+plasticnet.connections.__pycache__.BCM_TwoThreshold_Harel.cpython-38: module references __file__
+plasticnet.connections.__pycache__.BCM_TwoThreshold_OLD.cpython-38: module references __file__
+plasticnet.connections.__pycache__.Hebb.cpython-38: module references __file__
+plasticnet.connections.__pycache__.Miller2014.cpython-38: module references __file__
+plasticnet.connections.__pycache__.constant_connection.cpython-38: module references __file__
+plasticnet.connections.__pycache__.process.cpython-38: module references __file__
+plasticnet.neurons.__pycache__.linear_neuron.cpython-38: module references __file__
+plasticnet.neurons.__pycache__.pattern_neuron.cpython-38: module references __file__
+plasticnet.neurons.__pycache__.process.cpython-38: module references __file__
+removing 'build/bdist.macosx-10.9-x86_64/egg' (and everything under it)
+creating /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg
+Extracting plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg to /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/Waitbar.py to Waitbar.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/__init__.py to __init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/plasticnet.py to plasticnet.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/utils.py to utils.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/BCM.py to BCM.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/BCM_TwoThreshold.py to BCM_TwoThreshold.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/BCM_TwoThreshold_Harel.py to BCM_TwoThreshold_Harel.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/BCM_TwoThreshold_OLD.py to BCM_TwoThreshold_OLD.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/Hebb.py to Hebb.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/Miller2014.py to Miller2014.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/__init__.py to __init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/backup__init__.py to backup__init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/constant_connection.py to constant_connection.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/process.py to process.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/update_init.py to update_init.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/monitors/__init__.py to __init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/__init__.py to __init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/backup__init__.py to backup__init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/linear_neuron.py to linear_neuron.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/pattern_neuron.py to pattern_neuron.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/process.py to process.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/update_init.py to update_init.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/Waitbar.py to Waitbar.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/__init__.py to __init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/utils.py to utils.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/connections/__init__.py to __init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/connections/backup__init__.py to backup__init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/connections/process.py to process.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/connections/update_init.py to update_init.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/monitors/__init__.py to __init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/__init__.py to __init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/backup__init__.py to backup__init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/process.py to process.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/update_init.py to update_init.cpython-38.pyc
+Adding plasticnet 0.1.6 to easy-install.pth file
+
+Installed /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg
+Processing dependencies for plasticnet==0.1.6
+Finished processing dependencies for plasticnet==0.1.6
+version='0.1.1'
+
+running install
+running bdist_egg
+running egg_info
+writing splikes.egg-info/PKG-INFO
+writing dependency_links to splikes.egg-info/dependency_links.txt
+writing top-level names to splikes.egg-info/top_level.txt
+reading manifest file 'splikes.egg-info/SOURCES.txt'
+adding license file 'LICENSE.md'
+writing manifest file 'splikes.egg-info/SOURCES.txt'
+installing library code to build/bdist.macosx-10.9-x86_64/egg
+running install_lib
+running build_py
+running build_ext
+skipping 'plasticnet/plasticnet.c' Cython extension (up-to-date)
+skipping 'plasticnet/connections/BCM_TwoThreshold_OLD.c' Cython extension (up-to-date)
+skipping 'plasticnet/connections/constant_connection.c' Cython extension (up-to-date)
+skipping 'plasticnet/connections/Hebb.c' Cython extension (up-to-date)
+skipping 'plasticnet/connections/BCM_TwoThreshold.c' Cython extension (up-to-date)
+skipping 'plasticnet/connections/Miller2014.c' Cython extension (up-to-date)
+skipping 'plasticnet/connections/process.c' Cython extension (up-to-date)
+skipping 'plasticnet/connections/BCM_TwoThreshold_Harel.c' Cython extension (up-to-date)
+skipping 'plasticnet/connections/BCM.c' Cython extension (up-to-date)
+skipping 'plasticnet/neurons/pattern_neuron.c' Cython extension (up-to-date)
+skipping 'plasticnet/neurons/linear_neuron.c' Cython extension (up-to-date)
+skipping 'plasticnet/neurons/process.c' Cython extension (up-to-date)
+skipping 'splikes/connections/Triplet.c' Cython extension (up-to-date)
+skipping 'splikes/connections/STDP.c' Cython extension (up-to-date)
+skipping 'splikes/connections/calcium.c' Cython extension (up-to-date)
+skipping 'splikes/connections/triplet_julijana.c' Cython extension (up-to-date)
+skipping 'splikes/connections/BCM.c' Cython extension (up-to-date)
+skipping 'splikes/splikes.c' Cython extension (up-to-date)
+skipping 'splikes/neurons/spike_pattern.c' Cython extension (up-to-date)
+skipping 'splikes/neurons/IntegrateAndFire.c' Cython extension (up-to-date)
+skipping 'splikes/neurons/poisson_pattern.c' Cython extension (up-to-date)
+skipping 'splikes/neurons/isi_distributions.c' Cython extension (up-to-date)
+skipping 'splikes/neurons/srm0.c' Cython extension (up-to-date)
+skipping 'splikes/neurons/poisson_julijana.c' Cython extension (up-to-date)
+creating build/bdist.macosx-10.9-x86_64/egg
+creating build/bdist.macosx-10.9-x86_64/egg/splikes
+creating build/bdist.macosx-10.9-x86_64/egg/splikes/monitors
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/monitors/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/monitors
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/splikes.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes
+creating build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/update_init.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/STDP.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/backup__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/triplet_julijana.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/calcium.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/Triplet.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/process.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/BCM.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/utils.py -> build/bdist.macosx-10.9-x86_64/egg/splikes
+creating build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/update_init.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/isi_distributions.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/backup__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/poisson_julijana.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/spike_pattern.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/IntegrateAndFire.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/srm0.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/process.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/poisson_pattern.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/splikes/Waitbar.py -> build/bdist.macosx-10.9-x86_64/egg/splikes
+creating build/bdist.macosx-10.9-x86_64/egg/plasticnet
+creating build/bdist.macosx-10.9-x86_64/egg/plasticnet/monitors
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/monitors/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/monitors
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet
+creating build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/update_init.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/Miller2014.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/BCM_TwoThreshold_Harel.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/backup__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/process.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/BCM_TwoThreshold.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/BCM.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/constant_connection.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/Hebb.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/BCM_TwoThreshold_OLD.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/plasticnet.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/utils.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet
+creating build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/neurons/update_init.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/neurons/backup__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/neurons/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/neurons/process.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/neurons/pattern_neuron.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/neurons/linear_neuron.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/Waitbar.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/monitors/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/update_init.py to update_init.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/backup__init__.py to backup__init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/process.py to process.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/utils.py to utils.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/update_init.py to update_init.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/backup__init__.py to backup__init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/process.py to process.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/Waitbar.py to Waitbar.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/monitors/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/update_init.py to update_init.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/backup__init__.py to backup__init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/utils.py to utils.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/update_init.py to update_init.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/backup__init__.py to backup__init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/Waitbar.py to Waitbar.cpython-38.pyc
+creating stub loader for plasticnet/plasticnet.cpython-38-darwin.so
+creating stub loader for plasticnet/connections/BCM_TwoThreshold_OLD.cpython-38-darwin.so
+creating stub loader for plasticnet/connections/constant_connection.cpython-38-darwin.so
+creating stub loader for plasticnet/connections/Hebb.cpython-38-darwin.so
+creating stub loader for plasticnet/connections/BCM_TwoThreshold.cpython-38-darwin.so
+creating stub loader for plasticnet/connections/Miller2014.cpython-38-darwin.so
+creating stub loader for plasticnet/connections/process.cpython-38-darwin.so
+creating stub loader for plasticnet/connections/BCM_TwoThreshold_Harel.cpython-38-darwin.so
+creating stub loader for plasticnet/connections/BCM.cpython-38-darwin.so
+creating stub loader for plasticnet/neurons/pattern_neuron.cpython-38-darwin.so
+creating stub loader for plasticnet/neurons/linear_neuron.cpython-38-darwin.so
+creating stub loader for plasticnet/neurons/process.cpython-38-darwin.so
+creating stub loader for splikes/connections/Triplet.cpython-38-darwin.so
+creating stub loader for splikes/connections/STDP.cpython-38-darwin.so
+creating stub loader for splikes/connections/calcium.cpython-38-darwin.so
+creating stub loader for splikes/connections/triplet_julijana.cpython-38-darwin.so
+creating stub loader for splikes/connections/BCM.cpython-38-darwin.so
+creating stub loader for splikes/splikes.cpython-38-darwin.so
+creating stub loader for splikes/neurons/spike_pattern.cpython-38-darwin.so
+creating stub loader for splikes/neurons/IntegrateAndFire.cpython-38-darwin.so
+creating stub loader for splikes/neurons/poisson_pattern.cpython-38-darwin.so
+creating stub loader for splikes/neurons/isi_distributions.cpython-38-darwin.so
+creating stub loader for splikes/neurons/srm0.cpython-38-darwin.so
+creating stub loader for splikes/neurons/poisson_julijana.cpython-38-darwin.so
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/plasticnet.py to plasticnet.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold_OLD.py to BCM_TwoThreshold_OLD.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/constant_connection.py to constant_connection.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/Hebb.py to Hebb.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold.py to BCM_TwoThreshold.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/Miller2014.py to Miller2014.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/process.py to process.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold_Harel.py to BCM_TwoThreshold_Harel.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM.py to BCM.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/pattern_neuron.py to pattern_neuron.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/linear_neuron.py to linear_neuron.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/process.py to process.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/Triplet.py to Triplet.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/STDP.py to STDP.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/calcium.py to calcium.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/triplet_julijana.py to triplet_julijana.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/BCM.py to BCM.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/splikes.py to splikes.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/spike_pattern.py to spike_pattern.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/IntegrateAndFire.py to IntegrateAndFire.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/poisson_pattern.py to poisson_pattern.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/isi_distributions.py to isi_distributions.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/srm0.py to srm0.cpython-38.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/poisson_julijana.py to poisson_julijana.cpython-38.pyc
+creating build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
+copying splikes.egg-info/PKG-INFO -> build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
+copying splikes.egg-info/SOURCES.txt -> build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
+copying splikes.egg-info/dependency_links.txt -> build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
+copying splikes.egg-info/top_level.txt -> build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
+writing build/bdist.macosx-10.9-x86_64/egg/EGG-INFO/native_libs.txt
+/Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+zip_safe flag not set; analyzing archive contents...
+plasticnet.__pycache__.plasticnet.cpython-38: module references __file__
+plasticnet.connections.__pycache__.BCM.cpython-38: module references __file__
+plasticnet.connections.__pycache__.BCM_TwoThreshold.cpython-38: module references __file__
+plasticnet.connections.__pycache__.BCM_TwoThreshold_Harel.cpython-38: module references __file__
+plasticnet.connections.__pycache__.BCM_TwoThreshold_OLD.cpython-38: module references __file__
+plasticnet.connections.__pycache__.Hebb.cpython-38: module references __file__
+plasticnet.connections.__pycache__.Miller2014.cpython-38: module references __file__
+plasticnet.connections.__pycache__.constant_connection.cpython-38: module references __file__
+plasticnet.connections.__pycache__.process.cpython-38: module references __file__
+plasticnet.neurons.__pycache__.linear_neuron.cpython-38: module references __file__
+plasticnet.neurons.__pycache__.pattern_neuron.cpython-38: module references __file__
+plasticnet.neurons.__pycache__.process.cpython-38: module references __file__
+splikes.__pycache__.splikes.cpython-38: module references __file__
+splikes.connections.__pycache__.BCM.cpython-38: module references __file__
+splikes.connections.__pycache__.STDP.cpython-38: module references __file__
+splikes.connections.__pycache__.Triplet.cpython-38: module references __file__
+splikes.connections.__pycache__.calcium.cpython-38: module references __file__
+splikes.connections.__pycache__.triplet_julijana.cpython-38: module references __file__
+splikes.neurons.__pycache__.IntegrateAndFire.cpython-38: module references __file__
+splikes.neurons.__pycache__.isi_distributions.cpython-38: module references __file__
+splikes.neurons.__pycache__.poisson_julijana.cpython-38: module references __file__
+splikes.neurons.__pycache__.poisson_pattern.cpython-38: module references __file__
+splikes.neurons.__pycache__.spike_pattern.cpython-38: module references __file__
+splikes.neurons.__pycache__.srm0.cpython-38: module references __file__
+creating 'dist/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg' and adding 'build/bdist.macosx-10.9-x86_64/egg' to it
+removing 'build/bdist.macosx-10.9-x86_64/egg' (and everything under it)
+Processing splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg
+creating /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg
+Extracting splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg to /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/Waitbar.py to Waitbar.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/__init__.py to __init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/plasticnet.py to plasticnet.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/utils.py to utils.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/BCM.py to BCM.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/BCM_TwoThreshold.py to BCM_TwoThreshold.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/BCM_TwoThreshold_Harel.py to BCM_TwoThreshold_Harel.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/BCM_TwoThreshold_OLD.py to BCM_TwoThreshold_OLD.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/Hebb.py to Hebb.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/Miller2014.py to Miller2014.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/__init__.py to __init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/backup__init__.py to backup__init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/constant_connection.py to constant_connection.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/process.py to process.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/update_init.py to update_init.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/monitors/__init__.py to __init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/__init__.py to __init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/backup__init__.py to backup__init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/linear_neuron.py to linear_neuron.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/pattern_neuron.py to pattern_neuron.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/process.py to process.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/update_init.py to update_init.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/Waitbar.py to Waitbar.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/__init__.py to __init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/splikes.py to splikes.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/utils.py to utils.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/BCM.py to BCM.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/STDP.py to STDP.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/Triplet.py to Triplet.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/__init__.py to __init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/backup__init__.py to backup__init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/calcium.py to calcium.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/process.py to process.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/triplet_julijana.py to triplet_julijana.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/update_init.py to update_init.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/monitors/__init__.py to __init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/IntegrateAndFire.py to IntegrateAndFire.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/__init__.py to __init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/backup__init__.py to backup__init__.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/isi_distributions.py to isi_distributions.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/poisson_julijana.py to poisson_julijana.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/poisson_pattern.py to poisson_pattern.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/process.py to process.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/spike_pattern.py to spike_pattern.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/srm0.py to srm0.cpython-38.pyc
+byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/update_init.py to update_init.cpython-38.pyc
+Adding splikes 0.1.1 to easy-install.pth file
+
+Installed /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg
+Processing dependencies for splikes==0.1.1
+Finished processing dependencies for splikes==0.1.1
+python setup.py install

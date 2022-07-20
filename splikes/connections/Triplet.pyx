@@ -30,10 +30,10 @@ cdef class Gerstner2006(connection):
     cdef public double eta
     cdef public np.ndarray y_fast,x_fast,y_slow,x_slow
     cpdef _reset(self):
-        self.y_fast=np.zeros(self.post.N,dtype=np.float)
-        self.x_fast=np.zeros(self.pre.N,dtype=np.float)
-        self.y_slow=np.zeros(self.post.N,dtype=np.float)
-        self.x_slow=np.zeros(self.pre.N,dtype=np.float)
+        self.y_fast=np.zeros(self.post.N,dtype=float)
+        self.x_fast=np.zeros(self.pre.N,dtype=float)
+        self.y_slow=np.zeros(self.post.N,dtype=float)
+        self.x_slow=np.zeros(self.pre.N,dtype=float)
         connection._reset(self)
 
     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):
@@ -101,8 +101,8 @@ cdef class Triplet_BCM(Gerstner2006):
     cdef public double tau_y2,y2_o
     
     cpdef _reset(self):
-        self.y2=np.zeros(self.post.N,dtype=np.float)
-        self.theta=np.zeros(self.post.N,dtype=np.float)
+        self.y2=np.zeros(self.post.N,dtype=float)
+        self.theta=np.zeros(self.post.N,dtype=float)
         Gerstner2006._reset(self)
     
     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):
@@ -256,7 +256,7 @@ cdef class Triplet_BCM_LawCooper2(Triplet_BCM):
         self.name='Triplet BCM LawCooper with Decay and Beta'
 
     cpdef _reset(self):
-        self.beta=np.zeros(self.post.N,dtype=np.float)
+        self.beta=np.zeros(self.post.N,dtype=float)
         Triplet_BCM._reset(self)
     
     

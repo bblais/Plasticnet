@@ -23,7 +23,7 @@ cdef class poisson_pattern(neuron):
         self.pattern_number=-1      
         
     def __init__(self,patterns,time_between_patterns=0.2,sequential=False,shape=None,verbose=False):
-        self.patterns=np.ascontiguousarray(np.atleast_2d(np.array(patterns,np.float)))
+        self.patterns=np.ascontiguousarray(np.atleast_2d(np.array(patterns,float)))
 
         assert self.patterns.ndim==2,"pattern array must be 2D"
 
@@ -56,15 +56,15 @@ cdef class poisson_pattern(neuron):
         pylab.gca().set_yticks(range(max(n)+2))
         tt=0
         while tt<max(t):
-            pylab.plot([tt,tt],yl,'c:')
-            
+            pylab.plot([tt,tt],yl,'c:',lw=0.5)
             if count:
+                
                 for nn in range(max(n)+1):
                     c=len([x for _t,_n in zip(t,n) if 
                                 tt<=_t<tt+self.time_between_patterns and _n==nn])
                     pylab.text(tt+self.time_between_patterns/2.0,nn+0.1,'%d' % c)
-            
-            tt+=self.time_between_patterns
+                
+                tt+=self.time_between_patterns
         pylab.draw()
 
     cpdef new_pattern(self,double t):

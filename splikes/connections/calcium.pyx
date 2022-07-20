@@ -58,18 +58,18 @@ cdef class calcium(connection):
     cdef public double g_t,mg2,mg1,v_reversal,tau_ca,alpha2,alpha1,backspike_amplitude,i_nmda_mu,peak_backspike_fast,peak_backspike_slow,_lambda,beta2,beta1,k_plus,g_nmda_o,tau_backspike_fast,tau_backspike_slow,eta_gamma0,i_nmda_s,tau_nmda_s,Vo,Vp,i_nmda_f,tau_nmda_f,k_minus
     cdef public np.ndarray B,I_nmda,h,Ca,v_total,eta,g_nmda,v_backspike_fast,I_nmda_fast,I_nmda_slow,omega,v_backspike_slow
     cpdef _reset(self):
-        self.B=np.zeros(self.post.N,dtype=np.float)
-        self.I_nmda=np.zeros( (self.post.N,self.pre.N),dtype=np.float)
-        self.h=np.zeros(self.post.N,dtype=np.float)
-        self.Ca=np.zeros( (self.post.N,self.pre.N),dtype=np.float)
-        self.v_total=np.zeros(self.post.N,dtype=np.float)
-        self.eta=np.zeros( (self.post.N,self.pre.N),dtype=np.float)
-        self.g_nmda=np.zeros( (self.post.N,self.pre.N),dtype=np.float)
-        self.v_backspike_fast=np.zeros(self.post.N,dtype=np.float)
-        self.I_nmda_fast=np.zeros(self.pre.N,dtype=np.float)
-        self.I_nmda_slow=np.zeros(self.pre.N,dtype=np.float)
-        self.omega=np.zeros( (self.post.N,self.pre.N),dtype=np.float)
-        self.v_backspike_slow=np.zeros(self.post.N,dtype=np.float)
+        self.B=np.zeros(self.post.N,dtype=float)
+        self.I_nmda=np.zeros( (self.post.N,self.pre.N),dtype=float)
+        self.h=np.zeros(self.post.N,dtype=float)
+        self.Ca=np.zeros( (self.post.N,self.pre.N),dtype=float)
+        self.v_total=np.zeros(self.post.N,dtype=float)
+        self.eta=np.zeros( (self.post.N,self.pre.N),dtype=float)
+        self.g_nmda=np.zeros( (self.post.N,self.pre.N),dtype=float)
+        self.v_backspike_fast=np.zeros(self.post.N,dtype=float)
+        self.I_nmda_fast=np.zeros(self.pre.N,dtype=float)
+        self.I_nmda_slow=np.zeros(self.pre.N,dtype=float)
+        self.omega=np.zeros( (self.post.N,self.pre.N),dtype=float)
+        self.v_backspike_slow=np.zeros(self.post.N,dtype=float)
         connection._reset(self)
 
     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):

@@ -13,9 +13,9 @@ cdef class srm0(neuron):
     cdef public int smoothed
 
     cpdef _reset(self):
-        self.u=np.zeros(self.N,dtype=np.float)
-        self.v=np.zeros(self.N,dtype=np.float)
-        self.beta=np.zeros(self.N,dtype=np.float)
+        self.u=np.zeros(self.N,dtype=float)
+        self.v=np.zeros(self.N,dtype=float)
+        self.beta=np.zeros(self.N,dtype=float)
         neuron._reset(self)
     
     def __init__(self,N):

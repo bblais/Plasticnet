@@ -2182,7 +2182,6 @@ static const char __pyx_k_year[] = "year";
 static const char __pyx_k_array[] = "array";
 static const char __pyx_k_attrs[] = "attrs";
 static const char __pyx_k_dtype[] = "dtype";
-static const char __pyx_k_float[] = "float";
 static const char __pyx_k_flush[] = "flush";
 static const char __pyx_k_group[] = "group";
 static const char __pyx_k_int32[] = "int32";
@@ -2361,7 +2360,6 @@ static PyObject *__pyx_n_s_dy;
 static PyObject *__pyx_n_s_end;
 static PyObject *__pyx_n_s_file;
 static PyObject *__pyx_n_s_filter;
-static PyObject *__pyx_n_s_float;
 static PyObject *__pyx_n_s_flush;
 static PyObject *__pyx_n_s_frac;
 static PyObject *__pyx_n_s_function;
@@ -9837,7 +9835,7 @@ static int __pyx_pf_7splikes_7splikes_6neuron___init__(struct __pyx_obj_7splikes
  *         self.num_post=0
  *         self.verbose=False             # <<<<<<<<<<<<<<
  *         self.spiking=np.zeros(self.N,dtype=np.int32)
- *         self.last_spike_time=-np.ones(self.N,dtype=np.float)
+ *         self.last_spike_time=-np.ones(self.N,dtype=float)
  */
   __pyx_v_self->__pyx_base.verbose = 0;
 
@@ -9845,7 +9843,7 @@ static int __pyx_pf_7splikes_7splikes_6neuron___init__(struct __pyx_obj_7splikes
  *         self.num_post=0
  *         self.verbose=False
  *         self.spiking=np.zeros(self.N,dtype=np.int32)             # <<<<<<<<<<<<<<
- *         self.last_spike_time=-np.ones(self.N,dtype=np.float)
+ *         self.last_spike_time=-np.ones(self.N,dtype=float)
  *         self.save_spikes_begin=0.0
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 263, __pyx_L1_error)
@@ -9884,7 +9882,7 @@ static int __pyx_pf_7splikes_7splikes_6neuron___init__(struct __pyx_obj_7splikes
   /* "splikes/splikes.pyx":264
  *         self.verbose=False
  *         self.spiking=np.zeros(self.N,dtype=np.int32)
- *         self.last_spike_time=-np.ones(self.N,dtype=np.float)             # <<<<<<<<<<<<<<
+ *         self.last_spike_time=-np.ones(self.N,dtype=float)             # <<<<<<<<<<<<<<
  *         self.save_spikes_begin=0.0
  *         self.save_spikes_end=-1.0
  */
@@ -9902,21 +9900,15 @@ static int __pyx_pf_7splikes_7splikes_6neuron___init__(struct __pyx_obj_7splikes
   __pyx_t_6 = 0;
   __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 264, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, ((PyObject *)(&PyFloat_Type))) < 0) __PYX_ERR(0, 264, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 264, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 264, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 264, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = PyNumber_Negative(__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 264, __pyx_L1_error)
+  __pyx_t_6 = PyNumber_Negative(__pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_6);
   __Pyx_GOTREF(__pyx_v_self->last_spike_time);
@@ -9926,7 +9918,7 @@ static int __pyx_pf_7splikes_7splikes_6neuron___init__(struct __pyx_obj_7splikes
 
   /* "splikes/splikes.pyx":265
  *         self.spiking=np.zeros(self.N,dtype=np.int32)
- *         self.last_spike_time=-np.ones(self.N,dtype=np.float)
+ *         self.last_spike_time=-np.ones(self.N,dtype=float)
  *         self.save_spikes_begin=0.0             # <<<<<<<<<<<<<<
  *         self.save_spikes_end=-1.0
  *         self.connections_pre=[]
@@ -9934,7 +9926,7 @@ static int __pyx_pf_7splikes_7splikes_6neuron___init__(struct __pyx_obj_7splikes
   __pyx_v_self->save_spikes_begin = 0.0;
 
   /* "splikes/splikes.pyx":266
- *         self.last_spike_time=-np.ones(self.N,dtype=np.float)
+ *         self.last_spike_time=-np.ones(self.N,dtype=float)
  *         self.save_spikes_begin=0.0
  *         self.save_spikes_end=-1.0             # <<<<<<<<<<<<<<
  *         self.connections_pre=[]
@@ -10077,7 +10069,7 @@ static int __pyx_pf_7splikes_7splikes_6neuron___init__(struct __pyx_obj_7splikes
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
  *         self.spiking=np.zeros(self.N,dtype=np.int32)
- *         self.last_spike_time=-np.ones(self.N,dtype=np.float)
+ *         self.last_spike_time=-np.ones(self.N,dtype=float)
  */
 
 static PyObject *__pyx_pw_7splikes_7splikes_6neuron_3_reset(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
@@ -10144,8 +10136,8 @@ static PyObject *__pyx_f_7splikes_7splikes_6neuron__reset(struct __pyx_obj_7spli
  * 
  *     cpdef _reset(self):
  *         self.spiking=np.zeros(self.N,dtype=np.int32)             # <<<<<<<<<<<<<<
- *         self.last_spike_time=-np.ones(self.N,dtype=np.float)
- *         self.rate=np.zeros(self.N,dtype=np.float)
+ *         self.last_spike_time=-np.ones(self.N,dtype=float)
+ *         self.rate=np.zeros(self.N,dtype=float)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 278, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -10183,8 +10175,8 @@ static PyObject *__pyx_f_7splikes_7splikes_6neuron__reset(struct __pyx_obj_7spli
   /* "splikes/splikes.pyx":279
  *     cpdef _reset(self):
  *         self.spiking=np.zeros(self.N,dtype=np.int32)
- *         self.last_spike_time=-np.ones(self.N,dtype=np.float)             # <<<<<<<<<<<<<<
- *         self.rate=np.zeros(self.N,dtype=np.float)
+ *         self.last_spike_time=-np.ones(self.N,dtype=float)             # <<<<<<<<<<<<<<
+ *         self.rate=np.zeros(self.N,dtype=float)
  *         self.saved_spikes=[]
  */
   __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 279, __pyx_L1_error)
@@ -10201,21 +10193,15 @@ static PyObject *__pyx_f_7splikes_7splikes_6neuron__reset(struct __pyx_obj_7spli
   __pyx_t_5 = 0;
   __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 279, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 279, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, ((PyObject *)(&PyFloat_Type))) < 0) __PYX_ERR(0, 279, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 279, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 279, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 279, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 279, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyNumber_Negative(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 279, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Negative(__pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 279, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 279, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_5);
   __Pyx_GOTREF(__pyx_v_self->last_spike_time);
@@ -10225,15 +10211,15 @@ static PyObject *__pyx_f_7splikes_7splikes_6neuron__reset(struct __pyx_obj_7spli
 
   /* "splikes/splikes.pyx":280
  *         self.spiking=np.zeros(self.N,dtype=np.int32)
- *         self.last_spike_time=-np.ones(self.N,dtype=np.float)
- *         self.rate=np.zeros(self.N,dtype=np.float)             # <<<<<<<<<<<<<<
+ *         self.last_spike_time=-np.ones(self.N,dtype=float)
+ *         self.rate=np.zeros(self.N,dtype=float)             # <<<<<<<<<<<<<<
  *         self.saved_spikes=[]
  *         self.is_spike=0
  */
   __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 280, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 280, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 280, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 280, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
@@ -10244,42 +10230,36 @@ static PyObject *__pyx_f_7splikes_7splikes_6neuron__reset(struct __pyx_obj_7spli
   __pyx_t_5 = 0;
   __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 280, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 280, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, ((PyObject *)(&PyFloat_Type))) < 0) __PYX_ERR(0, 280, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 280, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 280, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 280, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 280, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 280, __pyx_L1_error)
-  __Pyx_GIVEREF(__pyx_t_2);
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 280, __pyx_L1_error)
+  __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->rate);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->rate));
-  __pyx_v_self->rate = ((PyArrayObject *)__pyx_t_2);
-  __pyx_t_2 = 0;
+  __pyx_v_self->rate = ((PyArrayObject *)__pyx_t_1);
+  __pyx_t_1 = 0;
 
   /* "splikes/splikes.pyx":281
- *         self.last_spike_time=-np.ones(self.N,dtype=np.float)
- *         self.rate=np.zeros(self.N,dtype=np.float)
+ *         self.last_spike_time=-np.ones(self.N,dtype=float)
+ *         self.rate=np.zeros(self.N,dtype=float)
  *         self.saved_spikes=[]             # <<<<<<<<<<<<<<
  *         self.is_spike=0
  *         self.post_count=0
  */
-  __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GIVEREF(__pyx_t_2);
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->saved_spikes);
   __Pyx_DECREF(__pyx_v_self->saved_spikes);
-  __pyx_v_self->saved_spikes = __pyx_t_2;
-  __pyx_t_2 = 0;
+  __pyx_v_self->saved_spikes = __pyx_t_1;
+  __pyx_t_1 = 0;
 
   /* "splikes/splikes.pyx":282
- *         self.rate=np.zeros(self.N,dtype=np.float)
+ *         self.rate=np.zeros(self.N,dtype=float)
  *         self.saved_spikes=[]
  *         self.is_spike=0             # <<<<<<<<<<<<<<
  *         self.post_count=0
@@ -10301,7 +10281,7 @@ static PyObject *__pyx_f_7splikes_7splikes_6neuron__reset(struct __pyx_obj_7spli
  * 
  *     cpdef _reset(self):             # <<<<<<<<<<<<<<
  *         self.spiking=np.zeros(self.N,dtype=np.int32)
- *         self.last_spike_time=-np.ones(self.N,dtype=np.float)
+ *         self.last_spike_time=-np.ones(self.N,dtype=float)
  */
 
   /* function exit code */
@@ -21452,7 +21432,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_end, __pyx_k_end, sizeof(__pyx_k_end), 0, 0, 1, 1},
   {&__pyx_n_s_file, __pyx_k_file, sizeof(__pyx_k_file), 0, 0, 1, 1},
   {&__pyx_n_s_filter, __pyx_k_filter, sizeof(__pyx_k_filter), 0, 0, 1, 1},
-  {&__pyx_n_s_float, __pyx_k_float, sizeof(__pyx_k_float), 0, 0, 1, 1},
   {&__pyx_n_s_flush, __pyx_k_flush, sizeof(__pyx_k_flush), 0, 0, 1, 1},
   {&__pyx_n_s_frac, __pyx_k_frac, sizeof(__pyx_k_frac), 0, 0, 1, 1},
   {&__pyx_n_s_function, __pyx_k_function, sizeof(__pyx_k_function), 0, 0, 1, 1},

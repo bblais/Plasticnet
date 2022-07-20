@@ -24,8 +24,8 @@ cdef class STDP(connection):
     cdef public double tau_minus,a_plus,a_minus,g_max,tau_plus
     cdef public np.ndarray P,M
     cpdef _reset(self):
-        self.P=np.zeros(self.pre.N,dtype=np.float)
-        self.M=np.zeros(self.post.N,dtype=np.float)
+        self.P=np.zeros(self.pre.N,dtype=float)
+        self.M=np.zeros(self.post.N,dtype=float)
         connection._reset(self)
 
     def __init__(self,neuron pre,neuron post,initial_weight_range=None,state=None):

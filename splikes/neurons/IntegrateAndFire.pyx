@@ -10,9 +10,9 @@ cdef class IntegrateAndFire(neuron):
     cdef public double reset,tau_m,tau_in,V_rev_inh,V_rev_exc,tau_ex,V_rest,threshold
     cdef public np.ndarray g_e,g_i,V
     cpdef _reset(self):
-        self.g_e=np.zeros(self.N,dtype=np.float)
-        self.g_i=np.zeros(self.N,dtype=np.float)
-        self.V=np.zeros(self.N,dtype=np.float)
+        self.g_e=np.zeros(self.N,dtype=float)
+        self.g_i=np.zeros(self.N,dtype=float)
+        self.V=np.zeros(self.N,dtype=float)
         neuron._reset(self)
 
     def __init__(self,N):
@@ -98,9 +98,9 @@ cdef class IntegrateAndFire_Gavornik2009(neuron):
     cdef public double V_rev_inh,V_rev_exc,tau_ex,V_rest,threshold
     cdef public np.ndarray g_e,g_i,V
     cpdef _reset(self):
-        self.g_e=np.zeros(self.N,dtype=np.float)
-        self.g_i=np.zeros(self.N,dtype=np.float)
-        self.V=np.zeros(self.N,dtype=np.float)
+        self.g_e=np.zeros(self.N,dtype=float)
+        self.g_i=np.zeros(self.N,dtype=float)
+        self.V=np.zeros(self.N,dtype=float)
         neuron._reset(self)
 
     def __init__(self,N):
