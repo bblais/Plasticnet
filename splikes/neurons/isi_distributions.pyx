@@ -1,6 +1,6 @@
 from splikes.splikes cimport *
 cimport cython
-import pylab
+import matplotlib.pyplot as pylab
 
 import numpy as np
 cimport numpy as np

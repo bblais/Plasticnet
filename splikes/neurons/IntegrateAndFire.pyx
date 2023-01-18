@@ -1,6 +1,6 @@
 from splikes.splikes cimport *
 cimport cython
-import pylab
+import matplotlib.pyplot as pylab
 
 import numpy as np
 cimport numpy as np
@@ -8,11 +8,12 @@ cimport numpy as np
 
 cdef class IntegrateAndFire(neuron):
     cdef public double reset,tau_m,tau_in,V_rev_inh,V_rev_exc,tau_ex,V_rest,threshold
-    cdef public np.ndarray g_e,g_i,V
+    cdef public np.ndarray g_e,g_i,V,total_I
     cpdef _reset(self):
         self.g_e=np.zeros(self.N,dtype=float)
         self.g_i=np.zeros(self.N,dtype=float)
         self.V=np.zeros(self.N,dtype=float)
+        self.total_I=np.zeros(self.N,dtype=float)
         neuron._reset(self)
 
     def __init__(self,N):
@@ -52,7 +53,9 @@ cdef class IntegrateAndFire(neuron):
         cdef double *W,*state
         cdef double spike_scale
         cdef int *spiking   
-    
+        cdef double *I
+        cdef double *total_I=<double *>self.total_I.data
+
         for c in self.connections_pre:
             pre=c.pre
             W=c.W
@@ -65,9 +68,18 @@ cdef class IntegrateAndFire(neuron):
                     if spiking[__j]:
                         for __i in range(self.N):
                             state[__i]+=spike_scale*W[__i*pre.N+__j]    
+            
+            if pre.use_I:
+
+                I=<double *>pre.I.data
+                for __i in range(self.N):
+                    total_I[__i]=0.0
+                    for __j in range(pre.N):
+                        total_I[__i]+=W[__i*pre.N+__j]*I[__j]
+
     
         for __i in range(self.N):
-            V[__i]+=sim.dt*(-(V[__i]-V_rest)/tau_m+g_e[__i]*(V_rev_exc-V[__i])/tau_m+g_i[__i]*(V_rev_inh-V[__i])/tau_m)
+            V[__i]+=sim.dt*(total_I[__i]-(V[__i]-V_rest)/tau_m+g_e[__i]*(V_rev_exc-V[__i])/tau_m+g_i[__i]*(V_rev_inh-V[__i])/tau_m)
             g_e[__i]+=sim.dt*(-g_e[__i]/tau_ex)
             g_i[__i]+=sim.dt*(-g_i[__i]/tau_in)
         

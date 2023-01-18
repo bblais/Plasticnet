@@ -50,11 +50,11 @@ cdef class simulation(group):
     cpdef _reset(self)
 
 cdef class neuron(group):
-    cdef public int is_spike
+    cdef public int is_spike,use_I
     cdef public int post_count    
     cdef public object saved_spikes    
     cdef public double save_spikes_begin,save_spikes_end
-    cdef public np.ndarray spiking,rate
+    cdef public np.ndarray spiking,rate,I
     cdef public int N
     cdef public np.ndarray last_spike_time
     cdef public connections_pre,connections_post

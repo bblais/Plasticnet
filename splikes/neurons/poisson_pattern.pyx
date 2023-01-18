@@ -1,11 +1,87 @@
 from splikes.splikes cimport *
 cimport cython
-import pylab
-import plasticnet as pn
+import matplotlib.pyplot as pylab
+#import plasticnet as pn
 
 import numpy as np
 cimport numpy as np
 from splikes.neurons.isi_distributions cimport *
+
+cdef class input_current(neuron):
+    cdef public int pattern_number
+    cdef public np.ndarray current_values
+    cdef public np.ndarray current
+    cdef public int number_of_patterns
+    cdef public double time_between_patterns,time_to_next_pattern
+
+    cpdef _reset(self):
+        neuron._reset(self)
+        self.time_to_next_pattern=0.0 
+        self.pattern_number=-1      
+
+
+    def __init__(self,current_values,time_between_patterns=0.2,shape=None,verbose=False):
+        self.current_values=np.ascontiguousarray(np.atleast_2d(np.array(current_values,float)))
+
+        assert self.current_values.ndim==2,"current_values array must be 2D"
+
+        if not shape is None:
+            self.current_values=self.current_values.reshape(shape)
+            
+        neuron.__init__(self,self.current_values.shape[1]) # number of neurons
+        self.number_of_patterns=self.current_values.shape[0]
+        self.time_between_patterns=time_between_patterns
+        self.verbose=verbose
+        self.name='Input Current'
+
+        self.use_I=True
+
+        self.save_attrs.extend(['number_of_patterns','time_between_patterns',])
+        self.save_data.extend(['current_values',])
+
+        self._reset()
+        
+
+    cpdef new_current(self,double t):
+
+        self.pattern_number+=1
+        if self.pattern_number>=self.number_of_patterns:
+            self.pattern_number=0
+                
+        self.current=self.current_values[self.pattern_number]
+
+        self.time_to_next_pattern=t+self.time_between_patterns
+        if self.verbose:
+            print("New pattern %d" % self.pattern_number)
+            self.print_current_values()
+            print("Time to next current_values: %f" % self.time_to_next_pattern)
+        
+        cdef int i
+        cdef double *current=<double *>self.current.data
+        cdef double *I=<double *>self.I.data
+        for i in range(self.N):
+            I[i]=current[i]
+
+
+
+    def print_current(self):
+        cdef int i
+        cdef double *current=<double *>self.current.data
+        for i in range(self.N):
+            print(current[i])
+            
+
+    @cython.cdivision(True)
+    @cython.boundscheck(False) # turn of bounds-checking for entire function
+    cpdef update(self,double t,simulation sim):
+        cdef double r
+        cdef int i,j
+        cdef double *I=<double *>self.I.data
+        
+        cdef double *current
+
+        if t>=(self.time_to_next_pattern-1e-6):  # the 1e-6 is because of binary represenation offsets
+            self.new_current(t)
 
 
 
@@ -54,18 +130,18 @@ cdef class poisson_pattern(neuron):
         yl=[min(n)-1,max(n)+1]
         pylab.gca().set_ylim(yl)
         pylab.gca().set_yticks(range(max(n)+2))
-        tt=0
-        while tt<max(t):
-            pylab.plot([tt,tt],yl,'c:',lw=0.5)
-            if count:
+        # tt=0
+        # while tt<max(t):
+        #     pylab.plot([tt,tt],yl,'c:',lw=0.5)
+        #     if count:
                 
-                for nn in range(max(n)+1):
-                    c=len([x for _t,_n in zip(t,n) if 
-                                tt<=_t<tt+self.time_between_patterns and _n==nn])
-                    pylab.text(tt+self.time_between_patterns/2.0,nn+0.1,'%d' % c)
+        #         for nn in range(max(n)+1):
+        #             c=len([x for _t,_n in zip(t,n) if 
+        #                         tt<=_t<tt+self.time_between_patterns and _n==nn])
+        #             pylab.text(tt+self.time_between_patterns/2.0,nn+0.1,'%d' % c)
                 
-                tt+=self.time_between_patterns
-        pylab.draw()
+        #         tt+=self.time_between_patterns
+        # pylab.draw()
 
     cpdef new_pattern(self,double t):
         if not self.sequential:

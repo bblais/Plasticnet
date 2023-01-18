@@ -133,6 +133,15 @@ class Sequence(object):
 
         return self
     
+    def load_seq(self,seq):
+        s=seq.sims[-1]
+        n=seq.neurons[-1]
+        c=seq.connections[-1]
+
+        self+=s,n,c
+        self.run_sims[-1]=False
+
+
     def run(self,**kwargs):
         try:
             print_time=kwargs.pop('print_time')
@@ -558,6 +567,129 @@ def plot_test_stim(results):
     subplot(1,2,2)
     plot(t_mat,y_mat,'-')
 
+def plot_rfs_and_theta_grid(sim,neurons=None,connections=None,which_neurons=None):
+    import numpy as np
+
+    
+    import matplotlib.ticker
+
+    def HMSFormatter(value, loc):
+        h = value // 3600
+        m = (value - h * 3600) // 60
+        s = value % 60
+
+        d=h//24
+        h=h%24
+        if d==0:
+            return "%02d:%02d:%02d" % (h,m,s)
+        else:
+            return "%dd %02d:%02d:%02d" % (d,h,m,s)
+
+    def HMSFormatter2(value, loc):
+        h = value // 3600
+        m = (value - h * 3600) // 60
+        s = value % 60
+        ms=value%1
+
+        return "%02d:%02d.%03d" % (m,s,ms*1000)    
+
+    if neurons is None:  # sim is a seq
+        seq=sim
+        
+        Lseq=len(seq.sims)
+        sim,neurons,connections=seq.sims[-1],seq.neurons[-1],seq.connections[-1]
+
+    
+    pre,post=neurons
+    c=connections[0]
+
+    weights=c.weights
+
+    num_neurons=len(weights)
+
+    if which_neurons is None:
+        which_neurons=list(range(num_neurons))
+
+    N=len(which_neurons)
+
+    nr=int(np.ceil(np.sqrt(N)))
+    nc=int(np.ceil(N/nr))
+
+    fig1=py.figure(figsize=(12,12))
+    ni=0
+    for i,w in enumerate(weights):
+        if i not in which_neurons:
+            continue
+
+        try:  # check for channel
+            neurons=pre.neuron_list
+        except AttributeError:
+            neurons=[pre]
+
+        num_channels=len(neurons)
+
+        count=0
+        vmin,vmax=w.min(),w.max()
+        for c,ch in enumerate(neurons):   
+            try:
+                rf_size=ch.rf_size
+                if rf_size<0:
+                    rf_size=py.sqrt(ch.N)
+                    assert rf_size==int(rf_size)
+                    rf_size=int(rf_size)
+
+            except AttributeError:
+                rf_size=py.sqrt(ch.N)
+                assert rf_size==int(rf_size)
+                rf_size=int(rf_size)
+
+
+            py.subplot(nr,nc*num_channels,2*ni+c+1)
+            py.axis('equal')
+            py.grid(False)
+            subw=w[count:(count+rf_size*rf_size)]
+            #py.pcolor(subw.reshape((rf_size,rf_size)),cmap=py.cm.gray)
+            py.pcolormesh(subw.reshape((rf_size,rf_size)),cmap=py.cm.gray,
+                vmin=vmin,vmax=vmax)
+            py.xlim([0,rf_size]); 
+            py.ylim([0,rf_size])
+            py.axis('off')
+            count+=rf_size*rf_size
+            py.title(i)
+
+        ni+=1
+
+    t,θ=sim.monitors['theta'].arrays()
+
+    fig2=py.figure(figsize=(12,12))
+    ni=0
+    for i in range(num_neurons):
+        if i not in which_neurons:
+            continue
+
+        py.subplot(nr,nc,ni+1)
+        py.plot(t,θ[:,i])
+
+        if ni%nc==0:
+            py.ylabel(r'$\theta_M$')
+        if ni//nc==(nr-1):
+            py.xlabel('Time')
+        else:
+            py.gca().set_xticklabels([])
+        py.title(i)
+
+        if np.max(t)<10:  # use ms
+            py.gca().xaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(HMSFormatter2))
+        else:
+            py.gca().xaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(HMSFormatter))    
+
+
+        ni+=1        
+
+    fig2.autofmt_xdate()        
+      
+
+    return fig1,fig2
 
 def plot_rfs_and_theta(sim,neurons,connections):
 
@@ -1068,19 +1200,19 @@ class Results(object):
             vmin=w_im[n,:,:,:].min()
             vmax=w_im[n,:,:,:].max()
             for c in range(number_of_channels):
-                subplot(spec2[n, c])
+                py.subplot(spec2[n, c])
                 im=w_im[n,c,:,:]
-                imshow(im,cmap=cm.gray,vmin=vmin,vmax=vmax,interpolation='nearest')
-                grid(False)
+                py.imshow(im,cmap=cm.gray,vmin=vmin,vmax=vmax,interpolation='nearest')
+                py.grid(False)
                 if c==0:
-                    ylabel(f'Neuron {n}')
+                    py.ylabel(f'Neuron {n}')
                 if n==0:
                     if c==0:
-                        title("Left")
+                        py.title("Left")
                     else:
-                        title("Right")
-                gca().set_xticklabels([])
-                gca().set_yticklabels([])
+                        py.title("Right")
+                py.gca().set_xticklabels([])
+                py.gca().set_yticklabels([])
 
     @property
     def μσ(self):

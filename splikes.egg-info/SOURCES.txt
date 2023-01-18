@@ -33,6 +33,7 @@ splikes/connections/triplet_julijana.pyx
 splikes/connections/update_init.py
 splikes/monitors/__init__.py
 splikes/neurons/IntegrateAndFire.pyx
+splikes/neurons/Izhikevich.pyx
 splikes/neurons/__init__.py
 splikes/neurons/backup__init__.py
 splikes/neurons/isi_distributions.pyx

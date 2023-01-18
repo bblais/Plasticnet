@@ -1,133 +1,377 @@
 version='0.1.6'
 
 running install
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/setuptools/command/easy_install.py:144: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
 running bdist_egg
 running egg_info
+creating plasticnet.egg-info
+writing plasticnet.egg-info/PKG-INFO
+writing dependency_links to plasticnet.egg-info/dependency_links.txt
+writing top-level names to plasticnet.egg-info/top_level.txt
 writing manifest file 'plasticnet.egg-info/SOURCES.txt'
+reading manifest file 'plasticnet.egg-info/SOURCES.txt'
+adding license file 'LICENSE.md'
+writing manifest file 'plasticnet.egg-info/SOURCES.txt'
+installing library code to build/bdist.macosx-10.9-x86_64/egg
 running install_lib
 running build_py
+creating build
+creating build/lib.macosx-10.9-x86_64-3.9
+creating build/lib.macosx-10.9-x86_64-3.9/plasticnet
+copying plasticnet/__init__.py -> build/lib.macosx-10.9-x86_64-3.9/plasticnet
+copying plasticnet/utils.py -> build/lib.macosx-10.9-x86_64-3.9/plasticnet
+copying plasticnet/Waitbar.py -> build/lib.macosx-10.9-x86_64-3.9/plasticnet
+creating build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons
+copying plasticnet/neurons/update_init.py -> build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons
+copying plasticnet/neurons/backup__init__.py -> build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons
+copying plasticnet/neurons/__init__.py -> build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons
+creating build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections
+copying plasticnet/connections/update_init.py -> build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections
+copying plasticnet/connections/backup__init__.py -> build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections
+copying plasticnet/connections/__init__.py -> build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections
+creating build/lib.macosx-10.9-x86_64-3.9/plasticnet/monitors
+copying plasticnet/monitors/__init__.py -> build/lib.macosx-10.9-x86_64-3.9/plasticnet/monitors
 running build_ext
+cythoning plasticnet/plasticnet.pyx to plasticnet/plasticnet.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/plasticnet/plasticnet.pxd
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning plasticnet/connections/BCM_TwoThreshold_OLD.pyx to plasticnet/connections/BCM_TwoThreshold_OLD.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/plasticnet/connections/BCM_TwoThreshold_OLD.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning plasticnet/connections/constant_connection.pyx to plasticnet/connections/constant_connection.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/plasticnet/connections/constant_connection.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning plasticnet/connections/Hebb.pyx to plasticnet/connections/Hebb.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/plasticnet/connections/Hebb.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning plasticnet/connections/BCM_TwoThreshold.pyx to plasticnet/connections/BCM_TwoThreshold.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/plasticnet/connections/BCM_TwoThreshold.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning plasticnet/connections/Miller2014.pyx to plasticnet/connections/Miller2014.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/plasticnet/connections/Miller2014.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning plasticnet/connections/process.pyx to plasticnet/connections/process.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/plasticnet/connections/process.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning plasticnet/connections/BCM_TwoThreshold_Harel.pyx to plasticnet/connections/BCM_TwoThreshold_Harel.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/plasticnet/connections/BCM_TwoThreshold_Harel.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning plasticnet/connections/BCM.pyx to plasticnet/connections/BCM.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/plasticnet/connections/BCM.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning plasticnet/neurons/pattern_neuron.pyx to plasticnet/neurons/pattern_neuron.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/plasticnet/neurons/pattern_neuron.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning plasticnet/neurons/linear_neuron.pyx to plasticnet/neurons/linear_neuron.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/plasticnet/neurons/linear_neuron.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning plasticnet/neurons/process.pyx to plasticnet/neurons/process.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/plasticnet/neurons/process.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+building 'plasticnet.plasticnet' extension
+creating build/temp.macosx-10.9-x86_64-3.9
+creating build/temp.macosx-10.9-x86_64-3.9/plasticnet
+creating build/temp.macosx-10.9-x86_64-3.9/splikes
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c plasticnet/plasticnet.c -o build/temp.macosx-10.9-x86_64-3.9/plasticnet/plasticnet.o -O3
+In file included from plasticnet/plasticnet.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/plasticnet/plasticnet.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/plasticnet/plasticnet.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'plasticnet.connections.BCM_TwoThreshold_OLD' extension
+creating build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c plasticnet/connections/BCM_TwoThreshold_OLD.c -o build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM_TwoThreshold_OLD.o -O3
+In file included from plasticnet/connections/BCM_TwoThreshold_OLD.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM_TwoThreshold_OLD.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM_TwoThreshold_OLD.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'plasticnet.connections.constant_connection' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c plasticnet/connections/constant_connection.c -o build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections/constant_connection.o -O3
+In file included from plasticnet/connections/constant_connection.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections/constant_connection.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/constant_connection.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'plasticnet.connections.Hebb' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c plasticnet/connections/Hebb.c -o build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections/Hebb.o -O3
+In file included from plasticnet/connections/Hebb.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections/Hebb.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/Hebb.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'plasticnet.connections.BCM_TwoThreshold' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c plasticnet/connections/BCM_TwoThreshold.c -o build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM_TwoThreshold.o -O3
+In file included from plasticnet/connections/BCM_TwoThreshold.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM_TwoThreshold.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM_TwoThreshold.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'plasticnet.connections.Miller2014' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c plasticnet/connections/Miller2014.c -o build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections/Miller2014.o -O3
+In file included from plasticnet/connections/Miller2014.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections/Miller2014.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/Miller2014.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'plasticnet.connections.process' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c plasticnet/connections/process.c -o build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections/process.o -O3
+In file included from plasticnet/connections/process.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections/process.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/process.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'plasticnet.connections.BCM_TwoThreshold_Harel' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c plasticnet/connections/BCM_TwoThreshold_Harel.c -o build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM_TwoThreshold_Harel.o -O3
+In file included from plasticnet/connections/BCM_TwoThreshold_Harel.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM_TwoThreshold_Harel.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM_TwoThreshold_Harel.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'plasticnet.connections.BCM' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c plasticnet/connections/BCM.c -o build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM.o -O3
+In file included from plasticnet/connections/BCM.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'plasticnet.neurons.pattern_neuron' extension
+creating build/temp.macosx-10.9-x86_64-3.9/plasticnet/neurons
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c plasticnet/neurons/pattern_neuron.c -o build/temp.macosx-10.9-x86_64-3.9/plasticnet/neurons/pattern_neuron.o -O3
+In file included from plasticnet/neurons/pattern_neuron.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/plasticnet/neurons/pattern_neuron.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons/pattern_neuron.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'plasticnet.neurons.linear_neuron' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c plasticnet/neurons/linear_neuron.c -o build/temp.macosx-10.9-x86_64-3.9/plasticnet/neurons/linear_neuron.o -O3
+In file included from plasticnet/neurons/linear_neuron.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/plasticnet/neurons/linear_neuron.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons/linear_neuron.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'plasticnet.neurons.process' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c plasticnet/neurons/process.c -o build/temp.macosx-10.9-x86_64-3.9/plasticnet/neurons/process.o -O3
+In file included from plasticnet/neurons/process.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Iplasticnet/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/plasticnet/neurons/process.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons/process.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+creating build/bdist.macosx-10.9-x86_64
 creating build/bdist.macosx-10.9-x86_64/egg
-creating build/bdist.macosx-10.9-x86_64/egg/splikes
-creating build/bdist.macosx-10.9-x86_64/egg/splikes/monitors
-creating build/bdist.macosx-10.9-x86_64/egg/splikes/connections
-creating build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
 creating build/bdist.macosx-10.9-x86_64/egg/plasticnet
 creating build/bdist.macosx-10.9-x86_64/egg/plasticnet/monitors
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/monitors/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/monitors
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet
 creating build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/update_init.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/process.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/backup__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/Miller2014.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM_TwoThreshold_Harel.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/constant_connection.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/Hebb.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM_TwoThreshold_OLD.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM_TwoThreshold.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/utils.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet
 creating build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/monitors/__init__.py to __init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/__init__.py to __init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/update_init.py to update_init.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/backup__init__.py to backup__init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/__init__.py to __init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/process.py to process.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/utils.py to utils.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/update_init.py to update_init.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/backup__init__.py to backup__init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/__init__.py to __init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/process.py to process.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/Waitbar.py to Waitbar.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/monitors/__init__.py to __init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/__init__.py to __init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/update_init.py to update_init.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/backup__init__.py to backup__init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/__init__.py to __init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/utils.py to utils.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/update_init.py to update_init.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/backup__init__.py to backup__init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/__init__.py to __init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/Waitbar.py to Waitbar.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/plasticnet.py to plasticnet.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold_OLD.py to BCM_TwoThreshold_OLD.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/constant_connection.py to constant_connection.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/Hebb.py to Hebb.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold.py to BCM_TwoThreshold.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/Miller2014.py to Miller2014.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/process.py to process.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold_Harel.py to BCM_TwoThreshold_Harel.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM.py to BCM.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/pattern_neuron.py to pattern_neuron.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/linear_neuron.py to linear_neuron.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/process.py to process.cpython-38.pyc
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons/update_init.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons/process.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons/backup__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons/pattern_neuron.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons/linear_neuron.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/Waitbar.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/plasticnet.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/monitors/__init__.py to __init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/__init__.py to __init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/update_init.py to update_init.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/backup__init__.py to backup__init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/__init__.py to __init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/utils.py to utils.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/update_init.py to update_init.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/backup__init__.py to backup__init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/__init__.py to __init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/Waitbar.py to Waitbar.cpython-39.pyc
+creating stub loader for plasticnet/plasticnet.cpython-39-darwin.so
+creating stub loader for plasticnet/connections/BCM_TwoThreshold_OLD.cpython-39-darwin.so
+creating stub loader for plasticnet/connections/constant_connection.cpython-39-darwin.so
+creating stub loader for plasticnet/connections/Hebb.cpython-39-darwin.so
+creating stub loader for plasticnet/connections/BCM_TwoThreshold.cpython-39-darwin.so
+creating stub loader for plasticnet/connections/Miller2014.cpython-39-darwin.so
+creating stub loader for plasticnet/connections/process.cpython-39-darwin.so
+creating stub loader for plasticnet/connections/BCM_TwoThreshold_Harel.cpython-39-darwin.so
+creating stub loader for plasticnet/connections/BCM.cpython-39-darwin.so
+creating stub loader for plasticnet/neurons/pattern_neuron.cpython-39-darwin.so
+creating stub loader for plasticnet/neurons/linear_neuron.cpython-39-darwin.so
+creating stub loader for plasticnet/neurons/process.cpython-39-darwin.so
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/plasticnet.py to plasticnet.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold_OLD.py to BCM_TwoThreshold_OLD.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/constant_connection.py to constant_connection.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/Hebb.py to Hebb.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold.py to BCM_TwoThreshold.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/Miller2014.py to Miller2014.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/process.py to process.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold_Harel.py to BCM_TwoThreshold_Harel.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM.py to BCM.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/pattern_neuron.py to pattern_neuron.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/linear_neuron.py to linear_neuron.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/process.py to process.cpython-39.pyc
 creating build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
 copying plasticnet.egg-info/PKG-INFO -> build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
 copying plasticnet.egg-info/SOURCES.txt -> build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
 copying plasticnet.egg-info/dependency_links.txt -> build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
 copying plasticnet.egg-info/top_level.txt -> build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
-/Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
-  warnings.warn(
-/Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/setuptools/command/easy_install.py:156: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
-  warnings.warn(
+writing build/bdist.macosx-10.9-x86_64/egg/EGG-INFO/native_libs.txt
 zip_safe flag not set; analyzing archive contents...
-plasticnet.__pycache__.plasticnet.cpython-38: module references __file__
-plasticnet.connections.__pycache__.BCM.cpython-38: module references __file__
-plasticnet.connections.__pycache__.BCM_TwoThreshold.cpython-38: module references __file__
-plasticnet.connections.__pycache__.BCM_TwoThreshold_Harel.cpython-38: module references __file__
-plasticnet.connections.__pycache__.BCM_TwoThreshold_OLD.cpython-38: module references __file__
-plasticnet.connections.__pycache__.Hebb.cpython-38: module references __file__
-plasticnet.connections.__pycache__.Miller2014.cpython-38: module references __file__
-plasticnet.connections.__pycache__.constant_connection.cpython-38: module references __file__
-plasticnet.connections.__pycache__.process.cpython-38: module references __file__
-plasticnet.neurons.__pycache__.linear_neuron.cpython-38: module references __file__
-plasticnet.neurons.__pycache__.pattern_neuron.cpython-38: module references __file__
-plasticnet.neurons.__pycache__.process.cpython-38: module references __file__
+plasticnet.__pycache__.plasticnet.cpython-39: module references __file__
+plasticnet.connections.__pycache__.BCM.cpython-39: module references __file__
+plasticnet.connections.__pycache__.BCM_TwoThreshold.cpython-39: module references __file__
+plasticnet.connections.__pycache__.BCM_TwoThreshold_Harel.cpython-39: module references __file__
+plasticnet.connections.__pycache__.BCM_TwoThreshold_OLD.cpython-39: module references __file__
+plasticnet.connections.__pycache__.Hebb.cpython-39: module references __file__
+plasticnet.connections.__pycache__.Miller2014.cpython-39: module references __file__
+plasticnet.connections.__pycache__.constant_connection.cpython-39: module references __file__
+plasticnet.connections.__pycache__.process.cpython-39: module references __file__
+plasticnet.neurons.__pycache__.linear_neuron.cpython-39: module references __file__
+plasticnet.neurons.__pycache__.pattern_neuron.cpython-39: module references __file__
+plasticnet.neurons.__pycache__.process.cpython-39: module references __file__
+creating dist
+creating 'dist/plasticnet-0.1.6-py3.9-macosx-10.9-x86_64.egg' and adding 'build/bdist.macosx-10.9-x86_64/egg' to it
 removing 'build/bdist.macosx-10.9-x86_64/egg' (and everything under it)
-creating /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg
-Extracting plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg to /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/Waitbar.py to Waitbar.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/__init__.py to __init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/plasticnet.py to plasticnet.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/utils.py to utils.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/BCM.py to BCM.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/BCM_TwoThreshold.py to BCM_TwoThreshold.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/BCM_TwoThreshold_Harel.py to BCM_TwoThreshold_Harel.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/BCM_TwoThreshold_OLD.py to BCM_TwoThreshold_OLD.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/Hebb.py to Hebb.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/Miller2014.py to Miller2014.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/__init__.py to __init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/backup__init__.py to backup__init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/constant_connection.py to constant_connection.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/process.py to process.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/update_init.py to update_init.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/monitors/__init__.py to __init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/__init__.py to __init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/backup__init__.py to backup__init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/linear_neuron.py to linear_neuron.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/pattern_neuron.py to pattern_neuron.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/process.py to process.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/update_init.py to update_init.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/Waitbar.py to Waitbar.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/__init__.py to __init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/utils.py to utils.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/connections/__init__.py to __init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/connections/backup__init__.py to backup__init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/connections/process.py to process.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/connections/update_init.py to update_init.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/monitors/__init__.py to __init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/__init__.py to __init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/backup__init__.py to backup__init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/process.py to process.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/update_init.py to update_init.cpython-38.pyc
+Processing plasticnet-0.1.6-py3.9-macosx-10.9-x86_64.egg
+creating /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/plasticnet-0.1.6-py3.9-macosx-10.9-x86_64.egg
+Extracting plasticnet-0.1.6-py3.9-macosx-10.9-x86_64.egg to /Users/bblais/opt/anaconda3/lib/python3.9/site-packages
 Adding plasticnet 0.1.6 to easy-install.pth file
 
-Installed /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/plasticnet-0.1.6-py3.8-macosx-10.9-x86_64.egg
+Installed /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/plasticnet-0.1.6-py3.9-macosx-10.9-x86_64.egg
 Processing dependencies for plasticnet==0.1.6
 Finished processing dependencies for plasticnet==0.1.6
-version='0.1.1'
+version='0.1.2'
 
 running install
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/setuptools/command/easy_install.py:144: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
 running bdist_egg
 running egg_info
+creating splikes.egg-info
 writing splikes.egg-info/PKG-INFO
 writing dependency_links to splikes.egg-info/dependency_links.txt
 writing top-level names to splikes.egg-info/top_level.txt
+writing manifest file 'splikes.egg-info/SOURCES.txt'
 reading manifest file 'splikes.egg-info/SOURCES.txt'
 adding license file 'LICENSE.md'
 writing manifest file 'splikes.egg-info/SOURCES.txt'
 installing library code to build/bdist.macosx-10.9-x86_64/egg
 running install_lib
 running build_py
+creating build/lib.macosx-10.9-x86_64-3.9/splikes
+copying splikes/__init__.py -> build/lib.macosx-10.9-x86_64-3.9/splikes
+copying splikes/utils.py -> build/lib.macosx-10.9-x86_64-3.9/splikes
+copying splikes/Waitbar.py -> build/lib.macosx-10.9-x86_64-3.9/splikes
+creating build/lib.macosx-10.9-x86_64-3.9/splikes/neurons
+copying splikes/neurons/update_init.py -> build/lib.macosx-10.9-x86_64-3.9/splikes/neurons
+copying splikes/neurons/backup__init__.py -> build/lib.macosx-10.9-x86_64-3.9/splikes/neurons
+copying splikes/neurons/__init__.py -> build/lib.macosx-10.9-x86_64-3.9/splikes/neurons
+copying splikes/neurons/process.py -> build/lib.macosx-10.9-x86_64-3.9/splikes/neurons
+creating build/lib.macosx-10.9-x86_64-3.9/splikes/connections
+copying splikes/connections/update_init.py -> build/lib.macosx-10.9-x86_64-3.9/splikes/connections
+copying splikes/connections/backup__init__.py -> build/lib.macosx-10.9-x86_64-3.9/splikes/connections
+copying splikes/connections/__init__.py -> build/lib.macosx-10.9-x86_64-3.9/splikes/connections
+copying splikes/connections/process.py -> build/lib.macosx-10.9-x86_64-3.9/splikes/connections
+creating build/lib.macosx-10.9-x86_64-3.9/splikes/monitors
+copying splikes/monitors/__init__.py -> build/lib.macosx-10.9-x86_64-3.9/splikes/monitors
 running build_ext
 skipping 'plasticnet/plasticnet.c' Cython extension (up-to-date)
 skipping 'plasticnet/connections/BCM_TwoThreshold_OLD.c' Cython extension (up-to-date)
@@ -141,230 +385,430 @@ skipping 'plasticnet/connections/BCM.c' Cython extension (up-to-date)
 skipping 'plasticnet/neurons/pattern_neuron.c' Cython extension (up-to-date)
 skipping 'plasticnet/neurons/linear_neuron.c' Cython extension (up-to-date)
 skipping 'plasticnet/neurons/process.c' Cython extension (up-to-date)
-skipping 'splikes/connections/Triplet.c' Cython extension (up-to-date)
-skipping 'splikes/connections/STDP.c' Cython extension (up-to-date)
-skipping 'splikes/connections/calcium.c' Cython extension (up-to-date)
-skipping 'splikes/connections/triplet_julijana.c' Cython extension (up-to-date)
-skipping 'splikes/connections/BCM.c' Cython extension (up-to-date)
-skipping 'splikes/splikes.c' Cython extension (up-to-date)
-skipping 'splikes/neurons/spike_pattern.c' Cython extension (up-to-date)
-skipping 'splikes/neurons/IntegrateAndFire.c' Cython extension (up-to-date)
-skipping 'splikes/neurons/poisson_pattern.c' Cython extension (up-to-date)
-skipping 'splikes/neurons/isi_distributions.c' Cython extension (up-to-date)
-skipping 'splikes/neurons/srm0.c' Cython extension (up-to-date)
-skipping 'splikes/neurons/poisson_julijana.c' Cython extension (up-to-date)
+cythoning splikes/connections/Triplet.pyx to splikes/connections/Triplet.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/splikes/connections/Triplet.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+warning: splikes/connections/Triplet.pyx:76:17: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+warning: splikes/connections/Triplet.pyx:76:22: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+warning: splikes/connections/Triplet.pyx:142:17: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+warning: splikes/connections/Triplet.pyx:142:22: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+warning: splikes/connections/Triplet.pyx:214:17: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+warning: splikes/connections/Triplet.pyx:214:22: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+warning: splikes/connections/Triplet.pyx:294:17: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+warning: splikes/connections/Triplet.pyx:294:22: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+cythoning splikes/connections/STDP.pyx to splikes/connections/STDP.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/splikes/connections/STDP.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+warning: splikes/connections/STDP.pyx:57:17: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+warning: splikes/connections/STDP.pyx:57:22: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+cythoning splikes/connections/calcium.pyx to splikes/connections/calcium.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/splikes/connections/calcium.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+warning: splikes/connections/calcium.pyx:153:17: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+warning: splikes/connections/calcium.pyx:153:22: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+cythoning splikes/connections/triplet_julijana.pyx to splikes/connections/triplet_julijana.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/splikes/connections/triplet_julijana.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+warning: splikes/connections/triplet_julijana.pyx:89:17: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+warning: splikes/connections/triplet_julijana.pyx:89:22: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+cythoning splikes/connections/BCM.pyx to splikes/connections/BCM.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/splikes/connections/BCM.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning splikes/splikes.pyx to splikes/splikes.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/splikes/splikes.pxd
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning splikes/neurons/spike_pattern.pyx to splikes/neurons/spike_pattern.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/splikes/neurons/spike_pattern.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning splikes/neurons/IntegrateAndFire.pyx to splikes/neurons/IntegrateAndFire.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/splikes/neurons/IntegrateAndFire.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+warning: splikes/neurons/IntegrateAndFire.pyx:52:20: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+warning: splikes/neurons/IntegrateAndFire.pyx:52:23: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+warning: splikes/neurons/IntegrateAndFire.pyx:140:20: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+warning: splikes/neurons/IntegrateAndFire.pyx:140:23: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+cythoning splikes/neurons/poisson_pattern.pyx to splikes/neurons/poisson_pattern.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/splikes/neurons/poisson_pattern.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning splikes/neurons/isi_distributions.pyx to splikes/neurons/isi_distributions.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/splikes/neurons/isi_distributions.pxd
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning splikes/neurons/srm0.pyx to splikes/neurons/srm0.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/splikes/neurons/srm0.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning splikes/neurons/applied_current.pyx to splikes/neurons/applied_current.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/splikes/neurons/applied_current.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning splikes/neurons/poisson_julijana.pyx to splikes/neurons/poisson_julijana.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/splikes/neurons/poisson_julijana.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+cythoning splikes/neurons/Izhikevich.pyx to splikes/neurons/Izhikevich.c
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /Users/bblais/Documents/Research Notes/PlasticNet/splikes/neurons/Izhikevich.pyx
+  tree = Parsing.p_module(s, pxd, full_module_name)
+warning: splikes/neurons/Izhikevich.pyx:46:20: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+warning: splikes/neurons/Izhikevich.pyx:46:23: Non-trivial type declarators in shared declaration (e.g. mix of pointers and values). Each pointer declaration should be on its own line.
+building 'splikes.connections.Triplet' extension
+creating build/temp.macosx-10.9-x86_64-3.9/splikes/connections
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/connections/Triplet.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/connections/Triplet.o -O3
+In file included from splikes/connections/Triplet.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/splikes/connections/Triplet.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/splikes/connections/Triplet.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'splikes.connections.STDP' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/connections/STDP.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/connections/STDP.o -O3
+In file included from splikes/connections/STDP.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/splikes/connections/STDP.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/splikes/connections/STDP.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'splikes.connections.calcium' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/connections/calcium.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/connections/calcium.o -O3
+In file included from splikes/connections/calcium.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/splikes/connections/calcium.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/splikes/connections/calcium.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'splikes.connections.triplet_julijana' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/connections/triplet_julijana.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/connections/triplet_julijana.o -O3
+In file included from splikes/connections/triplet_julijana.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/splikes/connections/triplet_julijana.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/splikes/connections/triplet_julijana.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'splikes.connections.BCM' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/connections/BCM.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/connections/BCM.o -O3
+In file included from splikes/connections/BCM.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/splikes/connections/BCM.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/splikes/connections/BCM.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'splikes.splikes' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/splikes.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/splikes.o -O3
+In file included from splikes/splikes.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o build/temp.macosx-10.9-x86_64-3.9/splikes/splikes.o -o build/lib.macosx-10.9-x86_64-3.9/splikes/splikes.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'splikes.neurons.spike_pattern' extension
+creating build/temp.macosx-10.9-x86_64-3.9/splikes/neurons
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/neurons/spike_pattern.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/neurons/spike_pattern.o -O3
+In file included from splikes/neurons/spike_pattern.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/splikes/neurons/spike_pattern.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/spike_pattern.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'splikes.neurons.IntegrateAndFire' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/neurons/IntegrateAndFire.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/neurons/IntegrateAndFire.o -O3
+In file included from splikes/neurons/IntegrateAndFire.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/splikes/neurons/IntegrateAndFire.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/IntegrateAndFire.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'splikes.neurons.poisson_pattern' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/neurons/poisson_pattern.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/neurons/poisson_pattern.o -O3
+In file included from splikes/neurons/poisson_pattern.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/splikes/neurons/poisson_pattern.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/poisson_pattern.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'splikes.neurons.isi_distributions' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/neurons/isi_distributions.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/neurons/isi_distributions.o -O3
+In file included from splikes/neurons/isi_distributions.c:688:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/splikes/neurons/isi_distributions.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/isi_distributions.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'splikes.neurons.srm0' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/neurons/srm0.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/neurons/srm0.o -O3
+In file included from splikes/neurons/srm0.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/splikes/neurons/srm0.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/srm0.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'splikes.neurons.applied_current' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/neurons/applied_current.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/neurons/applied_current.o -O3
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/splikes/neurons/applied_current.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/applied_current.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'splikes.neurons.poisson_julijana' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/neurons/poisson_julijana.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/neurons/poisson_julijana.o -O3
+In file included from splikes/neurons/poisson_julijana.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/splikes/neurons/poisson_julijana.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/poisson_julijana.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+building 'splikes.neurons.Izhikevich' extension
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/neurons/Izhikevich.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/neurons/Izhikevich.o -O3
+In file included from splikes/neurons/Izhikevich.c:687:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/Users/bblais/opt/anaconda3/include -fPIC -O2 -isystem /Users/bblais/opt/anaconda3/include -arch x86_64 -I/usr/local/opt/llvm/include -I/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/numpy/core/include -I. -Isplikes/ -I/Users/bblais/opt/anaconda3/include/python3.9 -c splikes/randomkit.c -o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -O3
+gcc -bundle -undefined dynamic_lookup -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -Wl,-rpath,/Users/bblais/opt/anaconda3/lib -L/Users/bblais/opt/anaconda3/lib -L/usr/local/opt/llvm/lib -I/usr/local/opt/llvm/include build/temp.macosx-10.9-x86_64-3.9/splikes/neurons/Izhikevich.o build/temp.macosx-10.9-x86_64-3.9/splikes/randomkit.o -o build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/Izhikevich.cpython-39-darwin.so -g
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
+ld: warning: dylib (/usr/local/opt/llvm/lib/libunwind.dylib) was built for newer macOS version (12.0) than being linked (10.9)
 creating build/bdist.macosx-10.9-x86_64/egg
 creating build/bdist.macosx-10.9-x86_64/egg/splikes
 creating build/bdist.macosx-10.9-x86_64/egg/splikes/monitors
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/monitors/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/monitors
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/splikes.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/monitors/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/monitors
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/splikes.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes
 creating build/bdist.macosx-10.9-x86_64/egg/splikes/connections
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/update_init.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/STDP.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/backup__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/triplet_julijana.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/calcium.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/Triplet.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/process.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/connections/BCM.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/utils.py -> build/bdist.macosx-10.9-x86_64/egg/splikes
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/connections/update_init.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/connections/backup__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/connections/calcium.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/connections/STDP.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/connections/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/connections/triplet_julijana.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/connections/BCM.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/connections/process.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/connections/Triplet.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/connections
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/utils.py -> build/bdist.macosx-10.9-x86_64/egg/splikes
 creating build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/update_init.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/isi_distributions.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/backup__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/poisson_julijana.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/spike_pattern.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/IntegrateAndFire.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/srm0.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/process.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/neurons/poisson_pattern.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/splikes/Waitbar.py -> build/bdist.macosx-10.9-x86_64/egg/splikes
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/update_init.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/spike_pattern.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/backup__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/Izhikevich.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/isi_distributions.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/poisson_julijana.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/poisson_pattern.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/process.py -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/IntegrateAndFire.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/srm0.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/neurons/applied_current.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/splikes/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/splikes/Waitbar.py -> build/bdist.macosx-10.9-x86_64/egg/splikes
 creating build/bdist.macosx-10.9-x86_64/egg/plasticnet
 creating build/bdist.macosx-10.9-x86_64/egg/plasticnet/monitors
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/monitors/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/monitors
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/monitors/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/monitors
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet
 creating build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/update_init.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/Miller2014.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/BCM_TwoThreshold_Harel.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/backup__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/process.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/BCM_TwoThreshold.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/BCM.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/constant_connection.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/Hebb.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/connections/BCM_TwoThreshold_OLD.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/plasticnet.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/utils.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/update_init.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/process.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/backup__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/Miller2014.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM_TwoThreshold_Harel.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/constant_connection.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/Hebb.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM_TwoThreshold_OLD.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/connections/BCM_TwoThreshold.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/utils.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet
 creating build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/neurons/update_init.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/neurons/backup__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/neurons/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/neurons/process.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/neurons/pattern_neuron.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/neurons/linear_neuron.cpython-38-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
-copying build/lib.macosx-10.9-x86_64-3.8/plasticnet/Waitbar.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/monitors/__init__.py to __init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/__init__.py to __init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/update_init.py to update_init.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/backup__init__.py to backup__init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/__init__.py to __init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/process.py to process.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/utils.py to utils.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/update_init.py to update_init.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/backup__init__.py to backup__init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/__init__.py to __init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/process.py to process.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/Waitbar.py to Waitbar.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/monitors/__init__.py to __init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/__init__.py to __init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/update_init.py to update_init.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/backup__init__.py to backup__init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/__init__.py to __init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/utils.py to utils.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/update_init.py to update_init.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/backup__init__.py to backup__init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/__init__.py to __init__.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/Waitbar.py to Waitbar.cpython-38.pyc
-creating stub loader for plasticnet/plasticnet.cpython-38-darwin.so
-creating stub loader for plasticnet/connections/BCM_TwoThreshold_OLD.cpython-38-darwin.so
-creating stub loader for plasticnet/connections/constant_connection.cpython-38-darwin.so
-creating stub loader for plasticnet/connections/Hebb.cpython-38-darwin.so
-creating stub loader for plasticnet/connections/BCM_TwoThreshold.cpython-38-darwin.so
-creating stub loader for plasticnet/connections/Miller2014.cpython-38-darwin.so
-creating stub loader for plasticnet/connections/process.cpython-38-darwin.so
-creating stub loader for plasticnet/connections/BCM_TwoThreshold_Harel.cpython-38-darwin.so
-creating stub loader for plasticnet/connections/BCM.cpython-38-darwin.so
-creating stub loader for plasticnet/neurons/pattern_neuron.cpython-38-darwin.so
-creating stub loader for plasticnet/neurons/linear_neuron.cpython-38-darwin.so
-creating stub loader for plasticnet/neurons/process.cpython-38-darwin.so
-creating stub loader for splikes/connections/Triplet.cpython-38-darwin.so
-creating stub loader for splikes/connections/STDP.cpython-38-darwin.so
-creating stub loader for splikes/connections/calcium.cpython-38-darwin.so
-creating stub loader for splikes/connections/triplet_julijana.cpython-38-darwin.so
-creating stub loader for splikes/connections/BCM.cpython-38-darwin.so
-creating stub loader for splikes/splikes.cpython-38-darwin.so
-creating stub loader for splikes/neurons/spike_pattern.cpython-38-darwin.so
-creating stub loader for splikes/neurons/IntegrateAndFire.cpython-38-darwin.so
-creating stub loader for splikes/neurons/poisson_pattern.cpython-38-darwin.so
-creating stub loader for splikes/neurons/isi_distributions.cpython-38-darwin.so
-creating stub loader for splikes/neurons/srm0.cpython-38-darwin.so
-creating stub loader for splikes/neurons/poisson_julijana.cpython-38-darwin.so
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/plasticnet.py to plasticnet.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold_OLD.py to BCM_TwoThreshold_OLD.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/constant_connection.py to constant_connection.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/Hebb.py to Hebb.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold.py to BCM_TwoThreshold.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/Miller2014.py to Miller2014.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/process.py to process.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold_Harel.py to BCM_TwoThreshold_Harel.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM.py to BCM.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/pattern_neuron.py to pattern_neuron.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/linear_neuron.py to linear_neuron.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/process.py to process.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/Triplet.py to Triplet.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/STDP.py to STDP.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/calcium.py to calcium.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/triplet_julijana.py to triplet_julijana.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/BCM.py to BCM.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/splikes.py to splikes.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/spike_pattern.py to spike_pattern.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/IntegrateAndFire.py to IntegrateAndFire.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/poisson_pattern.py to poisson_pattern.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/isi_distributions.py to isi_distributions.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/srm0.py to srm0.cpython-38.pyc
-byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/poisson_julijana.py to poisson_julijana.cpython-38.pyc
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons/update_init.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons/process.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons/backup__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons/__init__.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons/pattern_neuron.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/neurons/linear_neuron.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/Waitbar.py -> build/bdist.macosx-10.9-x86_64/egg/plasticnet
+copying build/lib.macosx-10.9-x86_64-3.9/plasticnet/plasticnet.cpython-39-darwin.so -> build/bdist.macosx-10.9-x86_64/egg/plasticnet
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/monitors/__init__.py to __init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/__init__.py to __init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/update_init.py to update_init.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/backup__init__.py to backup__init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/__init__.py to __init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/process.py to process.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/utils.py to utils.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/update_init.py to update_init.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/backup__init__.py to backup__init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/__init__.py to __init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/process.py to process.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/Waitbar.py to Waitbar.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/monitors/__init__.py to __init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/__init__.py to __init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/update_init.py to update_init.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/backup__init__.py to backup__init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/__init__.py to __init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/utils.py to utils.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/update_init.py to update_init.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/backup__init__.py to backup__init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/__init__.py to __init__.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/Waitbar.py to Waitbar.cpython-39.pyc
+creating stub loader for plasticnet/plasticnet.cpython-39-darwin.so
+creating stub loader for plasticnet/connections/BCM_TwoThreshold_OLD.cpython-39-darwin.so
+creating stub loader for plasticnet/connections/constant_connection.cpython-39-darwin.so
+creating stub loader for plasticnet/connections/Hebb.cpython-39-darwin.so
+creating stub loader for plasticnet/connections/BCM_TwoThreshold.cpython-39-darwin.so
+creating stub loader for plasticnet/connections/Miller2014.cpython-39-darwin.so
+creating stub loader for plasticnet/connections/process.cpython-39-darwin.so
+creating stub loader for plasticnet/connections/BCM_TwoThreshold_Harel.cpython-39-darwin.so
+creating stub loader for plasticnet/connections/BCM.cpython-39-darwin.so
+creating stub loader for plasticnet/neurons/pattern_neuron.cpython-39-darwin.so
+creating stub loader for plasticnet/neurons/linear_neuron.cpython-39-darwin.so
+creating stub loader for plasticnet/neurons/process.cpython-39-darwin.so
+creating stub loader for splikes/connections/Triplet.cpython-39-darwin.so
+creating stub loader for splikes/connections/STDP.cpython-39-darwin.so
+creating stub loader for splikes/connections/calcium.cpython-39-darwin.so
+creating stub loader for splikes/connections/triplet_julijana.cpython-39-darwin.so
+creating stub loader for splikes/connections/BCM.cpython-39-darwin.so
+creating stub loader for splikes/splikes.cpython-39-darwin.so
+creating stub loader for splikes/neurons/spike_pattern.cpython-39-darwin.so
+creating stub loader for splikes/neurons/IntegrateAndFire.cpython-39-darwin.so
+creating stub loader for splikes/neurons/poisson_pattern.cpython-39-darwin.so
+creating stub loader for splikes/neurons/isi_distributions.cpython-39-darwin.so
+creating stub loader for splikes/neurons/srm0.cpython-39-darwin.so
+creating stub loader for splikes/neurons/applied_current.cpython-39-darwin.so
+creating stub loader for splikes/neurons/poisson_julijana.cpython-39-darwin.so
+creating stub loader for splikes/neurons/Izhikevich.cpython-39-darwin.so
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/plasticnet.py to plasticnet.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold_OLD.py to BCM_TwoThreshold_OLD.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/constant_connection.py to constant_connection.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/Hebb.py to Hebb.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold.py to BCM_TwoThreshold.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/Miller2014.py to Miller2014.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/process.py to process.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM_TwoThreshold_Harel.py to BCM_TwoThreshold_Harel.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/connections/BCM.py to BCM.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/pattern_neuron.py to pattern_neuron.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/linear_neuron.py to linear_neuron.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/plasticnet/neurons/process.py to process.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/Triplet.py to Triplet.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/STDP.py to STDP.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/calcium.py to calcium.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/triplet_julijana.py to triplet_julijana.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/connections/BCM.py to BCM.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/splikes.py to splikes.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/spike_pattern.py to spike_pattern.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/IntegrateAndFire.py to IntegrateAndFire.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/poisson_pattern.py to poisson_pattern.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/isi_distributions.py to isi_distributions.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/srm0.py to srm0.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/applied_current.py to applied_current.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/poisson_julijana.py to poisson_julijana.cpython-39.pyc
+byte-compiling build/bdist.macosx-10.9-x86_64/egg/splikes/neurons/Izhikevich.py to Izhikevich.cpython-39.pyc
 creating build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
 copying splikes.egg-info/PKG-INFO -> build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
 copying splikes.egg-info/SOURCES.txt -> build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
 copying splikes.egg-info/dependency_links.txt -> build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
 copying splikes.egg-info/top_level.txt -> build/bdist.macosx-10.9-x86_64/egg/EGG-INFO
 writing build/bdist.macosx-10.9-x86_64/egg/EGG-INFO/native_libs.txt
-/Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
-  warnings.warn(
 zip_safe flag not set; analyzing archive contents...
-plasticnet.__pycache__.plasticnet.cpython-38: module references __file__
-plasticnet.connections.__pycache__.BCM.cpython-38: module references __file__
-plasticnet.connections.__pycache__.BCM_TwoThreshold.cpython-38: module references __file__
-plasticnet.connections.__pycache__.BCM_TwoThreshold_Harel.cpython-38: module references __file__
-plasticnet.connections.__pycache__.BCM_TwoThreshold_OLD.cpython-38: module references __file__
-plasticnet.connections.__pycache__.Hebb.cpython-38: module references __file__
-plasticnet.connections.__pycache__.Miller2014.cpython-38: module references __file__
-plasticnet.connections.__pycache__.constant_connection.cpython-38: module references __file__
-plasticnet.connections.__pycache__.process.cpython-38: module references __file__
-plasticnet.neurons.__pycache__.linear_neuron.cpython-38: module references __file__
-plasticnet.neurons.__pycache__.pattern_neuron.cpython-38: module references __file__
-plasticnet.neurons.__pycache__.process.cpython-38: module references __file__
-splikes.__pycache__.splikes.cpython-38: module references __file__
-splikes.connections.__pycache__.BCM.cpython-38: module references __file__
-splikes.connections.__pycache__.STDP.cpython-38: module references __file__
-splikes.connections.__pycache__.Triplet.cpython-38: module references __file__
-splikes.connections.__pycache__.calcium.cpython-38: module references __file__
-splikes.connections.__pycache__.triplet_julijana.cpython-38: module references __file__
-splikes.neurons.__pycache__.IntegrateAndFire.cpython-38: module references __file__
-splikes.neurons.__pycache__.isi_distributions.cpython-38: module references __file__
-splikes.neurons.__pycache__.poisson_julijana.cpython-38: module references __file__
-splikes.neurons.__pycache__.poisson_pattern.cpython-38: module references __file__
-splikes.neurons.__pycache__.spike_pattern.cpython-38: module references __file__
-splikes.neurons.__pycache__.srm0.cpython-38: module references __file__
-creating 'dist/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg' and adding 'build/bdist.macosx-10.9-x86_64/egg' to it
+plasticnet.__pycache__.plasticnet.cpython-39: module references __file__
+plasticnet.connections.__pycache__.BCM.cpython-39: module references __file__
+plasticnet.connections.__pycache__.BCM_TwoThreshold.cpython-39: module references __file__
+plasticnet.connections.__pycache__.BCM_TwoThreshold_Harel.cpython-39: module references __file__
+plasticnet.connections.__pycache__.BCM_TwoThreshold_OLD.cpython-39: module references __file__
+plasticnet.connections.__pycache__.Hebb.cpython-39: module references __file__
+plasticnet.connections.__pycache__.Miller2014.cpython-39: module references __file__
+plasticnet.connections.__pycache__.constant_connection.cpython-39: module references __file__
+plasticnet.connections.__pycache__.process.cpython-39: module references __file__
+plasticnet.neurons.__pycache__.linear_neuron.cpython-39: module references __file__
+plasticnet.neurons.__pycache__.pattern_neuron.cpython-39: module references __file__
+plasticnet.neurons.__pycache__.process.cpython-39: module references __file__
+splikes.__pycache__.splikes.cpython-39: module references __file__
+splikes.connections.__pycache__.BCM.cpython-39: module references __file__
+splikes.connections.__pycache__.STDP.cpython-39: module references __file__
+splikes.connections.__pycache__.Triplet.cpython-39: module references __file__
+splikes.connections.__pycache__.calcium.cpython-39: module references __file__
+splikes.connections.__pycache__.triplet_julijana.cpython-39: module references __file__
+splikes.neurons.__pycache__.IntegrateAndFire.cpython-39: module references __file__
+splikes.neurons.__pycache__.Izhikevich.cpython-39: module references __file__
+splikes.neurons.__pycache__.applied_current.cpython-39: module references __file__
+splikes.neurons.__pycache__.isi_distributions.cpython-39: module references __file__
+splikes.neurons.__pycache__.poisson_julijana.cpython-39: module references __file__
+splikes.neurons.__pycache__.poisson_pattern.cpython-39: module references __file__
+splikes.neurons.__pycache__.spike_pattern.cpython-39: module references __file__
+splikes.neurons.__pycache__.srm0.cpython-39: module references __file__
+creating 'dist/splikes-0.1.2-py3.9-macosx-10.9-x86_64.egg' and adding 'build/bdist.macosx-10.9-x86_64/egg' to it
 removing 'build/bdist.macosx-10.9-x86_64/egg' (and everything under it)
-Processing splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg
-creating /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg
-Extracting splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg to /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/Waitbar.py to Waitbar.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/__init__.py to __init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/plasticnet.py to plasticnet.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/utils.py to utils.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/BCM.py to BCM.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/BCM_TwoThreshold.py to BCM_TwoThreshold.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/BCM_TwoThreshold_Harel.py to BCM_TwoThreshold_Harel.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/BCM_TwoThreshold_OLD.py to BCM_TwoThreshold_OLD.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/Hebb.py to Hebb.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/Miller2014.py to Miller2014.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/__init__.py to __init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/backup__init__.py to backup__init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/constant_connection.py to constant_connection.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/process.py to process.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/connections/update_init.py to update_init.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/monitors/__init__.py to __init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/__init__.py to __init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/backup__init__.py to backup__init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/linear_neuron.py to linear_neuron.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/pattern_neuron.py to pattern_neuron.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/process.py to process.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/plasticnet/neurons/update_init.py to update_init.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/Waitbar.py to Waitbar.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/__init__.py to __init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/splikes.py to splikes.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/utils.py to utils.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/BCM.py to BCM.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/STDP.py to STDP.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/Triplet.py to Triplet.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/__init__.py to __init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/backup__init__.py to backup__init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/calcium.py to calcium.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/process.py to process.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/triplet_julijana.py to triplet_julijana.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/connections/update_init.py to update_init.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/monitors/__init__.py to __init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/IntegrateAndFire.py to IntegrateAndFire.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/__init__.py to __init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/backup__init__.py to backup__init__.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/isi_distributions.py to isi_distributions.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/poisson_julijana.py to poisson_julijana.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/poisson_pattern.py to poisson_pattern.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/process.py to process.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/spike_pattern.py to spike_pattern.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/srm0.py to srm0.cpython-38.pyc
-byte-compiling /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg/splikes/neurons/update_init.py to update_init.cpython-38.pyc
-Adding splikes 0.1.1 to easy-install.pth file
+Processing splikes-0.1.2-py3.9-macosx-10.9-x86_64.egg
+creating /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/splikes-0.1.2-py3.9-macosx-10.9-x86_64.egg
+Extracting splikes-0.1.2-py3.9-macosx-10.9-x86_64.egg to /Users/bblais/opt/anaconda3/lib/python3.9/site-packages
+Adding splikes 0.1.2 to easy-install.pth file
 
-Installed /Users/bblais/opt/anaconda3/envs/py3/lib/python3.8/site-packages/splikes-0.1.1-py3.8-macosx-10.9-x86_64.egg
-Processing dependencies for splikes==0.1.1
-Finished processing dependencies for splikes==0.1.1
+Installed /Users/bblais/opt/anaconda3/lib/python3.9/site-packages/splikes-0.1.2-py3.9-macosx-10.9-x86_64.egg
+Processing dependencies for splikes==0.1.2
+Finished processing dependencies for splikes==0.1.2
 python setup.py install

@@ -4,27 +4,43 @@
 # In[1]:
 
 
-get_ipython().run_line_magic('pylab', 'inline')
+get_ipython().run_line_magic('matplotlib', 'inline')
 
 
-# In[84]:
+# In[42]:
 
 
-import plasticnet as pn
+import numpy as np
+import matplotlib.pyplot as pylab
+from matplotlib.pyplot import figure, plot, gca, gcf, subplot, xlim,ylim, xlabel,ylabel
+from matplotlib.pyplot import title,legend
+
+
+# In[43]:
+
+
+#import plasticnet as pn
 from splikes import day,hour,minute,second,ms
 import splikes as sp
 from splikes.utils import paramtext
 from tqdm import tqdm
 
 
-# In[3]:
+# In[44]:
+
+
+from numpy import array,linspace,mean
+from numpy.random import rand
+
+
+# In[25]:
 
 
 total_time=10*second
 N=5
 
 
-# In[22]:
+# In[26]:
 
 
 patterns=array([15.,]*N)
@@ -33,14 +49,14 @@ post=sp.neurons.IntegrateAndFire(N)
 w=sp.connection(pre,post,[0,0],state='V')
 
 
-# In[23]:
+# In[27]:
 
 
 w.reset_to_initial=True
 np.fill_diagonal(w.initial_weights,1)
 
 
-# In[35]:
+# In[28]:
 
 
 pre.save_spikes_begin=0.0
@@ -50,43 +66,43 @@ post.save_spikes_begin=0.0
 post.save_spikes_end=total_time
 
 
-# In[36]:
+# In[29]:
 
 
 sim=sp.simulation(total_time,dt=0.0001)
 
 
-# In[37]:
+# In[30]:
 
 
 sim.monitor(post,['V',],0.001)
 
 
-# In[38]:
+# In[31]:
 
 
 sp.run_sim(sim,[pre,post],[w])
 
 
-# In[39]:
+# In[32]:
 
 
 pre.plot_spikes()
 
 
-# In[41]:
+# In[33]:
 
 
 post.plot_spikes()
 
 
-# In[42]:
+# In[34]:
 
 
 t,V=sim.monitors['V'].arrays()
 
 
-# In[43]:
+# In[36]:
 
 
 plot(t,V[:,0:2])
@@ -94,7 +110,7 @@ plot(t,V[:,0:2])
 
 # ## One Neuron Integrate and Fire
 
-# In[76]:
+# In[37]:
 
 
 rate=10
@@ -114,7 +130,7 @@ sim.monitor(post,['V',],0.001)
 sp.run_sim(sim,[pre,post],[w],print_time=False)
 
 
-# In[77]:
+# In[38]:
 
 
 t,V=sim.monitors['V'].arrays()
@@ -135,7 +151,7 @@ xlim([min(t),max(t)])
 
 # ## Input/Output Rate Relationship
 
-# In[97]:
+# In[45]:
 
 
 rate_arr=linspace(1,100,100)
@@ -185,7 +201,7 @@ plot(rate_arr,m*rate_arr,'b--')
 legend()
 
 
-# In[102]:
+# In[46]:
 
 
 w_arr=linspace(0.01,10,200)
@@ -229,7 +245,7 @@ legend()
 
 # # SRM0
 
-# In[107]:
+# In[47]:
 
 
 rate=1
@@ -252,7 +268,7 @@ sim.monitor(post,['u','v',],0.001)
 sp.run_sim(sim,[pre,post],[w],print_time=False)
 
 
-# In[111]:
+# In[48]:
 
 
 t,v=sim.monitors['v'].arrays()
@@ -274,7 +290,7 @@ post.plot_spikes()
 xlim([min(t),max(t)])
 
 
-# In[112]:
+# In[49]:
 
 
 rate=1
@@ -298,7 +314,7 @@ sim.monitor(post,['u','v',],0.001)
 sp.run_sim(sim,[pre,post],[w],print_time=False)
 
 
-# In[113]:
+# In[50]:
 
 
 t,v=sim.monitors['v'].arrays()

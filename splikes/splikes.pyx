@@ -4,7 +4,7 @@ import numpy as np
 cimport numpy as np
 
 from copy import deepcopy
-import pylab
+import matplotlib.pyplot as pylab
 from Waitbar import Waitbar
 
 cdef extern from "math.h":
@@ -75,7 +75,7 @@ def time2str(tm):
 import sys
 
 from copy import deepcopy
-import pylab
+#import pylab
 
 ms=0.001
 second=1000*ms
@@ -222,10 +222,10 @@ cdef class simulation(group):
     cpdef _reset(self):
         if self.seed<0:
             init_by_entropy()
-            pylab.seed(None)
+            np.random.seed(None)
         else:
             init_by_int(self.seed)
-            pylab.seed(self.seed)
+            np.random.seed(self.seed)
        
     def add_filter(self,function,time):
         self.filters.append( {'function':function,
@@ -261,7 +261,9 @@ cdef class neuron(group):
         self.num_post=0
         self.verbose=False
         self.spiking=np.zeros(self.N,dtype=np.int32)    
-        self.last_spike_time=-np.ones(self.N,dtype=float)    
+        self.last_spike_time=-np.ones(self.N,dtype=float)
+        self.I=np.zeros(self.N,dtype=float)
+        self.use_I=False
         self.save_spikes_begin=0.0
         self.save_spikes_end=-1.0
         self.connections_pre=[]
@@ -270,7 +272,7 @@ cdef class neuron(group):
     
         self.save_attrs=['num_pre','num_post','N','verbose',
                             'save_spikes_begin','save_spikes_end','post_count']
-        self.save_data=['spiking','last_spike_time','rate','saved_spikes']
+        self.save_data=['spiking','last_spike_time','rate','saved_spikes','I']
 
 
 
@@ -278,6 +280,7 @@ cdef class neuron(group):
         self.spiking=np.zeros(self.N,dtype=np.int32)            
         self.last_spike_time=-np.ones(self.N,dtype=float)    
         self.rate=np.zeros(self.N,dtype=float)
+        self.I=np.zeros(self.N,dtype=float)        
         self.saved_spikes=[]
         self.is_spike=0
         self.post_count=0
@@ -289,6 +292,7 @@ cdef class neuron(group):
         
         
     def plot_spikes(self,neuron_offset=0):
+        
         try:
             t,n=zip(*self.saved_spikes)
         except ValueError:
@@ -296,6 +300,7 @@ cdef class neuron(group):
         t=np.array(t)
         n=np.array(n)
         
+
         pylab.plot(t,n+neuron_offset,'.')
         pylab.ylabel('neuron')
         pylab.xlabel('time')
@@ -315,7 +320,7 @@ cdef class connection(group):
         if self.reset_to_initial:
             self.weights=self.initial_weights.copy()
         else:
-            self.weights=pylab.rand(self.post.N,self.pre.N)*(self.initial_weight_range[1]-
+            self.weights=np.random.rand(self.post.N,self.pre.N)*(self.initial_weight_range[1]-
                                        self.initial_weight_range[0])+self.initial_weight_range[0]
 
         self.W=<double *>self.weights.data

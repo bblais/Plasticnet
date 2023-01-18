@@ -149,7 +149,7 @@ cdef class monitor(group):
         self.t,self.values=self.t_tmp,self.values_tmp
 
     cpdef update(self,double t):
-        if t<=self.time_to_next_save:
+        if t<self.time_to_next_save:
             return
         self.t.append(t)
         variable=self.container.__getattribute__(self.name)
@@ -160,7 +160,9 @@ cdef class monitor(group):
         return self.time_array(),self.array()
         
     def array(self):
-        return np.array(self.values).squeeze()
+        # original is return np.array(self.values).squeeze()
+        # bb: why squeeze?  it causes problems with the first save
+        return np.array(self.values)
         
     def time_array(self):
         return np.array(self.t)
@@ -510,7 +512,7 @@ def run_sim(simulation sim,object neurons,object connections,
                     object display=None,double time_between_display=1.0):
     
     cdef double t=sim.start_time
-    cdef double next_display=sim.start_time+time_between_display    
+    cdef double next_display=sim.start_time
     cdef int _debug=debug
     cdef double hash_step,next_hash
     cdef double t1,t2,next_hash_time

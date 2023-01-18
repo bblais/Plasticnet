@@ -531,7 +531,7 @@ def translate_neuron(neuron_str):
 
     import yaml
     
-    D=yaml.load(neuron_str)
+    D=yaml.safe_load(neuron_str)
     D['parameter lines']=D['parameters']
     del D['parameters']
     
@@ -822,7 +822,7 @@ def translate_connection(connection_str):
     import yaml
 
 
-    D=yaml.load(connection_str)
+    D=yaml.safe_load(connection_str)
     D['parameter lines']=D['parameters']
     del D['parameters']
     
