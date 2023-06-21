@@ -169,7 +169,7 @@ cdef class natural_images(pattern_neuron):
                      verbose=False,
                      ):
 
-        self.sequential=True
+        self.sequential=False
         self.filename=fname
         if not other_channel is None:
             self.other_channel=<natural_images>other_channel
@@ -181,18 +181,13 @@ cdef class natural_images(pattern_neuron):
 
         
         pattern_neuron.__init__(self,np.zeros((1,rf_size*rf_size),float),
-                            time_between_patterns=time_between_patterns,sequential=True,verbose=verbose)
+                            time_between_patterns=time_between_patterns,sequential=self.sequential,verbose=verbose)
     
         self.pattern_number=0
         self.rf_size=rf_size
         self.pattern=self.patterns[0]
         self.name='Natural Images'
         
-        if verbose:
-            print "Read %d images from %s" % (len(self.im),fname)
-            for im in self.im:
-                print "[%d,%d]" % (im.shape[0],im.shape[1]),
-            sys.stdout.flush()
     
         self.save_attrs.extend(['buffer_size','use_other_channel','filename'])
         #self.save_data.extend(['',])
@@ -209,6 +204,13 @@ cdef class natural_images(pattern_neuron):
                                 for arr in image_data['im']]
         del image_data
         self.images_loaded=True
+
+        if self.verbose:
+            print "Read %d images from %s" % (len(self.im),self.filename)
+            for im in self.im:
+                print "[%d,%d]" % (im.shape[0],im.shape[1]),
+            sys.stdout.flush()
+
 
     cpdef _clean(self):
         del self.im
@@ -287,7 +289,6 @@ cdef class natural_images_with_jitter(natural_images):
     cdef public int pa,ra,ca
     cdef float mu_c,mu_r
     cdef float sigma_c,sigma_r
-    cdef int buffer_r,buffer_c
     
     cpdef _reset(self):
         pattern_neuron._reset(self)
@@ -296,7 +297,6 @@ cdef class natural_images_with_jitter(natural_images):
     def __init__(self,fname='hdf5/bbsk081604_norm.hdf5',rf_size=13,
                      time_between_patterns=1.0,
                      mu_c=0,mu_r=0,sigma_c=0,sigma_r=0,
-                     buffer_r=0,buffer_c=0,  # extra edge space
                      other_channel=None,
                      verbose=False,
                      ):
@@ -313,9 +313,6 @@ cdef class natural_images_with_jitter(natural_images):
         self.sigma_c=sigma_c
         self.sigma_r=sigma_r
 
-        self.buffer_r=buffer_r
-        self.buffer_c=buffer_c
-
         self.save_attrs.extend(['mu_c','mu_r','sigma_c','sigma_r',])
         #self.save_data.extend(['patterns','pattern'])
 
@@ -326,7 +323,8 @@ cdef class natural_images_with_jitter(natural_images):
         cdef np.ndarray pic
         cdef double *pic_ptr
         cdef double *pattern
-        
+        cdef int fail_count,total_count  # keep track of redone coords
+        cdef int fail
 
         if not self.images_loaded:
             self.load_images()
@@ -334,57 +332,85 @@ cdef class natural_images_with_jitter(natural_images):
         pattern=<double *>self.pattern.data    
                 
         cdef int number_of_pictures=len(self.im)
+
+        fail=True
+
+        fail_count=0
+        total_count=0
+        while fail:
+            total_count+=1
+
+            if not self.sequential:
+                self.pattern_number=randint(number_of_pictures)
+            else:
+                self.pattern_number+=1
+                if self.pattern_number>=number_of_pictures:
+                    self.new_buffer(t)
+                    self.pattern_number=0
+
+            if not self.use_other_channel:
+                p=self.pattern_number
+            else:
+                p=self.other_channel.p % number_of_pictures
+
+            pic=self.im[p]
+            pic_ptr=<double *> pic.data
                 
-        if not self.sequential:
-            self.pattern_number=randint(number_of_pictures)
-        else:
-            self.pattern_number+=1
-            if self.pattern_number>=number_of_pictures:
-                self.new_buffer(t)
-                self.pattern_number=0
+            num_rows,num_cols=pic.shape[0],pic.shape[1]
 
-        if not self.use_other_channel:
-            p=self.pattern_number
-        else:
-            p=self.other_channel.p % number_of_pictures
+            if not self.use_other_channel:
+                r,c=randint(int(num_rows-self.rf_size)),randint(int(num_cols-self.rf_size))
+            else:
+                r,c=self.other_channel.r,self.other_channel.c
 
-        pic=self.im[p]
-        pic_ptr=<double *> pic.data
+            if self.verbose:
+                print(p,r,c)
+
+            self.p=p
+            self.c=c
+            self.r=r
+
+
+            r=int(r+self.mu_r+randn()*self.sigma_r)
+            c=int(c+self.mu_c+randn()*self.sigma_c)
             
-        num_rows,num_cols=pic.shape[0],pic.shape[1]
-        
-        count=0
-        if not self.use_other_channel:
-            r,c=randint(int(num_rows-self.rf_size-self.buffer_r-3*self.sigma_r)),randint(int(num_cols-self.rf_size-self.buffer_c-3*self.sigma_c))
+            if r<0:
+                fail=True
+            elif r>num_rows-self.rf_size-1:
+                fail=True
+            elif c<0:
+                fail=True
+            elif c>num_cols-self.rf_size-1:
+                fail=True
+            else:
+                fail=False
 
-        else:
-            r,c=self.other_channel.r,self.other_channel.c
+            if fail:
+                fail_count+=1
+                if self.verbose:
+                    print("Fail...trying again")
 
-        if self.verbose:
-            print(p,r,c)
+                if ((total_count>10) & (fail_count/total_count>0.1)):
+                    raise ValueError("Fail count greater than 10%")
 
-        self.p=p
-        self.c=c
-        self.r=r
+                if self.use_other_channel:  # choose another input pattern
+                    if self.verbose:
+                        print("Calling other channel")
 
+                    if self.sequential:
+                        self.pattern_number-=1
+                        self.other_channel.pattern_number-=1
 
-        r=int(r+self.mu_r+randn()*self.sigma_r)
-        c=int(c+self.mu_c+randn()*self.sigma_c)
-        
-        if r<0:
-            r=0
-        if r>num_rows-self.rf_size-1:
-            r=num_rows-self.rf_size-1
+                    self.other_channel.time_to_next_pattern=t
+                    self.other_channel.new_pattern(t)
+                    if self.verbose:
+                        print("back to this channel")
 
-        if c<0:
-            c=0
-        if c>num_cols-self.rf_size-1:
-            c=num_cols-self.rf_size-1
+                continue
 
-
-        self.pa=p
-        self.ca=c
-        self.ra=r
+            self.pa=p
+            self.ca=c
+            self.ra=r
 
 
         count=0
@@ -398,11 +424,18 @@ cdef class natural_images_with_jitter(natural_images):
                     print("[%d,%d]" % (offset,count))
                     sys.stdout.flush()
 
-
-
         if self.verbose:
             print()           
             sys.stdout.flush()
+
+        # print("New pattern t=%f" % t)
+        #print("[")
+        #for i in range(self.N):
+        #    sys.stdout.write("%f " % pattern[i])
+        #print("]")
+ 
+
+
 
         self.time_to_next_pattern=t+self.time_between_patterns
         if self.verbose:

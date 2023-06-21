@@ -192,6 +192,10 @@ cdef class monitor(group):
             return "%02d:%02d.%03d" % (m,s,ms*1000) 
 
         t,y=self.arrays()
+
+        if not len(t):  # nothing to plot yet
+            return 
+            
         if np.max(t)<10:  # use ms
             pylab.gca().xaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(HMSFormatter2)) 
         else:
