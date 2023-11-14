@@ -1,4 +1,4 @@
-from numpy import exp,concatenate,array,float,r_
+from numpy import exp,concatenate,array,r_
 from pylab import plot,ylabel,xlabel,gca,draw,legend,subplot,show,text,gcf,rand
 from numpy import zeros,arange,ones,convolve,floor
 import numpy as np

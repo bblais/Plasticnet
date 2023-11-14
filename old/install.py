@@ -5,6 +5,7 @@ import argparse
 
 
 parser = argparse.ArgumentParser()
+parser.add_argument('--home', help='install in home directory',action="store_true")
 parser.add_argument('--clean', help='clean install',action="store_true")
 args = parser.parse_args()
 
@@ -13,19 +14,11 @@ if args.clean:
     print(cmd)
     os.system(cmd)
 
-cmd="cp setup_plasticnet.py setup.py"
+
+if args.home:
+    cmd='python setup.py install --home=~'
+else:
+    cmd='python setup.py install'
+
 print(cmd)
 os.system(cmd)
-
-cmd="pip install ."
-print(cmd)
-os.system(cmd)
-
-cmd="cp setup_splikes.py setup.py"
-print(cmd)
-os.system(cmd)
-
-cmd="pip install ."
-print(cmd)
-os.system(cmd)
-

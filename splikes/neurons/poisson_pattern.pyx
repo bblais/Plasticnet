@@ -58,9 +58,9 @@ cdef class input_current(neuron):
         
         cdef int i
         cdef double *current=<double *>self.current.data
-        cdef double *I=<double *>self.I.data
+        cdef double *Ic=<double *>self.Ic.data
         for i in range(self.N):
-            I[i]=current[i]
+            Ic[i]=current[i]
 
 
 
@@ -76,7 +76,7 @@ cdef class input_current(neuron):
     cpdef update(self,double t,simulation sim):
         cdef double r
         cdef int i,j
-        cdef double *I=<double *>self.I.data
+        cdef double *Ic=<double *>self.Ic.data
         
         cdef double *current
 
@@ -266,10 +266,12 @@ cdef class poisson_plasticnet(neuron):
             
             if count:
                 for nn in range(max(n)+1):
-                    c=len([x for _t,_n in zip(t,n) if 
-                                tt<=_t<tt+self.time_between_patterns and _n==nn])
+                    c=0
+                    for _t,_n in zip(t,n):
+                        if tt<=_t<tt+self.time_between_patterns and _n==nn:
+                            c+=1
                     pylab.text(tt+self.time_between_patterns/2.0,nn+0.1,'%d' % c)
-            
+                                
             tt+=self.time_between_patterns
         pylab.draw()
 

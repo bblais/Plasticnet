@@ -101,8 +101,8 @@ cdef class pattern_neuron(neuron):
             dot("In Update pattern neuron")
         if t>=(self.time_to_next_pattern-1e-6):  # the 1e-6 is because of binary represenation offsets
             if self.verbose:
-                print self.name
-                print type(self)
+                print(self.name)
+                print(type(self))
                 dot("I")
                 
             self.new_pattern(t)
@@ -206,9 +206,9 @@ cdef class natural_images(pattern_neuron):
         self.images_loaded=True
 
         if self.verbose:
-            print "Read %d images from %s" % (len(self.im),self.filename)
+            print("Read %d images from %s" % (len(self.im),self.filename))
             for im in self.im:
-                print "[%d,%d]" % (im.shape[0],im.shape[1]),
+                print("[%d,%d]" % (im.shape[0],im.shape[1]),end=" ")
             sys.stdout.flush()
 
 
@@ -267,7 +267,7 @@ cdef class natural_images(pattern_neuron):
                 pattern[count]=pic_ptr[offset]
                 count+=1
                 if self.verbose:
-                    print "[%d,%d]" % (offset,count),
+                    print("[%d,%d]" % (offset,count),end=" ")
                     sys.stdout.flush()
 
 
@@ -585,7 +585,7 @@ cdef class natural_images_with_motion(natural_images):
                 pattern[count]=pic_ptr[offset]
                 count+=1
                 if self.verbose:
-                    print "[%d,%d]" % (offset,count),
+                    print( "[%d,%d]" % (offset,count),end=" ")
                     sys.stdout.flush()
 
 

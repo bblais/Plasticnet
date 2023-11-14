@@ -48,7 +48,7 @@ cdef class Izhikevich(neuron):
         cdef double spike_scale
         cdef int *spiking   
     
-        cdef double *I
+        cdef double *Ic
         cdef double *total_I=<double *>self.total_I.data
 
 
@@ -65,11 +65,11 @@ cdef class Izhikevich(neuron):
                         for __i in range(self.N):
                             state[__i]+=spike_scale*W[__i*pre.N+__j]    
             if pre.use_I:
-                I=<double *>pre.I.data
+                Ic=<double *>pre.Ic.data
                 for __i in range(self.N):
                     total_I[__i]=0.0
                     for __j in range(pre.N):
-                        total_I[__i]+=W[__i*pre.N+__j]*I[__j]
+                        total_I[__i]+=W[__i*pre.N+__j]*Ic[__j]
     
 
 

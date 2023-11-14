@@ -86,7 +86,8 @@ cdef class triplet_julijana(connection):
         cdef double A_3m=self.A_3m
         cdef double tau_p=self.tau_p
 
-        cdef int *pre,*post   # spikes for pre and post
+        cdef int *pre
+        cdef int *post   # spikes for pre and post
         cdef int __wi
         
         

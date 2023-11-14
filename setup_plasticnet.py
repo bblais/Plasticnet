@@ -1,8 +1,5 @@
 # this is from https://github.com/cython/cython/wiki/PackageHierarchy
 
-
-
-
 import sys, os, stat, subprocess
 from distutils.core import setup
 from Cython.Distutils import build_ext
@@ -76,37 +73,37 @@ def makeExtension(extName):
         extra_link_args = ['-g'],
         )
 
-# # get the list of extensions
-# extNames = scandir("plasticnet")
-
-# #cleanc("plasticnet")
-
-# # and build up the set of Extension objects
-# extensions = [makeExtension(name) for name in extNames]
-# # finally, we can pass all this to distutils
-# setup(
-#   name="plasticnet",
-#   version=get_version('plasticnet'),
-#   description="Plasticity in Rate-Based Neurons",
-#   author="Brian Blais",
-#   packages=["plasticnet", "plasticnet.neurons", "plasticnet.connections", "plasticnet.monitors"],
-#   ext_modules=extensions,
-#   cmdclass = {'build_ext': build_ext},
-# )
-
 # get the list of extensions
-extNames = scandir("splikes")
-#cleanc("splikes")
+extNames = scandir("plasticnet")
+
+#cleanc("plasticnet")
 
 # and build up the set of Extension objects
 extensions = [makeExtension(name) for name in extNames]
 # finally, we can pass all this to distutils
 setup(
-  name="splikes",
-  version=get_version('splikes'),
-  description="Plasticity in Spike-Based Neurons",
+  name="plasticnet",
+  version=get_version('plasticnet'),
+  description="Plasticity in Rate-Based Neurons",
   author="Brian Blais",
-  packages=["splikes", "splikes.neurons", "splikes.connections", "splikes.monitors"],
+  packages=["plasticnet", "plasticnet.neurons", "plasticnet.connections", "plasticnet.monitors"],
   ext_modules=extensions,
   cmdclass = {'build_ext': build_ext},
 )
+
+# # get the list of extensions
+# extNames = scandir("splikes")
+# #cleanc("splikes")
+
+# # and build up the set of Extension objects
+# extensions = [makeExtension(name) for name in extNames]
+# # finally, we can pass all this to distutils
+# setup(
+#   name="splikes",
+#   version=get_version('splikes'),
+#   description="Plasticity in Spike-Based Neurons",
+#   author="Brian Blais",
+#   packages=["splikes", "splikes.neurons", "splikes.connections", "splikes.monitors"],
+#   ext_modules=extensions,
+#   cmdclass = {'build_ext': build_ext},
+# )

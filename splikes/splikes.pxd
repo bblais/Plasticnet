@@ -54,7 +54,7 @@ cdef class neuron(group):
     cdef public int post_count    
     cdef public object saved_spikes    
     cdef public double save_spikes_begin,save_spikes_end
-    cdef public np.ndarray spiking,rate,I
+    cdef public np.ndarray spiking,rate,Ic
     cdef public int N
     cdef public np.ndarray last_spike_time
     cdef public connections_pre,connections_post

@@ -262,7 +262,7 @@ cdef class neuron(group):
         self.verbose=False
         self.spiking=np.zeros(self.N,dtype=np.int32)    
         self.last_spike_time=-np.ones(self.N,dtype=float)
-        self.I=np.zeros(self.N,dtype=float)
+        self.Ic=np.zeros(self.N,dtype=float)
         self.use_I=False
         self.save_spikes_begin=0.0
         self.save_spikes_end=-1.0
@@ -280,7 +280,7 @@ cdef class neuron(group):
         self.spiking=np.zeros(self.N,dtype=np.int32)            
         self.last_spike_time=-np.ones(self.N,dtype=float)    
         self.rate=np.zeros(self.N,dtype=float)
-        self.I=np.zeros(self.N,dtype=float)        
+        self.Ic=np.zeros(self.N,dtype=float)        
         self.saved_spikes=[]
         self.is_spike=0
         self.post_count=0

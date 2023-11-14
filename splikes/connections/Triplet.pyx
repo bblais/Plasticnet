@@ -73,7 +73,8 @@ cdef class Gerstner2006(connection):
         cdef double *W=self.W
         cdef double *post_rate=<double *>self.post.rate.data
         cdef double *pre_rate=<double *>self.pre.rate.data
-        cdef int *pre,*post   # spikes for pre and post
+        cdef int *pre
+        cdef int *post   # spikes for pre and post
         cdef int __wi
         
         
@@ -139,7 +140,8 @@ cdef class Triplet_BCM(Gerstner2006):
         cdef double *W=self.W
         cdef double *post_rate=<double *>self.post.rate.data
         cdef double *pre_rate=<double *>self.pre.rate.data
-        cdef int *pre,*post   # spikes for pre and post
+        cdef int *pre
+        cdef int *post   # spikes for pre and post
         cdef int __wi
         
         
@@ -211,7 +213,8 @@ cdef class Triplet_BCM_LawCooper(Triplet_BCM):
         cdef double *W=self.W
         cdef double *post_rate=<double *>self.post.rate.data
         cdef double *pre_rate=<double *>self.pre.rate.data
-        cdef int *pre,*post   # spikes for pre and post
+        cdef int *pre
+        cdef int *post   # spikes for pre and post
         cdef int __wi
         
         
@@ -291,7 +294,8 @@ cdef class Triplet_BCM_LawCooper2(Triplet_BCM):
         cdef double *W=self.W
         cdef double *post_rate=<double *>self.post.rate.data
         cdef double *pre_rate=<double *>self.pre.rate.data
-        cdef int *pre,*post   # spikes for pre and post
+        cdef int *pre
+        cdef int *post   # spikes for pre and post
         cdef int __wi
         
         

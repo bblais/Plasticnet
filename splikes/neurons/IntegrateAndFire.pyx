@@ -53,7 +53,7 @@ cdef class IntegrateAndFire(neuron):
         cdef double *W,*state
         cdef double spike_scale
         cdef int *spiking   
-        cdef double *I
+        cdef double *Ic
         cdef double *total_I=<double *>self.total_I.data
 
         for c in self.connections_pre:
@@ -71,11 +71,11 @@ cdef class IntegrateAndFire(neuron):
             
             if pre.use_I:
 
-                I=<double *>pre.I.data
+                Ic=<double *>pre.Ic.data
                 for __i in range(self.N):
                     total_I[__i]=0.0
                     for __j in range(pre.N):
-                        total_I[__i]+=W[__i*pre.N+__j]*I[__j]
+                        total_I[__i]+=W[__i*pre.N+__j]*Ic[__j]
 
     
         for __i in range(self.N):

@@ -150,7 +150,8 @@ cdef class calcium(connection):
         cdef double *W=self.W
         cdef double *post_rate=<double *>self.post.rate.data
         cdef double *pre_rate=<double *>self.pre.rate.data
-        cdef int *pre,*post   # spikes for pre and post
+        cdef int *pre
+        cdef int *post   # spikes for pre and post
         cdef int __wi
         
         

@@ -49,6 +49,7 @@ cdef class spike_pattern(neuron):
 
 
     def plot_spikes(self,count=False):
+        cdef object x
         spikes=self.saved_spikes
         t=[x[0] for x in spikes]
         n=[x[1] for x in spikes]
@@ -63,8 +64,10 @@ cdef class spike_pattern(neuron):
             
             if count:
                 for nn in range(max(n)+1):
-                    c=len([x for _t,_n in zip(t,n) if 
-                                tt<=_t<tt+self.time_between_patterns and _n==nn])
+                    c=0
+                    for _t,_n in zip(t,n):
+                        if tt<=_t<tt+self.time_between_patterns and _n==nn:
+                            c+=1
                     pylab.text(tt+self.time_between_patterns/2.0,nn+0.1,'%d' % c)
             
             tt+=self.time_between_patterns
