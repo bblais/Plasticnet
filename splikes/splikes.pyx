@@ -5,7 +5,7 @@ cimport numpy as np
 
 from copy import deepcopy
 import matplotlib.pyplot as pylab
-from Waitbar import Waitbar
+from .Waitbar import Waitbar
 
 cdef extern from "math.h":
     double sqrt(double)
