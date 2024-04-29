@@ -12,7 +12,7 @@ import sys
 
 from copy import deepcopy
 import pylab
-from Waitbar import Waitbar
+from .Waitbar import Waitbar
 from copy import deepcopy
 
 def dot(what="."):

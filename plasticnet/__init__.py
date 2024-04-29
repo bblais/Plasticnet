@@ -1,4 +1,4 @@
-version='0.1.9'
+version='0.1.11'
 
 from .plasticnet import *
 from .utils import *

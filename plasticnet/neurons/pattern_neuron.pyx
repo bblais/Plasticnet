@@ -22,17 +22,26 @@ cdef class pattern_neuron(neuron):
     cdef public np.ndarray pattern
     cdef public int number_of_patterns
     cdef public double time_between_patterns,time_to_next_pattern
+    cdef public int use_other_channel
+    cdef pattern_neuron other_channel
 
     cpdef _reset(self):
         neuron._reset(self)
         self.time_to_next_pattern=0.0 
         self.pattern_number=-1      
         
-    def __init__(self,patterns,time_between_patterns=1.0,sequential=False,shape=None,verbose=False):
+    def __init__(self,patterns,time_between_patterns=1.0,sequential=False,shape=None,verbose=False,other_channel=None):
         self.patterns=np.ascontiguousarray(np.atleast_2d(np.array(patterns,float)))
         if not shape is None:
             self.patterns=self.patterns.reshape(shape)
         
+
+        if not other_channel is None:
+            self.other_channel=<pattern_neuron>other_channel
+            self.use_other_channel=True
+        else:
+            self.use_other_channel=False
+
         self.sequential=sequential
         neuron.__init__(self,self.patterns.shape[1]) # number of neurons
         self.number_of_patterns=self.patterns.shape[0]
@@ -46,7 +55,7 @@ cdef class pattern_neuron(neuron):
 
         self.save_attrs.extend(['sequential','pattern_number','rf_size',
                     'number_of_patterns','time_between_patterns',
-                    'time_to_next_pattern',])
+                    'time_to_next_pattern','use_other_channel',])
         self.save_data.extend(['patterns','pattern'])
 
 
@@ -58,18 +67,24 @@ cdef class pattern_neuron(neuron):
         if self.verbose:
             dot("In new pattern ")
 
-        if not self.sequential:
-            if self.verbose:
-                dot("random")
-            self.pattern_number=<int> (randu()*self.number_of_patterns)
+
+        if self.use_other_channel:
+            self.pattern_number=self.other_channel.pattern_number % self.number_of_patterns
         else:
-            if self.verbose:
-                dot("sequential")
-            self.pattern_number+=1
-            if self.pattern_number>=self.number_of_patterns:
-                self.new_buffer(t)
-                self.pattern_number=0
+            if not self.sequential:
+                if self.verbose:
+                    dot("random")
+                self.pattern_number=<int> (randu()*self.number_of_patterns)
+            else:
+                if self.verbose:
+                    dot("sequential")
+                self.pattern_number+=1
+                if self.pattern_number>=self.number_of_patterns:
+                    self.new_buffer(t)
+                    self.pattern_number=0
                 
+
+
         if self.verbose:
             dot("New pattern %d" % self.pattern_number)
         self.pattern=self.patterns[self.pattern_number]
@@ -157,8 +172,6 @@ cdef class natural_images(pattern_neuron):
     cdef int number_of_pics
     cdef int images_loaded
     cdef public int p,r,c
-    cdef public int use_other_channel
-    cdef natural_images other_channel
     
     cpdef _reset(self):
         pattern_neuron._reset(self)

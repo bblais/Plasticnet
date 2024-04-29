@@ -7,7 +7,7 @@ inf=1e500
 
 from copy import deepcopy
 import pylab
-from Waitbar import Waitbar
+from .Waitbar import Waitbar
 from copy import deepcopy
 
 

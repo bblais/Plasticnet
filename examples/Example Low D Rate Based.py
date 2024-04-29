@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[6]:
+# In[ ]:
 
 
-get_ipython().run_line_magic('pylab', 'inline')
+get_ipython().run_line_magic('matplotlib', 'inline')
+from pylab import *
 
 
-# In[7]:
+# In[ ]:
 
 
 from plasticnet import *
@@ -15,7 +16,7 @@ from plasticnet import *
 
 # ## 1D BCM
 
-# In[8]:
+# In[ ]:
 
 
 from plasticnet import *
@@ -32,7 +33,7 @@ sim.monitor(c,['weights','theta'],1000)
 run_sim(sim,[pre,post],[c],display_hash=False)
 
 
-# In[9]:
+# In[ ]:
 
 
 w=sim.monitors['weights'].array().squeeze()
@@ -43,7 +44,7 @@ ylabel('Time')
 
 # ## 2D BCM
 
-# In[10]:
+# In[ ]:
 
 
 pre=neurons.pattern_neuron([[2,3],[3,1]])
@@ -59,7 +60,7 @@ sim.monitor(c,['weights','theta'],1000)
 run_sim(sim,[pre,post],[c],display_hash=False)
 
 
-# In[11]:
+# In[ ]:
 
 
 weights=sim.monitors['weights'].array().squeeze()
@@ -75,7 +76,7 @@ ylabel(r'$\theta_M$')
 xlabel('Time')
 
 
-# In[12]:
+# In[ ]:
 
 
 outputs=[]
@@ -92,7 +93,7 @@ legend(['Pattern 0','Pattern 1'])
 
 # ## 2D Hebb
 
-# In[13]:
+# In[ ]:
 
 
 pre=neurons.pattern_neuron([[2,3],[3,1]])
@@ -110,7 +111,7 @@ sim.monitor(c,['weights','theta'],1000)
 run_sim(sim,[pre,post],[c],display_hash=False)
 
 
-# In[14]:
+# In[ ]:
 
 
 weights=sim.monitors['weights'].array().squeeze()
@@ -126,7 +127,7 @@ ylabel(r'$\theta_M$')
 xlabel('Time')
 
 
-# In[15]:
+# In[ ]:
 
 
 outputs=[]
