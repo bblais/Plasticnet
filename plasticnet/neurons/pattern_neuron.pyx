@@ -184,17 +184,20 @@ cdef class natural_images(pattern_neuron):
 
         self.sequential=False
         self.filename=fname
+
+        pattern_neuron.__init__(self,np.zeros((1,rf_size*rf_size),float),
+                            time_between_patterns=time_between_patterns,sequential=self.sequential,verbose=verbose)
+
         if not other_channel is None:
             self.other_channel=<natural_images>other_channel
             self.use_other_channel=True
         else:
             self.use_other_channel=False
 
-        self.images_loaded=False
+        if verbose:
+            print("use other channel:",self.use_other_channel)
 
-        
-        pattern_neuron.__init__(self,np.zeros((1,rf_size*rf_size),float),
-                            time_between_patterns=time_between_patterns,sequential=self.sequential,verbose=verbose)
+        self.images_loaded=False
     
         self.pattern_number=0
         self.rf_size=rf_size
@@ -235,6 +238,7 @@ cdef class natural_images(pattern_neuron):
         cdef double *pic_ptr
         cdef double *pattern
                 
+
         if not self.images_loaded:
             self.load_images()
 
@@ -254,6 +258,9 @@ cdef class natural_images(pattern_neuron):
             p=self.pattern_number
         else:
             p=self.other_channel.p % number_of_pictures
+            if self.verbose:
+                print("other channel p:",self.other_channel.p,p)
+
         
         pic=self.im[p]
         pic_ptr=<double *> pic.data
@@ -266,11 +273,14 @@ cdef class natural_images(pattern_neuron):
             r,c=self.other_channel.r,self.other_channel.c
 
         if self.verbose:
-            print(p,r,c)
+            print("prc",p,r,c)
 
         self.p=p
         self.c=c
         self.r=r
+
+        if self.verbose:
+            print("offset,count")
 
         count=0
         for i in range(self.rf_size):

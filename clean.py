@@ -25,8 +25,8 @@ cleanc("splikes")
 for S in ['plasticnet.egg-info',
              'splikes.egg-info',
              'build','dist',
-             '/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/splikes-*',
-             '/Users/bblais/opt/anaconda3/lib/python3.9/site-packages/plasticnet-*',
+             '/opt/anaconda3/envs/work/lib/python3.11/site-packages/splikes*',
+             '/opt/anaconda3/envs/work/lib/python3.11/site-packages/plasticnet*'
             ]:
 
     dirs=glob(S)
@@ -35,3 +35,5 @@ for S in ['plasticnet.egg-info',
             cmd=f'rm -rf {dir}'
             print(cmd)
             os.system(cmd)
+        else:
+            print(f"{dir} doesn't exist.")
